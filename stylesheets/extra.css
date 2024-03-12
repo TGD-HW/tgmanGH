@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../fonts/TitilliumWeb-Regular.ttf') format('truetype');
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+  --md-text-font: "Titillium Web", sans-serif;
+}
