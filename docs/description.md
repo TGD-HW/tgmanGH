@@ -1,0 +1,6 @@
+## Popis zařízení   
+
+<img src="../img/MotSide.png" alt="TGZ-48-13/26" style="float: left;" />   
+.
+.
+.
