@@ -5,15 +5,27 @@ theme:
   font: false
   extra:
     logo: docs/Manual/source/common/img/TGsymbol.svg
-    
 plugins:
-  - search 
-markdown_extensions:
-- pymdownx.arithmatex:
-    generic: true
-- toc:
-    permalink: true
+  - search
+  - table-reader:
+      base_path: "config_dir"
+      data_path: "docs/Manual/source/common/tab"
+      search_page_directory: True
+      allow_missing_files: False
+      select_readers:
+        - read_excel
+        - read_csv
 
+markdown_extensions:
+ - pymdownx.arithmatex:
+    generic: true
+ - pymdownx.snippets:
+      base_path: 
+        - docs/Manual/source
+        - docs/Manual/CZ/TGZ/
+ - toc:
+    permalink: true
+ 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -26,17 +38,23 @@ nav:
     - 'ManualCZ':
         - 'TGZ': 
             - 'TGZ-D-48-13/26': 
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/description.md'
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mounting.md'
-                - Elektrická instalace: 'Manual/source/CZ/md/electrical.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/electric.md'
             - 'TGZ-S-48-50/100': 
-                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50/md/description.md'
-                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50/md/dimension.md'
-                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50/md/mounting.md'
-                - Elektrická instalace: 'Manual/source/CZ/md/electrical.md'
-            - 'TGZ-D-48-50/100': 
-                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-50/md/description.md'
-                - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-50/md/dimension.md'
-                - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-50/md/mounting.md'
-                - Elektrická instalace: 'Manual/source/CZ/md/electrical.md'  
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/electric.md'
+            - 'TGZ-D-48-50/100':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/electric.md'

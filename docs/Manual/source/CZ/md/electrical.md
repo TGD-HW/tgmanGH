@@ -27,7 +27,7 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce rozvaděče. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-![Shielding connection DC](../../common/img/cableShielding1.png)
+![Shielding connection DC](../../../../source/common/img/cableShielding1.png)
 
 ###Postup zapojení motorového kabelu s&nbsp;připojením stínění
 
@@ -36,14 +36,14 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-![Shielding connection motor 1](../../common/img/cableShielding2.png)
-![Shielding connection motor 2](../../common/img/cableShielding3.png)
+![Shielding connection motor 1](../../../../source/common/img/cableShielding2.png)
+![Shielding connection motor 2](../../../../source/common/img/cableShielding3.png)
 
 ###Technologie stínění
 
 Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
-![Shielding connection technology](../../common/img/cableShielding4.svg)
+![Shielding connection technology](../../../../source/common/img/cableShielding4.svg)
 
 ###Potlačení rušení
 
@@ -56,4 +56,3 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 - Kabely by se neměly prodlužovat, protože by mohlo dojít k&nbsp;narušení stínění a&nbsp;tím také k&nbsp;rušení zpracování signálu. Pro dosažení maximální délky kabelu použijte kabely s&nbsp;odpovídajícím průřezem podle ČSN EN 60204 a&nbsp;z&nbsp;doporučeného materiálu.
 - Spojujte kabely správným způsobem. Pokud je zapotřebí použít rozdělené kabely, použijte pro jejich spojení konektory s&nbsp;kovovým krytem. Zajistěte, aby byly oba kryty spojeny se stíněním po celém obvodu kabelu (360°). Žádná část kabelu by neměla zůstat nestíněná. Nikdy nespojujte rozdělený kabel pomocí svorkovnice.
 - Vodiče mezi jednotlivými servozesilovači musí být rovněž stíněné.
-
