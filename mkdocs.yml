@@ -3,6 +3,13 @@ site_name: TGmanual
 theme:
   name: 'material'
   font: false
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.path
+    - toc.integrate
   extra:
     logo: docs/Manual/source/common/img/TGsymbol.svg
 plugins:
@@ -23,6 +30,9 @@ markdown_extensions:
       base_path: 
         - docs/Manual/source
         - docs/Manual/CZ/TGZ/
+ - admonition
+ - pymdownx.details
+ - pymdownx.superfences
  - toc:
     permalink: true
  
@@ -35,7 +45,7 @@ extra_css:
 nav:
     - Home: 'index.md'
     #- About: 'about.md'
-    - 'ManualCZ':
+    - 'Manuál CZ':
         - 'TGZ': 
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
@@ -44,6 +54,7 @@ nav:
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/electric.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13/md/safe.md'
             - 'TGZ-S-48-50/100': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/param.md'
@@ -51,6 +62,7 @@ nav:
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/electric.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/safe.md'             
             - 'TGZ-D-48-50/100':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/param.md'
@@ -58,3 +70,5 @@ nav:
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/electric.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/safe.md'   
+        - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

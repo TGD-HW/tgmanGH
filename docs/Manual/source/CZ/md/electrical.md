@@ -56,3 +56,9 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 - Kabely by se neměly prodlužovat, protože by mohlo dojít k&nbsp;narušení stínění a&nbsp;tím také k&nbsp;rušení zpracování signálu. Pro dosažení maximální délky kabelu použijte kabely s&nbsp;odpovídajícím průřezem podle ČSN EN 60204 a&nbsp;z&nbsp;doporučeného materiálu.
 - Spojujte kabely správným způsobem. Pokud je zapotřebí použít rozdělené kabely, použijte pro jejich spojení konektory s&nbsp;kovovým krytem. Zajistěte, aby byly oba kryty spojeny se stíněním po celém obvodu kabelu (360°). Žádná část kabelu by neměla zůstat nestíněná. Nikdy nespojujte rozdělený kabel pomocí svorkovnice.
 - Vodiče mezi jednotlivými servozesilovači musí být rovněž stíněné.
+
+###Vedení kabeláže
+
+Na níže uvedených obrázcích je zobrazeno doporučené vedení kabeláže:
+
+![Cable management technology](../../../../source/CZ/img/cableMan.svg)
