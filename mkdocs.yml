@@ -1,17 +1,39 @@
-site_name: TGmanual
-#site_url: https://www.tgdrives.cz/
+site_name: TG Drives manuál
+site_url: https://www.tgdrives.cz/
+copyright: Copyright &copy; 2024 TG Drives, s.r.o.
 theme:
   name: 'material'
+  language: cs
   font: false
+  logo: Manual/source/common/img/TGlogoFull.svg
+  icon:
+    logo: Manual/source/common/img/TGlogoFull.svg
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
   features:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.path
+    - navigation.top
+#   - navigation.footer
     - toc.integrate
+    - search.highlight
+    - header.autohide
   extra:
-    logo: docs/Manual/source/common/img/TGsymbol.svg
+    logo: Manual/source/common/img/TGsymbol.svg
+  palette:
+    primary: custom
+    accent: teal
+  favicon: Manual/source/common/img/TGsymbol.svg
+extra:
+    generator: false #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
+    homepage: https://www.dev.tgdrives.cz/
+# Cookie bar    
+#    consent:
+#        title: Chcete naše sušenky?
+#        description: Na našich webových stránkách používáme soubory cookies. Některé z nich jsou nezbytné, zatímco jiné nám pomáhají vylepšit tento web a váš uživatelský zážitek. Souhlasíte s používáním všech cookies? 
 plugins:
   - search
   - table-reader:
@@ -43,7 +65,7 @@ extra_javascript:
 extra_css:
  - stylesheets/extra.css
 nav:
-    - Home: 'index.md'
+    - Domů: 'index.md'
     #- About: 'about.md'
     - 'Manuál CZ':
         - 'TGZ': 
