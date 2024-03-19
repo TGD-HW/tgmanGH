@@ -1,11 +1,11 @@
-site_name: TG Drives manuál
+site_name: TG Drives
 site_url: https://www.tgdrives.cz/
 copyright: Copyright &copy; 2024 TG Drives, s.r.o.
 theme:
   name: 'material'
   language: cs
   font: false
-  logo: Manual/source/common/img/TGlogoFull.svg
+  logo: Manual/source/common/img/TGlogoFullWhite.svg
   icon:
     logo: Manual/source/common/img/TGlogoFull.svg
     previous: fontawesome/solid/angle-left
@@ -21,6 +21,7 @@ theme:
     - toc.integrate
     - search.highlight
     - header.autohide
+    - content.footnote.tooltips
   extra:
     logo: Manual/source/common/img/TGsymbol.svg
   palette:
@@ -44,10 +45,26 @@ plugins:
       select_readers:
         - read_excel
         - read_csv
+  - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 150%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
+       background: white
+       shadow: true
 
 markdown_extensions:
  - pymdownx.arithmatex:
     generic: true
+ - md_in_html
  - pymdownx.snippets:
       base_path: 
         - docs/Manual/source
@@ -55,6 +72,8 @@ markdown_extensions:
  - admonition
  - pymdownx.details
  - pymdownx.superfences
+ - tables
+ - footnotes
  - toc:
     permalink: true
  
@@ -72,11 +91,12 @@ nav:
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/param.md'
-                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/description.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/description.md'                  
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/electric.md'
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13/md/safe.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/schematic.md'      
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13/md/safe.md'             
             - 'TGZ-S-48-50/100': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/param.md'
@@ -84,6 +104,7 @@ nav:
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/schematic.md'               
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/safe.md'             
             - 'TGZ-D-48-50/100':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
