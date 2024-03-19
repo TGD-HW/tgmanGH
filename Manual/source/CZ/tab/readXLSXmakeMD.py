@@ -1,5 +1,6 @@
 from openpyxl import load_workbook
 from markdown import markdown
+import re
 
 def excel_to_markdown_table(file_path, sheet_name, range_start, range_end):
     # Load the Excel workbook
@@ -48,8 +49,6 @@ def excel_to_markdown_table(file_path, sheet_name, range_start, range_end):
             markdown_table += "| " + " | ".join(str(cell) for cell in row_data) + " |\n"
 
     return markdown_table
-    
-import re
 
 def connectors(file_path, sheet_name, range_start, range_end):
     # Load the Excel workbook
@@ -150,11 +149,83 @@ markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X1_24V_5pin_BCZ.md"
 save_markdown_table(markdown_table, output_file)
 
-# X1 - 2pin Phoenix - PC 5/ 2-STCL1-7,62 - DCbus +48V
+# X2 - 2pin Phoenix - PC 5/ 2-STCL1-7,62 - DCbus +48V
 file_path = "connectors.xlsx"
 sheet_name = "X2_48_DC_1778065"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X2_48_DC_1778065.md"
+save_markdown_table(markdown_table, output_file)
+
+# X8 - 22pin Weidmuller - B2CF 3.50/22/180 SN OR BX - standard TGZ IO
+file_path = "connectors.xlsx"
+sheet_name = "X8_IO_22pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X8_IO_22pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# X10 - 4pin Weidmuller - B2CF 3.50/04/180 SN OR BX - standard TGZ CAN
+file_path = "connectors.xlsx"
+sheet_name = "X10_CAN_4pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X10_CAN_4pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# LED sig. - standard TGZ Green-Red Leds
+file_path = "connectors.xlsx"
+sheet_name = "LEDsigAx12"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/LEDsigAx12.md"
+save_markdown_table(markdown_table, output_file)
+
+# X5 - 12pin Weidmuller - B2CF 3.50/12/180 SN OR BX - standard TGZ FBE
+file_path = "connectors.xlsx"
+sheet_name = "X5_FBE_12pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X5_FBE_12pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# X6 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - standard TGZ FB1
+file_path = "connectors.xlsx"
+sheet_name = "X6_FB1_8pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X6_FB1_8pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# X7 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - standard TGZ FB2
+file_path = "connectors.xlsx"
+sheet_name = "X7_FB2_8pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X7_FB2_8pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 6pin Weidmuller -  BLZP 5.08HC/06/180 SN OR BX - standard TGZ M1
+file_path = "connectors.xlsx"
+sheet_name = "X3_M1_6pin_BLZP"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_M1_6pin_BLZP.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 6pin Weidmuller -  BLZP 5.08HC/06/180 SN OR BX - standard TGZ M2
+file_path = "connectors.xlsx"
+sheet_name = "X4_M2_6pin_BLZP"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_M2_6pin_BLZP.md"
 save_markdown_table(markdown_table, output_file)
