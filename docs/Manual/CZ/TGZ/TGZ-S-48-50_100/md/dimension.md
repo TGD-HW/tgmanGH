@@ -1,7 +1,5 @@
 <!--## Rozměry zařízení-->
-![TGZ-S-48-50/100 Dimmensions](../img/dim.png)
-
-<!-- priklad TeX zapisu $f=5 \times x$-->
+<img src="../../img/dim.png" alt="TGZ-S-48-50/100 Dimmensions" style="width:60%;">
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

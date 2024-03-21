@@ -17,7 +17,7 @@
 | LED signalizace (osa 1 a 2 zvlášť) | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **OSTATNÍ KONEKTORY** |   |
 | Napájení výkonové části | 2 x Erni šroubovací svorky M5 PRESSFIT |
-| Napájení řídicí části | 1 x 5pin MOLEX micro-lock, 505570-0401 |
+| Napájení řídicí části | 1 x 5pin MOLEX micro-lock, 505570-0501 |
 | Motorový konektor | 3 x Erni šroubovací svorky M5 PRESSFIT  |
 | Brzdový konektor | 1 x 4pin MOLEX micro-lock, 505570-0501 |
 | Zpětnovazební konektor | 2x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |

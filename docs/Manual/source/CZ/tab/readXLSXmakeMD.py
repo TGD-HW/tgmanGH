@@ -229,3 +229,39 @@ range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X4_M2_6pin_BLZP.md"
 save_markdown_table(markdown_table, output_file)
+
+# X1 - 5pin Molex - 5055700501 - +24V logic power
+file_path = "connectors.xlsx"
+sheet_name = "X1_24V_5pin_Microlock"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X1_24V_5pin_Microlock.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 2x Pressfit M5 - TGZ-S-48 DCbus
+file_path = "connectors.xlsx"
+sheet_name = "X3_DCbus_2pin_pressfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_DCbus_2pin_pressfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 2x Pressfit M5 - TGZ-S-48 M1
+file_path = "connectors.xlsx"
+sheet_name = "X3_M1_3pin_pressfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_M1_3pin_pressfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 4pin Molex - 5055700401 - BR
+file_path = "connectors.xlsx"
+sheet_name = "X4_BR_4pin_Microlock"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_BR_4pin_Microlock.md"
+save_markdown_table(markdown_table, output_file)

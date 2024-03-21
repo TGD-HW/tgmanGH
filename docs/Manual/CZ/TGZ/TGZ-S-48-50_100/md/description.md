@@ -20,7 +20,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100_enetCon.svg" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100_enetCon.png" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:60%;">
 
 
 <div class="grid cards" markdown>
@@ -28,24 +28,13 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/common/img/1940760000.png" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
+	<img src="../../../../../source/common/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;">
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Molex Microlock 5055700501
 
 	---
 
-	--8<-- "CZ/md/X1_24V_5pin_BCZ.md"
-
--   **X2 - Napájení výkonové části (DC bus)**
-
-    ---
-	<img src="../../../../../source/common/img/1778065.png" alt="ENET/ECAT/LogicPWR connectors" style="width:80%;">
-
--    Phoenix Contact PC 5/ 2-STCL1-7,62
-
-    ---
-
-	--8<-- "CZ/md/X2_48_DC_1778065.md"
+	--8<-- "CZ/md/X1_24V_5pin_Microlock.md"
 
 </div>
 
@@ -53,7 +42,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_IO.svg" alt="IO/CAN/SD connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -118,7 +107,7 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -158,30 +147,42 @@ ___
 
 	--8<-- "CZ/md/X7_FB2_8pin_BCZ.md"
 	
--   **X3 - Motorový konektor - osa 1**
+-   **X3 - Napájení silové části**
 
     ---
 	
-	<img src="../../../../../source/common/img/1943620000.png" alt="Motor 1 connector" style="width:70%;">
+	<img src="../../../../../source/common/img/S-48pressfit5.svg" alt="DC bus connection" style="width:70%;">
 
--    Weidmüller BLZP 5.08HC/06/180 SN OR BX
-
-    ---
-
-	--8<-- "CZ/md/X3_M1_6pin_BLZP.md"
-	
--   **X4 - Motorový konektor - osa 2**
-
-    ---
-	
-	<img src="../../../../../source/common/img/1943620000.png" alt="Motor 2 connector" style="width:70%;">
-
--    Weidmüller BLZP 5.08HC/06/180 SN OR BX
+-    Pressfit M5
 
     ---
 
-	--8<-- "CZ/md/X4_M2_6pin_BLZP.md"
+	--8<-- "CZ/md/X3_DCbus_2pin_pressfit.md"
 	
+-   **X3 - Připojení motoru**
+
+    ---
+	
+	<img src="../../../../../source/common/img/S-48pressfit5.svg" alt="Motor connection" style="width:70%;">
+
+-    Pressfit M5
+
+    ---
+	
+	--8<-- "CZ/md/X3_M1_3pin_pressfit.md"
+
+
+-   **X4 - Připojení brzdy**
+
+    ---
+	
+	<img src="../../../../../source/common/img/5055700401.svg" alt="Brake connection" style="width:70%;">
+
+-    Molex Micro-lock 505570-0401
+
+    ---
+
+	--8<-- "CZ/md/X4_BR_4pin_Microlock.md"
 
 </div>
 
