@@ -29,11 +29,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.74796184"
-     inkscape:cx="493.34068"
-     inkscape:cy="209.23527"
+     inkscape:cx="491.33523"
+     inkscape:cy="316.1926"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
-     inkscape:window-x="3832"
+     inkscape:window-x="-8"
      inkscape:window-y="425"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer6" />
@@ -55,23 +55,50 @@
     <text
        xml:space="preserve"
        style="font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       x="870.80847"
+       y="484.17142"
+       id="text3"
+       inkscape:label="5"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="870.80847"
+         y="484.17142">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
        x="681.68243"
        y="485.07141"
-       id="text2"><tspan
+       id="text2"
+       inkscape:label="4"><tspan
          sodipodi:role="line"
          id="tspan2"
          x="681.68243"
          y="485.07141">4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
-       x="870.80847"
-       y="484.17142"
-       id="text3"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       x="103.73541"
+       y="483.97141"
+       id="text1-6"
+       inkscape:label="3"
+       transform="translate(389.82099,1.2)"><tspan
          sodipodi:role="line"
-         id="tspan3"
-         x="870.80847"
-         y="484.17142">5</tspan></text>
+         id="tspan1-4"
+         x="103.73541"
+         y="483.97141"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       x="310.23035"
+       y="483.97141"
+       id="text1-9"
+       inkscape:label="2"><tspan
+         sodipodi:role="line"
+         id="tspan1-1"
+         x="310.23035"
+         y="483.97141"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
@@ -84,30 +111,5 @@
          x="103.73541"
          y="483.97141"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
-       x="310.23035"
-       y="483.97141"
-       id="text1-9"
-       inkscape:label="1"><tspan
-         sodipodi:role="line"
-         id="tspan1-1"
-         x="310.23035"
-         y="483.97141"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
-       x="103.73541"
-       y="483.97141"
-       id="text1-6"
-       inkscape:label="1"
-       transform="translate(389.82099,1.2)"><tspan
-         sodipodi:role="line"
-         id="tspan1-4"
-         x="103.73541"
-         y="483.97141"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">3</tspan></text>
   </g>
 </svg>
