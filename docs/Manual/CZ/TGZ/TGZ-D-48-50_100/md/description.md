@@ -143,13 +143,17 @@ ___
 -   **X2 - Napájení výkonové části (DC bus)**
 
     ---
-	<img src="../../../../../source/common/img/2636-1103.svg" alt="DCbus Connector" style="width:60%;">
+	<img src="../../../../../source/common/img/2636-1103.svg" alt="DCbus cage-clamp" style="width:60%;">
 
--    Phoenix Contact PC 5/ 2-STCL1-7,62
+-    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X2_48_DC_1778065.md"
+	--8<-- "CZ/md/X2_DCbus_3pin_wago_2636.md"
+	
+	!!! info "Poznámka"
+	
+		Při použití jemně laněného vodiče (licna) lze použít průřez až&nbsp;25&nbsp;mm<sup>2</sup>
 	
 -   **X3 - Motorový konektor - osa 1**
 
@@ -157,11 +161,11 @@ ___
 	
 	<img src="../../../../../source/common/img/2626-1104.svg" alt="Motor 1 connector" style="width:70%;">
 
--    Weidmüller BLZP 5.08HC/06/180 SN OR BX
+-    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X3_M1_6pin_BLZP.md"
+	--8<-- "CZ/md/X3_M1_4pin_wago_2626.md"
 	
 -   **X4 - Motorový konektor - osa 2**
 
@@ -169,12 +173,12 @@ ___
 	
 	<img src="../../../../../source/common/img/2626-1104.svg" alt="Motor 2 connector" style="width:70%;">
 
--    Weidmüller BLZP 5.08HC/06/180 SN OR BX
+-    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X4_M2_6pin_BLZP.md"
-	
+	--8<-- "CZ/md/X4_M2_4pin_wago_2626.md"
+		
 -   **XBR - Připojení brzdy - osa 1 a 2**
 
     ---
@@ -185,7 +189,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X4_M2_6pin_BLZP.md"
+	--8<-- "CZ/md/XBR_BR_6pin_BLF.md"
 	
 
 </div>
