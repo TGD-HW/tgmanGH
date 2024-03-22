@@ -136,6 +136,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGZ/TGZ-D-48-50_100/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_250
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_250"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-48-100_250/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 ##########################################################################################
 # Connectors parameter MD generator
 ##########################################################################################
@@ -264,4 +273,76 @@ range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X4_BR_4pin_Microlock.md"
+save_markdown_table(markdown_table, output_file)
+
+# X2 - 3pin Wago cage-clamp - 2636-1103 - DCbus
+file_path = "connectors.xlsx"
+sheet_name = "X2_DCbus_3pin_wago_2636"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_DCbus_3pin_wago_2636.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 4pin Wago cage-clamp - 2626-1104 - M1
+file_path = "connectors.xlsx"
+sheet_name = "X3_M1_4pin_wago_2626"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_M1_4pin_wago_2626.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 4pin Wago cage-clamp - 2626-1104 - M2
+file_path = "connectors.xlsx"
+sheet_name = "X4_M2_4pin_wago_2626"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_M2_4pin_wago_2626.md"
+save_markdown_table(markdown_table, output_file)
+
+# XBR - 6pin Weidmuller -  BLF 5.00HC/06/180F SN OR BX - Brake M1/M2
+file_path = "connectors.xlsx"
+sheet_name = "XBR_BR_6pin_BLF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/XBR_BR_6pin_BLF.md"
+save_markdown_table(markdown_table, output_file)
+
+# X1 - 5pin Molex Microfit 3.0 - 436450500 - +24V logic power
+file_path = "connectors.xlsx"
+sheet_name = "X1_24V_5pin_Microfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X1_24V_5pin_Microfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# P7 - 4pin Molex Microfit 3.0 - 430250400 - Brake power + diag
+file_path = "connectors.xlsx"
+sheet_name = "P7_BR_4pin_Microfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/P7_BR_4pin_Microfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# P8 - 4pin Molex Microfit 3.0 - 430250400 - GND brake
+file_path = "connectors.xlsx"
+sheet_name = "P8_BR_4pin_Microfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/P8_BR_4pin_Microfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# P3 - 2pin Molex Microfit 3.0 - 436450200 - Ext. Therm.
+file_path = "connectors.xlsx"
+sheet_name = "P3_Term_2pin_Microfit"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/P3_Term_2pin_Microfit.md"
 save_markdown_table(markdown_table, output_file)
