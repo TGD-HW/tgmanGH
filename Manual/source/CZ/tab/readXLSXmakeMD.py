@@ -145,6 +145,51 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGZ/TGZ-S-48-100_250/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_300
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_300"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-48-100_300/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_425
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_425"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-48-100_425/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-230-5_15
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-230-5_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-230-5_15/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-320-5_10
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-320-5_10"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-D-320-5_10/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-320-5_15
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-320-5_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-D-320-5_15/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 ##########################################################################################
 # Connectors parameter MD generator
 ##########################################################################################
@@ -345,4 +390,31 @@ range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/P3_Term_2pin_Microfit.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 6pin Weidmuller -  SLS 5.08/06/180FI SN OR BX - standard TGZ-S M
+file_path = "connectors.xlsx"
+sheet_name = "X4_M1_6pin_SLS"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_M1_6pin_SLS.md"
+save_markdown_table(markdown_table, output_file)
+
+# X2 - 10pin Weidmuller -  BLZP 5.08HC/10/180 SN OR BX - standard TGZ-S PWR
+file_path = "connectors.xlsx"
+sheet_name = "X2_PWR_10pin_BLZP"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_PWR_10pin_BLZP.md"
+save_markdown_table(markdown_table, output_file)
+
+# X2 - 3pin Phoenix - PC 5/ 3-STCL1-7,62 - DCbus 320V
+file_path = "connectors.xlsx"
+sheet_name = "X2_320_DC_1778078"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_320_DC_1778078.md"
 save_markdown_table(markdown_table, output_file)
