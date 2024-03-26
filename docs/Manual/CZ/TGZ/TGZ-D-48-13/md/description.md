@@ -32,7 +32,7 @@ ___
 -   **X2 - Napájení výkonové části (DC bus)**
 
     ---
-	<img src="../../../../../source/common/img/1778065.png" alt="ENET/ECAT/LogicPWR connectors" style="width:80%;">
+	<img src="../../../../../source/common/img/1778065.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:80%;">
 
 -    Phoenix Contact PC 5/ 2-STCL1-7,62
 

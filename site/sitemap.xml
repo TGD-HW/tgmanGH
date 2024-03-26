@@ -2,332 +2,572 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.tgdrives.cz/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/about/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/description/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/dimension/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/electric/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/mark/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/mounting/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/param/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/parameters/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/safe/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_10/md/schematic/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/description/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/dimension/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/electric/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/mark/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/mounting/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/param/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/parameters/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/safe/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-320-5_15/md/schematic/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/description/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/dimension/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/electric/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/mark/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/mounting/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/param/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/parameters/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/safe/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-13/md/schematic/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/description/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/dimension/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/electric/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/mounting/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/param/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/parameters/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/safe/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-D-48-50_100/md/schematic/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/description/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/dimension/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/electric/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/mark/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/mounting/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/param/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/parameters/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/safe/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-230-5_15/md/schematic/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/description/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/dimension/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/electric/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/mark/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/mounting/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/param/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/parameters/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/safe/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_250/md/schematic/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/description/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/dimension/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/electric/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/mark/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/mounting/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/param/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/parameters/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/safe/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_300/md/schematic/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/description/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/dimension/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/electric/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/mark/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/mounting/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/param/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/parameters/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/safe/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-100_425/md/schematic/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/description/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/dimension/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/electric/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/mark/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/mounting/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/param/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/parameters/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/safe/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/CZ/TGZ/TGZ-S-48-50_100/md/schematic/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/LEDsigAx12/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/P3_Term_2pin_Microfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/P7_BR_4pin_Microfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/P8_BR_4pin_Microfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/STO/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X10_CAN_4pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X1_24V_5pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X1_24V_5pin_Microfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X1_24V_5pin_Microlock/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X2_320_DC_1778078/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X2_48_DC_1778065/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X2_DCbus_3pin_wago_2636/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X2_PWR_10pin_BLZP/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X3_DCbus_2pin_pressfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X3_M1_3pin_pressfit/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X3_M1_4pin_wago_2626/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X3_M1_6pin_BLZP/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X4_BR_4pin_Microlock/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X4_M1_6pin_SLS/</loc>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X4_M2_4pin_wago_2626/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X4_M2_6pin_BLZP/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X5_FBE_12pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X6_FB1_8pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X7_FB2_8pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/X8_IO_22pin_BCZ/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/XBR_BR_6pin_BLF/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/cert/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/electrical/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/marking/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/mechMounting/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.tgdrives.cz/Manual/source/CZ/md/safety/</loc>
-         <lastmod>2024-03-22</lastmod>
+         <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
