@@ -1,112 +1,158 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGZ-S-230-5/15 Dimmensions" style="width:50%;">
+<img src="../../img/dim.png" alt="TGZ-D-320-5/10 Dimmensions" style="width:50%;">
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-  padding:1px 10px;word-break:normal;}
-.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-  overflow:hidden;padding:1px 10px;word-break:normal;}
-.tg .tg-6ap7{background-color:#005050;border-color:#ffffff;color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-b2iu{background-color:#D9D9D9;border-color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-1h46{background-color:#d9d9d9;border-color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-acm9{background-color:#005050;border-color:#ffffff;color:#FFF;text-align:center;vertical-align:middle}
-.tg .tg-mwvu{background-color:#005050;border-color:#ffffff;color:#FFF;font-family:inherit;text-align:center;vertical-align:middle}
-.tg .tg-8jun{background-color:#D9D9D9;border-color:#ffffff;font-family:inherit;text-align:center;vertical-align:middle}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:5px 6px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:5px 6px;word-break:normal;}
+.tg .tg-2ozh{background-color:#005050;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-lf36{background-color:#d9d9d9;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-ukim{background-color:#005050;border-color:inherit;color:#ffffff;font-family:inherit;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-6ap7" colspan="7">Bez přídavného chladiče</th>
+    <th class="tg-2ozh" colspan="7">Rozměry verze bez přídavného chladiče </th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-6ap7" colspan="3">Rozměry bez konektorových protikusů</td>
-    <td class="tg-6ap7" colspan="3">Rozměry včetně konektorových protikusů</td>
-    <td class="tg-6ap7" rowspan="2">Hmotnost</td>
+    <td class="tg-2ozh" colspan="3">Rozměry bez konektorových protikusů </td>
+    <td class="tg-2ozh" colspan="3">Rozměry včetně konektorových protikusů </td>
+    <td class="tg-ukim" rowspan="2">Hmotnost </td>
   </tr>
   <tr>
-    <td class="tg-6ap7">Výška</td>
-    <td class="tg-6ap7">Šířka</td>
-    <td class="tg-6ap7">Hloubka</td>
-    <td class="tg-acm9">Výška</td>
-    <td class="tg-mwvu">Šířka</td>
-    <td class="tg-mwvu">Hloubka</td>
+    <td class="tg-2ozh">Výška </td>
+    <td class="tg-2ozh">Šířka </td>
+    <td class="tg-2ozh">Hloubka </td>
+    <td class="tg-2ozh">Výška </td>
+    <td class="tg-2ozh">Šířka </td>
+    <td class="tg-2ozh">Hloubka </td>
   </tr>
   <tr>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-acm9">mm</td>
-    <td class="tg-mwvu">mm</td>
-    <td class="tg-mwvu">mm</td>
-    <td class="tg-mwvu">kg</td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[kg] </td>
   </tr>
   <tr>
-    <td class="tg-1h46">160</td>
-    <td class="tg-1h46">49<br></td>
-    <td class="tg-1h46">135<br></td>
-    <td class="tg-b2iu">184<br></td>
-    <td class="tg-8jun">49<br></td>
-    <td class="tg-8jun">135<br></td>
-    <td class="tg-8jun">1,0</td>
+    <td class="tg-lf36">160 </td>
+    <td class="tg-lf36">49 </td>
+    <td class="tg-lf36">135 </td>
+    <td class="tg-lf36">190 </td>
+    <td class="tg-lf36">49 </td>
+    <td class="tg-lf36">137 </td>
+    <td class="tg-lf36">1,0 </td>
   </tr>
 </tbody>
 </table>
 
-<div style="margin-bottom: 20px;"></div>
+<br>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-  padding:1px 10px;word-break:normal;}
-.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-  overflow:hidden;padding:1px 10px;word-break:normal;}
-.tg .tg-6ap7{background-color:#005050;border-color:#ffffff;color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-b2iu{background-color:#D9D9D9;border-color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-1h46{background-color:#d9d9d9;border-color:#ffffff;text-align:center;vertical-align:middle}
-.tg .tg-acm9{background-color:#005050;border-color:#ffffff;color:#FFF;text-align:center;vertical-align:middle}
-.tg .tg-mwvu{background-color:#005050;border-color:#ffffff;color:#FFF;font-family:inherit;text-align:center;vertical-align:middle}
-.tg .tg-8jun{background-color:#D9D9D9;border-color:#ffffff;font-family:inherit;text-align:center;vertical-align:middle}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2ozh{background-color:#005050;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-lf36{background-color:#d9d9d9;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-ukim{background-color:#005050;border-color:inherit;color:#ffffff;font-family:inherit;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-6ap7" colspan="7">S přídavným chladičem</th>
+    <th class="tg-ukim" colspan="7">Rozměry verze s přídavným chladičem pro TGZ-D-320-5/10</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-6ap7" colspan="3">Rozměry bez konektorových protikusů</td>
-    <td class="tg-6ap7" colspan="3">Rozměry včetně konektorových protikusů</td>
-    <td class="tg-6ap7" rowspan="2">Hmotnost</td>
+    <td class="tg-2ozh" colspan="3">Rozměry bez konektorových protikusů </td>
+    <td class="tg-2ozh" colspan="3">Rozměry včetně konektorových protikusů </td>
+    <td class="tg-ukim" rowspan="2">Hmotnost </td>
   </tr>
   <tr>
-    <td class="tg-6ap7">Výška</td>
-    <td class="tg-6ap7">Šířka</td>
-    <td class="tg-6ap7">Hloubka</td>
-    <td class="tg-acm9">Výška</td>
-    <td class="tg-mwvu">Šířka</td>
-    <td class="tg-mwvu">Hloubka</td>
+    <td class="tg-2ozh">Výška </td>
+    <td class="tg-2ozh">Šířka </td>
+    <td class="tg-2ozh">Hloubka </td>
+    <td class="tg-2ozh">Výška </td>
+    <td class="tg-2ozh">Šířka </td>
+    <td class="tg-2ozh">Hloubka </td>
   </tr>
   <tr>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-6ap7">mm</td>
-    <td class="tg-acm9">mm</td>
-    <td class="tg-mwvu">mm</td>
-    <td class="tg-mwvu">mm</td>
-    <td class="tg-mwvu">kg</td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[mm] </td>
+    <td class="tg-2ozh">[kg] </td>
   </tr>
   <tr>
-    <td class="tg-1h46">160</td>
-    <td class="tg-1h46">67<br></td>
-    <td class="tg-1h46">135</td>
-    <td class="tg-b2iu">184</td>
-    <td class="tg-8jun">67<br></td>
-    <td class="tg-8jun">135<br></td>
-    <td class="tg-8jun">1,3</td>
+    <td class="tg-lf36">160 </td>
+    <td class="tg-lf36">64</td>
+    <td class="tg-lf36">135 </td>
+    <td class="tg-lf36">190 </td>
+    <td class="tg-lf36">64</td>
+    <td class="tg-lf36">137 </td>
+    <td class="tg-lf36">1,3</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-my6f{background-color:#d9d9d9;border-color:inherit;font-family:inherit;text-align:center;vertical-align:top}
+.tg .tg-ukim{background-color:#005050;border-color:inherit;color:#ffffff;font-family:inherit;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-ukim" colspan="7">Rozměry verze s přídavným chladičem pro TGZ-D-320-5/15</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-ukim" colspan="3">Rozměry bez konektorových protikusů </td>
+    <td class="tg-ukim" colspan="3">Rozměry včetně konektorových protikusů </td>
+    <td class="tg-ukim" rowspan="2">Hmotnost </td>
+  </tr>
+  <tr>
+    <td class="tg-ukim">Výška </td>
+    <td class="tg-ukim">Šířka </td>
+    <td class="tg-ukim">Hloubka </td>
+    <td class="tg-ukim">Výška </td>
+    <td class="tg-ukim">Šířka </td>
+    <td class="tg-ukim">Hloubka </td>
+  </tr>
+  <tr>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[mm] </td>
+    <td class="tg-ukim">[kg] </td>
+  </tr>
+  <tr>
+    <td class="tg-my6f">160 </td>
+    <td class="tg-my6f">74</td>
+    <td class="tg-my6f">135 </td>
+    <td class="tg-my6f">190 </td>
+    <td class="tg-my6f">74</td>
+    <td class="tg-my6f">137 </td>
+    <td class="tg-my6f">1,4</td>
   </tr>
 </tbody>
 </table>

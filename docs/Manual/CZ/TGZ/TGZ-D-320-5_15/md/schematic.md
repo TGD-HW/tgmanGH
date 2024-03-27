@@ -1,3 +1,3 @@
 # Příklad schématu zapojení servozesilovače
 
-<img src="../../img/TGZ-D-48-13_26_schematic.svg" alt="Example schematic" style="width:100%;">
+<img src="../../img/TGZ-D-320-5_10_schematic.svg" alt="Example schematic" style="width:100%;">

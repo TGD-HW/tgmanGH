@@ -1,4 +1,4 @@
---8<-- "TGZ-S-230-5_15/md/parameters.md"
+--8<-- "TGZ-D-320-5_15/md/parameters.md"
 
 !!! info "Napájení brzdy"
 

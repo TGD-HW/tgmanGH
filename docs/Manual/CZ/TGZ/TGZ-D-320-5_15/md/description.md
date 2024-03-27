@@ -4,15 +4,15 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.svg" alt="3D view IO side" style="width:60%;">
-<img src="../../img/Motside.svg" alt="3D view motor side" style="width:60%;">
+<img src="../../img/IOside.png" alt="3D view IO side" style="width:75%;">
+<img src="../../img/Motside.png" alt="3D view FB side" style="width:60%;">
 
 ##Konektory
 ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-230-5_15_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
 
 
 <div class="grid cards" markdown>
@@ -34,7 +34,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-230-5_15_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -99,7 +99,7 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-230-5_15_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -142,8 +142,20 @@ ___
 	!!! note "Poznámka"
 	
 		Servozesilovač TGZ-S-230-5/15 je jednoosý. Konektor X7 se běžně nezapojuje.
+		
+-   **X2 - Napájení silové části**
+
+    ---
 	
--   **X4 - Motorový konektor**
+	<img src="../../../../../source/common/img/1778078.svg" alt="PWR connector" style="width:60%;">
+
+-    Phoenix PC 5/ 3-STCL1-7,62
+
+    ---
+
+	--8<-- "CZ/md/X2_320_DC_1778078.md"
+	
+-   **X3 - Motorový konektor osa 1**
 
     ---
 	
@@ -155,17 +167,19 @@ ___
 
 	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
 	
--   **X2 - Napájení silové části**
+-   **X4 - Motorový konektor osa 2**
 
     ---
 	
-	<img src="../../../../../source/common/img/1943660000.svg" alt="PWR connector" style="width:100%;">
+	<img src="../../../../../source/common/img/1846250000.svg" alt="Motor connector" style="width:70%;">
 
--    Weidmüller BLZP 5.08HC/10/180 SN OR BX
+-    Weidmüller SLS 5.08/06/180FI SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X4_M2_6pin_BLZP.md"
+	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
+	
+
 	
 
 </div>
