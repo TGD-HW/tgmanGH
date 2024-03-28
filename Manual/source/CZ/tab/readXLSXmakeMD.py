@@ -199,33 +199,41 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGZ/TGZ-S-400-3_9/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
-# # TGZ-S-400-7_15
-# file_path = "parameters.xlsx"
-# sheet_name = "TGZ-S-400-7_15"
-# range_start = "A1"
-# range_end = "B100"
-# markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
-# output_file = "../../../CZ/TGZ/TGZ-S-400-7_15/md/parameters.md"
-# save_markdown_table(markdown_table, output_file)
+# TGZ-S-400-7_15
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-400-7_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-400-7_15/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
 
-# # TGZ-S-400-10_20
-# file_path = "parameters.xlsx"
-# sheet_name = "TGZ-S-400-10_20"
-# range_start = "A1"
-# range_end = "B100"
-# markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
-# output_file = "../../../CZ/TGZ/TGZ-S-400-10_20/md/parameters.md"
-# save_markdown_table(markdown_table, output_file)
+# TGZ-S-400-10_20
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-400-10_20"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-400-10_20/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
 
-# # TGZ-S-400-14_30
-# file_path = "parameters.xlsx"
-# sheet_name = "TGZ-S-400-14_30"
-# range_start = "A1"
-# range_end = "B100"
-# markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
-# output_file = "../../../CZ/TGZ/TGZ-S-400-14_30/md/parameters.md"
-# save_markdown_table(markdown_table, output_file)
+# TGZ-S-400-14_30
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-400-14_30"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-400-14_30/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
 
+# TGZ-D-560-30_50
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-560-30_50"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-D-560-30_50/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
 
 ##########################################################################################
 # Connectors parameter MD generator
@@ -454,4 +462,22 @@ range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X2_320_DC_1778078.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 6pin Weidmuller -  BLF 7.62HP/06/180F - standard TGZ-S-400 M1
+file_path = "connectors.xlsx"
+sheet_name = "X4_M1_6pin_BLF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_M1_6pin_BLF.md"
+save_markdown_table(markdown_table, output_file)
+
+# X2 - 12pin Weidmuller -  BLZ 7.62HP/12/180F - standard TGZ-S-400 PWR
+file_path = "connectors.xlsx"
+sheet_name = "X2_PWR_12pin_BLZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_PWR_12pin_BLZ.md"
 save_markdown_table(markdown_table, output_file)
