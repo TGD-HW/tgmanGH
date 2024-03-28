@@ -17,9 +17,9 @@
 | LED displej | Chybové hlášení, 2x7 segment LED |
 | LED signalizace (osa 1 a 2 zvlášť) | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **OSTATNÍ KONEKTORY** |   |
-| Napájení výkonové části | 3 x 1pin WAGO push-in |
+| Napájení výkonové části | 1 x 3pin WAGO push-in |
 | Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180 |
-| Motorový konektor | 4 x 1pin WAGO push-in |
+| Motorový konektor | 1 x 4pin WAGO push-in |
 | Brzdový konektor | 1 × 6pin WEIDMÜLLER  BLF 5.00HC/06/180F |
 | Zpětnovazební konektor | 2x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |
 | Externí enkodér | 1x 12pin WEIDMÜLLER  B2CF 3.50/12/180 |
