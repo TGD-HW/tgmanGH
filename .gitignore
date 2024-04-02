@@ -8,7 +8,7 @@ node_modules/
 
 #folders
 dist/
-site/
+site/*
 .github/
 
 # Compiled Java class files
