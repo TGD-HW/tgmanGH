@@ -9,34 +9,58 @@
 
 ##Konektory
 ___
-### Strana komunikace/ethernet/ethercat
+### Strana komunikace/ethernet/ethercat a DCbus
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-560-30_50_DCbus.svg" alt="ENET/ECAT/DCbus connectors" style="width:60%;">
 
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X2 - DC bus konektor**
 
     ---
-	<img src="../../../../../source/common/img/1940760000.png" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
+	<img src="../../../../../source/common/img/D560DCbusCon.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Šroubovací svorky M8
 
 	---
 
-	--8<-- "CZ/md/X1_24V_5pin_BCZ.md"
+	--8<-- "CZ/md/X2_D560DCbus.md"
 
 </div>
 
 ___
-### Strana CAN/IO/SD
+### Strana CAN/IO/SD a motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-560-30_50_Mot.svg" alt="IO/CAN/SD + motor connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
+
+-   **X3 - Motorový konektor osa 1**
+
+    ---
+	
+	<img src="../../../../../source/common/img/2626-1104.svg" alt="Motor connector 1" style="width:70%;">
+
+-    Wago push-in svorky
+
+    ---
+
+	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
+	
+-   **X4 - Motorový konektor osa 2**
+
+    ---
+	
+	<img src="../../../../../source/common/img/1846250000.svg" alt="Motor connector" style="width:70%;">
+
+-    Wago push-in svorky
+
+    ---
+
+	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
 
 -   **X8 - Digitální I/O, analogové vstupy**
 
@@ -96,10 +120,10 @@ ___
 
    
 ___
-### Strana FB/motor
+### Strana Feedback
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-320-5_10_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-560-30_50_FBconns.svg" alt="Feedback connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -137,50 +161,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X7_FB2_8pin_BCZ.md"
-	
-	!!! note "Poznámka"
-	
-		Servozesilovač TGZ-S-230-5/15 je jednoosý. Konektor X7 se běžně nezapojuje.
-		
--   **X2 - Napájení silové části**
-
-    ---
-	
-	<img src="../../../../../source/common/img/1778078.svg" alt="PWR connector" style="width:60%;">
-
--    Phoenix PC 5/ 3-STCL1-7,62
-
-    ---
-
-	--8<-- "CZ/md/X2_320_DC_1778078.md"
-	
--   **X3 - Motorový konektor osa 1**
-
-    ---
-	
-	<img src="../../../../../source/common/img/1846250000.svg" alt="Motor connector" style="width:70%;">
-
--    Weidmüller SLS 5.08/06/180FI SN OR BX
-
-    ---
-
-	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
-	
--   **X4 - Motorový konektor osa 2**
-
-    ---
-	
-	<img src="../../../../../source/common/img/1846250000.svg" alt="Motor connector" style="width:70%;">
-
--    Weidmüller SLS 5.08/06/180FI SN OR BX
-
-    ---
-
-	--8<-- "CZ/md/X4_M1_6pin_SLS.md"
-	
-
-	
+	--8<-- "CZ/md/X7_FB2_8pin_BCZ.md"	
 
 </div>
 
