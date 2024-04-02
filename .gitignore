@@ -5,6 +5,8 @@
 
 # Node artifact files
 node_modules/
+
+#folders
 dist/
 site/
 .github/
