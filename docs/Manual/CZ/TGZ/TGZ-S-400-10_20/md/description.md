@@ -4,8 +4,10 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.svg" alt="3D view IO side" style="width:80%;">
-<img src="../../img/Motside.svg" alt="3D view motor side" style="width:60%;">
+<img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
+<br>
+<br>
+<img src="../../img/Motside.svg" alt="3D view motor side" style="width:70%;">
 
 ##Konektory
 ___

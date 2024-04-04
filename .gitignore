@@ -10,6 +10,7 @@ node_modules/
 dist/
 site/*
 .github/
+*.xlsx#
 
 # Compiled Java class files
 *.class

@@ -4,8 +4,8 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.png" alt="3D view IO side" style="width:75%;">
-<img src="../../img/Motside.png" alt="3D view FB side" style="width:60%;">
+<img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
+<img src="../../img/Motside.svg" alt="3D view FB side" style="width:70%;">
 
 ##Konektory
 ___
