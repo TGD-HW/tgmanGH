@@ -4,8 +4,10 @@
 ## Konektory
 -->
 ##3D náhled
-![TGZ-D-48-13 Feedback side](../img/MotSide.png)   
-![TGZ-D-48-13 IO side](../img/IOside.png)
+<img src="../../img/IOside.svg" alt="3D view IO side" style="width:80%;">
+<br>
+<br>
+<img src="../../img/MotSide.svg" alt="3D view FB side" style="width:70%;">
 
 
 ##Konektory
@@ -13,7 +15,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:50%;">
 
 
 <div class="grid cards" markdown>
@@ -46,7 +48,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_IO.svg" alt="IO/CAN/SD connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
 
 <div class="grid cards" markdown>
 
@@ -111,7 +113,7 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-D-48-13_26_FBconns.png" alt="Motor/Feedback connectors" style="width:50%;">
 
 <div class="grid cards" markdown>
 

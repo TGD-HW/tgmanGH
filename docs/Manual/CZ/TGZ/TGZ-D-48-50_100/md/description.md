@@ -4,9 +4,10 @@
 ## Konektory
 -->
 ##3D náhled
-![TGZ-D-48-13 Feedback side](../img/MotSide.png)   
-![TGZ-D-48-13 Feedback side](../img/IOside.png)
-
+<img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
+<br>
+<br>
+<img src="../../img/MotSide.svg" alt="3D view FB side" style="width:80%;">
 
 ##Konektory
 ___

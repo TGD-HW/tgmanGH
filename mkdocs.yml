@@ -216,5 +216,6 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/schematic.md'               
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'                  
-
+        - 'TGS':
+            - TGS-320-10/15: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/mark.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

@@ -1,19 +1,8 @@
-<!--
-# Popis zařízení   
-
-## Konektory
-
-![TGZ-S-48-50/100 Feedback side](../img/MotSide.png)   
-![TGZ-S-48-50/100 IO side](../img/IOside.png)
--->
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
-<img src="../../img/MotSide.png" alt="TGZ-S-48-50/100 Feedback side" style="width:60%;">
-<img src="../../img/IOside.png" alt="TGZ-S-48-50/100 IO side" style="width:75%;">
+<img src="../../img/IOside.svg" alt="TGZ-S-48-50/100 IO side" style="width:70%;">
+<br>
+<br>
+<img src="../../img/MotSide.svg" alt="TGZ-S-48-50/100 Feedback side" style="width:70%;">
 
 ##Konektory
 ___
