@@ -10,5 +10,5 @@
 | 8 | +DC  | + Napájení meziobvodu | 0,2 ~ 4 mm<sup>2</sup> |
 | 9 | -DC  | - Napájení meziobvodu | 0,2 ~ 4 mm<sup>2</sup> |
 | 10 | PE  | Uzemnění | 0,2 ~ 4 mm<sup>2</sup> |
-| 11 | T+  | +Termistor | 0,2 ~ 4 mm<sup>2</sup> |
-| 12 | T-  | -Termistor | 0,2 ~ 4 mm<sup>2</sup> |
+| 11 | T+ | +Termistor | 0,2 ~ 4 mm<sup>2</sup> |
+| 12 | T- | -Termistor | 0,2 ~ 4 mm<sup>2</sup> |

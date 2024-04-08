@@ -1,7 +1,5 @@
 <!--## Rozměry zařízení-->
-![TGZ-D-48-13 Feedback side](../img/dim.png)
-
-<!-- priklad TeX zapisu $f=5 \times x$-->
+<img src="../../img/dim.png" alt="TGZ-D-48-13 Dimmensions" style="width:100%;">
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

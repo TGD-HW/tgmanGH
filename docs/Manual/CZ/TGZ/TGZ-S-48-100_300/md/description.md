@@ -1,5 +1,7 @@
 ##3D náhled
 <img src="../../img/MotSide.svg" alt="TGZ-S-48-50/100 Feedback side" style="width:75%;">
+<br>
+<br>
 <img src="../../img/IOside.svg" alt="TGZ-S-48-50/100 IO side" style="width:75%;">
 
 ##Konektory
@@ -41,7 +43,7 @@ ___
 -   **X8 - Digitální I/O, analogové vstupy**
 
     ---
-	<img src="../../../../../source/common/img/1277370000.png" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
 -    Weidmüller BCZ 3.81/22/180 SN OR BX
 
@@ -64,7 +66,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277270000.png" alt="CAN connector" style="width:25%;">
+	<img src="../../../../../source/common/img/1277270000.svg" alt="CAN connector" style="width:25%;">
 
 -    Weidmüller BCZ 3.81/04/180 SN OR BX
 
@@ -107,7 +109,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277320000.png" alt="FBE connector" style="width:60%;">
+	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:60%;">
 
 -    Weidmüller BCZ 3.81/12/180 SN OR BX
 
@@ -119,7 +121,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277290000.png" alt="FB1 connector" style="width:50%;">
+	<img src="../../../../../source/common/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 
@@ -131,7 +133,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277290000.png" alt="FB2 connector" style="width:50%;">
+	<img src="../../../../../source/common/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 

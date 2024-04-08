@@ -69,6 +69,7 @@ markdown_extensions:
       base_path: 
         - docs/Manual/source
         - docs/Manual/CZ/TGZ/
+        - docs/Manual/CZ/TGS/
  - admonition
  - pymdownx.details
  - pymdownx.superfences
@@ -217,5 +218,22 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/schematic.md'               
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'                  
         - 'TGS':
-            - TGS-320-10/15: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/mark.md'
+            - TGS-320-10/15:
+                - Základní informace: 'Manual/CZ/TGS/TGS-320-10_15/md/mark.md'
+                - Parametry: 'Manual/CZ/TGS/TGS-320-10_15/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGS/TGS-320-10_15/md/description.md'
+                - Rozměry: 'Manual/CZ/TGS/TGS-320-10_15/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGS/TGS-320-10_15/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGS/TGS-320-10_15/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGS/TGS-320-10_15/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGS/TGS-320-10_15/md/safe.md'  
+            - TGS-320-10/15:
+                - Základní informace: 'Manual/CZ/TGS/TGS-560-50_100/md/mark.md'
+                - Parametry: 'Manual/CZ/TGS/TGS-560-50_100/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGS/TGS-560-50_100/md/description.md'
+                - Rozměry: 'Manual/CZ/TGS/TGS-560-50_100/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGS/TGS-560-50_100/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGS/TGS-560-50_100/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGS/TGS-560-50_100/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGS/TGS-560-50_100/md/safe.md'                  
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

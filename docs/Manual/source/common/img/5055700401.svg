@@ -26,12 +26,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.5347432"
-     inkscape:cx="495.56497"
+     inkscape:cx="493.69492"
      inkscape:cy="277.70339"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-height="1009"
      inkscape:window-x="1912"
-     inkscape:window-y="429"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer5" />
   <g
@@ -51,7 +51,7 @@
      inkscape:label="pin">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
        x="176.31187"
        y="383.27118"
        id="text1"
@@ -60,10 +60,10 @@
          id="tspan1"
          x="176.31187"
          y="383.27118"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
        x="354.17062"
        y="383.27118"
        id="text1-2"
@@ -72,10 +72,10 @@
          id="tspan1-6"
          x="354.17062"
          y="383.27118"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
        x="532.02936"
        y="383.27118"
        id="text1-5"
@@ -84,10 +84,10 @@
          id="tspan1-7"
          x="532.02936"
          y="383.27118"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">3</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1">3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
        x="704.27789"
        y="383.17117"
        id="text1-6"
@@ -96,6 +96,6 @@
          id="tspan1-2"
          x="704.27789"
          y="383.17117"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ff0000">4</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1">4</tspan></text>
   </g>
 </svg>

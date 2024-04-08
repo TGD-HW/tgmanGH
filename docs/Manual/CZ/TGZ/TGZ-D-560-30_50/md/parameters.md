@@ -11,7 +11,7 @@
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
 | ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
 | ETHERNET UDP (servis) | 100/1000 Mb/s, RJ45 |
-| **Vstupy/výstupy** |   |
+| **VSTUPY/VÝSTUPY** |   |
 | 2 AI, 8 DI, 6 DO | 1x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |
 | **SIGNALIZACE** |   |
 | LED displej | Chybové hlášení, 2x7 segment LED |
@@ -20,7 +20,8 @@
 | Napájení výkonové části | šroubovací svorky M8x12 |
 | Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
 | Motorový konektor | 1 x 4pin WAGO push-in |
-| Zpětnovazební konektor | 2 x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |
-| Externí enkodér | 1 x 12pin WEIDMÜLLER  B2CF 3.50/12/180 |
+| Brzdový konektor | 2 x 4pin  WEIDMÜLLER LSF |
+| Zpětnovazební konektor | 2 x 8pin WEIDMÜLLER B2CF 3.50/08/180 |
+| Externí enkodér | 1 x 12pin WEIDMÜLLER B2CF 3.50/12/180 |
 | **EMI FILTR** |
 | Doporučený filtr | Filtr obsahující napájecí modul TGS-560 |

@@ -1,13 +1,8 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
 <img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
 <br>
 <br>
-<img src="../../img/Motside.svg" alt="3D view motor side" style="width:70%;">
+<img src="../../img/Motside.svg" alt="3D view motor side" style="width:75%;">
 
 ##Konektory
 ___
@@ -22,7 +17,7 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/common/img/1940760000.png" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
+	<img src="../../../../../source/common/img/1940760000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
 
 -    Weidmüller BCZ 3.81/05/180 SN OR BX
 
@@ -43,7 +38,7 @@ ___
 -   **X8 - Digitální I/O, analogové vstupy**
 
     ---
-	<img src="../../../../../source/common/img/1277370000.png" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
 -    Weidmüller BCZ 3.81/22/180 SN OR BX
 
@@ -66,7 +61,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277270000.png" alt="CAN connector" style="width:25%;">
+	<img src="../../../../../source/common/img/1277270000.svg" alt="CAN connector" style="width:25%;">
 
 -    Weidmüller BCZ 3.81/04/180 SN OR BX
 
@@ -109,7 +104,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277320000.png" alt="FBE connector" style="width:60%;">
+	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:60%;">
 
 -    Weidmüller BCZ 3.81/12/180 SN OR BX
 
@@ -121,7 +116,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277290000.png" alt="FB1 connector" style="width:50%;">
+	<img src="../../../../../source/common/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 
@@ -133,7 +128,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1277290000.png" alt="FB2 connector" style="width:50%;">
+	<img src="../../../../../source/common/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 
@@ -171,7 +166,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X2_PWR_10pin_BLZP.md"
+	--8<-- "CZ/md/X2_PWR_12pin_BLZ.md"
 	
 
 </div>
