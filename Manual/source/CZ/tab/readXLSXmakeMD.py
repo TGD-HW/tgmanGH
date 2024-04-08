@@ -235,6 +235,16 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGZ/TGZ-D-560-30_50/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGS-320-10_15
+file_path = "parameters.xlsx"
+sheet_name = "TGS-320-10_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGS/TGS-320-10_15/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+
 ##########################################################################################
 # Connectors parameter MD generator
 ##########################################################################################
@@ -481,3 +491,76 @@ range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X2_PWR_12pin_BLZ.md"
 save_markdown_table(markdown_table, output_file)
+
+# X2 - 2x M8 - TGZ-D-560-30_50 DCbus
+file_path = "connectors.xlsx"
+sheet_name = "X2_D560DCbus"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_D560DCbus.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 4pin Wago 2636 - TGZ-D-560-30_50 M1
+file_path = "connectors.xlsx"
+sheet_name = "X3_M1_4pin_wago_2636"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_M1_4pin_wago_2636.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 4pin Wago 2636 - TGZ-D-560-30_50 M2
+file_path = "connectors.xlsx"
+sheet_name = "X4_M2_4pin_wago_2636"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_M2_4pin_wago_2636.md"
+save_markdown_table(markdown_table, output_file)
+
+# X14 - 4pin Weidmuller - LSF-SMT 5.00/04/90 3.5SN BK RL - TGZ-D-560-30_50 BR1
+file_path = "connectors.xlsx"
+sheet_name = "X14_BR1_4pin_LSF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X14_BR1_4pin_LSF.md"
+save_markdown_table(markdown_table, output_file)
+
+# X15 - 4pin Weidmuller - LSF-SMT 5.00/04/90 3.5SN BK RL - TGZ-D-560-30_50 BR2
+file_path = "connectors.xlsx"
+sheet_name = "X15_BR2_4pin_LSF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X15_BR2_4pin_LSF.md"
+save_markdown_table(markdown_table, output_file)
+
+# X1 - 3pin Phoenix PC 5/ 3-STCL1-7,62 - ACIN
+file_path = "connectors.xlsx"
+sheet_name = "X1_ACIN_PC5"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X1_ACIN_PC5.md"
+save_markdown_table(markdown_table, output_file)
+
+# X2 - 8pin Phoenix PC 5/ 8-STCL1-7,62 - DC bus
+file_path = "connectors.xlsx"
+sheet_name = "X2_DC_8pin_PC5"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X2_DC_8pin_PC5.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 4pin Weidmuller BCZ 3.81/04/180 SN BK BX - RDY,ERR
+file_path = "connectors.xlsx"
+sheet_name = "X3_DO_4pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X3_DO_4pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
