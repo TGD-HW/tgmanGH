@@ -27,7 +27,7 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce rozvaděče. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-![Shielding connection DC](../../../../source/common/img/cableShielding1.png)
+<img src="../../../../../source/common/img/cableShielding1.png" alt="Shielding connection DC" style="width:70%;">
 
 ###Postup zapojení motorového kabelu s&nbsp;připojením stínění
 
@@ -36,14 +36,16 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-![Shielding connection motor 1](../../../../source/common/img/cableShielding2.png)
-![Shielding connection motor 2](../../../../source/common/img/cableShielding3.png)
+<img src="../../../../../source/common/img/cableShielding2.png" alt="Shielding connection motor 1" style="width:50%;">
+<img src="../../../../../source/common/img/cableShielding3.png" alt="Shielding connection motor 2" style="width:70%;">
 
 ###Technologie stínění
 
 Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
-![Shielding connection technology](../../../../source/common/img/cableShielding4.svg)
+<br>
+
+<img src="../../../../../source/common/img/cableShielding4.svg" alt="Shielding connection technology" style="width:70%;">
 
 ###Potlačení rušení
 
@@ -61,4 +63,4 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 Na níže uvedených obrázcích je zobrazeno doporučené vedení kabeláže:
 
-![Cable management technology](../../../../source/CZ/img/cableMan.svg)
+<img src="../../../../../source/CZ/img/cableMan.svg" alt="Cable management technology" style="width:80%;">

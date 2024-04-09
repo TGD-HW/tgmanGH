@@ -1,8 +1,3 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
 <img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
 <br>
@@ -11,10 +6,10 @@
 
 ##Konektory
 ___
-### Strana AC IN
+### Strana silových konektorů
 ___
 
-<img src="../../../../../source/CZ/img/TGS-320-10_15_ACside.png" alt="AC IN connector" style="width:70%;">
+<img src="../../../../../source/CZ/img/TGS-560-50_100_PWR.svg" alt="PWR connections" style="width:70%;">
 
 
 <div class="grid cards" markdown>
@@ -32,36 +27,12 @@ ___
 	--8<-- "CZ/md/X1_ACIN_PC5.md"
 
 </div>
-
+  
 ___
-### Strana LED signalizace
-___
-
-
-<img src="../../../../../source/CZ/img/TGS-320-10_15_LEDSide.png" alt="LEDs" style="width:70%;">
-<!--
-<div class="grid cards" markdown>
-
--	**LED signalizace**
-
-	---
-	
-	<img src="../../../../../source/CZ/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
-	
--	LED diody
-
-	---
-	
-	--8<-- "CZ/md/LEDsigAx12.md"
-
-</div>
--->
-   
-___
-### Strana výstup DC bus, Ready, Error
+### Strana napájení řízení, kontrolních výstupů, term.
 ___
 
-<img src="../../../../../source/CZ/img/TGS-320-10_15_DCbusSide.png" alt="Motor/Feedback connectors" style="width:70%;">
+<img src="../../../../../source/CZ/img/TGS-560-50_100_Top.svg" alt="Motor/Feedback connectors" style="width:70%;">
 
 <div class="grid cards" markdown>
 

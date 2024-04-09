@@ -18,4 +18,4 @@
 | **KONEKTORY** |   |
 | Síťový napájecí konektor | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
 | DC bus konektor | 1 x 8pin PHOENIX PC 5/ 8-STCL1-7,62 |
-| Konektor pro digitální výstupy | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |
+| Konektor pro kontrolní výstupy | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |

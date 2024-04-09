@@ -22,6 +22,9 @@ theme:
     - search.highlight
     - header.autohide
     - content.footnote.tooltips
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
   extra:
     logo: Manual/source/common/img/TGsymbol.svg
   palette:
@@ -31,6 +34,13 @@ theme:
 extra:
     generator: false #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
     homepage: https://www.dev.tgdrives.cz/
+    alternate:
+        - name: Česky
+          link: /Manual/CZ/TGZ/TGZ-D-48-13/md/mark/
+          lang: cs
+        - name: English
+          link: /Manual/CZ/TGS/TGS-320-10_15/md/mark/
+          lang: en
 # Cookie bar    
 #    consent:
 #        title: Chcete naše sušenky?
@@ -66,15 +76,22 @@ markdown_extensions:
     generic: true
  - md_in_html
  - pymdownx.snippets:
-      base_path: 
+      base_path:
         - docs/Manual/source
         - docs/Manual/CZ/TGZ/
         - docs/Manual/CZ/TGS/
- - admonition
+ - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+ - pymdownx.inlinehilite
  - pymdownx.details
  - pymdownx.superfences
+ - pymdownx.critic
+ - admonition
  - tables
  - footnotes
+ - attr_list
  - toc:
     permalink: true
  
@@ -227,7 +244,16 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGS/TGS-320-10_15/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGS/TGS-320-10_15/md/schematic.md'               
                 - Bezpečnost: 'Manual/CZ/TGS/TGS-320-10_15/md/safe.md'  
-            - TGS-320-10/15:
+            - TGS-560-25/50:
+                - Základní informace: 'Manual/CZ/TGS/TGS-560-25_50/md/mark.md'
+                - Parametry: 'Manual/CZ/TGS/TGS-560-25_50/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGS/TGS-560-25_50/md/description.md'
+                - Rozměry: 'Manual/CZ/TGS/TGS-560-25_50/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGS/TGS-560-25_50/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGS/TGS-560-25_50/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGS/TGS-560-25_50/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGS/TGS-560-25_50/md/safe.md'                  
+            - TGS-560-50/100:
                 - Základní informace: 'Manual/CZ/TGS/TGS-560-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGS/TGS-560-50_100/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGS/TGS-560-50_100/md/description.md'
@@ -235,5 +261,22 @@ nav:
                 - Montáž: 'Manual/CZ/TGS/TGS-560-50_100/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGS/TGS-560-50_100/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGS/TGS-560-50_100/md/schematic.md'               
-                - Bezpečnost: 'Manual/CZ/TGS/TGS-560-50_100/md/safe.md'                  
+                - Bezpečnost: 'Manual/CZ/TGS/TGS-560-50_100/md/safe.md'  
+        - 'TGM':
+            - TGMmini:
+                - Základní informace: 'Manual/CZ/TGM/TGMmini/md/basic.md'
+                - Linux: 'Manual/CZ/TGM/TGMmini/md/description.md'
+                - Parametry: 'Manual/CZ/TGM/TGMmini/md/param.md'                
+                - Rozměry: 'Manual/CZ/TGM/TGMmini/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGM/TGMmini/md/mounting.md'
+                - Příklad zapojení: 'Manual/CZ/TGM/TGMmini/md/schematic.md'              
+            - TGMcontroller:
+                - Základní informace: 'Manual/CZ/TGM/TGMcontroller/md/basic.md'
+                - Parametry: 'Manual/CZ/TGM/TGMcontroller/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGM/TGMcontroller/md/description.md'
+                - Rozměry: 'Manual/CZ/TGM/TGMcontroller/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGM/TGMcontroller/md/mounting.md'
+                - Příklad zapojení: 'Manual/CZ/TGM/TGMcontroller/md/schematic.md'                  
+        - 'Ostatní': 
+            - TGHall: 'Manual/CZ/Aux/TGHall/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'
