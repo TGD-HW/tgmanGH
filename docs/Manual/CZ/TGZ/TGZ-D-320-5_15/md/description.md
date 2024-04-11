@@ -44,7 +44,7 @@ ___
 
 	---
 
-	--8<-- "CZ/md/X8_IO_22pin_BCZ.md"
+	--8<-- "CZ/md/X8_IO_22pin_B2CF.md"
 	
 	!!! warning "Pozor"	
 	
@@ -67,7 +67,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X10_CAN_4pin_BCZ.md"
+	--8<-- "CZ/md/X10_CAN_4pin_B2CF.md"
 	
 -	**LED displej**
 
@@ -110,7 +110,7 @@ ___
 
 	---
 
-	--8<-- "CZ/md/X5_FBE_12pin_BCZ.md"
+	--8<-- "CZ/md/X5_FBE_12pin_B2CF.md"
 
 -   **X6 - Zpětná vazba - osa 1**
 
@@ -122,7 +122,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X6_FB1_8pin_BCZ.md"
+	--8<-- "CZ/md/X6_FB1_8pin_B2CF.md"
 	
 -   **X7 - Zpětná vazba - osa 2**
 
@@ -134,7 +134,7 @@ ___
 
     ---
 
-	--8<-- "CZ/md/X7_FB2_8pin_BCZ.md"
+	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
 	
 	!!! note "Poznámka"
 	

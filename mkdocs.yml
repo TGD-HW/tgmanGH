@@ -80,10 +80,15 @@ markdown_extensions:
         - docs/Manual/source
         - docs/Manual/CZ/TGZ/
         - docs/Manual/CZ/TGS/
+        - docs/Manual/CZ/TGM/
+        - docs/Manual/CZ/ETC/
  - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+ - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg      
  - pymdownx.inlinehilite
  - pymdownx.details
  - pymdownx.superfences
@@ -265,8 +270,9 @@ nav:
         - 'TGM':
             - TGMmini:
                 - Základní informace: 'Manual/CZ/TGM/TGMmini/md/basic.md'
-                - Linux: 'Manual/CZ/TGM/TGMmini/md/description.md'
-                - Parametry: 'Manual/CZ/TGM/TGMmini/md/param.md'                
+                - Parametry: 'Manual/CZ/TGM/TGMmini/md/param.md'
+                - Popis konektorů: 'Manual/CZ/TGM/TGMmini/md/connectors.md'                
+                - Linux: 'Manual/CZ/TGM/TGMmini/md/linux.md'              
                 - Rozměry: 'Manual/CZ/TGM/TGMmini/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGM/TGMmini/md/mounting.md'
                 - Příklad zapojení: 'Manual/CZ/TGM/TGMmini/md/schematic.md'              
@@ -276,7 +282,9 @@ nav:
                 - Popis zařízení: 'Manual/CZ/TGM/TGMcontroller/md/description.md'
                 - Rozměry: 'Manual/CZ/TGM/TGMcontroller/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGM/TGMcontroller/md/mounting.md'
-                - Příklad zapojení: 'Manual/CZ/TGM/TGMcontroller/md/schematic.md'                  
+                - Příklad zapojení: 'Manual/CZ/TGM/TGMcontroller/md/schematic.md'   
+            - TGMotion:
+                - Základní informace: 'Manual/CZ/TGM/TGMotion/md/basic.md'                
         - 'Ostatní': 
             - TGHall: 'Manual/CZ/Aux/TGHall/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

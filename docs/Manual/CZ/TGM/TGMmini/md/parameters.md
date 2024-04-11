@@ -1,26 +1,18 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
-| Ovládací napětí | 24 VDC ± 10 %, 500 mA* |
-| Výkonové napájecí napětí | 400 VAC |
-| Instalovaný příkon pro provoz S1 | 5,6 kW |
-| Trvalý proud na jednu osu | 10 A |
-| Maximální výstupní proud (max. 5 s) | 20 A |
-| Ztráty při jmenovité zátěži | 70 W |
-| Pracovní spínací frekvence | 20 kHz |
+| Napájecí napětí | 24 V DC (± 20 %) |
+| Proudový odběr | min. 1 A |
+| Napájení DO | 24 V DC (± 20 %) |
 | **KOMUNIKACE** |   |
-| CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
-| ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
-| ETHERNET UDP (servis) | 100/1000 Mb/s, RJ45 |
-| **Vstupy/výstupy** |   |
-| 2 AI, 8 DI, 6 DO | 1x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |
+| Ethernet | 10/100 Mbit RJ45 |
+| EtherCAT | 100 Mbps |
+| CAN |   |
+| USB | 4 x USB 2.0, microUSB |
+| SD | microSD slot s detekcí vložené karty |
+| HDMI | standard A |
 | **SIGNALIZACE** |   |
-| LED displej | Chybové hlášení, 2x7 segment LED |
-| LED signalizace | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
-| **OSTATNÍ KONEKTORY** |   |
-| Napájení výkonové části | 1 x 12pin WEIDMÜLLER BLZ 7.62HP/12/180F |
-| Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180   |
-| Motorový konektor | 1 x 6pin WEIDMÜLLER  BLF 7.62HP/06/180F |
-| Zpětnovazební konektor | 1 x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |
-| Externí enkodér | 1 x 12pin WEIDMÜLLER  B2CF 3.50/12/180 |
-| **EMI FILTR** |
-| Doporučený filtr | NCZXX3P49-04 |
+| stavová signalizační LED | Červená/zelená STS dioda |
+| **KONEKTORY** |   |
+| Napájení | 1 x 4pin WEIDMÜLLER BLF 2.50/04/180 SN BK BX |
+| CAN | 1 x 4pin WEIDMÜLLER B2CF 3.50/04/180 SN OR BX |
+| DI/DO | 2 x 10pin WEIDMÜLLER B2CF 3.50/10/180 SN OR BX |

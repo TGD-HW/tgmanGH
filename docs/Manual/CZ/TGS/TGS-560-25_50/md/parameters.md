@@ -16,7 +16,7 @@
 | **SIGNALIZACE** |   |
 | LED signalizace | 1x zelená (Ready)  1x červená (Error) |
 | **KONEKTORY** |   |
-| Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
+| Napájení řídicí části | 1 x 5pin WEIDMÜLLER BCZ 3.81/05/180F |
 | Síťový napájecí konektor |   |
 | DC bus konektor |   |
 | Konektor pro kontrolní výstupy | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |
