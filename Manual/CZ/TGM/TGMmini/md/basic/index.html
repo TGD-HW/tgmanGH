@@ -14,7 +14,7 @@
         <link rel="prev" href="../../../../TGS/TGS-560-50_100/md/safe/">
       
       
-        <link rel="next" href="../description/">
+        <link rel="next" href="../param/">
       
       
       <link rel="icon" href="../../../../../source/common/img/TGsymbol.svg">
@@ -4232,40 +4232,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#adresar-tgmotion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adresář /TGMotion
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../description/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Linux
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4283,6 +4253,48 @@
   
   <span class="md-ellipsis">
     Parametry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Popis konektorů
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
   </span>
   
 
@@ -4535,6 +4547,73 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    TGMotion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            TGMotion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TGMotion/md/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Základní informace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4656,34 +4735,26 @@
   <h1>Základní informace</h1>
 
 <h2 id="strucny-popis">Stručný popis<a class="headerlink" href="#strucny-popis" title="Permanent link">&para;</a></h2>
-<p><strong>TGMmini</strong> je plnohodnotný počítač s dvoujádrovým procesorem ARM. Obě jádra procesoru jsou využita pro operační sytém Linux (distribuce Debian 10 s real-time rozšířením Xenomai) s grafickou nadstavbou Xfce. 
-Řídicí systém <strong>TG&nbsp;Motion</strong>, umožňující řízení servopohonů a I/O jednotek přes sběrnici
-EtherCAT, běží z části v real-time prostředí Linuxu a z části v samostatném procesoru s hardwarovým
-EtherCAT akcelerátorem (vše implementováno v FPGA). Ovládání <strong>TG&nbsp;Motion</strong> se provádí z linuxové-
-ho prostředí, na všechny potřebné operace jsou k dispozici knihovny, jejichž API rozhraní je totožné
-s knihovnami DLL pro systém Windows na PC. Uživatelské virtuální PLC programy lze psát a vyvíjet
-na PC, zdrojový text se pouze přeloží kompilátorem pro procesor ARM a vytvořený binární soubor se
-přenese na <strong>TGMmini</strong>, kde se spustí. Pro přístup ke sdílené paměti systému <strong>TG&nbsp;Motion</strong> slouží knihovna TGM_Comm_Int_5, opět ve shodné verzi pro PC a <strong>TGMmini</strong>.</p>
+<p><br></p>
+<p><a class="glightbox" href="../../img/3Dview.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../img/3Dview.png" alt="Basic view" style="width:35%;"></a></p>
+<p><br></p>
+<p><strong>TGMmini</strong> je plnohodnotný počítač s dvoujádrovým procesorem ARM. 
+Obě jádra procesoru jsou využita pro operační sytém Linux (distribuce Debian 10 s real-time rozšířením Xenomai) s grafickou nadstavbou Xfce. 
+Řídicí systém <strong>TG&nbsp;Motion</strong>, umožňující řízení servopohonů a I/O jednotek přes sběrnici EtherCAT, běží z části v real-time prostředí Linuxu a z části v samostatném procesoru s hardwarovým EtherCAT akcelerátorem (vše implementováno v FPGA). 
+Ovládání <strong>TG&nbsp;Motion</strong> se provádí z linuxového prostředí, na všechny potřebné operace jsou k dispozici knihovny, jejichž API rozhraní je totožné s knihovnami DLL pro systém Windows na PC. 
+Uživatelské virtuální PLC programy lze psát a vyvíjet na PC, zdrojový text se pouze přeloží kompilátorem pro procesor ARM a vytvořený binární soubor se přenese na <strong>TGMmini</strong>, kde se spustí. 
+Pro přístup ke sdílené paměti systému <strong>TG&nbsp;Motion</strong> slouží knihovna TGM_Comm_Int_5, opět ve shodné verzi pro PC a <strong>TGMmini</strong>.</p>
 <h2 id="rozdily-vuci-tg-motion-na-pc">Rozdíly vůči TG Motion na PC<a class="headerlink" href="#rozdily-vuci-tg-motion-na-pc" title="Permanent link">&para;</a></h2>
-<p>TG Motion používaný na TGMmini je ve verzi 501 či vyšší. Verze pro PC i TGMmini jsou navzá-
-jem kompatibilní. Manuál pro systém TG Motion tuto verzi zahrnuje a je mj. k dispozici na webových
-stránkách TGDrives. TGMmini podporuje až 64 servopohonů a 16 I/O jednotek na sběrnici EtherCAT.
-Implementován jsou též až dva CNC moduly s interpolátorem. Přímo na hardwaru TGMmini se nachází 8 rychlých vstupů (použitelné např. i pro inkrementální snímač otáček IRC), 8 rychlých výstupů
-(programovatelné jako digitální nebo PWM výstupy) a sběrnice CAN.</p>
-<p>Na rozdíl od systému Windows systém Linux rozeznává velikost písmen v názvech souborů a proto soubory se stejným názvem, lišícím se pouze velikostí, jsou chápány jako dva různé soubory. Např.
-TG Motion používá pro vlastní nastavení soubor TgMotion5xx.ini. Pokud by byl tento soubor
-uložen na TGMmini např. jako TGMotion5xx.INI, systém jej bude ignorovat.</p>
-<p>Před vlastní prací s TGMmini je vhodné si přečíst manuály k TG Motion.</p>
-<h2 id="adresar-tgmotion">Adresář <code>/TGMotion</code><a class="headerlink" href="#adresar-tgmotion" title="Permanent link">&para;</a></h2>
-<p>Všechny systémové a konfigurační soubory TG Motion se nacházejí v adresáři <code>/TGMotion</code>. Struktura adresáře je následující:
-<code><ins class="critic"> /TGMotion/app/cnc</ins></code> – knihovny CNC modulu (<code>libSF_xxx.so</code>) a testovací program <code>Qt_CNC_Tester_5</code> <br />
-<code><ins class="critic"> /TGMotion/bin </ins></code> – určen pro uživatelské PLC programy <br />
-<code><ins class="critic"> /TGMotion/rtss </ins></code> – obsahuje vlastní TG Motion (<code>tgm501-xeno</code>) a jeho konfiguraci <code>TgMotion5xx.ini</code> <br />
-<code><ins class="critic"> /TGMotion/system </ins></code> – obslužné programy pro ovládání TG Motion – spuštění, zastavení, reset: služby <code>tgm_starter_service</code>, a <code>tgm_xeno_service</code>, obslužný program <code>tgm_sc</code> a uživatelské rozhraní <code>tgm_control_panel</code>.
-Dále jsou zde umístěny systémové knihovny <code>libTGM_Comm_Int_5.so</code> a <code>libTGM_OPC_Server_5.so</code>, které jsou zaregistrovány do systému Linux pomocí příkazu <code>ldconfig</code>. <br />
-<code><ins class="critic"> /TGMotion/tools/TGM_5xx/4034_905 </ins></code> – další pomocné utility, např. konzole pro zobrazení chybových a uživatelských zpráv <code>TGM5xxDebugConsole</code>, servery OPC UA, ModbusTCP, a server pro emulaci DNC na sériovém portu. <br />
-<code><ins class="critic"> /TGMotion/Windows </ins></code> – zde se nacházejí všechny utility, které lze použít pro práci s TGMmini. Tyto programy běží pod Windows a komunikují s TGMmini pomocí protokolu TCP/IP. K dispozici je mj.
-Control Observer, konzole pro zobrazení chybových a uživatelských zpráv, DLL knihovny CNC modulu a testovací program <code>Qt_CNC_Tester_5.exe</code>.</p>
+<p>TG Motion používaný na TGMmini je ve verzi 501 či vyšší. 
+Verze pro PC i TGMmini jsou navzájem kompatibilní. 
+Manuál pro systém TG Motion tuto verzi zahrnuje a je mj. k dispozici na <a href="https://www.tgdrives.cz/">webových stránkách TG Drives</a>. 
+TGMmini podporuje až 64 servopohonů a 16 I/O jednotek na sběrnici EtherCAT.
+Implementován jsou též až dva CNC moduly s interpolátorem. 
+Přímo na hardwaru TGMmini se nachází 8 rychlých vstupů (použitelné např. i pro inkrementální snímač otáček IRC), 8 rychlých výstupů (programovatelné jako digitální nebo PWM výstupy) a sběrnice CAN.   </p>
+<p>Na rozdíl od systému Windows systém Linux rozeznává velikost písmen v názvech souborů a proto soubory se stejným názvem, lišícím se pouze velikostí, jsou chápány jako dva různé soubory. 
+Např. TG Motion používá pro vlastní nastavení soubor <code>TgMotion5xx.ini</code>. 
+Pokud by byl tento soubor uložen na TGMmini např. jako <code>TGMotion5xx.INI</code>, systém jej bude ignorovat.</p>
+<p>Před vlastní prací s TGMmini je vhodné si přečíst <a href="https://www.tgdrives.cz/ke-stazeni/ridici-systemy-pc-a-panely-ke-stazeni/#c426">manuály k TG Motion</a>.</p>
 
 
 

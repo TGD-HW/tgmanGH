@@ -262,6 +262,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGS/TGS-560-50_100/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGMmini
+file_path = "parameters.xlsx"
+sheet_name = "TGMmini"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGM/TGMmini/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 
 ##########################################################################################
 # Connectors parameter MD generator
@@ -287,20 +296,20 @@ save_markdown_table(markdown_table, output_file)
 
 # X8 - 22pin Weidmuller - B2CF 3.50/22/180 SN OR BX - standard TGZ IO
 file_path = "connectors.xlsx"
-sheet_name = "X8_IO_22pin_BCZ"
+sheet_name = "X8_IO_22pin_B2CF"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X8_IO_22pin_BCZ.md"
+output_file = "../../../source/CZ/md/X8_IO_22pin_B2CF.md"
 save_markdown_table(markdown_table, output_file)
 
 # X10 - 4pin Weidmuller - B2CF 3.50/04/180 SN OR BX - standard TGZ CAN
 file_path = "connectors.xlsx"
-sheet_name = "X10_CAN_4pin_BCZ"
+sheet_name = "X10_CAN_4pin_B2CF"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X10_CAN_4pin_BCZ.md"
+output_file = "../../../source/CZ/md/X10_CAN_4pin_B2CF.md"
 save_markdown_table(markdown_table, output_file)
 
 # LED sig. - standard TGZ Green-Red Leds
@@ -314,29 +323,29 @@ save_markdown_table(markdown_table, output_file)
 
 # X5 - 12pin Weidmuller - B2CF 3.50/12/180 SN OR BX - standard TGZ FBE
 file_path = "connectors.xlsx"
-sheet_name = "X5_FBE_12pin_BCZ"
+sheet_name = "X5_FBE_12pin_B2CF"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X5_FBE_12pin_BCZ.md"
+output_file = "../../../source/CZ/md/X5_FBE_12pin_B2CF.md"
 save_markdown_table(markdown_table, output_file)
 
 # X6 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - standard TGZ FB1
 file_path = "connectors.xlsx"
-sheet_name = "X6_FB1_8pin_BCZ"
+sheet_name = "X6_FB1_8pin_B2CF"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X6_FB1_8pin_BCZ.md"
+output_file = "../../../source/CZ/md/X6_FB1_8pin_B2CF.md"
 save_markdown_table(markdown_table, output_file)
 
 # X7 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - standard TGZ FB2
 file_path = "connectors.xlsx"
-sheet_name = "X7_FB2_8pin_BCZ"
+sheet_name = "X7_FB2_8pin_B2CF"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X7_FB2_8pin_BCZ.md"
+output_file = "../../../source/CZ/md/X7_FB2_8pin_B2CF.md"
 save_markdown_table(markdown_table, output_file)
 
 # X3 - 6pin Weidmuller -  BLZP 5.08HC/06/180 SN OR BX - standard TGZ M1
@@ -573,12 +582,38 @@ markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X2_DC_8pin_PC5.md"
 save_markdown_table(markdown_table, output_file)
 
-# X3 - 4pin Weidmuller BCZ 3.81/04/180 SN BK BX - RDY,ERR
+# X3 - 4pin Weidmuller BLF 2.50/04/180 SN BK BX
 file_path = "connectors.xlsx"
-sheet_name = "X3_DO_4pin_BCZ"
+sheet_name = "X3_24V_BLF_2_5"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../../source/CZ/md/X3_DO_4pin_BCZ.md"
+output_file = "../../../source/CZ/md/X3_24V_BLF_2_5.md"
 save_markdown_table(markdown_table, output_file)
 
+# X5 - 10pin Weidmuller B2CF 3.50/10/180 SN OR BX - Mini DO
+file_path = "connectors.xlsx"
+sheet_name = "X5_DI_10pin_B2CF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X5_DI_10pin_B2CF.md"
+save_markdown_table(markdown_table, output_file)
+
+# X10 - 10pin Weidmuller B2CF 3.50/10/180 SN OR BX - Mini DI
+file_path = "connectors.xlsx"
+sheet_name = "X10_DO_10pin_B2CF"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X10_DO_10pin_B2CF.md"
+save_markdown_table(markdown_table, output_file)
+
+# S1 - Dip switch Mini CAN term
+file_path = "connectors.xlsx"
+sheet_name = "S1_SWITCH_CAN"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/S1_SWITCH_CAN.md"
+save_markdown_table(markdown_table, output_file)
