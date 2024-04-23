@@ -70,6 +70,21 @@ plugins:
        caption_position: bottom
        background: white
        shadow: true
+  - i18n:
+       docs_structure: folder
+       reconfigure_search: true       
+       languages:
+            - locale: cs
+              default: true
+              name: Czech
+              build: true
+              site_name: "Česky"
+              site_description: "Český manuál"
+            - locale: en
+              name: English
+              build: true
+              site_name: "English"
+              site_description: "Description EN"
 
 markdown_extensions:
  - pymdownx.arithmatex:
@@ -109,7 +124,7 @@ extra_css:
 nav:
     - Domů: 'index.md'
     #- About: 'about.md'
-    - 'Manuál CZ':
+    - 'Manuál CZ': #tuto úroveň by šlo úplně odstranit, po zprovoznění language selectoru i18n (plugins). kategorie nahoře budou "TGZ, TGS...."
         - 'TGZ': 
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
