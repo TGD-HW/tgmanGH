@@ -195,7 +195,7 @@ Při použití vhodného terminálového programu, např. Putty nebo Tera Term, 
 Stejně tak je i možný přístup pomocí protokolu SSH přes rozhraní Ethernet. Nutná je pouze znalost IP adresy.
 
 ###Význam stavové LED diody STS
-1. Krátce po zapnutí TGMmini se rozsvítí červená LED dioda.
+1.	Krátce po zapnutí TGMmini se rozsvítí červená LED dioda.
 
 2. Po spuštění operačního systému Linux se rozbliká zelená LED dioda, červená zhasne.
 3. Následně se spustí řídicí systém TGMotion a zelená LED dioda svítí trvale.

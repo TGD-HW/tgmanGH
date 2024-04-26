@@ -70,21 +70,22 @@ plugins:
        caption_position: bottom
        background: white
        shadow: true
-  - i18n:
-       docs_structure: folder
-       reconfigure_search: true       
-       languages:
-            - locale: cs
-              default: true
-              name: Czech
-              build: true
-              site_name: "Česky"
-              site_description: "Český manuál"
-            - locale: en
-              name: English
-              build: true
-              site_name: "English"
-              site_description: "Description EN"
+  # odkomentovat až se bude řešit multilang. do té doby vypnuto, protože zpomaluje překlad
+  # - i18n:
+       # docs_structure: folder
+       # reconfigure_search: true       
+       # languages:
+            # - locale: cs
+              # default: true
+              # name: Czech
+              # build: true
+              # site_name: "Česky"
+              # site_description: "Český manuál"
+            # - locale: en
+              # name: English
+              # build: true
+              # site_name: "English"
+              # site_description: "Description EN"
 
 markdown_extensions:
  - pymdownx.arithmatex:
@@ -122,9 +123,9 @@ extra_javascript:
 extra_css:
  - stylesheets/extra.css
 nav:
-    - Domů: 'index.md'
+        - Domů: 'index.md'
     #- About: 'about.md'
-    - 'Manuál CZ': #tuto úroveň by šlo úplně odstranit, po zprovoznění language selectoru i18n (plugins). kategorie nahoře budou "TGZ, TGS...."
+    #- 'Manuál CZ': #tuto úroveň by šlo úplně odstranit, po zprovoznění language selectoru i18n (plugins). kategorie nahoře budou "TGZ, TGS...."
         - 'TGZ': 
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
@@ -294,7 +295,7 @@ nav:
             - TGMcontroller:
                 - Základní informace: 'Manual/CZ/TGM/TGMcontroller/md/basic.md'
                 - Parametry: 'Manual/CZ/TGM/TGMcontroller/md/param.md'
-                - Popis zařízení: 'Manual/CZ/TGM/TGMcontroller/md/description.md'
+                - Popis konektorů: 'Manual/CZ/TGM/TGMcontroller/md/connectors.md'
                 - Rozměry: 'Manual/CZ/TGM/TGMcontroller/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGM/TGMcontroller/md/mounting.md'
                 - Příklad zapojení: 'Manual/CZ/TGM/TGMcontroller/md/schematic.md'   
