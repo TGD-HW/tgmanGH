@@ -271,6 +271,16 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGM/TGMmini/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGMcontroller
+file_path = "parameters.xlsx"
+sheet_name = "TGMcontroller"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGM/TGMcontroller/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+
 
 ##########################################################################################
 # Connectors parameter MD generator
@@ -616,4 +626,40 @@ range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/S1_SWITCH_CAN.md"
+save_markdown_table(markdown_table, output_file)
+
+# X1 - 5pin weidmuller - BCZ 3.81/05/180 SN OR BX - +24V logic power TGMcontroller
+file_path = "connectors.xlsx"
+sheet_name = "X1_24V_5pin_BCZ_TGM"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X1_24V_5pin_BCZ_TGM.md"
+save_markdown_table(markdown_table, output_file)
+
+# X5 - 12pin Weidmuller - B2CF 3.50/12/180 SN OR BX - TGM FBE
+file_path = "connectors.xlsx"
+sheet_name = "X5_FBE_12pin_B2CF_TGM"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X5_FBE_12pin_B2CF_TGM.md"
+save_markdown_table(markdown_table, output_file)
+
+# X6 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - TGM FB1
+file_path = "connectors.xlsx"
+sheet_name = "X6_FB1_8pin_B2CF_TGM"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X6_FB1_8pin_B2CF_TGM.md"
+save_markdown_table(markdown_table, output_file)
+
+# X7 - 8pin Weidmuller - B2CF 3.50/08/180 SN OR BX - TGM FB2
+file_path = "connectors.xlsx"
+sheet_name = "X7_FB2_8pin_B2CF_TGM"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X7_FB2_8pin_B2CF_TGM.md"
 save_markdown_table(markdown_table, output_file)
