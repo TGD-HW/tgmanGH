@@ -280,6 +280,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGM/TGMcontroller/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGMcontroller
+file_path = "parameters.xlsx"
+sheet_name = "TGZpMotion"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGM/TGZpMotion/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 
 
 ##########################################################################################
