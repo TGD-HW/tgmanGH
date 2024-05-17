@@ -32,15 +32,18 @@ theme:
     accent: teal
   favicon: Manual/source/common/img/TGsymbol.svg
 extra:
-    generator: false #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
+    generator: true #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
     homepage: https://www.dev.tgdrives.cz/
-    alternate:
-        - name: Česky
-          link: /Manual/CZ/TGZ/TGZ-D-48-13/md/mark/
-          lang: cs
-        - name: English
-          link: /Manual/CZ/TGS/TGS-320-10_15/md/mark/
-          lang: en
+    # version:
+        # provider: mike
+        #default: stable
+    # alternate:
+        # - name: Česky
+          # link: /Manual/CZ/TGZ/TGZ-D-48-13/md/mark/
+          # lang: cs
+        # - name: English
+          # link: /Manual/CZ/TGS/TGS-320-10_15/md/mark/
+          # lang: en
 # Cookie bar    
 #    consent:
 #        title: Chcete naše sušenky?
@@ -86,6 +89,15 @@ plugins:
               # build: true
               # site_name: "English"
               # site_description: "Description EN"
+  #mike nefungoval
+  # - mike:
+        # alias_type: copy
+        # redirect_template: null
+        # deploy_prefix: ''
+        # canonical_version: null
+        # version_selector: true
+        # css_dir: css
+        # javascript_dir: js
 
 markdown_extensions:
  - pymdownx.arithmatex:
@@ -123,7 +135,7 @@ extra_javascript:
 extra_css:
  - stylesheets/extra.css
 nav:
-        - Domů: 'index.md'
+        - Úvod: 'index.md'
     #- About: 'about.md'
     #- 'Manuál CZ': #tuto úroveň by šlo úplně odstranit, po zprovoznění language selectoru i18n (plugins). kategorie nahoře budou "TGZ, TGS...."
         - 'TGZ': 
@@ -313,11 +325,11 @@ nav:
             - Hardware: 'Manual/CZ/TGM/TGMotion/md/HW.md'
             - Interpolátor: 'Manual/CZ/TGM/TGMotion/md/interpolator.md'
             - Osciloskop: 'Manual/CZ/TGM/TGMotion/md/osc.md'
-            - Skupina servo: 'Manual/CZ/TGM/TGMotion/md/Gservo.md'   
-            - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
-            - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'
-            - CNC modul: 'Manual/CZ/TGM/TGMotion/md/CNC.md'    
-            - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'            
+            # - Skupina servo: 'Manual/CZ/TGM/TGMotion/md/Gservo.md'   
+            # - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
+            # - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'
+            # - CNC modul: 'Manual/CZ/TGM/TGMotion/md/CNC.md'    
+            # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'            
         - 'Ostatní': 
-            - TGHall: 'Manual/CZ/Aux/TGHall/md/description.md'
+            - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

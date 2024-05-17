@@ -1,5 +1,6 @@
 #Interpolátor
 ##CNC modul
+
 CNC je softwarový modul, který vykonává sekvenci pohybových (G-instrukce) a vstupně/výstupních příkazů (M-funkce) danou G-kódem.
 Jeho součástí je modul Interpolátor.
 
@@ -117,13 +118,14 @@ Průběžné M-funkce (Mx, kde x > 1000) – PLC spustí obsluhu M-funkce, ale I
 | M87 | Zrcadlení v osách x, y a z |
 | M99 | Definování výchozí hodnoty posuvu, lze předefinovat |
 
-#Vyhlazení trajektorie
+##Vyhlazení trajektorie
 G-kód často pracuje s polynomy složenými z krátkých úseček, někdy může také docházet k okamžitým změnám rychlosti vlivem nesprávně zapsaného kódu.
 Všechny okamžité změny rychlosti se mohou projevit nežádoucím zrychlením v některých z os, a tím i mechanickým rázem v některých servopohonech.
 K vyhlazení vypočtené trajektorie slouží dva nástroje.
 
 ##Spline
 ###Spline – funkce vyhlazení
+
 Funkci Spline je vhodné použít v případě nekorektně vytvořených G-kódů, ve kterých jednotlivé úseky na
 sebe plynule či spojitě nenavazují, nebo v případě G-kódů, v nichž je výsledná trajektorie vytvořena pomocí
 lineárních úseků s hrubým dělením. Spline je také vhodný k vyhlazení skokové změny rychlosti, která vyplývá
@@ -170,6 +172,7 @@ Interpolator.Command = -2;
 
 ##IIR Filtr
 ###IIR Filtr – funkce vyhlazení
+
 K vyhlazení výsledné rychlosti pohybu a odstranění nežádoucích rychlých změn lze použít IIR Filtr (Infinite Impulse Response).
 Jedná se o matematický model lineárního filtru typu dolní propust (Low-pass) se strmostí 12 dB na oktávu (2-Pole) počítaný podle vztahu:
 
@@ -218,8 +221,8 @@ Nastavení parametrů IIR Filtrů je společné pro všechny osy Interpolátoru.
 Filtr je možné aktivovat nezávisle pro jednotlivé osy podle bitové masky registru `Command_Parametr[3]`.
 Je tedy třeba počítat s tím, že výsledný pohyb os po aplikaci filtru nemusí být vzájemně synchronní tak, jak byl původně vypočten.
 
-#Struktura Command
-##Registry Command_Parametr
+##Struktura Command
+###Registry Command_Parametr
 
 V kapitole je popsán význam registrů `Command_Parametr[ ]` pro vybrané hodnoty registru Command.
 
@@ -262,8 +265,8 @@ Pro obě varianty nabývají všechny Command_Parametr[0-9] stejného významu.
 | 0                | určuje počet bodů, kterými se spline prokládá; rozsah nastavení je 50–500 bodů |
 | 1                | horní mez vyhodnocení změny zrychlení [mm/s³]                               |
 
-#Struktura LookAheadBuffer
-##Popis struktury
+##Struktura LookAheadBuffer
+###Popis struktury
 
 Struktura **LookAheadBuffer** je tabulka důležitých parametrů osmi úseků – položek G-kódu jdoucích po
 sobě. První položkou tabulky je vždy právě prováděný úsek, dalšími položkami je sedm bezprostředně
@@ -293,224 +296,257 @@ LookAheadBuffer.
 	
 Jednotlivé registry struktury LookAheadBuffer jsou popsány v kapitole Apendix.
 
-#Apendix
-##Přehled a popis registrů struktury Interpolátor
-###Interpolátor
+##Apendix
+###Přehled a popis registrů struktury Interpolátor
 
 <table>
-    <tr>
-        <td>název</td>
-        <td>přístup</td>
-        <td>offset</td>
-        <td>popis</td>
-    </tr>
-    <tr>
-        <td>Number</td>
-        <td>R</td>
-        <td>0</td>
-        <td>číslo interpolátoru, může nabývat hodnot 0, 1, 2</td>
-    </tr>
-    <tr>
-        <td>Number_Axes</td>
-        <td>RW</td>
-        <td>4</td>
-        <td>počet os, se kterými interpolátor pracuje; povolené rozmezí je 1–10</td>
-    </tr>
-    <tr>
-        <td>Buffer_Size</td>
-        <td>R</td>
-        <td>8</td>
-        <td>maximální počet úseků G-kódu, povolené hodnoty jsou 1000–100000</td>
-    </tr>
-    <tr>
-        <td>Command</td>
-        <td>RW</td>
-        <td>12</td>
-        <td>&quot;příkaz:</td>
-    </tr>
-    <tr>
-        <td>4 = havarijní stop na trajektorii</td>
-    </tr>
-    <tr>
-        <td>5 = havarijní stop (po stopu hlásí mimo trajektorii) 8 = normální stop na trajektorii</td>
-    </tr>
-    <tr>
-        <td>9 = normální stop (mimo trajektorii)</td>
-    </tr>
-    <tr>
-        <td>1024 = nastavení převodních poměrů (mm na inc) – viz kap. Command 2048 = nastavení aktuální polohy (na trajektorii) – viz kap. Command 2049 = nastavení aktuální polohy (mimo trajektorii) – viz kap. Command</td>
-    </tr>
-    <tr>
-        <td>−1 = nastavení parametrů IIR Filtru – viz kap. Command</td>
-    </tr>
-    <tr>
-        <td>−2 = nastavení parametrů Spline – viz kap. Command&quot;</td>
-    </tr>
-    <tr>
-        <td>&quot;Command_Parametr [0-11]</td>
-    </tr>
-    <tr>
-        <td>(12 registrů)&quot;</td>
-        <td>RW</td>
-        <td>16</td>
-        <td>12 parametrů typu integer, jejichž význam a hodnoty závisejí na typu funkce Command</td>
-    </tr>
-    <tr>
-        <td>Command_Status</td>
-        <td>R</td>
-        <td>64</td>
-        <td>&quot;aktuální stav prováděného příkazu:</td>
-    </tr>
-    <tr>
-        <td>0 = předchozí příkaz byl úspěšně vykonán a lze aktivovat další příkaz 1 = aktuální příkaz se provádí</td>
-    </tr>
-    <tr>
-        <td>−1 = během vykonávání příkazu došlo k chybě&quot;</td>
-    </tr>
-    <tr>
-        <td>Status</td>
-        <td>R</td>
-        <td>68</td>
-        <td>&quot;aktuální stav interpolátoru:</td>
-    </tr>
-    <tr>
-        <td>1 = probíhá pohyb po trajektorii 3 = stop na konci trajektorie</td>
-    </tr>
-    <tr>
-        <td>4 = v bufferu je nejméně jeden úsek trajektorie, lze volat start 6 = zastavování po havarijní rampě</td>
-    </tr>
-    <tr>
-        <td>7 = interpolátor se zastavil po havarijním stopu</td>
-    </tr>
-    <tr>
-        <td>8 = interpolátor byl zastaven během plnění bufferu&quot;</td>
-    </tr>
-    <tr>
-        <td>Act_Part</td>
-        <td>R</td>
-        <td>72</td>
-        <td>číslo aktuálně prováděného úseku</td>
-    </tr>
-    <tr>
-        <td>Address_External_Position</td>
-        <td>RW</td>
-        <td>76</td>
-        <td>offset adresy TGM_Data, kde je uložena poloha externího snímače; hodnota je typu integer</td>
-    </tr>
-    <tr>
-        <td>M_Func</td>
-        <td>RW</td>
-        <td>80</td>
-        <td>hodnota M-funkce; pro M &lt; 1000 Interpolátor zastaví a čeká na vynulování této hodnoty; pak pokračuje dalším úsekem; pro M &gt; 1000 se pokračuje ve vykonávání G-kódu</td>
-    </tr>
-    <tr>
-        <td>Act_G_Func</td>
-        <td>R</td>
-        <td>84</td>
-        <td>hodnota právě prováděné G-instrukce</td>
-    </tr>
-    <tr>
-        <td>Act_M_Func</td>
-        <td>R</td>
-        <td>88</td>
-        <td>hodnota právě prováděné M-funkce</td>
-    </tr>
-    <tr>
-        <td>Last_Cont_M_Func</td>
-        <td>R</td>
-        <td>92</td>
-        <td>uložená hodnota poslední průběžné M-funkce (M &gt; 1000)</td>
-    </tr>
-    <tr>
-        <td>Run_Flag</td>
-        <td>R</td>
-        <td>96</td>
-        <td>&quot;- spodních 16 bitů ukazuje stav aktuálního úseku:</td>
-    </tr>
-    <tr>
-        <td>0 = STOP (interpolátor je neaktivní)</td>
-    </tr>
-    <tr>
-        <td>1 = RUN (vykonává se pohybová G-instrukce) 2 = WAIT_WINDOW (pro otáčkové obrábění) 3 = WAIT_PULSE (pro otáčkové obrábění)</td>
-    </tr>
-    <tr>
-        <td>4 = WAIT_MFUNC (začalo provádění M-funkce)</td>
-    </tr>
-    <tr>
-        <td>5 = WAIT_MFUNC_WAIT_FOR_END (čekání na ukončení M-funkce)</td>
-    </tr>
-    <tr>
-        <td>- horních 16 bitů pak stav rychlostního průběhu:</td>
-    </tr>
-    <tr>
-        <td>1 = žádný pohyb 2 = zrychlování</td>
-    </tr>
-    <tr>
-        <td>3 = dosažena požadovaná rychlost pohybu 4 = zpomalování</td>
-    </tr>
-    <tr>
-        <td>5 = další rychlostní úsek</td>
-    </tr>
-    <tr>
-        <td>6 = zpomalování na posledním úseku 7 = zpomalování po havarijní rampě</td>
-    </tr>
-    <tr>
-        <td>pozn.: od verze TGM420&quot;</td>
-    </tr>
-    <tr>
-        <td>Tool_Number</td>
-        <td>R</td>
-        <td>100</td>
-        <td>&quot;číslo aktuálního nástroje (vrtání, fréza, …)</td>
-    </tr>
-    <tr>
-        <td>pozn.: od verze TGM420&quot;</td>
-    </tr>
-    <tr>
-        <td>Orig_Position (10 registrů)</td>
-        <td>R</td>
-        <td>376</td>
-        <td>vypočítané souřadnice všech os [mm]</td>
-    </tr>
-    <tr>
-        <td>Position (10 registrů)</td>
-        <td>R</td>
-        <td>456</td>
-        <td>souřadnice upravené funkcí Spline nebo IIR Filtrem [mm]</td>
-    </tr>
-    <tr>
-        <td>PositionInc (10 registrů)</td>
-        <td>R</td>
-        <td>536</td>
-        <td>souřadnice Position vynásobené převodním poměrem Ratio [inc]</td>
-    </tr>
-    <tr>
-        <td>Backlash (10 registrů)</td>
-        <td>R</td>
-        <td>616</td>
-        <td>aktuální hodnota vůle pro jednotlivé osy [inc]</td>
-    </tr>
-    <tr>
-        <td>Offset (10 registrů)</td>
-        <td>RW</td>
-        <td>696</td>
-        <td>hodnoty offsetu se připočítávají k poloze PositionInc, tyto hodnoty nastavuje uživatel [inc]</td>
-    </tr>
-    <tr>
-        <td>Speed (10 registrů)</td>
-        <td>R</td>
-        <td>776</td>
-        <td>aktuální rychlost jednotlivých os po Spline a IIR [mm/s]</td>
-    </tr>
-    <tr>
-        <td>Ratio (10 registrů)</td>
-        <td>RW</td>
-        <td>856</td>
-        <td>převodní poměr (násobitel) jednotek G-kódu (obvykle mm) na inkrementy (polohy servopohonů)</td>
-    </tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;přístup&quot;}"><b>přístup</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number&quot;}">Number</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="0" sdnum="1029;">0</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;číslo interpolátoru, může nabývat hodnot 0, 1, 2&quot;}">číslo interpolátoru, může nabývat hodnot 0, 1, 2</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number_Axes&quot;}">Number_Axes</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="4" sdnum="1029;">4</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;počet os, se kterými interpolátor pracuje; povolené rozmezí je 1–10&quot;}">počet os, se kterými interpolátor pracuje; povolené rozmezí je 1–10</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Buffer_Size&quot;}">Buffer_Size</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="8" sdnum="1029;">8</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximální počet úseků G-kódu, povolené hodnoty jsou 1000–100000&quot;}">maximální počet úseků G-kódu, povolené hodnoty jsou 1000–100000</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Command&quot;}">Command</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="12" sdnum="1029;">12</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;příkaz:&yen;u000a4 = havarijní stop na trajektorii&yen;u000a5 = havarijní stop (po stopu hlásí mimo trajektorii) 8 = normální stop na trajektorii&yen;u000a9 = normální stop (mimo trajektorii)&yen;u000a1024 = nastavení převodních poměrů (mm na inc) – viz kap. Command 2048 = nastavení aktuální polohy (na trajektorii) – viz kap. Command 2049 = nastavení aktuální polohy (mimo trajektorii) – viz kap. Command&yen;u000a−1 = nastavení parametrů IIR Filtru – viz kap. Command&yen;u000a−2 = nastavení parametrů Spline – viz kap. Command&quot;}">příkaz:<br>4 = havarijní stop na trajektorii<br>5 = havarijní stop (po stopu hlásí mimo trajektorii) 8 = normální stop na trajektorii<br>9 = normální stop (mimo trajektorii)<br>1024 = nastavení převodních poměrů (mm na inc) – viz kap. Command 2048 = nastavení aktuální polohy (na trajektorii) – viz kap. Command 2049 = nastavení aktuální polohy (mimo trajektorii) – viz kap. Command<br>−1 = nastavení parametrů IIR Filtru – viz kap. Command<br>−2 = nastavení parametrů Spline – viz kap. Command</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Command_Parametr [0-11]&yen;u000a(12 registrů)&quot;}">Command_Parametr [0-11]<br>(12 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="16" sdnum="1029;">16</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;12 parametrů typu integer, jejichž význam a hodnoty závisejí na typu funkce Command&quot;}">12 parametrů typu integer, jejichž význam a hodnoty závisejí na typu funkce Command</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Command_Status&quot;}">Command_Status</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="64" sdnum="1029;">64</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální stav prováděného příkazu:&yen;u000a0 = předchozí příkaz byl úspěšně vykonán a lze aktivovat další příkaz 1 = aktuální příkaz se provádí&yen;u000a−1 = během vykonávání příkazu došlo k chybě&quot;}">aktuální stav prováděného příkazu:<br>0 = předchozí příkaz byl úspěšně vykonán a lze aktivovat další příkaz 1 = aktuální příkaz se provádí<br>−1 = během vykonávání příkazu došlo k chybě</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status&quot;}">Status</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="68" sdnum="1029;">68</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální stav interpolátoru:&yen;u000a1 = probíhá pohyb po trajektorii 3 = stop na konci trajektorie&yen;u000a4 = v bufferu je nejméně jeden úsek trajektorie, lze volat start 6 = zastavování po havarijní rampě&yen;u000a7 = interpolátor se zastavil po havarijním stopu&yen;u000a8 = interpolátor byl zastaven během plnění bufferu&quot;}">aktuální stav interpolátoru:<br>1 = probíhá pohyb po trajektorii 3 = stop na konci trajektorie<br>4 = v bufferu je nejméně jeden úsek trajektorie, lze volat start 6 = zastavování po havarijní rampě<br>7 = interpolátor se zastavil po havarijním stopu<br>8 = interpolátor byl zastaven během plnění bufferu</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Act_Part&quot;}">Act_Part</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="72" sdnum="1029;">72</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;číslo aktuálně prováděného úseku&quot;}">číslo aktuálně prováděného úseku</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Address_External_Position&quot;}">Address_External_Position</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="76" sdnum="1029;">76</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset adresy TGM_Data, kde je uložena poloha externího snímače; hodnota je typu integer&quot;}">offset adresy TGM_Data, kde je uložena poloha externího snímače; hodnota je typu integer</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M_Func&quot;}">M_Func</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="80" sdnum="1029;">80</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;hodnota M-funkce; pro M< 1000 Interpolátor zastaví a čeká na vynulování této hodnoty; pak pokračuje dalším úsekem; pro M>1000 se pokračuje ve vykonávání G-kódu&quot;}">hodnota M-funkce; pro M &lt; 1000 Interpolátor zastaví a čeká na vynulování této hodnoty; pak pokračuje dalším úsekem; pro M &gt; 1000 se pokračuje ve vykonávání G-kódu</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Act_G_Func&quot;}">Act_G_Func</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="84" sdnum="1029;">84</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;hodnota právě prováděné G-instrukce&quot;}">hodnota právě prováděné G-instrukce</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Act_M_Func&quot;}">Act_M_Func</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="88" sdnum="1029;">88</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;hodnota právě prováděné M-funkce&quot;}">hodnota právě prováděné M-funkce</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Last_Cont_M_Func&quot;}">Last_Cont_M_Func</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="92" sdnum="1029;">92</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;uložená hodnota poslední průběžné M-funkce (M>1000)&quot;}">uložená hodnota poslední průběžné M-funkce (M &gt; 1000)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Run_Flag&quot;}">Run_Flag</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="96" sdnum="1029;">96</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;- spodních 16 bitů ukazuje stav aktuálního úseku:&yen;u000a0 = STOP (interpolátor je neaktivní)&yen;u000a1 = RUN (vykonává se pohybová G-instrukce) 2 = WAIT_WINDOW (pro otáčkové obrábění) 3 = WAIT_PULSE (pro otáčkové obrábění)&yen;u000a4 = WAIT_MFUNC (začalo provádění M-funkce)&yen;u000a5 = WAIT_MFUNC_WAIT_FOR_END (čekání na ukončení M-funkce)&yen;u000a- horních 16 bitů pak stav rychlostního průběhu:&yen;u000a1 = žádný pohyb 2 = zrychlování&yen;u000a3 = dosažena požadovaná rychlost pohybu 4 = zpomalování&yen;u000a5 = další rychlostní úsek&yen;u000a6 = zpomalování na posledním úseku 7 = zpomalování po havarijní rampě&yen;u000apozn.: od verze TGM420&quot;}">- spodních 16 bitů ukazuje stav aktuálního úseku:<br>0 = STOP (interpolátor je neaktivní)<br>1 = RUN (vykonává se pohybová G-instrukce) 2 = WAIT_WINDOW (pro otáčkové obrábění) 3 = WAIT_PULSE (pro otáčkové obrábění)<br>4 = WAIT_MFUNC (začalo provádění M-funkce)<br>5 = WAIT_MFUNC_WAIT_FOR_END (čekání na ukončení M-funkce)<br>- horních 16 bitů pak stav rychlostního průběhu:<br>1 = žádný pohyb 2 = zrychlování<br>3 = dosažena požadovaná rychlost pohybu 4 = zpomalování<br>5 = další rychlostní úsek<br>6 = zpomalování na posledním úseku 7 = zpomalování po havarijní rampě<br>pozn.: od verze TGM420</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Tool_Number&quot;}">Tool_Number</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="100" sdnum="1029;">100</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;číslo aktuálního nástroje (vrtání, fréza, …)&yen;u000apozn.: od verze TGM420&quot;}">číslo aktuálního nástroje (vrtání, fréza, …)<br>pozn.: od verze TGM420</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Orig_Position (10 registrů)&quot;}">Orig_Position (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="376" sdnum="1029;">376</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;vypočítané souřadnice všech os [mm]&quot;}">vypočítané souřadnice všech os [mm]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Position (10 registrů)&quot;}">Position (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="456" sdnum="1029;">456</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;souřadnice upravené funkcí Spline nebo IIR Filtrem [mm]&quot;}">souřadnice upravené funkcí Spline nebo IIR Filtrem [mm]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;PositionInc (10 registrů)&quot;}">PositionInc (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="536" sdnum="1029;">536</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;souřadnice Position vynásobené převodním poměrem Ratio [inc]&quot;}">souřadnice Position vynásobené převodním poměrem Ratio [inc]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Backlash (10 registrů)&quot;}">Backlash (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="616" sdnum="1029;">616</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální hodnota vůle pro jednotlivé osy [inc]&quot;}">aktuální hodnota vůle pro jednotlivé osy [inc]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Offset (10 registrů)&quot;}">Offset (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="696" sdnum="1029;">696</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;hodnoty offsetu se připočítávají k poloze PositionInc, tyto hodnoty nastavuje uživatel [inc]&quot;}">hodnoty offsetu se připočítávají k poloze PositionInc, tyto hodnoty nastavuje uživatel [inc]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Speed (10 registrů)&quot;}">Speed (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="776" sdnum="1029;">776</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální rychlost jednotlivých os po Spline a IIR [mm&yen;/s]&quot;}">aktuální rychlost jednotlivých os po Spline a IIR [mm/s]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ratio (10 registrů)&quot;}">Ratio (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="856" sdnum="1029;">856</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;převodní poměr (násobitel) jednotek G-kódu (obvykle mm) na inkrementy (polohy servopohonů)&quot;}">převodní poměr (násobitel) jednotek G-kódu (obvykle mm) na inkrementy (polohy servopohonů)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M_Funkce_Parametr&yen;u000a(32 registrů)&quot;}">M_Funkce_Parametr<br>(32 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="936" sdnum="1029;">936</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;parametry M funkce z G-kódu, celkem 26 hodnot podle písmen v abecedě; některá písmena nelze použít, protože jsou vyhrazena systémem&yen;u000arezervované parametry (indexy jsou počítány od 0): G = index 6&yen;u000aM = index 12 N = index 13&yen;u000aP = index 15&quot;}">parametry M funkce z G-kódu, celkem 26 hodnot podle písmen v abecedě; některá písmena nelze použít, protože jsou vyhrazena systémem<br>rezervované parametry (indexy jsou počítány od 0): G = index 6<br>M = index 12 N = index 13<br>P = index 15</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rel_Speed&quot;}">Rel_Speed</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
+		<td sdval="1192" sdnum="1029;">1192</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;relativní rychlost interpolovaného pohybu, koeficient v rozmezí 0,01–2 (1–200 %)&quot;}">relativní rychlost interpolovaného pohybu, koeficient v rozmezí 0,01–2 (1–200 %)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Set_Speed&quot;}">Set_Speed</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="1200" sdnum="1029;">1200</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;požadovaná rychlost z G-kódu (daná F-instrukcí G-kódu nebo tabulkou rychlostí) [mm&yen;/min]&quot;}">požadovaná rychlost z G-kódu (daná F-instrukcí G-kódu nebo tabulkou rychlostí) [mm/min]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Act_Speed&quot;}">Act_Speed</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="1208" sdnum="1029;">1208</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální rychlost [mm&yen;/min]&quot;}">aktuální rychlost [mm/min]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Move_Distance&quot;}">Move_Distance</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="1216" sdnum="1029;">1216</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální celková ujetá vzdálenost [mm]&quot;}">aktuální celková ujetá vzdálenost [mm]</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;LookAheadBuffer&quot;}">LookAheadBuffer</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="2048" sdnum="1029;">2048</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;tabulka informací o úsecích, které budou následovat; celkem 8 položek struktury popsané&yen;u000av následující tabulce; první položka popisuje právě prováděný úsek; velikost každé položky je 1792 bytů&yen;u000apozn.: od verze TGM420&quot;}">tabulka informací o úsecích, které budou následovat; celkem 8 položek struktury popsané<br>v následující tabulce; první položka popisuje právě prováděný úsek; velikost každé položky je 1792 bytů<br>pozn.: od verze TGM420</td>
+	</tr>
 </table>
 
 
+###Přehled a popis registrů struktury LookAheadBuffer
+
+<table>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;přístup&quot;}"><b>přístup</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AllParams&yen;u000a(26 registrů)&quot;}">AllParams<br>(26 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="0" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">0</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;všechny zadané adresy M-funkcí z konkrétního G-kódu pro daný úsek (26 písmen anglické&yen;u000aabecedy)&quot;}">všechny zadané adresy M-funkcí z konkrétního G-kódu pro daný úsek (26 písmen anglické<br>abecedy)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Tangens&quot;}">Tangens</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="208" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 208}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">208</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální tečna pohybu v rovině XY; pokud je právě prováděný úsek oblouk (G2 nebo G3),&yen;u000atečna se mění průběžně; pro budoucí úseky určuje počáteční tečnu pohybu&quot;}">aktuální tečna pohybu v rovině XY; pokud je právě prováděný úsek oblouk (G2 nebo G3),<br>tečna se mění průběžně; pro budoucí úseky určuje počáteční tečnu pohybu</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;MovementType&quot;}">MovementType</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="216" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 216}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">216</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;typ záznamu:&yen;u000a0 = neplatný záznam (počet zbývajících úseků k provedení je menší než aktuální index tabulky LookAheadBuffer), do konce provedení pohybu zbývá méně než 8 úseků&yen;u000a1 = pohybová funkce (G0, G1, G2, G3) 2 = M funkce&quot;}">typ záznamu:<br>0 = neplatný záznam (počet zbývajících úseků k provedení je menší než aktuální index tabulky LookAheadBuffer), do konce provedení pohybu zbývá méně než 8 úseků<br>1 = pohybová funkce (G0, G1, G2, G3) 2 = M funkce</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;MovementCode&quot;}">MovementCode</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="220" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 220}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">220</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;číslo G-instrukce nebo pohybové M-funkce (číslo průběžné M-funkce se v tomto registru neobjeví, ale objeví se v AllParams v písmenu M)&quot;}">číslo G-instrukce nebo pohybové M-funkce (číslo průběžné M-funkce se v tomto registru neobjeví, ale objeví se v AllParams v písmenu M)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Plane&quot;}">Plane</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="224" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 224}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">224</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;- rovina kruhové interpolace: 17 = XY&yen;u000a18 = XZ&yen;u000a19 = YZ&yen;u000a- ostatní roviny nejsou definovány&quot;}">- rovina kruhové interpolace: 17 = XY<br>18 = XZ<br>19 = YZ<br>- ostatní roviny nejsou definovány</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Tool&quot;}">Tool</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="228" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 228}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">228</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;číslo nástroje&quot;}">číslo nástroje</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;EndPos (10 registrů)&quot;}">EndPos (10 registrů)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="232" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 232}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">232</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;koncová poloha úseku jednotlivých os [mm] (absolutní souřadnice)&quot;}">koncová poloha úseku jednotlivých os [mm] (absolutní souřadnice)</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;StartAngle&quot;}">StartAngle</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="312" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 312}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">312</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;počáteční úhel oblouku [°] – úhel spojnice středu oblouku s počátečním bodem; hodnota&yen;u000aregistru je cyklická (0–360); pro lineární pohyb či M-funkce je hodnota registru větší než 1038&quot;}">počáteční úhel oblouku [°] – úhel spojnice středu oblouku s počátečním bodem; hodnota<br>registru je cyklická (0–360); pro lineární pohyb či M-funkce je hodnota registru větší než 1038</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;EndAngle&quot;}">EndAngle</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="320" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 320}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">320</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;koncový úhel oblouku [°] – úhel spojnice středu oblouku s koncovým bodem; hodnota registru je cyklická (0–360); pro lineární pohyb či M-funkce je větší než 1038&quot;}">koncový úhel oblouku [°] – úhel spojnice středu oblouku s koncovým bodem; hodnota registru je cyklická (0–360); pro lineární pohyb či M-funkce je větší než 1038</td>
+	</tr>
+	<tr>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Radius&quot;}">Radius</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
+		<td sdval="328" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 328}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">328</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;- poloměr oblouku [mm]&yen;u000a- pro lineární pohyb či M-funkce je registr nulový&quot;}">- poloměr oblouku [mm]<br>- pro lineární pohyb či M-funkce je registr nulový</td>
+	</tr>
+</table>
 
 
 
