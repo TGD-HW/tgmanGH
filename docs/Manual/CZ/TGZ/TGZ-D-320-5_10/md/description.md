@@ -45,7 +45,7 @@ ___
     ---
 	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
--    Weidmüller BCZ 3.81/22/180 SN OR BX
+-    Weidmüller B2CF 3.50/22/180 SN OR BX
 
 	---
 
@@ -68,7 +68,7 @@ ___
 	
 	<img src="../../../../../source/common/img/1277270000.svg" alt="CAN connector" style="width:25%;">
 
--    Weidmüller BCZ 3.81/04/180 SN OR BX
+-    Weidmüller B2CF 3.50/04/180 SN OR BX
 
     ---
 
@@ -111,7 +111,7 @@ ___
 	
 	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:60%;">
 
--    Weidmüller BCZ 3.81/12/180 SN OR BX
+-    Weidmüller B2CF 3.50/12/180 SN OR BX
 
 	---
 
@@ -123,7 +123,7 @@ ___
 	
 	<img src="../../../../../source/common/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
 
--    Weidmüller BCZ 3.81/08/180 SN OR BX
+-    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
@@ -135,15 +135,12 @@ ___
 	
 	<img src="../../../../../source/common/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
 
--    Weidmüller BCZ 3.81/08/180 SN OR BX
+-    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
 	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
 	
-	!!! note "Poznámka"
-	
-		Servozesilovač TGZ-S-230-5/15 je jednoosý. Konektor X7 se běžně nezapojuje.
 		
 -   **X2 - Napájení silové části**
 

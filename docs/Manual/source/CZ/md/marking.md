@@ -1,4 +1,3 @@
-#**Základní informace**
 ##Všeobecné
 Digitální servozesilovače TGZ představují nový koncept měničů pro víceosé aplikace. TGZ v sobě zahrnují moderní prvky digitálního řízení, jednoduché přednastavené funkce, které uživatel může volat ve vlastním uživatelském programu, propojení k rychlým digitálním sběrnicím, připojení moderních digitálních snímačů zpětné vazby, malé ztráty výkonových prvků a unikátní chladicí systém.
 

@@ -70,6 +70,7 @@ ___
     ---
 	
 	<img src="../../../../../source/common/img/1778120.svg" alt="DCout connector" style="width:85%;">
+	<img src="../../../../../source/CZ/img/TGS-320_Rb.png" alt="DCout connector" style="width:85%;">	
 
 -    Phoenix PC 5/ 8-STCL1-7,62
 
