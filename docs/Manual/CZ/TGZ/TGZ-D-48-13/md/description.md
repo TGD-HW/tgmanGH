@@ -92,7 +92,7 @@ ___
 	
 	<img src="../../../../../source/common/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
 	
--	LED displej signalizuje stavy viz. kap. XY
+-	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
 -	**LED signalizace**
 

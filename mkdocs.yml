@@ -1,5 +1,5 @@
 site_name: TG Drives
-site_url: https://www.tgdrives.cz/
+site_url: https://tgd-hw.github.io/tgmanGH/
 copyright: Copyright &copy; 2024 TG Drives, s.r.o.
 theme:
   name: 'material'
@@ -18,6 +18,7 @@ theme:
     - navigation.path
     - navigation.top
 #   - navigation.footer
+#   - navigation.sections
     - toc.integrate
     - search.highlight
     - header.autohide
@@ -125,6 +126,11 @@ markdown_extensions:
  - tables
  - footnotes
  - attr_list
+ # nahledy stranek po ukazani mysi jsou zatim jen pro insidery - plugin neni nalezen, nejde nainstalovat
+ # - material.extensions.preview:
+      # targets:
+        # include:
+          # - Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md
  - toc:
     permalink: true
  
@@ -138,7 +144,7 @@ nav:
         - Úvod: 'index.md'
     #- About: 'about.md'
     #- 'Manuál CZ': #tuto úroveň by šlo úplně odstranit, po zprovoznění language selectoru i18n (plugins). kategorie nahoře budou "TGZ, TGS...."
-        - 'TGZ': 
+        - 'TGZ':
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/param.md'
@@ -266,7 +272,14 @@ nav:
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/schematic.md'               
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'                  
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'
+            - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
+            - 'TGZ GUI': 
+                - Instalace a spuštění: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/intro.md'
+                - Připojení k TGZ: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/connection.md'
+                - Nastavení parametrů: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/parameters.md'
+                - Osciloskop: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/osc.md'
+                - Přehrávání firmware: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/FW.md'                
         - 'TGS':
             - TGS-320-10/15:
                 - Základní informace: 'Manual/CZ/TGS/TGS-320-10_15/md/mark.md'
@@ -332,4 +345,5 @@ nav:
             # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'            
         - 'Ostatní': 
             - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
+            - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'
