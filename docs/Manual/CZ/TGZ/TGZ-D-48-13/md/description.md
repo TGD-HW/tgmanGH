@@ -105,6 +105,10 @@ ___
 	---
 	
 	--8<-- "CZ/md/LEDsigAx12.md"
+	
+	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
+	
+	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
 </div>
 

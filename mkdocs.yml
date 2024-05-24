@@ -280,6 +280,7 @@ nav:
                 - Nastavení parametrů: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/parameters.md'
                 - Osciloskop: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/osc.md'
                 - Přehrávání firmware: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/FW.md'                
+                - Uživatelský program: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/userProg.md'
         - 'TGS':
             - TGS-320-10/15:
                 - Základní informace: 'Manual/CZ/TGS/TGS-320-10_15/md/mark.md'

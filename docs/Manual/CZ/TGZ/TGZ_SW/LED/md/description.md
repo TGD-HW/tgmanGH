@@ -21,7 +21,7 @@ Možné stavy LED indikátorů a jejich význam, stejně jako signalizace chyb a
 | F.1 | Chyba osy 1 |
 | F.2 | Chyba osy 2 |
 
-Po kódu ``F.1`` popř. ``F.2`` se zobrazí sekvence čísel. Tato čísla jsou bitová čísla v chybovém registru, viz. [Popis chybových hlášení TGZ](description.md#errors)
+Po kódu `F.1` popř. `F.2` se zobrazí sekvence čísel. Tato čísla jsou bitová čísla v chybovém registru, viz. [Popis chybových hlášení TGZ](description.md#errors)
 
 **LED indikátory**
 
