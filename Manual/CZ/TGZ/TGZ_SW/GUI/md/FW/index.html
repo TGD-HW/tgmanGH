@@ -14,7 +14,7 @@
         <link rel="prev" href="../osc/">
       
       
-        <link rel="next" href="../../../../../TGS/TGS-320-10_15/md/mark/">
+        <link rel="next" href="../userProg/">
       
       
       <link rel="icon" href="../../../../../../source/common/img/TGsymbol.svg">
@@ -75,6 +75,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#potrebne-vybaveni" class="md-skip">
+          Přeskočit obsah
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -3576,6 +3581,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Přehrávání firmware
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3586,6 +3602,62 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#potrebne-vybaveni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potřebné vybavení:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postup-prehrani-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postup přehrání firmware:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userProg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uživatelský program
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5086,7 +5158,44 @@
 
   <h1>Přehrávání firmware</h1>
 
-
+<h2 id="potrebne-vybaveni">Potřebné vybavení:<a class="headerlink" href="#potrebne-vybaveni" title="Permanent link">&para;</a></h2>
+<ul>
+<li>PC s nainstalovaným TGZ GUI a Ethernetovým rozhraním. </li>
+<li>Ethernetový kabel</li>
+<li>Napájecí zdroj 24VDC</li>
+<li>Servozesilovač TGZ</li>
+<li>Soubor <code>.TGZFW</code> (firmware)</li>
+</ul>
+<h2 id="postup-prehrani-firmware">Postup přehrání firmware:<a class="headerlink" href="#postup-prehrani-firmware" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Přes ethernetový kabel řipojte TGZ k počítači (konektor X11).</li>
+<li>Připojte 24VDC napájení k servozesilovači TGZ.</li>
+<li>Spusťte TGZ GUI, vyberte příslušný síťový adaptér.
+   Ze seznamu zvolte odpovídající zařízení a připojte k servozesilovači TGZ.</li>
+<li>Zálohujte parametry servozesilovače kliknutím na ikonu
+   <a class="glightbox" href="../../../../../../source/common/img/icoSave.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../../source/common/img/icoSave.png" alt="Icon Save" style="width:4%;"></a>
+   v pravé části menu nahoře. Vyberte všechny skupiny parametrů a klikněte na ikonu <strong>Save</strong>.</li>
+<li>Klikněte na ikonu
+   <a class="glightbox" href="../../../../../../source/common/img/icoMemory.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../../source/common/img/icoMemory.png" alt="Icon Memory" style="width:4%;"></a>
+   v pravé části menu nahoře a vyberte <strong>Upload firmware</strong>.</li>
+<li>Otevřete soubor s firmware (<code>*.TGZFW</code>).</li>
+<li>Počkejte na dokončení nahrání firmware.</li>
+<li>Po dokončení nahrávání restartujte servozesilovač TGZ kliknutím na Yes:
+   <a class="glightbox" href="../../../../../../source/common/img/GUIfwUploadComplete.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../../source/common/img/GUIfwUploadComplete.png" alt="FW upload complete" style="width:50%;"></a> <br />
+   Znovu se připojte k servozesilovači TGZ.</li>
+<li>Pokud má nový firmware jinou strukturu parametrů než firmware předchozí, dojde k chybě (<em>chyba 27 - parameter error, 0x08000000</em>).
+   Je tedy nutné načíst parametry ze zálohy prostřednictvím ikony
+   <a class="glightbox" href="../../../../../../source/common/img/icoLoad.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../../source/common/img/icoLoad.png" alt="Icon Load" style="width:4%;"></a>
+   v pravé části menu nahoře.
+   Následně je nutné parametry uložit na paměťovou kartu kliknutím na ikonu
+   <a class="glightbox" href="../../../../../../source/common/img/icoSave.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../../source/common/img/icoSave.png" alt="Icon Save" style="width:4%;"></a>
+   opět v pravé části menu nahoře a zvolit <strong>Save to memory</strong>.
+   Po restartování servozesilovače TGZ se již chyba parametrů (chyba 27) neobjeví.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Pozor</p>
+<p>Neodpojujte napájení, dokud není proces nahrávání dokončen!</p>
+</div>
 
 
 
