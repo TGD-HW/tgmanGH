@@ -1,0 +1,1 @@
+<img src="../../../../../source/common/img/TGZstructure1.webp" alt="regulation structure TGZ" style="width:100%;">
