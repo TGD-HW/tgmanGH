@@ -277,7 +277,10 @@ nav:
             - 'Řízení a regulace':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
-                - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'                
+                - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'
+                - Další funkce: 'Manual/CZ/SW/REG/md/AuxFunc.md'
+                - Nouzové zabrždění: 'Manual/CZ/SW/REG/md/ESTOP.md' 
+                - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                   
             - 'TGZ GUI': 
                 - Instalace a spuštění: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/intro.md'
                 - Připojení k TGZ: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/connection.md'
