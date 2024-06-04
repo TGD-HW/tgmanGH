@@ -14,7 +14,7 @@
         <link rel="prev" href="../TGZstructure/">
       
       
-        <link rel="next" href="../../../../TGZ/TGZ_SW/GUI/md/intro/">
+        <link rel="next" href="../AuxFunc/">
       
       
       <link rel="icon" href="../../../../../source/common/img/TGsymbol.svg">
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zakladni-popis" class="md-skip">
+        <a href="#Ramptype" class="md-skip">
           Přeskočit obsah
         </a>
       
@@ -3580,7 +3580,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#zakladni-popis" class="md-nav__link">
+  <a href="#Ramptype" class="md-nav__link">
     <span class="md-ellipsis">
       Základní popis
     </span>
@@ -3607,8 +3607,62 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rizeni-polohy-motoru-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Řízení polohy motoru (UDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rizeni-rychlosti-motoru-tgz-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Řízení rychlosti motoru (TGZ GUI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rizeni-rychlosti-motoru-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Řízení rychlosti motoru (UDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sw-limity-pri-rychlostnim-rizeni-tgz-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      SW limity při rychlostním řízení (TGZ GUI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sw-limity-pri-rychlostnim-rizeni-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SW limity při rychlostním řízení (UDP)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rozsireny-popis-parametru-generatoru-profilu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rozšířený popis parametrů Generátoru profilů
+    </span>
+  </a>
   
 </li>
       
@@ -3616,6 +3670,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AuxFunc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Další funkce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ESTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nouzové zabrždění
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SD karty
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5597,7 +5714,7 @@
 
   <h1>Profile generator</h1>
 
-<h2 id="zakladni-popis">Základní popis<a class="headerlink" href="#zakladni-popis" title="Permanent link">&para;</a></h2>
+<h2 id="Ramptype">Základní popis<a class="headerlink" href="#Ramptype" title="Permanent link">&para;</a></h2>
 <p>Generátor žádané polohy.
 Umožňuje jednoduchým způsobem polohovat z bodu do bodu a rychlostně řídit servopohon.
 Výstupem generátoru je proměnná 64 bitová poloha, která se skládá ze dvou 32 bitových proměnných <code>APosAngle</code> a <code>APosRevol</code> a dále proměnné <code>ASpeed</code> určující aktuální žádanou hodnotu rychlosti.
@@ -5609,7 +5726,7 @@ Pokud je polohování úspěšně dokončeno a výstupní poloha je shodná se �
 Generátor pracuje tak, že v každé periodě na základě parametrů (<code>Acc, Dec, Type, PosSpeed, DPosAngle a DPosRevol</code>) a stavu proměnných <code>Mode</code> a <code>Speed</code> vypočítá aktuální žádanou hodnotu polohy <code>APosAngle</code> a <code>APosRevol</code> a aktuální žádanou hodnotu rychlosti <code>ASpeed</code>.
 Výpočet generátoru probíhá s interním rozlišením daným parametrem <code>BitsPerRevol</code>.
 Tento parametr pak udává vnitřní počet inkrementů na otáčku.</p>
-<p><a class="glightbox" href="../../../../../source/common/img/TGZrampType1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/TGZrampType1.webp" alt="TGZ servo ramp type" style="width:70%;"></a> {#Ramptype}</p>
+<p><a class="glightbox" href="../../../../../source/common/img/TGZrampType1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/TGZrampType1.webp" alt="TGZ servo ramp type" style="width:70%;"></a> </p>
 <ul>
 <li>(a) Polohový mód</li>
 <li>(b) rychlostní režim</li>
@@ -5673,7 +5790,7 @@ Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním r
 <th>Krok</th>
 <th>Základní skupina</th>
 <th>Parametr</th>
-<th>Hodnota*</th>
+<th>Hodnota</th>
 <th>Popis</th>
 </tr>
 </thead>
@@ -5703,21 +5820,21 @@ Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním r
 <td>4</td>
 <td>PG</td>
 <td>Acc</td>
-<td>5 000 000</td>
+<td>5 000 000 <sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>[inc/s²] Požadovaná akcelerace.</td>
 </tr>
 <tr>
 <td>5</td>
 <td>PG</td>
 <td>Dec</td>
-<td>5 000 000</td>
+<td>5 000 000 <sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>[inc/s²] Požadované zpomalení.</td>
 </tr>
 <tr>
 <td>6</td>
 <td>PG</td>
 <td>PosSpeed</td>
-<td>1 000 000</td>
+<td>1 000 000 <sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>[inc/s] Požadovaná rychlost pohybu v pozičním režimu.</td>
 </tr>
 <tr>
@@ -5745,11 +5862,1882 @@ Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním r
 <td>10</td>
 <td>PG</td>
 <td>DPosRevol</td>
-<td>20</td>
+<td>20 <sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>[inc] Požadovaná poloha v rozsahu víceotáčkového pohybu. Po zadání hodnoty a stisknutí klávesy Enter se motor otočí do požadované polohy.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="rizeni-polohy-motoru-udp">Řízení polohy motoru (UDP)<a class="headerlink" href="#rizeni-polohy-motoru-udp" title="Permanent link">&para;</a></h3>
+<p><strong>D-mode</strong> <br />
+Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim.</p>
+<table>
+    <tr>
+        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Požadavek&quot;}"><b>Telegram: Požadavek</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Odpověď&quot;}"><b>Telegram: Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – Acc, Dec, PosSpeed, Type, Mode, DPosAngle, DPosRevol</strong> <br />
+Popis: Nastavení požadovaného zrychlení, zpomalení, žádané rychlosti (do najetí do nulové polohy), typu rampy (viz Obrázek 1Obrázek 1), módu Profil Generátoru a nulové požadované hodnoty polohy (počáteční stav).</p>
+<table>
+    <tr>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td colspan="5" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td colspan="2" bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="3" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="4" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 24&quot;}" style="color:white;"><b>Byte 24</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 25&quot;}" style="color:white;"><b>Byte 25</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 26&quot;}" style="color:white;"><b>Byte 26</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x42&quot;}">0x42</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0F&quot;}">0x0F</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="3" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="3" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 27&quot;}" style="color:white;"><b>Byte 27</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 28&quot;}" style="color:white;"><b>Byte 28</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 29&quot;}" style="color:white;"><b>Byte 29</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 30&quot;}" style="color:white;"><b>Byte 30</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 31&quot;}" style="color:white;"><b>Byte 31</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 32&quot;}" style="color:white;"><b>Byte 32</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 33&quot;}" style="color:white;"><b>Byte 33</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 34&quot;}" style="color:white;"><b>Byte 34</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 35&quot;}" style="color:white;"><b>Byte 35</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="2" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="4" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 36&quot;}" style="color:white;"><b>Byte 36</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 37&quot;}" style="color:white;"><b>Byte 37</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 38&quot;}" style="color:white;"><b>Byte 38</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 39&quot;}" style="color:white;"><b>Byte 39</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 40&quot;}" style="color:white;"><b>Byte 40</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 41&quot;}" style="color:white;"><b>Byte 41</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 42&quot;}" style="color:white;"><b>Byte 42</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 43&quot;}" style="color:white;"><b>Byte 43</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 44&quot;}" style="color:white;"><b>Byte 44</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="2" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 45&quot;}" style="color:white;"><b>Byte 45</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 46&quot;}" style="color:white;"><b>Byte 46</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="10" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no Error)&quot;}">(Byte 6, 10 = 0 : no Error)</td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td colspan="2" bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="3" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td colspan="4" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="3" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="4" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="4" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="4" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td colspan="4" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td colspan="2" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td colspan="4" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="3" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>K – Command</strong> <br />
+Popis: SW enable.
+Po zadání tohoto příkazu je motor pod momentem a provede natočení do požadované polohy z předchozího požadavku.</p>
+<table>
+    <tr>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td colspan="2" bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="3" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td colspan="2" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no Error)&quot;}">(Byte 6, 10 = 0 : no Error)</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td colspan="3" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td colspan="2" bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td colspan="2" bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td colspan="2" bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td colspan="3" bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td colspan="2" bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td colspan="2" bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<h3 id="rizeni-rychlosti-motoru-tgz-gui">Řízení rychlosti motoru (TGZ GUI)<a class="headerlink" href="#rizeni-rychlosti-motoru-tgz-gui" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Krok</th>
+<th>Základní skupina</th>
+<th>Parametr</th>
+<th>Hodnota</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Načíst parametry pohonu.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Drive</td>
+<td>D-mode</td>
+<td>7</td>
+<td>Generátor profilů - režim polohy.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Command</td>
+<td>K-Command</td>
+<td>1</td>
+<td>SW povolení. Lze jej také zapnout pomocí aktivačního tlačítka na spodní liště. Motor generuje točivý moment.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PG</td>
+<td>Acc</td>
+<td>5 000 000 <sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s²] Požadovaná akcelerace.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PG</td>
+<td>Dec</td>
+<td>5 000 000<sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s²] Požadovaná dekcelerace.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PG</td>
+<td>Mode</td>
+<td>0</td>
+<td>Rychlostní režim.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>PG</td>
+<td>Type</td>
+<td>1</td>
+<td>Požadovaný typ rampy. Viz Obrázek 1.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>PG</td>
+<td>PosSpeed</td>
+<td>±1 000 000 <sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s] Požadovaná rychlost pohybu v pozičním režimu. Po zadání hodnoty a stisknutí klávesy Enter se motor bude točit požadovanou rychlostí.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rizeni-rychlosti-motoru-udp">Řízení rychlosti motoru (UDP)<a class="headerlink" href="#rizeni-rychlosti-motoru-udp" title="Permanent link">&para;</a></h3>
+<p><strong>D-Mode</strong> <br />
+Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – Acc, Dec, PosSpeed, Type, Mode</strong> <br />
+Popis: Nastavení požadovaného zrychlení, zpomalení, rychlosti, typu ramp (viz obr) a módu Profil Generátoru.
+Znaménko u rychlosti <code>PosSpeed</code> rozhoduje o směru otáčení motoru.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x08&quot;}">0x08</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 24&quot;}" style="color:white;"><b>Byte 24</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 25&quot;}" style="color:white;"><b>Byte 25</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 26&quot;}" style="color:white;"><b>Byte 26</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x42&quot;}">0x42</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0F&quot;}">0x0F</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 27&quot;}" style="color:white;"><b>Byte 27</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 28&quot;}" style="color:white;"><b>Byte 28</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 29&quot;}" style="color:white;"><b>Byte 29</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 30&quot;}" style="color:white;"><b>Byte 30</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 31&quot;}" style="color:white;"><b>Byte 31</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 32&quot;}" style="color:white;"><b>Byte 32</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 33&quot;}" style="color:white;"><b>Byte 33</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 34&quot;}" style="color:white;"><b>Byte 34</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5= 0 : žádný Error)&quot;}">(Byte 5= 0 : žádný Error)</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x08&quot;}">0x08</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>K – Command</strong> <br />
+Popis: SW enable.
+Po zadání tohoto příkazu je motor pod momentem a zahájí otáčení v požadovaném směru s požadovanou rychlostí.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<h3 id="sw-limity-pri-rychlostnim-rizeni-tgz-gui">SW limity při rychlostním řízení (TGZ GUI)<a class="headerlink" href="#sw-limity-pri-rychlostnim-rizeni-tgz-gui" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Krok</th>
+<th>Základní skupina</th>
+<th>Parametr</th>
+<th>Hodnota</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Načíst parametry pohonu.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Drive</td>
+<td>D-mode</td>
+<td>7</td>
+<td>Generátor profilů -režim polohy.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Command</td>
+<td>K-Command</td>
+<td>1</td>
+<td>SW povolení. Lze jej také zapnout pomocí aktivačního tlačítka na spodní liště. <strong>Motor generuje točivý moment.</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>PG</td>
+<td>Acc</td>
+<td>5000000 <sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s<sup>2</sup>]Požadovaná akcelerace.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PG</td>
+<td>Dec</td>
+<td>5000000 <sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s<sup>2</sup>]Požadované zpomalení.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PG</td>
+<td>PosSpeed</td>
+<td>1000 000 <sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s] Požadovaná rychlost pohybu vpozičním režimu.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>PG</td>
+<td>Mode</td>
+<td>1</td>
+<td>Poziční režim.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>PG</td>
+<td>Type</td>
+<td>1</td>
+<td><a href="#Ramptype">Požadovaný typ rampy</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>PG</td>
+<td>DPosAngle</td>
+<td>0</td>
+<td>[inc]Požadovaná poloha v rozsahu jedné otáčky. Po zadání hodnoty astisknutí klávesy Enter se <strong>motor otočí do požadovaného úhlu</strong>.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>PG</td>
+<td>DPosRevol</td>
+<td>0</td>
+<td>[inc]Požadovaná poloha v rozsahu víceotáčkového pohybu. Pozadání hodnoty a stisknutí klávesy Enter se <strong>motor otočí do polohy 0</strong>. Počkejte, až se motor otočí.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>PG</td>
+<td>PosSpeed</td>
+<td>0</td>
+<td>[inc /s] Požadovaná rychlost pohybu vpozičním režimu.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>PG</td>
+<td>Mode</td>
+<td>0</td>
+<td>Rychlostní režim.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>PG</td>
+<td>PosLimitAnglePosit</td>
+<td>0 <sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Limit kladné polohy v rámci jedné otáčky vrozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>14</td>
+<td>PG</td>
+<td>PosLimitRevolPosit</td>
+<td>20 <sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[± počet otáček] Horní mez polohy v rámci otáček v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>15</td>
+<td>PG</td>
+<td>PosLimitAngleNegat</td>
+<td>0 <sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Limit záporné polohy v rámci jedné otáčky v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>16</td>
+<td>PG</td>
+<td>PosLimitRevolNegat</td>
+<td>-20 <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[± počet otáček] Dolní mez polohy v rámci otáček v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>17</td>
+<td>PG</td>
+<td>PosSpeed</td>
+<td>± 5000 000 <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc /s] Po zadání hodnoty <strong>se motor bude otáčet</strong> rychlostí <code>PosSpeed</code> do polohy <code>PosLimitRevolPosit</code> nebo <code>PosLimitRevolNegat</code>. Směr otáčení je dán znaménkem parametru <code>PosSpeed</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sw-limity-pri-rychlostnim-rizeni-udp">SW limity při rychlostním řízení (UDP)<a class="headerlink" href="#sw-limity-pri-rychlostnim-rizeni-udp" title="Permanent link">&para;</a></h3>
+<p><strong>D-Mode</strong> <br />
+Popis: Nastavení módu servozesilovače: Profil Generátor – rychlostní režim.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x03&quot;}">0x03</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – Acc, Dec, PosSpeed, Type, Mode, DPosAngle, DPosRevol</strong> <br />
+Popis: Nastavení požadovaného zrychlení, zpomalení, rychlosti a typu ramp Profil Generátoru.
+V posledním kroku je zadána nulová požadovaná poloha (výchozí stav).</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A&quot;}">0x1A</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 24&quot;}" style="color:white;"><b>Byte 24</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 25&quot;}" style="color:white;"><b>Byte 25</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 26&quot;}" style="color:white;"><b>Byte 26</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D0A2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F0B08F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 27&quot;}" style="color:white;"><b>Byte 27</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 28&quot;}" style="color:white;"><b>Byte 28</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 29&quot;}" style="color:white;"><b>Byte 29</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 30&quot;}" style="color:white;"><b>Byte 30</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 31&quot;}" style="color:white;"><b>Byte 31</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 32&quot;}" style="color:white;"><b>Byte 32</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 33&quot;}" style="color:white;"><b>Byte 33</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 34&quot;}" style="color:white;"><b>Byte 34</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 35&quot;}" style="color:white;"><b>Byte 35</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 36&quot;}" style="color:white;"><b>Byte 36</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 37&quot;}" style="color:white;"><b>Byte 37</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 38&quot;}" style="color:white;"><b>Byte 38</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 39&quot;}" style="color:white;"><b>Byte 39</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 40&quot;}" style="color:white;"><b>Byte 40</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 41&quot;}" style="color:white;"><b>Byte 41</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 42&quot;}" style="color:white;"><b>Byte 42</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 43&quot;}" style="color:white;"><b>Byte 43</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 44&quot;}" style="color:white;"><b>Byte 44</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 45&quot;}" style="color:white;"><b>Byte 45</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 46&quot;}" style="color:white;"><b>Byte 46</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10, 14, 18, 22 = 0 : no Error)&quot;}">(Byte 6, 10, 14, 18, 22 = 0 : no Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>K – Command</strong> <br />
+Popis: SW enable.
+Po zadání tohoto příkazu je motor pod momentem a otočí se do požadované polohy (tj. do polohy 0).
+Je nutné vyčkat než se motor dotočí.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram&quot;}"><b>Telegram</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram&quot;}"><b>Telegram</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – PosSpeed</strong> <br />
+Popis: Nastavení požadovanou rychlost na nulovou hodnotu.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegramm&quot;}"><b>Telegramm</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x07&quot;}">0x07</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – Mode</strong> <br />
+Popis: Nastavení Profil Generátoru do rychlostního režimu.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x09&quot;}">0x09</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – PosLimitAnglePosit, PosLimitRevolPosit, PosLimitAngleNegat, PosLimitRevolNegat</strong> <br />
+Popis: Nastavení pozičních limitů v rámci jedné otáčky a v rámci více otáček.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 12&quot;}" style="color:white;"><b>Byte 12</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 13&quot;}" style="color:white;"><b>Byte 13</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 14&quot;}" style="color:white;"><b>Byte 14</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 15&quot;}" style="color:white;"><b>Byte 15</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 16&quot;}" style="color:white;"><b>Byte 16</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 17&quot;}" style="color:white;"><b>Byte 17</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40&quot;}">0x40</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4B&quot;}">0x4B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x4C&quot;}">0x4C</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A&quot;}">0x1A</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 18&quot;}" style="color:white;"><b>Byte 18</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 19&quot;}" style="color:white;"><b>Byte 19</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 20&quot;}" style="color:white;"><b>Byte 20</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 21&quot;}" style="color:white;"><b>Byte 21</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 22&quot;}" style="color:white;"><b>Byte 22</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 23&quot;}" style="color:white;"><b>Byte 23</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 24&quot;}" style="color:white;"><b>Byte 24</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 24&quot;}" style="color:white;"><b>Byte 24</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x42&quot;}">0x42</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0F&quot;}">0x0F</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x0B&quot;}">0x0B</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5,10 = 0 : žádný Error)&quot;}">(Byte 5,10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x19&quot;}">0x19</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}"><b>0x04</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A&quot;}">0x1A</td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 9&quot;}" style="color:white;"><b>Byte 9</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 10&quot;}" style="color:white;"><b>Byte 10</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 11&quot;}" style="color:white;"><b>Byte 11</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x04&quot;}">0x04</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}">0x02</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<p><strong>PG – PosSpeed</strong> <br />
+Popis: SW enable.
+Po zadání tohoto příkazu je motor pod momentem a provede natočení do požadované polohy z předchozího požadavku.</p>
+<table>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 6&quot;}" style="color:white;"><b>Byte 6</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 7&quot;}" style="color:white;"><b>Byte 7</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 8&quot;}" style="color:white;"><b>Byte 8</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x01&quot;}">0x01</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 1&quot;}" style="color:white;"><b>Byte 1</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 2&quot;}" style="color:white;"><b>Byte 2</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
+        <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+    <tr>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
+        <td bgcolor="#A6A6A6" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x54&quot;}"><b>0x54</b></td>
+        <td bgcolor="#FFFF00" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x02&quot;}"><b>0x02</b></td>
+        <td bgcolor="#A9D08E" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x11&quot;}">0x11</td>
+        <td bgcolor="#F4B084" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td bgcolor="#D9D9D9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x00&quot;}">0x00</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
+    </tr>
+</table>
+
+<h2 id="rozsireny-popis-parametru-generatoru-profilu">Rozšířený popis parametrů Generátoru profilů<a class="headerlink" href="#rozsireny-popis-parametru-generatoru-profilu" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Název parametru</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acc</td>
+<td>Požadované zrychlení pohonu</td>
+</tr>
+<tr>
+<td>Dec</td>
+<td>Požadované zpomalení pohonu</td>
+</tr>
+<tr>
+<td>APosAngle</td>
+<td>Aktuální pozice pohonu v rámci jedné otáčky</td>
+</tr>
+<tr>
+<td>APosRevol</td>
+<td>Aktuální pozice pohonu v rámci počtu otáček</td>
+</tr>
+<tr>
+<td>DPosAngle</td>
+<td>Požadovaná pozice pohonu v rámci jedné otáčky</td>
+</tr>
+<tr>
+<td>DPosRevol</td>
+<td>Požadovaná pozice pohonu v rámci počtu otáček</td>
+</tr>
+<tr>
+<td>ASpeed</td>
+<td>Aktuální rychlost pohonu</td>
+</tr>
+<tr>
+<td>PosSpeed</td>
+<td>Požadovaná rychlost pohybu v polohovém módu</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Požadovaná rychlost pohybu v rychlostním módu</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>Mód profil generátoru. 0 = rychlostní, 1 = poziční, 2 (onlyread) = signalizace zpomalovací rampy v pozičním módu</td>
+</tr>
+<tr>
+<td>Rdy</td>
+<td>Signalizace dokončení pohybu pohonu. 1 = Poloha byla dosažena</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Typ profilu rychlosti 0 = harmonické nesymetrické, 1 = harmonické symetrické, 2 = plně harmonické, 3 = lichoběžníkové</td>
+</tr>
+<tr>
+<td>BitsPerRevol</td>
+<td>Počet bitů na otáčku pro profil generátorů</td>
+</tr>
+<tr>
+<td>RotaryMode</td>
+<td>Speciální režim polohování v rámci jedné otáčky s přejezdem kratší cestou - využití pro přímé motory. 1 = Rotary mód, 0 = standardní mód</td>
+</tr>
+<tr>
+<td>PosOffsetAngle</td>
+<td>Poziční offset v rámci jedné otáčky</td>
+</tr>
+<tr>
+<td>PosOffsetRevol</td>
+<td>Poziční offset v rámci počtu otáček</td>
+</tr>
+<tr>
+<td>PosLimitAnglePosit</td>
+<td>Kladný poziční limit v rámci jedné otáčky v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>PosLimitRevolPosit</td>
+<td>Kladný poziční limit v rámci počtu otáček v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>PosLimitAngleNegat</td>
+<td>Záporný poziční limit v rámci jedné otáčky v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>PosLimitRevolNegat</td>
+<td>Záporný poziční limit v rámci počtu otáček v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+</tr>
+<tr>
+<td>DPosAngleRotary</td>
+<td>V režimu „RotaryMode = 1“ tento parametr určuje požadovanou polohu v rámci jedné otáčky</td>
+</tr>
+<tr>
+<td>AccMaxCurrentFeedForward</td>
+<td>Proudová předkorekce</td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Uvedené hodnoty jsou pouze orientační. Lze je libovolně měnit.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
