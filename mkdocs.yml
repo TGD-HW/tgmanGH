@@ -354,7 +354,11 @@ nav:
         - Software:
             - EtherCAT:
                 - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
-                - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'      
+                - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'
+                - Nastavení sítě: 'Manual/CZ/SW/ECAT/md/network.md'
+                - Sběrnice EtherCAT: 'Manual/CZ/SW/ECAT/md/EtherCAT.md'
+                - Slovník objektů: 'Manual/CZ/SW/ECAT/md/objects.md'         
+                - TGZ a TwinCAT: 'Manual/CZ/SW/ECAT/md/twinCAT.md'                
             - EtherNET UDP:
                 - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       

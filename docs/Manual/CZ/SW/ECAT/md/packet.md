@@ -3,7 +3,7 @@ Popis komunikace průmyslové sběrnice EtherCAT.
 ##Distribuované hodiny (DC)
 Funkce distribuovaných hodin (DC) je podporována. Perioda synchronizovaného signálu 1 musí být nastavena na stejnou periodu jako komunikační perioda PDO.
 
-##Procesní datové objekty (PDO)
+##Procesní datové objekty (PDO) {#ECAT_PDO}
 Ethercat master může použít následující komunikační periody PDO: 250us, 500us, 1000us, 2000us, (50us pro konkrétní konfiguraci).
 Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže. Délka PDO je 44 bajtů.
 
