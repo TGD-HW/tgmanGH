@@ -274,7 +274,7 @@ identifikátoru osy v bitu 16 (0: první osa, 1: druhá osa) a původní hodnoty
 | 0x1000            | Rezervováno          | 30             |
 | 0x1000            | Rezervováno          | 31             |
 
-##Mapování PDO a varianty jednotky TGZ
+##Mapování PDO a varianty jednotky TGZ {#PDO_TGZ}
 Existují dvě varianty servozesilovačů TGZ: TGZ-D je určen pro řízení dvou os, zatímco TGZ-S je varianta pro jednu osu.
 Obě verze používají stejné popisné soubory XML (EtherCAT) nebo EDS (CANopen) a používají stejnou strukturu PDO a stejné objekty slovníku objektů.
 Pro verzi TGZ-S objekty druhé osy sice existují, ale nemají žádný význam, tj. jejich změna nemá žádný vliv na chování.

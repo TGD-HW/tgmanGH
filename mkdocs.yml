@@ -357,8 +357,15 @@ nav:
                 - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'
                 - Nastavení sítě: 'Manual/CZ/SW/ECAT/md/network.md'
                 - Sběrnice EtherCAT: 'Manual/CZ/SW/ECAT/md/EtherCAT.md'
-                - Slovník objektů: 'Manual/CZ/SW/ECAT/md/objects.md'         
-                - TGZ a TwinCAT: 'Manual/CZ/SW/ECAT/md/twinCAT.md'                
+                - Katalog objektů: 'Manual/CZ/SW/ECAT/md/objects.md'         
+                - TGZ a TwinCAT: 'Manual/CZ/SW/ECAT/md/twinCAT.md'
+                - Codesys: 'Manual/CZ/SW/ECAT/md/codesys.md'   
+            - Profinet RT:
+                - Základní informace: 'Manual/CZ/SW/Profinet/md/intro.md'
+                - Obecné: 'Manual/CZ/SW/Profinet/md/general.md'
+                - Nastavení sítě: 'Manual/CZ/SW/Profinet/md/network.md'
+                - TIA portál: 'Manual/CZ/SW/Profinet/md/TIA.md'
+                - PROFIdrive: 'Manual/CZ/SW/Profinet/md/profidrive.md'                    
             - EtherNET UDP:
                 - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       
