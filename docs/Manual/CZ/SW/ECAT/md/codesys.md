@@ -1,4 +1,4 @@
-##Režimy profilové polohy (PP) a profilové rychlosti (PV)
+##Polohový (PP) a rychlostní (PV) režim
 Servopohon TGZ podporuje další režimy polohování - profilovou polohu a profilovou rychlost.
 V takovém případě využívá svůj interní profil-generátor.
 Řídicí jednotka pouze nastaví požadovanou cílovou polohu (nebo rychlost) a servopohon provede všechny potřebné výpočty (zrychlení/zpomalení) pro vytvoření profilu polohy nebo rychlosti.

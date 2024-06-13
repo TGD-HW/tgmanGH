@@ -18,3 +18,6 @@ Pro programování TGZ je nezbytná znalost následujících dokumentů:
 Servopohon TGZ lze ovládat pomocí několika sběrnic a protokolů.
 Tato příručka popisuje řízení servopohonu pomocí sběrnice CAN s využitím standardu CANopen a také pomocí ethernetového připojení s využitím standardu EtherCAT s aplikačním protokolem CAN over EtherCAT (CoE).
 Je implementován standardní profil pohonu CiA DSP402.
+
+!!! note "Poznámka"
+	Technické změny, které vylepšují vlastnosti zařízení, mohou být provedeny bez předchozího upozornění!
