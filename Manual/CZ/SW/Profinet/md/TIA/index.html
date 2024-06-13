@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#pouziti-tgz-v-tia-portalu" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5499,6 +5504,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TIA portál
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5508,6 +5524,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pouziti-tgz-v-tia-portalu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Použití TGZ v TIA portálu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rezim-polohovani-s-telegramem-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      Režim polohování s telegramem 111
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepDevice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Příprava zařízení
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5850,15 +5910,83 @@
 
   <h1>TIA portál</h1>
 
-<p>Síť EtherCAT se připojuje pomocí konektoru X13 (Fieldbus IN) a konektoru X12 (Fieldbus OUT).
-Konektor IN použijte ve směru k zařízení EtherCAT master a konektor OUT k připojení dalších zařízení EtherCAT v řetězci.
-Standardní rychlost je 100Mbit/s, existuje také možnost použít připojení 1Gbit/s.
-V takovém případě musí všechna zařízení (včetně mastera) používat gigabitovou rychlost.
-Pro volbu požadované rychlosti komunikace použijte registr <code>C-Enable_1G</code>, viz. <a href="EtherCAT.md#ECATcommSettings">Nastavení komunikace EtherCAT</a>.
-Při připojování síťových kabelů EtherCAT musí být napájení zařízení vypnuto.   </p>
-<p>Sběrnice CAN je připojena pomocí konektoru X10. Není zde žádný zakončovací odpor 120Ω.
-Servozesilovač TGZ podporuje všechny standardní rychlosti sběrnice CAN: 10, 20, 50, 100, 125, 250, 500, 800 a 1000 Kbit/s. Rychlost se volí pomocí registru CAN_BaudRate pomocí servisního programu TGZ_GUI.
-Nastavení servozesilovače TGZ smí provádět pouze odborný pracovník s dostatečnými znalostmi techniky pohonů. Všechna elektrická zapojení musí být provedena v souladu s uživatelskou příručkou TGZ.</p>
+<h2 id="pouziti-tgz-v-tia-portalu">Použití TGZ v TIA portálu<a class="headerlink" href="#pouziti-tgz-v-tia-portalu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Buďte opatrní, aby se pohon nezačal pohybovat bez předchozího varování.</li>
+<li>Přijměte příslušná opatření, aby obsluha a servisní pracovníci byli o tomto nebezpečí informováni.</li>
+<li>Zaveďte vhodná ochranná opatření, která zajistí, že jakýkoli neúmyslný pohyb pohonů nemůže vést k nebezpečným situacím.</li>
+<li>Uživatel je zodpovědný za to, že v případě poruchy pohonu bude celý systém nastaven do stavu, který je bezpečný pro zařízení i personál.</li>
+</ul>
+<h2 id="rezim-polohovani-s-telegramem-111">Režim polohování s telegramem 111<a class="headerlink" href="#rezim-polohovani-s-telegramem-111" title="Permanent link">&para;</a></h2>
+<p>Nejpoužívanějším provozním režimem je režim polohování pomocí základního polohování TGZ a funkčního bloku SinaPos TIA portálu s telegramem 111.
+Následují možné kroky pro vytvoření nového projektu se dvěma servozesilovači TGZ, a to ve variantě se dvěma osami.</p>
+<ul>
+<li>Vytvořte nový projekt.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet11.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet11.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Otevřete projekt.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet12.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet12.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Nainstalujte soubory XML GSD popisující zařízení TGZ v síti PROFINET.
+  Existují dva typy souborů, jeden pro jednoosou variantu s názvem <code>GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml</code> a druhý pro dvouosou variantu TGZ <code>GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml</code> (kde <code>xxxxx</code> znamená datum vytvoření souboru).</li>
+</ul>
+<!--vložit placeholdery na GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml a GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml - linky pro přímé stažení z webu-->
+
+<p>Soubory lze stáhnout z webových stránek TG Drives.</p>
+<ul>
+<li>Zvolte položku nabídky <code>Options|Manage general station description files (GSD)</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet13.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet13.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Zadejte zdrojovou cestu, kde jsou uloženy soubory GSDML, vyberte příslušný soubor a klikněte na tlačítko <strong>Install</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Oba soubory lze instalovat současně.</p>
+</div>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet14.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet14.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Ve stromu projektů vlevo nahoře dvojklikem zvolte položku <strong>Add new device item</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet15.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet15.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Vyberte PLC controller použitý v hardwarovém projektu.
+  V tomto výukovém programu je použit PLC S7-1200.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Pozor</p>
+<p>Dbejte na výběr správné verze firmwaru (zde V4.1).</p>
+</div>
+<ul>
+<li>Na portálu TIA by se mělo otevřít okno <strong>Devices &amp; networks</strong>.
+  Pokud ne, použijte položku stromového zobrazení <strong>Devices &amp; networks</strong> v zobrazení projektu a otevřete okno dvojklikem.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet16.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet16.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Nyní je čas přidat do projektu jednotky TGZ.
+  V podokně <strong>Catalog pane</strong> otevřete položku <strong>Other field devices</strong> a přejděte na <code>PROFINET IO|Pohony|TGPohony|tgz-d|tgz-d</code>.
+  Zařízení přidejte do projektu dvojklikem.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet17.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet17.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Chcete-li přidat dva servopohony TGZ, proveďte to dvakrát.
+  Pro práci s jednoosou variantou TGZ použijte položku tgz-s.
+  Okno <strong>Devices &amp; network</strong> by mělo vypadat následovně:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet18.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet18.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přejmenujte jednotky v podokně <strong>Network overview</strong> podle projektu hardwaru.
+  Názvy musí být stejné jako při <a href="./#prepDevice">přípravě zařízení</a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet19.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet19.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Připojte pohony k PLC.
+  Klikněte na modrý text <strong>Not assigned</strong> a zvolte <strong>PROFINET interface_1</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet20.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet20.webp" alt="Profinet img" style="width:70%;"></a></p>
+<h2 id="prepDevice">Příprava zařízení<a class="headerlink" href="#prepDevice" title="Permanent link">&para;</a></h2>
 
 
 

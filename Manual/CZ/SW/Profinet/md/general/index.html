@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#technicka-specifikace" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5457,6 +5462,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Obecné
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5466,6 +5482,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#technicka-specifikace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technická specifikace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doba-cyklu-dat-rt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doba cyklu dat RT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servo-typu-tgz-s-48-xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servo typu TGZ-S-48-xxx
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5850,23 +5910,34 @@
 
   <h1>Obecné</h1>
 
-<p><a class="glightbox" href="../../../../../source/common/img/ECATlogo1.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/ECATlogo1.png" alt="ECAT logo" style="width:30%;"></a>
-<a class="glightbox" href="../../../../../source/common/img/CANopenLogo1.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/CANopenLogo1.png" alt="CANopen logo" style="width:30%;"></a>   </p>
-<p>EtherCAT je registrovaná ochranná známka a patentovaná technologie, licencovaná společností Beckhoff Automation GmbH.
-CANopen a CiA jsou registrované ochranné známky společnosti CAN in Automation.</p>
-<p>Tento návod popisuje nastavení pohonu TGZ v síti EtherCAT nebo CANopen. Pohony TGZ musí být naprogramovány příslušným firmwarem.
-Před použitím pohonu v prostředí EtherCAT nebo CANopen je nutné se důkladně seznámit s <a href="../../../../TGZ/TGZ-D-48-13/md/mark/">uživatelským manuálem HW TGZ</a>.</p>
-<p>Pro programování TGZ je nezbytná znalost následujících dokumentů:</p>
+<h2 id="technicka-specifikace">Technická specifikace<a class="headerlink" href="#technicka-specifikace" title="Permanent link">&para;</a></h2>
+<p>Servozesilovač TGZ používá PROFIdrive podle uvedené technické specifikace: </p>
 <ul>
-<li>Aplikační vrstva CANopen a komunikační profil (CiA 301)</li>
-<li>Profil zařízení Pohony a řízení pohybu (CiA 402)</li>
-<li>Prováděcí směrnice pro profil pohonu CiA402 (ETG.6010)</li>
-<li>EtherCAT Slave Controller - Technologie</li>
-<li>EtherCAT Slave Controller - popis registru</li>
+<li>Třída použití 1 (<em>Standard Drive</em> - regulátor otáček)</li>
+<li>Třída použití 3 (jednoosý polohovací pohon s lokálním <em>Motion Control</em> - regulátor polohy).</li>
 </ul>
-<p>Servopohon TGZ lze ovládat pomocí několika sběrnic a protokolů.
-Tato příručka popisuje řízení servopohonu pomocí sběrnice CAN s využitím standardu CANopen a také pomocí ethernetového připojení s využitím standardu EtherCAT s aplikačním protokolem CAN over EtherCAT (CoE).
-Je implementován standardní profil pohonu CiA DSP402.</p>
+<p>Pro ovládání TGZ je k dispozici několik telegramů PROFIdrive pro použití s PLC:</p>
+<ul>
+<li>Standardní telegram 1 - rozhraní n-údajů, 16 bitů</li>
+<li>Standardní telegram 3 - rozhraní n-údajů, 32 bitů, s jedním senzorem</li>
+<li>Standardní telegram 7 - polohovací rozhraní</li>
+<li>Standardní telegram 9 - polohovací rozhraní plus podrežim MDI</li>
+<li>Telegram 111 - SinaPos basic positioner</li>
+<li>Telegram 352 - rozšířený telegram 1 s dalšími stavovými informacemi</li>
+</ul>
+<p>Podrobný popis telegramů naleznete v příslušné dokumentaci.   </p>
+<p>Podle specifikace PROFINET podporuje servopohon TGZ třídu shody A.
+Parametry PROFIdrive lze číst a zapisovat přes síť PROFINET, stejně jako cyklická data.
+Synchronizace mezi zařízeními se provádí pouze prostřednictvím PLC v rámci doby cyklu dat RT.
+U dvouosé varianty servopohonu je možná i přesná synchronizace (elektronický převod) uvnitř jednoho TGZ.</p>
+<h2 id="doba-cyklu-dat-rt">Doba cyklu dat RT<a class="headerlink" href="#doba-cyklu-dat-rt" title="Permanent link">&para;</a></h2>
+<p>Nejrychlejší doba cyklu TGZ pro data PROFINET RT je 1 ms (firmware od srpna 2022 nebo novější).
+Maximální jitter je 250 µs.</p>
+<h2 id="servo-typu-tgz-s-48-xxx">Servo typu TGZ-S-48-xxx<a class="headerlink" href="#servo-typu-tgz-s-48-xxx" title="Permanent link">&para;</a></h2>
+<p>Tato verze má zvláštní zacházení s firmwarem: vzhledem k podobnosti s verzí TGZ-D musí být naprogramována firmwarem určeným pro variantu TGZ-D.
+Proto je nutné použít také soubor <code>GSDML</code> s názvem <code>GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml</code>, tj. soubor pro dvouosou variantu.
+Při uvádění pohonu do provozu lze použít pouze první osu.
+Druhá osa zůstává vždy v chybovém stavu.</p>
 
 
 
