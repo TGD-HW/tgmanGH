@@ -38,7 +38,7 @@ Servozesilovač TGZ má vestavěnou funkci PROFINET Bridge, takže pro malý po�
 !!! note "Poznámka"
 	Při změně adresy MAC a/nebo čísla telegramu je důležité vždy uložit parametry a restartovat servozesilovač.
 	
-##IP adresa a název zařízení
+##Název a IP adresa zařízení {#ProfinetIPsettings}
 IP adresa je z výroby nastavena na `0.0.0.0` a název zařízení je prázdný.
 V síti PROFINET je třeba přiřadit jedinečný název zařízení a IP adresu.
 K tomu lze použít libovolný software PROFINET, například **TIA Portal**.
