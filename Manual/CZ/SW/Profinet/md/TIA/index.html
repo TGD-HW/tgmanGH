@@ -5557,9 +5557,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prepDevice" class="md-nav__link">
+  <a href="#podporovane-ridici-bity-v-configepos" class="md-nav__link">
     <span class="md-ellipsis">
-      Příprava zařízení
+      Podporované řídicí bity v ConfigEPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pouziti-plc-s7-300-nebo-s7-400-s-telegramem-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      Použití PLC S7-300 nebo S7-400 s telegramem 111
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rychlostni-rezim-pomoci-standardniho-telegramu-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rychlostní režim pomocí standardního telegramu 3
     </span>
   </a>
   
@@ -5923,11 +5941,11 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 <ul>
 <li>Vytvořte nový projekt.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet11.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet11.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet11.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet11.webp" alt="Profinet img" style="width:90%;"></a></p>
 <ul>
 <li>Otevřete projekt.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet12.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet12.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet12.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet12.webp" alt="Profinet img" style="width:90%;"></a></p>
 <ul>
 <li>Nainstalujte soubory XML GSD popisující zařízení TGZ v síti PROFINET.
   Existují dva typy souborů, jeden pro jednoosou variantu s názvem <code>GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml</code> a druhý pro dvouosou variantu TGZ <code>GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml</code> (kde <code>xxxxx</code> znamená datum vytvoření souboru).</li>
@@ -5938,7 +5956,7 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 <ul>
 <li>Zvolte položku nabídky <code>Options|Manage general station description files (GSD)</code>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet13.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet13.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet13.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet13.webp" alt="Profinet img" style="width:90%;"></a></p>
 <ul>
 <li>Zadejte zdrojovou cestu, kde jsou uloženy soubory GSDML, vyberte příslušný soubor a klikněte na tlačítko <strong>Install</strong>.</li>
 </ul>
@@ -5946,15 +5964,16 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 <p class="admonition-title">Poznámka</p>
 <p>Oba soubory lze instalovat současně.</p>
 </div>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet14.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet14.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet14.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet14.webp" alt="Profinet img" style="width:50%;"></a></p>
 <ul>
 <li>Ve stromu projektů vlevo nahoře dvojklikem zvolte položku <strong>Add new device item</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet15.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet15.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet15.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet15.webp" alt="Profinet img" style="width:30%;"></a></p>
 <ul>
 <li>Vyberte PLC controller použitý v hardwarovém projektu.
   V tomto výukovém programu je použit PLC S7-1200.</li>
 </ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet16.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet16.webp" alt="Profinet img" style="width:50%;"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Pozor</p>
 <p>Dbejte na výběr správné verze firmwaru (zde V4.1).</p>
@@ -5963,30 +5982,321 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 <li>Na portálu TIA by se mělo otevřít okno <strong>Devices &amp; networks</strong>.
   Pokud ne, použijte položku stromového zobrazení <strong>Devices &amp; networks</strong> v zobrazení projektu a otevřete okno dvojklikem.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet16.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet16.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet17.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet17.webp" alt="Profinet img" style="width:90%;"></a></p>
 <ul>
 <li>Nyní je čas přidat do projektu jednotky TGZ.
   V podokně <strong>Catalog pane</strong> otevřete položku <strong>Other field devices</strong> a přejděte na <code>PROFINET IO|Pohony|TGPohony|tgz-d|tgz-d</code>.
   Zařízení přidejte do projektu dvojklikem.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet17.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet17.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet18.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet18.webp" alt="Profinet img" style="width:50%;"></a></p>
 <ul>
 <li>Chcete-li přidat dva servopohony TGZ, proveďte to dvakrát.
   Pro práci s jednoosou variantou TGZ použijte položku tgz-s.
   Okno <strong>Devices &amp; network</strong> by mělo vypadat následovně:</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet18.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet18.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet19.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet19.webp" alt="Profinet img" style="width:90%;"></a></p>
 <ul>
 <li>Přejmenujte jednotky v podokně <strong>Network overview</strong> podle projektu hardwaru.
   Názvy musí být stejné jako při <a href="./#prepDevice">přípravě zařízení</a>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet19.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet19.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet20.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet20.webp" alt="Profinet img" style="width:30%;"></a></p>
 <ul>
 <li>Připojte pohony k PLC.
   Klikněte na modrý text <strong>Not assigned</strong> a zvolte <strong>PROFINET interface_1</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../source/common/img/profinet20.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet20.webp" alt="Profinet img" style="width:70%;"></a></p>
-<h2 id="prepDevice">Příprava zařízení<a class="headerlink" href="#prepDevice" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet21.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet21.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Totéž proveďte u druhého TGZ.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet22.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet22.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Volitelně použijte zobrazení <strong>Topology</strong> a spojte zařízení PLC s TGZ pomocí myši stejným způsobem jako ve skutečnosti.
+  Tento krok není nutný.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet23.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet23.webp" alt="Profinet img" style="width:70%;"></a>
+<a class="glightbox" href="../../../../../source/common/img/profinet24.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet24.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přiřaďte všem zařízením v projektu správné IP adresy.
+  IP adresy a názvy zařízení PROFINET musí odpovídat hodnotám zadaným v <a href="../network/#ProfinetIPsettings">Název a IP adresa zařízení</a>.
+  Aktivujte připojení v poli PLC (zelený obdélník) a v podokně <strong>Properties</strong> níže použijte položku <strong>Ethernet addresses</strong>.
+  Do textového pole zadejte správnou IP adresu spolu s maskou podsítě (obvykle 255.255.255.0).</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet25.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet25.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Podobným způsobem přiřaďte IP adresy dalším zařízením.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet26.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet26.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přepněte se do zobrazení <strong>Device view</strong> (vpravo nahoře) a v kombo boxu vyberte první zařízení TGZ (tgz_1).
+  V katalogu hardwaru vpravo dvakrát klikněte na <strong>Siemens telegram 111</strong>.
+  To proveďte dvakrát pro obě osy (slot 1 a slot 2).</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet27.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet27.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Výsledek by měl vypadat takto:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet28.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet28.webp" alt="Profinet img" style="width:60%;"></a></p>
+<ul>
+<li>Přejmenujte osy (sloty 1 a 2) podle skutečného hardwarového projektu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet29.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet29.webp" alt="Profinet img" style="width:60%;"></a></p>
+<ul>
+<li>Totéž proveďte pro druhou jednotku TGZ a získáte něco jako:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet30.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet30.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Stáhněte projekt do PLC pomocí ikony <strong>Download</strong> do zařízení nebo pomocí příkazu nabídky <code>Online|Download to device</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet31.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet31.webp" alt="Profinet img" style="width:60%;"></a></p>
+<ul>
+<li>Je nutné najít PLC.
+  V následujícím dialogovém okně klikněte na tlačítko <strong>Start search</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet32.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet32.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Po chvíli by se měl PLC objevit v seznamu <strong>Select target device</strong>.
+  Vyberte jej a klikněte na tlačítko <strong>Load</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet33.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet33.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Dialogové okno <strong>Load preview</strong> ukazuje stav načtení.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet34.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet34.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Klikněte na tlačítko <strong>Load</strong> a poté na tlačítko <strong>Finish</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet35.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet35.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Zkontrolujte konfiguraci hardwaru.
+  Klikněte na ikonu <strong>Go online</strong> v nástrojové liště.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet36.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet36.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Vyčkejte na stav zelené značky v zobrazení projektu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet37.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet37.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Příkazem <strong>Go offline</strong> se přepněte zpět do režimu offline.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet38.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet38.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Rozbalte položku <strong>Project view to Program blocks|Main [OB1]</strong> a otevřete ji dvojklikem.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet39.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet39.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Otevře se nové okno s bloky PLC.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet40.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet40.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Vpravo v podokně <strong>Instructions</strong> vyhledejte funkční blok <strong>SinaPos</strong> (FB).
+  K tomu lze použít pole pro úpravu vyhledávání.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet41.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet41.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Přetáhněte blok SinaPos na řádek <strong>Network 1</strong> a přiřaďte název bloku Data.
+  Použijte nejlépe stejný název jako pro osy (sloty) přiřazené v předchozích krocích.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet42.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet42.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Připojte telegram ke vstupům HWIDSTW a HWIDZSW funkčního bloku.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet43.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet43.webp" alt="Profinet img" style="width:50%;"></a></p>
+<ul>
+<li>Výsledek by měl vypadat asi takto:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet44.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet44.webp" alt="Profinet img" style="width:40%;"></a></p>
+<ul>
+<li>Zopakujte přetažení SinaPos FB a přiřazení osy pro <strong>Network 2</strong> společně s osou <strong>Axis_2</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet45.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet45.webp" alt="Profinet img" style="width:40%;"></a></p>
+<ul>
+<li>Stejný postup platí pro pohon tgz_2 a osy Axis_3 a Axis_4.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet46.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet46.webp" alt="Profinet img" style="width:40%;"></a>
+<a class="glightbox" href="../../../../../source/common/img/profinet47.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet47.webp" alt="Profinet img" style="width:40%;"></a></p>
+<ul>
+<li>Zkompilujte a stáhněte upravený projekt do PLC příkazem <code>Online|Download to device</code>  a přepněte TIA Portal zpět do online režimu.</li>
+<li>Funkční blok lze ovládat pomocí tabulky hlídání.
+  Vytvořte novou tabulku pomocí položky <code>Project view item PLC_1|Watch and force tables|Add new watch table</code> a přejmenujte ji na <strong>Axis_1_Control</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet48.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet48.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Přidejte následující vstupy a výstupy funkčního bloku SinaPos:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet49.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet49.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Pokud jsou hodnoty správně nastaveny (ModePos, Position, Velocity, EnableAxis), přepnutím <strong>ExecuteMode</strong> z FALSE na TRUE by se měl spustit požadovaný pohyb.
+  Pro správné chování funkčního bloku musí být Status <code>16#7002</code>.
+  Další informace o ovládání tohoto FB naleznete v online <a href="https://cache.industry.siemens.com/dl/files/845/109736845/att_928039/v1/109736845_G120_CU250S2PN_at_S7_1200_SINA_POS_v10_DOCU_en.pdf">dokumentaci k SinaPos</a>.</li>
+<li>Volitelně můžete vytvořit další sledovací tabulky pro práci s dalšími osami.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet50.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet50.webp" alt="Profinet img" style="width:90%;"></a></p>
+<h2 id="podporovane-ridici-bity-v-configepos">Podporované řídicí bity v ConfigEPos<a class="headerlink" href="#podporovane-ridici-bity-v-configepos" title="Permanent link">&para;</a></h2>
+<p>V hodnotě <strong>ConfigEPos</strong> lze použít další bity pro přesné řízení chování TGZ.
+Při nastavení na <code>16#0000_0103</code> (nastaven je také bit 8) je aktivován přenos konstantní žádané hodnoty.
+Když je aktivní úloha posunu, je možné změnit cílovou polohu nebo rychlost a pohon reaguje okamžitě, aniž by bylo nutné přepínat bit ExecuteMode.
+Po ukončení úlohy se pohon vrátí do stavu <code>S41</code> (viz. dokumentace PROFIdrive) a čeká na vzestupnou hranu bitu ExecuteMode.   </p>
+<p>Je také možné nastavit <strong>ConfigEPos</strong> na <code>16#0010_0103</code> (nastavte bit 8 a 20).
+Pak pohon udržuje stav <code>S451</code>, i když je úloha ukončena, a nová úloha se spustí okamžitě, jakmile přijde nová pozice.
+Pro opuštění stavu <code>S451</code> je třeba změnit hodnotu <strong>ConfigEPos</strong> na <code>16#0000_0103</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Všimněte si, že hodnotu <code>16#0000_0103</code> nebo <code>16#0010_010</code>3 lze použít pouze pro absolutní polohování, tj. když ModePos = 2.
+Protože minimální doba cyklu je 1 ms, je možné dosáhnout konstantního polohování pomocí PLC.
+Je nutné správně nastavit hodnoty zrychlení a rychlosti.
+Doporučuje se také lichoběžníkový rychlostní profil (profil generátor typ 3).</p>
+</div>
+<p>Bit 8 ConfigEPos je interně mapován na bit 12 řídicího slova POS_STW1 v telegramu (MdiTrTyp).
+Bit 20 je mapován na bit 11 řídicího slova POS_STW1.</p>
+<h2 id="pouziti-plc-s7-300-nebo-s7-400-s-telegramem-111">Použití PLC S7-300 nebo S7-400 s telegramem 111<a class="headerlink" href="#pouziti-plc-s7-300-nebo-s7-400-s-telegramem-111" title="Permanent link">&para;</a></h2>
+<p>Chcete-li používat starší PLC, stáhněte si z internetu knihovnu <code>DriveLib</code>.
+V době psaní této příručky byl název souboru <a href="https://support.industry.siemens.com/cs/document/109475044/sinamics-communication-blocks-drivelib-for-reading-and-writing-drive-data-within-tia-portal-context?dti=0&amp;lc=en-CZ">Drive_Lib_V62_S7_300_400.zip</a>.
+Rozbalte jej a nainstalujte do TIA portálu.
+Poté bude postup při vytváření projektu stejný jako výše, pouze použijte záložku <strong>Libraries</strong> a tam najděte funkci <strong>SINA_POS</strong> a přidejte ji do řádku <strong>Main's Network</strong>.</p>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet51.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet51.webp" alt="Profinet img" style="width:30%;"></a></p>
+<p>Servopohon TGZ nyní podporuje režimy spuštění Advanced a Legacy.
+Režim Legacy se používá pro S7-300 nebo S7-400.
+Upravené soubory GSDML (PNIO verze 2.4) jsou k dispozici na <a href="https://www.tgdrives.cz/ke-stazeni/digitalni-servozesilovace-ke-stazeni/#c425">webových stránkách TGDrives</a>.
+K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších softwarových balíčcích.</p>
+<h2 id="rychlostni-rezim-pomoci-standardniho-telegramu-3">Rychlostní režim pomocí standardního telegramu 3<a class="headerlink" href="#rychlostni-rezim-pomoci-standardniho-telegramu-3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Vytvořte nový projekt a pojmenujte jej <em>TGZ-S-Tele3</em>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet52.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet52.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Otevřete zobrazení projektu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet53.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet53.webp" alt="Profinet img" style="width:90%;"></a></p>
+<ul>
+<li>Dvakrát klikněte na možnost <strong>Add new device</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet54.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet54.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Zvolte správnou řídicí jednotku PLC a její verzi.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet55.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet55.webp" alt="Profinet img" style="width:50%;"></a></p>
+<ul>
+<li>Vyberte možnost <strong>Network view</strong> a rozbalte strom v <code>Hardware catalog to item Other field devices|PROFINET IO|Drives|TGDrives|tgz-s|tgz-s</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet56.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet56.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Dvakrát klikněte na tgz-s, zařízení bude přidáno do projektu v <strong>Network view</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet57.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet57.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přejmenujte zařízení TGZ a dejte mu název zařízení - stejný, který byl nastaven při uvedení do provozu, jak je popsáno v <a href="../network/#ProfinetIPsettings">Název a IP adresa zařízení</a></li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet58.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet58.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Pro tento příklad použijeme název tgz_2.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet59.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet59.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Připojte pohon TGZ k PLC kliknutím na modrý text <strong>Not assigned</strong> a výběrem PLC_1 PROFINET interface_1.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet60.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet60.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Výsledek by měl vypadat takto:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet61.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet61.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přiřaďte PLC IP adresu.
+  Použijte stejnou adresu jako je popsáno v sekci <a href="../network/#ProfinetIPsettings">Název a IP adresa zařízení</a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet62.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet62.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přiřaďte servopohonu TGZ IP adresu. Opět použijte adresu již uloženou v zařízení TGZ.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet63.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet63.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Zvolte telegram 3 do slotu 1 TGZ.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet64.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet64.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Dvojklikem na položku <strong>Standard telegram 3</strong> se telegram nastaví automaticky.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet65.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet65.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Stáhněte konfiguraci hardwaru do PLC:</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet66.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet66.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Klikněte na tlačítko <strong>Start search</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet67.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet67.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>V seznamu by se mělo objevit PLC.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet68.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet68.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Klikněte na tlačítko <strong>Load</strong>, počkejte na dokončení kompilace a v následujícím dialogovém okně vyberte možnost <strong>Stop all modules</strong> a znovu klikněte na tlačítko <strong>Load</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet69.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet69.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Načítání dokončíte kliknutím na tlačítko <strong>Finish</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet70.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet70.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Pokud ještě není vybrán, zvolte v servisním programu TGZ GUI telegram číslo 3: Speed.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet71.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet71.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Uložte parametry a restartujte jednotku TGZ.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet72.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet72.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přepněte portál TIA do režimu <strong>Online mode</strong>, v zobrazení projektu by měla být zelená zaškrtávací políčka.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet73.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet73.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Pokud se vyskytnou nějaké chyby, zastavte a spusťte PLC.
+  Zkontrolujte také, zda se v servisním programu TGZ GUI zvyšuje parametr <code>PD_SetDataCounter</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet74.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet74.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Rozbalte položku <code>PLC_1|Technology object|Add new object</code> a dvakrát na ni klikněte.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet75.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet75.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Vyberte možnost <strong>Motion control</strong> a <strong>TO_PositioningAxis</strong>. Volitelně můžete zadat vhodný název objektu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet75.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet75.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>V okně Axis_1 v části <code>Basic parameters|General</code> zvolte přepínač <strong>PROFIdrive</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet76.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet76.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Přepněte na <code>Basic parameters|Drive</code> a vyberte správný pohon.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet77.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet77.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>V případě potřeby upravte <strong>Reference speed</strong> a <strong>Maximum speed</strong> s ohledem limity pohonu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet78.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet78.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Vyberte <code>Basic parameters|Encoder</code> a přepněte na <strong>Encoder on drive</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet79.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet79.webp" alt="Profinet img" style="width:50%;"></a></p>
+<ul>
+<li>Volitelně nastavte další parametry v položkách <strong>Extended parameters</strong> podle hardwarového projektu.</li>
+<li>Po dokončení přepněte do offline režimu a stáhněte upravený projekt do PLC příkazem z nabídky <code>Online|Download to device</code> do zařízení.
+  Postup je stejný, jak je popsáno výše.</li>
+<li>Přepněte se zpět do režimu online a dvakrát klikněte na položku <strong>Commissioning</strong> v zobrazení projektu.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet80.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet80.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Klikněte na tlačítko <strong>Activate</strong> v horní části okna.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet81.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet81.webp" alt="Profinet img" style="width:30%;"></a></p>
+<ul>
+<li>Povolte osu tlačítkem <strong>Enable</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet82.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet82.webp" alt="Profinet img" style="width:70%;"></a></p>
+<ul>
+<li>Nyní je možné v závislosti na zvoleném příkazu provádět Jog osy, Homing a/nebo Positioning.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../source/common/img/profinet83.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/profinet83.webp" alt="Profinet img" style="width:70%;"></a></p>
+<p>Podrobný popis technologického objektu naleznete v online dokumentaci.</p>
 
 
 

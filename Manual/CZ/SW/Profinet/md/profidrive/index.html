@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#parametry-pohonu-profidrive" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5520,6 +5525,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PROFIdrive
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5529,6 +5545,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-pohonu-profidrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametry pohonu PROFIdrive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#podporovane-standardni-jednotky-profidrive-pnu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podporované standardní jednotky PROFIdrive PNU
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencni-hodnoty-pnu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referenční hodnoty PNU
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5850,15 +5910,117 @@
 
   <h1>PROFIdrive</h1>
 
-<p>Síť EtherCAT se připojuje pomocí konektoru X13 (Fieldbus IN) a konektoru X12 (Fieldbus OUT).
-Konektor IN použijte ve směru k zařízení EtherCAT master a konektor OUT k připojení dalších zařízení EtherCAT v řetězci.
-Standardní rychlost je 100Mbit/s, existuje také možnost použít připojení 1Gbit/s.
-V takovém případě musí všechna zařízení (včetně mastera) používat gigabitovou rychlost.
-Pro volbu požadované rychlosti komunikace použijte registr <code>C-Enable_1G</code>, viz. <a href="EtherCAT.md#ECATcommSettings">Nastavení komunikace EtherCAT</a>.
-Při připojování síťových kabelů EtherCAT musí být napájení zařízení vypnuto.   </p>
-<p>Sběrnice CAN je připojena pomocí konektoru X10. Není zde žádný zakončovací odpor 120Ω.
-Servozesilovač TGZ podporuje všechny standardní rychlosti sběrnice CAN: 10, 20, 50, 100, 125, 250, 500, 800 a 1000 Kbit/s. Rychlost se volí pomocí registru CAN_BaudRate pomocí servisního programu TGZ_GUI.
-Nastavení servozesilovače TGZ smí provádět pouze odborný pracovník s dostatečnými znalostmi techniky pohonů. Všechna elektrická zapojení musí být provedena v souladu s uživatelskou příručkou TGZ.</p>
+<h2 id="parametry-pohonu-profidrive">Parametry pohonu PROFIdrive<a class="headerlink" href="#parametry-pohonu-profidrive" title="Permanent link">&para;</a></h2>
+<p>Servopohon TGZ podporuje přístup k parametrům prostřednictvím slotů 1 a 2 (slot 2 pouze pro variantu se dvěma osami).
+Pro přístup k parametrům TGZ lze použít tři indexy datových objektů záznamu:</p>
+<ul>
+<li><code>47</code> - údaje ze starších záznamů. Osa je uvedena přímo v záhlaví požadavku.</li>
+<li><code>0xB02E</code> - přístup k lokálním základním parametrům. Osa je určena slotem, který provádí přístup.</li>
+<li><code>0xB02F</code> - přístup ke globálním základním parametrům. Osa je uvedena přímo v hlavičce požadavku.</li>
+</ul>
+<h2 id="podporovane-standardni-jednotky-profidrive-pnu">Podporované standardní jednotky PROFIdrive PNU<a class="headerlink" href="#podporovane-standardni-jednotky-profidrive-pnu" title="Permanent link">&para;</a></h2>
+<p>Servopohon TGZ podporuje následující standardní a povinné parametry PROFIdrive (PNU):</p>
+<table>
+<thead>
+<tr>
+<th>Číslo</th>
+<th>Popis</th>
+<th>Datový typ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>922</td>
+<td>Výběr telegramu</td>
+<td>Unsigned16</td>
+</tr>
+<tr>
+<td>930</td>
+<td>Provozní režim</td>
+<td>Unsigned16</td>
+</tr>
+<tr>
+<td>944</td>
+<td>Počítadlo chybových zpráv</td>
+<td>Unsigned16</td>
+</tr>
+<tr>
+<td>947</td>
+<td>Číslo chyby</td>
+<td>Pole Unsigned16</td>
+</tr>
+<tr>
+<td>964</td>
+<td>Identifikace jednotky</td>
+<td>Struktura</td>
+</tr>
+<tr>
+<td>965</td>
+<td>Identifikace režimu</td>
+<td>Struktura</td>
+</tr>
+<tr>
+<td>975</td>
+<td>Identifikace objektu jednotky</td>
+<td>Struktura</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Popis standardních parametrů PROFIdrive naleznete v dokumentaci PROFIdrive. PNU 922, 930, 944 a 947 jsou pro každou osu jedinečné.</p>
+</div>
+<h2 id="referencni-hodnoty-pnu">Referenční hodnoty PNU<a class="headerlink" href="#referencni-hodnoty-pnu" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Číslo</th>
+<th>Popis</th>
+<th>Datový typ</th>
+<th>Název registru TGZ</th>
+<th>Registrační číslo TGZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2000</td>
+<td>Referenční rychlost</td>
+<td>Float32</td>
+<td>M-Nn</td>
+<td>0x2118, 0x2218</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>Referenční napětí</td>
+<td>Float32</td>
+<td>M-Un</td>
+<td>0x2117, 0x2217</td>
+</tr>
+<tr>
+<td>2002</td>
+<td>Referenční proud</td>
+<td>Float32</td>
+<td>M-In</td>
+<td>0x211B, 0x221B</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>Referenční točivý moment</td>
+<td>Float32</td>
+<td>M-Mn</td>
+<td>0x2119, 0x2219</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>Referenční zrychlení</td>
+<td>Float32</td>
+<td>PG-PD_Acc</td>
+<td>0x395E, 0x3A5E</td>
+</tr>
+</tbody>
+</table>
+<p>Výše uvedené parametry jsou pro každou osu jedinečné.
+Použijte příslušný identifikátor osy spolu s indexem datového objektu.</p>
 
 
 
