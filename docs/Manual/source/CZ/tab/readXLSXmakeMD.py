@@ -127,6 +127,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../../CZ/TGZ/TGZ-S-48-50_100/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-50_100RI
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-50_100RI"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../../CZ/TGZ/TGZ-S-48-50_100RI/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 # TGZ-D-48-50_100
 file_path = "parameters.xlsx"
 sheet_name = "TGZ-D-48-50_100"

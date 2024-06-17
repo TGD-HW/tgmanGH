@@ -274,6 +274,15 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/schematic.md'               
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'
+            - 'TGZ-S-48-50/100 RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/safe.md'                    
             - 'Řízení a regulace':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
