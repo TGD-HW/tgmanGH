@@ -681,3 +681,80 @@ range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X7_FB2_8pin_B2CF_TGM.md"
 save_markdown_table(markdown_table, output_file)
+
+# X4 - 12pin Molex ClikMate - 5031491200 - TGZ RI FBE
+file_path = "connectors.xlsx"
+sheet_name = "X4_FBE_12pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X4_FBE_12pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X5 - 10pin Molex ClikMate - 5031491000 - TGZ RI FB1
+file_path = "connectors.xlsx"
+sheet_name = "X5_FB1_10pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X5_FB1_10pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X6 - 10pin Molex ClikMate - 5031491000 - TGZ RI FB2
+file_path = "connectors.xlsx"
+sheet_name = "X6_FB2_10pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X6_FB2_10pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X7 - 12pin Molex ClikMate - 5031491200 - TGZ RI AIN, DITTL
+file_path = "connectors.xlsx"
+sheet_name = "X7_AIN_12pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X7_AIN_12pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X8 - 18pin Molex ClikMate - 5031491800 - TGZ RI DI
+file_path = "connectors.xlsx"
+sheet_name = "X8_DIO_18pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X8_DIO_18pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X10 - 8pin Molex ClikMate - 5031490800 - TGZ RI CAN
+file_path = "connectors.xlsx"
+sheet_name = "X10_CAN_8pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X10_CAN_8pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X11 - 10pin Molex ClikMate - 5031491000 - TGZ RI FB3
+file_path = "connectors.xlsx"
+sheet_name = "X11_FB3_10pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X11_FB3_10pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+# X12 - 8pin Molex ClikMate - 5031490800 - TGZ RI ENET, ECAT
+file_path = "connectors.xlsx"
+sheet_name = "X12_UDP_8pin_ClikMate"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X12_UDP_8pin_ClikMate.md"
+save_markdown_table(markdown_table, output_file)
+
+
+
+
+

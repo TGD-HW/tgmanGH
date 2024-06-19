@@ -6,65 +6,109 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_enetCon.webp" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:60%;">
-
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_enetCon.svg" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:80%;">
 
 <div class="grid cards" markdown>
 
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/common/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;">
-
+    <img src="../../../../../source/common/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;">
+	
 -    Molex Microlock 5055700501
 
-	---
+    --8<-- "CZ/md/X1_24V_5pin_Microlock.md"
 
-	--8<-- "CZ/md/X1_24V_5pin_Microlock.md"
+-   **X11 - Zpětná vazba 3 - RS422**
+
+    ---
+    <img src="../../../../../source/common/img/5031491000.svg" alt="Molex ClikMate 5031491000" style="width:70%;">
+	
+-    Molex ClikMate 5031491000
+
+    --8<-- "CZ/md/X11_FB3_10pin_ClikMate.md"
+	
+	!!! warning "Pozor"	
+		Při použití tohoto typu zpětné vazby se ujistěte, že používáte vhodný TGZ firmware, který tyto funkce podporuje.
+
+-   **X12 - Ethernet UDP - servisní**
+
+    ---
+    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+	
+-    Molex ClikMate 5031490800
+
+    --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
+
+-   **X13 - EtherCAT 2 - Fieldbus out**
+
+    ---
+    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+	
+-    Molex ClikMate 5031490800
+
+    --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
+
+-   **X13 - EtherCAT 1 - Fieldbus in**
+
+    ---
+    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+	
+-    Molex ClikMate 5031490800
+
+    --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
 </div>
+
 
 ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100_IO.webp" alt="IO/CAN/SD connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_IO.svg" alt="IO/CAN/SD connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
--   **X8 - Digitální I/O, analogové vstupy**
+-   **X7 - Digitální vstupy TTL + Analogové vstupy**
 
     ---
-	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/5031491200.svg" alt="DITTL + AIN + PT1000" style="width:70%;">
 
--    Weidmüller B2CF 3.50/22/180 SN OR BX
+-    Molex ClikMate 5031491200
 
 	---
 
-	--8<-- "CZ/md/X8_IO_22pin_B2CF.md"
-	
-	!!! warning "Pozor"	
-	
-		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
-	
--   **X9 - MicroSD karta**
+	--8<-- "CZ/md/X7_AIN_12pin_ClikMate.md"
+
+-   **X8 - Digitální I/O**
 
     ---
-<img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:60%;">
+	<img src="../../../../../source/common/img/5031491800.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
--    Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.
+-    Molex ClikMate 5031491800
+
+	---
+
+	--8<-- "CZ/md/X8_DIO_18pin_ClikMate.md"
+		
+-   **X9 - MicroSD slot**
+
+    ---
+	<img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:40%;">
+
+-   Použijte microSD kartu. Vhodná karta je součástí dodávky servozesilovače TGZ.
 
 -   **X10 - CAN**
 
     ---
 	
-	<img src="../../../../../source/common/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+	<img src="../../../../../source/common/img/5031490800.svg" alt="CAN connector" style="width:70%;">
 
--    Weidmüller B2CF 3.50/04/180 SN OR BX
+-    Molex ClikMate 5031490800
 
     ---
 
-	--8<-- "CZ/md/X10_CAN_4pin_B2CF.md"
+	--8<-- "CZ/md/X10_CAN_8pin_ClikMate.md"
 	
 -	**LED displej**
 
@@ -95,45 +139,45 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_FBconns.webp" alt="Motor/Feedback connectors" style="width:60%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_FBconns.svg" alt="Motor/Feedback connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
--   **X5 - Externí enkodér (FBE)**
+-   **X4 - Externí enkodér (FBE)**
 
     ---
 	
-	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:60%;">
+	<img src="../../../../../source/common/img/5031491200.svg" alt="FBE connector" style="width:80%;">
 
--    Weidmüller B2CF 3.50/12/180 SN OR BX
+-    Molex ClikMate 5031491200
 
 	---
 
-	--8<-- "CZ/md/X5_FBE_12pin_B2CF.md"
+	--8<-- "CZ/md/X4_FBE_12pin_ClikMate.md"
 
--   **X6 - Zpětná vazba - osa 1**
-
-    ---
-	
-	<img src="../../../../../source/common/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
-
--    Weidmüller B2CF 3.50/08/180 SN OR BX
-
-    ---
-
-	--8<-- "CZ/md/X6_FB1_8pin_B2CF.md"
-	
--   **X7 - Zpětná vazba - osa 2**
+-   **X5 - Zpětná vazba - osa 1**
 
     ---
 	
-	<img src="../../../../../source/common/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+	<img src="../../../../../source/common/img/5031491000.svg" alt="FB1 connector" style="width:80%;">
 
--    Weidmüller B2CF 3.50/08/180 SN OR BX
+-    Molex ClikMate 5031491000
 
     ---
 
-	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
+	--8<-- "CZ/md/X5_FB1_10pin_ClikMate.md"
+	
+-   **X6 - Zpětná vazba - osa 2**
+
+    ---
+	
+	<img src="../../../../../source/common/img/5031491000.svg" alt="FB2 connector" style="width:80%;">
+
+-    Molex ClikMate 5031491000
+
+    ---
+
+	--8<-- "CZ/md/X6_FB2_10pin_ClikMate.md"
 	
 -   **X3 - Napájení silové části**
 
