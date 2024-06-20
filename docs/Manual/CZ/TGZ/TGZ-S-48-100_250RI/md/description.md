@@ -1,7 +1,7 @@
 ##3D náhled
-<img src="../../img/connectors.png" alt="TGZ-S-48-50/100RI connectors" style="width:90%;">
+<img src="../../img/connectors.png" alt="TGZ-S-48-100/250RI connectors" style="width:90%;">
 ##Blokové schéma s připojením hlavních rozhraní
-<img src="../../img/blokDiagram.png" alt="TGZ-S-48-50/100RI connectors" style="width:70%;">
+<img src="../../img/blokDiagram.png" alt="TGZ-S-48-100/250RI connectors" style="width:70%;">
 
 !!! note "Poznámka"
 	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
@@ -61,9 +61,11 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_enetCon.svg" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:80%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_enetCon.svg" alt="TGZ-S-48-100/250 ENET/ECAT/LogicPWR side" style="width:80%;">
 
 <div class="grid cards" markdown>
+
+<!--
 
 -   **X1 - Napájení řídicí části**
 
@@ -73,6 +75,8 @@ ___
 -    Molex Microlock 5055700501 - doporučené krimpovací kontakty [Molex 505572](https://www.molex.com/en-us/part-list/505572) [^3]
 
     --8<-- "CZ/md/X1_24V_5pin_Microlock.md"
+
+-->
 
 -   **X11 - Zpětná vazba 3 - RS422**
 
@@ -104,7 +108,7 @@ ___
 
     --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
--   **X13 - EtherCAT 1 - Fieldbus in**
+-   **X14 - EtherCAT 1 - Fieldbus in**
 
     ---
     <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
@@ -120,7 +124,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_IO.svg" alt="IO/CAN/SD connectors" style="width:80%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_IO.svg" alt="IO/CAN/SD connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
@@ -196,10 +200,10 @@ ___
 
    
 ___
-### Strana FB/motor
+### Strana feedback
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-50_100RI_FBconns.svg" alt="Motor/Feedback connectors" style="width:80%;">
+<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_FBconns.svg" alt="Feedback connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
@@ -249,7 +253,16 @@ ___
 		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
 		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
 
--   **X3 - Napájení silové části**
+</div>
+___
+### Pohled shora
+___
+
+<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_brd.webp" alt="Top view" style="width:80%;">
+
+<div class="grid cards" markdown>
+
+-   **X2 - Napájení silové části**
 
     ---
 	

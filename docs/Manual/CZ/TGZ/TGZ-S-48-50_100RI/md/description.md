@@ -104,7 +104,7 @@ ___
 
     --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
--   **X13 - EtherCAT 1 - Fieldbus in**
+-   **X14 - EtherCAT 1 - Fieldbus in**
 
     ---
     <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">

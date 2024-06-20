@@ -282,7 +282,16 @@ nav:
                 - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/schematic.md'               
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/safe.md'                    
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/safe.md'
+            - 'TGZ-S-48-100/250 RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/safe.md'                     
             - 'Řízení a regulace':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
