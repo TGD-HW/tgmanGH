@@ -1,4 +1,4 @@
-#TG Hall převodník 5/24 V
+#TG Hall převodník 5/24 V {#TGhall1}
 
 Přizpůsobovací obvod pro Hallovy snímače. Převádí vstupní signál o hodnotě 5&nbsp;V na hodnotu 24&nbsp;V.
 Maximální proud při napětí 5&nbsp;V je 0,5&nbsp;A. Pro správnou funkci převodníku stačí přivést pouze napěťovou úroveň 24&nbsp;V.

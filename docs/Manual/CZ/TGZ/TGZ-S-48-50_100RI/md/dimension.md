@@ -14,40 +14,30 @@
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-wpd1" colspan="7">Rozměry verze bez přídavného chladiče</th>
+    <th class="tg-wpd1" colspan="7">Verze bez krytu</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-3i24" colspan="3">Rozměry bez konektorových protikusů</td>
-    <td class="tg-3i24" colspan="3">Rozměry včetně konektorových protikusů</td>
+    <td class="tg-3i24" colspan="3">Rozměry</td>
     <td class="tg-3i24" rowspan="2">Hmotnost</td>
   </tr>
   <tr>
     <td class="tg-3i24">Výška</td>
     <td class="tg-3i24">Šířka</td>
     <td class="tg-3i24">Hloubka</td>
-    <td class="tg-3i24">Výška</td>
-    <td class="tg-3i24">Šířka</td>
-    <td class="tg-3i24">Hloubka</td>
   </tr>
   <tr>
     <td class="tg-3i24">mm</td>
     <td class="tg-3i24">mm</td>
     <td class="tg-3i24">mm</td>
     <td class="tg-3i24">mm</td>
-    <td class="tg-3i24">mm</td>
-    <td class="tg-3i24">mm</td>
-    <td class="tg-3i24">kg</td>
   </tr>
   <tr>
     <td class="tg-x53t">160</td>
     <td class="tg-x53t">56</td>
     <td class="tg-x53t">99</td>
-    <td class="tg-x53t">178</td>
-    <td class="tg-x53t">56</td>
-    <td class="tg-x53t">103</td>
-    <td class="tg-x53t">0,9</td>
+    <td class="tg-x53t">0,7</td>
   </tr>
 </tbody>
 </table>
