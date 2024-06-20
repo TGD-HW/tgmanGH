@@ -3589,6 +3589,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#blokove-schema-s-pripojenim-hlavnich-rozhrani" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blokové schéma s připojením hlavních rozhraní
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popis-komunikace-vstupuvystupu-a-ovladani" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popis komunikace, vstupů/výstupů a ovládání:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Popis komunikace, vstupů/výstupů a ovládání:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#komunikacni-rozhrani" class="md-nav__link">
+    <span class="md-ellipsis">
+      Komunikační rozhraní
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vstupy-vystupy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vstupy / výstupy:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rizeni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Řízení
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#konektory" class="md-nav__link">
     <span class="md-ellipsis">
       Konektory
@@ -3620,6 +3671,15 @@
   <a href="#strana-fbmotor" class="md-nav__link">
     <span class="md-ellipsis">
       Strana FB/motor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postup-pro-zmenu-typu-zpetne-vazby-dsl-fb1-a-fb2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
     </span>
   </a>
   
@@ -6150,6 +6210,120 @@
 
 <h2 id="3d-nahled">3D náhled<a class="headerlink" href="#3d-nahled" title="Permanent link">&para;</a></h2>
 <p><a class="glightbox" href="../../img/connectors.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../img/connectors.png" alt="TGZ-S-48-50/100RI connectors" style="width:90%;"></a></p>
+<h2 id="blokove-schema-s-pripojenim-hlavnich-rozhrani">Blokové schéma s připojením hlavních rozhraní<a class="headerlink" href="#blokove-schema-s-pripojenim-hlavnich-rozhrani" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../img/blokDiagram.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../img/blokDiagram.png" alt="TGZ-S-48-50/100RI connectors" style="width:70%;"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Externí teplotní čidlo PT1000 se používá k měření teploty motoru.</p>
+</div>
+<h2 id="popis-komunikace-vstupuvystupu-a-ovladani">Popis komunikace, vstupů/výstupů a ovládání:<a class="headerlink" href="#popis-komunikace-vstupuvystupu-a-ovladani" title="Permanent link">&para;</a></h2>
+<h3 id="komunikacni-rozhrani">Komunikační rozhraní<a class="headerlink" href="#komunikacni-rozhrani" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.</li>
+<li>CAN bus protokol lze upravit podle požadavků zákazníka.</li>
+<li>Ethernet 100/1000 Mb/s s volitelným protokolem, naprogramovaný v hradlovém poli a určený pro připojení rychlých průmyslových sběrnic pro řízení v reálném čase.
+  V současné době je toto rozhraní vybaveno protokolem EtherCAT (pouze pro standardní firmware); podle požadavků zákazníka lze upravit na jiný typ protokolu.</li>
+<li>RS422 / RS485, přenos dat přes nepoužívané rozhraní zpětné vazby servomotoru.
+  Může být použit pro komunikaci se zařízeními založenými na standardu RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
+  Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.</li>
+</ul>
+<h3 id="vstupy-vystupy">Vstupy / výstupy:<a class="headerlink" href="#vstupy-vystupy" title="Permanent link">&para;</a></h3>
+<p>Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy TTL, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
+Tyto vstupy a výstupy je možné ovládat pomocí uživatelského programu (jazyk C).
+Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.</p>
+<table>
+<thead>
+<tr>
+<th>I/O</th>
+<th>Typ</th>
+<th>Počet</th>
+<th>Hodnota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vstup</td>
+<td>analogový</td>
+<td>1</td>
+<td>0-10 V</td>
+</tr>
+<tr>
+<td>vstup</td>
+<td>termistor</td>
+<td>2</td>
+<td>standard PT1000</td>
+</tr>
+<tr>
+<td>vstup</td>
+<td>digitální</td>
+<td>3</td>
+<td>0-30 VDC (0-0,8 V low/2,4-30 V high), TTL</td>
+</tr>
+<tr>
+<td>vstup</td>
+<td>izolovaný digitální</td>
+<td>8</td>
+<td>0-24 VDC (0-10 V low/13-24 V high), 20 mA</td>
+</tr>
+<tr>
+<td>výstup</td>
+<td>izolovaný digitální</td>
+<td>6</td>
+<td>5-24 VDC, 300 mA / max. výstup</td>
+</tr>
+</tbody>
+</table>
+<p>Servozesilovač má čtyři zpětnovazební rozhraní, které mají široké využití.
+Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujících na principu standardu RS422 nebo RS485.</p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Standard</th>
+<th>Rozhraní</th>
+<th>Příklady připojení možných zařízení</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FB1</td>
+<td>RS422/RS485</td>
+<td>Hiperface DSL, EnDat 2.2, SSI, BISS</td>
+<td>Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, gyroskop</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>RS422/RS485</td>
+<td>Hiperface DSL, EnDat 2.2, SSI, BISS</td>
+<td>Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, gyroskop</td>
+</tr>
+<tr>
+<td>FE<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>RS422/RS485</td>
+<td>Hiperface DSL, EnDat 2.2, SSI, BISS</td>
+<td>Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, gyroskop</td>
+</tr>
+<tr>
+<td>FB3<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>2 × full-duplex RS422</td>
+<td>-</td>
+<td>Řídicí systém</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Hiperface DSL - digitální komunikace, senzory jsou vyráběny s rozlišením 15 až 24 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
+  Tento typ zpětné vazby se používá pro motory s jediným konektorem nebo kabelem.</li>
+<li>EnDat 2.2 - digitální komunikace, senzory jsou vyráběny s rozlišením 18 až 25 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).</li>
+<li>SSI - enkodéry se synchronním systémovým rozhraním.</li>
+<li>BISS - senzory s protokolem BISS-C.</li>
+</ul>
+<h3 id="rizeni">Řízení<a class="headerlink" href="#rizeni" title="Permanent link">&para;</a></h3>
+<p>Servozesilovače TGZ je možno řídit:</p>
+<ul>
+<li>digitální ovládání přes EtherCAT, CAN-bus (točivý moment, otáčky, polohové profily atd.) A přes Ethernet UDP protokol;</li>
+<li>uživatelský program (jazyk C) - digitální vstupy, analogové napětí atd.</li>
+</ul>
 <h2 id="konektory">Konektory<a class="headerlink" href="#konektory" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="strana-komunikaceethernetethercat">Strana komunikace/ethernet/ethercat<a class="headerlink" href="#strana-komunikaceethernetethercat" title="Permanent link">&para;</a></h3>
@@ -6163,7 +6337,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5055700501.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex Microlock 5055700501</p>
+<p>Molex Microlock 5055700501 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/505572">Molex 505572</a> <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -6213,7 +6387,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491000.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491000.svg" alt="Molex ClikMate 5031491000" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491000</p>
+<p>Molex ClikMate 5031491000 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref10:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -6286,7 +6460,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031490800.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031490800</p>
+<p>Molex ClikMate 5031490800 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref9:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -6345,7 +6519,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031490800.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031490800</p>
+<p>Molex ClikMate 5031490800 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref8:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -6404,7 +6578,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031490800.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031490800</p>
+<p>Molex ClikMate 5031490800 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref7:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -6471,7 +6645,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491200.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491200.svg" alt="DITTL + AIN + PT1000" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491200</p>
+<p>Molex ClikMate 5031491200 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref6:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -6544,6 +6718,12 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Přímé vstupy PT1000 na pinech 3-6 konektoru X7 jsou dostupné pouze na řídicí desce z dodávek po 06-2024.
+Starší verze zařízení mají standardní AIN1, AIN2 a AIN3 na pinech 1-6 konektoru X7.
+Pro další podrobnosti o vlastnostech předchozího zařízení prosím nahlédněte do starší (PDF) verze tohoto manuálu.</p>
+</div>
 </li>
 <li>
 <p><strong>X8 - Digitální I/O</strong></p>
@@ -6551,7 +6731,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491800.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491800.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491800</p>
+<p>Molex ClikMate 5031491800 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref5:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -6669,7 +6849,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031490800.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031490800.svg" alt="CAN connector" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031490800</p>
+<p>Molex ClikMate 5031490800 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref4:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -6773,7 +6953,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491200.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491200.svg" alt="FBE connector" style="width:80%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491200</p>
+<p>Molex ClikMate 5031491200 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref3:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -6866,7 +7046,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491000.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491000.svg" alt="FB1 connector" style="width:80%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491000</p>
+<p>Molex ClikMate 5031491000 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -6940,6 +7120,12 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Upozornění</p>
+<p>Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB1 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
+Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
+Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.</p>
+</div>
 </li>
 <li>
 <p><strong>X6 - Zpětná vazba - osa 2</strong></p>
@@ -6947,7 +7133,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5031491000.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5031491000.svg" alt="FB2 connector" style="width:80%;"></a></p>
 </li>
 <li>
-<p>Molex ClikMate 5031491000</p>
+<p>Molex ClikMate 5031491000 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/502579">Molex 502579</a> <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -7021,6 +7207,12 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Upozornění</p>
+<p>Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB2 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
+Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
+Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.</p>
+</div>
 </li>
 <li>
 <p><strong>X3 - Napájení silové části</strong></p>
@@ -7028,7 +7220,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/S-48pressfit5.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/S-48pressfit5.svg" alt="DC bus connection" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Pressfit M5</p>
+<p>Pressfit M5 - doporučené kabelové oko <a href="https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/">JST GS5-10</a></p>
 <hr />
 <table>
 <thead>
@@ -7061,7 +7253,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/S-48pressfit5.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/S-48pressfit5.svg" alt="Motor connection" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Pressfit M5</p>
+<p>Pressfit M5 - doporučené kabelové oko <a href="https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/">JST GS5-10</a></p>
 <hr />
 <table>
 <thead>
@@ -7100,7 +7292,7 @@
 <p><a class="glightbox" href="../../../../../source/common/img/5055700401.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../../../../source/common/img/5055700401.svg" alt="Brake connection" style="width:70%;"></a></p>
 </li>
 <li>
-<p>Molex Micro-lock 505570-0401</p>
+<p>Molex Micro-lock 5055700401 - doporučené krimpovací kontakty <a href="https://www.molex.com/en-us/part-list/505572">Molex 505572</a>  <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <hr />
 <table>
 <thead>
@@ -7140,6 +7332,31 @@
 </table>
 </li>
 </ul>
+</div>
+<h3 id="postup-pro-zmenu-typu-zpetne-vazby-dsl-fb1-a-fb2">Postup pro změnu typu zpětné vazby DSL FB1 a FB2:<a class="headerlink" href="#postup-pro-zmenu-typu-zpetne-vazby-dsl-fb1-a-fb2" title="Permanent link">&para;</a></h3>
+<p>Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
+Ve výchozím nastavení nejsou tyto rezistory od dodávek po 06/2024 osazeny, pokud není uvedeno jinak.
+Uživatel je může osadit, aby se předešlo nutnosti používat externí propojku DSL, avšak mějte na paměti, že jakmile jsou rezistory na desce osazeny, může být použita pouze zpětná vazba typu Hiperface DSL.
+Pokud je nutné použít jiný typ zpětné vazby než Hiperface DSL, je nutné je z PCB odpájet.
+Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální enkodér.
+Funkce zpětné vazby také závisí na nahraném firmwaru.</p>
+<p><a class="glightbox" href="../../img/DSL0R.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img src="../../img/DSL0R.png" alt="TGZ-S-48-50/100RI DSL resistors" style="width:70%;"></a>   </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Tento typ pracuje pouze s upraveným firmwarem. Jeho použití se doporučuje vždy konzultovat s výrobcem.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. <a href="../../../../ETC/TGHall/md/description/#TGhal11">Převodník Hall-TGZ</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle <a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf">Aplikačního návodu Molex Micro-Lock</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle <a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf">Aplikačního návodu Molex Clik-Mate</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 
