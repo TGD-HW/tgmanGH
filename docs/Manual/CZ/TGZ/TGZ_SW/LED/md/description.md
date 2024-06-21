@@ -2,8 +2,8 @@
 <img src="../../img/TGZ_LED1.png" alt="TGZ LED display" style="width:25%;">
 
 Integrované LED indikátory a dvoumístný sedmisegmentový LED displej zobrazují stav servozesilovače po zapnutí napájení 24V.
-LED indikátory nacházející se na servozesilovači jsou vždy dva (červená LED a zelená LED) pro každou řízenou osu.
-Detekují stav jednotlivých řízených os a pokud nastane porucha nebo chyba, zobrazí se příslušné kódy poruchy na stavovém displeji.
+LED indikátory jsou vždy dva (červená LED a zelená LED) pro každou řízenou osu plus jedna separátní zelená LED pro signalizaci stavu sběrnice EtherCAT - signál EtherCAT RUN.
+Indukátory detekují stav jednotlivých řízených os a pokud nastane porucha nebo chyba, zobrazí se příslušné kódy poruchy na stavovém displeji.
 Možné stavy LED indikátorů a jejich význam, stejně jako signalizace chyb a jejich popis, jsou uvedeny v tabulkách níže.
 
 **Po restartování servozesilovače TGZ**
@@ -23,7 +23,17 @@ Možné stavy LED indikátorů a jejich význam, stejně jako signalizace chyb a
 
 Po kódu `F.1` popř. `F.2` se zobrazí sekvence čísel. Tato čísla jsou bitová čísla v chybovém registru, viz. [Popis chybových hlášení TGZ](description.md#errors)
 
-**LED indikátory**
+**LED indikátory**   
+
+<img src="../../../../../../source/common/img/statusLedsECAT.svg" alt="TGZ status LEDs" style="width:70%;">
+
+
+
+
+
+tady upravit - doplnit tabulku o ECAT LED + odkaz na ECAT
+
+
 
 | Servozesilovač TGZ | Červená LED | Zelená LED |
 |---|---|---|
