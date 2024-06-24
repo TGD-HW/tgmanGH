@@ -170,6 +170,9 @@ ___
 
 	--8<-- "CZ/md/X3_M1_4pin_wago_2626.md"
 	
+	!!! note "Doporučený průřez"
+		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
+	
 -   **X4 - Motorový konektor - osa 2**
 
     ---
@@ -181,6 +184,9 @@ ___
     ---
 
 	--8<-- "CZ/md/X4_M2_4pin_wago_2626.md"
+	
+	!!! note "Doporučený průřez"
+		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
 		
 -   **XBR - Připojení brzdy - osa 1 a 2**
 

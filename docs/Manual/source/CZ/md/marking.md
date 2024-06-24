@@ -5,8 +5,7 @@ Díky využití těchto nových technologií se podařilo optimalizovat rozměry
 
 Servozesilovače TGZ jsou v současné době nabízeny ve třech provedeních: TGZ-48 (nízkonapěťová verze do 48 VDC, určená pro mobilní zařízení nebo zařízení vyžadující bezpečné napětí),  TGZ-320 pro připojení napětí 320 VDC z napájecího modulu TGS-320-10/15 (1× 230 V / 320 VDC) a TGZ-560 pro připojení na třífázovou síť.
 
-![Device marking](../../../../source/CZ/img/marking.svg)
-
+<img src="../../../../../source/CZ/img/marking.svg" alt="Device marking" style="width:80%;">
 
 ##Bezpečnostní pokyny
 ###Bezpečnost

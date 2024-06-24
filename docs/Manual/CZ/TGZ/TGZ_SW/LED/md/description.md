@@ -2,8 +2,8 @@
 <img src="../../img/TGZ_LED1.png" alt="TGZ LED display" style="width:25%;">
 
 Integrované LED indikátory a dvoumístný sedmisegmentový LED displej zobrazují stav servozesilovače po zapnutí napájení 24V.
-LED indikátory jsou vždy dva (červená LED a zelená LED) pro každou řízenou osu plus jedna separátní zelená LED pro signalizaci stavu sběrnice EtherCAT - signál EtherCAT RUN.
-Indukátory detekují stav jednotlivých řízených os a pokud nastane porucha nebo chyba, zobrazí se příslušné kódy poruchy na stavovém displeji.
+LED indikátory jsou vždy dva (červená LED a zelená LED) pro každou řízenou osu plus jedna společná zelená LED pro signalizaci stavu sběrnice EtherCAT - signál EtherCAT RUN.
+Indikátory detekují stav jednotlivých řízených os a pokud nastane porucha nebo chyba, zobrazí se příslušné kódy poruchy na stavovém displeji.
 Možné stavy LED indikátorů a jejich význam, stejně jako signalizace chyb a jejich popis, jsou uvedeny v tabulkách níže.
 
 **Po restartování servozesilovače TGZ**
@@ -27,13 +27,7 @@ Po kódu `F.1` popř. `F.2` se zobrazí sekvence čísel. Tato čísla jsou bito
 
 <img src="../../../../../../source/common/img/statusLedsECAT.svg" alt="TGZ status LEDs" style="width:70%;">
 
-
-
-
-
-tady upravit - doplnit tabulku o ECAT LED + odkaz na ECAT
-
-
+Možné stavy servozesilovače signalizují LED diody **Ready** a **Error**:   
 
 | Servozesilovač TGZ | Červená LED | Zelená LED |
 |---|---|---|
@@ -42,6 +36,16 @@ tady upravit - doplnit tabulku o ECAT LED + odkaz na ECAT
 | Servozesilovač připraven, není sepnutý HW ENABLE | Nesvítí | Pomalu bliká |
 | Servozesilovač připraven, je sepnutý HW ENABLE | Nesvítí | Bliká |
 | Servozesilovač připraven, ve stavu ENABLED | Nesvítí | Svítí |
+
+V případě, že je v servozesilovači nahrán vhodný firmware s podporou sběrnice EtherCAT je pomocí LED diody **ECAT RUN** signalizován stav sběrnice.
+Detailní popis jednotlivých stavů EtherCAT naleznete v dokumentaci [ EtherCAT Indicator and Labeling - ETG.1300 S](https://www.ethercat.org/memberarea/download/ETG1300_V1i1i1_S_R_IndicatorLabelingSpecification.pdf).
+
+| Stavy indikátoru | Stav zařízení       | Popis                                |
+|------------------|------------------|--------------------------------------|
+| Vypnuto          | INITIALISATION   | Zařízení je ve stavu INIT            |
+| Bliká            | PRE-OPERATIONAL  | Zařízení je ve stavu PRE-OPERATIONAL |
+| Jeden záblesk    | SAFE-OPERATIONAL | Zařízení je ve stavu SAFE-OPERATIONAL|
+| Zapnuto          | OPERATIONAL      | Zařízení je ve stavu OPERATIONAL     |
 
 ##Popis chybových hlášení {#errors}
 

@@ -391,6 +391,6 @@ nav:
                 - Základní informace: 'Manual/CZ/SW/CAN/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'                   
         - 'Ostatní': 
-            - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
-            - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'
+            - TGHall: 'Manual/CZ/Etc/TGHall/md/description.md'
+            - Schémata kabelů: 'Manual/CZ/Etc/TGcable/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'
