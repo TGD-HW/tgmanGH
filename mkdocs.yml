@@ -291,7 +291,16 @@ nav:
                 - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/schematic.md'               
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/safe.md'                     
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/safe.md'    
+            - 'TGZ-S-48-100/300 RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/schematic.md'               
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/safe.md'                 
             - 'Řízení a regulace':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
@@ -391,6 +400,6 @@ nav:
                 - Základní informace: 'Manual/CZ/SW/CAN/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'                   
         - 'Ostatní': 
-            - TGHall: 'Manual/CZ/Etc/TGHall/md/description.md'
-            - Schémata kabelů: 'Manual/CZ/Etc/TGcable/md/description.md'
+            - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
+            - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'
         - 'Certifikáty': 'Manual/source/CZ/md/cert.md'

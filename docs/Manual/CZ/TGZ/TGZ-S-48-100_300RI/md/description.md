@@ -40,7 +40,7 @@ Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujíc
 | FB3[^1]  | 2 × full-duplex RS422 | -                                | Řídicí systém                                                                                                                     |
 
 [^1]: Tento typ pracuje pouze s upraveným firmwarem. Jeho použití se doporučuje vždy konzultovat s výrobcem.
-[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../Etc/TGHall/md/description.md#TGhal11).
+[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../ETC/TGHall/md/description.md#TGhall_1).
 
 - Hiperface DSL - digitální komunikace, senzory jsou vyráběny s rozlišením 15 až 24 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
   Tento typ zpětné vazby se používá pro motory s jediným konektorem nebo kabelem.
@@ -65,25 +65,12 @@ ___
 
 <div class="grid cards" markdown>
 
-<!--
-
--   **X1 - Napájení řídicí části**
-
-    ---
-    <img src="../../../../../source/common/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;">
-	
--    Molex Microlock 5055700501 - doporučené krimpovací kontakty [Molex 505572](https://www.molex.com/en-us/part-list/505572) [^3]
-
-    --8<-- "CZ/md/X1_24V_5pin_Microlock.md"
-
--->
-
 -   **X11 - Zpětná vazba 3 - RS422**
 
     ---
     <img src="../../../../../source/common/img/5031491000.svg" alt="Molex ClikMate 5031491000" style="width:70%;">
 	
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "CZ/md/X11_FB3_10pin_ClikMate.md"
 	
@@ -95,7 +82,7 @@ ___
     ---
     <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
@@ -104,7 +91,7 @@ ___
     ---
     <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
@@ -113,7 +100,7 @@ ___
     ---
     <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "CZ/md/X12_UDP_8pin_ClikMate.md"
 
@@ -133,7 +120,7 @@ ___
     ---
 	<img src="../../../../../source/common/img/5031491200.svg" alt="DITTL + AIN + PT1000" style="width:70%;">
 
--    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
@@ -149,7 +136,7 @@ ___
     ---
 	<img src="../../../../../source/common/img/5031491800.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
--    Molex ClikMate 5031491800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
@@ -168,7 +155,7 @@ ___
 	
 	<img src="../../../../../source/common/img/5031490800.svg" alt="CAN connector" style="width:70%;">
 
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
@@ -213,7 +200,7 @@ ___
 	
 	<img src="../../../../../source/common/img/5031491200.svg" alt="FBE connector" style="width:80%;">
 
--    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
@@ -225,7 +212,7 @@ ___
 	
 	<img src="../../../../../source/common/img/5031491000.svg" alt="FB1 connector" style="width:80%;">
 
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
@@ -242,7 +229,7 @@ ___
 	
 	<img src="../../../../../source/common/img/5031491000.svg" alt="FB2 connector" style="width:80%;">
 
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
+-    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
@@ -307,7 +294,7 @@ ___
     ---
 	<img src="../../../../../source/common/img/436500518.svg" alt="Molex Micro-Fit 3.0 436450500" style="width:90%;">
 
--    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^5]
+-    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
@@ -330,7 +317,7 @@ ___
 	
 	<img src="../../../../../source/common/img/430450412.svg" alt="Brake connector" style="width:60%;">
 
--    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^5]
+-    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
@@ -346,7 +333,7 @@ ___
 	
 	<img src="../../../../../source/common/img/430450412.svg" alt="Brake connector aux" style="width:60%;">
 
--    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^5]
+-    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
@@ -366,7 +353,7 @@ ___
 	
 	<img src="../../../../../source/common/img/436500215.svg" alt="External thermistor" style="width:60%;">
 
--    Molex Micro-Fit 3.0 - 436500215. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^5]
+-    Molex Micro-Fit 3.0 - 436500215. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
@@ -382,9 +369,8 @@ ___
 
 </div>
 
-[^3]: Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle [Aplikačního návodu Molex Micro-Lock](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf).
-[^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
-[^5]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
+[^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).

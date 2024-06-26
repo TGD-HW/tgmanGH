@@ -53,7 +53,7 @@ Přepínání mezi jednotlivými stránkami je povoleno v levém horním rohu gr
 
 !!! Note "Poznámka"
 	V prvním kroku je důležité nastavit / načíst správné parametry pohonu.
-	Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním rohu (*LOAD PARAMETERS FROM FILE*), viz. [Návod k TGZ GUI](../../../TGZ/TGZ_SW/GUI/md/intro.md##GUIstart)
+	Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním rohu (*LOAD PARAMETERS FROM FILE*), viz. [Návod k TGZ GUI](../../../TGZ/TGZ_SW/GUI/md/intro.md#GUIstart)
 	
 ###Řízení polohy motoru (TGZ GUI)
 | Krok | Základní skupina | Parametr   | Hodnota   | Popis                                                                                                              |

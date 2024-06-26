@@ -68,7 +68,7 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 <img src="../../../../../source/common/img/profinet19.webp" alt="Profinet img" style="width:90%;">
 
 - Přejmenujte jednotky v podokně **Network overview** podle projektu hardwaru.
-  Názvy musí být stejné jako při [přípravě zařízení](TIA.md#prepDevice).
+  Názvy musí být stejné jako při [přípravě zařízení](network.md#ProfinetIPsettings).
 
 <img src="../../../../../source/common/img/profinet20.webp" alt="Profinet img" style="width:30%;">
 

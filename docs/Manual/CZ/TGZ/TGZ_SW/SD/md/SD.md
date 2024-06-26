@@ -1,5 +1,6 @@
 <img src="../../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:30%;">
 
+##Uložené parametry {#SDparams}
 SD karta s uloženými parametry je kompatibilní pouze se stejným modelem TGZ a stejnou verzí firmware (v TGZ GUI se zobrazuje).
 Pokud se provede upgrade firmware TGZ nebo se vezme karta z jiného TGZ, které má jinou verzi FW (i přesně stejný model) tak po startu TGZ hlásí chybu parametrů.
 Chyba parametrů se odstraní načtením továrních nastavení v TGZ GUI a znovu nastavením potřebných parametrů.

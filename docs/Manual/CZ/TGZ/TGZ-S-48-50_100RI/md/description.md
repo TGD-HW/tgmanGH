@@ -40,7 +40,7 @@ Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujíc
 | FB3[^1]  | 2 × full-duplex RS422 | -                                | Řídicí systém                                                                                                                     |
 
 [^1]: Tento typ pracuje pouze s upraveným firmwarem. Jeho použití se doporučuje vždy konzultovat s výrobcem.
-[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../Etc/TGHall/md/description.md#TGhal11).
+[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../ETC/TGHall/md/description.md#TGhall_1).
 
 - Hiperface DSL - digitální komunikace, senzory jsou vyráběny s rozlišením 15 až 24 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
   Tento typ zpětné vazby se používá pro motory s jediným konektorem nebo kabelem.

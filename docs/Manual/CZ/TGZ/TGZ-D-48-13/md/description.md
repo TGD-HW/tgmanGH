@@ -55,7 +55,16 @@ ___
 -   **X8 - Digitální I/O, analogové vstupy**
 
     ---
+	Pohled zezadu (strana kabelu)   
+	
 	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	3D pohled zezadu   
+	
+	<img src="../../../../../source/common/img/1277370000_1.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	Pohled zepředu (strana TGZ)   
+	
+	<img src="../../../../../source/common/img/1277370000_2.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	
 
 -    Weidmüller B2CF 3.50/22/180 SN OR BX
 
@@ -70,9 +79,9 @@ ___
 -   **X9 - MicroSD karta**
 
     ---
-<img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:60%;">
+	<img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:60%;">
 
--    Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.
+-    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 

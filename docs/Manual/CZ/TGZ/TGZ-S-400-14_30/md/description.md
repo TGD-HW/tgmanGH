@@ -60,7 +60,7 @@ ___
     ---
 <img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:60%;">
 
--    Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.
+-    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
@@ -151,9 +151,9 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1227490000.svg" alt="Motor connector" style="width:70%;">
+	<img src="../../../../../source/common/img/1095720000.svg" alt="Motor connector" style="width:70%;">
 
--    Weidmüller BLF 7.62HP/06/180F
+-    Weidmüller BLZ 7.62HP/06/180F
 
     ---
 

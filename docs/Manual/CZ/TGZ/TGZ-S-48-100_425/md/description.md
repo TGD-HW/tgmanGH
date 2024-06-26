@@ -60,7 +60,7 @@ ___
     ---
 <img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:60%;">
 
--    Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.
+-    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
