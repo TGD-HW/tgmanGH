@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3d-model-viewer" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -395,6 +400,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Úvod
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -404,6 +420,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3d-model-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Model Viewer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6485,6 +6527,72 @@
 <p><strong>Vítejte v uživatelském manuálu k produktům TGDrives</strong>   </p>
 <p>Pokračujte volbou kategorie produktů na horní liště, nebo vyzkoušejte vyhledávání ve vyhledávacím poli.</p>
 <!--## Seznam dokumentů-->
+<h2 id="3d-model-viewer">3D Model Viewer<a class="headerlink" href="#3d-model-viewer" title="Permanent link">&para;</a></h2>
+<p>This is an example of a 3D model viewer embedded in MkDocs.</p>
+<!-- Include Three.js, OrbitControls, and occt-import-js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/js/controls/OrbitControls.min.js"></script>
+<script src="https://unpkg.com/occt-import-js@latest/umd/occt-import.js"></script>
+
+<!-- Div for the 3D viewer -->
+<div id="viewer" style="width: 100%; height: 500px;"></div>
+
+<script>
+// Set up the scene, camera, and renderer
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, 500); // Set height to match the viewer div
+document.getElementById('viewer').appendChild(renderer.domElement);
+
+// Add OrbitControls for camera rotation
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.25;
+controls.enableZoom = true;
+
+// Add a basic light
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 10, 7.5).normalize();
+scene.add(directionalLight);
+
+// Load your custom STEP 3D model using occt-import-js
+const occtLoader = new occtImport.OcctLoader();
+occtLoader.loadStep('model.stp', (geometry) => {
+    if (geometry) {
+        console.log('Model loaded successfully:', geometry);
+        const material = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+    } else {
+        console.error('Failed to load model geometry');
+    }
+}, undefined, function(error) {
+    console.error('Error loading model:', error);
+});
+
+// Set the initial camera position
+camera.position.set(0, 1.6, 2);
+
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+}
+
+animate();
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, 500);
+});
+</script>
 
 
 
