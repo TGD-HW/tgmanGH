@@ -80,7 +80,15 @@ ___
 -   **X8 - Digitální I/O, analogové vstupy**
 
     ---
+	Pohled zezadu (strana kabelu)   
+	
 	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	3D pohled zezadu   
+	
+	<img src="../../../../../source/common/img/1277370000_1.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	Pohled zepředu (strana TGZ)   
+	
+	<img src="../../../../../source/common/img/1277370000_2.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
 -    Weidmüller BCZ 3.81/22/180 SN OR BX
 
@@ -102,8 +110,14 @@ ___
 -   **X10 - CAN**
 
     ---
-	
+	Pohled zezadu (strana kabelu)   
 	<img src="../../../../../source/common/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+	
+	3D pohled zezadu   
+	<img src="../../../../../source/common/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
+	
+	Pohled zepředu (strana TGZ)   
+	<img src="../../../../../source/common/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
 
 -    Weidmüller BCZ 3.81/04/180 SN OR BX
 
@@ -146,8 +160,14 @@ ___
 -   **X5 - Externí enkodér (FBE)**
 
     ---
+	Pohled zezadu (strana kabelu) 	
+	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:60%;">
 	
-	<img src="../../../../../source/common/img/1277320000.svg" alt="FBE connector" style="width:70%;">
+	3D pohled zezadu   
+	<img src="../../../../../source/common/img/1277320000_1.svg" alt="FBE connector" style="width:60%;">
+	
+	Pohled zepředu (strana TGZ)   
+	<img src="../../../../../source/common/img/1277320000_2.svg" alt="FBE connector" style="width:60%;">	
 
 -    Weidmüller BCZ 3.81/12/180 SN OR BX
 
@@ -159,7 +179,14 @@ ___
 
     ---
 	
+	Pohled zezadu (strana kabelu) 	
 	<img src="../../../../../source/common/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
+	
+	3D pohled zezadu   
+	<img src="../../../../../source/common/img/1277290000_1.svg" alt="FB1 connector" style="width:50%;">
+	
+	Pohled zepředu (strana TGZ)   
+	<img src="../../../../../source/common/img/1277290000_2.svg" alt="FB1 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 
@@ -175,7 +202,14 @@ ___
 
     ---
 	
+	Pohled zezadu (strana kabelu) 	
 	<img src="../../../../../source/common/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+	
+	3D pohled zezadu   
+	<img src="../../../../../source/common/img/1277290000_1.svg" alt="FB2 connector" style="width:50%;">
+	
+	Pohled zepředu (strana TGZ)   
+	<img src="../../../../../source/common/img/1277290000_2.svg" alt="FB2 connector" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
 

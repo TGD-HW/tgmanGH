@@ -10,6 +10,7 @@
 | Maximální brzdný výkon (externí rezistor)  |   |
 | Ztráty při maximálním výstupním výkonu  | 100 W |
 | Jištění  | 32 A |
+| Stupeň krytí | IP20 |
 | **VÝSTUPY** |   |
 | Bezpotenciálový kontakt RDY | Max. 28 VDC / 700 mA |
 | Bezpotenciálový kontakt ERR | Max. 28 VDC / 700 mA |

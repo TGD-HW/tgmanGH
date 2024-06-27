@@ -1,12 +1,13 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
-| Ovládací napětí | 24 VDC ± 10 %, 500 mA* |
+| Ovládací napětí | 24 VDC ± 10 %, 2 A* |
 | Výkonové napájecí napětí | 24-560 VDC |
 | Instalovaný příkon pro provoz S1 | 33 kW |
 | Trvalý proud na jednu osu | 30 A |
 | Trvalý celkový proud při provozu dvou os | 60 A |
 | Maximální výstupní proud (max. 5 s) | 2 x 50 A |
 | Ztráty při jmenovité zátěži | 900 W |
+| Stupeň krytí | IP20 |
 | **KOMUNIKACE** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
 | ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |

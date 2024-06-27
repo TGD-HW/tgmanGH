@@ -1,7 +1,8 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
-| Vstupní napětí (VAC - 50/60 Hz)  | 3 x 400 VAC |
-| Maximální vstupní proud (AC)  |   |
+| Ovládací napětí | 24 VDC ± 10 %, 2 A* |
+| Vstupní napětí (VAC - 50/60 Hz)  | 3 x 400 VAC/50Hz 63A |
+| Maximální vstupní proud (AC)  | 50 A |
 | Výstupní napětí (DC)  | 560 VDC |
 | Maximální trvalý výstupní proud (DC)  | 50 A |
 | Maximální krátkodobý výstupní proud (DC, 1s)  | 100 A |
@@ -10,6 +11,7 @@
 | Maximální brzdný výkon (externí rezistor)  |   |
 | Ztráty při maximálním výstupním výkonu  | 150 W |
 | Jištění  | 63 A |
+| Stupeň krytí | IP20 |
 | **VÝSTUPY** |   |
 | Bezpotenciálový kontakt RDY | Max. 28 VDC / 700 mA |
 | Bezpotenciálový kontakt ERR | Max. 28 VDC / 700 mA |

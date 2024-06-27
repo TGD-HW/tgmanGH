@@ -1,24 +1,3 @@
-<img src="Manual/source/common/img/TGlogoFull.svg" alt="TG logo" style="width:30%;">   
-
-**Vítejte v uživatelském manuálu k produktům TGDrives**   
-
-Pokračujte volbou kategorie produktů na horní liště, nebo vyzkoušejte vyhledávání ve vyhledávacím poli.
-
-
-<!--## Seznam dokumentů-->
-## 3D Model Viewer
-
-This is an example of a 3D model viewer embedded in MkDocs.
-
-<!-- Include Three.js, OrbitControls, and occt-import-js from CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/js/controls/OrbitControls.min.js"></script>
-<script src="https://unpkg.com/occt-import-js@latest/umd/occt-import.js"></script>
-
-<!-- Div for the 3D viewer -->
-<div id="viewer" style="width: 100%; height: 500px;"></div>
-
-<script>
 // Set up the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -43,16 +22,11 @@ scene.add(directionalLight);
 // Load your custom STEP 3D model using occt-import-js
 const occtLoader = new occtImport.OcctLoader();
 occtLoader.loadStep('model.stp', (geometry) => {
-    if (geometry) {
-        console.log('Model loaded successfully:', geometry);
-        const material = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-    } else {
-        console.error('Failed to load model geometry');
-    }
+    const material = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 }, undefined, function(error) {
-    console.error('Error loading model:', error);
+    console.error(error);
 });
 
 // Set the initial camera position
@@ -73,4 +47,3 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, 500);
 });
-</script>
