@@ -300,9 +300,12 @@ nav:
                 - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/schematic.md'               
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/safe.md'                 
-            - 'Řízení a regulace':
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/safe.md'       
+            - 'Společný HW':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
+                - Digitální vstupy: 'Manual/source/CZ/md/commonHW_DI.md'
+                - Digitální výstupy: 'Manual/source/CZ/md/commonHW_DO.md'                
+            - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
                 - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'
                 - Další funkce: 'Manual/CZ/SW/REG/md/AuxFunc.md'
@@ -368,16 +371,6 @@ nav:
                 - Software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'              
 #                - Montáž: 'Manual/CZ/TGM/TGZpMotion/md/mounting.md'
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
-        - TGMotion:
-            - PLC: 'Manual/CZ/TGM/TGMotion/md/PLC.md'
-            - Hardware: 'Manual/CZ/TGM/TGMotion/md/HW.md'
-            - Interpolátor: 'Manual/CZ/TGM/TGMotion/md/interpolator.md'
-            - Osciloskop: 'Manual/CZ/TGM/TGMotion/md/osc.md'
-            # - Skupina servo: 'Manual/CZ/TGM/TGMotion/md/Gservo.md'   
-            # - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
-            # - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'
-            # - CNC modul: 'Manual/CZ/TGM/TGMotion/md/CNC.md'    
-            # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'   
         - Software:
             - EtherCAT:
                 - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
@@ -398,7 +391,17 @@ nav:
                 - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       
             - CAN:
                 - Základní informace: 'Manual/CZ/SW/CAN/md/intro.md'
-                - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'                   
+                - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'    
+            - TGMotion:
+                - PLC: 'Manual/CZ/TGM/TGMotion/md/PLC.md'
+                - Hardware: 'Manual/CZ/TGM/TGMotion/md/HW.md'
+                - Interpolátor: 'Manual/CZ/TGM/TGMotion/md/interpolator.md'
+                - Osciloskop: 'Manual/CZ/TGM/TGMotion/md/osc.md'
+                # - Skupina servo: 'Manual/CZ/TGM/TGMotion/md/Gservo.md'   
+                # - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
+                # - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'
+                # - CNC modul: 'Manual/CZ/TGM/TGMotion/md/CNC.md'    
+                # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'   
         - 'Ostatní': 
             - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
             - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'

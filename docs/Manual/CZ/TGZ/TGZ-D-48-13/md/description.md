@@ -65,6 +65,8 @@ ___
 	
 	<img src="../../../../../source/common/img/1277370000_2.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 	
+	Detailní soupis parametrů [digitálních vstupů DI1-8](../../../../source/CZ/md/commonHW_DI.md#commonDI1-8), [digitálních výstupů DO1-6](../../../../source/CZ/md/commonHW_DO.md#commonDO1-6)
+	
 
 -    Weidmüller B2CF 3.50/22/180 SN OR BX
 
