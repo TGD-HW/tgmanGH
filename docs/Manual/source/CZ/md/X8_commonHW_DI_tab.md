@@ -1,6 +1,6 @@
 |  č. vstupu  |  rozsah napětí log. 0  |  rozsah napětí log. 1  |  nominální vstupní napětí  |  rozsah napájení DI/DO  |  spotřeba v log. 1 (17V) ±20%  |  spotřeba v log. 1 (24V) ±20%  |  vlastní spotřeba v log.1 (28V) ±20%  |  Nominální vstupní odpor ±20% |  Přiřazeno k ose  |  Max. vstupní frekvence - obdélník  |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|  #  |  U<sub>log0</sub>  |  U<sub>log1</sub>  |  U<sub>nom</sub> |  VDD<sub>IO</sub> |  I<sub>in17</sub> |  I<sub>in24</sub> |  I<sub>in28</sub> |  RI<sub>inNom</sub>  |  Osa č.  |  f<sub>maxSq</sub> |
+|  #  |  V<sub>log0</sub>  |  V<sub>log1</sub>  |  V<sub>nom</sub> |  VDD<sub>IO</sub> |  I<sub>in17</sub> |  I<sub>in24</sub> |  I<sub>in28</sub> |  R<sub>in,Nom</sub>  |  Osa č.  |  f<sub>max,Sq</sub> |
 | - |  V |  V |  V |  V  |  mA |  mA |  mA |  kΩ  | -					  | kHz					  |
 | 1 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 1 | 50 |
 | 2 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 2 | 50 |

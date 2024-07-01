@@ -304,7 +304,9 @@ nav:
             - 'Společný HW':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Digitální vstupy: 'Manual/source/CZ/md/commonHW_DI.md'
-                - Digitální výstupy: 'Manual/source/CZ/md/commonHW_DO.md'                
+                - Digitální výstupy: 'Manual/source/CZ/md/commonHW_DO.md'  
+                - Analogové vstupy: 'Manual/source/CZ/md/commonHW_AI.md'  
+                - Sběrnice CAN: 'Manual/source/CZ/md/commonHW_CAN.md'                 
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
                 - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'

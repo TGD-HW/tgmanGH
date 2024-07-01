@@ -57,15 +57,19 @@ ___
     ---
 	Pohled zezadu (strana kabelu)   
 	
-	<img src="../../../../../source/common/img/1277370000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/1277370000.svg" alt="X8 pinout" style="width:100%;">
 	3D pohled zezadu   
 	
-	<img src="../../../../../source/common/img/1277370000_1.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/1277370000_1.svg" alt="X8 pinout 3D" style="width:100%;">
 	Pohled zepředu (strana TGZ)   
 	
-	<img src="../../../../../source/common/img/1277370000_2.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/common/img/1277370000_2.svg" alt="X8 pinout front" style="width:100%;">
 	
-	Detailní soupis parametrů [digitálních vstupů DI1-8](../../../../source/CZ/md/commonHW_DI.md#commonDI1-8), [digitálních výstupů DO1-6](../../../../source/CZ/md/commonHW_DO.md#commonDO1-6)
+	Detailní soupis parametrů 
+	[digitálních vstupů DI1-8](../../../../source/CZ/md/commonHW_DI.md#commonDI1-8), 
+	[digitálních výstupů DO1-6](../../../../source/CZ/md/commonHW_DO.md#commonDO1-6) a 
+	[analogových vstupů AI1-2](../../../../source/CZ/md/commonHW_AI.md#commonAI1-2) 
+	naleznete v sekci [Společný HW](../../../../source/CZ/md/commonHW_DI.md#commonDI1-8).
 	
 
 -    Weidmüller B2CF 3.50/22/180 SN OR BX
@@ -95,13 +99,15 @@ ___
 	<img src="../../../../../source/common/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/common/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">	
+	<img src="../../../../../source/common/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
 
     ---
 
 	--8<-- "CZ/md/X10_CAN_4pin_B2CF.md"
+	
+	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/CZ/md/commonHW_CAN.md#commonCAN).
 	
 -	**LED displej**
 
