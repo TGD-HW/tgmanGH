@@ -389,6 +389,25 @@ markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
 output_file = "../../../source/CZ/md/X8_commonHW_DI_tab.md"
 save_markdown_table(markdown_table, output_file)
 
+# Common DO params
+file_path = "parameters.xlsx"
+sheet_name = "commonHW_DO"
+range_start = "A1"
+range_end = "T100"
+markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X8_commonHW_DO_tab.md"
+save_markdown_table(markdown_table, output_file)
+
+# Common AI params
+file_path = "parameters.xlsx"
+sheet_name = "commonHW_AI"
+range_start = "A1"
+range_end = "T100"
+markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
+output_file = "../../../source/CZ/md/X8_commonHW_AI_tab.md"
+save_markdown_table(markdown_table, output_file)
+
+
 
 ##########################################################################################
 # Connectors parameter MD generator
