@@ -75,23 +75,23 @@ plugins:
        background: white
        shadow: true
   # odkomentovat až se bude řešit multilang. do té doby vypnuto, protože zpomaluje překlad
-  - i18n:
-       docs_structure: folder
-       reconfigure_search: true   
-       fallback_to_default: true
-       reconfigure_material: true
-       languages:
-            - locale: cs
-              default: true
-              name: Czech
-              build: true
-              site_name: "Česky"
-              site_description: "Český manuál"
-            - locale: en
-              name: English
-              build: true
-              site_name: "English"
-              site_description: "Description EN"
+  # - i18n:
+       # docs_structure: folder
+       # reconfigure_search: true   
+       # fallback_to_default: true
+       # reconfigure_material: true
+       # languages:
+            # - locale: cs
+              # default: true
+              # name: Czech
+              # build: true
+              # site_name: "Česky"
+              # site_description: "Český manuál"
+            # - locale: en
+              # name: English
+              # build: true
+              # site_name: "English"
+              # site_description: "Description EN"
   #mike nefungoval
   # - mike:
         # alias_type: copy
