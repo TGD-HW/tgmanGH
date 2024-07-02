@@ -1,5 +1,0 @@
-mkdocs-jupyter:
-  exclude_cells:
-    - docs/Manual/source.ipynb:  # Adjust the path for your notebook
-      - cell_index: 0  # Index of the cell to exclude (optional)
-      - cell_type: "code"  # Exclude specific cell types (optional)

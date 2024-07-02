@@ -147,6 +147,8 @@ ___
 	---
 
 	--8<-- "CZ/md/X5_FBE_12pin_B2CF.md"
+	
+	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/CZ/md/commonHW_FBE.md#commonFBE).
 
 -   **X6 - Zpětná vazba - osa 1**
 
@@ -167,6 +169,8 @@ ___
 
 	--8<-- "CZ/md/X6_FB1_8pin_B2CF.md"
 	
+	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/CZ/md/commonHW_FB12.md#commonFB12).
+	
 -   **X7 - Zpětná vazba - osa 2**
 
     ---
@@ -185,6 +189,8 @@ ___
     ---
 
 	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
+	
+	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/CZ/md/commonHW_FB12.md#commonFB12).
 	
 -   **X2 - Napájení výkonové části (DC bus)**
 
