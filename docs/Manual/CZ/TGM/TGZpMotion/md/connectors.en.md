@@ -3,7 +3,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/img/TGZ-D-48-13_26_enetCon.png" alt="ETH connectors" style="width:50%;">
+![ETH connectors](../../../../source/img/TGZ-D-48-13_26_enetCon.png){: style="width:50%;" }
 
 
 <div class="grid cards" markdown>
@@ -11,7 +11,7 @@ ___
 -   **X11 - TGMotion systémový konektor**
 
     ---
-	<!-- <img src="../../../../../source/img/RJ45_X11_service.png" alt="X11 service RJ45" style="width:60%;"> -->
+	<!-- ![X11 service RJ45](../../../../source/img/RJ45_X11_service.png){: style="width:60%;" } -->
 
 -   RJ45
 
@@ -24,7 +24,7 @@ ___
 -   **X12 - FSP port**
 
     ---
-	<!-- <img src="../../../../../source/img/RJ45_X12_FSP.png" alt="X12 FSP RJ45" style="width:60%;"> -->
+	<!-- ![X12 FSP RJ45](../../../../source/img/RJ45_X12_FSP.png){: style="width:60%;" } -->
 
 -   RJ45
 
@@ -43,7 +43,7 @@ ___
 -   **X13 - EtherCAT master**
 
     ---
-	<!-- <img src="../../../../../source/img/RJ45_X13_master.png" alt="X13 ECAT master RJ45" style="width:60%;"> -->
+	<!-- ![X13 ECAT master RJ45](../../../../source/img/RJ45_X13_master.png){: style="width:60%;" } -->
 
 -   RJ45
 

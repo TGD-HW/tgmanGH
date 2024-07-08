@@ -1,5 +1,5 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGZ-S-48-50/100 Dimmensions" style="width:60%;">
+![TGZ-S-48-50/100 Dimmensions](../img/dim.png){: style="width:60%;" }
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

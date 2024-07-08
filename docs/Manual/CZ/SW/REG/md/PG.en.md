@@ -11,7 +11,7 @@ Generátor pracuje tak, že v každé periodě na základě parametrů (`Acc, De
 Výpočet generátoru probíhá s interním rozlišením daným parametrem `BitsPerRevol`.
 Tento parametr pak udává vnitřní počet inkrementů na otáčku.
 
-<img src="../../../../../source/img/TGZrampType1.webp" alt="TGZ servo ramp type" style="width:70%;"> 
+![TGZ servo ramp type](../../../../source/img/TGZrampType1.webp){: style="width:70%;" } 
 
 - (a) Polohový mód
 - (b) rychlostní režim

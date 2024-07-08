@@ -1,1 +1,1 @@
-<img src="../../../../../source/img/TGZstructure1.webp" alt="regulation structure TGZ" style="width:100%;">
+![regulation structure TGZ](../../../../source/img/TGZstructure1.webp){: style="width:100%;" }

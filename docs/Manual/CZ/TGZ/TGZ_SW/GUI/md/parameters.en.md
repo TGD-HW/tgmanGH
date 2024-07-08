@@ -3,7 +3,7 @@
 V záložce **Parameters** je dostupné nastavení veškerých parametrů servozesilovače TGZ.
 Kromě tohoto podrobného nastavení je zde možné najít i detailní informace o připojeném servozesilovači (typ, výrobní číslo, atd.).
 
-<img src="../../img/GUIparams.png" alt="TGZ GUI servo parameters" style="width:100%;">
+![TGZ GUI servo parameters](../img/GUIparams.png){: style="width:100%;" }
 
 Otevřené okno se dále skládá z několika podoken:
 
@@ -21,14 +21,14 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
 -   **COMMON**
 
     ---
-	<img src="../../../../../../source/img/icoCommon.png" alt="Icon Common" style="width:50%;">
+	![Icon Common](../../../../../source/img/icoCommon.png){: style="width:50%;" }
 
 -	informace o stavu HW ENABLE
 
 -   **AXIS 1**
 
     ---
-	<img src="../../../../../../source/img/icoAx1.png" alt="Icon Ax1" style="width:85%;">
+	![Icon Ax1](../../../../../source/img/icoAx1.png){: style="width:85%;" }
 
 -	- zobrazení informací o stavu osy 1 (chyba, varovné hlášení SW Enable)
     - funkční tlačítko Enable umožňuje zapnutí SW ENABLE u osy 1
@@ -37,7 +37,7 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
 -   **AXIS 2**
 
     ---
-	<img src="../../../../../../source/img/icoAx2.png" alt="Icon Ax2" style="width:85%;">
+	![Icon Ax2](../../../../../source/img/icoAx2.png){: style="width:85%;" }
 
 -	- zobrazení informací o stavu osy 2 (chyba, varovné hlášení SW Enable)
     - funkční tlačítko Enable umožňuje zapnutí SW ENABLE u osy 2

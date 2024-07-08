@@ -1,6 +1,6 @@
 Připojení k servozesilovači TGZ přes ovládací program TGZ GUI je dostupné prostřednictvím záložky `Connections`, kde je uživateli umožněno vyhledání všech dostupných zařízení a také následné připojení k vybranému servozesilovači.
 
-<img src="../../img/GUIconnectBtns.png" alt="TGZ GUI connection details" style="width:100%;">
+![TGZ GUI connection details](../img/GUIconnectBtns.png){: style="width:100%;" }
 
 V samotném okně této záložky se nachází celkem 6 funkčních tlačítek, jejichž funkce jsou popsány níže:
 

@@ -33,9 +33,9 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Vložte motorový kabel do připravených svorek na ocelovém přípravku.
 - Upevněte hlavní stínění kabelu k plechovému přípravku stahovacími pásky v místě tomu určeném
 
-<img src="../../../../../source/img/TGZ-S-400_M1Shielding.png" alt="Shielding connection 1" style="width:80%;">
-<img src="../../../../../source/img/TGZ-S-400_M1ShieldingDetail.png" alt="Shielding connection 2" style="width:30%;">
-<img src="../../../../../source/img/TGZ-S-400_M1ShieldingDetail1.png" alt="Shielding connection 3" style="width:60%;">
+![Shielding connection 1](../../../../source/img/TGZ-S-400_M1Shielding.png){: style="width:80%;" }
+![Shielding connection 2](../../../../source/img/TGZ-S-400_M1ShieldingDetail.png){: style="width:30%;" }
+![Shielding connection 3](../../../../source/img/TGZ-S-400_M1ShieldingDetail1.png){: style="width:60%;" }
 
 
 ###Technologie stínění
@@ -44,7 +44,7 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 <br>
 
-<img src="../../../../../source/img/cableShielding4.svg" alt="Shielding connection technology" style="width:80%;">
+![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width:80%;" }
 
 ###Potlačení rušení
 
@@ -62,4 +62,4 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 Na níže uvedených obrázcích je zobrazeno doporučené vedení kabeláže:
 
-<img src="../../../../../source/img/cableMan.svg" alt="Cable management technology" style="width:80%;">
+![Cable management technology](../../../../source/img/cableMan.svg){: style="width:80%;" }

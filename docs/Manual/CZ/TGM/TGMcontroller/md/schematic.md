@@ -1,3 +1,3 @@
 # Příklad schématu zapojení
 
-<img src="../../img/schematic.png" alt="Example schematic" style="width:100%;">
+![Example schematic](../img/schematic.png){: style="width:100%;" }

@@ -38,13 +38,6 @@ extra:
     # version:
         # provider: mike
         #default: stable
-    # alternate:
-        # - name: Česky
-          # link: /Manual/CZ/TGZ/TGZ-D-48-13/md/mark/
-          # lang: cs
-        # - name: English
-          # link: /Manual/CZ/TGS/TGS-320-10_15/md/mark/
-          # lang: en
 # Cookie bar    
 #    consent:
 #        title: Chcete naše sušenky?
@@ -74,7 +67,6 @@ plugins:
        caption_position: bottom
        background: white
        shadow: true
-  # odkomentovat až se bude řešit multilang. do té doby vypnuto, protože zpomaluje překlad
   - i18n:
        docs_structure: suffix
        reconfigure_search: true
@@ -93,7 +85,49 @@ plugins:
               build: true
               site_name: "English"
               site_description: "Description EN"
-                
+              nav_translations:
+                Úvod: Home
+                Základní informace: Basic information
+                Parametry: Parameters
+                Popis zařízení: Device description
+                Montáž: Mounting
+                Rozměry: Dimmensions
+                Elektrická instalace: Electrical installation
+                Příklad zapojení: Example schematic
+                Bezpečnost: Safety
+                Stavová a chybová hlášení: Status and errors
+                Digitální vstupy: Digital inputs
+                Digitální výstupy: Digital outputs
+                Analogové vstupy: Analog inputs
+                Sběrnice CAN: CAN bus
+                Zpětná vazba FBE: FBE feedback
+                Zpětná vazba FB1, FB2: FB1, FB2 feedback
+                Regulační struktura: Regulation structure
+                Další funkce: Other functions
+                Nouzové zabrždění: Emergency braking
+                SD karty: SD cards
+                Ostatní: Etc.
+                Certifikáty: Certificates
+                Instalace a spuštění: Instalation
+                Připojení k TGZ: TGC connection
+                Nastavení parametrů: Parameter settings
+                Osciloskop: Oscilloscope
+                Přehrávání firmware: Firmware upload
+                Uživatelský program: User program
+                Řízení a regulace: Control system
+                Společný HW: Common hardware
+                Popis konektorů: Connector description
+                Servozesilovač TGZ: TGZ servoamplifier
+                Nastavení sítě: Network settings
+                Popis komunikace: Comunication description
+                Sběrnice EtherCAT: EtherCAT bus
+                Katalog objektů: Object library
+                TGZ a TwinCAT: TwinCAT and TGZ
+                Obecné: General
+                TIA portál: TIA portal
+                Interpolátor: Interpolator
+                Schémata kabelů: Cable connections
+
   #mike nefungoval
   # - mike:
         # alias_type: copy

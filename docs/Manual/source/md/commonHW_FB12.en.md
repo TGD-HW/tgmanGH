@@ -4,7 +4,7 @@ Je možné připojit zpětnou vazbu typu Endat, SSI, BISS, inkrementální enkod
 
 Zjednodušené vnitřní schéma zapojení je na obrázku níže.
 
-<img src="../../../common/img/FB12internals.svg" alt="Simplified TGZ FB12 schematic" style="width:80%;">
+![Simplified TGZ FB12 schematic](../../../common/img/FB12internals.svg){: style="width:80%;" }
 
 Jedná se o 2 velmi rychlé budiče sběrnice RS485 schopné pracovat s datovým tokem až 20 Mbit/s.
 

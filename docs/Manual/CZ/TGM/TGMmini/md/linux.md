@@ -12,7 +12,7 @@ Control Observer, konzole pro zobrazení chybových a uživatelských zpráv, DL
 ##Spuštění TG Motion
 Pro administraci TG Motion slouží program `tgm_control_panel`, který lze spustit přímo z pracovní plochy grafického systému Xfce (desktop).  
  
-<img src="../../img/TGMcontrolPanel.png" alt="Control panel in Xfce" style="width:40%;">
+![Control panel in Xfce](../img/TGMcontrolPanel.png){: style="width:40%;" }
 
 Konfigurace je uložena v souborech `tgm_starter_service.ini` a `tgm_xeno_service.ini`. Pomocí položky `Autostart` lze nastavit automatické spuštění TG Motion po startu TGMmini.   
 Standardně je povoleno vzdálené ovládání TG Motion po síti Ethernet z PC. Pokud toto ovládání není potřeba, lze jej vypnout v souboru `tgm_xeno_service.ini` nastavením

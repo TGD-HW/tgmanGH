@@ -1,34 +1,34 @@
 ##3D náhled
-<img src="../../img/MotSide.svg" alt="TGZ-S-48-50/100 Feedback side" style="width:75%;">
+![TGZ-S-48-50/100 Feedback side](../img/MotSide.svg){: style="width:75%;" }
 <br>
 <br>
-<img src="../../img/IOside.svg" alt="TGZ-S-48-50/100 IO side" style="width:75%;">
+![TGZ-S-48-50/100 IO side](../img/IOside.svg){: style="width:75%;" }
 
 ##Konektory
 ___
 ### Strana ethernet/ethercat
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-100_250_enetCon.png" alt="TGZ-S-48-100/250 ENET/ECAT side" style="width:60%;">
+![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
 
 ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-100_250_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250_IO.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/img/436500518.svg" alt="Molex Micro-Fit 3.0 436450500" style="width:90%;">
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
 
 -    Molex Micro-Fit 3.0 - 436450500
 
 	---
 
-	--8<-- "CZ/md/X1_24V_5pin_Microfit.md"
+	--8<-- "md/X1_24V_5pin_Microfit.md"
 	
 	!!! warning "Upozornění"
 		
@@ -45,13 +45,13 @@ ___
     ---
 	Pohled zezadu (strana kabelu)   
 	
-	<img src="../../../../../source/img/1277370000.svg" alt="X8 pinout" style="width:100%;">
+	![X8 pinout](../../../../source/img/1277370000.svg){: style="width:100%;" }
 	3D pohled zezadu   
 	
-	<img src="../../../../../source/img/1277370000_1.svg" alt="X8 pinout 3D" style="width:100%;">
+	![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width:100%;" }
 	Pohled zepředu (strana TGZ)   
 	
-	<img src="../../../../../source/img/1277370000_2.svg" alt="X8 pinout front" style="width:100%;">
+	![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width:100%;" }
 
 	Detailní soupis parametrů 
 	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
@@ -64,7 +64,7 @@ ___
 
 	---
 
-	--8<-- "CZ/md/X8_IO_22pin_B2CF.md"
+	--8<-- "md/X8_IO_22pin_B2CF.md"
 	
 	!!! warning "Pozor"	
 	
@@ -73,7 +73,7 @@ ___
 -   **X9 - MicroSD karta**
 
     ---
-<img src="../../../../../source/img/uSD.png" alt="uSD card connector" style="width:60%;">
+![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -81,19 +81,19 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu)   
-	<img src="../../../../../source/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+	![CAN connector](../../../../source/img/1277270000.svg){: style="width:25%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
+	![CAN connector](../../../../source/img/1277270000_1.svg){: style="width:45%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
+	![CAN connector](../../../../source/img/1277270000_2.svg){: style="width:35%;" }
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.md"
 	
 	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/md/commonHW_CAN.md#commonCAN).
 	
@@ -101,7 +101,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
+	![LED displej](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
 -	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -109,13 +109,13 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
 -	LED diody
 
 	---
 	
-	--8<-- "CZ/md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.md"
 	
 	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -126,7 +126,7 @@ ___
 ### Strana feedback
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-100_250_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -134,13 +134,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1277320000.svg" alt="FBE connector" style="width:80%;">
+	![FBE connector](../../../../source/img/1277320000.svg){: style="width:80%;" }
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
 	---
 
-	--8<-- "CZ/md/X5_FBE_12pin_B2CF.md"
+	--8<-- "md/X5_FBE_12pin_B2CF.md"
 	
 	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
 
@@ -149,19 +149,19 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X6_FB1_8pin_B2CF.md"
+	--8<-- "md/X6_FB1_8pin_B2CF.md"
 	
 	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -170,19 +170,19 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
+	--8<-- "md/X7_FB2_8pin_B2CF.md"
 	
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -191,7 +191,7 @@ ___
 ### Pohled na PCB
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-100_250_brd.png" alt="PCB connections" style="width:70%;">
+![PCB connections](../../../../source/img/TGZ-S-48-100_250_brd.png){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>
@@ -200,13 +200,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/430450412.svg" alt="Brake connector" style="width:60%;">
+	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400
 
 	---
 
-	--8<-- "CZ/md/P7_BR_4pin_Microfit.md"
+	--8<-- "md/P7_BR_4pin_Microfit.md"
 	
 	!!! info "Konektorové krimpy"
 	
@@ -216,13 +216,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/430450412.svg" alt="Brake connector aux" style="width:60%;">
+	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400
 
 	---
 
-	--8<-- "CZ/md/P8_BR_4pin_Microfit.md"
+	--8<-- "md/P8_BR_4pin_Microfit.md"
 	
 	!!! note "Konektor P8"
 	
@@ -236,13 +236,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/436500215.svg" alt="External thermistor" style="width:60%;">
+	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 436500215
 
 	---
 
-	--8<-- "CZ/md/P3_Term_2pin_Microfit.md"
+	--8<-- "md/P3_Term_2pin_Microfit.md"
 	
 	!!! note "Polarita"
 	

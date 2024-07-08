@@ -1,3 +1,3 @@
-<img src="../../../../../source/img/photo_TGZ-S-48-50_100RI.webp" alt="TGZ-48-50/100RI pic" style="width:40%;">
+![TGZ-48-50/100RI pic](../../../../source/img/photo_TGZ-S-48-50_100RI.webp){: style="width:40%;" }
 
---8<-- "CZ/md/marking.md"
+--8<-- "md/marking.en.md"

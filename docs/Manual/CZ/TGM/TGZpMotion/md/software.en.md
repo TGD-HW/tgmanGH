@@ -9,7 +9,7 @@ Je také možné připojit síťový adaptér PC přímo k servisnímu portu X11
 Aplikace **Control Observer** slouží ke kompletnímu monitorování subsystému **TGMotion**.
 Zde je příklad připojeného zařízení **TGZ+Motion** (pomocí protokolu TCP a IP adresy `192.168.128.188`):
 
-<img src="../../img/connectionInfo.png" alt="Connection info dialog" style="width:60%;">
+![Connection info dialog](../img/connectionInfo.png){: style="width:60%;" }
 
 ##Fast service port (FSP)
 Tento port slouží jako velmi rychlý port pro nastavení připojení k počítači.
@@ -201,7 +201,7 @@ Je na programátorovi, aby zvolil správnou funkci pro úlohy PLC.
 
 V okně *System Timers* programu **Control Observer** se zobrazuje uplynulý čas různých úloh programu TGMotion.
 
-<img src="../../img/systemTimers.png" alt="System timers dialog" style="width:60%;">
+![System timers dialog](../img/systemTimers.png){: style="width:60%;" }
 
 Všimněte si, že maximální uplynulý čas úlohy `Program_01()` (označené jako PLC 1) zahrnuje také čas všech ostatních úloh, které přerušily úlohu `Program_01()`.
 Podobně je tomu i u `Program_02()`, který může být přerušen `Programem_03()` a hlavní rutinou cyklu serva; a u `Program_03()`, přerušeného hlavní funkcí cyklu.
@@ -213,7 +213,7 @@ Kromě okna *Systémové soubory* programu **Control Observer** je k dispozici o
 Stačí nastavit správný název souboru PLC a nahrát jej do **TGZ+Motion**.
 PLC se spustí kliknutím na tlačítko `[Spustit]`. 
 
-<img src="../../img/PLCcontrol.png" alt="PLC control dialog" style="width:60%;">
+![PLC control dialog](../img/PLCcontrol.png){: style="width:60%;" }
 
 Proces `Run PLC` provede následující sekvenci:
 
@@ -301,7 +301,7 @@ Aktualizovaný firmware se uloží na kartu SD.
 Soubor je možné uložit také přímo na SD kartu pomocí PC, v takovém případě musí být název `TGMC.fw` a soubor musí být v kořenovém adresáři karty.
 Viz také další kapitola o obsahu SD karty.
 
-<img src="../../img/systemFilesFW.png" alt="System files FW dialog" style="width:60%;">
+![System files FW dialog](../img/systemFilesFW.png){: style="width:60%;" }
 
 Může se stát, že se při zpětném čtení souborů ze zařízení se objeví chyba `Device Offline`, zejména při použití protokolu FSP.
 Obvykle to znamená, že použitý ethernetový adaptér nemá dostatek vyrovnávacích paměti (doporučuje se 32 nebo více).

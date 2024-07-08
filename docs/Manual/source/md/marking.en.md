@@ -1,67 +1,97 @@
 ##General
-Digitální servozesilovače TGZ představují nový koncept měničů pro víceosé aplikace. TGZ v sobě zahrnují moderní prvky digitálního řízení, jednoduché přednastavené funkce, které uživatel může volat ve vlastním uživatelském programu, propojení k rychlým digitálním sběrnicím, připojení moderních digitálních snímačů zpětné vazby, malé ztráty výkonových prvků a unikátní chladicí systém.
+TGZ digital servo amplifiers represent a new inverter concept for multi-axis applications.
+TGZ includes modern digital control elements, simple preset functions that the user can call in their own user program, connection to fast digital buses, connection of modern digital feedback sensors, small power losses and a unique cooling system.
+Thanks to the use of these new technologies, it was possible to optimize the dimensions, reduce the number of pins in the connectors and implement two power units for controlling two servomotors in the same space.
+TGZ is an economical and high-quality servomotor control solution.
+TGZ servo amplifiers are currently offered in several versions determined by number of controlled axes, power supply voltage, type of feedback (Hiperface DSL, EnDAT, SSI) and type of communication (EtherCAT, CANopen, PROFINET).
+The type of the feedback and communication is given by installed firmware and can be changed by user.
 
-Díky využití těchto nových technologií se podařilo optimalizovat rozměry, snížit počet pinů v konektorech a do stejného prostoru implementovat dvě výkonové jednotky pro řízení dvou servomotorů. TGZ představuje ekonomické, ale vysoce kvalitní řešení řízení servomotorů.
+![Device marking](../../../../source/img/marking.svg){: style="width: 60%;" }
 
-Servozesilovače TGZ jsou v současné době nabízeny ve třech provedeních: TGZ-48 (nízkonapěťová verze do 48 VDC, určená pro mobilní zařízení nebo zařízení vyžadující bezpečné napětí),  TGZ-320 pro připojení napětí 320 VDC z napájecího modulu TGS-320-10/15 (1× 230 V / 320 VDC) a TGZ-560 pro připojení na třífázovou síť.
+##Safety instructions
+###Safety
+Servo amplifiers are components that are mounted in electrical machines and equipment and can only be used as an integral part of these machines and equipment.
+During operation, there are risks that can cause property damage, serious injury or death. Do not open the device or touch live parts during operation.
+Make sure that all covers and cabinet doors are closed during operation.
+Only suitably qualified persons may handle the device during installation and commissioning.
+Depending on the degree of protection, some live parts of the servo amplifiers may be exposed during operation.
 
-<img src="../../../../../source/img/marking.svg" alt="Device marking" style="width:80%;">
+- The control and power connections may be energized even when the motor is not running.
+- The surface of the servo amplifiers may be hot during operation. The heat sink temperature can reach a value higher than 80 °C.
 
-##Bezpečnostní pokyny
-###Bezpečnost
-Servozesilovače jsou komponenty, které se montují do elektrických strojů a zařízení a lze je používat jen jako nedílnou součást těchto strojů a zařízení. Během provozu existují rizika, která mohou způsobit materiální škody, vážné zranění nebo smrt. Během provozu neotevírejte zařízení a nedotýkejte se živých částí. Dbejte na to, aby byly během provozu uzavřené všechny kryty a dvířka skříní. Během instalace a uvádění do provozu smí se zařízením manipulovat pouze příslušně kvalifikované osoby.
-V závislosti na stupni krytí mohou být u servozesilovačů za provozu nezakryté některé části pod napětím.
+Never disconnect the electrical connections to the servo amplifier when it is energized.
+There is a risk of electric arc.
+An electric arc can damage the contacts or injure the operator.
+After disconnecting the servo amplifier from the power supply, wait at least 7 minutes before touching parts of the device that could be potentially energized (such as contacts) or disconnecting any connections.
+Dangerous voltages can be maintained on the capacitors for up to 7 minutes after the power is turned off.
+Before handling components, always measure the DC link voltage and wait until it drops below 40 V.
+Improper handling of the servo amplifier can cause personal injury or property damage.   
 
-- Vodiče pro ovládání a napájení mohou být pod napětím, i když se motor netočí.
-- Povrch servozesilovačů může být za provozu horký. Teplota chladiče může dosáhnout hodnoty vyšší než 80 °C.
+Read this documentation before installing and commissioning the device.
+It is essential to observe the technical data and instructions regarding the connection requirements of the device (see nameplate and documentation).   
 
-Nikdy neodpojujte elektrická připojení k servozesilovači, pokud je pod napětím. Hrozí nebezpečí vzniku elektrického oblouku. Elektrický oblouk může poškodit kontakty nebo zranit obsluhu. Po odpojení servozesilovače od napájení počkejte alespoň 7 minut, než se dotknete částí zařízení, které by mohly být potenciálně pod napětím (například kontaktů) nebo rozpojíte jakékoli spoje. Na kondenzátorech se může udržet nebezpečné napětí až 7 minut po vypnutí napájení. Před manipulací se součástmi změřte vždy napětí na stejnosměrném meziobvodu a vyčkejte, dokud jeho hodnota neklesne pod 40 V. Nesprávná manipulace se servozesilovačem může způsobit zranění osob nebo materiální škody.
+Transport, installation, commissioning, maintenance and similar activities may only be carried out by suitably qualified personnel.
+Properly qualified personnel are those who are familiar with the transport, assembly, installation, commissioning and operation of the product and who have the appropriate professional competence to perform their work.
+Qualified persons must know and follow the relevant standards and safety instructions.    
 
-Před instalací a zprovozněním zařízení si přečtěte tuto dokumentaci. Je nezbytné dodržovat technické údaje a pokyny týkající se požadavků na připojení zařízení (viz výrobní štítek a dokumentace).
+The machine manufacturer must carry out a hazard analysis of the machine and take appropriate measures to ensure that unforeseen movements of the machine do not cause personal injury or property damage.
 
-Přepravu, instalaci, uvedení do provozu, údržbu a podobné činnosti smí provádět pouze příslušně kvalifikovaní pracovníci. Pracovníci se správnou kvalifikací jsou ti, kteří jsou obeznámeni s přepravou, sestavením, instalací, zprovozněním a obsluhou produktu a kteří mají příslušnou odbornou způsobilost pro výkon svojí práce. Kvalifikované osoby musí znát a dodržovat příslušné normy a bezpečnostní pokyny.
+**This device may not be modified without the permission of the manufacturer.**
 
-Výrobce stroje musí provést analýzu nebezpečnosti stroje a přijmout patřičná opatření, aby bylo zajištěno, že nepředvídané pohyby stroje nezpůsobí zranění osob nebo materiální škody.
+The device contains components sensitive to static electricity, which can be destroyed by improper handling.
+Discharge the electrostatic charge of your body before touching the device.
+Do not touch materials in which an electric charge may accumulate (man-made fibers, plastic film, etc.).
+Place the device on a conductive surface.   
 
-**Toto zařízení není dovoleno upravovat bez svolení výrobce.**
+The servo amplifiers must only be operated in a closed control cabinet (switchboard) that is suitable for the ambient conditions (temperature 0 to +40 °C, relative humidity 5 to 85% without condensation).
+It may be necessary to provide ventilation or cooling to keep the cabinet temperature below 40 °C.
+Use only copper wires for connection.
+The conductor cross-sections must comply with the ČSN EN 60204 standard.
+Other uses of the servo amplifier are not intended and may lead to personal injury and equipment damage.
+The servo amplifier must not be used with a machine that does not comply with the relevant national regulations and standards.
+The use of a servo amplifier is also prohibited in the following environments:
 
-Zařízení obsahuje součásti citlivé na statickou elektřinu, které mohou být při nesprávné manipulaci zničeny. Než se dotknete zařízení, vybijte elektrostatický náboj svého těla. Nedotýkejte se materiálů, ve kterých se může hromadit elektrický náboj (tkaniny z umělých vláken, plastové fólie atd.). Umístěte zařízení na vodivý povrch.
+- an environment where there is a risk of explosion;
+- environments with corrosive or electrically conductive substances, such as acids, alkaline solutions, oils, water vapor or dust;
+- on boats or on the shore (near the water).
 
-Servozesilovače musí být provozovány výhradně v uzavřené ovládací skříni (rozvaděči), která je vhodná pro okolní podmínky (teplota 0 až +40 °C, relativní vlhkost 5 až 85 % bez kondenzace). Pro udržení teploty ve skříni pod 40 °C může být nutné zajistit ventilaci nebo chlazení. Pro zapojení používejte pouze měděné vodiče. Průřezy vodičů musí odpovídat normě ČSN EN 60204. Jiné použití servozesilovače není zamýšleno a může vést ke zranění osob a poškození zařízení. Servozesilovač nesmí být používán se strojem, který nesplňuje příslušné státní předpisy a normy. Použití servozesilovače je zakázáno také v následujících prostředích:
+###Transportation
+Always transport digital servo amplifiers according to the following instructions:
 
-- prostředí, kde hrozí nebezpečí exploze,
-- prostředí s látkami způsobujícími korozi nebo elektricky vodivými látkami, například kyselinami, alkalickými roztoky, oleji, vodními párami nebo prachem,
-- na lodích nebo na pobřeží (blízko vody).
+- Transport may only be performed by qualified personnel. The device must be in the original recyclable packaging of the manufacturer.
+- Protect the device from impacts during transport.
+- Only transport the device within the specified temperature range: -25 to +70 °C, max. Temperature change rate 20 K/h, class 2K3.
+- Only transport the device at the specified humidity: max. 95% relative humidity, non-condensing, class 2K3.
 
-###Přeprava
-Přepravujte digitální servozesilovače vždy dle následujících pokynů:
+If the packaging is damaged, check that the unit is not visibly damaged. Inform the carrier and manufacturer of any damage to the packaging or product.
 
-- Přepravu smí provádět pouze kvalifikovaní pracovníci. Zařízení musí být v originálním recyklovatelném obalu výrobce.
-- Během přepravy chraňte zařízení před nárazy.
-- Přepravujte zařízení jen při stanoveném rozmezí teplot: -25 až +70 °C, max. rychlost teplotní změny 20 K/h, třída 2K3.
-- Přepravujte zařízení jen při stanovené vlhkosti: max. 95 % relativní vlhkost, nekondenzující, třída 2K3.
+###Storage
+Always store digital servo amplifiers according to the following instructions:
 
-Je-li obal poškozen, zkontrolujte, zda není jednotka viditelně poškozena. Informujte přepravce a výrobce o jakémkoliv poškození obalu nebo produktu.
+- Store the device only in the original packaging of the manufacturer.
+- When stacking boxes, do not exceed 8 boxes on top of each other.
+- Only store the device at the specified temperature range: -25 to +55 °C, max. Temperature change rate 20 K / h, class 1K4.
+- Only store the device at the specified humidity range: 5 to 95% relative humidity, non-condensing, class 1K3.
 
-###Skladování
-Skladujte digitální servozesilovače vždy dle následujících pokynů:
+###Maintenance and cleaning
+The servo amplifier is maintenance-free. Opening the device (removing the cover) will void the warranty.
 
-- Skladujte zařízení pouze v originálním obalu výrobce.
-- Při ukládání krabic do stohu nepřekračujte počet 8 krabic na sobě.
-- Skladujte zařízení jen při stanoveném rozmezí teplot: -25 až +55 °C, max. rychlost teplotní změny 20 K/h, třída 1K4.
-- Skladujte zařízení jen při stanoveném rozmezí vlhkosti: 5 až 95 % relativní vlhkosti, bez kondenzace, třída 1K3.
+###Disassembly of equipment
+If the device needs to be removed (for example, for replacement), remove the servo amplifier as follows:
 
-###Údržba a čištění:
-Servozesilovač nevyžaduje údržbu. Otevření zařízení (demontáž krytu) má za následek ztrátu záruky.
-
-###Demontáž zařízení:
-Pokud je zapotřebí zařízení odmontovat (například kvůli výměně), vymontujte servozesilovač následujícím způsobem:
-
-1. Vypněte hlavní vypínač rozvaděče a pojistky pro napájení systému.
-Po odpojení servozesilovače od napájení počkejte alespoň 7 minut, než se dotknete částí zařízení, které by mohly být potenciálně pod napětím (například kontaktů) nebo rozpojíte jakékoli spoje. Než se dotknete servozesilovače nebo než s ním budete manipulovat, změřte vždy napětí na stejnosměrném meziobvodu a vyčkejte, dokud jeho hodnota neklesne pod 40 V.
-2. Odpojte konektory. Nakonec odpojte připojení na potenciálovou zem.
-3. Zkontrolujte teplotu.
-Během provozu může teplota chladiče servozesilovače přesáhnout hodnotu 80 °C. Zkontrolujte teplotu, než se dotknete zařízení, a počkejte, dokud neklesne pod 40 °C.
-4. Odmontujte zařízení. Odmontujte servozesilovač a napájecí zdroj z vodivé uzemněné montážní desky rozvaděče.
-###Oprava a likvidace:
-Zařízení smí opravovat pouze výrobce. Otevření zařízení má za následek ztrátu záruky. Odmontujte zařízení, jak je popsáno v odstavci výše a odešlete je v originálním obalu výrobci. Výrobce přijímá vrácená stará zařízení a příslušenství pro odbornou likvidaci. Náklady na přepravu hradí odesílatel.
+1. Turn off the cabinet power switch and system power fuses.
+   After disconnecting the servo amplifier from the power supply, wait at least 7 minutes before touching parts of the device that could be potentially energized (such as contacts) or disconnecting any connections. 
+   Always measure the DC link voltage and touch until the servo amplifier drops below 40 V<sub>DC</sub> before touching or manipulating the servo amplifier.
+2. Disconnect the connectors. Finally, disconnect the connection to potential ground.
+3. Check the temperature.
+   During operation, the temperature of the servo amplifier heatsink may exceed 80 °C.
+   Check the temperature before touching the device and wait until it drops below 40 °C.
+4. Remove the device.
+   Remove the servo amplifier and power supply from the conductive grounded cabinet mounting plate.
+	
+###Repair and disposal
+The device may only be repaired by the manufacturer.
+Opening the device will void the warranty.
+Remove the device as described in the paragraph above and send it in the original packaging to the manufacturer.
+The manufacturer accepts returned old equipment and accessories for professional disposal.
+Shipping costs are paid by the sender.

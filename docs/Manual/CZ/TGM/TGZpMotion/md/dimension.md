@@ -1,2 +1,2 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGZcontroller dimensions" style="width:70%;">
+![TGZcontroller dimensions](../img/dim.png){: style="width:70%;" }

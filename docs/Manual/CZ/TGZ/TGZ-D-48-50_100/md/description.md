@@ -4,17 +4,17 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.svg" alt="3D view IO side" style="width:80%;">
+![3D view IO side](../img/IOside.svg){: style="width:80%;" }
 <br>
 <br>
-<img src="../../img/MotSide.svg" alt="3D view FB side" style="width:80%;">
+![3D view FB side](../img/MotSide.svg){: style="width:80%;" }
 
 ##Konektory
 ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/img/TGZ-D-48-50_100_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-D-48-50_100_enetCon.png){: style="width:60%;" }
 
 
 <div class="grid cards" markdown>
@@ -22,13 +22,13 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/img/1940760000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
+	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
 
 -    Weidmüller BCZ 3.81/05/180 SN OR BX
 
 	---
 
-	--8<-- "CZ/md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
 
 </div>
 
@@ -36,7 +36,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/img/TGZ-D-48-50_100_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+![IO/CAN/SD connectors](../../../../source/img/TGZ-D-48-50_100_IO.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -45,13 +45,13 @@ ___
     ---
 	Pohled zezadu (strana kabelu)   
 	
-	<img src="../../../../../source/img/1277370000.svg" alt="X8 pinout" style="width:100%;">
+	![X8 pinout](../../../../source/img/1277370000.svg){: style="width:100%;" }
 	3D pohled zezadu   
 	
-	<img src="../../../../../source/img/1277370000_1.svg" alt="X8 pinout 3D" style="width:100%;">
+	![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width:100%;" }
 	Pohled zepředu (strana TGZ)   
 	
-	<img src="../../../../../source/img/1277370000_2.svg" alt="X8 pinout front" style="width:100%;">
+	![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width:100%;" }
 
 	Detailní soupis parametrů 
 	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
@@ -64,7 +64,7 @@ ___
 
 	---
 
-	--8<-- "CZ/md/X8_IO_22pin_B2CF.md"
+	--8<-- "md/X8_IO_22pin_B2CF.md"
 	
 	!!! warning "Pozor"	
 	
@@ -73,7 +73,7 @@ ___
 -   **X9 - MicroSD karta**
 
     ---
-<img src="../../../../../source/img/uSD.png" alt="uSD card connector" style="width:60%;">
+![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -81,19 +81,19 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu)   
-	<img src="../../../../../source/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+	![CAN connector](../../../../source/img/1277270000.svg){: style="width:25%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
+	![CAN connector](../../../../source/img/1277270000_1.svg){: style="width:45%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
+	![CAN connector](../../../../source/img/1277270000_2.svg){: style="width:35%;" }
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.md"
 	
 	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/md/commonHW_CAN.md#commonCAN).
 	
@@ -101,7 +101,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
+	![LED displej](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
 -	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -109,13 +109,13 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
 -	LED diody
 
 	---
 	
-	--8<-- "CZ/md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.md"
 	
 	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -126,7 +126,7 @@ ___
 ### Strana FB/motor/DCbus/brzda
 ___
 
-<img src="../../../../../source/img/TGZ-D-48-50_100_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+![Motor/Feedback connectors](../../../../source/img/TGZ-D-48-50_100_FBconns.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -134,19 +134,19 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277320000.svg" alt="FBE connector" style="width:60%;">
+	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277320000_1.svg" alt="FBE connector" style="width:60%;">
+	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277320000_2.svg" alt="FBE connector" style="width:60%;">	
+	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
 	---
 
-	--8<-- "CZ/md/X5_FBE_12pin_B2CF.md"
+	--8<-- "md/X5_FBE_12pin_B2CF.md"
 	
 	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
 
@@ -155,19 +155,19 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB1 connector" style="width:50%;">
+	![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X6_FB1_8pin_B2CF.md"
+	--8<-- "md/X6_FB1_8pin_B2CF.md"
 	
 	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -176,32 +176,32 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB2 connector" style="width:50%;">
+	![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
     ---
 
-	--8<-- "CZ/md/X7_FB2_8pin_B2CF.md"
+	--8<-- "md/X7_FB2_8pin_B2CF.md"
 	
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 -   **X2 - Napájení výkonové části (DC bus)**
 
     ---
-	<img src="../../../../../source/img/2636-1103.svg" alt="DCbus cage-clamp" style="width:60%;">
+	![DCbus cage-clamp](../../../../source/img/2636-1103.svg){: style="width:60%;" }
 
 -    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X2_DCbus_3pin_wago_2636.md"
+	--8<-- "md/X2_DCbus_3pin_wago_2636.md"
 	
 	!!! info "Poznámka"
 	
@@ -211,13 +211,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/2626-1104.svg" alt="Motor 1 connector" style="width:70%;">
+	![Motor 1 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
 -    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X3_M1_4pin_wago_2626.md"
+	--8<-- "md/X3_M1_4pin_wago_2626.md"
 	
 	!!! note "Doporučený průřez"
 		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
@@ -226,13 +226,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/2626-1104.svg" alt="Motor 2 connector" style="width:70%;">
+	![Motor 2 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
 -    Wago push-in svorky
 
     ---
 
-	--8<-- "CZ/md/X4_M2_4pin_wago_2626.md"
+	--8<-- "md/X4_M2_4pin_wago_2626.md"
 	
 	!!! note "Doporučený průřez"
 		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
@@ -241,13 +241,13 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1017470000.svg" alt="Brake connector" style="width:70%;">
+	![Brake connector](../../../../source/img/1017470000.svg){: style="width:70%;" }
 
 -    Weidmüller BLF 5.00HC/06/180F SN OR BX
 
     ---
 
-	--8<-- "CZ/md/XBR_BR_6pin_BLF.md"
+	--8<-- "md/XBR_BR_6pin_BLF.md"
 	
 
 </div>

@@ -7,7 +7,7 @@ Virtuální PLC lze v případě potřeby kompletně vyvinout a otestovat na PC 
 Control Observer je servisní a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
 Nejprve musí být připojen k zařízení. K tomu slouží okno *Connection info* :
 
-<img src="../../img/connectionInfo.png" alt="Connection info dialog" style="width:60%;">
+![Connection info dialog](../img/connectionInfo.png){: style="width:60%;" }
 
 V menu `Connection Device` zvolte požadovaný typ zařízení.
 Použijte připojení TCP nebo UDP, pokud je IP adresa již známá (zobrazuje se při spuštění na LED displeji) a je platná v rámci ethernetového segmentu.
@@ -20,7 +20,7 @@ Lze jej editovat přímo na kartě pomocí počítače nebo jej lze přečíst z
 Použijte okno *Systémové soubory*, upravte odpovídajícím způsobem názvy v editačních polích a použijte tlačítka `[Read]` a poté `[Write]` (řádky souboru INI).
 Názvy souborů v počítači mohou být libovolné, TGMcontroller interně používá správné názvy souborů SD karty.
 
-<img src="../../img/systemFiles.png" alt="System files dialog" style="width:60%;">
+![System files dialog](../img/systemFiles.png){: style="width:60%;" }
 
 Po úpravě souboru `TGM.INI` je nutné restartovat TGMcontroller (tlačítkem `[Restart Device]` nebo vypnutím/zapnutím zařízení).
 Vnitřní zpětné vazby a vstupy/výstupy musí být v případě potřeby namapovány na TGMotion v souboru `TGM.INI`. 
@@ -272,7 +272,7 @@ Kromě okna *Systémové soubory* programu **Control Observer** je k dispozici o
 Stačí nastavit správný název souboru PLC a nahrát jej do **TGMcontroller**.
 PLC se spustí kliknutím na tlačítko `[Spustit]`. 
 
-<img src="../../img/PLCcontrol.png" alt="PLC control dialog" style="width:60%;">
+![PLC control dialog](../img/PLCcontrol.png){: style="width:60%;" }
 
 Proces `Run PLC` provede následující sekvenci:
 
@@ -345,7 +345,7 @@ Je na programátorovi, aby zvolil správnou funkci pro úlohy PLC.
 
 V okně *System Timers* programu **Control Observer** se zobrazuje uplynulý čas různých úloh programu TGMotion.
 
-<img src="../../img/systemTimers.png" alt="System timers dialog" style="width:60%;">
+![System timers dialog](../img/systemTimers.png){: style="width:60%;" }
 
 Všimněte si, že maximální uplynulý čas úlohy `Program_01()` (označené jako PLC 1) zahrnuje také čas všech ostatních úloh, které přerušily úlohu `Program_01()`.
 Podobně je tomu i u `Program_02()`, který může být přerušen `Programem_03()` a hlavní rutinou cyklu serva; a u `Program_03()`, přerušeného hlavní funkcí cyklu.
@@ -424,7 +424,7 @@ Aktualizovaný firmware se uloží na kartu SD.
 Soubor je možné uložit také přímo na SD kartu pomocí PC, v takovém případě musí být název `TGMC.fw` a soubor musí být v kořenovém adresáři karty.
 Viz také další kapitola o obsahu SD karty.
 
-<img src="../../img/systemFilesFW.png" alt="System files FW dialog" style="width:60%;">
+![System files FW dialog](../img/systemFilesFW.png){: style="width:60%;" }
 
 Může se stát, že se při zpětném čtení souborů ze zařízení se objeví chyba `Device Offline`, zejména při použití protokolu FSP.
 Obvykle to znamená, že použitý ethernetový adaptér nemá dostatek vyrovnávacích paměti (doporučuje se 32 nebo více).
