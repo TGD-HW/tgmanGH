@@ -9,4 +9,4 @@ L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na
 ## Rozestupy
 U servozesilovače TGZ-S-230-5/15 je doporučeno dodržet minimální horizontální vzdálenost mezi jednotlivými zařízeními alespoň 10 mm, doporučená vertikální vzdálenost je pak minimálně 80 mm.
 
-<img src="../../../../../source/CZ/img/placement2.png" alt="TGZ-D-320 Distance" style="width:70%;">
+<img src="../../../../../source/img/placement2.png" alt="TGZ-D-320 Distance" style="width:70%;">

@@ -1,0 +1,1 @@
+--8<-- "TGZpMotion/md/parameters.md"

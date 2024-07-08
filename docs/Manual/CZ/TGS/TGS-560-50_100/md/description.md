@@ -9,7 +9,7 @@ ___
 ### Strana silových konektorů
 ___
 
-<img src="../../../../../source/CZ/img/TGS-560-50_100_PWR.svg" alt="PWR connections" style="width:70%;">
+<img src="../../../../../source/img/TGS-560-50_100_PWR.svg" alt="PWR connections" style="width:70%;">
 
 
 <div class="grid cards" markdown>
@@ -18,7 +18,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1778078.svg" alt="PWR connector" style="width:60%;">
+	<img src="../../../../../source/img/1778078.svg" alt="PWR connector" style="width:60%;">
 
 -    Phoenix PC 5/ 3-STCL1-7,62
 
@@ -32,7 +32,7 @@ ___
 ### Strana napájení řízení, kontrolních výstupů, term.
 ___
 
-<img src="../../../../../source/CZ/img/TGS-560-50_100_Top.svg" alt="Motor/Feedback connectors" style="width:70%;">
+<img src="../../../../../source/img/TGS-560-50_100_Top.svg" alt="Motor/Feedback connectors" style="width:70%;">
 
 <div class="grid cards" markdown>
 
@@ -40,7 +40,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1778120.svg" alt="DCout connector" style="width:85%;">
+	<img src="../../../../../source/img/1778120.svg" alt="DCout connector" style="width:85%;">
 
 -    Phoenix PC 5/ 8-STCL1-7,62
 
@@ -52,7 +52,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/1792790000.svg" alt="DO" style="width:50%;">
+	<img src="../../../../../source/img/1792790000.svg" alt="DO" style="width:50%;">
 
 -    Weidmüller BCZ 3.81/04/180 SN BK BX
 

@@ -61,14 +61,14 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_enetCon.svg" alt="TGZ-S-48-100/250 ENET/ECAT/LogicPWR side" style="width:80%;">
+<img src="../../../../../source/img/TGZ-S-48-100_250RI_enetCon.svg" alt="TGZ-S-48-100/250 ENET/ECAT/LogicPWR side" style="width:80%;">
 
 <div class="grid cards" markdown>
 
 -   **X11 - Zpětná vazba 3 - RS422**
 
     ---
-    <img src="../../../../../source/common/img/5031491000.svg" alt="Molex ClikMate 5031491000" style="width:70%;">
+    <img src="../../../../../source/img/5031491000.svg" alt="Molex ClikMate 5031491000" style="width:70%;">
 	
 -    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -80,7 +80,7 @@ ___
 -   **X12 - Ethernet UDP - servisní**
 
     ---
-    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+    <img src="../../../../../source/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -89,7 +89,7 @@ ___
 -   **X13 - EtherCAT 2 - Fieldbus out**
 
     ---
-    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+    <img src="../../../../../source/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -98,7 +98,7 @@ ___
 -   **X14 - EtherCAT 1 - Fieldbus in**
 
     ---
-    <img src="../../../../../source/common/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
+    <img src="../../../../../source/img/5031490800.svg" alt="Molex ClikMate 5031490800" style="width:70%;">
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -111,14 +111,14 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_IO.svg" alt="IO/CAN/SD connectors" style="width:80%;">
+<img src="../../../../../source/img/TGZ-S-48-100_250RI_IO.svg" alt="IO/CAN/SD connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
 -   **X7 - Digitální vstupy TTL + Analogové vstupy**
 
     ---
-	<img src="../../../../../source/common/img/5031491200.svg" alt="DITTL + AIN + PT1000" style="width:70%;">
+	<img src="../../../../../source/img/5031491200.svg" alt="DITTL + AIN + PT1000" style="width:70%;">
 
 -    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -134,7 +134,7 @@ ___
 -   **X8 - Digitální I/O**
 
     ---
-	<img src="../../../../../source/common/img/5031491800.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
+	<img src="../../../../../source/img/5031491800.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:100%;">
 
 -    Molex ClikMate 5031491800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -145,7 +145,7 @@ ___
 -   **X9 - MicroSD slot**
 
     ---
-	<img src="../../../../../source/common/img/uSD.png" alt="uSD card connector" style="width:40%;">
+	<img src="../../../../../source/img/uSD.png" alt="uSD card connector" style="width:40%;">
 
 -   Použijte microSD kartu. Vhodná karta je součástí dodávky servozesilovače TGZ.
 
@@ -153,7 +153,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/5031490800.svg" alt="CAN connector" style="width:70%;">
+	<img src="../../../../../source/img/5031490800.svg" alt="CAN connector" style="width:70%;">
 
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -165,7 +165,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/common/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
+	<img src="../../../../../source/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
 	
 -	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -173,7 +173,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/CZ/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
 	
 -	LED diody
 
@@ -190,7 +190,7 @@ ___
 ### Strana feedback
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_FBconns.svg" alt="Feedback connectors" style="width:80%;">
+<img src="../../../../../source/img/TGZ-S-48-100_250RI_FBconns.svg" alt="Feedback connectors" style="width:80%;">
 
 <div class="grid cards" markdown>
 
@@ -198,7 +198,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/5031491200.svg" alt="FBE connector" style="width:80%;">
+	<img src="../../../../../source/img/5031491200.svg" alt="FBE connector" style="width:80%;">
 
 -    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -210,7 +210,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/5031491000.svg" alt="FB1 connector" style="width:80%;">
+	<img src="../../../../../source/img/5031491000.svg" alt="FB1 connector" style="width:80%;">
 
 -    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -227,7 +227,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/5031491000.svg" alt="FB2 connector" style="width:80%;">
+	<img src="../../../../../source/img/5031491000.svg" alt="FB2 connector" style="width:80%;">
 
 -    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
@@ -246,7 +246,7 @@ ___
 ### Strana motor
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_Mot.svg" alt="Motor connection" style="width:80%;">
+<img src="../../../../../source/img/TGZ-S-48-100_250RI_Mot.svg" alt="Motor connection" style="width:80%;">
 
 <div class="grid cards" markdown>
 
@@ -254,14 +254,14 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/pressfitM8.webp" alt="Motor connection" style="width:30%;">
+	<img src="../../../../../source/img/pressfitM8.webp" alt="Motor connection" style="width:30%;">
 
 -    Pressfit M8 
 
     ---
 
 	Doporučený průřez kabelu 25-35 mm<sup>2</sup> (3 - 2 AWG), lisovací oko M8.
-	Doporučené kabelové oko [BM 01737](https://www.tme.eu/en/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
+	Doporučené kabelové oko [BM 01737](https://www.tme.eu/CZ/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
 </div>
 
 !!! info "Průřez"
@@ -274,7 +274,7 @@ ___
 ### Pohled shora
 ___
 
-<img src="../../../../../source/CZ/img/TGZ-S-48-100_250RI_brd.webp" alt="Top view" style="width:80%;">
+<img src="../../../../../source/img/TGZ-S-48-100_250RI_brd.webp" alt="Top view" style="width:80%;">
 
 
 
@@ -292,7 +292,7 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/common/img/436500518.svg" alt="Molex Micro-Fit 3.0 436450500" style="width:90%;">
+	<img src="../../../../../source/img/436500518.svg" alt="Molex Micro-Fit 3.0 436450500" style="width:90%;">
 
 -    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -315,7 +315,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/430450412.svg" alt="Brake connector" style="width:60%;">
+	<img src="../../../../../source/img/430450412.svg" alt="Brake connector" style="width:60%;">
 
 -    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -331,7 +331,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/430450412.svg" alt="Brake connector aux" style="width:60%;">
+	<img src="../../../../../source/img/430450412.svg" alt="Brake connector aux" style="width:60%;">
 
 -    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -351,7 +351,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/common/img/436500215.svg" alt="External thermistor" style="width:60%;">
+	<img src="../../../../../source/img/436500215.svg" alt="External thermistor" style="width:60%;">
 
 -    Molex Micro-Fit 3.0 - 436500215. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 

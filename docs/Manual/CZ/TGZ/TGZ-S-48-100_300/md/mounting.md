@@ -16,5 +16,5 @@ L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na
 ## Rozestupy
 U servozesilovače TGZ-S-48-50/100 je doporučeno dodržet minimální horizontální vzdálenost mezi jednotlivými zařízeními alespoň 10 mm, doporučená vertikální vzdálenost je pak minimálně 50 mm.
 
-![TGZ-S-48-50/100 Distance](../../../../source/CZ/img/placement1.png)
+![TGZ-S-48-50/100 Distance](../../../../source/img/placement1.png)
 -->
