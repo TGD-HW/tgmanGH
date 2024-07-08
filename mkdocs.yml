@@ -6,6 +6,7 @@ theme:
   language: cs
   font: false
   logo: Manual/source/common/img/TGlogoFullWhite.svg
+  search_index_only: true
   icon:
     logo: Manual/source/common/img/TGlogoFull.svg
     previous: fontawesome/solid/angle-left
@@ -21,6 +22,9 @@ theme:
 #   - navigation.sections
     - toc.integrate
     - search.highlight
+    - search.highlight
+    - search.share
+    - search.suggest
     - header.autohide
     - content.footnote.tooltips
     - content.code.copy
