@@ -5,15 +5,14 @@ theme:
   name: 'material'
   language: cs
   font: false
-  logo: Manual/source/common/img/TGlogoFullWhite.svg
-  search_index_only: true
+  logo: Manual/source/img/TGlogoFullWhite.svg
   icon:
-    logo: Manual/source/common/img/TGlogoFull.svg
+    logo: Manual/source/img/TGlogoFull.svg
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   features:
-    - navigation.instant
-    - navigation.instant.progress
+    # - navigation.instant
+    # - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.path
@@ -22,20 +21,17 @@ theme:
 #   - navigation.sections
     - toc.integrate
     - search.highlight
-    - search.highlight
-    - search.share
-    - search.suggest
     - header.autohide
     - content.footnote.tooltips
     - content.code.copy
     - content.code.select
     - content.code.annotate
   extra:
-    logo: Manual/source/common/img/TGsymbol.svg
+    logo: Manual/source/img/TGsymbol.svg
   palette:
     primary: custom
     accent: teal
-  favicon: Manual/source/common/img/TGsymbol.svg
+  favicon: Manual/source/img/TGsymbol.svg
 extra:
     generator: true #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
     homepage: https://www.dev.tgdrives.cz/
@@ -79,23 +75,25 @@ plugins:
        background: white
        shadow: true
   # odkomentovat až se bude řešit multilang. do té doby vypnuto, protože zpomaluje překlad
-  # - i18n:
-       # docs_structure: folder
-       # reconfigure_search: true   
-       # fallback_to_default: true
-       # reconfigure_material: true
-       # languages:
-            # - locale: cs
-              # default: true
-              # name: Czech
-              # build: true
-              # site_name: "Česky"
-              # site_description: "Český manuál"
-            # - locale: en
-              # name: English
-              # build: true
-              # site_name: "English"
-              # site_description: "Description EN"
+  - i18n:
+       docs_structure: suffix
+       reconfigure_search: true
+       fallback_to_default: true
+       reconfigure_material: true
+       languages:
+            - locale: cs
+              default: true
+              name: Česky
+              build: true
+              site_name: "Česky"
+              site_description: "Český manuál"
+            - locale: en
+              default: false
+              name: English
+              build: true
+              site_name: "English"
+              site_description: "Description EN"
+                
   #mike nefungoval
   # - mike:
         # alias_type: copy
@@ -113,11 +111,11 @@ markdown_extensions:
  - pymdownx.snippets:
       base_path:
         - docs/Manual/source
-        - docs/Manual/CZ/TGZ/
-        - docs/Manual/CZ/TGS/
-        - docs/Manual/CZ/TGM/
-        - docs/Manual/CZ/ETC/
-        - docs/Manual/CZ/SW/        
+        - docs/Manual/CZ/TGZ
+        - docs/Manual/CZ/TGS
+        - docs/Manual/CZ/TGM
+        - docs/Manual/CZ/ETC
+        - docs/Manual/CZ/SW
  - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -308,12 +306,12 @@ nav:
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/safe.md'       
             - 'Společný HW':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
-                - Digitální vstupy: 'Manual/source/CZ/md/commonHW_DI.md'
-                - Digitální výstupy: 'Manual/source/CZ/md/commonHW_DO.md'  
-                - Analogové vstupy: 'Manual/source/CZ/md/commonHW_AI.md'  
-                - Sběrnice CAN: 'Manual/source/CZ/md/commonHW_CAN.md'
-                - Zpětná vazba FBE: 'Manual/source/CZ/md/commonHW_FBE.md'
-                - Zpětná vazba FB1, FB2: 'Manual/source/CZ/md/commonHW_FB12.md'                
+                - Digitální vstupy: 'Manual/source/md/commonHW_DI.md'
+                - Digitální výstupy: 'Manual/source/md/commonHW_DO.md'  
+                - Analogové vstupy: 'Manual/source/md/commonHW_AI.md'  
+                - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'
+                - Zpětná vazba FBE: 'Manual/source/md/commonHW_FBE.md'
+                - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'                
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
                 - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'
@@ -414,4 +412,4 @@ nav:
         - 'Ostatní': 
             - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
             - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'
-        - 'Certifikáty': 'Manual/source/CZ/md/cert.md'
+        - 'Certifikáty': 'Manual/source/md/cert.md'
