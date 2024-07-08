@@ -16,4 +16,4 @@ Tato verze se liší jak v hardware, tak ve firmware.
 Dbejte na to, aby takto použité hallovy sondy byly **přizpůsobeny pro napájecí napětí až 30V**, jelikož digitální vstupy servozesilovače TGZ pracují na nominální hladině **24V**.
 Použití hallových sond s napájecím napětím 5V nebo 12V nebude v tomto případě fungovat.   
 
-Pokud není možné z nějakého důvodu zajistit vhodné hallovy sondy a jejich napájecí napětí 24V, doporučujeme použít speciální přizpůsobovací modul [TGHall](../../../CZ/ETC/TGHall/md/description.md#TGhall_1), který si vyžádejte u společnosti TG Drives.
+Pokud není možné z nějakého důvodu zajistit vhodné hallovy sondy a jejich napájecí napětí 24V, doporučujeme použít speciální přizpůsobovací modul [TGHall](../../CZ/ETC/TGHall/md/description.md#TGhall_1), který si vyžádejte u společnosti TG Drives.

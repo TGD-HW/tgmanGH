@@ -10,4 +10,4 @@ Jeden z možných způsobů je nalisování rezistoru 120R velikosti 0207 do spo
 Doporučujeme použít kabel s charakteristickou impedancí 100 - 120 Ω.
 Maximální možná délka kabelu klesá s rostoucí požadovanou přenosovou rychlostí sběrnice.
 Jsou podporovány všechny standardní rychlosti sběrnice CAN: 10, 20, 50, 100, 125, 250, 500, 800 a 1000 Kbit/s.
-Rychlost se volí pomocí registru `CAN_BaudRate` v servisním programu [TGZ GUI](../../../CZ/TGZ/TGZ_SW/GUI/md/parameters.md#GUIbasicParams).
+Rychlost se volí pomocí registru `CAN_BaudRate` v servisním programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/parameters.md#GUIbasicParams).

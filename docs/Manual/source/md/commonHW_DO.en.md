@@ -6,7 +6,7 @@ Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konekt
 Výstupy DO2,4,6 jsou napájeny z napájecího vstupu VCC DO2,4,6 (pin 11 konektoru X8).   
 
 Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
-![Simplified TGZ DO schematic](../../../common/img/TGZ_DO_simplified.svg){: style="width:80%;" }
+![Simplified TGZ DO schematic](../img/TGZ_DO_simplified.svg){: style="width:80%;" }
 
 Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.
 
@@ -22,14 +22,14 @@ DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.
 ##Typické zapojení
 Typické schéma připojení zátěže k DO je nejčastěji *horní spínač*.   
 
-![high side switch](../../../common/img/HS_switch.svg){: style="width:30%;" }   
+![high side switch](../img/HS_switch.svg){: style="width:30%;" }   
 
 Zátěž je připojena mezi DO a GNDIO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví napájecí napětí VDDIO.
 Povelem `vypni` (log. 0) se na zátěži objeví GNDIO.
 
 Opačným případem je připojení zátěže k DO jako *dolní spínač*.   
 
-![low side switch](../../../common/img/LS_switch.svg){: style="width:30%;" }   
+![low side switch](../img/LS_switch.svg){: style="width:30%;" }   
 
 Zátěž je připojena mezi VDDIO a DO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
 Povelem `vypni` (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   
@@ -38,8 +38,8 @@ Povelem `vypni` (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je
 Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
 Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   
 
-![Inductive load high side](../../../common/img/InductiveLoad.svg){: style="width:35%;" }
-![Inductive load low side](../../../common/img/InductiveLoadLS.svg){: style="width:35%;" }
+![Inductive load high side](../img/InductiveLoad.svg){: style="width:35%;" }
+![Inductive load low side](../img/InductiveLoadLS.svg){: style="width:35%;" }
 
 !!! note "Anti-kickback"
 	Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.

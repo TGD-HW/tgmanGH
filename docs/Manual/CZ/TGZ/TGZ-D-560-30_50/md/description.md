@@ -1,8 +1,8 @@
 ##3D náhled
-![3D view IO side](../img/IOside.png){: style="width:75%;" }
+![3D view IO side](../img/IOside.svg){: style="width:75%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.png){: style="width:60%;" }
+![3D view FB side](../img/Motside.svg){: style="width:60%;" }
 
 ##Konektory
 ___

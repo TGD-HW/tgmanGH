@@ -6,7 +6,7 @@ Nejčastěji se používá k napájení snímačů polohy na 5V.
 
 Zjednodušené vnitřní schéma zapojení je na obrázku níže.
 
-![Simplified TGZ FBE schematic](../../../common/img/FBEinternals.svg){: style="width:80%;" }
+![Simplified TGZ FBE schematic](../img/FBEinternals.svg){: style="width:80%;" }
 
 Jedná se o 3 velmi rychlé budiče sběrnice RS485 schopné pracovat s datovým tokem až 20 Mbit/s.
 
