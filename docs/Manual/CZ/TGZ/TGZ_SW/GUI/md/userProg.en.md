@@ -1,1 +1,0 @@
-V programu TGZ GUI je možné spustit testovací uživatelský program.

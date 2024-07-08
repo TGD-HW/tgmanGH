@@ -1,1 +1,0 @@
---8<-- "CZ/md/safety.md"

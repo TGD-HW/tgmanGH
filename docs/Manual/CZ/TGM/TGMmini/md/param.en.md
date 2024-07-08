@@ -1,1 +1,0 @@
---8<-- "TGMmini/md/parameters.md"
