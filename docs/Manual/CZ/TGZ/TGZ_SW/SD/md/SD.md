@@ -1,4 +1,4 @@
-<img src="../../../../../../source/img/uSD.png" alt="uSD card connector" style="width:30%;">
+![uSD card connector](../../../../../source/img/uSD.png){: style="width: 30%;" }
 
 ##Uložené parametry {#SDparams}
 SD karta s uloženými parametry je kompatibilní pouze se stejným modelem TGZ a stejnou verzí firmware (v TGZ GUI se zobrazuje).

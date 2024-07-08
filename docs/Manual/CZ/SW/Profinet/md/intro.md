@@ -1,4 +1,4 @@
-<img src="../../../../../source/img/ProfinetLogo.png" alt="Profinet logo" style="width:30%;"> 
+![Profinet logo](../../../../source/img/ProfinetLogo.png){: style="width: 30%;" }
 
 PROFINET je registrovaná ochranná známka společností PROFIBUS a PROFINET International (PI).
 

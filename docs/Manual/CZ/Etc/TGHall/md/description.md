@@ -7,23 +7,23 @@ Zárověň je možné napětí 5&nbsp;V využít i na jiné účely.
 Spotřeba závisí na způsobu využití Hallových snímačů a na spotřebě ostatních připojených snímačů.
 Pro převod napětí je spotřeba proudu cca 50&nbsp;mA.
 
-<img src="../../img/3Dview.png" alt="3D view" style="width:50%;">
+![3D view](../img/3Dview.png){: style="width: 50%;" }
 
 <br>
 
-<img src="../../img/TopSignals.png" alt="Top view" style="width:50%;">
+![Top view](../img/TopSignals.png){: style="width: 50%;" }
 
 <br>
 
-<img src="../../img/TopDimm.png" alt="Top dimensions" style="width:50%;">
+![Top dimensions](../img/TopDimm.png){: style="width: 50%;" }
 
 <br>
 
-<img src="../../img/SideDimm1.png" alt="Side dimensions" style="width:50%;">
+![Side dimensions](../img/SideDimm1.png){: style="width: 50%;" }
 
 <br>
 
-<img src="../../img/SideDimm2.png" alt="Side dimensions" style="width:50%;">
+![Side dimensions](../img/SideDimm2.png){: style="width: 50%;" }
 
 
 

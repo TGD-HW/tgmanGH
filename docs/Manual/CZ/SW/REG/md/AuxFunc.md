@@ -15,7 +15,7 @@ Neprobíhá zde ovšem ani polohová ani rychlostní regulace.
 Výstupem PG je v tomto případě synchronní frekvence.
 
 ###Vektorové řízení ASM (se snímačem Hiperface DSL)
-<img src="../../../../../source/img/ASMschematic1.webp" alt="ASM simplified schematic" style="width:50%;">
+![ASM simplified schematic](../../../../source/img/ASMschematic1.webp){: style="width: 50%;" }
 
 | Parametr | Popis |
 |---|---|

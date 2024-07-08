@@ -1,7 +1,7 @@
 ##Stručný popis
 <br>
 
-<img src="../../img/3Dview.png" alt="Basic view" style="width:35%;">
+![Basic view](../img/3Dview.png){: style="width: 35%;" }
 
 <br>
 

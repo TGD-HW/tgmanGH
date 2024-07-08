@@ -13,7 +13,7 @@ Většina registrů je určena jen pro čtení a zobrazuje aktuální hodnoty CN
 Protože G-kód je většinou psán v jednotkách [mm], pracují i Interpolátory s jednotkami [mm].
 K nastavení převodu [mm] na [inc] slouží struktura Command nebo registr Ratio (viz dále).
 
-<img src="../../img/interpolatorBlock.png" alt="Blokové schéma Interpolátoru"  style="width:100%;">
+![Blokové schéma Interpolátoru](../img/interpolatorBlock.png){: style="width: 100%;" }
 
 ##Kompetence PLC a Windows aplikací
 ###PLC 
@@ -193,7 +193,7 @@ s možností nastavení tří parametrů:
 | 3   | 3   | Bessel          | mírný zdvih, hladký průběh, větší zpoždění       |
 | 2   | 1   | critically damped | hladký pozvolný průběh bez zdvihu, největší zpoždění |
 
-<img src="../../img/filterChar.png" alt="Grafické znázornění průběhu některých typů filtrů"  style="width:50%;">
+![Grafické znázornění průběhu některých typů filtrů](../img/filterChar.png){: style="width: 50%;" }
 
 ###Aktivace a parametrizace IIR Filtru
 Hodnoty parametrů IIR Filtru lze nastavit pomocí struktury Command.

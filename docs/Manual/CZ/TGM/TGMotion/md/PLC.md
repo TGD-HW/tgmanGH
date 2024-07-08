@@ -263,7 +263,7 @@ Délka vykonávání funkce Program_05 nesmí přesáhnout 10 μs, aby byla zabe
 ##Časová souslednost volání funkcí
 **Cycle_Time = 250 μs**
 
-<img src="../../img/PLC_250us.png" alt="Algoritmus vykonávání PLC pro Cycle_Time = 250 μs"  style="width:40%;">
+![Algoritmus vykonávání PLC pro Cycle_Time = 250 μs](../img/PLC_250us.png){: style="width: 40%;" }
 
 Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 250 μs.
 Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 50 μs.
@@ -290,7 +290,7 @@ Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravid
 	
 **Cycle_Time = 500 μs**
 
-<img src="../../img/PLC_500us.png" alt="Algoritmus vykonávání PLC pro Cycle_Time = 500 μs"  style="width:40%;">
+![Algoritmus vykonávání PLC pro Cycle_Time = 500 μs](../img/PLC_500us.png){: style="width: 40%;" }
 	
 Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 500 μs.
 Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 100 μs.
@@ -316,7 +316,7 @@ Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravid
 	
 **Cycle_Time = 1000 μs**
 
-<img src="../../img/PLC_1000us.png" alt="Algoritmus vykonávání PLC pro Cycle_Time = 1000 μs"  style="width:40%;">
+![Algoritmus vykonávání PLC pro Cycle_Time = 1000 μs](../img/PLC_1000us.png){: style="width: 40%;" }
 	
 Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 1000 μs.
 Ta je rovnoměrně rozdělena na 10 stejných časových úseků volaných pravidelně každých 100 μs.

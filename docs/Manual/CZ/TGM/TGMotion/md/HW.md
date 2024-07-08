@@ -6,7 +6,7 @@ Uživatelské rozhraní je zabezpečeno pomocí operátorského panelu.
 Lze také využívat klasického ovládání pomocí myši, klávesnice nebo tabletu.
 S okolím může PC komunikovat z Windows aplikací prostřednictvím PROFINETu, ethernetu nebo internetu.
 
-<img src="../../img/HW_TGmotion.png" alt="Hardwarové řešení TG Motion"  style="width:100%;">
+![Hardwarové řešení TG Motion](../img/HW_TGmotion.png){: style="width: 100%;" }
 
 !!! info "Upozornění"
 	

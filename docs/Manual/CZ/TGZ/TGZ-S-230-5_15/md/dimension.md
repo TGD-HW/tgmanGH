@@ -1,5 +1,5 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGZ-S-230-5/15 Dimmensions" style="width:50%;">
+![TGZ-S-230-5/15 Dimmensions](../img/dim.png){: style="width: 50%;" }
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

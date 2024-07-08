@@ -1,5 +1,5 @@
-<img src="../../../../../source/img/ECATlogo1.png" alt="ECAT logo" style="width:30%;">
-<img src="../../../../../source/img/CANopenLogo1.png" alt="CANopen logo" style="width:30%;">   
+![ECAT logo](../../../../source/img/ECATlogo1.png){: style="width: 30%;" }
+![CANopen logo](../../../../source/img/CANopenLogo1.png){: style="width: 30%;" }
 
 EtherCAT je registrovaná ochranná známka a patentovaná technologie, licencovaná společností Beckhoff Automation GmbH.
 CANopen a CiA jsou registrované ochranné známky společnosti CAN in Automation.

@@ -4,17 +4,17 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
+![3D view IO side](../img/IOside.svg){: style="width: 70%;" }
 <br>
 <br>
-<img src="../../img/Motside.svg" alt="3D view FB side" style="width:70%;">
+![3D view FB side](../img/Motside.svg){: style="width: 70%;" }
 
 ##Konektory
 ___
 ### Strana AC IN
 ___
 
-<img src="../../../../../source/img/TGS-320-10_15_ACside.png" alt="AC IN connector" style="width:70%;">
+![AC IN connector](../../../../source/img/TGS-320-10_15_ACside.png){: style="width: 70%;" }
 
 
 <div class="grid cards" markdown>
@@ -23,7 +23,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1778078.svg" alt="PWR connector" style="width:60%;">
+    ![PWR connector](../../../../source/img/1778078.svg){: style="width: 60%;" }
 
 -    Phoenix PC 5/ 3-STCL1-7,62
 
@@ -38,7 +38,7 @@ ___
 ___
 
 
-<img src="../../../../../source/img/TGS-320-10_15_LEDSide.png" alt="LEDs" style="width:70%;">
+![LEDs](../../../../source/img/TGS-320-10_15_LEDSide.png){: style="width: 70%;" }
 <!--
 <div class="grid cards" markdown>
 
@@ -46,7 +46,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+    ![LED signalizace](../../../../source/img/LEDsig.png){: style="width: 80%;" }
 	
 -	LED diody
 
@@ -61,7 +61,7 @@ ___
 ### Strana výstup DC bus, Ready, Error
 ___
 
-<img src="../../../../../source/img/TGS-320-10_15_DCbusSide.png" alt="Motor/Feedback connectors" style="width:70%;">
+![Motor/Feedback connectors](../../../../source/img/TGS-320-10_15_DCbusSide.png){: style="width: 70%;" }
 
 <div class="grid cards" markdown>
 
@@ -69,8 +69,8 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1778120.svg" alt="DCout connector" style="width:85%;">
-	<img src="../../../../../source/img/TGS-320_Rb.png" alt="DCout connector" style="width:85%;">	
+    ![DCout connector](../../../../source/img/1778120.svg){: style="width: 85%;" }
+    ![DCout connector](../../../../source/img/TGS-320_Rb.png){: style="width: 85%;" }
 
 -    Phoenix PC 5/ 8-STCL1-7,62
 
@@ -82,7 +82,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1792790000.svg" alt="DO" style="width:50%;">
+    ![DO](../../../../source/img/1792790000.svg){: style="width: 50%;" }
 
 -    Weidmüller BCZ 3.81/04/180 SN BK BX
 

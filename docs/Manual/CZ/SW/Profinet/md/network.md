@@ -13,7 +13,7 @@ Servozesilovač TGZ má vestavěnou funkci PROFINET Bridge, takže pro malý po�
 - Připojte počítač ke konektoru služby X11 Ethernet a spusťte program TGZ GUI.
 - Nastavení adresy MAC zařízení:
 
-<img src="../../../../../source/img/profinet1.webp" alt="Profinet img" style="width:90%;">
+![Profinet img](../../../../source/img/profinet1.webp){: style="width: 90%;" }
 
 - Adresa MAC začíná číslem `00` a `0A`.
   Poslední čtyři čísla mohou být libovolná, ale v síti PROFINET jedinečná.
@@ -24,16 +24,16 @@ Servozesilovač TGZ má vestavěnou funkci PROFINET Bridge, takže pro malý po�
   První dvě hexadecimální čísla jsou vždy `00` a `0A` pro všechna rozhraní PROFINET a konektory X13 a X12 bez ohledu na hodnotu zadanou v grafickém rozhraní TGZ.
 - Zvolte správné číslo telegramu podle projektu PROFINET a typu mechanismu ovládaného servopohonem TGZ.
 
-<img src="../../../../../source/img/profinet2.webp" alt="Profinet img" style="width:90%;">
+![Profinet img](../../../../source/img/profinet2.webp){: style="width: 90%;" }
 
 - V případě dvouosé varianty servozesilovače nastavte typ telegramu pro obě osy.
 - Uložte parametry do jednotky.
 
-<img src="../../../../../source/img/profinet3.webp" alt="Profinet img" style="width:40%;">
+![Profinet img](../../../../source/img/profinet3.webp){: style="width: 40%;" }
 
 - Restartujte jednotku.
 
-<img src="../../../../../source/img/profinet4.webp" alt="Profinet img" style="width:40%;">
+![Profinet img](../../../../source/img/profinet4.webp){: style="width: 40%;" }
 
 !!! note "Poznámka"
 	Při změně adresy MAC a/nebo čísla telegramu je důležité vždy uložit parametry a restartovat servozesilovač.
@@ -45,24 +45,24 @@ K tomu lze použít libovolný software PROFINET, například **TIA Portal**.
 
 - Vyberte síťový adaptér PC, který je připojen k síti PROFINET, a dvakrát klikněte na řádek **Update accessible devices**.
 
-<img src="../../../../../source/img/profinet5.webp" alt="Profinet img" style="width:40%;">
+![Profinet img](../../../../source/img/profinet5.webp){: style="width: 40%;" }
 
 - Připojená zařízení se po chvíli objeví:
 
-<img src="../../../../../source/img/profinet6.webp" alt="Profinet img" style="width:40%;">
+![Profinet img](../../../../source/img/profinet6.webp){: style="width: 40%;" }
 
 - Měl by se zobrazit seznam všech připojených zařízení v síti PROFINET.
   Rozbalte zařízení s danou MAC adresou a dvojklikem zvolte **Online & diagnostics**.
   
-<img src="../../../../../source/img/profinet7.webp" alt="Profinet img" style="width:40%;">
+![Profinet img](../../../../source/img/profinet7.webp){: style="width: 40%;" }
 
 - Zadejte jedinečnou IP adresu a vhodnou masku podsítě (obvykle `255.255.255.0`) a klikněte na tlačítko **Assign IP address**.
 
-<img src="../../../../../source/img/profinet8.webp" alt="Profinet img" style="width:70%;">
+![Profinet img](../../../../source/img/profinet8.webp){: style="width: 70%;" }
 
 - Nastavte název zařízení, který musí být v síti PROFINET také jedinečný, a přiřaďte jej tlačítkem **Assign name**.
 
-<img src="../../../../../source/img/profinet9.webp" alt="Profinet img" style="width:70%;">
+![Profinet img](../../../../source/img/profinet9.webp){: style="width: 70%;" }
 
 - Volitelně lze k lokalizaci zařízení v terénu použít blikání kontrolky LED zaškrtávacího políčka.
   TGZ bliká písmeny "Pd" na svém segmentovém LED displeji (Pd znamená PROFIdrive).
@@ -198,7 +198,7 @@ Hodnotu vůle lze nastavit pouze pomocí parametru `PNU 2583` v PLC, v oblasti r
 
 Pro nastavení `PNU 2583` lze v portálu TIA použít programový blok s názvem **SinParaS**.
 
-<img src="../../../../../source/img/profinet10.webp" alt="Profinet img" style="width:50%;">
+![Profinet img](../../../../source/img/profinet10.webp){: style="width: 50%;" }
 
 Vstup `hardwareId je` nastaven na stejnou hodnotu jako vstup `HWIDSTW` bloku SinaPos, tj. identifikátor telegramu TGZ.
 AxisNo může být 0 pro první osu nebo 1 pro druhou osu.

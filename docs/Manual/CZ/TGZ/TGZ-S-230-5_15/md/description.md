@@ -4,17 +4,17 @@
 ## Konektory
 -->
 ##3D náhled
-<img src="../../img/IOside.svg" alt="3D view IO side" style="width:70%;">
+![3D view IO side](../img/IOside.svg){: style="width: 70%;" }
 <br>
 <br>
-<img src="../../img/Motside.svg" alt="3D view motor side" style="width:70%;">
+![3D view motor side](../img/Motside.svg){: style="width: 70%;" }
 
 ##Konektory
 ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/img/TGZ-S-230-5_15_enetCon.png" alt="ENET/ECAT/LogicPWR connectors" style="width:60%;">
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-230-5_15_enetCon.png){: style="width: 60%;" }
 
 
 <div class="grid cards" markdown>
@@ -22,7 +22,7 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/img/1940760000.svg" alt="ENET/ECAT/LogicPWR connectors" style="width:70%;">
+    ![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width: 70%;" }
 
 -    Weidmüller BCZ 3.81/05/180 SN OR BX
 
@@ -36,7 +36,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/img/TGZ-S-230-5_15_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-230-5_15_IO.png){: style="width: 60%;" }
 
 <div class="grid cards" markdown>
 
@@ -45,13 +45,13 @@ ___
     ---
 	Pohled zezadu (strana kabelu)   
 	
-	<img src="../../../../../source/img/1277370000.svg" alt="X8 pinout" style="width:100%;">
+    ![X8 pinout](../../../../source/img/1277370000.svg){: style="width: 100%;" }
 	3D pohled zezadu   
 	
-	<img src="../../../../../source/img/1277370000_1.svg" alt="X8 pinout 3D" style="width:100%;">
+    ![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width: 100%;" }
 	Pohled zepředu (strana TGZ)   
 	
-	<img src="../../../../../source/img/1277370000_2.svg" alt="X8 pinout front" style="width:100%;">
+    ![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width: 100%;" }
 
 	Detailní soupis parametrů 
 	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
@@ -73,7 +73,7 @@ ___
 -   **X9 - MicroSD karta**
 
     ---
-<img src="../../../../../source/img/uSD.png" alt="uSD card connector" style="width:60%;">
+![uSD card connector](../../../../source/img/uSD.png){: style="width: 60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -81,13 +81,13 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu)   
-	<img src="../../../../../source/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+    ![CAN connector](../../../../source/img/1277270000.svg){: style="width: 25%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
+    ![CAN connector](../../../../source/img/1277270000_1.svg){: style="width: 45%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
+    ![CAN connector](../../../../source/img/1277270000_2.svg){: style="width: 35%;" }
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
 
@@ -101,7 +101,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
+    ![LED displej](../../../../source/img/TGZ_LED.png){: style="width: 60%;" }
 	
 -	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -109,7 +109,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+    ![LED signalizace](../../../../source/img/LEDsig.png){: style="width: 80%;" }
 	
 -	LED diody
 
@@ -126,7 +126,7 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/img/TGZ-S-230-5_15_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-230-5_15_FBconns.png){: style="width: 60%;" }
 
 <div class="grid cards" markdown>
 
@@ -134,13 +134,13 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277320000.svg" alt="FBE connector" style="width:60%;">
+    ![FBE connector](../../../../source/img/1277320000.svg){: style="width: 60%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277320000_1.svg" alt="FBE connector" style="width:60%;">
+    ![FBE connector](../../../../source/img/1277320000_1.svg){: style="width: 60%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277320000_2.svg" alt="FBE connector" style="width:60%;">	
+    ![FBE connector](../../../../source/img/1277320000_2.svg){: style="width: 60%;" }
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
@@ -155,13 +155,13 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000.svg){: style="width: 50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width: 50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width: 50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
@@ -176,13 +176,13 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000.svg){: style="width: 50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width: 50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width: 50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
@@ -200,7 +200,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1846250000.svg" alt="Motor connector" style="width:70%;">
+    ![Motor connector](../../../../source/img/1846250000.svg){: style="width: 70%;" }
 
 -    Weidmüller SLS 5.08/06/180FI SN OR BX
 
@@ -212,7 +212,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/1943660000.svg" alt="PWR connector" style="width:100%;">
+    ![PWR connector](../../../../source/img/1943660000.svg){: style="width: 100%;" }
 
 -    Weidmüller BLZP 5.08HC/10/180 SN OR BX
 

@@ -2,8 +2,8 @@
 ## Uchycení
 L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.
 
-<img src="../../img/mounting1.jpg" alt="TGZ-S-48-100/250 Mounting Top" style="width:80%;">
-<img src="../../img/mounting2.svg" alt="GZ-S-48-100/250 Mounting Bot" style="width:85%;">
+![TGZ-S-48-100/250 Mounting Top](../img/mounting1.jpg){: style="width: 80%;" }
+![GZ-S-48-100/250 Mounting Bot](../img/mounting2.svg){: style="width: 85%;" }
 
 !!! warning "Důležité"
 

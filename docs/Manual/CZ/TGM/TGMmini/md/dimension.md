@@ -1,10 +1,10 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGMmini dimensions" style="width:70%;">
+![TGMmini dimensions](../img/dim.png){: style="width: 70%;" }
 
 <br>
 
-<img src="../../img/dim2.png" alt="TGMmini dimensions 2" style="width:70%;">
+![TGMmini dimensions 2](../img/dim2.png){: style="width: 70%;" }
 
 <br>
 
-<img src="../../img/dim3.png" alt="TGMmini dimensions 3" style="width:40%;">
+![TGMmini dimensions 3](../img/dim3.png){: style="width: 40%;" }

@@ -1,5 +1,5 @@
 <!--## Rozměry zařízení-->
-<img src="../../img/dim.png" alt="TGZ-D-48-50/100 Dimmensions" style="width:60%;">
+![TGZ-D-48-50/100 Dimmensions](../img/dim.png){: style="width: 60%;" }
 
 <!-- priklad TeX zapisu $f=5 \times x$-->
 

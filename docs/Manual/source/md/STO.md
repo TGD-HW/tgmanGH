@@ -6,13 +6,13 @@ Pro korektní elektrické zapojení servozesilovače je nutné přivést na vstu
 V případě odpojení napájení od vstupu STO A nebo STO B dojde k okamžitému přerušení napájení motoru, který nebude dále pod momentem. 
 V případě, že je motor v pohybu dojde vlivem setrvačných sil k dotočení motoru do klidového stavu.
 
-<img src="../../../../../source/img/STOpins.png" alt="STO connection" style="width:15%;">
+![STO connection](../../../../source/img/STOpins.png){: style="width: 15%;" }
 
 K vstupům STO A a STO B je možné připojit uživatelský bezpečnostní systém v závislosti na konkrétní aplikaci a potřebách zákazníka.
 Po vybavení ochrany STO je nutné provést reset systému a opětovně povolit SW ENABLE. 
 Ochrana STO je redundantní a vyznačuje se vysokou mírou spolehlivosti.
 
-<img src="../../../../../source/img/STOschematic.png" alt="STO schematic" style="width:80%;">
+![STO schematic](../../../../source/img/STOschematic.png){: style="width: 80%;" }
 
 !!! info "Norma STO"
 

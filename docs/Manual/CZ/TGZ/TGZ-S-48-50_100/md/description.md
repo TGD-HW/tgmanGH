@@ -1,15 +1,15 @@
 ##3D náhled
-<img src="../../img/IOside.svg" alt="TGZ-S-48-50/100 IO side" style="width:70%;">
+![TGZ-S-48-50/100 IO side](../img/IOside.svg){: style="width: 70%;" }
 <br>
 <br>
-<img src="../../img/MotSide.svg" alt="TGZ-S-48-50/100 Feedback side" style="width:70%;">
+![TGZ-S-48-50/100 Feedback side](../img/MotSide.svg){: style="width: 70%;" }
 
 ##Konektory
 ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-50_100_enetCon.png" alt="TGZ-S-48-50/100 ENET/ECAT/LogicPWR side" style="width:60%;">
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100_enetCon.png){: style="width: 60%;" }
 
 
 <div class="grid cards" markdown>
@@ -17,7 +17,7 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	<img src="../../../../../source/img/5055700501.svg" alt="Molex Microlock 5055700501" style="width:70%;">
+    ![Molex Microlock 5055700501](../../../../source/img/5055700501.svg){: style="width: 70%;" }
 
 -    Molex Microlock 5055700501
 
@@ -31,7 +31,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-50_100_IO.png" alt="IO/CAN/SD connectors" style="width:60%;">
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100_IO.png){: style="width: 60%;" }
 
 <div class="grid cards" markdown>
 
@@ -40,13 +40,13 @@ ___
     ---
 	Pohled zezadu (strana kabelu)   
 	
-	<img src="../../../../../source/img/1277370000.svg" alt="X8 pinout" style="width:100%;">
+    ![X8 pinout](../../../../source/img/1277370000.svg){: style="width: 100%;" }
 	3D pohled zezadu   
 	
-	<img src="../../../../../source/img/1277370000_1.svg" alt="X8 pinout 3D" style="width:100%;">
+    ![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width: 100%;" }
 	Pohled zepředu (strana TGZ)   
 	
-	<img src="../../../../../source/img/1277370000_2.svg" alt="X8 pinout front" style="width:100%;">
+    ![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width: 100%;" }
 
 	Detailní soupis parametrů 
 	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
@@ -68,7 +68,7 @@ ___
 -   **X9 - MicroSD karta**
 
     ---
-<img src="../../../../../source/img/uSD.png" alt="uSD card connector" style="width:60%;">
+![uSD card connector](../../../../source/img/uSD.png){: style="width: 60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -76,13 +76,13 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu)   
-	<img src="../../../../../source/img/1277270000.svg" alt="CAN connector" style="width:25%;">
+    ![CAN connector](../../../../source/img/1277270000.svg){: style="width: 25%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277270000_1.svg" alt="CAN connector" style="width:45%;">
+    ![CAN connector](../../../../source/img/1277270000_1.svg){: style="width: 45%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277270000_2.svg" alt="CAN connector" style="width:35%;">
+    ![CAN connector](../../../../source/img/1277270000_2.svg){: style="width: 35%;" }
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
 
@@ -96,7 +96,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/TGZ_LED.png" alt="LED displej" style="width:60%;">
+    ![LED displej](../../../../source/img/TGZ_LED.png){: style="width: 60%;" }
 	
 -	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -104,7 +104,7 @@ ___
 
 	---
 	
-	<img src="../../../../../source/img/LEDsig.png" alt="LED signalizace" style="width:80%;">
+    ![LED signalizace](../../../../source/img/LEDsig.png){: style="width: 80%;" }
 	
 -	LED diody
 
@@ -121,7 +121,7 @@ ___
 ### Strana FB/motor
 ___
 
-<img src="../../../../../source/img/TGZ-S-48-50_100_FBconns.png" alt="Motor/Feedback connectors" style="width:60%;">
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100_FBconns.png){: style="width: 60%;" }
 
 <div class="grid cards" markdown>
 
@@ -129,13 +129,13 @@ ___
 
     ---
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277320000.svg" alt="FBE connector" style="width:60%;">
+    ![FBE connector](../../../../source/img/1277320000.svg){: style="width: 60%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277320000_1.svg" alt="FBE connector" style="width:60%;">
+    ![FBE connector](../../../../source/img/1277320000_1.svg){: style="width: 60%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277320000_2.svg" alt="FBE connector" style="width:60%;">	
+    ![FBE connector](../../../../source/img/1277320000_2.svg){: style="width: 60%;" }
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
@@ -150,13 +150,13 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000.svg){: style="width: 50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width: 50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB1 connector" style="width:50%;">
+    ![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width: 50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
@@ -171,13 +171,13 @@ ___
     ---
 	
 	Pohled zezadu (strana kabelu) 	
-	<img src="../../../../../source/img/1277290000.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000.svg){: style="width: 50%;" }
 	
 	3D pohled zezadu   
-	<img src="../../../../../source/img/1277290000_1.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width: 50%;" }
 	
 	Pohled zepředu (strana TGZ)   
-	<img src="../../../../../source/img/1277290000_2.svg" alt="FB2 connector" style="width:50%;">
+    ![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width: 50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
 
@@ -191,7 +191,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/S-48pressfit5.svg" alt="DC bus connection" style="width:70%;">
+    ![DC bus connection](../../../../source/img/S-48pressfit5.svg){: style="width: 70%;" }
 
 -    Pressfit M5
 
@@ -203,7 +203,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/S-48pressfit5.svg" alt="Motor connection" style="width:70%;">
+    ![Motor connection](../../../../source/img/S-48pressfit5.svg){: style="width: 70%;" }
 
 -    Pressfit M5
 
@@ -216,7 +216,7 @@ ___
 
     ---
 	
-	<img src="../../../../../source/img/5055700401.svg" alt="Brake connection" style="width:70%;">
+    ![Brake connection](../../../../source/img/5055700401.svg){: style="width: 70%;" }
 
 -    Molex Micro-lock 505570-0401
 

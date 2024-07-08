@@ -27,7 +27,7 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce rozvaděče. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-<img src="../../../../../source/img/cableShielding1.png" alt="Shielding connection DC" style="width:70%;">
+![Shielding connection DC](../../../../source/img/cableShielding1.png){: style="width: 70%;" }
 
 ###Postup zapojení motorového kabelu s&nbsp;připojením stínění
 
@@ -36,8 +36,8 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
 - Šroubem upevněte kabelové oko k&nbsp;základové desce. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
 
-<img src="../../../../../source/img/cableShielding2.png" alt="Shielding connection motor 1" style="width:50%;">
-<img src="../../../../../source/img/cableShielding3.png" alt="Shielding connection motor 2" style="width:70%;">
+![Shielding connection motor 1](../../../../source/img/cableShielding2.png){: style="width: 50%;" }
+![Shielding connection motor 2](../../../../source/img/cableShielding3.png){: style="width: 70%;" }
 
 ###Technologie stínění
 
@@ -45,7 +45,7 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 <br>
 
-<img src="../../../../../source/img/cableShielding4.svg" alt="Shielding connection technology" style="width:70%;">
+![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width: 70%;" }
 
 ###Potlačení rušení
 
@@ -63,4 +63,4 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 Na níže uvedených obrázcích je zobrazeno doporučené vedení kabeláže:
 
-<img src="../../../../../source/img/cableMan.svg" alt="Cable management technology" style="width:80%;">
+![Cable management technology](../../../../source/img/cableMan.svg){: style="width: 80%;" }

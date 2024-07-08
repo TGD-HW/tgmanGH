@@ -3,17 +3,17 @@
 L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.   
 
 Vrchní pohled
-<img src="../../img/mounting1.png" alt="TGZ-S-48-100/250 Mounting" style="width:70%;">   
+![TGZ-S-48-100/250 Mounting](../img/mounting1.png){: style="width: 70%;" }
 
 Spodní pohled
-<img src="../../img/mounting2.svg" alt="TGZ-S-48-100/250 Mounting" style="width:70%;">
+![TGZ-S-48-100/250 Mounting](../img/mounting2.svg){: style="width: 70%;" }
 
 !!! warning "Důležitá poznámka"
 	Šrouby (6 × M4 - červeně označené) pro montáž chladiče nesmí být delší než 7 mm, jinak by mohlo dojít k mechanickému poškození servozesilovače.
    
 Detailní pohled na montáž servozesilovačů TGZ-S-48-100/250 a TGZ-S-48-100/300:
-<img src="../../img/mounting3.png" alt="TGZ-S-48-100/250 Mounting" style="width:70%;">
-<img src="../../img/mounting4.png" alt="TGZ-S-48-100/250 Mounting" style="width:70%;">
+![TGZ-S-48-100/250 Mounting](../img/mounting3.png){: style="width: 70%;" }
+![TGZ-S-48-100/250 Mounting](../img/mounting4.png){: style="width: 70%;" }
 
 
 ##Postup montáže:

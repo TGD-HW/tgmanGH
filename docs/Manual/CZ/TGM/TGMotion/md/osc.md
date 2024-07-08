@@ -20,7 +20,7 @@ Na úrovni TG Motion se načtení a záznam dat utilitou **Oscilloscope** do sd�
 Tím je zaručena časová synchronizace zaznamenaných hodnot.
 Načtení a záznam však nemusí proběhnout každý Cycle_Time; počet Cycle_Time, během nichž dojde k jednomu záznamu, určuje registr `Number_Periods`.
 
-<img src="../../img/OscPeriods.png" alt="Vliv registru Number_Periods na četnost záznamů Oscilloscope"  style="width:60%;">
+![Vliv registru Number_Periods na četnost záznamů Oscilloscope](../img/OscPeriods.png){: style="width: 60%;" }
 
 !!! info "Poznámka"
 	Na úrovni Windows nabízí Control Observer utilitu **Oscilloscope**, v níž lze zaznamenaná data zobrazit formou grafu, uložit do souboru, zpětně načíst, měnit parametry záznamu i zobrazování, případně provádět vlastní záznam.
@@ -29,7 +29,7 @@ Načtení a záznam však nemusí proběhnout každý Cycle_Time; počet Cycle_T
 	Oscilloscope funguje jako jedna instance, která může být využívána z PLC i Control Observeru.
 	Nelze ji však používat současně z PLC, Control Observeru, případně z jiných aplikací.
 	
-<img src="../../img/OscScreenshot.png" alt="Utilita Oscilloscope obsažená v Control Observeru"  style="width:60%;">
+![Utilita Oscilloscope obsažená v Control Observeru](../img/OscScreenshot.png){: style="width: 60%;" }
 
 !!! note "Poznámka"
 	Podrobný popis utility Oscilloscope Control Observeru se nachází v kapitole Control Observer.
