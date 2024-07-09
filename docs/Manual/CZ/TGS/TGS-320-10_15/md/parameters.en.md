@@ -1,22 +1,22 @@
-| **NAPÁJENÍ** |   |
+| **POWER SUPPLY** |   |
 | :---: | :---: |
-| Vstupní napětí (VAC - 50/60 Hz)  | 1 x 230 VAC  |
-| Maximální vstupní proud (AC)  | 16 A |
-| Výstupní napětí (DC)  | 320 VDC  |
-| Maximální trvalý výstupní proud (DC)  | 10 A  |
-| Maximální krátkodobý výstupní proud (DC, 1s)  | 15 A  |
-| Maximální výstupní výkon  | 3 200 W  |
-| Maximální brzdný výkon (interní rezistor)  | 100 W  |
-| Maximální brzdný výkon (externí rezistor)  | 3 200 W |
-| Ztráty při maximálním výstupním výkonu  | 80 W  |
-| Jištění  | 16 A (char. Z, dvoupól) |
-| Stupeň krytí | IP20 |
-| **VÝSTUPY** |   |
-| Bezpotenciálový kontakt RDY | Max. 28 VDC / 700 mA |
-| Bezpotenciálový kontakt ERR | Max. 28 VDC / 700 mA |
-| **SIGNALIZACE** |   |
-| LED signalizace | 1x zelená (Ready)  1x červená (Error) |
-| **KONEKTORY** |   |
-| Síťový napájecí konektor | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
-| DC bus konektor | 1 x 8pin PHOENIX PC 5/ 8-STCL1-7,62 |
-| Konektor pro kontrolní výstupy | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |
+| Input voltage (VAC - 50/60 Hz)  | 1 x 230 VAC  |
+| Maximum input current (AC)  | 16 A |
+| Output voltage (DC)  | 320 VDC  |
+| Maximum continuous output current (DC)  | 10 A  |
+| Maximum short-term output current (DC, 1s)  | 15 A  |
+| Maximum output power  | 3 200 W  |
+| Maximum braking power (internal resistor)  | 100 W  |
+| Maximum braking power (external resistor)  | 3 200 W |
+| Losses at maximum output power  | 80 W  |
+| Overcurrent protection | 16 A (char. Z, dual) |
+| Protection level | IP20 |
+| **OUTPUTS** |   |
+| RDY digital output (contact) | Max. 28 VDC / 700 mA |
+| ERR digital output (contact) | Max. 28 VDC / 700 mA |
+| **SIGNALING** |   |
+| LED signaling | 1x green (Ready)  1x red (Error) |
+| **CONNECTORS** |   |
+| Network connector | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
+| DC bus connector | 1 x 8pin PHOENIX PC 5/ 8-STCL1-7,62 |
+| Digital outputs connector | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |

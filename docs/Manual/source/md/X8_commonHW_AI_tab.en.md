@@ -1,4 +1,4 @@
-|  č. vstupu  |  rozsah napětí |  nom. vstupní odpor ±10% | časová konstanta ±10% |
+| Input no. | voltage range | nominal input resistance ±10% | time constant ±10% |
 | :---: | :---: | :---: | :---: |
 |  #  |  V<sub>in</sub>  |  R<sub>inNom</sub>  |  τ<sub>in</sub> |
 | - |  V |  kΩ  | us |

@@ -1,1 +1,1 @@
---8<-- "md/safety.md"
+--8<-- "md/safety.en.md"

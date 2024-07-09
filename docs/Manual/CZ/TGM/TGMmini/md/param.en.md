@@ -1,1 +1,1 @@
---8<-- "TGMmini/md/parameters.md"
+--8<-- "TGMmini/md/parameters.en.md"

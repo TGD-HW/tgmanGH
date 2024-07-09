@@ -1,4 +1,4 @@
-|  č. výstupu  |  nominální výstupní napětí  | min. napájecí napětí  | max. napájecí napětí 𐠒  | min.výstupní napětí ±20%  | max. výstupní napětí ±20%  | max. výstupní proud |  přiřazeno k ose  |  max. frekvence - obdélník  |
+| Output no. | nominal output voltage | min. supply voltage | max. supply voltage 𐠒 | min. output voltage ±20% | max. output voltage ±20% | max. output current | assigned to axis | max. frequency - rectangle |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |  #  |  V<sub>nom</sub> |  VDD<sub>IO,min</sub> |  VDD<sub>IO,max</sub> |  V<sub>O,min</sub> |  V<sub>O,max</sub> |  I<sub>O,max</sub> |  Osa č.  |  f<sub>maxSq</sub> |
 | - |  V |  V  |  V  |  V  |  V  |  mA | -					  | kHz					  |

@@ -72,7 +72,7 @@ ___
 	
 -    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
-    --8<-- "md/X11_FB3_10pin_ClikMate.md"
+    --8<-- "md/X11_FB3_10pin_ClikMate.en.md"
 	
 	!!! warning "Pozor"	
 		Při použití tohoto typu zpětné vazby se ujistěte, že používáte vhodný TGZ firmware, který tyto funkce podporuje.
@@ -84,7 +84,7 @@ ___
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
 -   **X13 - EtherCAT 2 - Fieldbus out**
 
@@ -93,7 +93,7 @@ ___
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
 -   **X14 - EtherCAT 1 - Fieldbus in**
 
@@ -102,13 +102,13 @@ ___
 	
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
 </div>
 
 
 ___
-### Strana CAN/IO/SD
+### View of the CAN/IO/SD Side
 ___
 
 ![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250RI_IO.svg){: style="width:80%;" }
@@ -124,7 +124,7 @@ ___
 
 	---
 
-	--8<-- "md/X7_AIN_12pin_ClikMate.md"
+	--8<-- "md/X7_AIN_12pin_ClikMate.en.md"
 	
 	!!! warning "Varování"
 		Přímé vstupy PT1000 na pinech 3-6 konektoru X7 jsou dostupné pouze na řídicí desce z dodávek po 06-2024.
@@ -140,7 +140,7 @@ ___
 
 	---
 
-	--8<-- "md/X8_DIO_18pin_ClikMate.md"
+	--8<-- "md/X8_DIO_18pin_ClikMate.en.md"
 		
 -   **X9 - MicroSD slot**
 
@@ -159,7 +159,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_CAN_8pin_ClikMate.md"
+	--8<-- "md/X10_CAN_8pin_ClikMate.en.md"
 	
 -	**LED displej**
 
@@ -179,7 +179,7 @@ ___
 
 	---
 	
-	--8<-- "md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.en.md"
 	
 	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -204,7 +204,7 @@ ___
 
 	---
 
-	--8<-- "md/X4_FBE_12pin_ClikMate.md"
+	--8<-- "md/X4_FBE_12pin_ClikMate.en.md"
 
 -   **X5 - Zpětná vazba - osa 1**
 
@@ -216,7 +216,7 @@ ___
 
     ---
 
-	--8<-- "md/X5_FB1_10pin_ClikMate.md"
+	--8<-- "md/X5_FB1_10pin_ClikMate.en.md"
 	
 	!!! warning "Upozornění"
 		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB1 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
@@ -233,7 +233,7 @@ ___
 
     ---
 
-	--8<-- "md/X6_FB2_10pin_ClikMate.md"
+	--8<-- "md/X6_FB2_10pin_ClikMate.en.md"
 	
 	!!! warning "Upozornění"
 		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB2 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
@@ -298,7 +298,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_Microfit.md"
+	--8<-- "md/X1_24V_5pin_Microfit.en.md"
 	
 	!!! warning "Upozornění"
 		
@@ -321,7 +321,7 @@ ___
 
 	---
 
-	--8<-- "md/P7_BR_4pin_Microfit.md"
+	--8<-- "md/P7_BR_4pin_Microfit.en.md"
 	
 	!!! info "Konektorové krimpy"
 	
@@ -337,7 +337,7 @@ ___
 
 	---
 
-	--8<-- "md/P8_BR_4pin_Microfit.md"
+	--8<-- "md/P8_BR_4pin_Microfit.en.md"
 	
 	!!! note "Konektor P8"
 	
@@ -357,7 +357,7 @@ ___
 
 	---
 
-	--8<-- "md/P3_Term_2pin_Microfit.md"
+	--8<-- "md/P3_Term_2pin_Microfit.en.md"
 	
 	!!! note "Polarita"
 	

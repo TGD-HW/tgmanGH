@@ -49,4 +49,4 @@ Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schémat
 
 ##Parametry
 
---8<-- "CZ/md/X8_commonHW_DO_tab.md"
+--8<-- "md/X8_commonHW_DO_tab.en.md"

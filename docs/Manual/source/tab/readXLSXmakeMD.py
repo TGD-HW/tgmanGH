@@ -407,6 +407,256 @@ markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
 output_file = "../../source/md/X8_commonHW_AI_tab.md"
 save_markdown_table(markdown_table, output_file)
 
+############################################ EN params ###################################
+
+# TGZ-D-48-13_26
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-48-13_26"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-48-13/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-50_100
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-50_100"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-50_100/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-50_100RI
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-50_100RI"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-50_100RI/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-48-50_100
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-48-50_100"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-48-50_100/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_250
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_250RI"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_250RI/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_250RI
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_250RI"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_250RI/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_300RI
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_300RI"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_300RI/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_300
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_300"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_300/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_425
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_425"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_425/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-230-5_15
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-230-5_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-230-5_15/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-320-5_10
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-320-5_10"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-320-5_10/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-320-5_15
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-320-5_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-320-5_15/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-400-3_9
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-400-3_9"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-400-3_9/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-400-7_15
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-400-7_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-400-7_15/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-400-10_20
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-400-10_20"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-400-10_20/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-400-14_30
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-400-14_30"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-400-14_30/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-30_50
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-560-30_50"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-30_50/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGS-320-10_15
+file_path = "parametersEN.xlsx"
+sheet_name = "TGS-320-10_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGS/TGS-320-10_15/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGS-560-25_50
+file_path = "parametersEN.xlsx"
+sheet_name = "TGS-560-25_50"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGS/TGS-560-25_50/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGS-560-50_100
+file_path = "parametersEN.xlsx"
+sheet_name = "TGS-560-50_100"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGS/TGS-560-50_100/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGMmini
+file_path = "parametersEN.xlsx"
+sheet_name = "TGMmini"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGM/TGMmini/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGMcontroller
+file_path = "parametersEN.xlsx"
+sheet_name = "TGMcontroller"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGM/TGMcontroller/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGMcontroller
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZpMotion"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGM/TGZpMotion/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGMcontroller
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZpMotion"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGM/TGZpMotion/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+##########################################################################################
+# Other paramaters excel->md export
+##########################################################################################
+
+# Common DI params
+file_path = "parametersEN.xlsx"
+sheet_name = "commonHW_DI"
+range_start = "A1"
+range_end = "T100"
+markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X8_commonHW_DI_tab.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# Common DO params
+file_path = "parametersEN.xlsx"
+sheet_name = "commonHW_DO"
+range_start = "A1"
+range_end = "T100"
+markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X8_commonHW_DO_tab.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# Common AI params
+file_path = "parametersEN.xlsx"
+sheet_name = "commonHW_AI"
+range_start = "A1"
+range_end = "T100"
+markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X8_commonHW_AI_tab.en.md"
+save_markdown_table(markdown_table, output_file)
+
+
 
 
 ##########################################################################################

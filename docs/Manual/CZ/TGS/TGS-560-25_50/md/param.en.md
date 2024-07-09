@@ -1,4 +1,4 @@
---8<-- "TGS-560-25_50/md/parameters.md"
+--8<-- "TGS-560-25_50/md/parameters.en.md"
 
 <!--
 !!! info "Napájení brzdy"

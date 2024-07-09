@@ -17,7 +17,7 @@ ___
 
 	---
 
-	--8<-- "md/X3_24V_BLF_2_5.md"
+	--8<-- "md/X3_24V_BLF_2_5.en.md"
 
 
 -   **X4 - CAN**
@@ -30,7 +30,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
 </div>	
 
@@ -53,7 +53,7 @@ ___
 
     ---
 
-	--8<-- "md/X5_DI_10pin_B2CF.md"
+	--8<-- "md/X5_DI_10pin_B2CF.en.md"
 	
 -   **X10 - Digitální výstupy**
 
@@ -65,7 +65,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_DO_10pin_B2CF.md"
+	--8<-- "md/X10_DO_10pin_B2CF.en.md"
 	
 	!!! warning "Důležité upozornění"	
 	
@@ -86,6 +86,6 @@ ___
 
     ---
 
-	--8<-- "md/S1_SWITCH_CAN.md"
+	--8<-- "md/S1_SWITCH_CAN.en.md"
 
 </div>

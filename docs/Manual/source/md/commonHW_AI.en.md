@@ -1,7 +1,7 @@
-##Základní popis {#commonAI1-2}
-Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrovány dva analogové vstupy pro obecné použití.
-Jedná se o vstupy s nominálním rozsahem vstupního napětí 0-10V proti společné svorce AGND.
+##Basics {#commonAI1-2}
+The TGZ servo amplifier has two analogue inputs for general use integrated on the **X8** connector in the standard (UNI) version.
+These are inputs with a nominal input voltage range of 0-10V against the common terminal AGND.
 
-##Parametry DI
+##Parameters
 
---8<-- "CZ/md/X8_commonHW_AI_tab.md"
+--8<-- "md/X8_commonHW_AI_tab.en.md"

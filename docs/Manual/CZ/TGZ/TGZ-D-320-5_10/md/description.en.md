@@ -28,12 +28,12 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 
 </div>
 
 ___
-### Strana CAN/IO/SD
+### View of the CAN/IO/SD Side
 ___
 
 ![IO/CAN/SD connectors](../../../../source/img/TGZ-D-320-5_10_IO.png){: style="width:60%;" }
@@ -64,7 +64,7 @@ ___
 
 	---
 
-	--8<-- "md/X8_IO_22pin_B2CF.md"
+	--8<-- "md/X8_IO_22pin_B2CF.en.md"
 	
 	!!! warning "Pozor"	
 	
@@ -93,7 +93,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
 	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/md/commonHW_CAN.md#commonCAN).
 	
@@ -115,7 +115,7 @@ ___
 
 	---
 	
-	--8<-- "md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.en.md"
 	
 	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -123,7 +123,7 @@ ___
 
    
 ___
-### Strana FB/motor
+### View of the FB/motor side
 ___
 
 ![Motor/Feedback connectors](../../../../source/img/TGZ-D-320-5_10_FBconns.png){: style="width:60%;" }
@@ -146,7 +146,7 @@ ___
 
 	---
 
-	--8<-- "md/X5_FBE_12pin_B2CF.md"
+	--8<-- "md/X5_FBE_12pin_B2CF.en.md"
 	
 	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
 
@@ -167,7 +167,7 @@ ___
 
     ---
 
-	--8<-- "md/X6_FB1_8pin_B2CF.md"
+	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
 	
 	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -188,7 +188,7 @@ ___
 
     ---
 
-	--8<-- "md/X7_FB2_8pin_B2CF.md"
+	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -203,7 +203,7 @@ ___
 
     ---
 
-	--8<-- "md/X2_320_DC_1778078.md"
+	--8<-- "md/X2_320_DC_1778078.en.md"
 	
 -   **X3 - Motorový konektor osa 1**
 
@@ -215,7 +215,7 @@ ___
 
     ---
 
-	--8<-- "md/X4_M1_6pin_SLS.md"
+	--8<-- "md/X4_M1_6pin_SLS.en.md"
 	
 -   **X4 - Motorový konektor osa 2**
 
@@ -227,7 +227,7 @@ ___
 
     ---
 
-	--8<-- "md/X4_M1_6pin_SLS.md"
+	--8<-- "md/X4_M1_6pin_SLS.en.md"
 	
 
 	

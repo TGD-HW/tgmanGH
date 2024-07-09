@@ -1,4 +1,4 @@
---8<-- "TGZ-D-560-30_50/md/parameters.md"
+--8<-- "TGZ-D-560-30_50/md/parameters.en.md"
 
 !!! info "Napájení brzdy"
 

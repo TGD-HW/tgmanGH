@@ -23,12 +23,12 @@ ___
 
 	---
 
-	--8<-- "md/X2_D560DCbus.md"
+	--8<-- "md/X2_D560DCbus.en.md"
 
 </div>
 
 ___
-### Strana CAN/IO/SD, +24V napájení, motor
+### View of the CAN/IO/SD Side, +24V napájení, motor
 ___
 
 ![IO/CAN/SD + motor connectors](../../../../source/img/TGZ-D-560-30_50_Mot.svg){: style="width:60%;" }
@@ -44,7 +44,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 
 -   **X3 - Motorový konektor osa 1**
 
@@ -56,7 +56,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_M1_4pin_wago_2636.md"
+	--8<-- "md/X3_M1_4pin_wago_2636.en.md"
 	
 -   **X4 - Motorový konektor osa 2**
 
@@ -68,7 +68,7 @@ ___
 
     ---
 
-	--8<-- "md/X4_M2_4pin_wago_2636.md"
+	--8<-- "md/X4_M2_4pin_wago_2636.en.md"
 	
 -   **X14 - Brzda/Termistor osa 1**
 
@@ -80,7 +80,7 @@ ___
 
     ---
 
-	--8<-- "md/X14_BR1_4pin_LSF.md"
+	--8<-- "md/X14_BR1_4pin_LSF.en.md"
 	
 -   **X15 - Brzda/Termistor osa 2**
 
@@ -92,7 +92,7 @@ ___
 
     ---
 
-	--8<-- "md/X15_BR2_4pin_LSF.md"
+	--8<-- "md/X15_BR2_4pin_LSF.en.md"
 
 -   **X8 - Digitální I/O, analogové vstupy**
 
@@ -118,7 +118,7 @@ ___
 
 	---
 
-	--8<-- "md/X8_IO_22pin_B2CF.md"
+	--8<-- "md/X8_IO_22pin_B2CF.en.md"
 	
 	!!! warning "Pozor"	
 	
@@ -147,7 +147,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
 	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/md/commonHW_CAN.md#commonCAN).
 	
@@ -169,7 +169,7 @@ ___
 
 	---
 	
-	--8<-- "md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.en.md"
 	
 	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
@@ -200,7 +200,7 @@ ___
 
 	---
 
-	--8<-- "md/X5_FBE_12pin_B2CF.md"
+	--8<-- "md/X5_FBE_12pin_B2CF.en.md"
 	
 	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
 
@@ -221,7 +221,7 @@ ___
 
     ---
 
-	--8<-- "md/X6_FB1_8pin_B2CF.md"
+	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
 	
 	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
@@ -242,7 +242,7 @@ ___
 
     ---
 
-	--8<-- "md/X7_FB2_8pin_B2CF.md"
+	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 

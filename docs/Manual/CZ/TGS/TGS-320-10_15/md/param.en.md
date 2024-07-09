@@ -1,4 +1,4 @@
---8<-- "TGS-320-10_15/md/parameters.md"
+--8<-- "TGS-320-10_15/md/parameters.en.md"
 
 <!--
 !!! info "Napájení brzdy"

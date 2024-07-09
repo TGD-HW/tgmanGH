@@ -9,7 +9,7 @@ L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na
 
 	Šrouby (6 x M4 - červeně označené) pro montáž chladiče nesmí být delší než 7 mm, jinak hrozí mechanické poškození servozesilovače.
 
---8<-- "md/mechMounting.md"
+--8<-- "md/mechMounting.en.md"
 
 
 <!--

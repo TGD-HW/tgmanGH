@@ -1,4 +1,4 @@
---8<-- "TGZ-S-48-100_250/md/parameters.md"
+--8<-- "TGZ-S-48-100_250/md/parameters.en.md"
 
 !!! info "Napájení brzdy"
 

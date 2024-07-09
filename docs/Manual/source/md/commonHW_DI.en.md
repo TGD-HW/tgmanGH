@@ -8,7 +8,7 @@ Všechny digitální vstupy 1-8 mají integrovanou ochranu proti přepólování
 
 ##Parametry DI
 
---8<-- "CZ/md/X8_commonHW_DI_tab.md"
+--8<-- "md/X8_commonHW_DI_tab.en.md"
 
 ##Použití s hallovými sondami
 Pokud chcete využít přímého připojení hallových sond určených pro komutaci motoru do konektoru **X8** na vstupy `1,3,5` (osa 1) nebo `2,4,6` (osa 2) je potřeba požádat výrobce předem o správně HW uzpůsobenou verzi.

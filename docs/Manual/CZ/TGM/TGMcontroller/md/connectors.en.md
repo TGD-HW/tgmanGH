@@ -17,7 +17,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ_TGM.md"
+	--8<-- "md/X1_24V_5pin_BCZ_TGM.en.md"
 	
 -   **X11 - TGMotion systémový konektor**
 
@@ -70,7 +70,7 @@ ___
 </div>	
 
 ___
-### Strana CAN/IO/SD
+### View of the CAN/IO/SD Side
 ___
 
 ![TGMcontroller IO/CAN/SD side](../img/IOside.png){: style="width:80%;" }
@@ -94,7 +94,7 @@ ___
 
 	---
 
-	--8<-- "md/X8_IO_22pin_B2CF.md"
+	--8<-- "md/X8_IO_22pin_B2CF.en.md"
 	
 	!!! warning "Pozor"	
 	
@@ -123,7 +123,7 @@ ___
 
     ---
 
-	--8<-- "md/X10_CAN_4pin_B2CF.md"
+	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
 -	**LED displej**
 
@@ -173,7 +173,7 @@ ___
 
 	---
 
-	--8<-- "md/X5_FBE_12pin_B2CF_TGM.md"
+	--8<-- "md/X5_FBE_12pin_B2CF_TGM.en.md"
 
 -   **X6 - Zpětná vazba - osa 1**
 
@@ -192,7 +192,7 @@ ___
 
     ---
 
-	--8<-- "md/X6_FB1_8pin_B2CF_TGM.md"
+	--8<-- "md/X6_FB1_8pin_B2CF_TGM.en.md"
 	
 	!!! note ""
 		Konektor X6 podporuje buď zpětnou vazbu Hiperface DSL, nebo standard EnDAT 2.2.
@@ -215,7 +215,7 @@ ___
 
     ---
 
-	--8<-- "md/X7_FB2_8pin_B2CF_TGM.md"
+	--8<-- "md/X7_FB2_8pin_B2CF_TGM.en.md"
 	
 	!!! note ""
 		Konektor X7 lze použít pro připojení zpětné vazby DSL nebo SSI.

@@ -29,7 +29,7 @@ ___
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"
+	--8<-- "md/X1_ACIN_PC5.en.md"
 
 </div>
 
@@ -52,7 +52,7 @@ ___
 
 	---
 	
-	--8<-- "md/LEDsigAx12.md"
+	--8<-- "md/LEDsigAx12.en.md"
 
 </div>
 -->
@@ -76,7 +76,7 @@ ___
 
 	---
 
-	--8<-- "md/X2_DC_8pin_PC5.md"
+	--8<-- "md/X2_DC_8pin_PC5.en.md"
 
 -   **X3 - Kontrolní výstupy**
 
@@ -88,7 +88,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.md"
+	--8<-- "md/X3_DO_4pin_BCZ.en.md"
 	
 </div>
 
