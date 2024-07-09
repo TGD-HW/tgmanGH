@@ -4821,9 +4821,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#strana-led-signalizace" class="md-nav__link">
+  <a href="#strana-status-leds" class="md-nav__link">
     <span class="md-ellipsis">
-      Strana LED signalizace
+      Strana status LEDs
     </span>
   </a>
   
@@ -6787,30 +6787,30 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><strong>Pin č.</strong></th>
-<th style="text-align: center;"><strong>Označení</strong></th>
-<th style="text-align: center;"><strong>Popis</strong></th>
-<th style="text-align: center;"><strong>Průřez</strong></th>
+<th style="text-align: center;"><strong>pin #</strong></th>
+<th style="text-align: center;"><strong>Marking</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>AWG</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">PE</td>
-<td style="text-align: center;">Uzemnění</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">protect earth</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">N</td>
-<td style="text-align: center;">Střední pracovní vodič</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">Common</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">L</td>
-<td style="text-align: center;">Fáze</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">Phase</td>
+<td style="text-align: center;">10</td>
 </tr>
 </tbody>
 </table>
@@ -6818,26 +6818,26 @@
 </ul>
 </div>
 <hr />
-<h3 id="strana-led-signalizace">Strana LED signalizace<a class="headerlink" href="#strana-led-signalizace" title="Permanent link">&para;</a></h3>
+<h3 id="strana-status-leds">Strana status LEDs<a class="headerlink" href="#strana-status-leds" title="Permanent link">&para;</a></h3>
 <hr />
 <p><a class="glightbox" href="../../../../../source/img/TGS-320-10_15_LEDSide.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="LEDs" src="../../../../../source/img/TGS-320-10_15_LEDSide.png" style="width:70%;" /></a></p>
 <!--
 <div class="grid cards" markdown>
 
--   **LED signalizace**
+-   **status LEDs**
 
     ---
 
-    ![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+    ![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
 
--   LED diody
+-   LED diodes
 
     ---
 
-    | **Barva LED** | **Stav** |
+    | **LED color** | **Status** |
     | :---: | :---: |
-    | zelená | Servo OK |
-    | červená | Servo Error |
+    | green | Servo OK |
+    | red | Servo Error |
 
 </div>
 -->
@@ -6860,60 +6860,60 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><strong>Pin č.</strong></th>
-<th style="text-align: center;"><strong>Označení</strong></th>
-<th style="text-align: center;"><strong>Popis</strong></th>
-<th style="text-align: center;"><strong>Průřez</strong></th>
+<th style="text-align: center;"><strong>pin #</strong></th>
+<th style="text-align: center;"><strong>Marking</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>AWG</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">+ DC</td>
-<td style="text-align: center;">+ Napájení meziobvodu</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">+ DCbus supply</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">- DC</td>
-<td style="text-align: center;">- Napájení meziobvodu</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">- DCbus supply</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">PE</td>
-<td style="text-align: center;">Uzemnění</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">protect earth</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">SEL</td>
-<td style="text-align: center;">Volba brzdného odporu</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">regen. res. selection</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">+ RB</td>
-<td style="text-align: center;">+ Brzdný odpor</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">+ Regen. resistor</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">- RB</td>
-<td style="text-align: center;">- Brzdný odpor</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">- Regen. resistor</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">+ T</td>
-<td style="text-align: center;">+ Termistor</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">+ Thermistor</td>
+<td style="text-align: center;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">- T</td>
-<td style="text-align: center;">- Termistor</td>
-<td style="text-align: center;">Max. 6 mm<sup>2</sup></td>
+<td style="text-align: center;">- Thermistor</td>
+<td style="text-align: center;">10</td>
 </tr>
 </tbody>
 </table>
@@ -6929,36 +6929,36 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><strong>Pin č.</strong></th>
-<th style="text-align: center;"><strong>Označení</strong></th>
-<th style="text-align: center;"><strong>Popis</strong></th>
-<th style="text-align: center;"><strong>Průřez</strong></th>
+<th style="text-align: center;"><strong>pin #</strong></th>
+<th style="text-align: center;"><strong>Marking</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>AWG</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">RDY1</td>
-<td style="text-align: center;">Signál „Ready“ kontakt 1</td>
-<td style="text-align: center;">Max. 1,5 mm<sup>2</sup></td>
+<td style="text-align: center;">signal „Ready“ contact 1</td>
+<td style="text-align: center;">16-24</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">RDY2</td>
-<td style="text-align: center;">Signál „Ready“ kontakt 2</td>
-<td style="text-align: center;">Max. 1,5 mm<sup>2</sup></td>
+<td style="text-align: center;">signal „Ready“ contact 2</td>
+<td style="text-align: center;">16-24</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">ERR1</td>
-<td style="text-align: center;">Signál „Error“ kontakt 1</td>
-<td style="text-align: center;">Max. 1,5 mm<sup>2</sup></td>
+<td style="text-align: center;">signal „Error“ contact 1</td>
+<td style="text-align: center;">16-24</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">ERR2</td>
-<td style="text-align: center;">Signál „Error“ kontakt 2</td>
-<td style="text-align: center;">Max. 1,5 mm<sup>2</sup></td>
+<td style="text-align: center;">signal „Error“ contact 2</td>
+<td style="text-align: center;">16-24</td>
 </tr>
 </tbody>
 </table>
