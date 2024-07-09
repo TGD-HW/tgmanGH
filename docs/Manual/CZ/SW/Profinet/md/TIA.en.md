@@ -47,7 +47,7 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
   
 ![Profinet img](../../../../source/img/profinet16.webp){: style="width:50%;" }
 
-!!! warning "Pozor"
+!!! warning "Warning"
 	Dbejte na výběr správné verze firmwaru (zde V4.1).
 	
 - Na portálu TIA by se mělo otevřít okno **Devices & networks**.

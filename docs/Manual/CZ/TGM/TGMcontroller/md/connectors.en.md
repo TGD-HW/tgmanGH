@@ -77,16 +77,16 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X8 - Digitální I/O, analogové vstupy**
+-   **X8 - Digital I/O, analog inputs**
 
     ---
-	Pohled zezadu (strana kabelu)   
+	Cable side view   
 	
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1277370000.svg){: style="width:100%;" }
-	3D pohled zezadu   
+	3D view - cable side   
 	
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1277370000_1.svg){: style="width:100%;" }
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1277370000_2.svg){: style="width:100%;" }
 
@@ -96,11 +96,12 @@ ___
 
 	--8<-- "md/X8_IO_22pin_B2CF.en.md"
 	
-	!!! warning "Pozor"	
+	!!! warning "Warning"	
 	
-		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
+		For proper operation of the DI(1-6) it is necessary to supply at least one of the VCC DO (pin 11 and 12).
+		Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly even without it.
 	
--   **X9 - MicroSD karta**
+-   **X9 - MicroSD card**
 
     ---
 ![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
@@ -110,13 +111,13 @@ ___
 -   **X10 - CAN**
 
     ---
-	Pohled zezadu (strana kabelu)   
+	Cable side view   
 	![CAN connector](../../../../source/img/1277270000.svg){: style="width:25%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![CAN connector](../../../../source/img/1277270000_1.svg){: style="width:45%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![CAN connector](../../../../source/img/1277270000_2.svg){: style="width:35%;" }
 
 -    Weidmüller BCZ 3.81/04/180 SN OR BX
@@ -125,23 +126,23 @@ ___
 
 	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
--	**LED displej**
+-	**LED display**
 
 	---
 	
-	![LED displej](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
+	![LED display](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
--	Při spuštění se na LED displeji zobrazuje IP adresa zařízení.
+-	Při spuštění se na LED displayi zobrazuje IP adresa zařízení.
 	Za textem "IP" následují čísla.
 	Protože čísla mohou mít až 3 číslice, je každé celé číslo odděleno tečkou.
 	Například pro zobrazení čísla "192" se nejprve zobrazí jedna číslice "1" (bez tečky) a poté "92" (s tečkou).
 	Tímto způsobem lze zobrazit i složité IP adresy, například 192.168.128.179.
 
--	**LED signalizace**
+-	**status LEDs**
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
 -	K dispozici jsou čtyři další LED diody označené jako ERROR (červená barva) a READY (zelená barva).
 	READY ukazuje, že daná osa je v souboru `TGM.INI` povolena, naopak ERROR znamená, že osa není v souboru `TGM.INI` namapována na TGMotion.
@@ -157,16 +158,16 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X5 - Externí enkodér (FBE)**
+-   **X5 - External encoder (FBE)**
 
     ---
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
 
 -    Weidmüller BCZ 3.81/12/180 SN OR BX
@@ -175,17 +176,17 @@ ___
 
 	--8<-- "md/X5_FBE_12pin_B2CF_TGM.en.md"
 
--   **X6 - Zpětná vazba - osa 1**
+-   **X6 - Feedback axis 1**
 
     ---
 	
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FB1 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX
@@ -198,17 +199,17 @@ ___
 		Konektor X6 podporuje buď zpětnou vazbu Hiperface DSL, nebo standard EnDAT 2.2.
 		Typ použitého komunikačního standardu zpětné vazby je uveden v souboru `TGM.INI`: `Servo[xx].FeedbackType=1` pro DSL a `Servo[xx].FeedbackType=2` pro EnDAT.
 	
--   **X7 - Zpětná vazba - osa 2**
+-   **X7 - Feedback axis 2**
 
     ---
 	
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FB2 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller BCZ 3.81/08/180 SN OR BX

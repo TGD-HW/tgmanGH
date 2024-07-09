@@ -1,5 +1,5 @@
 --8<-- "TGZ-S-48-100_300/md/parameters.en.md"
 
-!!! info "Napájení brzdy"
+!!! info "Static brake power"
 
-	\* Bez napájení brzdy servomotoru (od 0,5 do 1A u řady TGN) a digitálních výstupů (až 6 x 300 mA).
+	\* Without power supply for the servomotor static brake (from 0.5 to 1A for the TGN series) and digital outputs (up to 6 x 300 mA).

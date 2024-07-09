@@ -34,7 +34,7 @@ ___
 </div>
 
 ___
-### Strana LED signalizace
+### Strana status LEDs
 ___
 
 
@@ -42,13 +42,13 @@ ___
 <!--
 <div class="grid cards" markdown>
 
--	**LED signalizace**
+-	**status LEDs**
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
--	LED diody
+-	LED diodes
 
 	---
 	

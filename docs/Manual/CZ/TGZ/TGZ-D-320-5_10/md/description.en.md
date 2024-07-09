@@ -40,24 +40,24 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X8 - Digitální I/O, analogové vstupy**
+-   **X8 - Digital I/O, analog inputs**
 
     ---
-	Pohled zezadu (strana kabelu)   
+	Cable side view   
 	
 	![X8 pinout](../../../../source/img/1277370000.svg){: style="width:100%;" }
-	3D pohled zezadu   
+	3D view - cable side   
 	
 	![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width:100%;" }
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	
 	![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width:100%;" }
 
-	Detailní soupis parametrů 
-	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
-	[digitálních výstupů DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) a 
-	[analogových vstupů AI1-2](../../../../source/md/commonHW_AI.md#commonAI1-2) 
-	naleznete v sekci [Společný HW](../../../../source/md/commonHW_DI.md#commonDI1-8).
+	Please see details about
+	[digital inputs DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
+	[digital outputs DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) and
+	[analog inputs AI1-2](../../../../source/md/commonHW_AI.md#commonAI1-2) 
+	in the [Common hardware section](../../../../source/md/commonHW_DI.md#commonDI1-8).
 	
 
 -    Weidmüller B2CF 3.50/22/180 SN OR BX
@@ -66,27 +66,28 @@ ___
 
 	--8<-- "md/X8_IO_22pin_B2CF.en.md"
 	
-	!!! warning "Pozor"	
+	!!! warning "Warning"	
 	
-		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
+		For proper operation of the DI(1-6) it is necessary to supply at least one of the VCC DO (pin 11 and 12).
+		Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly even without it.
 	
--   **X9 - MicroSD karta**
+-   **X9 - MicroSD card**
 
     ---
 ![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
--    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
+-    Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
     ---
-	Pohled zezadu (strana kabelu)   
+	Cable side view   
 	![CAN connector](../../../../source/img/1277270000.svg){: style="width:25%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![CAN connector](../../../../source/img/1277270000_1.svg){: style="width:45%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![CAN connector](../../../../source/img/1277270000_2.svg){: style="width:35%;" }
 
 -    Weidmüller B2CF 3.50/04/180 SN OR BX
@@ -95,29 +96,29 @@ ___
 
 	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
 	
-	Další informace o HW provedení sběrnice CAN naleznete v sekci [Sběrnice CAN](../../../../source/md/commonHW_CAN.md#commonCAN).
+	For more information on the HW version of the CAN bus, see [CAN bus](../../../../source/md/commonHW_CAN.md#commonCAN).
 	
--	**LED displej**
+-	**LED display**
 
 	---
 	
-	![LED displej](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
+	![LED display](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
--	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
+-	LED display indicates the status of the servoamplifier. See [TGZ status indicators](../../TGZ_SW/LED/md/description.md#LED_sigs) for detailed description.
 
--	**LED signalizace**
+-	**status LEDs**
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
--	LED diody
+-	LED diodes
 
 	---
 	
 	--8<-- "md/LEDsigAx12.en.md"
 	
-	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
+	A complete description of the meaning of the status LEDs can be found here: [TGZ status indicators](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
 </div>
 
@@ -130,16 +131,16 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X5 - Externí enkodér (FBE)**
+-   **X5 - External encoder (FBE)**
 
     ---
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
@@ -148,19 +149,19 @@ ___
 
 	--8<-- "md/X5_FBE_12pin_B2CF.en.md"
 	
-	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
+	For more information on external feedback, see [FBE Feedback](../../../../source/md/commonHW_FBE.md#commonFBE).
 
--   **X6 - Zpětná vazba - osa 1**
+-   **X6 - Feedback axis 1**
 
     ---
 	
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FB1 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
@@ -169,19 +170,19 @@ ___
 
 	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
 	
-	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
--   **X7 - Zpětná vazba - osa 2**
+-   **X7 - Feedback axis 2**
 
     ---
 	
-	Pohled zezadu (strana kabelu) 	
+	Cable side view 	
 	![FB2 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
 	
-	3D pohled zezadu   
+	3D view - cable side   
 	![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
 	
-	Pohled zepředu (strana TGZ)   
+	Front view (TGZ side)   
 	![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
 
 -    Weidmüller B2CF 3.50/08/180 SN OR BX
@@ -190,7 +191,7 @@ ___
 
 	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
-	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 		
 -   **X2 - Napájení silové části**

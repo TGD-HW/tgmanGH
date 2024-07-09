@@ -74,7 +74,7 @@ ___
 
     --8<-- "md/X11_FB3_10pin_ClikMate.en.md"
 	
-	!!! warning "Pozor"	
+	!!! warning "Warning"	
 		Při použití tohoto typu zpětné vazby se ujistěte, že používáte vhodný TGZ firmware, který tyto funkce podporuje.
 
 -   **X12 - Ethernet UDP - servisní**
@@ -161,27 +161,27 @@ ___
 
 	--8<-- "md/X10_CAN_8pin_ClikMate.en.md"
 	
--	**LED displej**
+-	**LED display**
 
 	---
 	
-	![LED displej](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
+	![LED display](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
--	LED displej signalizuje stavy viz. [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
+-	LED display indicates the status of the servoamplifier. See [TGZ status indicators](../../TGZ_SW/LED/md/description.md#LED_sigs) for detailed description.
 
--	**LED signalizace**
+-	**status LEDs**
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
 	
--	LED diody
+-	LED diodes
 
 	---
 	
 	--8<-- "md/LEDsigAx12.en.md"
 	
-	Kompletní popis významu stavových LED diod naleznete zde: [Význam stavových indikátorů TGZ](../../TGZ_SW/LED/md/description.md#LED_sigs)
+	A complete description of the meaning of the status LEDs can be found here: [TGZ status indicators](../../TGZ_SW/LED/md/description.md#LED_sigs)
 
 </div>
 
@@ -194,7 +194,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X4 - Externí enkodér (FBE)**
+-   **X4 - External encoder (FBE)**
 
     ---
 	
@@ -206,7 +206,7 @@ ___
 
 	--8<-- "md/X4_FBE_12pin_ClikMate.en.md"
 
--   **X5 - Zpětná vazba - osa 1**
+-   **X5 - Feedback axis 1**
 
     ---
 	
@@ -223,7 +223,7 @@ ___
 		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
 		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
 	
--   **X6 - Zpětná vazba - osa 2**
+-   **X6 - Feedback axis 2**
 
     ---
 	

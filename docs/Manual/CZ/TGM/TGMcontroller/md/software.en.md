@@ -10,7 +10,7 @@ Nejprve musí být připojen k zařízení. K tomu slouží okno *Connection inf
 ![Connection info dialog](../img/connectionInfo.png){: style="width:60%;" }
 
 V menu `Connection Device` zvolte požadovaný typ zařízení.
-Použijte připojení TCP nebo UDP, pokud je IP adresa již známá (zobrazuje se při spuštění na LED displeji) a je platná v rámci ethernetového segmentu.
+Použijte připojení TCP nebo UDP, pokud je IP adresa již známá (zobrazuje se při spuštění na LED displayi) a je platná v rámci ethernetového segmentu.
 Použijte typ FSP, pokud je ethernetový kabel připojen z PC přímo (peer to peer) ke konektoru FSP (X12).
 Počkejte, až bude stav připojení ONLINE. Pak jsou k dispozici všechny funkce a **Control Observer** pracuje přímo se zařízením.
 
@@ -111,7 +111,7 @@ Po změně IP adresy nezapomeňte ve stejném ethernetovém segmentu nastavit ta
 
 Pro automatické přidělování IP adres je také možné použít DHCP (v sítích se směrovačem).
 Nastavením `Enable=1` se tato funkce aktivuje.
-Když proces DHCP proběhne úspěšně, na LED displeji se zobrazí přidělená IP adresa.
+Když proces DHCP proběhne úspěšně, na LED displayi se zobrazí přidělená IP adresa.
 Upozorňujeme, že to může nějakou dobu trvat.
 Pokud se proces DHCP nezdaří (po uplynutí časového limitu několika desítek sekund), použije se místo toho statická IP adresa ze souboru `TGM.INI`.
 

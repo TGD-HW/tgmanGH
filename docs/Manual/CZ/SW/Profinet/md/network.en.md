@@ -65,7 +65,7 @@ K tomu lze použít libovolný software PROFINET, například **TIA Portal**.
 ![Profinet img](../../../../source/img/profinet9.webp){: style="width:70%;" }
 
 - Volitelně lze k lokalizaci zařízení v terénu použít blikání kontrolky LED zaškrtávacího políčka.
-  TGZ bliká písmeny "Pd" na svém segmentovém LED displeji (Pd znamená PROFIdrive).
+  TGZ bliká písmeny "Pd" na svém segmentovém LED displayi (Pd znamená PROFIdrive).
   
 ##Režimy polohování
 Pohon musí být v provozním stavu s nastaveným režimem polohování (telegramy `7`, `9` nebo `111`).

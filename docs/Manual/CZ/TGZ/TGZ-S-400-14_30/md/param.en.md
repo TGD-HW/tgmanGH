@@ -1,9 +1,9 @@
 --8<-- "TGZ-S-400-14_30/md/parameters.en.md"
 
-!!! info "Napájení brzdy"
+!!! info "Static brake power"
 
-	\* Bez napájení brzdy servomotoru (od 0,5 do 1A u řady TGN) a digitálních výstupů (až 6 x 300 mA).
+	\* Without power supply for the servomotor static brake (from 0.5 to 1A for the TGN series) and digital outputs (up to 6 x 300 mA).
 
-!!! note "Motorová tlumivka"
+!!! note "Motor choke"
 
-	Při použití kabeláže delší, než 5 m, se doporučuje aplikace vhodné 3f motorové tlumivky v závislosti na trvalém výstupním proudu servozesilovače. 
+	\* It is recommended to use appropriate motor choke when using motor cables longer than approx. 5 m. For more information contact sales representative.

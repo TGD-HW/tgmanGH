@@ -13,8 +13,8 @@
 | **Vstupy/výstupy** |   |
 | 2 AI, 8 DI, 6 DO | 1x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |
 | **SIGNALIZACE** |   |
-| LED displej | Chybové hlášení, 2x7 segment LED |
-| LED signalizace | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
+| LED display | Chybové hlášení, 2x7 segment LED |
+| status LEDs | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **OSTATNÍ KONEKTORY** |   |
 | Napájení výkonové části | 8 x Pressfit M5 |
 | Napájení řídicí části | 1 x 5pin MOLEX Micro-Fit 3.0, 436450500 |

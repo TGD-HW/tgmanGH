@@ -139,5 +139,5 @@ p_sml_visu^(Axis := Drive);
   
 - Sledujte proměnné `Control word`, `Status word` a `Mode of operation` v rozhraní TGZ_GUI.
 
-!!! warning "Pozor"
+!!! warning "Warning"
 	Nezapomeňte, že servo bude polohovat, takže buďte opatrní!

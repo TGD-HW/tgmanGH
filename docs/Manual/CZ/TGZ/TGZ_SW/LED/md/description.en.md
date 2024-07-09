@@ -1,7 +1,7 @@
 ##Význam LED indikátorů a stavového displeje {#LED_sigs}
 ![TGZ LED display](../img/TGZ_LED1.png){: style="width:25%;" }
 
-Integrované LED indikátory a dvoumístný sedmisegmentový LED displej zobrazují stav servozesilovače po zapnutí napájení 24V.
+Integrované LED indikátory a dvoumístný sedmisegmentový LED display zobrazují stav servozesilovače po zapnutí napájení 24V.
 LED indikátory jsou vždy dva (červená LED a zelená LED) pro každou řízenou osu plus jedna společná zelená LED pro signalizaci stavu sběrnice EtherCAT - signál EtherCAT RUN.
 Indikátory detekují stav jednotlivých řízených os a pokud nastane porucha nebo chyba, zobrazí se příslušné kódy poruchy na stavovém displeji.
 Možné stavy LED indikátorů a jejich význam, stejně jako signalizace chyb a jejich popis, jsou uvedeny v tabulkách níže.

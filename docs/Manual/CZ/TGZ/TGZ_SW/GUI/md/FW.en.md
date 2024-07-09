@@ -32,6 +32,6 @@
    opět v pravé části menu nahoře a zvolit **Save to memory**.
    Po restartování servozesilovače TGZ se již chyba parametrů (chyba 27) neobjeví.
 
-!!! warning "Pozor"
+!!! warning "Warning"
 	
 	Neodpojujte napájení, dokud není proces nahrávání dokončen!
