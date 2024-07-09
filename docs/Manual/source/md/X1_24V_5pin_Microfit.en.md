@@ -1,7 +1,7 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | VCC | +24V DC napájení řízení | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 2 | VCC_OUT | Výstup +24 VDC | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 3 | GND | GND (0 V) | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 4 | STO_A | STO kanál A | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 5 | STO_B | STO kanál B | 0,05 ~ 0,75 mm<sup>2</sup> |
+| 1 | VCC | +24V DC control supply voltage | 19-30 |
+| 2 | VCC_OUT | output +24 VDC | 19-30 |
+| 3 | GND | GND (0 V) | 19-30 |
+| 4 | STO_A | STO channel A | 19-30 |
+| 5 | STO_B | STO channel B | 19-30 |

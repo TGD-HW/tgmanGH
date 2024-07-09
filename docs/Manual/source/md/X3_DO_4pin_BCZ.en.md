@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | RDY1 | Signál „Ready“ kontakt 1 | Max. 1,5 mm<sup>2</sup> |
-| 2 | RDY2 | Signál „Ready“ kontakt 2 | Max. 1,5 mm<sup>2</sup> |
-| 3 | ERR1 | Signál „Error“ kontakt 1 | Max. 1,5 mm<sup>2</sup> |
-| 4 | ERR2 | Signál „Error“ kontakt 2 | Max. 1,5 mm<sup>2</sup> |
+| 1 | RDY1 | signal „Ready“ contact 1 | 16-24 |
+| 2 | RDY2 | signal „Ready“ contact 2 | 16-24 |
+| 3 | ERR1 | signal „Error“ contact 1 | 16-24 |
+| 4 | ERR2 | signal „Error“ contact 2 | 16-24 |

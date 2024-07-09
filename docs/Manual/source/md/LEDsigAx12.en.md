@@ -1,4 +1,4 @@
-| **Barva LED** | **Stav** |
+| **LED color** | **Status** |
 | :---: | :---: |
-| zelená | Servo OK |
-| červená | Servo Error |
+| green | Servo OK |
+| red | Servo Error |

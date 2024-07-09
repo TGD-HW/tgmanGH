@@ -1,24 +1,24 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | AGND | Analogová (neoddělená) zem | 0,14 – 1,5 mm<sup>2</sup> |
-| 2 | AGND | Analogová (neoddělená) zem | 0,14 – 1,5 mm<sup>2</sup> |
-| 3 | AIN2 | Analogový vstup č. 2 | 0,14 – 1,5 mm<sup>2</sup> |
-| 4 | AIN1 | Analogový vstup č. 1 | 0,14 – 1,5 mm<sup>2</sup> |
-| 5 | DO6 | Digitální výstup č. 6 | 0,14 – 1,5 mm<sup>2</sup> |
-| 6 | DO5 | Digitální výstup č. 5 | 0,14 – 1,5 mm<sup>2</sup> |
-| 7 | DO4 | Digitální výstup č. 4 | 0,14 – 1,5 mm<sup>2</sup> |
-| 8 | DO3 | Digitální výstup č. 3 | 0,14 – 1,5 mm<sup>2</sup> |
-| 9 | DO2 | Digitální výstup č. 2 | 0,14 – 1,5 mm<sup>2</sup> |
-| 10 | DO1 | Digitální výstup č. 1 | 0,14 – 1,5 mm<sup>2</sup> |
-| 11 | VCC DO2,4,6 | Napájení DO 2,4,6 (osa 2) | 0,14 – 1,5 mm<sup>2</sup> |
-| 12 | VCC DO1,3,5 | Napájení DO 1,3,5 (osa 1) | 0,14 – 1,5 mm<sup>2</sup> |
-| 13 | DGND | Digitální (oddělená) zem | 0,14 – 1,5 mm<sup>2</sup> |
-| 14 | DGND | Digitální (oddělená) zem | 0,14 – 1,5 mm<sup>2</sup> |
-| 15 | DI8 | Digitální vstup č. 8 | 0,14 – 1,5 mm<sup>2</sup> |
-| 16 | DI7 | Digitální vstup č. 7 | 0,14 – 1,5 mm<sup>2</sup> |
-| 17 | DI6 | Digitální vstup č. 6 | 0,14 – 1,5 mm<sup>2</sup> |
-| 18 | DI5 | Digitální vstup č. 5 | 0,14 – 1,5 mm<sup>2</sup> |
-| 19 | DI4 | Digitální vstup č. 4 | 0,14 – 1,5 mm<sup>2</sup> |
-| 20 | DI3 | Digitální vstup č. 3 | 0,14 – 1,5 mm<sup>2</sup> |
-| 21 | DI2 | Digitální vstup č. 2 | 0,14 – 1,5 mm<sup>2</sup> |
-| 22 | DI1 | Digitální vstup č. 1 | 0,14 – 1,5 mm<sup>2</sup> |
+| 1 | AGND | Analog ground (internal) | 16-25 |
+| 2 | AGND | Analog ground (internal) | 16-25 |
+| 3 | AIN2 | Analog input no. 2 | 16-25 |
+| 4 | AIN1 | Analog input no. 1 | 16-25 |
+| 5 | DO6 | Digital output no. 6 | 16-25 |
+| 6 | DO5 | Digital output no. 5 | 16-25 |
+| 7 | DO4 | Digital output no. 4 | 16-25 |
+| 8 | DO3 | Digital output no. 3 | 16-25 |
+| 9 | DO2 | Digital output no. 2 | 16-25 |
+| 10 | DO1 | Digital output no. 1 | 16-25 |
+| 11 | VCC DO2,4,6 | Power for DO 2,4,6 (axis 2) | 16-25 |
+| 12 | VCC DO1,3,5 | Power for DO 1,3,5 (axis 1) | 16-25 |
+| 13 | DGND | Digital (iso) ground | 16-25 |
+| 14 | DGND | Digital (iso) ground | 16-25 |
+| 15 | DI8 | Digital input no. 8 | 16-25 |
+| 16 | DI7 | Digital input no. 7 | 16-25 |
+| 17 | DI6 | Digital input no. 6 | 16-25 |
+| 18 | DI5 | Digital input no. 5 | 16-25 |
+| 19 | DI4 | Digital input no. 4 | 16-25 |
+| 20 | DI3 | Digital input no. 3 | 16-25 |
+| 21 | DI2 | Digital input no. 2 | 16-25 |
+| 22 | DI1 | Digital input no. 1 | 16-25 |

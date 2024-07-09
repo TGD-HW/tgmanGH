@@ -30,7 +30,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 
 -   **X2 - Napájení výkonové části (DC bus)**
 
@@ -41,7 +41,7 @@ ___
 
     ---
 
-	--8<-- "md/X2_48_DC_1778065.md"
+	--8<-- "md/X2_48_DC_1778065.en.md"
 
 </div>
 

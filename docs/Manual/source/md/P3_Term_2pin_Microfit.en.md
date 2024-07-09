@@ -1,4 +1,4 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | TERM | Teplotní čidlo PT1000 | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 2 | TERM | Teplotní čidlo PT1000 | 0,05 ~ 0,75 mm<sup>2</sup> |
+| 1 | TERM | PT1000 sensor | 19-30 |
+| 2 | TERM | PT1000 sensor | 19-30 |

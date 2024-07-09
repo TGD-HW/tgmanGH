@@ -1,10 +1,10 @@
-| **Pin č.** | **Označení** | **Popis** |
+| **pin #** | **Marking** | **Description** |
 | :---: | :---: | :---: |
-| 1 | CAN-H | Signál CANH (High) izolovaný |
-| 2 | CAN-L | Signál CANL (Low) izolovaný |
-| 3 | CAN GND | Izolovaná zem vyhranzená pro CAN |
-| 4 | CAN GND | Izolovaná zem vyhranzená pro CAN |
-| 5 | CAN-H | Signál CANH (High) izolovaný |
-| 6 | CAN-L | Signál CANL (Low) izolovaný |
-| 7 | CAN TERM-H | Vstup pro propojku na TERM-L – terminace CAN |
-| 8 | CAN TERM-L | Vstup pro propojku na TERM-H – terminace CAN |
+| 1 | CAN-H | signal CANH (High) isolated |
+| 2 | CAN-L | signal CANL (Low) isolated |
+| 3 | CAN GND | Iso GND for CAN |
+| 4 | CAN GND | Iso GND for CAN |
+| 5 | CAN-H | signal CANH (High) isolated |
+| 6 | CAN-L | signal CANL (Low) isolated |
+| 7 | CAN TERM-H | termination short input TERM-L – CAN termination |
+| 8 | CAN TERM-L | termination short input TERM-H – CAN termination |

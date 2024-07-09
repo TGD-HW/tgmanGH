@@ -1,4 +1,4 @@
-| **Pin č.** | **Inkrementální enkodér** |
+| **pin #** | **Incremental encoder** |
 | :---: | :---: |
 | 1 | GND |
 | 2 | +5V |

@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | CANH | CAN signál H | 0,14 – 1,5 mm<sup>2</sup> |
-| 2 | CANL | CAN signál L | 0,14 – 1,5 mm<sup>2</sup> |
-| 3 | CANGND | CAN oddělená zem | 0,14 – 1,5 mm<sup>2</sup> |
-| 4 | NC | Nepřipojeno | 0,14 – 1,5 mm<sup>2</sup> |
+| 1 | CANH | CAN signal H | 16-25 |
+| 2 | CANL | CAN signal L | 16-25 |
+| 3 | CANGND | CAN isolated ground | 16-25 |
+| 4 | NC | No connection | 16-25 |

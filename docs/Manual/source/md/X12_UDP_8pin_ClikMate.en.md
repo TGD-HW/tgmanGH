@@ -1,10 +1,10 @@
-| **Pin č.** | **Označení** | **Popis** |
+| **pin #** | **Marking** | **Description** |
 | :---: | :---: | :---: |
-| 1 | 		DD+ | T568B pár D pozitivní (hnědobílý) |
-| 2 | DD- | T568B pár D negativní (hnědý) |
-| 3 | DC- | T568B pár C negativní (modrobílý) |
-| 4 | DC+ | T568B pár C pozitivní (modrý) |
-| 5 | DB- | T568B pár B negativní (zelený) |
-| 6 | DB+ | T568B pár B pozitivní (zelenobílý) |
-| 7 | DA+ | T568B pár A pozitivní (oranžovobílý) |
-| 8 | DA- | T568B pár A negativní (oranžový) |
+| 1 | 		DD+ | T568B pair D positive (Bn-Wh) |
+| 2 | DD- | T568B pair D negative (Bn) |
+| 3 | DC- | T568B pair C negative (Bl-Wh) |
+| 4 | DC+ | T568B pair C positive (Bl) |
+| 5 | DB- | T568B pair B negative (Gn) |
+| 6 | DB+ | T568B pair B positive (Gn-Wh) |
+| 7 | DA+ | T568B pair A positive (Or-Wh) |
+| 8 | DA- | T568B pair A negative (Or) |

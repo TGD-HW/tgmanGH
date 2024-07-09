@@ -1,4 +1,4 @@
-| **Pin č.** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** | **Inkrementální enkodér** |
+| **pin #** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** | **Incremental encoder** |
 | :---: | :---: | :---: | :---: |
 | 1 | N.C. | FBSEL- | N.C. |
 | 2 | N.C. | FBSEL+ | N.C. |

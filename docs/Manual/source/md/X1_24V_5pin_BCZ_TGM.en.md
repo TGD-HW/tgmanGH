@@ -1,7 +1,7 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | EI1 | Rozšířený vstup 1 | Max. 1,5 mm<sup>2</sup> |
-| 2 | EI2 | Rozšířený vstup 2 | Max. 1,5 mm<sup>2</sup> |
-| 3 | VCC | +24V napájení | Max. 1,5 mm<sup>2</sup> |
-| 4 | N.C. | Nepřipojeno | Max. 1,5 mm<sup>2</sup> |
-| 5 | GND | GND (0 V) | Max. 1,5 mm<sup>2</sup> |
+| 1 | EI1 | Extension input 1 | 16-24 |
+| 2 | EI2 | Extension input 2 | 16-24 |
+| 3 | VCC | +24V power | 16-24 |
+| 4 | N.C. | No connect | 16-24 |
+| 5 | GND | GND (0 V) | 16-24 |

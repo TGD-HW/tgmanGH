@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | -B | - Brzda | 0,13 ~ 1,5 mm<sup>2</sup> |
-| 2 | +B | + Brzda | 0,13 ~ 1,5 mm<sup>2</sup> |
-| 3 | -T | -Termistor | 0,13 ~ 1,5 mm<sup>2</sup> |
-| 4 | +T | +Termistor | 0,13 ~ 1,5 mm<sup>2</sup> |
+| 1 | -B | - Brake | 16-26 |
+| 2 | +B | + Brake | 16-26 |
+| 3 | -T | -Thermistor | 16-26 |
+| 4 | +T | +Thermistor | 16-26 |

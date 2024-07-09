@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | -BR | - BRZDA | 0,13 ~ 0,32 mm<sup>2</sup> |
-| 2 | +BR | + BRZDA | 0,13 ~ 0,32 mm<sup>2</sup> |
-| 3 | -TERM | - Tepl. čidla mot. | 0,13 ~ 0,32 mm<sup>2</sup> |
-| 4 | +TERM | + Tepl. čidla mot. | 0,13 ~ 0,32 mm<sup>2</sup> |
+| 1 | -BR | - Brake | 22-26 |
+| 2 | +BR | + Brake | 22-26 |
+| 3 | -TERM | - thermo sensor (mot) | 22-26 |
+| 4 | +TERM | + thermo sensor (mot) | 22-26 |

@@ -1,10 +1,10 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 |   + DC  | + Napájení meziobvodu | Max. 6 mm<sup>2</sup> |
-| 2 |   - DC  | - Napájení meziobvodu | Max. 6 mm<sup>2</sup> |
-| 3 |   PE  | Uzemnění | Max. 6 mm<sup>2</sup> |
-| 4 |   SEL  | Volba brzdného odporu | Max. 6 mm<sup>2</sup> |
-| 5 |   + RB  | + Brzdný odpor | Max. 6 mm<sup>2</sup> |
-| 6 |   - RB  | - Brzdný odpor | Max. 6 mm<sup>2</sup> |
-| 7 |   + T  | + Termistor | Max. 6 mm<sup>2</sup> |
-| 8 |   - T  | - Termistor | Max. 6 mm<sup>2</sup> |
+| 1 |   + DC  | + DCbus supply | 10 |
+| 2 |   - DC  | - DCbus supply | 10 |
+| 3 |   PE  | protect earth | 10 |
+| 4 |   SEL  | regen. res. selection | 10 |
+| 5 |   + RB  | + Regen. resistor | 10 |
+| 6 |   - RB  | - Regen. resistor | 10 |
+| 7 |   + T  | + Thermistor | 10 |
+| 8 |   - T  | - Thermistor | 10 |

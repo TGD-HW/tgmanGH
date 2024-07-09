@@ -1,4 +1,4 @@
-| **Pin č.** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** | **Inkrementální enkodér** |
+| **pin #** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** | **Incremental encoder** |
 | :---: | :---: | :---: | :---: |
 | 1 | GND | GND | GND |
 | 2 | +5 V | +5V | +5V |

@@ -1,7 +1,7 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | STO_A | STO kanál A | Max. 1,5 mm<sup>2</sup> |
-| 2 | STO_B | STO kanál B | Max. 1,5 mm<sup>2</sup> |
-| 3 | VCC | +24V napájení řízení | Max. 1,5 mm<sup>2</sup> |
-| 4 | VCC_BR | +24V napájení brzdy | Max. 1,5 mm<sup>2</sup> |
-| 5 | GND | GND (0 V) | Max. 1,5 mm<sup>2</sup> |
+| 1 | STO_A | STO channel A | 16 |
+| 2 | STO_B | STO channel B | 16 |
+| 3 | VCC | +24V control supply | 16 |
+| 4 | VCC_BR | +24V brake supply | 16 |
+| 5 | GND | GND (0 V) | 16 |

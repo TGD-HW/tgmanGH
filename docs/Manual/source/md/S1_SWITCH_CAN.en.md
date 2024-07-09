@@ -1,4 +1,4 @@
-| **Pozice** | **Funkce** | **Popis** |
+| **Position** | **Status** | **Description** |
 | :---: | :---: | :---: |
-| Nahoře | Vypnuto | CAN není terminován |
-| Dole | Zapnuto | CAN je terminován |
+| Up | Off | CAN not terminated |
+| Down | On | CAN terminated |

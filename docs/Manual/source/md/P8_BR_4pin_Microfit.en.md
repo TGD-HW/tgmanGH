@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | NC | Nezapojuje se | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 2 | NC | Nezapojuje se | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 3 | NC | Nezapojuje se | 0,05 ~ 0,75 mm<sup>2</sup> |
-| 4 | GND | 0V napájení řízení | 0,05 ~ 0,75 mm<sup>2</sup> |
+| 1 | NC | No connect | 19-30 |
+| 2 | NC | No connect | 19-30 |
+| 3 | NC | No connect | 19-30 |
+| 4 | GND | 0V control supply voltage | 19-30 |

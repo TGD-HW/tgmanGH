@@ -1,4 +1,4 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | -DC IN | + DC bus vstup | dle oka |
-| 2 | +DC IN | - DC bus vstup | dle oka |
+| 1 | -DC IN | + DC bus input | according to cable ring |
+| 2 | +DC IN | - DC bus input | according to cable ring |

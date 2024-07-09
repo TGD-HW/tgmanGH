@@ -1,4 +1,4 @@
-| **Pin č.** | **Označení** | **Popis** | **Připojení** |
+| **pin #** | **Marking** | **Description** | **Connection** |
 | :---: | :---: | :---: | :---: |
-| 1 | -DC | 0 V | oko M5 |
-| 2 | +DC | +6 ~ +50 V | oko M5 |
+| 1 | -DC | 0 V | cable ring M5 |
+| 2 | +DC | +6 ~ +50 V | cable ring M5 |

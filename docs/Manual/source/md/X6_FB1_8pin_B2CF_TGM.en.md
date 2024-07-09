@@ -1,4 +1,4 @@
-| **Pin č.** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** |
+| **pin #** | **Endat 2.2/SSI/BISS** | **Hiperface DSL** |
 | :---: | :---: | :---: |
 | 1 | N.C. | FBSEL- |
 | 2 | N.C. | FBSEL+ |

@@ -1,8 +1,8 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | -B2 | - Brzda motor 2 | 0,13 ~ 2,5 mm<sup>2</sup> |
-| 2 | -B2 | + Brzda motor 2 | 0,13 ~ 2,5 mm<sup>2</sup> |
-| 3 | -BR | – Napájení brzdy | 0,13 ~ 2,5 mm<sup>2</sup> |
-| 4 | +BR | + Napájení brzdy | 0,13 ~ 2,5 mm<sup>2</sup> |
-| 5 | -B1 | - Brzda motor 1 | 0,13 ~ 2,5 mm<sup>2</sup> |
-| 6 | +B1 | + Brzda motor 1 | 0,13 ~ 2,5 mm<sup>2</sup> |
+| 1 | -B2 | - Brake motor 2 | 13-26 |
+| 2 | -B2 | + Brake motor 2 | 13-26 |
+| 3 | -BR | – Brake power | 13-26 |
+| 4 | +BR | + Brake power | 13-26 |
+| 5 | -B1 | - Brake motor 1 | 13-26 |
+| 6 | +B1 | + Brake motor 1 | 13-26 |

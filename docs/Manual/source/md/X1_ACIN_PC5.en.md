@@ -1,5 +1,5 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | PE | Uzemnění | Max. 6 mm<sup>2</sup> |
-| 2 | N | Střední pracovní vodič | Max. 6 mm<sup>2</sup> |
-| 3 | L | Fáze | Max. 6 mm<sup>2</sup> |
+| 1 | PE | protect earth | 10 |
+| 2 | N | Common | 10 |
+| 3 | L | Phase | 10 |

@@ -1,6 +1,6 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | PE | uzemnění | 0,2 ~ 6 mm<sup>2</sup> |
-| 2 | W | fáze W | 0,2 ~ 6 mm<sup>2</sup> |
-| 3 | V | fáze V | 0,2 ~ 6 mm<sup>2</sup> |
-| 4 | U | fáze U | 0,2 ~ 6 mm<sup>2</sup> |
+| 1 | PE | protect earth | 10-24 |
+| 2 | W | Phase W | 10-24 |
+| 3 | V | Phase V | 10-24 |
+| 4 | U | Phase U | 10-24 |

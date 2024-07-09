@@ -1,12 +1,12 @@
-| **Pin č.** | **Označení** | **Popis** | **Průřez** |
+| **pin #** | **Marking** | **Description** | **AWG** |
 | :---: | :---: | :---: | :---: |
-| 1 | PE | Uzemnění | 0,2 ~ 4 mm<sup>2</sup> |
-| 2 | N | Střední pracovní vodič | 0,2 ~ 4 mm<sup>2</sup> |
-| 3 | L | Fáze  | 0,2 ~ 4 mm<sup>2</sup> |
-| 4 | +RB  | + Brzdný odpor | 0,2 ~ 4 mm<sup>2</sup> |
-| 5 | -RB  | - Brzdný odpor | 0,2 ~ 4 mm<sup>2</sup> |
-| 6 | +DC  | + Napájení meziobvodu | 0,2 ~ 4 mm<sup>2</sup> |
-| 7 | -DC  | - Napájení meziobvodu | 0,2 ~ 4 mm<sup>2</sup> |
-| 8 | PE  | Uzemnění | 0,2 ~ 4 mm<sup>2</sup> |
-| 9 | T+  | + Termistor | 0,2 ~ 4 mm<sup>2</sup> |
-| 10 | T-  | - Termistor | 0,2 ~ 4 mm<sup>2</sup> |
+| 1 | PE | protect earth | 11-24 |
+| 2 | N | Common | 11-24 |
+| 3 | L | Phase | 11-24 |
+| 4 | +RB  | + Regen. resistor | 11-24 |
+| 5 | -RB  | - Regen. resistor | 11-24 |
+| 6 | +DC  | + DCbus supply | 11-24 |
+| 7 | -DC  | - DCbus supply | 11-24 |
+| 8 | PE  | protect earth | 11-24 |
+| 9 | T+  | + Thermistor | 11-24 |
+| 10 | T-  | - Thermistor | 11-24 |
