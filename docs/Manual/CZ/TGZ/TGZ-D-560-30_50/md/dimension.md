@@ -1,7 +1,7 @@
 <!--## Rozměry zařízení-->
 ![TGZ-D-560-30/50 Dimensions](../img/dim.png){: style="width:60%;" }
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:1px 10px;word-break:normal;}
@@ -52,4 +52,4 @@
     <td class="tg-8jun">10,15</td>
   </tr>
 </tbody>
-</table>
+</table> -->

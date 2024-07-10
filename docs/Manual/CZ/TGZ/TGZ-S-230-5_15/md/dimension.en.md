@@ -1,7 +1,7 @@
 <!--## Rozměry zařízení-->
 ![TGZ-S-230-5/15 Dimmensions](../img/dim.png){: style="width:50%;" }
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:1px 10px;word-break:normal;}
@@ -53,11 +53,11 @@
     <td class="tg-8jun">1,0</td>
   </tr>
 </tbody>
-</table>
+</table> -->
 
 <div style="margin-bottom: 20px;"></div>
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:1px 10px;word-break:normal;}
@@ -109,4 +109,4 @@
     <td class="tg-8jun">1,3</td>
   </tr>
 </tbody>
-</table>
+</table> -->

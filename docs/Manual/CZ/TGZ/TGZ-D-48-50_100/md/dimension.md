@@ -3,7 +3,7 @@
 
 <!-- priklad TeX zapisu $f=5 \times x$-->
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:6px 14px;word-break:normal;}
@@ -52,11 +52,11 @@
     <td class="tg-x53t">1,6</td>
   </tr>
 </tbody>
-</table>
+</table> -->
 
 <br />
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:6px 14px;word-break:normal;}
@@ -105,4 +105,4 @@
     <td class="tg-x53t">2,3</td>
   </tr>
 </tbody>
-</table>
+</table> -->

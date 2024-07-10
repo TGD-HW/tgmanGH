@@ -1,7 +1,7 @@
 <!--## Rozměry zařízení-->
 ![TGZ-D-320-5/10 Dimensions](../img/dim.png){: style="width:50%;" }
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:5px 6px;word-break:normal;}
@@ -50,11 +50,11 @@
     <td class="tg-lf36">1,0 </td>
   </tr>
 </tbody>
-</table>
+</table> -->
 
 <br>
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -103,11 +103,11 @@
     <td class="tg-lf36">1,3</td>
   </tr>
 </tbody>
-</table>
+</table> -->
 
 <br>
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -155,4 +155,4 @@
     <td class="tg-my6f">1,4</td>
   </tr>
 </tbody>
-</table>
+</table> -->

@@ -3,7 +3,7 @@
 
 
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:2px 16px;word-break:normal;}
@@ -54,4 +54,4 @@
     <td class="tg-0lax"></td>
   </tr>
 </tbody>
-</table>
+</table> -->

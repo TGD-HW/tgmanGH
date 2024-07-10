@@ -1,7 +1,7 @@
 <!--## Rozměry zařízení-->
 ![TGZ-S-48-50/100 Dimensions](../img/dim.png){: style="width:60%;" }
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:6px 14px;word-break:normal;}
@@ -50,4 +50,4 @@
     <td class="tg-x53t">0,9</td>
   </tr>
 </tbody>
-</table>
+</table> -->
