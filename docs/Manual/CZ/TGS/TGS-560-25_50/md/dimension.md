@@ -1,5 +1,5 @@
 <!--## Rozměry zařízení-->
-![TGS-320-10/15 Dimmensions](../img/dim.png){: style="width:60%;" }
+![TGS-320-10/15 Dimensions](../img/dim.png){: style="width:60%;" }
 
 <br>
 <br>
