@@ -1,66 +1,64 @@
-#**Elektrická instalace**
-##Instalace zařízení
-Během elektrické instalace servozesilovače je nutné se řídit bezpečnostními pokyny a dbát na dodržení těchto zásad:
+##Electrical installation of the device
+During the electrical installation of the servo amplifier, the safety instructions must be observed and the following principles must be observed:
 
-- Instalaci servozesilovače smí provádět pouze odborní pracovníci s příslušnou kvalifikací pro montáž elektrických zařízení.
-- Nesprávné síťové napětí, nevhodný motor nebo chybné zapojení mohou servozesilovač poškodit. Zkontrolujte, zda je servozesilovač vhodný pro daný motor. Porovnejte jmenovité napětí a proud připojovaných zařízení. Zapojte zařízení podle příslušných schémat zapojení (kap. „Popis zařízení“).  
-- Ujistěte se, že maximální přípustné jmenovité napětí na svorkách nebude překročeno o více než 10&nbsp;% ani v nejvíce nepříznivých situacích (viz ČSN&nbsp;EN&nbsp;60204-1).
-- Příliš vysoký jmenovitý proud externího jištění ohrozí kabely a zařízení. Jištění napájecího napětí a napájení ovládacích obvodů 24&nbsp;VDC musí nainstalovat uživatel.
-- Stav servozesilovače musí být monitorován tak, aby byly rozpoznány kritické situace.
-- Pro změnu nastavení servozesilovače lze používat konfigurační software. Jakékoli změny nebo zásahy, které nebyly předem konzultovány a odsouhlaseny výrobcem zařízení, způsobí zneplatnění záruky.
+- The servo amplifier may only be installed by qualified personnel for the installation of electrical equipment.
+- Improper mains voltage, incorrect motor or incorrect connection can damage the servo amplifier. Check that the servo amplifier is suitable for the motor. Compare the rated voltage and current of the connected devices. Connect the device according to the relevant wiring diagrams (chapter "Description of connectors").
+- Make sure that the maximum permissible rated voltage at the terminals is not exceeded by more than 10% even in the most unfavorable situations (see ČSN EN 60204-1).
+- Excessive current rating of the external fuse will endanger cables and equipment. The supply voltage fuse and the 24 VDC control circuit supply must be installed by the user.
+- The status of the servo amplifier must be monitored to identify critical situations.
+- Configuration software can be used to change the servo amplifier settings. Any changes or interventions not previously consulted and approved by the equipment manufacturer will void the warranty.
 
-Nainstalujte elektrický systém servozesilovače následovně:
+Install the servo amplifier electrical system as follows:
 
-- Zvolte kabely v souladu s normou ČSN&nbsp;EN&nbsp;60204.
-- Nainstalujte stínění a zemnění servozesilovače vyhovující požadavkům na elektromagnetickou kompatibilitu. Uzemněte montážní desku a kryt motoru.
-- Zapojte servozesilovač a konektory s ohledem na běžné zásady a doporučení pro potlačení elektromagnetického rušení. 
+- Select cables in accordance with the ČSN EN 60204 standard.
+- Install a servo amplifier shield and ground that meets EMC requirements. Ground the mounting plate and motor cover.
+- Connect the servo amplifier and connectors according to common principles and recommendations for suppressing electromagnetic interference.
 
-##Stínění
-###Postup zapojení kabelu pro DC BUS (napájení výkonové části) s&nbsp;připojením stínění
+##Shield connection procedure
+###Cable connection procedure for DC BUS (power supply) with shield connection:
 
-- Používejte pouze originální kabely TG Drives - pokud možno co nejkratší kabely dle vzájemné vzdálenosti a&nbsp;uspořádání jednotlivých zařízení v&nbsp;rozvaděči.
-- Z obou konců kabelu odstraňte vnější (oranžovou) izolaci v&nbsp;délce 25 až 35 mm. Dávejte pozor, abyste nepoškodili vrstvu (síťku) stínění kabelu.
-- Přehněte síťku stínění dozadu před neodizolovanou část kabelu a&nbsp;zajistěte smršťovací bužírkou.
-- Odizolujte konce všech vodičů a&nbsp;nasaďte na ně kontaktní dutinky.
-- Přibližně uprostřed kabelu odstraňte vnější izolaci v&nbsp;šířce odpovídající kabelovému oku (obvykle 15 – 20 mm). Dávejte pozor, abyste nepoškodili síťku stínění kabelu.
-- Na odizolovanou část kabelu (viz předchozí bod) nasaďte kabelové oko o&nbsp;průměru cca. 6 - 8 mm v&nbsp;sevřeném stavu.
-- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-- Šroubem upevněte kabelové oko k&nbsp;základové desce rozvaděče. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
+- Use only original TG Drives cables - the shortest possible cables according to the mutual distance and arrangement of individual devices in the switchboard.
+- Remove the outer (orange) insulation of 25 to 35 mm from both ends of the cable. Be careful not to damage the shield layer of the cable.
+- Fold the shield back in front of the uninsulated part of the cable and secure with a heat shrink tubing.
+- Strip the ends of all wires and fit the contact sleeves on them.
+- Approximately in the middle of the cable, remove the outer insulation in the width corresponding to the cable eye (usually 15 - 20 mm). Be careful not to damage the cable shield.
+- On the stripped part of the cable (see previous point), place a cable lug with a diameter of approx. 6 - 8 mm in the clamped state.
+- Connect the connectors according to the wiring diagram and connect to the device.
+- Fasten the cable lug to the base plate of the switchboard with a screw. The cable lug must rest on the shield net after tightening the screw, this is the only way to ensure quality contact.
 
-![Shielding connection DC](../img/cableShielding1.png){: style="width:70%;" }
+![Shielding connection DC](../../../../source/img/cableShielding1.png){: style="width:70%;" }
 
-###Postup zapojení motorového kabelu s&nbsp;připojením stínění
+###Motor cable connection procedure with shield connection:
 
-- Ve vzdálenosti 12 – 15 cm od konce vnější izolace odstraňte izolaci kabelu v&nbsp;šířce odpovídající kabelovému oku (obvykle 15 – 20 mm). Dávejte pozor, abyste nepoškodili vrstvu (síťku) stínění kabelu.
-- Na odizolovanou část kabelu (viz předchozí bod) nasaďte kabelové oko o&nbsp;průměru cca. 6 - 8 mm v&nbsp;sevřeném stavu.
-- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-- Šroubem upevněte kabelové oko k&nbsp;základové desce. Kabelové oko musí po dotažení šroubu doléhat na síťku stínění, jen tak je zaručen kvalitní kontakt.
+- At a distance of 12 - 15 cm from the end of the outer insulation, remove the cable insulation in a width corresponding to the cable lug (usually 15 - 20 mm). Be careful not to damage the cable shield (mesh).
+- Attach a cable lug with a diameter of approx. 6 - 8 mm in the clamped state.
+- Connect the connectors according to the wiring diagram and connect to the device.
+- Fasten the cable lug to the base plate with a screw. The cable lug must rest on the shield net after tightening the screw, this is the only way to ensure quality contact.
 
-![Shielding connection motor 1](../img/cableShielding2.png){: style="width:50%;" }
-![Shielding connection motor 2](../img/cableShielding3.png){: style="width:70%;" }
+![Shielding connection motor 1](../../../../source/img/cableShielding2.png){: style="width:50%;" }
+![Shielding connection motor 2](../../../../source/img/cableShielding3.png){: style="width:70%;" }
 
-###Technologie stínění
-
-Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
+###Shielding technology
+The figures show an unsuitable and suitable shield connection:
 
 <br>
 
-![Shielding connection technology](../img/cableShielding4.svg){: style="width:70%;" }
+![Shielding connection technology](../../../../source/img/cableShielding4.en.png){: style="width:70%;" }
 
-###Potlačení rušení
+###Reducing EMI
 
-**Následující pokyny vám pomohou omezit problémy s elektrickým rušením ve Vaší aplikaci:**
+**The following guidelines will help you reduce electrical interference problems in your application:**
 
-- Zajistěte dobré připojení mezi díly v&nbsp;rozvaděči. Propojte zadní panel a&nbsp;dveře rozvaděče s&nbsp;tělem skříně pomocí lankových vodičů. Při zajištění uzemnění nikdy nespoléhejte na propojení přes závěsy (panty) nebo montážní šrouby. Zajistěte elektrické připojení celého zadního povrchu panelu servozesilovače. Doporučuje se použít elektricky vodivé panely, například ze slitin hliníku nebo pozinkované oceli. U kovových panelů s&nbsp;nátěrem nebo jinou povrchovou úpravou odstraňte nevodivou vrstvu za servozesilovačem.
-- Zajistěte dobré připojení na zem. Připojte rozvaděč na dobré uzemnění. Zemnicí vodiče by měly mít stejný průřez, jako napájecí vodiče, nebo o&nbsp;jeden stupeň menší.
-- Použijte kabely dodané výrobcem. Je-li použit kabel, který obsahuje také vodiče pro ovládání brzdy, musí mít vodiče pro ovládání brzdy samostatné stínění.
-- Uzemněte stínění na obou koncích. Uzemněte všechna stínění s&nbsp;co největší plochou (pro dosažení nízké impedance). Připojte je na kovový kryt konektorů nebo svorky pro stínění všude, kde je to možné. U kabelů, které vstupují do rozvaděče, připojte stínění po celém obvodu kabelu (360°). Nikdy nepřipojujte jen jeden „drátek“.
-- Kabely by se neměly prodlužovat, protože by mohlo dojít k&nbsp;narušení stínění a&nbsp;tím také k&nbsp;rušení zpracování signálu. Pro dosažení maximální délky kabelu použijte kabely s&nbsp;odpovídajícím průřezem podle ČSN EN 60204 a&nbsp;z&nbsp;doporučeného materiálu.
-- Spojujte kabely správným způsobem. Pokud je zapotřebí použít rozdělené kabely, použijte pro jejich spojení konektory s&nbsp;kovovým krytem. Zajistěte, aby byly oba kryty spojeny se stíněním po celém obvodu kabelu (360°). Žádná část kabelu by neměla zůstat nestíněná. Nikdy nespojujte rozdělený kabel pomocí svorkovnice.
-- Vodiče mezi jednotlivými servozesilovači musí být rovněž stíněné.
+- Ensure a good connection between the parts in the cabinet. Connect the rear panel and the cabinet door to the cabinet body using stranded wires. Never rely on hinges or mounting screws to provide grounding. Ensure that the entire rear surface of the servo amplifier panel is electrically connected. It is recommended to use electrically conductive panels, for example made of aluminum alloys or galvanized steel. For metal panels with a coating or other finish, remove the non-conductive layer behind the servo amplifier.
+- Ensure a good ground connection. Connect the switchboard to a good ground. The earth conductors should have the same cross-section as the supply conductors, or one degree smaller.
+- Use the cables provided by the manufacturer. If a cable is used which also contains the brake control wires, the brake control wires must have a separate shield.
+- Ground the shield at both ends. Ground all shields with as large an area as possible (to achieve low impedance). Connect them to the metal cover of the connectors or shield terminals wherever possible. For cables entering the switchboard, connect the shield around the entire cable circumference (360 °). Never connect just one "wire".
+- The cables should not be extended, as this could disturb the shielding and thus the signal processing. To achieve the maximum cable length, use cables with the appropriate cross-section according to ČSN EN 60204 and made of the recommended material.
+- Connect the cables correctly. If split cables need to be used, use connectors with a metal cover to connect them. Ensure that both covers are connected to the shield around the entire circumference of the cable (360 °). No part of the cable should remain unshielded. Never connect a split cable using a terminal block.
+- The wires between the individual servo amplifiers must also be shielded.
 
-###Vedení kabeláže
+###Recommended cabling
 
-Na níže uvedených obrázcích je zobrazeno doporučené vedení kabeláže:
+The figures below show the recommended cabling:
 
-![Cable management technology](../img/cableMan.svg){: style="width:80%;" }
+![Cable management technology](../../../../source/img/cableMan.en.png){: style="width:80%;" }

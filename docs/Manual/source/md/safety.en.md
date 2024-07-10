@@ -1,5 +1,5 @@
-#Bezpečnostní funkce
+#Safety functions
 
---8<-- "CZ/md/STO.md"
+--8<-- "md/STO.en.md"
 
 <!-- zde prijdou dalsi bezepcnostni funkce, jako Safety speed apod...-->
