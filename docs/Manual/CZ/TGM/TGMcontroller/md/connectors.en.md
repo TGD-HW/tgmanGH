@@ -142,7 +142,7 @@ ___
 
 	---
 	
-	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
 -	K dispozici jsou čtyři další LED diody označené jako ERROR (červená barva) a READY (zelená barva).
 	READY ukazuje, že daná osa je v souboru `TGM.INI` povolena, naopak ERROR znamená, že osa není v souboru `TGM.INI` namapována na TGMotion.

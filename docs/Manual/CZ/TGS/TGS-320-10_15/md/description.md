@@ -46,7 +46,7 @@ ___
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![LED signalizace](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
 -	LED diody
 

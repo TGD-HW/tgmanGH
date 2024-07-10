@@ -182,7 +182,7 @@ ___
 
 	---
 	
-	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
 -	LED diodes
 

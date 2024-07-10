@@ -1,8 +1,3 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
 ![3D view IO side](../img/IOside.svg){: style="width:80%;" }
 <br>
@@ -121,7 +116,7 @@ ___
 
 	---
 	
-	![LED signalizace](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![LED signalizace](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
 -	LED diody
 

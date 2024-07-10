@@ -1,10 +1,4 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D view
-<!-- ![3D view IO side](../img/IOside.svg){: style="width:80%;" }-->
 ![3D view IO side](../img/IOside.svg){: style="width: 80%;" }
 <br>
 <br>
@@ -123,7 +117,7 @@ ___
 
 	---
 	
-	![status LEDs](../../../../source/img/LEDsig.png){: style="width:80%;" }
+	![status LEDs](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
 -	LED diodes
 
