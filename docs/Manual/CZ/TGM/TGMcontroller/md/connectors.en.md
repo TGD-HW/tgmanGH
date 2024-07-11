@@ -1,6 +1,6 @@
-<!--##Konektory-->
+<!--##Connectors-->
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![TGMcontroller power side](../img/PWRside.png){: style="width:60%;" }
@@ -8,7 +8,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
@@ -151,7 +151,7 @@ ___
 </div>
 
 ___
-### Strana feedback
+### Feedback side view
 ___
 
 ![TGMcontroller feedback side](../img/FBside.png){: style="width:60%;" }

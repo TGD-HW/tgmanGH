@@ -3,15 +3,15 @@
 
 ## Konektory
 -->
-##3D náhled
+##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:70%;" }
 <br>
 <br>
 ![3D view motor side](../img/MotSide.svg){: style="width:70%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-400-14_30_enetCon.png){: style="width:60%;" }
@@ -19,7 +19,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
@@ -193,11 +193,11 @@ ___
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
-	!!! note "Poznámka"
+	!!! note "Note"
 	
-		Servozesilovač TGZ-S-400 je jednoosý. Konektor X7 se běžně nezapojuje.
+		Servoamplifier TGZ-S-400 is single axis version. The X7 connector is not normally connected.
 	
--   **X4 - Motorový konektor**
+-   **X4 - Motor connector**
 
     ---
 	
@@ -209,11 +209,11 @@ ___
 
 	--8<-- "md/X4_M1_6pin_SLS.en.md"
 
-	!!! warning "Orientace konektoru"
+	!!! warning "Connector orientation"
 	
-		Pozor na správnou orientaci konektoru při zapojování kabeláže.	
+		Pay attention to the correct orientation of the connector when connecting the wiring.
 	
--   **X2 - Napájení silové části**
+-   **X2 - Power supply voltage**
 
     ---
 	

@@ -35,7 +35,7 @@ Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;control_1&quot;}">control_1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Unsigned 32bit integer&quot;}">Unsigned 32bit integer</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ovládací příkazy pro servopohon 1. &yen;u000aBit0 .. Vymazat chyby.&yen;u000aBit1 .. Povolení výkonového stupně.&yen;u000aBit28 .. Digitální výstup 1 &yen;u000aBit29 .. Digitální výstup 3 &yen;u000aBit30 .. Digitální výstup 5&quot;}">Ovládací příkazy pro servopohon 1.<br>Bit0 .. Vymazat chyby.<br>Bit1 .. Povolení výkonového stupně.<br>Bit28 .. Digitální výstup 1<br>Bit29 .. Digitální výstup 3<br>Bit30 .. Digitální výstup 5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ovládací příkazy pro servopohon 1. &yen;u000aBit0 .. Vymazat chyby.&yen;u000aBit1 .. Povolení výkonového stupně.&yen;u000aBit28 .. Digital výstup 1 &yen;u000aBit29 .. Digital výstup 3 &yen;u000aBit30 .. Digital výstup 5&quot;}">Ovládací příkazy pro servopohon 1.<br>Bit0 .. Vymazat chyby.<br>Bit1 .. Povolení výkonového stupně.<br>Bit28 .. Digital výstup 1<br>Bit29 .. Digital výstup 3<br>Bit30 .. Digital výstup 5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;currentSetPoint_1&quot;}">currentSetPoint_1</td>
@@ -89,7 +89,7 @@ Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;control_2&quot;}">control_2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Unsigned 32bit integer&quot;}">Unsigned 32bit integer</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ovládací příkazy pro servopohon 2. &yen;u000aBit0 .. Vymazat chyby.&yen;u000aBit1 .. Enable power stage.&yen;u000aBit28 .. Digitální výstup 2&yen;u000aBit29 .. Digitální výstup 4&yen;u000aBit30 .. Digitální výstup 6&quot;}">Ovládací příkazy pro servopohon 2.<br>Bit0 .. Vymazat chyby.<br>Bit1 .. Enable power -stage.<br>Bit28 .. Digitální výstup 2<br>Bit29 .. Digitální výstup 4<br>Bit30 .. Digitální výstup 6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ovládací příkazy pro servopohon 2. &yen;u000aBit0 .. Vymazat chyby.&yen;u000aBit1 .. Enable power stage.&yen;u000aBit28 .. Digital výstup 2&yen;u000aBit29 .. Digital výstup 4&yen;u000aBit30 .. Digital výstup 6&quot;}">Ovládací příkazy pro servopohon 2.<br>Bit0 .. Vymazat chyby.<br>Bit1 .. Enable power -stage.<br>Bit28 .. Digital výstup 2<br>Bit29 .. Digital výstup 4<br>Bit30 .. Digital výstup 6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;currentSetPoint_2&quot;}">currentSetPoint_2</td>
@@ -142,12 +142,12 @@ Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;status_1&quot;}">status_1</td>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Unsigned 32bit integer&quot;}">Unsigned 32bit integer</td>
-				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servopohonu 1.&yen;u000aBit0 .. Výkonový stupeň povolen – pod&yen;u000anapětím.&yen;u000aBit1 .. aktivní HW enable.&yen;u000aBit2 .. aktivní Software enable. &yen;u000aBit3 .. brzda motoru uvolněna. &yen;u000aBit4 .. Žádná chyba.&yen;u000aBit5 .. Inicializace. &yen;u000aBit6 .. režim Fieldbus.&yen;u000aBit28 .. Digitální vstup 1 &yen;u000aBit29 .. Digitální vstup 3 &yen;u000aBit30 .. Digitální vstup 5&yen;u000aBit31 .. Digitální vstup 7&quot;}">Stav servopohonu 1.<br>Bit0 .. Výkonový stupeň povolen – pod<br>napětím.<br>Bit1 .. aktivní HW enable.<br>Bit2 .. aktivní Software enable.<br>Bit3 .. brzda motoru uvolněna.<br>Bit4 .. Žádná chyba.<br>Bit5 .. Inicializace.<br>Bit6 .. režim Fieldbus.<br>Bit28 .. Digitální vstup 1<br>Bit29 .. Digitální vstup 3<br>Bit30 .. Digitální vstup 5<br>Bit31 .. Digitální vstup 7</td>
+				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servopohonu 1.&yen;u000aBit0 .. Výkonový stupeň povolen – pod&yen;u000anapětím.&yen;u000aBit1 .. aktivní HW enable.&yen;u000aBit2 .. aktivní Software enable. &yen;u000aBit3 .. brzda motoru uvolněna. &yen;u000aBit4 .. Žádná chyba.&yen;u000aBit5 .. Inicializace. &yen;u000aBit6 .. režim Fieldbus.&yen;u000aBit28 .. Digital vstup 1 &yen;u000aBit29 .. Digital vstup 3 &yen;u000aBit30 .. Digital vstup 5&yen;u000aBit31 .. Digital vstup 7&quot;}">Stav servopohonu 1.<br>Bit0 .. Výkonový stupeň povolen – pod<br>napětím.<br>Bit1 .. aktivní HW enable.<br>Bit2 .. aktivní Software enable.<br>Bit3 .. brzda motoru uvolněna.<br>Bit4 .. Žádná chyba.<br>Bit5 .. Inicializace.<br>Bit6 .. režim Fieldbus.<br>Bit28 .. Digital vstup 1<br>Bit29 .. Digital vstup 3<br>Bit30 .. Digital vstup 5<br>Bit31 .. Digital vstup 7</td>
 			</tr>
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;status_2&quot;}">status_2</td>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Unsigned 32bit integer&quot;}">Unsigned 32bit integer</td>
-				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servopohonu 2.&yen;u000aBit0 .. Výkonový stupeň povolen – pod&yen;u000anapětím&yen;u000aBit1 .. aktivní HW enable.&yen;u000aBit2 .. aktivní Software enable. &yen;u000aBit3 .. brzda motoru uvolněna. &yen;u000aBit4 .. Žádná chyba.&yen;u000aBit5 .. Inicializace. &yen;u000aBit6 .. režim Fieldbus.&yen;u000aBit28 .. Digitální vstup 2 &yen;u000aBit29 .. Digitální vstup 4 &yen;u000aBit30 .. Digitální vstup 6&yen;u000aBit31 .. Digitální vstup 8&quot;}">Stav servopohonu 2.<br>Bit0 .. Výkonový stupeň povolen – pod<br>napětím<br>Bit1 .. aktivní HW enable.<br>Bit2 .. aktivní Software enable.<br>Bit3 .. brzda motoru uvolněna.<br>Bit4 .. Žádná chyba.<br>Bit5 .. Inicializace.<br>Bit6 .. režim Fieldbus.<br>Bit28 .. Digitální vstup 2<br>Bit29 .. Digitální vstup 4<br>Bit30 .. Digitální vstup 6<br>Bit31 .. Digitální vstup 8</td>
+				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servopohonu 2.&yen;u000aBit0 .. Výkonový stupeň povolen – pod&yen;u000anapětím&yen;u000aBit1 .. aktivní HW enable.&yen;u000aBit2 .. aktivní Software enable. &yen;u000aBit3 .. brzda motoru uvolněna. &yen;u000aBit4 .. Žádná chyba.&yen;u000aBit5 .. Inicializace. &yen;u000aBit6 .. režim Fieldbus.&yen;u000aBit28 .. Digital vstup 2 &yen;u000aBit29 .. Digital vstup 4 &yen;u000aBit30 .. Digital vstup 6&yen;u000aBit31 .. Digital vstup 8&quot;}">Stav servopohonu 2.<br>Bit0 .. Výkonový stupeň povolen – pod<br>napětím<br>Bit1 .. aktivní HW enable.<br>Bit2 .. aktivní Software enable.<br>Bit3 .. brzda motoru uvolněna.<br>Bit4 .. Žádná chyba.<br>Bit5 .. Inicializace.<br>Bit6 .. režim Fieldbus.<br>Bit28 .. Digital vstup 2<br>Bit29 .. Digital vstup 4<br>Bit30 .. Digital vstup 6<br>Bit31 .. Digital vstup 8</td>
 			</tr>
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;analogInput_1&quot;}">analogInput_1</td>
@@ -181,7 +181,7 @@ Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže
 			</tr>
 		</table>
 		
-##Servisní datové objekty (SDO)
+##service datové objekty (SDO)
 Pro SDO se používá protokol CAN Open over EtherCat.
 
 <table>

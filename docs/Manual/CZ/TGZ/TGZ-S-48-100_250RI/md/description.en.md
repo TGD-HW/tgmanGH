@@ -1,88 +1,88 @@
-##3D náhled
+##3D view
 ![TGZ-S-48-100/250RI connectors](../img/connectors.png){: style="width:90%;" }
-##Blokové schéma s připojením hlavních rozhraní
+##Block diagram with connection of main interfaces
 ![TGZ-S-48-100/250RI connectors](../img/blokDiagram.png){: style="width:70%;" }
 
-!!! note "Poznámka"
-	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
+!!! note "Note"
+	The external temperature sensor PT1000 is used to measure the motor temperature.
 	
-##Popis komunikace, vstupů/výstupů a ovládání:
-###Komunikační rozhraní
-- Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.
-- CAN bus protokol lze upravit podle požadavků zákazníka.
-- Ethernet 100/1000 Mb/s s volitelným protokolem, naprogramovaný v hradlovém poli a určený pro připojení rychlých průmyslových sběrnic pro řízení v reálném čase.
-  V současné době je toto rozhraní vybaveno protokolem EtherCAT (pouze pro standardní firmware); podle požadavků zákazníka lze upravit na jiný typ protokolu.
-- RS422 / RS485, přenos dat přes nepoužívané rozhraní zpětné vazby servomotoru.
-  Může být použit pro komunikaci se zařízeními založenými na standardu RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
-  Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
+##Description of communication, input/output and controlling:
+###Communication interfaces
+- Ethernet 100/1000 Mb/s with UDP protocol, designed for parameter recording, monitoring, testing, but also online control;
+- CAN bus protocol can be modified according to customer requirements;
+- Ethernet 100/1000 Mb/s with optional protocol, programmed in the gate array and designed for connection of fast industrial buses for real-time control.
+  Currently, this interface is equipped with the EtherCAT protocol (only for standard firmware); according to customer requirements it can be modified to another type of protocol.
+- RS422 or RS485, data transfer via unused servomotor feedback interface.
+  It can be used for communication with devices based on RS422 or RS485 standard (encoder, gyro, master controller, other system, etc.).
+  This interface enables high-speed communication up to 20Mbit/s.
   
-###Vstupy / výstupy:
-Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy TTL, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
-Tyto vstupy a výstupy je možné ovládat pomocí uživatelského programu (jazyk C).
-Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
+###Inputs / outputs:
+The built-in TGZ servo amplifiers have 8 isolated digital inputs, 3 TTL digital inputs, 6 isolated digital outputs, 1 analog input and 2 PT1000 thermistor inputs implemented. It is possible to control these inputs and outputs using a user program (C language):
 
-| I/O     | Typ              | Počet | Hodnota                                            |
-|---------|------------------|--------|----------------------------------------------------|
-| vstup   | analogový        | 1      | 0-10 V                                             |
-| vstup   | termistor        | 2      | standard PT1000                                    |
-| vstup   | digitální        | 3      | 0-30 VDC (0-0,8 V low/2,4-30 V high), TTL      |
-| vstup   | izolovaný digitální | 8   | 0-24 VDC (0-10 V low/13-24 V high), 20 mA      |
-| výstup  | izolovaný digitální | 6   | 5-24 VDC, 300 mA / max. výstup                     |
-
-Servozesilovač má čtyři zpětnovazební rozhraní, které mají široké využití.
-Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujících na principu standardu RS422 nebo RS485.
-
-| Typ   | Standard              | Rozhraní                         | Příklady připojení možných zařízení                                                                                               |
-|-------|-----------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| FB1   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
-| FB2   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
-| FE[^1]   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
-| FB3[^1]  | 2 × full-duplex RS422 | -                                | Řídicí systém                                                                                                                     |
-
-[^1]: Tento typ pracuje pouze s upraveným firmwarem. Jeho použití se doporučuje vždy konzultovat s výrobcem.
-[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../ETC/TGHall/md/description.md#TGhall_1).
-
-- Hiperface DSL - digitální komunikace, senzory jsou vyráběny s rozlišením 15 až 24 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
-  Tento typ zpětné vazby se používá pro motory s jediným konektorem nebo kabelem.
-- EnDat 2.2 - digitální komunikace, senzory jsou vyráběny s rozlišením 18 až 25 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
-- SSI - enkodéry se synchronním systémovým rozhraním.
-- BISS - senzory s protokolem BISS-C.
-
-###Řízení
-Servozesilovače TGZ je možno řídit:
-
-- digitální ovládání přes EtherCAT, CAN-bus (točivý moment, otáčky, polohové profily atd.) A přes Ethernet UDP protokol;
-- uživatelský program (jazyk C) - digitální vstupy, analogové napětí atd.
+| I/O    | Type              | Count | Value                                               |
+|--------|--------------------|-------|-----------------------------------------------------|
+| input  | analog             | 1     | 0-10 V                                              |
+| input  | thermistor         | 2     | standard PT1000                                     |
+| input  | digital            | 3     | 0-30 VDC (0-0.8 V low / 2.4-30 V high), TTL         |
+| input  | isolated digital   | 8     | 0-24 VDC (0-10 V low / 13-24 V high), 20 mA         |
+| output | isolated digital   | 6     | 5-24 VDC, 300 mA / max. output                      |
 
 
+The servo amplifier has four feedback connectors, which have a wide range of uses.
+In addition to motor feedback, they can be used to connect devices operating on the principle of the RS422 or RS485 standard.
 
-##Konektory
+| Type   | Standard              | Interface                         | Examples of Possible Connected Devices                                                                                          |
+|--------|-----------------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| FB1    | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolute magnetic/optical encoder, incremental magnetic/optical encoder with Hall sensors [^2], gyroscope                       |
+| FB2    | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolute magnetic/optical encoder, incremental magnetic/optical encoder with Hall sensors [^2], gyroscope                       |
+| FE[^1] | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolute magnetic/optical encoder, incremental magnetic/optical encoder with Hall sensors [^2], gyroscope                       |
+| FB3[^1]| 2 × full-duplex RS422 | -                                 | Control system                                                                                                                  |
+
+
+[^1]: These types work with modified firmware. It is recommended to always consult with  manufacturer about their use.
+[^2]: Hall sensors must be connected to the digital inputs using a special level shifter. For more information see. [Hall converter](../../../ETC/TGHall/md/description.md#TGhall_1).
+
+- Hiperface DSL – digital communication, sensors are manufactured with a resolution of 15 to 24 bits per revolution (multi-speed design – 4,096 revolutions).
+  This type of feedback is used for motors with a single connector or cable.
+- EnDat 2.2 – digital communication, sensors are manufactured with a resolution of 18 to 25 bits per revolution (multi-speed design – 4,096 revolutions).
+- SSI – encoders with synchronous system interface.
+- BISS – sensors with BISS-C protocol.
+
+###Control
+TGZ servoamplifiers can be controlled:
+
+- digital control via EtherCAT, CAN-bus (torque, speed, position profiles, etc.) and via Ethernet UDP protocol;
+- via user program (language C) – digital inputs, analog voltage, etc.
+
+
+
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![TGZ-S-48-100/250 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-100_250RI_enetCon.svg){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
--   **X11 - Zpětná vazba 3 - RS422**
+-   **X11 - Feedback 3 - RS422**
 
     ---
     ![Molex ClikMate 5031491000](../../../../source/img/5031491000.svg){: style="width:70%;" }
 	
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X11_FB3_10pin_ClikMate.en.md"
 	
 	!!! warning "Warning"	
-		Při použití tohoto typu zpětné vazby se ujistěte, že používáte vhodný TGZ firmware, který tyto funkce podporuje.
+		When using this type of feedback, make sure you are using the appropriate TGZ firmware that supports these features.
 
--   **X12 - Ethernet UDP - servisní**
+-   **X12 - Ethernet UDP - service**
 
     ---
     ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
@@ -91,7 +91,7 @@ ___
     ---
     ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
@@ -100,7 +100,7 @@ ___
     ---
     ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
 	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
@@ -115,28 +115,28 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X7 - Digitální vstupy TTL + Analogové vstupy**
+-   **X7 - Digital inputs TTL + Analog inputs**
 
     ---
 	![DITTL + AIN + PT1000](../../../../source/img/5031491200.svg){: style="width:70%;" }
 
--    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491200 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
 	--8<-- "md/X7_AIN_12pin_ClikMate.en.md"
 	
-	!!! warning "Varování"
-		Přímé vstupy PT1000 na pinech 3-6 konektoru X7 jsou dostupné pouze na řídicí desce z dodávek po 06-2024.
-		Starší verze zařízení mají standardní AIN1, AIN2 a AIN3 na pinech 1-6 konektoru X7.
-		Pro další podrobnosti o vlastnostech předchozího zařízení prosím nahlédněte do starší (PDF) verze tohoto manuálu.
+	!!! warning "Warning"
+		Direct PT1000 inputs of X7 pins 3-6 are only available on control board from batch supplied after 06-2024 onwards.
+		Older versions of the device have standard AIN1, AIN2 and AIN3 on pins 1-6 of X7.
+		For further details of the previous device properties please see older version of this manual.
 
--   **X8 - Digitální I/O**
+-   **X8 - Digital I/O**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/5031491800.svg){: style="width:100%;" }
 
--    Molex ClikMate 5031491800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
@@ -147,7 +147,7 @@ ___
     ---
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
 
--   Použijte microSD kartu. Vhodná karta je součástí dodávky servozesilovače TGZ.
+-   Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
@@ -155,7 +155,7 @@ ___
 	
 	![CAN connector](../../../../source/img/5031490800.svg){: style="width:70%;" }
 
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
@@ -187,7 +187,7 @@ ___
 
    
 ___
-### Strana feedback
+### Feedback side view
 ___
 
 ![Feedback connectors](../../../../source/img/TGZ-S-48-100_250RI_FBconns.svg){: style="width:80%;" }
@@ -200,7 +200,7 @@ ___
 	
 	![FBE connector](../../../../source/img/5031491200.svg){: style="width:80%;" }
 
--    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491200 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
 	---
 
@@ -212,16 +212,16 @@ ___
 	
 	![FB1 connector](../../../../source/img/5031491000.svg){: style="width:80%;" }
 
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
 	--8<-- "md/X5_FB1_10pin_ClikMate.en.md"
 	
-	!!! warning "Upozornění"
-		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB1 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
-		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
-		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
+	!!! warning "Warning"
+		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
+		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
+		Also check whether you have correct firmware uploaded in the device.
 	
 -   **X6 - Feedback axis 2**
 
@@ -229,16 +229,16 @@ ___
 	
 	![FB2 connector](../../../../source/img/5031491000.svg){: style="width:80%;" }
 
--    Molex ClikMate 5031491000 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     ---
 
 	--8<-- "md/X6_FB2_10pin_ClikMate.en.md"
 	
-	!!! warning "Upozornění"
-		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB2 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
-		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
-		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
+	!!! warning "Warning"
+		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
+		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
+		Also check whether you have correct firmware uploaded in the device.
 
 </div>
  
@@ -250,7 +250,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X3 - Připojení motoru**
+-   **X3 - Motor connector**
 
     ---
 	
@@ -264,121 +264,121 @@ ___
 	Doporučené kabelové oko [BM 01737](https://www.tme.eu/CZ/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
 </div>
 
-!!! info "Průřez"
-	Průřez a délka kabelu závisí na typu servomotoru, kabelu a provozu pohonu.
-	Pro přesný výpočet odpovídající vašemu projektu kontaktujte výrobce.
+!!! info "Wire cross section"
+	The size of the cross section and the length of the cable depends on the type of servomotor, cable and operation of the drive.
+	You can contact the manufacturer for an exact calculation corresponding to your project.
 
 	
 
 ___
-### Pohled shora
+### Top view
 ___
 
 ![Top view](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:80%;" }
 
 
 
-**X2 - Napájení silové části (DCbus)**   
+**X2 - Power supply voltage (DCbus)**   
 
-| Označení / typ                  | Průřez kabelů (mm<sup>2</sup>) |           | Typ a rozměry koncovky                              | Doporučený typ oka |
-|---------------------------------|----------------------|-----------|-----------------------------------------------------|--------------------|
-|                                 | min                  | max       |                                                     |                    |
-| DC bus (-DC, +DC) – 4 kabely   | 8                    | 10        | Krimpovací oko M5, 6 – 10 mm<sup>2</sup> (8 AWG)               | [GS5-10JST](https://www.tme.eu/CZ/details/gs5-10/konektory-neizolovane/jst/)          |
-| DC bus (-DC, +DC) – 8 kabelů   | 4                    | 6         | Krimpovací oko M5, 4 – 6 mm<sup>2</sup> (10–9 AWG)             | [BM 01325](https://www.tme.eu/CZ/details/bm01325/konektory-neizolovane/bm-group/bm-01325/)           |
+| Designation / Type            | Cable Cross-Section (AWG) |           | Type and Size of Terminal Lug                        | Recommended Lug Type |
+|--------------------------------|-------------------------------------|-----------|------------------------------------------------------|----------------------|
+|                                | min                                 | max       |                                                      |                      |
+| DC bus (-DC, +DC) – 4 cables   | 8                                   | 7        | Crimp lug M5, AWG 8        | [GS5-10JST](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/) |
+| DC bus (-DC, +DC) – 8 cables   | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
+
 
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
 
--    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
+-    Molex Micro-Fit 3.0 - 436450500. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
 	--8<-- "md/X1_24V_5pin_Microfit.en.md"
 	
-	!!! warning "Upozornění"
+	!!! warning "Warning"
 		
-		Pin č. 2 konektoru X1 - "Výstup +24 VDC" je nutné externě propojit s pinem č. 2 na konektoru P7 (napájení diagnostiky statické brzdy).
+		Pin 2 of connector X1 - "+24 VDC output" must be connected externally to pin 2 of connector P7 (power supply for static brake diagnostics).
 		
-		Pozor na orientaci konektoru - zajišťovací páčka nahoře = pin č. 1 vpravo.
+		Note the orientation of the connector - locking lever on top = pin 1 on the right.
 		
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
+		Match the type of crimps to the selected wire cross section.
 
-
--   **P7 - Statická brzda**
+-   **P7 - Static brake**
 
     ---
 	
 	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
+-    Molex Micro-Fit 3.0 - 430250400. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
 	--8<-- "md/P7_BR_4pin_Microfit.en.md"
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
+		Match the type of crimps to the selected wire cross section.
 		
--   **P8 - Statická brzda - doplňkový konektor**
+-   **P8 - Static brake - additional connector**
 
     ---
 	
 	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
+-    Molex Micro-Fit 3.0 - 430250400. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
 	--8<-- "md/P8_BR_4pin_Microfit.en.md"
 	
-	!!! note "Konektor P8"
+	!!! note "P8 connector"
 	
-		Tento konektor se pro standardní použití jednoosého servozesilovače <nobr>TGZ-S-48-100/250</nobr> nezapojuje
+		This connector does not connect for standard use of the single axis servo amplifier.
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
+		Match the type of crimps to the selected wire cross section.
 		
--   **P3 - Externí termistor PT1000**
+-   **P3 - External temperature sensor PT1000**
 
     ---
 	
-	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
+	![External temperature sensor](../../../../source/img/436500215.svg){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 436500215. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
+-    Molex Micro-Fit 3.0 - 436500215. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
 	--8<-- "md/P3_Term_2pin_Microfit.en.md"
 	
-	!!! note "Polarita"
+	!!! note "Polarity"
 	
-		Teplotní čidlo PT1000 nemá určenou polaritu napájení.
+		The PT1000 temperature sensor does not have a specified polarity.
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.		
+		Match the type of crimps to the selected wire cross section.		
 
 </div>
 
-[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
-[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^3]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
+[^4]: When crimping and connecting the Molex Micro-Fit connectors, follow the [Molex Micro-Fit Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
 
-###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
-Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
-Ve výchozím nastavení nejsou tyto rezistory od dodávek po 06/2024 osazeny, pokud není uvedeno jinak.
-Uživatel je může osadit, aby se předešlo nutnosti používat externí propojku DSL, avšak mějte na paměti, že jakmile jsou rezistory na desce osazeny, může být použita pouze zpětná vazba typu Hiperface DSL.
-Pokud je nutné použít jiný typ zpětné vazby než Hiperface DSL, je nutné je z PCB odpájet.
-Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální enkodér.
-Funkce zpětné vazby také závisí na nahraném firmwaru.
+###Procedure for changing feedback type of FB1 and FB2
+There are 4 positions (R118-R121) for a 0R/0603 resistors that may be used to replace the external connection of FBSEL (pins 5-7 and 6-8 of the FB1 and FB2) on the control board.
+By default, it is not assembled from batch 06—2024 onwards unless noted otherwise.
+User can assemble it in order to prevent the need for use the external connections, however keep in mind that once assembled the boards can be used for HiperfaceDSL feedback only. 
+If it is necessary to use a different type of feedback than Hiperface DSL, it is necessary to desolder them from the PCB.
+Other usable standards are EnDat 2.2, SSI, BISS or Incremental encoder.
+The feedback function also depends on the uploaded firmware.
 
 ![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
 

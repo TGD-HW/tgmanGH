@@ -3,15 +3,15 @@
 
 ## Konektory
 -->
-##3D náhled
+##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:80%;" }
 <br>
 <br>
 ![3D view FB side](../img/MotSide.svg){: style="width:80%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-D-48-50_100_enetCon.png){: style="width:60%;" }
@@ -19,7 +19,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
@@ -124,7 +124,7 @@ ___
 
    
 ___
-### View of the FB/motor side/DCbus/brzda
+### View of the FB/motor side/DCbus/brake
 ___
 
 ![Motor/Feedback connectors](../../../../source/img/TGZ-D-48-50_100_FBconns.png){: style="width:60%;" }
@@ -198,15 +198,14 @@ ___
     ---
 	![DCbus cage-clamp](../../../../source/img/2636-1103.svg){: style="width:60%;" }
 
--    Wago push-in svorky
+-    Wago push-in CAGE CLAMP®
 
     ---
 
 	--8<-- "md/X2_DCbus_3pin_wago_2636.en.md"
 	
-	!!! info "Poznámka"
-	
-		Při použití jemně laněného vodiče (licna) lze použít průřez až&nbsp;25&nbsp;mm<sup>2</sup>
+	!!! info "Max. AWG"
+		Maximum wire cross section possible can be up to 4 AWG when using fine stranded wire without a ferrule.
 	
 -   **X3 - Motor connector - axis 1**
 
@@ -214,14 +213,14 @@ ___
 	
 	![Motor 1 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
--    Wago push-in svorky
+-    Wago push-in CAGE CLAMP®
 
     ---
 
 	--8<-- "md/X3_M1_4pin_wago_2626.en.md"
 	
-	!!! note "Doporučený průřez"
-		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
+	!!! info "Max. AWG"
+		Maximum wire cross section possible can be up to 8 AWG when using fine stranded wire without a ferrule.
 	
 -   **X4 - Motor connector - axis 2**
 
@@ -229,16 +228,16 @@ ___
 	
 	![Motor 2 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
--    Wago push-in svorky
+-    Wago push-in CAGE CLAMP®
 
     ---
 
 	--8<-- "md/X4_M2_4pin_wago_2626.en.md"
 	
-	!!! note "Doporučený průřez"
-		V případě pevného vodiče je možné použití průřezu až 10 mm<sup>2</sup>
+	!!! info "Max. AWG"
+		Maximum wire cross section possible can be up to 8 AWG when using fine stranded wire without a ferrule.
 		
--   **XBR - Připojení brzdy - osa 1 a 2**
+-   **XBR - Static brake connector - axis 1 and 2**
 
     ---
 	

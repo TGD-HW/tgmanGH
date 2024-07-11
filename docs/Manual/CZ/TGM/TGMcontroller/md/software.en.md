@@ -4,7 +4,7 @@ Mezi TGMotion na PC a v TGMcontrolleru nejsou žádné funkční rozdíly.
 Virtuální PLC lze v případě potřeby kompletně vyvinout a otestovat na PC a poté pouze zkompilovat pro TGMcontroller a spustit na něm bez dalších změn.
 
 ##Control observer
-Control Observer je servisní a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
+Control Observer je service a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
 Nejprve musí být připojen k zařízení. K tomu slouží okno *Connection info* :
 
 ![Connection info dialog](../img/connectionInfo.png){: style="width:60%;" }
@@ -82,10 +82,10 @@ Hodnoty analogových vstupů AN1, AN2 se objeví v proměnných `SERVO[00].Analo
 
 ##Komunikace s počítačem
 TGMcontroller používá dva gigabitové ethernetové porty pro komunikaci s okolním světem.
-Tzv. servisní port (X11) implementuje standardní protokoly: TCP, UDP, Profinet I/O a Modbus TCP.
+Tzv. service port (X11) implementuje standardní protokoly: TCP, UDP, Profinet I/O a Modbus TCP.
 Všechny tyto protokoly lze v případě potřeby používat současně.
 Důležitou roli pro tyto protokoly hraje IP adresa (viz níže).
-Tento servisní port lze použít ve větších sítích, kde jsou nutné ethernetové switche, směrovače nebo bridge.
+Tento service port lze použít ve větších sítích, kde jsou nutné ethernetové switche, směrovače nebo bridge.
 Současně může být připojeno až 16 externích klientů.   
 
 Protože TGMcontroller lze použít také jako náhradu za rozšíření PC v reálném čase, je implementován Fast Service Port (X12).
@@ -372,9 +372,9 @@ Tento parametr lze nastavit pomocí nástroje pro uvedení do provozu nebo pomoc
 
 !!! warning "Změna IP"
 	
-	Změnou IP adresy zařízení Profinet se změní i adresa servisního portu X11.
+	Změnou IP adresy zařízení Profinet se změní i adresa serviceho portu X11.
 	To znamená, že může dojít ke ztrátě TCP/UDP nebo jiné komunikace.
-	Řešením je použití stejné adresy pro servisní protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
+	Řešením je použití stejné adresy pro service protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
 		
 ##Modbus TCP
 Protokol Modbus TCP je ve výchozím nastavení vypnut.
@@ -441,7 +441,7 @@ Existují také možné další soubory:
 - `TGM_PLC.bin` - virtuální PLC vytvořené uživatelem
 - `Eeprom.bin` - binární konfigurační soubor pro PLC
 
-Všechny čtyři výše uvedené soubory lze zapsat na kartu SD pomocí servisního programu **Control Observer** v počítači.
+Všechny čtyři výše uvedené soubory lze zapsat na kartu SD pomocí serviceho programu **Control Observer** v počítači.
 Tyto soubory lze také vyčíst zpět.
 Protože karta SD používá standardní souborový systém FAT32, lze k ní také přímo přistupovat pomocí počítače a čtečky karet SD.
 Po vložení upravené SD karty zpět do řídicí jednotky TGMcontroller je nutné ji restartovat pomocí programu **Control Observer** nebo sekvencí vypnutí/zapnutí.

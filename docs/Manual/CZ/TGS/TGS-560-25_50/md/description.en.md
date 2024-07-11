@@ -1,10 +1,10 @@
-##3D náhled
+##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:70%;" }
 <br>
 <br>
 ![3D view FB side](../img/MotSide.svg){: style="width:70%;" }
 
-##Konektory
+##Connectors
 ___
 ### Strana silových konektorů
 ___

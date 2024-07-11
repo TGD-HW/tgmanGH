@@ -1,12 +1,12 @@
-##3D náhled
+##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:75%;" }
 <br>
 <br>
 ![3D view FB side](../img/Motside.svg){: style="width:60%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat a DCbus
+### View of the ENET/ECAT side a DCbus
 ___
 
 ![ENET/ECAT/DCbus connectors](../../../../source/img/TGZ-D-560-30_50_DCbus.svg){: style="width:60%;" }
@@ -35,7 +35,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
@@ -46,31 +46,31 @@ ___
 
 	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 
--   **X3 - Motorový konektor osa 1**
+-   **X3 - Motor connector axis 1**
 
     ---
 	
 	![Motor connector 1](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
--    Wago push-in svorky
+-    Wago push-in CAGE CLAMP®
 
     ---
 
 	--8<-- "md/X3_M1_4pin_wago_2636.en.md"
 	
--   **X4 - Motorový konektor osa 2**
+-   **X4 - Motor connector axis 2**
 
     ---
 	
 	![Motor connector 2](../../../../source/img/2626-1104.svg){: style="width:70%;" }
 
--    Wago push-in svorky
+-    Wago push-in CAGE CLAMP®
 
     ---
 
 	--8<-- "md/X4_M2_4pin_wago_2636.en.md"
 	
--   **X14 - Brzda/Termistor osa 1**
+-   **X14 - brake/Termistor axis 1**
 
     ---
 	
@@ -82,7 +82,7 @@ ___
 
 	--8<-- "md/X14_BR1_4pin_LSF.en.md"
 	
--   **X15 - Brzda/Termistor osa 2**
+-   **X15 - brake/Termistor axis 2**
 
     ---
 	
@@ -178,7 +178,7 @@ ___
 
    
 ___
-### Strana Feedback
+### Feedback side view
 ___
 
 ![Feedback connectors](../../../../source/img/TGZ-D-560-30_50_FBconns.svg){: style="width:60%;" }

@@ -1,12 +1,12 @@
-##3D náhled
+##3D view
 ![TGZ-S-48-50/100 Feedback side](../img/MotSide.svg){: style="width:75%;" }
 <br>
 <br>
 ![TGZ-S-48-50/100 IO side](../img/IOside.svg){: style="width:75%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana ethernet/ethercat
+### EtherNET/EtherCAT side view
 ___
 
 ![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
@@ -19,7 +19,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
@@ -30,16 +30,15 @@ ___
 
 	--8<-- "md/X1_24V_5pin_Microfit.en.md"
 	
-	!!! warning "Upozornění"
+	!!! warning "Warning"
 		
-		Pin č. 2 konektoru X1 - "Výstup +24 VDC" je nutné externě propojit s pinem č. 2 na konektoru P7 (napájení diagnostiky statické brzdy).
+		Pin 2 of connector X1 - "+24 VDC output" must be connected externally to pin 2 of connector P7 (power supply for static brake diagnostics).
 		
-		Pozor na orientaci konektoru - zajišťovací páčka nahoře = pin č. 1 vpravo.
+		Note the orientation of the connector - locking lever on top = pin 1 on the right.
 		
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-
+		Match the type of crimps to the selected wire cross section.
 -   **X8 - Digital I/O, analog inputs**
 
     ---
@@ -124,7 +123,7 @@ ___
 
    
 ___
-### Strana feedback
+### Feedback side view
 ___
 
 ![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
@@ -203,7 +202,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **P7 - Statická brzda**
+-   **P7 - Static brake**
 
     ---
 	
@@ -215,11 +214,11 @@ ___
 
 	--8<-- "md/P7_BR_4pin_Microfit.en.md"
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
+		Match the type of crimps to the selected wire cross section.
 		
--   **P8 - Statická brzda - doplňkový konektor**
+-   **P8 - Static brake - additional connector**
 
     ---
 	
@@ -231,19 +230,19 @@ ___
 
 	--8<-- "md/P8_BR_4pin_Microfit.en.md"
 	
-	!!! note "Konektor P8"
+	!!! note "P8 connector"
 	
-		Tento konektor se pro standardní použití jednoosého servozesilovače <nobr>TGZ-S-48-100/250</nobr> nezapojuje
+		This connector does not connect for standard use of the single axis servo amplifier.
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
+		Match the type of crimps to the selected wire cross section.
 		
--   **P3 - Externí termistor PT1000**
+-   **P3 - External temperature sensor PT1000**
 
     ---
 	
-	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
+	![External temperature sensor](../../../../source/img/436500215.svg){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 436500215
 
@@ -251,12 +250,12 @@ ___
 
 	--8<-- "md/P3_Term_2pin_Microfit.en.md"
 	
-	!!! note "Polarita"
+	!!! note "Polarity"
 	
-		Teplotní čidlo PT1000 nemá určenou polaritu napájení.
+		The PT1000 temperature sensor does not have a specified polarity.
 	
-	!!! info "Konektorové krimpy"
+	!!! info "Connector crimps"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.		
+		Match the type of crimps to the selected wire cross section.		
 
 </div>

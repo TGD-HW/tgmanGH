@@ -1,6 +1,6 @@
 ##Použití TGZ v TIA portálu
 - Buďte opatrní, aby se pohon nezačal pohybovat bez předchozího varování.
-- Přijměte příslušná opatření, aby obsluha a servisní pracovníci byli o tomto nebezpečí informováni.
+- Přijměte příslušná opatření, aby obsluha a service pracovníci byli o tomto nebezpečí informováni.
 - Zaveďte vhodná ochranná opatření, která zajistí, že jakýkoli neúmyslný pohyb pohonů nemůže vést k nebezpečným situacím.
 - Uživatel je zodpovědný za to, že v případě poruchy pohonu bude celý systém nastaven do stavu, který je bezpečný pro zařízení i personál.
 
@@ -315,7 +315,7 @@ K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších soft
 
 ![Profinet img](../../../../source/img/profinet70.webp){: style="width:70%;" }
 
-- Pokud ještě není vybrán, zvolte v servisním programu TGZ GUI telegram číslo 3: Speed.
+- Pokud ještě není vybrán, zvolte v servicem programu TGZ GUI telegram číslo 3: Speed.
 
 ![Profinet img](../../../../source/img/profinet71.webp){: style="width:70%;" }
 
@@ -328,7 +328,7 @@ K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších soft
 ![Profinet img](../../../../source/img/profinet73.webp){: style="width:30%;" }
 
 - Pokud se vyskytnou nějaké chyby, zastavte a spusťte PLC.
-  Zkontrolujte také, zda se v servisním programu TGZ GUI zvyšuje parametr `PD_SetDataCounter`.
+  Zkontrolujte také, zda se v servicem programu TGZ GUI zvyšuje parametr `PD_SetDataCounter`.
   
 ![Profinet img](../../../../source/img/profinet74.webp){: style="width:30%;" }
 

@@ -1,11 +1,11 @@
 Do zařízení je implementován kompletní systém **TGMotion**.
 Maximální počet podporovaných zařízení je: až 64 os servopohonu, až 16 modulů I/O, až 3 interpolátory CNC.
 Velikost paměti osciloskopu je nastavena na 32 MB.
-Komunikace mezi PC a TGZ+Motion probíhá prostřednictvím sítě Ethernet - buď TCP/UDP (servisní port X11), nebo vlastní rychlá komunikace peer-to-peer (port X12).
+Komunikace mezi PC a TGZ+Motion probíhá prostřednictvím sítě Ethernet - buď TCP/UDP (service port X11), nebo vlastní rychlá komunikace peer-to-peer (port X12).
 Port X11 lze použít s ethernetovým switchem i ve větší síti.
 Pokud síťový adaptér PC používá DHCP, je nutné mít ve stejné síťové doméně směrovač (např. 192.168.1.1).
 IP adresa TGZ+Motion musí být nastavena na volné číslo v síti.
-Je také možné připojit síťový adaptér PC přímo k servisnímu portu X11, v takovém případě je nutná statická IP adresa adaptéru PC.
+Je také možné připojit síťový adaptér PC přímo k servicemu portu X11, v takovém případě je nutná statická IP adresa adaptéru PC.
 Aplikace **Control Observer** slouží ke kompletnímu monitorování subsystému **TGMotion**.
 Zde je příklad připojeného zařízení **TGZ+Motion** (pomocí protokolu TCP a IP adresy `192.168.128.188`):
 
@@ -261,7 +261,7 @@ Servo[01].Resolution=20
 
 Hodnota `Node` je irelevantní a ignoruje se, ale měla by být v souboru INI jedinečná a v rozsahu 1 - 64.
 
-Digitální vstupy a výstupy se nacházejí v proměnných `SERVO[xx].DigitalIn` a `SERVO[xx].DigitalOut`.
+Digital inputs a výstupy se nacházejí v proměnných `SERVO[xx].DigitalIn` a `SERVO[xx].DigitalOut`.
 V následující tabulce je uvedeno mapování použitých vstupů.
 Předpokládá výše uvedené záznamy v souboru `TGM.INI` (`SERVO[00].Axis=1` a `SERVO[01].Axis=2`).
 
@@ -327,9 +327,9 @@ Tento parametr lze nastavit pomocí nástroje pro uvedení do provozu nebo pomoc
 
 !!! warning "Změna IP"
 	
-	Změnou IP adresy zařízení Profinet se změní i adresa servisního portu X11.
+	Změnou IP adresy zařízení Profinet se změní i adresa serviceho portu X11.
 	To znamená, že může dojít ke ztrátě TCP/UDP nebo jiné komunikace.
-	Řešením je použití stejné adresy pro servisní protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
+	Řešením je použití stejné adresy pro service protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
 		
 ##Modbus TCP
 Protokol Modbus TCP je ve výchozím nastavení vypnut.

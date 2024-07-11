@@ -1,9 +1,9 @@
 V části výrobku týkající se servozesilovače nedošlo téměř k žádným změnám.
-Pro nastavení parametrů pohonu, motorů atd. se používá servisní program `TGZ GUI`.
+Pro nastavení parametrů pohonu, motorů atd. se používá service program `TGZ GUI`.
 Existuje však několik parametrů, které se nastavují v souboru `TGM.INI` programu `TGMotion`:
 
 -	IP adresa zařízení:
-	TGZ+Motion používá statickou IP adresu ve svém servisním konektoru Ethernet X13. Tato adresa musí být nastavena v souboru `TgMotion5xx.ini`:
+	TGZ+Motion používá statickou IP adresu ve svém servicem konektoru Ethernet X13. Tato adresa musí být nastavena v souboru `TgMotion5xx.ini`:
 	``` ini
 	[DHCP]
 	IPAddress=192.168.1.188
@@ -28,7 +28,7 @@ Důležité je pouze to, aby se adresy MAC všech připojených zařízení v je
 Příklad platné adresy MAC: `00:0a:35:01:02:04`.
 
 ## Interní zdroj řízení pohonu
-Servozesilovače TGZ systému TGZ+Motion lze ovládat buď ze servisního portu prostřednictvím protokolu UDP (grafické rozhraní TGZ - obvykle pro nastavení motoru a pohonu), nebo interně pomocí TGMotion.
+Servozesilovače TGZ systému TGZ+Motion lze ovládat buď ze serviceho portu prostřednictvím protokolu UDP (grafické rozhraní TGZ - obvykle pro nastavení motoru a pohonu), nebo interně pomocí TGMotion.
 
 ## Uživatelský program v TGZ (PLC)
 Takzvaný uživatelský program (neboli PLC), který se nachází ve standardním servopohonu TGZ, není podporován.

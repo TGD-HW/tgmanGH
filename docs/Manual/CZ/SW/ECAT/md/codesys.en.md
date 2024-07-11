@@ -5,7 +5,7 @@ V takovém případě využívá svůj interní profil-generátor.
 Komunikace mezi řídicí jednotkou a zařízením nemusí probíhat v reálném čase.
 Toto je identické pro sběrnice EtherCAT i CAN.
 
-- Připravte servopohon pomocí servisního programu TGZ_GUI: nastavte registr `D-Mode` na `7`: polohový režim PG.
+- Připravte servopohon pomocí serviceho programu TGZ_GUI: nastavte registr `D-Mode` na `7`: polohový režim PG.
   Toto nastavení je stejné pro režimy PP a PV.
 
 ![Codesys img](../../../../source/img/codesys1.webp){: style="width:70%;" }
@@ -79,7 +79,7 @@ Toto je identické pro sběrnice EtherCAT i CAN.
 ![Codesys img](../../../../source/img/codesys18.webp){: style="width:50%;" }
 
 - Chcete-li systému pomoci s identifikací zařízení na sběrnici, nastavte správné ID zařízení v poli TGZ_Drive properties. 
-  Povolte **Experts settings**, poté vyberte **Configured station alias (ADO 0x0012)** a nastavte **Value** na stejné číslo jako u registru `C-ID` v servisním programu TGZ_GUI (v tomto příkladu 5).
+  Povolte **Experts settings**, poté vyberte **Configured station alias (ADO 0x0012)** a nastavte **Value** na stejné číslo jako u registru `C-ID` v servicem programu TGZ_GUI (v tomto příkladu 5).
   
 ![Codesys img](../../../../source/img/codesys19.webp){: style="width:70%;" }
 

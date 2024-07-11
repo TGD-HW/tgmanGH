@@ -1,6 +1,6 @@
-<!--##Konektory-->
+<!--##Connectors-->
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![ETH connectors](../../../../source/img/TGZ-D-48-13_26_enetCon.png){: style="width:50%;" }

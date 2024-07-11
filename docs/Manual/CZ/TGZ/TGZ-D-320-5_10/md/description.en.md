@@ -3,15 +3,15 @@
 
 ## Konektory
 -->
-##3D náhled
+##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:80%;" }
 <br>
 <br>
 ![3D view FB side](../img/MotSide.svg){: style="width:70%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-D-320-5_10_enetCon.png){: style="width:60%;" }
@@ -19,7 +19,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
@@ -194,7 +194,7 @@ ___
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 		
--   **X2 - Napájení silové části**
+-   **X2 - Power supply voltage**
 
     ---
 	
@@ -206,7 +206,7 @@ ___
 
 	--8<-- "md/X2_320_DC_1778078.en.md"
 	
--   **X3 - Motorový konektor osa 1**
+-   **X3 - Motor connector axis 1**
 
     ---
 	
@@ -218,7 +218,7 @@ ___
 
 	--8<-- "md/X4_M1_6pin_SLS.en.md"
 	
--   **X4 - Motorový konektor osa 2**
+-   **X4 - Motor connector axis 2**
 
     ---
 	

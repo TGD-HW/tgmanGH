@@ -18,7 +18,7 @@ Servozesilovač TGZ má vestavěnou funkci PROFINET Bridge, takže pro malý po�
 - Adresa MAC začíná číslem `00` a `0A`.
   Poslední čtyři čísla mohou být libovolná, ale v síti PROFINET jedinečná.
   Kromě toho se poslední číslo musí lišit o 8, takže platné hodnoty pro poslední číslo jsou `00, 08, 10, 18, 20, 28, ..., 90, 98, A0, A8, B0, B8, ..., F0, F8`.
-- Základní hodnota adresy MAC se používá pro servisní port X11.
+- Základní hodnota adresy MAC se používá pro service port X11.
   MAC adresa rozhraní PROFINET se vypočítá přičtením `4` k základní hodnotě, X13 (IN) má adresu `base + 5` a X12 (OUT) `base + 6`.
   Při uvádění zařízení PROFINET do provozu se obvykle používá pouze adresa MAC rozhraní PROFINET.
   První dvě hexadecimální čísla jsou vždy `00` a `0A` pro všechna rozhraní PROFINET a konektory X13 a X12 bez ohledu na hodnotu zadanou v grafickém rozhraní TGZ.
@@ -171,7 +171,7 @@ Podobné snížení se provádí při odesílání aktuální hodnoty polohy z T
 Hodnoty rychlosti nejsou vůbec škálovány, protože telegramy TGZ i PROFIdrive používají 32bitové hodnoty.
 Význam rychlosti je proto stejný jako význam rychlosti pro profil generátor.  
 
-Akcelerace a decelerace musí být nastaveny přímo v TGZ servisním programem TGZ_GUI v sekci PROFIdrive a můžou být změněny telegramy PROFIdrive pouze pomocí přepisovacích (procentuálních) hodnot obsažených v příslušných telegramech.
+Akcelerace a decelerace musí být nastaveny přímo v TGZ servicem programem TGZ_GUI v sekci PROFIdrive a můžou být změněny telegramy PROFIdrive pouze pomocí přepisovacích (procentuálních) hodnot obsažených v příslušných telegramech.
 
 ##Kompenzace vůle
 Firmware ze srpna 2023 nebo novější implementuje kompenzaci vůle.

@@ -72,8 +72,8 @@ Všechny registry TGZ jsou vždy 32bitové integer hodnoty.
 | 0x2800        | Regulátor rychlosti, osa 2  |
 | 0x2900        | Regulátor polohy, osa 1     |
 | 0x2A00        | Regulátor polohy, osa 2     |
-| 0x2B00        | Zpětná vazba, osa 1         |
-| 0x2C00        | Zpětná vazba, osa 2         |
+| 0x2B00        | Feedback, osa 1         |
+| 0x2C00        | Feedback, osa 2         |
 | 0x3100        | Command, osa 1               |
 | 0x3200        | Command, osa 2               |
 | 0x3300        | Monitorování, osa 1         |

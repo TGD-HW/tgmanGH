@@ -3,7 +3,7 @@ Pokud je k dispozici statická brzda, dojde po zastavení pohonu k její aktivac
 Funkci nouzového zastavení lze aktivovat:
 
 - Chybou pohonu umožňující nouzové zastavení.
-- Digitálním vstupem.
+- Digitalm vstupem.
 - Ochrannou funkcí - pro ochranu komunikačních sběrnic.
 
 Funkce nouzového zastavení je přístupná v `position` a `speed` režimech: `2,3,6,7`

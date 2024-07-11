@@ -1,50 +1,53 @@
-##Základní popis {#commonDO1-6}
-Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrováno šest rychlých izolovaných digitálních výstupů typu push-pull (totem pole).
-Výstupy ke své funkci potřebují napájení přivedné na VDDIO na konektoru **X8** (značeno také "VCC DO").
-Napájení je rozděleno na dvě skupiny.
-Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konektoru X8).
-Výstupy DO2,4,6 jsou napájeny z napájecího vstupu VCC DO2,4,6 (pin 11 konektoru X8).   
+##Basic Description {#commonDO1-6}
+The TGZ servoamplifier has six fast isolated push-pull (totem pole) digital outputs integrated on the **X8** connector in the standard (UNI) design.
+The outputs require a power supply applied to the VDDIO on the **X8** connector (also labeled "VCC DO") to function.
+The power supply is divided into two groups.
+The DO1,3,5 outputs are powered from the VCC DO1,3,5 power input (pin 12 of connector X8).
+The DO2,4,6 outputs are powered from the VCC DO2,4,6 power input (pin 11 of connector X8).   
 
-Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
+For a simplified wiring diagram of the digital outputs, see the figure:
 ![Simplified TGZ DO schematic](../img/TGZ_DO_simplified.svg){: style="width:80%;" }
 
-Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.
+Since these are push-pull outputs, the output state is defined at all times and there is no high-Z option.
+Logic 0 (DO connected to GNDIO) or logic 1 (DO connected to VDDIO).
+The outputs are never floating.
 
-!!! warning "Varování"
-	Nikdy na výstupy DO přímo nepřipojujte napájecí napětí, ani jeho záporný pól.
-	Mohlo by dojít k poškození výstupu.
+!!! warning "Warning"
+	Never connect the supply voltage directly to the DO outputs or its negative pole.
+	High risk of damage of the DO circuitry
 
-##Ochrany
-Digitální výstupy jsou chráněny proti přetížení a zkratu na výstupu pomocí společné inteligentní pojistky v napájecím obvodu VDDIO. Tato ochrana je společná vždy pro jednu skupinu výstupů (osa 1, osa 2).
-Dojde-li např. k přetížení DO2, inteligentní ochrana odpojí napájení celé skupině výstupů, tedy DO4 a DO6.
-DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.   
+##Protection
+The digital outputs are protected against overload and output short circuit by a common smart fuse IC in the VDDIO power supply circuit.
+This protection is common to one group of outputs (axis 1, axis 2) at a time.
+If, for example, DO2 is overloaded, the intelligent protection disconnects the power supply to the entire output group, i.e. DO2, DO4 and DO6.
+In this case, DO1, DO3 and DO5 will operate without any interruption.
 
-##Typické zapojení
-Typické schéma připojení zátěže k DO je nejčastěji *horní spínač*.   
+##Typical wiring
+The typical connection diagram of the load to the DO is most often *high side switch*. 
 
 ![high side switch](../img/HS_switch.svg){: style="width:30%;" }   
 
-Zátěž je připojena mezi DO a GNDIO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví napájecí napětí VDDIO.
-Povelem `vypni` (log. 0) se na zátěži objeví GNDIO.
+The load is connected between the DO and GNDIO. The DO `ON` command (log 1) causes the supply voltage VDDIO to appear on the load.
+The command `OFF` (log 0) causes GNDIO to appear on the load.
 
-Opačným případem je připojení zátěže k DO jako *dolní spínač*.   
+The opposite case is to connect the load to the DO as a *low side switch*.   
 
 ![low side switch](../img/LS_switch.svg){: style="width:30%;" }   
 
-Zátěž je připojena mezi VDDIO a DO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
-Povelem `vypni` (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   
+The load is connected between VDDIO and DO. The DO command `ON` (log 1) causes the VDDIO supply voltage to appear at both ends of the load, i.e. no current flows through the load. The load is not energized.
+With the command `OFF` (log 0), VDDIO appears on the load against GNDIO and the load is switched on - current flows and the load is energized.  
 
-##Induktivní zátěž
-Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
-Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   
+##Inductive load
+When switching inductive loads of higher power (typically relay coils, contactors, valves, etc.) it is necessary to use an external protection diode D1 (anti-kickback) suitably current and voltage rated.
+We recommend using a rectifier or schottky diode connected according to the schematic:   
 
 ![Inductive load high side](../img/InductiveLoad.svg){: style="width:35%;" }
 ![Inductive load low side](../img/InductiveLoadLS.svg){: style="width:35%;" }
 
 !!! note "Anti-kickback"
-	Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.
-	Velikost překmitu je závislá na indukčnosti smyčky (cívka + kabeláž) a proudu sepnuté zátěže.
-	Při spínání malých induktivních zátěží s odběrem menším než cca. 100mA (miniaturní relé apod.) není potřeba implementovat externí ochrannou diodu D1.
+	When switching inductive loads, a voltage surge is generated on the inductance being switched off.
+	The magnitude of the surge depends on the inductance of the loop (coil + wiring) and the current of the switched load.
+	When switching small inductive loads with a current of less than approx. 100 mA (miniature relays, etc.), there is no need to implement an external protection diode D1.
 
 
 ##Parametry

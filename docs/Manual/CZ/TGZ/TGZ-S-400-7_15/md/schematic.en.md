@@ -1,4 +1,4 @@
-## Příklad schématu zapojení servozesilovače
+#
 
 ![Example schematic](../img/TGZ-S-400_schematic.svg){: style="width:100%;" }
 

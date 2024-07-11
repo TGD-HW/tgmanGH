@@ -4,10 +4,10 @@
 
 	\* Without power supply for the servomotor static brake (from 0.5 to 1A for the TGN series) and digital outputs (up to 6 x 300 mA).
 	
-!!! info "Chlazení"
+!!! info "Cooling"
 
-	Pro zatížení servozesilovače jmenovitým proudem - 100 A je nutné nainstalovat chladič (montážní desku).
-	Doporučeným materiálem je hliník s minimálními rozměry S = 9 dm2.
-	Minimální tloušťka chladiče je 2 mm.
-	Při zatížení vyššími proudy je provozní doba omezena (250 A = 3 s).
-	U ostatních proudů mezi 100 A a 250 A můžete zjistit maximální provozní dobu servozesilovače u výrobce.
+	To load the servo amplifier with a rated current of - 100 A it is necessary to install a heat sink (mounting plate).
+	The recommended material is aluminium with minimum area of S = 9 dm<sup>2</sup>.
+	The minimum thickness of the heat sink is 2 mm.
+	The operating time is limited when higher currents are applied (250 A = 3 s).
+	For other currents between 100 A and 250 A, you can check the maximum operating time of the servo amplifier with the manufacturer.

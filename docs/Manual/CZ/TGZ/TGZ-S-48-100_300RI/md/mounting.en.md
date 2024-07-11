@@ -1,28 +1,29 @@
-# Montáž zařízení
-## Uchycení
-L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.   
+##Mounting
+The L-profile allows variable mounting of the servoamplifier in the control cabinet or directly on the machine.
+Below are the dimensions and position of the individual mounting elements.   
 
-Vrchní pohled
+Top view
 ![TGZ-S-48-100/250 Mounting](../img/mounting1.png){: style="width:70%;" }   
 
-Spodní pohled
+Bottom view
 ![TGZ-S-48-100/250 Mounting](../img/mounting2.svg){: style="width:70%;" }
 
-!!! warning "Důležitá poznámka"
-	Šrouby (6 × M4 - červeně označené) pro montáž chladiče nesmí být delší než 7 mm, jinak by mohlo dojít k mechanickému poškození servozesilovače.
+!!! warning "Important"
+	The screws (6 x M4 - marked in red) for mounting the heat sink must not be longer than 7 mm, otherwise there is a risk of mechanical damage to the servo amplifier.
    
-Detailní pohled na montáž servozesilovačů TGZ-S-48-100/250 a TGZ-S-48-100/300:
+Detailed view of the TGZ-S-48-100/250 and TGZ-S-48-100/300 servo amplifiers:
 ![TGZ-S-48-100/250 Mounting](../img/mounting3.png){: style="width:70%;" }
 ![TGZ-S-48-100/250 Mounting](../img/mounting4.png){: style="width:70%;" }
 
 
-##Postup montáže:
+##Mounting procedure:
 
-1. Pro upevnění servozesilovače je zapotřebí dvanáct šroubů M4, které spojují spodní stranu servozesilovače s montážní deskou.
-   Šest šroubů pro připevnění k sloupkům a šest šroubů pro připevnění k chladiči.
-2. Umístěte tepelně vodivou pastu na chladič, abyste lépe přenesli teplo na upevňovací desku.
-3. Pro zvýšení stupně ochrany (IP) lze použít gumový kroužek (podle výkresu).
-4. Minimální rozměry upevňovací desky jsou dány roztečí šroubových spojů a maximální velikost není omezena.
-5. Přišroubujte upevňovací desku k servozesilovači.
-   Ujistěte se, že šrouby použité k připevnění k chladiči nejsou delší než 7 mm.
-6. Upevňovací deska musí být uzemněna a slouží také k přenosu tepla z chladiče servozesilovače do okolí.
+1. Prepare the site, the necessary tools and protective equipment. Install the servoamplifier in the desired location. 
+   There must be no materials at the installation site that could cause short circuits or corrosion.
+2. Check that nothing is blocking the ventilation and ensure that the permissible ambient temperature is observed.
+3. If a cooling system is used in the cabinet, position it so that condensed water cannot drip onto the servoamplifier or accessories. 
+4. Mount the servoamplifier and power supply close to each other on a conductive grounded fixing plate. 
+5. Ground the servoamplifier.
+
+!!! Note "Cooling"
+	To achieve the declared parameter values, it is necessary to ensure sufficient heat dissipation and cooling of the servoamplifier.

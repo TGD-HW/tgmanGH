@@ -1,31 +1,31 @@
-##Základní popis {#commonFBE}
-Servozesilovač TGZ obsahuje ve standardním provedení (UNI) na konektoru **X5** obvody pro připojení externí zpětné vazby.
-Je možné připojit zpětnou vazbu typu Endat, SSI, BISS, inkrementální enkodér a po aplikaci propojky FBSELx také Hiperface DSL.
-Dále je zde na pinech 1-2 dostupné 5V/1A napájení pro různé účely.
-Nejčastěji se používá k napájení snímačů polohy na 5V.   
+##Basic Description {#commonFBE}
+The TGZ servoamplifier includes external feedback circuitry on the **X5** connector as standard (UNI).
+It is possible to connect Endat, SSI, BISS, incremental encoder feedback and, after application of the FBSELx jumper, also a Hiperface DSL.
+In addition, there is a 5V/1A power supply available on pins 1-2 for various purposes.
+The most common use is to power the 5V position sensors.   
 
-Zjednodušené vnitřní schéma zapojení je na obrázku níže.
+A simplified internal wiring diagram is shown in the figure below.
 
 ![Simplified TGZ FBE schematic](../img/FBEinternals.svg){: style="width:80%;" }
 
-Jedná se o 3 velmi rychlé budiče sběrnice RS485 schopné pracovat s datovým tokem až 20 Mbit/s.
+These are 3 very fast RS485 bus drivers capable of operating at data rates up to 20 Mbit/s.
 
-!!! note "Délka kabelu"
-	Maximální přenosová rychlost klesá s délkou zpětnovazebního kabelu.
-	V rámci zvýšení odolnosti zařízení proti rušení se ujistěte, že používáte originální kabel vhodné délky.
-	Zbytečně dlouhý kabel (rezervní smyčky/klubka) může zapříčinit snížení odolnosti zařízení.
+!!! note "Cable length"
+	The maximum baud rate decreases with the length of the feedback cable.
+	To increase the interference immunity of the device, make sure to use the original cable of the appropriate length.
+	An unnecessarily long cable (spare loop/cable) may cause a reduction in the device's EMI immunity.
 
-Každá linka RS485 je interně symetricky zakončena odporem 112 Ω.
-Dále je zde soufázová tlumivka pro větší odolnost komunikace vůči rušení.
-Konektor X5 je reprezentován piny 1-12.   
+Each RS485 line is internally symmetrically terminated with a 112 Ω resistor.
+In addition, there is a common mode choke for greater immunity to the EMI.
+The X6 and X7 connector is represented by pins 1-12 in the schematic.    
 
-V případě, že požadujeme typ zpětné vazby Hiperface DSL, je potřeba propojit piny 5-7 a 6-8.
-Tím se propojí signál RS_485_2 s výstupním obvodem pro napájení linky.
-Poté stačí připojit vhodný snímač na piny 11-12.   
+In case of a Hiperface DSL feedback, pins 5-7 a 6-8 need to be connected together.
+This will connect the RS_485_2 signal to the line power output circuit.
+Then just connect a suitable Hiperface DSL position sensor at pins 11-12.
 
-Budič RS485_3 je zapojen pouze jednosměrně (jen příjem dat).
-Nejčastěji se využívá pro čtení nulového "zero" impulzu v rámci otáčky motoru.
+The RS485_3 bus driver is connected unidirectionally only (data reception only).
+It is most often used to read the "zero" pulse.
 
 !!! warning "Firmware"
-	Ujistěte se, že pro zvolený typ zpětné vazby používáte správný firmware.
-	Kontaktujte dodavatele pro další podrobnosti.
+	Make sure that you use the correct firmware for the selected feedback type.
+	Contact your supplier for further details.

@@ -1,19 +1,19 @@
-##Základní popis {#commonDI1-8}
-Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrováno osm rychlých izolovaných digitálních vstupů.
-Šest z nich (DI1-6) lze u výrobce nakonfigurovat buď pro klasickou funkci digitálního vstupu, nebo jako přímé vstupy pro hallovy sondy.
-V obou případech je nutné připojit napájecí napětí na VDDIO proti GNDIO, jelikož jsou vstupy aktivní a vyžadují napájení.
-Stačí připojení napájecího napětí na jeden ze dvou napájecích vstupu VDDIO, aby aktivní vstupy fungovaly správně.
-Zbývající digitální vstupy č. 7 a č. 8 jsou standardní, pasivní, s nominální vstupní úrovní +24V a nevyžadují připojení VDDIO.
-Všechny digitální vstupy 1-8 mají integrovanou ochranu proti přepólování (až do -70 V) a proti přepětí (nad 30 V).
+##Basic description {#commonDI1-8}
+The TGZ servo amplifier has eight galvanically isolated fast digital inputs integrated on the **X8** connector in the standard (UNI) version.
+Six of these (DI1-6) can be configured by the manufacturer either for classic digital input function or as direct inputs for Hall probes (24V voltage level).
+In either case, a supply voltage must be connected to VDDIO or GNDIO, as the inputs are active and require power.
+Simply connecting a supply voltage to one of the two VDDIO power inputs is sufficient for the active inputs to function properly.
+The remaining digital inputs #7 and #8 are standard, passive, with a nominal input level of +24V and do not require a VDDIO supply.
+All digital inputs 1-8 have built-in reverse polarity protection (down to -70V) and overvoltage protection (above 30V).
 
-##Parametry DI
+##DI parameters
 
 --8<-- "md/X8_commonHW_DI_tab.en.md"
 
-##Použití s hallovými sondami
-Pokud chcete využít přímého připojení hallových sond určených pro komutaci motoru do konektoru **X8** na vstupy `1,3,5` (osa 1) nebo `2,4,6` (osa 2) je potřeba požádat výrobce předem o správně HW uzpůsobenou verzi.
-Tato verze se liší jak v hardware, tak ve firmware.
-Dbejte na to, aby takto použité hallovy sondy byly **přizpůsobeny pro napájecí napětí až 30V**, jelikož digitální vstupy servozesilovače TGZ pracují na nominální hladině **24V**.
-Použití hallových sond s napájecím napětím 5V nebo 12V nebude v tomto případě fungovat.   
+##Use with Hall sensors
+If you want to use the direct connection of Hall probes for motor commutation to the **X8** connector on inputs `1,3,5` (axis 1) or `2,4,6` (axis 2), you must first ask the manufacturer for a properly HW-adapted version.
+This version is different in both hardware and firmware.
+Make sure that the Hall probes used in this way are **adapted for supply voltages up to 30V**, as the digital inputs of the TGZ servo amplifier operate at a nominal level of **24V**.
+The use of Hall probes with 5V or 12V supply voltage will not work in this case.   
 
-Pokud není možné z nějakého důvodu zajistit vhodné hallovy sondy a jejich napájecí napětí 24V, doporučujeme použít speciální přizpůsobovací modul [TGHall](../../CZ/ETC/TGHall/md/description.md#TGhall_1), který si vyžádejte u společnosti TG Drives.
+If for some reason it is not possible to provide suitable Hall probes and their 24V supply voltage, we recommend using voltage translation module [TGHall](../../CZ/ETC/TGHall/md/description.md#TGhall_1), which you can order at TG Drives.

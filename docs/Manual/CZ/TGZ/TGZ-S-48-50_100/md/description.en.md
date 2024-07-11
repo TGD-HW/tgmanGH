@@ -1,12 +1,12 @@
-##3D náhled
+##3D view
 ![TGZ-S-48-50/100 IO side](../img/IOside.svg){: style="width:70%;" }
 <br>
 <br>
 ![TGZ-S-48-50/100 Feedback side](../img/MotSide.svg){: style="width:70%;" }
 
-##Konektory
+##Connectors
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100_enetCon.png){: style="width:60%;" }
@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
+-   **X1 - Control supply voltage**
 
     ---
 	![Molex Microlock 5055700501](../../../../source/img/5055700501.svg){: style="width:70%;" }
@@ -188,7 +188,7 @@ ___
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
--   **X3 - Napájení silové části**
+-   **X3 - Power supply voltage**
 
     ---
 	
@@ -200,7 +200,7 @@ ___
 
 	--8<-- "md/X3_DCbus_2pin_pressfit.en.md"
 	
--   **X3 - Připojení motoru**
+-   **X3 - Motor connector**
 
     ---
 	
@@ -213,7 +213,7 @@ ___
 	--8<-- "md/X3_M1_3pin_pressfit.en.md"
 
 
--   **X4 - Připojení brzdy**
+-   **X4 - Static brake connector**
 
     ---
 	

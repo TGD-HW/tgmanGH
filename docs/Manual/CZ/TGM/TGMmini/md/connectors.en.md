@@ -1,6 +1,6 @@
-<!--##Konektory-->
+<!--##Connectors-->
 ___
-### Strana komunikace/ethernet/ethercat
+### View of the ENET/ECAT side
 ___
 
 ![TGMmini power side](../img/PWRside.png){: style="width:60%;" }
@@ -43,7 +43,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X5 - Digitální vstupy**
+-   **X5 - Digital inputs**
 
     ---
 	
@@ -55,7 +55,7 @@ ___
 
 	--8<-- "md/X5_DI_10pin_B2CF.en.md"
 	
--   **X10 - Digitální výstupy**
+-   **X10 - Digital výstupy**
 
     ---
 	

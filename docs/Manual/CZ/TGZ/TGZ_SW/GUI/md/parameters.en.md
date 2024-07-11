@@ -216,7 +216,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;IP adresa servisního UDP kanálu X11&quot;}">IP adresa servisního UDP kanálu X11</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;IP adresa serviceho UDP kanálu X11&quot;}">IP adresa serviceho UDP kanálu X11</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-ID&quot;}">C-ID</td>
@@ -2136,7 +2136,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální vstupy : bit[0] .. IN1,bit[1] .. IN3,bit[2]&yen;u000a.. IN5,bit[3] .. IN7&quot;}">Digitální vstupy : bit[0] .. IN1,bit[1] .. IN3,bit[2]<br>.. IN5,bit[3] .. IN7</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2]&yen;u000a.. IN5,bit[3] .. IN7&quot;}">Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2]<br>.. IN5,bit[3] .. IN7</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital_Inputs&quot;}">Digital_Inputs</td>
@@ -2148,7 +2148,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální vstupy : bit[0] .. IN2,bit[1] .. IN4,bit[2]&yen;u000a.. IN6,bit[3] .. IN8&quot;}">Digitální vstupy : bit[0] .. IN2,bit[1] .. IN4,bit[2]<br>.. IN6,bit[3] .. IN8</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2]&yen;u000a.. IN6,bit[3] .. IN8&quot;}">Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2]<br>.. IN6,bit[3] .. IN8</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor_temperature&quot;}">Motor_temperature</td>
@@ -2400,7 +2400,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální výstupy: bit[0] .. Out1, bit[1] .. Out3,&yen;u000abit[2] .. Out5&quot;}">Digitální výstupy: bit[0] .. Out1, bit[1] .. Out3,<br>bit[2] .. Out5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital výstupy: bit[0] .. Out1, bit[1] .. Out3,&yen;u000abit[2] .. Out5&quot;}">Digital výstupy: bit[0] .. Out1, bit[1] .. Out3,<br>bit[2] .. Out5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DO&quot;}">DO</td>
@@ -2412,7 +2412,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální výstupy: bit[0] .. Out2, bit[1] .. Out4,&yen;u000abit[2] .. Out6&quot;}">Digitální výstupy: bit[0] .. Out2, bit[1] .. Out4,<br>bit[2] .. Out6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital výstupy: bit[0] .. Out2, bit[1] .. Out4,&yen;u000abit[2] .. Out6&quot;}">Digital výstupy: bit[0] .. Out2, bit[1] .. Out4,<br>bit[2] .. Out6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-PackeTime&quot;}">C-PackeTime</td>

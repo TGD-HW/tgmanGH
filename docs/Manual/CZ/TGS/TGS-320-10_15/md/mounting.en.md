@@ -7,6 +7,6 @@ L-profil umožňuje variabilní montáž napaječe do rozvaděče nebo přímo n
 --8<-- "md/mechMounting.en.md"
 
 ## Rozestupy
-U napájecího modulu TGS-320-10/15 spolu se servozesilovačem TGZ-320 je doporučeno dodržet minimální horizontální vzdálenost mezi jednotlivými zařízeními alespoň 10&nbsp;mm, doporučená vertikální vzdálenost je pak minimálně 80&nbsp;pmm.
+U napájecího modulu TGS-320-10/15 spolu se servozesilovačem TGZ-320 servo it is recommended to keep a minimum horizontal distance between the individual devices of at least 10&nbsp;mm, the recommended vertical distance is at least 80&nbsp;pmm.
 
 ![TGZ-D-320 Distance](../../../../source/img/placement4.png){: style="width:60%;" }

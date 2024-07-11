@@ -37,16 +37,16 @@ Některé objekty jsou společné pro komunikaci CAN a EtherCAT, jiné se použ�
 ##Specifické objekty TGZ
 Kromě registrů TGZ (indexy `0x2000` - `0x3FF`) jsou definovány speciální objekty pro snadný přístup k nativním registrům TGZ.
 
-###Digitální vstupy `0x4000`
+###Digital inputs `0x4000`
 Tento objekt je definován jako hodnota `UNSIGNED8` a obsahuje všechny digitální vstupy servopohonu TGZ.
 Slouží ke snadnému mapování TPDO v síti CAN.
 Objekt lze mapovat pouze pro CAN TPDO.
 
-###Digitální výstupy `0x4001`
+###Digital výstupy `0x4001`
 Podobně jsou digitální výstupy jako `UNSIGNED8` (používá se pouze prvních 6 bitů) také přímo namapovány na tento objekt pro snadné mapování RPDO.
 Objekt lze mapovat pro CAN RPDO.
 
-###Analogové vstupy `0x4002`
+###Analog inputs `0x4002`
 Podindex 0 je konstantní a je roven dvěma - k dispozici jsou dva analogové vstupy.
 Podindexy 1 a 2 obsahují hodnotu analogového vstupu typu `UNSIGNED16` pouze pro čtení.
 Tyto objekty jsou kopií nativních registrů TGZ `0x3328` a `0x3428`, zmenšené na hodnotu `UNSIGNED16`.
@@ -119,7 +119,7 @@ Servopohon TGZ podporuje následující provozní režimy:
 
 !!! warning "Důležité upozornění"
 	Objekt `0x6060` (`0x6860`) NEMĚNÍ režim pohonu TGZ.
-	Registr `D-Mode` musí být nastaven na správnou hodnotu buď servisním programem TGZ_GUI a uložen do servozesilovače, nebo musí být nastaven samostatně objektem SDO `0x2303` (první osa) nebo `0x2403` (druhá osa) masterem při spuštění.
+	Registr `D-Mode` musí být nastaven na správnou hodnotu buď servicem programem TGZ_GUI a uložen do servozesilovače, nebo musí být nastaven samostatně objektem SDO `0x2303` (první osa) nebo `0x2403` (druhá osa) masterem při spuštění.
 	Pokud provozní režim DSP402 neodpovídá příslušné hodnotě `D-Mode` (podle výše uvedené tabulky), bude servozesilovač TGZ příkazy nadřazené sítě EtherCAT/CANopen ignorovat.
 	Tato funkce umožňuje virtuálně "odpojit" servozesilovač od nadřazeného systému a provádět testy nebo jog přímo z programu TGZ_GUI pouhým nastavením hodnoty `D-Mode` na jinou (servisem potřebnou) hodnotu.
 	
@@ -190,13 +190,13 @@ K dispozici jsou následující standardní režimy polohování DSP402:
 | 35      | Nastavit nulu v aktuální poloze. Používá skutečnou polohu jako referenční bod výchozího bodu. Tato metoda je pro CoE zastaralá.                                                                 |
 | 37      | Nastavit nulu v aktuální poloze. Používá skutečnou polohu jako referenční bod výchozího bodu. Tento režim je pro CoE doporučen.                                                           |
 
-###Digitální vstupy `0x60FD`
+###Digital inputs `0x60FD`
 Podle standardu DSP402 jsou všechny digitální vstupy namapovány na horních 16 bitů hodnoty `UNSIGNED32` (servopohon TGZ má 8 digitálních vstupů, takže digitálním vstupům odpovídají pouze bity 16 - 23).
 Dolních 16 bitů je nastaveno na nulu.
 Tento objekt existuje také pro druhou osu jako `0x68FD`, ale je namapován na stejné vstupy, takže oba objekty vracejí stejnou hodnotu.
 Pro snadnější přístup k digitálním vstupům lze použít také objekt `0x4000`.
 
-###Digitální výstupy 0x60FE<sub>1</sub> a maska 0x60FE<sub>2</sub>
+###Digital výstupy 0x60FE<sub>1</sub> a maska 0x60FE<sub>2</sub>
 Vyšších 16 bitů hodnoty `UNSIGNED32` se používá jako digitální výstupy (servopohon TGZ má 6 digitálních výstupů, na výstupní piny jsou připojeny pouze bity 16 - 21).
 Nižších 16 bitů se ignoruje.
 To platí i pro masku digitálního výstupu.
@@ -322,7 +322,7 @@ Výchozí mapování PDO pro příjem (směrový regulátor → TGZ):
 	<tr>
 		<td>4</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40010008&quot;}">0x40010008</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální výstupy 0x4001&quot;}">Digitální výstupy 0x4001</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital výstupy 0x4001&quot;}">Digital výstupy 0x4001</td>
 	</tr>
 	<tr>
 		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RPDO2 používá 7 bajtů (druhá osa)&quot;}"><b>RPDO2 používá 7 bajtů (druhá osa)</b></td>
@@ -443,7 +443,7 @@ Výchozí mapování PDO pro příjem (směrový regulátor → TGZ):
 	<tr>
 		<td>4</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40000008&quot;}">0x40000008</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální vstupy 0x4000&quot;}">Digitální vstupy 0x4000</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs 0x4000&quot;}">Digital inputs 0x4000</td>
 	</tr>
 	<tr>
 		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO3 (první osa, 6 bajtů)&quot;}"><b>TPDO3 (první osa, 6 bajtů)</b></td>
@@ -493,7 +493,7 @@ Při použití komunikace EtherCAT jsou k dispozici dvě pevná mapování PDO:
 
 ###Nativní mapování TGZ PDO
 Toto mapování PDO využívá plné 64bitové hodnoty polohy, což umožňuje řídicí jednotce EtherCAT Master řídit servopohon s plnou přesností. 
-Pohon pracuje pouze v režimu cyklické synchronní polohy. Režim pohonu (`D-Mode`) musí být servisním programem TGZ_GUI nastaven na hodnotu 3 (režim polohy).
+Pohon pracuje pouze v režimu cyklické synchronní polohy. Režim pohonu (`D-Mode`) musí být servicem programem TGZ_GUI nastaven na hodnotu 3 (režim polohy).
 Pro výběr nativního mapování PDO musí EtherCAT master provést následující sekvenci ve stavu `PRE-OPERATIONAL` pomocí přístupu SDO:
 
 - Nastavení objektu 0x1C12<sub>0</sub> na `0` (velikost dat `UNSIGNED8`)

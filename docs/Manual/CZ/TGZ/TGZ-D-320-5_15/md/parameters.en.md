@@ -16,7 +16,7 @@
 | 2 AI, 8 DI, 6 DO | 1x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |
 | **SIGNALING** |   |
 | LED display | Error message, 2x7 LED segment |
-| LED signaling(axis 1 and 2 separately) | 1x green (SERVO OK)1x red (SERVO ERROR) |
+| LED signaling (axis 1 and 2 separately) | 1x green (SERVO OK)1x red (SERVO ERROR) |
 | **OTHER CONNECTORS** |   |
 | Power supply of the power section | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
 | Power supply of the control part | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180   |
