@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bezpecnostni-funkce" class="md-skip">
+        <a href="#safety-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -570,7 +570,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -784,7 +784,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -998,7 +998,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1212,7 +1212,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1426,7 +1426,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1640,7 +1640,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1854,7 +1854,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2068,7 +2068,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2282,7 +2282,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2496,7 +2496,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2710,7 +2710,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2924,7 +2924,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3138,7 +3138,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3352,7 +3352,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3566,7 +3566,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3780,7 +3780,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3994,7 +3994,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4774,7 +4774,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4988,7 +4988,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5204,7 +5204,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5293,6 +5293,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Safety
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5302,6 +5313,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#safe-torque-off-sto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Torque Off (STO)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5494,7 +5533,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5666,7 +5705,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -6680,7 +6719,23 @@
                   
 
 
-<h1 id="bezpecnostni-funkce">Bezpečnostní funkce<a class="headerlink" href="#bezpecnostni-funkce" title="Permanent link">&para;</a></h1>
+<h1 id="safety-functions">Safety functions<a class="headerlink" href="#safety-functions" title="Permanent link">&para;</a></h1>
+<h2 id="safe-torque-off-sto">Safe Torque Off (STO)<a class="headerlink" href="#safe-torque-off-sto" title="Permanent link">&para;</a></h2>
+<p>The STO function is a basic safety function integrated in the servo amplifier.
+It ensures that no torque-generating energy can continue to act on the engine in the event of an emergency and at the same time prevents unintentional starting.
+The input terminals for STO are part of the connector X1, through which the power supply of the control part and the motor brake is also realized.
+For correct electrical connection of the servo amplifier, it is necessary to apply +24 V DC to the inputs STO A and STO B.
+If the power supply is disconnected from the STO A or STO B input, the power supply to the motor will be interrupted immediately and will no longer be below torque.
+If the motor is in motion, the motor will turn to a standstill due to inertial forces.</p>
+<p><a class="glightbox" href="../../../../../../../Manual/source/img/STOpins.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="STO connection" src="../../../../../../../Manual/source/img/STOpins.png" style="width:15%;" /></a></p>
+<p>It is possible to connect a user safety system to the STO A and STO B inputs depending on the specific application and customer needs.
+After equipping the STO protection, it is necessary to perform a system reset and re-enable SW ENABLE.
+STO protection is redundant and is characterized by a high degree of reliability.</p>
+<p><a class="glightbox" href="../../../../../../../Manual/source/img/STOschematic.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="STO schematic" src="../../../../../../../Manual/source/img/STOschematic.png" style="width:80%;" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">STO norm</p>
+<p>System STO meets the requirements on safety level integrity SIL3 according to the standards ČSN EN 61508-1 ed.2, ČSN EN 61508-2 ed.2, ČSN EN 61508-6 ed.2 and performance level with high demand PLe according to the standard ČSN EN ISO 13849-1.</p>
+</div>
 <!-- zde prijdou dalsi bezepcnostni funkce, jako Safety speed apod...-->
 
 

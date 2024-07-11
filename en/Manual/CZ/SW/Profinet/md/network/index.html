@@ -570,7 +570,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -784,7 +784,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -998,7 +998,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1212,7 +1212,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1426,7 +1426,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1640,7 +1640,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1854,7 +1854,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2068,7 +2068,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2282,7 +2282,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2496,7 +2496,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2710,7 +2710,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2924,7 +2924,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3138,7 +3138,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3352,7 +3352,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3566,7 +3566,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3780,7 +3780,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3994,7 +3994,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4769,7 +4769,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4983,7 +4983,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5197,7 +5197,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5477,7 +5477,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5649,7 +5649,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -6819,7 +6819,7 @@ Veškerá elektrická zapojení musí být provedena v souladu s <a href="../../
 <li>Adresa MAC začíná číslem <code>00</code> a <code>0A</code>.
   Poslední čtyři čísla mohou být libovolná, ale v síti PROFINET jedinečná.
   Kromě toho se poslední číslo musí lišit o 8, takže platné hodnoty pro poslední číslo jsou <code>00, 08, 10, 18, 20, 28, ..., 90, 98, A0, A8, B0, B8, ..., F0, F8</code>.</li>
-<li>Základní hodnota adresy MAC se používá pro servisní port X11.
+<li>Základní hodnota adresy MAC se používá pro service port X11.
   MAC adresa rozhraní PROFINET se vypočítá přičtením <code>4</code> k základní hodnotě, X13 (IN) má adresu <code>base + 5</code> a X12 (OUT) <code>base + 6</code>.
   Při uvádění zařízení PROFINET do provozu se obvykle používá pouze adresa MAC rozhraní PROFINET.
   První dvě hexadecimální čísla jsou vždy <code>00</code> a <code>0A</code> pro všechna rozhraní PROFINET a konektory X13 a X12 bez ohledu na hodnotu zadanou v grafickém rozhraní TGZ.</li>
@@ -7093,7 +7093,7 @@ Posunutí má stejný účinek jako vynásobení hodnoty 212 (tj. 4096).
 Podobné snížení se provádí při odesílání aktuální hodnoty polohy z TGZ do řídicí jednotky PROFIdrive: 64bitová poloha TGZ se posune doprava o 32 - <code>BitsPerRevol</code> (což je stejná operace jako dělení 2(32-B itsPerRevol) ) a výsledných dolních 32 bitů se odešle v telegramu PROFIdrive.   </p>
 <p>Hodnoty rychlosti nejsou vůbec škálovány, protože telegramy TGZ i PROFIdrive používají 32bitové hodnoty.
 Význam rychlosti je proto stejný jako význam rychlosti pro profil generátor.  </p>
-<p>Akcelerace a decelerace musí být nastaveny přímo v TGZ servisním programem TGZ_GUI v sekci PROFIdrive a můžou být změněny telegramy PROFIdrive pouze pomocí přepisovacích (procentuálních) hodnot obsažených v příslušných telegramech.</p>
+<p>Akcelerace a decelerace musí být nastaveny přímo v TGZ servicem programem TGZ_GUI v sekci PROFIdrive a můžou být změněny telegramy PROFIdrive pouze pomocí přepisovacích (procentuálních) hodnot obsažených v příslušných telegramech.</p>
 <h2 id="kompenzace-vule">Kompenzace vůle<a class="headerlink" href="#kompenzace-vule" title="Permanent link">&para;</a></h2>
 <p>Firmware ze srpna 2023 nebo novější implementuje kompenzaci vůle.
 Pro hodnotu vůle se používá standardní parametr <code>PNU 2583</code>.

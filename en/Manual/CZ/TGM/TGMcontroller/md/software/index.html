@@ -570,7 +570,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -784,7 +784,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -998,7 +998,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1212,7 +1212,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1426,7 +1426,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1640,7 +1640,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -1854,7 +1854,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2068,7 +2068,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2282,7 +2282,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2496,7 +2496,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2710,7 +2710,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -2924,7 +2924,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3138,7 +3138,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3352,7 +3352,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3566,7 +3566,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3780,7 +3780,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -3994,7 +3994,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4769,7 +4769,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -4983,7 +4983,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5197,7 +5197,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5482,7 +5482,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -5656,7 +5656,7 @@
         
   
   <span class="md-ellipsis">
-    Dimmensions
+    Dimensions
   </span>
   
 
@@ -6830,7 +6830,7 @@ Podrobný popis systému TGMotion je uveden v jeho vlastní příručce.
 Mezi TGMotion na PC a v TGMcontrolleru nejsou žádné funkční rozdíly.
 Virtuální PLC lze v případě potřeby kompletně vyvinout a otestovat na PC a poté pouze zkompilovat pro TGMcontroller a spustit na něm bez dalších změn.</p>
 <h2 id="control-observer">Control observer<a class="headerlink" href="#control-observer" title="Permanent link">&para;</a></h2>
-<p>Control Observer je servisní a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
+<p>Control Observer je service a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
 Nejprve musí být připojen k zařízení. K tomu slouží okno <em>Connection info</em> :</p>
 <p><a class="glightbox" href="../../img/connectionInfo.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../../img/connectionInfo.png" style="width:60%;" /></a></p>
 <p>V menu <code>Connection Device</code> zvolte požadovaný typ zařízení.
@@ -7000,10 +7000,10 @@ Předpokládá výše uvedené záznamy v souboru <code>TGM.INI</code> (<code>SE
 <p>Hodnoty analogových vstupů AN1, AN2 se objeví v proměnných <code>SERVO[00].AnalogIn</code> a <code>SERVO[01].AnalogIn</code>.</p>
 <h2 id="komunikace-s-pocitacem">Komunikace s počítačem<a class="headerlink" href="#komunikace-s-pocitacem" title="Permanent link">&para;</a></h2>
 <p>TGMcontroller používá dva gigabitové ethernetové porty pro komunikaci s okolním světem.
-Tzv. servisní port (X11) implementuje standardní protokoly: TCP, UDP, Profinet I/O a Modbus TCP.
+Tzv. service port (X11) implementuje standardní protokoly: TCP, UDP, Profinet I/O a Modbus TCP.
 Všechny tyto protokoly lze v případě potřeby používat současně.
 Důležitou roli pro tyto protokoly hraje IP adresa (viz níže).
-Tento servisní port lze použít ve větších sítích, kde jsou nutné ethernetové switche, směrovače nebo bridge.
+Tento service port lze použít ve větších sítích, kde jsou nutné ethernetové switche, směrovače nebo bridge.
 Současně může být připojeno až 16 externích klientů.   </p>
 <p>Protože TGMcontroller lze použít také jako náhradu za rozšíření PC v reálném čase, je implementován Fast Service Port (X12).
 Používá vlastní protokol a měl by být používán pouze pro peer to peer ethernetové připojení, tj. přímý kabel mezi PC a TGMcontrollerem.
@@ -7240,9 +7240,9 @@ Každý slot má přiřazený parametr, který udává offset dat k paměti PLC 
 Tento parametr lze nastavit pomocí nástroje pro uvedení do provozu nebo pomocí programu Profinet PLC.</p>
 <div class="admonition warning">
 <p class="admonition-title">Změna IP</p>
-<p>Změnou IP adresy zařízení Profinet se změní i adresa servisního portu X11.
+<p>Změnou IP adresy zařízení Profinet se změní i adresa serviceho portu X11.
 To znamená, že může dojít ke ztrátě TCP/UDP nebo jiné komunikace.
-Řešením je použití stejné adresy pro servisní protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.</p>
+Řešením je použití stejné adresy pro service protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.</p>
 </div>
 <h2 id="modbus-tcp">Modbus TCP<a class="headerlink" href="#modbus-tcp" title="Permanent link">&para;</a></h2>
 <p>Protokol Modbus TCP je ve výchozím nastavení vypnut.
@@ -7326,7 +7326,7 @@ Protokol FSP je určen pro výkonné adaptéry, konkrétně pro adaptéry PCIe.<
 <li><code>TGM_PLC.bin</code> - virtuální PLC vytvořené uživatelem</li>
 <li><code>Eeprom.bin</code> - binární konfigurační soubor pro PLC</li>
 </ul>
-<p>Všechny čtyři výše uvedené soubory lze zapsat na kartu SD pomocí servisního programu <strong>Control Observer</strong> v počítači.
+<p>Všechny čtyři výše uvedené soubory lze zapsat na kartu SD pomocí serviceho programu <strong>Control Observer</strong> v počítači.
 Tyto soubory lze také vyčíst zpět.
 Protože karta SD používá standardní souborový systém FAT32, lze k ní také přímo přistupovat pomocí počítače a čtečky karet SD.
 Po vložení upravené SD karty zpět do řídicí jednotky TGMcontroller je nutné ji restartovat pomocí programu <strong>Control Observer</strong> nebo sekvencí vypnutí/zapnutí.
