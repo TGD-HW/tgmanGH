@@ -1,1 +1,1 @@
-V programu TGZ GUI je možné spustit testovací uživatelský program.
+It is possible to run a user test program in the TGZ GUI. Details to come.

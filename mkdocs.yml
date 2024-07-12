@@ -109,7 +109,7 @@ plugins:
                 Ostatní: Etc.
                 Certifikáty: Certificates
                 Instalace a spuštění: Instalation
-                Připojení k TGZ: TGC connection
+                Připojení k TGZ: TGZ connection
                 Nastavení parametrů: Parameter settings
                 Osciloskop: Oscilloscope
                 Přehrávání firmware: Firmware upload
@@ -345,13 +345,13 @@ nav:
                 - Analogové vstupy: 'Manual/source/md/commonHW_AI.md'  
                 - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'
                 - Zpětná vazba FBE: 'Manual/source/md/commonHW_FBE.md'
-                - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'                
+                - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'  
+                - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
                 - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'
                 - Další funkce: 'Manual/CZ/SW/REG/md/AuxFunc.md'
-                - Nouzové zabrždění: 'Manual/CZ/SW/REG/md/ESTOP.md' 
-                - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                   
+                - Nouzové zabrždění: 'Manual/CZ/SW/REG/md/ESTOP.md'               
             - 'TGZ GUI': 
                 - Instalace a spuštění: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/intro.md'
                 - Připojení k TGZ: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/connection.md'

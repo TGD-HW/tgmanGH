@@ -1,22 +1,23 @@
-##Získání aplikace
-Pro nastavení servozesilovače slouží ovládací a service software aplikace **TGZ GUI**.
-Současně je zde umožněno monitorování parametrů servozesilovače TGZ.
-Software **TGZ GUI** lze stáhnout [ZDE](https://www.tgdrives.cz/fileadmin/user_upload/download-TGZ/TGZ_GUI.zip)
+##Obtaining software
+The control and service software of the **TGZ GUI** application is used to set the servo amplifier.
+At the same time, it is possible to monitor the parameters of the TGZ servo amplifier.
+The **TGZ GUI** can be downloaded from the [TG Drives website](https://www.tgdrives.cz/fileadmin/user_upload/download-TGZ/TGZ_GUI.zip).
 
-##Instalace a spuštění {#GUIstart}
-**Instalace TGZ GUI:**   
-Ovládací software TGZ GUI nevyžaduje zvláštní instalaci, program stačí pouze nakopírovat na disk, je však nutno zachovat strukturu podadresářů.   
+##Installation and startup {#GUIstart}
+**Installing TGZ GUI:**   
+The TGZ GUI control software does not require special installation, you only need to copy the program to disk, but it is necessary to keep the subdirectory structure.    
 
-**Spuštění programu:**   
-Spuštění TGZ GUI se provede dvojklikem na spouštěcí ikonu programu `TGZ_GUI.exe`. Spuštěné okno aplikace pak vypadá následovně:
+**Starting the program:**   
+To start the TGZ GUI, double-click on the `TGZ_GUI.exe` icon.
+The launched application window then looks like this:
 ![TGZ GUI welcome page](../img/GUIconnect.png){: style="width:100%;" }
 
-Spuštěné okno ovládacího software TGZ GUI má tři základní záložky - **Connections, Parameters a Oscilloscope**, k jejichž aktivování dojde vždy kliknutím na příslušnou záložku.
-V pravé horní části okna se pak nachází celkem 11 programových ikon   
+The running window of the TGZ GUI control software has three basic tabs - **Connections**, **Parameters** and **Oscilloscope**, which are always activated by clicking on the appropriate tab.
+In the upper right part of the window there are a total of 11 program icons  
 
 ![All Icons](../../../../../source/img/icoAll.png){: style="width:40%;" }
 
-, jejichž funkce jsou popsány níže:
+, whose functions are described below: 
 
 <div class="grid cards" markdown>
 
@@ -25,76 +26,76 @@ V pravé horní části okna se pak nachází celkem 11 programových ikon
     ---
 	![Icon Refresh](../../../../../source/img/icoRefresh.png){: style="width:10%;" }
 
--	Umožňuje znovunačtení uložených parametrů (např. z paměťové karty).
+-	reload stored parameters (eg from a memory card).
 
 -   **DEVICE MEMORY**
 
     ---
 	![Icon Memory](../../../../../source/img/icoMemory.png){: style="width:10%;" }
 
--    Umožňuje uložení a načtení parametrů z paměťové karty, výchozí nastavení, restart servozesilovače a přehrání firmware.
+-   allows saving and reading parameters from the memory card, default settings, servo amplifier restart and firmware playback.
 
 -   **LOAD PARAMETERS FROM FILE**
 
     ---
 	![Icon Load](../../../../../source/img/icoLoad.png){: style="width:10%;" }
 
--	Umožňuje načtení parametrů ze souboru.
+-	load parameters from a file.
 
 -   **SAVE PARAMETERS TO FILE**
 
     ---
 	![Icon Save](../../../../../source/img/icoSave.png){: style="width:10%;" }
 
--	Umožňuje uložení parametrů do souboru.
+-	save parameters to a file.
 
 -   **MONITORING**
 
     ---
 	![Icon Monitoring](../../../../../source/img/icoMonitoring.png){: style="width:10%;" }
 
--	Umožňuje vyvolání / skrytí nabídky v pravé části (základní informace o jednotlivých osách servozesilovače a sledování aktuálních hodnot vybraných parametrů).
+-	call up / hide the menu in the right part (basic information about individual axes of the servo amplifier and monitoring of current values of selected parameters).
 
 -   **SERVICE MOTION**
 
     ---
 	![Icon Service Motion](../../../../../source/img/icoServiceMotion.png){: style="width:10%;" }
 
--	Umožňuje testovací ovládání servomotoru v různých řežimech přímo z TGZ GUI
+-	enables test control of the servomotor in different modes directly from the TGZ GUI
 
 -   **OSCILLOSCOPE**
 
     ---
 	![Icon Oscilloscope](../../../../../source/img/icoScope.png){: style="width:10%;" }
 
--	aktivuje záložku *Oscilloscope* jako samostatné okno.
+-	activates the `Oscilloscope` tab as a separate window.
 
 -   **USER PROGRAM**
 
     ---
 	![Icon External User Program](../../../../../source/img/icoExtProg.png){: style="width:10%;" }
 
--	Aktivuje záložku *External User Program* jako samostatné okno. Zde je možné spustit libovolný uživatelský testovací program.
+-	Activates the *External User Program* tab as a separate window. Here you can run any user test program.
 
 -   **LAYOUT**
 
     ---
 	![Icon Layout](../../../../../source/img/icoLayout.png){: style="width:10%;" }
 
--	Umožňuje načíst/uložit rozložení panelů a oken programu TGZ GUI.
+-	allows user to load/save the layout of TGZ GUI panels and windows.
 
 -   **CONFIGURATION**
 
     ---
 	![Icon Configuration](../../../../../source/img/icoConfig.png){: style="width:10%;" }
 
--	Umožňuje nastavení TGZ GUI (komunikace, typ výstupních dat z osciloskopu, jazykové nastavení).
+-	TGZ GUI settings (communication, type of output data from the oscilloscope, language settings).
 
 -   **SYSTEM MESSAGES**
 
     ---
 	![Icon Messages](../../../../../source/img/icoMessages.png){: style="width:10%;" }
 
--	Zobrazí výpis systémových zpráv aplikace.
+-	displays a list of application system messages.
 
 </div>

@@ -1,64 +1,65 @@
-###Řízení ASM ve skalárním režimu (bez snímače)
-| Parametr | Popis |
+##Asynchronous motor (ASM)
+###ASM control in scalar mode (no feedback)
+| Parameter | Description |
 |---|---|
-| D-Mode | 20 = režim řízení U/f |
-| M-Inull | jmenovitý proud, pro každou fázi se počítá i²t, při překročení vypadne do chyby |
-| M-polepairs | počet pólpárů motoru |
-| M-CommutationSource | 10 = režim ASM |
-| M-Un | jmenovité napětí ASM |
-| IM-fn | jmenovitá/synchronní frekvence |
-| IM-Umin_u_f | minimální napětí při řízení U/f , pro zvýšení momentu při malých otáčkách |
-| IM-Umax_u_f | maximální napětí při řízení U/f, pro omezení výkonu motoru. Špičková hodnota napětí je rovna napětí meziobvodu jen efektivní hodnota je omezena. |
+| D-Mode | 20 = U/f control mode |
+| M-Inull | nominal current, i²t is calculated for each phase, if exceeded it falls to error |
+| M-polepairs | number of motor poles |
+| M-CommutationSource | 10 = ASM mode |
+| M-Un | ASM nominal voltage |
+| IM-fn | nominal/synchronous frequency |
+| IM-Umin_u_f | minimum control voltage U/f , to increase torque at low speed |
+| IM-Umax_u_f | maximum voltage at U/f control, to limit motor power. The peak voltage is equal to the DCbus voltage only the effective value is limited. |
 
-Řízení motoru je umožněno prostřednictvím PG jako v režimech se synchronním motorem.
-Neprobíhá zde ovšem ani polohová ani rychlostní regulace.
-Výstupem PG je v tomto případě synchronní frekvence.
+Asynchronous motor control is enabled via PG as in synchronous motor modes.
+However, no position or speed control is used here.
+The PG output in this case is a synchronous frequency.
 
-###Vektorové řízení ASM (se snímačem Hiperface DSL)
+###Vector control (with Hiperface DSL sensor)
 ![ASM simplified schematic](../../../../source/img/ASMschematic1.webp){: style="width:50%;" }
 
-| Parametr | Popis |
+| Parameter | Description |
 |---|---|
-| M-CommutationSource | 10 = režim ASM |
-| IM-Rs | odpor statoru |
-| IM-Ls | Indukčnost statoru = Lsσ + Lm |
-| IM-Rr | Odpor rotoru |
-| IM-Lr | Indukčnost rotoru = Lrσ + Lm |
-| IM-Lm | Magnetizační indukčnost |
-| IM-Id_rms | nominální budící proud Id (efektivní hodnota) |
+| M-CommutationSource | 10 = ASM mode |
+| IM-Rs | stator resistance |
+| IM-Ls | Stator Inductance = Lsσ + Lm |
+| IM-Rr | Rotor Resistance |
+| IM-Lr | Rotor inductance = Lrσ + Lm |
+| IM-Lm | Magnetizing inductance |
+| IM-Id_rms | nominal excitation current Id (rms value) |
 
-Řízení motoru je možné ve všech režimech jako u synchronního motoru.
+Motor control is possible in all modes as with a synchronous motor.
 
-###Gear (Elektronický převod)
-Tato funkcionalita umožňuje implementaci elektronické převodovky a elektronické vačky.
+##Gear
+This functionality allows the implementation of an electronic transmission and an electronic cam.
 
-!!! Note "Poznámka"
-	 Elektronická vačka je v kontinuálním vývoji a prozatím není implementována.
+!!! Note "Note"
+	The electronic cam is in continuous development and has not been implemented yet.
 	 
-Elektronická převodovka prostřednictvím vstupní polohy a převodového poměru a určuje polohu motoru.
-Nahrazuje méně účinné mechanické převodovky.
+Electronic transmission via input position and gear ratio and determines the position of the motor.
+Replaces less efficient mechanical gearboxes.
 
-| Parametr | Popis | Čtení/zápis | Popis |
-|---|---|---|---|
-| PositionAngle | [inc] | čtení/zápis | Výstupní poloha v rámci jedné otáčky pro lineární převod nebo ukazatel na CAM pro vačkové převody |
-| PositionRevol | [inc] | čtení/zápis | Výstupní poloha v rámci více otáček pro lineární převod nebo ukazatel na CAM pro vačkové převody |
-| CamPositionAngle | [inc] | čtení/zápis | Výstupní poloha v rámci jedné otáčky pro vačkové převody |
-| CamPositionRevol | [inc] | čtení/zápis | Výstupní poloha v rámci více otáček pro vačkové převody |
-| OffsetAngle | [inc] | čtení/zápis | Offset výstupní polohy |
-| OffsetRevol | [inc] | čtení/zápis | Offset výstupní polohy |
-| Shift | [inc] | čtení/zápis | Požadovaný posun ukazatele na vačku |
-| ActualShiftAngle | [inc] | čtení | Skutečný posun ukazatele na vačku |
-| IncShift | [inc/servotick] | čtení/zápis | Přírůstek ukazatele řazení na vačku |
-| IncIn | [inc/servotick] | čtení/zápis | Přírůstek rampy Gear.ActualIn |
-| CamIncPosition | [inc] | čtení | Přírůstek polohy inkrementální vačky |
-| CamScale | [-] | čtení/zápis | Faktor změny měřítka profilu vačky |
-| SourceNumber | [-] | čtení | Číslo logického serva použitého pro zdroj hlavního polohování |
-| SourcePosition | [-] | čtení | Typ hlavní pozice 1 = Pozice zápisu, 2 = Pozice, 3 = servotick, 4 = Expozice |
-| Mode | [-] | čtení/zápis | **Režimy** generátoru převodů 0 = vypnutý generátor převodů, 1 = lineární převod je aktivní, 2 = vačkový převod je aktivní |
-| In | [-] | čtení/zápis | Čitatel převodového poměru |
-| Out | [-] | čtení/zápis | Jmenovatel převodového poměru |
-| ActualIn | [-] | čtení/zápis | Skutečná hodnota převodového poměru čitatele |
-| CamLine | [-] | čtení/zápis | Offset v bajtech na první data profilu vačky v CAM_PROFILE_MEMORY nebo DATA_MEMORY |
-| CamLen | [-] | čtení/zápis | Číslo dat profilu vačky |
-| CamType | [-] | čtení/zápis | Typ vačky 0 = otočná vačka, 1 = přední vačka |
-| CamTab | [-] | čtení/zápis | Umístění dat o profilu vačky: 0 = na flash paměť, 1 = na SD kartu. |
+| Parameter          | Unit             | Read/write    | Description                                                                                     |
+|--------------------|------------------|---------------|-------------------------------------------------------------------------------------------------|
+| PositionAngle      | [inc]            | read / write  | Output position within one revolution for linear transmission or pointer to CAM for cam transmissions |
+| PositionRevol      | [inc]            | read / write  | Multi-speed output position for linear gear or CAM pointer for cam gears                         |
+| CamPositionAngle   | [inc]            | read / write  | Output position within one revolution for cam gears                                              |
+| CamPositionRevol   | [inc]            | read / write  | Multi-speed output position for cam gears                                                        |
+| OffsetAngle        | [inc]            | read / write  | Output position offset                                                                         |
+| OffsetRevol        | [inc]            | read / write  | Output position offset                                                                         |
+| Shift              | [inc]            | read / write  | Required movement of the pointer on the cam                                                     |
+| ActualShiftAngle   | [inc]            | read          | Actual pointer movement on the cam                                                              |
+| IncShift           | [inc/servotick] | read / write  | Increment of the shift indicator on the cam                                                     |
+| IncIn              | [inc/servotick] | read / write  | Gear.ActualIn ramp increment                                                                   |
+| CamIncPosition     | [inc]            | read          | Incremental cam position increment                                                             |
+| CamScale           | [-]              | read / write  | Cam profile scaling factor                                                                     |
+| SourceNumber       | [-]              | read          | The number of the logical servo used for the main positioning source                            |
+| SourcePosition     | [-]              | read          | Main position type 1 = Write position, 2 = Position, 3 = servotick, 4 = Exposure               |
+| Mode               | [-]              | read / write  | Gear generator modes 0 = gear generator off, 1 = linear gear active, 2 = cam gear active       |
+| In                 | [-]              | read / write  | Gear ratio numerator                                                                           |
+| Out                | [-]              | read / write  | Gear ratio denominator                                                                         |
+| ActualIn           | [-]              | read / write  | Actual value of the numerator gear ratio                                                        |
+| CamLine            | [-]              | read / write  | Offset in bytes to the first cam profile data in CAM_PROFILE_MEMORY or DATA_MEMORY             |
+| CamLen             | [-]              | read / write  | Cam profile data number                                                                        |
+| CamType            | [-]              | read / write  | Cam type 0 = rotating cam, 1 = front cam                                                        |
+| CamTab             | [-]              | read / write  | Location of cam profile data: 0 = to flash memory, 1 = to SD card                               |

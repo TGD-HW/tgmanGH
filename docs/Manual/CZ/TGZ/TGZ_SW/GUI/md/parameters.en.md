@@ -1,20 +1,19 @@
-##Záložka **Parameters**
-
-V záložce **Parameters** je dostupné nastavení veškerých parametrů servozesilovače TGZ.
-Kromě tohoto podrobného nastavení je zde možné najít i detailní informace o připojeném servozesilovači (typ, výrobní číslo, atd.).
+##Parameter settings
+The settings of all parameters of the TGZ servo amplifier are available in the **Parameters** tab.
+In addition to this detailed setting, it is also possible to find detailed information about the connected servo amplifier (type, serial number, etc.).
 
 ![TGZ GUI servo parameters](../img/GUIparams.png){: style="width:100%;" }
 
-Otevřené okno se dále skládá z několika podoken:
+The open window also consists of several panes:
 
-- BASIC GROUPS - seznam skupin parametrů (v jednotlivých skupinách je možné nalézt a nastavit veškeré parametry servozesilovače).
-- USER GROUPS - uživatelské skupiny (umožňují nastavení zobrazování vybraných skupin parametrů).
-- DRIVE INFO - zobrazí informace o daném servozesilovači (typ, sériové číslo, verze HW, verze firmware, atd.).
-- PARAMETERS - zobrazení a editování parametrů aktivní skupiny.
-- MONITORED VALUES - AXIS 1 - zobrazuje základní informace o stavu (poloha, rychlost, proud atd.) osy 1 servozesilovače TGZ, zobrazí kód případné chyby a umožňuje její reset.
-- MONITORED VALUES - AXIS 2 - zobrazuje základní informace o stavu (poloha, rychlost, proud atd.) osy 2 servozesilovače TGZ, zobrazí kód případné chyby a umožňuje její reset.
+- BASIC GROUPS - list of parameter groups (in individual groups it is possible to find and set all parameters of the servo amplifier).
+- USER GROUPS - user groups (allow setting the display of selected parameter groups).
+- DRIVE INFO - displays information about the given servo amplifier (type, serial number, HW version, firmware version, etc.).
+- PARAMETERS - display and edit parameters of the active group
+- MONITORED VALUES - AXIS 1 - displays basic status information (position, speed, proud, etc.) of Axis 1 of the TGZ servo amplifier, displays a code of possible errors and allows its reset.
+- MONITORED VALUES - AXIS 2 - displays basic status information (position, speed, proud, etc.) of Axis 2 of the TGZ servo amplifier, displays a code of possible errors and allows its reset.
 
-V dolní části okna se pak nachází informativní stavový řádek s několika funkčními tlačítky:
+At the bottom of the window there is an informative status bar with several function buttons:
 
 <div class="grid cards" markdown>
 
@@ -23,33 +22,36 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
     ---
 	![Icon Common](../../../../../source/img/icoCommon.png){: style="width:50%;" }
 
--	informace o stavu HW ENABLE
+- 	HW ENABLE status information the Disable function key allows the HW ENABLE to be switched off simultaneously on both axes of the servo amplifier
 
 -   **AXIS 1**
 
     ---
 	![Icon Ax1](../../../../../source/img/icoAx1.png){: style="width:85%;" }
 
--	- zobrazení informací o stavu osy 1 (chyba, varovné hlášení SW Enable)
-    - funkční tlačítko Enable umožňuje zapnutí SW ENABLE u osy 1
-    - funkční tlačítko Disable umožňuje vypnutí SW ENABLE u osy 1
-	
+-	- display of information about the status of axis 1 (error, warning message SW Enable)
+    - the function key Disable enables switching off the SW ENABLE for axis 1
+    - the function key Enable allows to switch on SW ENABLE for axis 1
+    
 -   **AXIS 2**
 
     ---
 	![Icon Ax2](../../../../../source/img/icoAx2.png){: style="width:85%;" }
 
--	- zobrazení informací o stavu osy 2 (chyba, varovné hlášení SW Enable)
-    - funkční tlačítko Enable umožňuje zapnutí SW ENABLE u osy 2
-    - funkční tlačítko Disable umožňuje vypnutí SW ENABLE u osy 2
+-	- display of information about the status of axis 2 (error, warning message SW Enable)
+    - the function key Disable enables switching off the SW ENABLE for axis 2
+    - the function key Enable allows to switch on SW ENABLE for axis 2
 		
 </div>
 
-##Popis parametrů
-Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden ve zvláštním dokumentu `TGZ_registers_fw_build_1605.xlsx`.
+##Description of parameters
+A list of all parameters of the TGZ servo amplifier, including their description, is given in a special document [TGZ_registers_fw_build_1605.xlsx](https://www.tgdrives.cz/fileadmin/user_upload/download-TGZ/TGZ_registers_fw_build_1605.zip).
 
-##Základní parametry TGZ v TGZ GUI {#GUIbasicParams}
+##Basic TGZ parameters in the TGZ GUI {#GUIbasicParams}
 <table>
+	<tr>
+		<td colspan="10" bgcolor="#004F4F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Description of TGZ main parameters&quot;}">Description of TGZ main parameters</td>
+	</tr>
 	<tr>
 		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Name&quot;}">Name</td>
 		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Axis&quot;}">Axis</td>
@@ -60,7 +62,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Access&quot;}">Access</td>
 		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Unit&quot;}">Unit</td>
 		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Size&quot;}">Size</td>
-		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Popis [CZ]&quot;}">Popis [CZ]</td>
+		<td bgcolor="#92D04F" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Description [EN]&quot;}">Description [EN]</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Type1&quot;}">C-Type1</td>
@@ -72,7 +74,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typové označení servozesilovače 1&yen;/5&quot;}">Typové označení servozesilovače 1/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Servo drive hw type 1&yen;/5&quot;}">Servo drive hw type 1/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Type2&quot;}">C-Type2</td>
@@ -84,7 +86,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typové označení servozesilovače 2&yen;/5&quot;}">Typové označení servozesilovače 2/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Servo drive hw type 2&yen;/5&quot;}">Servo drive hw type 2/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Type3&quot;}">C-Type3</td>
@@ -96,7 +98,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typové označení servozesilovače 3&yen;/5&quot;}">Typové označení servozesilovače 3/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Servo drive hw type 3&yen;/5&quot;}">Servo drive hw type 3/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Type4&quot;}">C-Type4</td>
@@ -108,7 +110,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typové označení servozesilovače 4&yen;/5&quot;}">Typové označení servozesilovače 4/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Servo drive hw type 4&yen;/5&quot;}">Servo drive hw type 4/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Type5&quot;}">C-Type5</td>
@@ -120,7 +122,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typové označení servozesilovače 5&yen;/5&quot;}">Typové označení servozesilovače 5/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Servo drive hw type 5&yen;/5&quot;}">Servo drive hw type 5/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-HWVer&quot;}">C-HWVer</td>
@@ -132,7 +134,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Verze HW&quot;}">Verze HW</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;HW version&quot;}">HW version</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWVer&quot;}">C-FWVer</td>
@@ -144,7 +146,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Verze firmware&quot;}">Verze firmware</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware version&quot;}">Firmware version</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWBuild1&quot;}">C-FWBuild1</td>
@@ -156,7 +158,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Datum a cas vytvoreni firmware 1&yen;/5&quot;}">Datum a cas vytvoreni firmware 1/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware build 1&yen;/5&quot;}">Firmware build 1/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWBuild2&quot;}">C-FWBuild2</td>
@@ -168,7 +170,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Datum a cas vytvoreni firmware 2&yen;/5&quot;}">Datum a cas vytvoreni firmware 2/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware build 2&yen;/5&quot;}">Firmware build 2/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWBuild3&quot;}">C-FWBuild3</td>
@@ -180,7 +182,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Datum a cas vytvoreni firmware 3&yen;/5&quot;}">Datum a cas vytvoreni firmware 3/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware build 3&yen;/5&quot;}">Firmware build 3/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWBuild4&quot;}">C-FWBuild4</td>
@@ -192,7 +194,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Datum a cas vytvoreni firmware 4&yen;/5&quot;}">Datum a cas vytvoreni firmware 4/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware build 4&yen;/5&quot;}">Firmware build 4/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-FWBuild5&quot;}">C-FWBuild5</td>
@@ -204,7 +206,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Datum a cas vytvoreni firmware 5&yen;/5&quot;}">Datum a cas vytvoreni firmware 5/5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Firmware build 5&yen;/5&quot;}">Firmware build 5/5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-IPAddress&quot;}">C-IPAddress</td>
@@ -216,7 +218,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;IP adresa serviceho UDP kanálu X11&quot;}">IP adresa serviceho UDP kanálu X11</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;IP address X11 service UDP chanel&quot;}">IP address X11 service UDP chanel</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-ID&quot;}">C-ID</td>
@@ -228,7 +230,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ID pro využití na sběrnici&quot;}">ID pro využití na sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ID fieldbus&quot;}">ID fieldbus</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-SyncTime&quot;}">C-SyncTime</td>
@@ -240,7 +242,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Měřený čas mezi synchronizačními pulsy na&yen;u000asběrnicei (pokud je využito DC)&quot;}">Měřený čas mezi synchronizačními pulsy na<br>sběrnicei (pokud je využito DC)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Measured time between synchronization pulses&yen;u000a(only for DC functionality)&quot;}">Measured time between synchronization pulses<br>(only for DC functionality)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Enable_1G&quot;}">C-Enable_1G</td>
@@ -252,7 +254,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolení rychlosti sběrnice 1G (v přípravě)&quot;}">Povolení rychlosti sběrnice 1G (v přípravě)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Enable 1G speed fieldbus (preparing)&quot;}">Enable 1G speed fieldbus (preparing)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-SetCycleTime&quot;}">C-SetCycleTime</td>
@@ -264,7 +266,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;us&quot;}">us</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Očekáváná komunikační perioda na sběrnici&yen;u000a(pokud není využito DC)&quot;}">Očekáváná komunikační perioda na sběrnici<br>(pokud není využito DC)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired cycle time (used only without DC&yen;u000afunctionality)&quot;}">Desired cycle time (used only without DC<br>functionality)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-UserProgStart&quot;}">C-UserProgStart</td>
@@ -276,7 +278,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolení automatického startu uživatelského programu : 0 .. Nespouští se, 1 .. Spouští se z interní flash,(2 .. Zpouští se z SD karty .. V&yen;u000apřípravě)&quot;}">Povolení automatického startu uživatelského programu : 0 .. Nespouští se, 1 .. Spouští se z interní flash,(2 .. Zpouští se z SD karty .. V<br>přípravě)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Enable autostart of user program : 0 .. no autostart, 1 .. autostart from flash memory, (2 ..&yen;u000aautostart from SD .. preparing)&quot;}">Enable autostart of user program : 0 .. no autostart, 1 .. autostart from flash memory, (2 ..<br>autostart from SD .. preparing)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name1&quot;}">M-Name1</td>
@@ -288,7 +290,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 1&yen;/6&quot;}">Název motoru 1 1/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 1&yen;/6&quot;}">Motor name 1 1/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name1&quot;}">M-Name1</td>
@@ -300,7 +302,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 1&yen;/6&quot;}">Název motoru 2 1/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 1&yen;/6&quot;}">Motor name 2 1/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name2&quot;}">M-Name2</td>
@@ -312,7 +314,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 2&yen;/6&quot;}">Název motoru 1 2/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 2&yen;/6&quot;}">Motor name 1 2/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name2&quot;}">M-Name2</td>
@@ -324,7 +326,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 2&yen;/6&quot;}">Název motoru 2 2/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 2&yen;/6&quot;}">Motor name 2 2/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name3&quot;}">M-Name3</td>
@@ -336,7 +338,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 3&yen;/6&quot;}">Název motoru 1 3/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 3&yen;/6&quot;}">Motor name 1 3/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name3&quot;}">M-Name3</td>
@@ -348,7 +350,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 3&yen;/6&quot;}">Název motoru 2 3/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 3&yen;/6&quot;}">Motor name 2 3/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name4&quot;}">M-Name4</td>
@@ -360,7 +362,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 4&yen;/6&quot;}">Název motoru 1 4/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 4&yen;/6&quot;}">Motor name 1 4/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name4&quot;}">M-Name4</td>
@@ -372,7 +374,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 4&yen;/6&quot;}">Název motoru 2 4/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 4&yen;/6&quot;}">Motor name 2 4/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name5&quot;}">M-Name5</td>
@@ -384,7 +386,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 5&yen;/6&quot;}">Název motoru 1 5/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 5&yen;/6&quot;}">Motor name 1 5/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name5&quot;}">M-Name5</td>
@@ -396,7 +398,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 5&yen;/6&quot;}">Název motoru 2 5/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 5&yen;/6&quot;}">Motor name 2 5/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name6&quot;}">M-Name6</td>
@@ -408,7 +410,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 1 6&yen;/6&quot;}">Název motoru 1 6/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 1 6&yen;/6&quot;}">Motor name 1 6/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Name6&quot;}">M-Name6</td>
@@ -420,7 +422,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název motoru 2 6&yen;/6&quot;}">Název motoru 2 6/6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor name 2 6&yen;/6&quot;}">Motor name 2 6/6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Inull&quot;}">M-Inull</td>
@@ -432,7 +434,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA(rms)&quot;}">mA(rms)</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolený trvalý efektivní proud pro motor 1&quot;}">Povolený trvalý efektivní proud pro motor 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Allowed stall rms current of motor 1&quot;}">Allowed stall rms current of motor 1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Inull&quot;}">M-Inull</td>
@@ -444,7 +446,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA(rms)&quot;}">mA(rms)</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolený trvalý efektivní proud pro motor 2&quot;}">Povolený trvalý efektivní proud pro motor 2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Allowed stall rms current of motor 2&quot;}">Allowed stall rms current of motor 2</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Ipeak&quot;}">M-Ipeak</td>
@@ -456,7 +458,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolená špičková hodnota amplitudy proudu&yen;u000apro motor 1 (Iamp = 1.41 * Irms)&quot;}">Povolená špičková hodnota amplitudy proudu<br>pro motor 1 (Iamp = 1.41 * Irms)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Allowed peak current amplitude of motor 1&yen;u000a(Iamp = 1.41 * Irms)&quot;}">Allowed peak current amplitude of motor 1<br>(Iamp = 1.41 * Irms)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Ipeak&quot;}">M-Ipeak</td>
@@ -468,7 +470,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Povolená špičková hodnota amplitudy proudu&yen;u000apro motor 2 (Iamp = 1.41 * Irms)&quot;}">Povolená špičková hodnota amplitudy proudu<br>pro motor 2 (Iamp = 1.41 * Irms)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Allowed peak current amplitude of motor 2&yen;u000a(Iamp = 1.41 * Irms)&quot;}">Allowed peak current amplitude of motor 2<br>(Iamp = 1.41 * Irms)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Nmax&quot;}">M-Nmax</td>
@@ -480,7 +482,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximální povolená rychlost motoru 1&quot;}">Maximální povolená rychlost motoru 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximal mechanical speed of motor 1 - error&yen;u000alimit&quot;}">Maximal mechanical speed of motor 1 - error<br>limit</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Nmax&quot;}">M-Nmax</td>
@@ -492,7 +494,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximální povolená rychlost motoru 2&quot;}">Maximální povolená rychlost motoru 2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximal mechanical speed of motor 2 - error&yen;u000alimit&quot;}">Maximal mechanical speed of motor 2 - error<br>limit</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Polepairs&quot;}">M-Polepairs</td>
@@ -504,7 +506,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet pólpárů motoru 1 ( pólpáry = póly &yen;/ 2)&quot;}">Počet pólpárů motoru 1 ( pólpáry = póly / 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of motor 1 polepairs (polepairs = poles&yen;u000a&yen;/ 2)&quot;}">Number of motor 1 polepairs (polepairs = poles<br>/ 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-Polepairs&quot;}">M-Polepairs</td>
@@ -516,7 +518,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet pólpárů motoru 2 ( pólpáry = póly &yen;/ 2)&quot;}">Počet pólpárů motoru 2 ( pólpáry = póly / 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of motor 2 polepairs (polepairs = poles&yen;u000a&yen;/ 2)&quot;}">Number of motor 2 polepairs (polepairs = poles<br>/ 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-CommutOffset&quot;}">M-CommutOffset</td>
@@ -528,7 +530,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Úhlové posunutí nuly snímače vůči statorovému&yen;u000avinutí motoru 1&quot;}">Úhlové posunutí nuly snímače vůči statorovému<br>vinutí motoru 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Angle offset between zero of feedback encoder&yen;u000aand stator of motor 1&quot;}">Angle offset between zero of feedback encoder<br>and stator of motor 1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-CommutOffset&quot;}">M-CommutOffset</td>
@@ -540,7 +542,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Úhlové posunutí nuly snímače vůči statorovému&yen;u000avinutí motoru 2&quot;}">Úhlové posunutí nuly snímače vůči statorovému<br>vinutí motoru 2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Angle offset between zero of feedback encoder&yen;u000aand stator of motor 2&quot;}">Angle offset between zero of feedback encoder<br>and stator of motor 2</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-MinResTerm&quot;}">M-MinResTerm</td>
@@ -552,7 +554,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Minimální odpor teplotního snímače motoru 1 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)&quot;}">Minimální odpor teplotního snímače motoru 1 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Limit for overtemperature error - Minimal resistivity of motor 1 thermal sensor (used only for digital feedback with connected thermal&yen;u000asensor)&quot;}">Limit for overtemperature error - Minimal resistivity of motor 1 thermal sensor (used only for digital feedback with connected thermal<br>sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-MinResTerm&quot;}">M-MinResTerm</td>
@@ -564,7 +566,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Minimální odpor teplotního snímače motoru 2 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)&quot;}">Minimální odpor teplotního snímače motoru 2 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Limit for overtemperature error - Minimal resistivity of motor 2 thermal sensor (used only for digital feedback with connected thermal&yen;u000asensor)&quot;}">Limit for overtemperature error - Minimal resistivity of motor 2 thermal sensor (used only for digital feedback with connected thermal<br>sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-MaxResTerm&quot;}">M-MaxResTerm</td>
@@ -576,7 +578,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximální odpor teplotního snímače motoru 1 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)&quot;}">Maximální odpor teplotního snímače motoru 1 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Limit for overtemperature error - Maximal resistivity of motor 1 thermal sensor (used only for digital feedback with connected thermal&yen;u000asensor)&quot;}">Limit for overtemperature error - Maximal resistivity of motor 1 thermal sensor (used only for digital feedback with connected thermal<br>sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-MaxResTerm&quot;}">M-MaxResTerm</td>
@@ -588,7 +590,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximální odpor teplotního snímače motoru 2 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)&quot;}">Maximální odpor teplotního snímače motoru 2 pro vyhodnocení poruchy - vysoká teplota (pouze pro digitální snímače polohy s připojeným teplotním čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Limit for overtemperature error - Maximal resistivity of motor 2 thermal sensor (used only for digital feedback with connected thermal&yen;u000asensor)&quot;}">Limit for overtemperature error - Maximal resistivity of motor 2 thermal sensor (used only for digital feedback with connected thermal<br>sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-StaticBrake&quot;}">M-StaticBrake</td>
@@ -600,7 +602,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Statická brzda motoru 1 : 1 = ano, 0 = ne&quot;}">Statická brzda motoru 1 : 1 = ano, 0 = ne</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor 1 static brake: 1 = yes , 0 = no&quot;}">Motor 1 static brake: 1 = yes , 0 = no</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-StaticBrake&quot;}">M-StaticBrake</td>
@@ -612,7 +614,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Statická brzda motoru 2 : 1 = ano, 0 = ne&quot;}">Statická brzda motoru 2 : 1 = ano, 0 = ne</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor 2 static brake: 1 = yes , 0 = no&quot;}">Motor 2 static brake: 1 = yes , 0 = no</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-ThermTimeConst&quot;}">M-ThermTimeConst</td>
@@ -624,7 +626,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;s&quot;}">s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Teplotní časová konstanta motoru 1&quot;}">Teplotní časová konstanta motoru 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ThermalTimeConstant of motor 1&quot;}">ThermalTimeConstant of motor 1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M-ThermTimeConst&quot;}">M-ThermTimeConst</td>
@@ -636,7 +638,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;s&quot;}">s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Teplotní časová konstanta motoru 2&quot;}">Teplotní časová konstanta motoru 2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ThermalTimeConstant of motor 2&quot;}">ThermalTimeConstant of motor 2</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name1&quot;}">D-Name1</td>
@@ -648,7 +650,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 1 1&yen;/3&quot;}">Název pohonu 1 1/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 1 name 1&yen;/3&quot;}">Drive 1 name 1/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name1&quot;}">D-Name1</td>
@@ -660,7 +662,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 2 1&yen;/3&quot;}">Název pohonu 2 1/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 2 name 1&yen;/3&quot;}">Drive 2 name 1/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name2&quot;}">D-Name2</td>
@@ -672,7 +674,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 1 2&yen;/3&quot;}">Název pohonu 1 2/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 1 name 2&yen;/3&quot;}">Drive 1 name 2/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name2&quot;}">D-Name2</td>
@@ -684,7 +686,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 2 2&yen;/3&quot;}">Název pohonu 2 2/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 2 name 2&yen;/3&quot;}">Drive 2 name 2/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name3&quot;}">D-Name3</td>
@@ -696,7 +698,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 1 3&yen;/3&quot;}">Název pohonu 1 3/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 1 name 3&yen;/3&quot;}">Drive 1 name 3/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Name3&quot;}">D-Name3</td>
@@ -708,7 +710,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;chars&quot;}">chars</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Název pohonu 2 3&yen;/3&quot;}">Název pohonu 2 3/3</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Drive 2 name 3&yen;/3&quot;}">Drive 2 name 3/3</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Mode&quot;}">D-Mode</td>
@@ -720,7 +722,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Režim pohonu 1 - popis v manuálu&quot;}">Režim pohonu 1 - popis v manuálu</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode of drive 1 - see manual&quot;}">Mode of drive 1 - see manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-Mode&quot;}">D-Mode</td>
@@ -732,7 +734,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Režim pohonu 2 - popis v manuálu&quot;}">Režim pohonu 2 - popis v manuálu</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode of drive 2 - see manual&quot;}">Mode of drive 2 - see manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayEnable_Hwen&quot;}">D-DelayEnable_Hwen</td>
@@ -744,7 +746,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění enable pohonu 1 po nastupné hraně&yen;u000asignálu hw enable X1&quot;}">Zpoždění enable pohonu 1 po nastupné hraně<br>signálu hw enable X1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay enable drive 1 after HW enable signal&yen;u000arising edge X1&quot;}">Delay enable drive 1 after HW enable signal<br>rising edge X1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayEnable_Hwen&quot;}">D-DelayEnable_Hwen</td>
@@ -756,7 +758,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění enable pohonu 2 po nastupné hraně&yen;u000asignálu hw enable X1&quot;}">Zpoždění enable pohonu 2 po nastupné hraně<br>signálu hw enable X1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay enable drive 2 after HW enable signal&yen;u000arising edge X1&quot;}">Delay enable drive 2 after HW enable signal<br>rising edge X1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayUnbrake_Enable&quot;}">D-DelayUnbrake_Enable</td>
@@ -768,7 +770,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění uvolnění brzdy motoru 1 po enable&yen;u000apohonu&quot;}">Zpoždění uvolnění brzdy motoru 1 po enable<br>pohonu</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay release brake of motor 1 after enable&yen;u000adrive&quot;}">Delay release brake of motor 1 after enable<br>drive</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayUnbrake_Enable&quot;}">D-DelayUnbrake_Enable</td>
@@ -780,7 +782,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění uvolnění brzdy motoru 2 po enable&yen;u000apohonu&quot;}">Zpoždění uvolnění brzdy motoru 2 po enable<br>pohonu</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay release brake of motor 2 after enable&yen;u000adrive&quot;}">Delay release brake of motor 2 after enable<br>drive</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayDisable_Brake&quot;}">D-DelayDisable_Brake</td>
@@ -792,7 +794,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění disble pohonu 1 po zabrždění motoru&quot;}">Zpoždění disble pohonu 1 po zabrždění motoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay disable drive 1 after activating brake&quot;}">Delay disable drive 1 after activating brake</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-DelayDisable_Brake&quot;}">D-DelayDisable_Brake</td>
@@ -804,7 +806,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.1ms&quot;}">0.1ms</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zpoždění disble pohonu 2 po zabrždění motoru&quot;}">Zpoždění disble pohonu 2 po zabrždění motoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Delay disable drive 2 after activating brake&quot;}">Delay disable drive 2 after activating brake</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-VoltDCLinkMinErrLim&quot;}">D-VoltDCLinkMinErrLim</td>
@@ -816,7 +818,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V&quot;}">V</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Minimální napětí meziobvodu pro vyhodnocení&yen;u000achyby podpětí&quot;}">Minimální napětí meziobvodu pro vyhodnocení<br>chyby podpětí</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Minimal DC link voltage - low voltage error level&quot;}">Minimal DC link voltage - low voltage error level</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D-VoltDCLinkMaxErrLim&quot;}">D-VoltDCLinkMaxErrLim</td>
@@ -828,7 +830,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V&quot;}">V</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximální napětí meziobvodu pro vyhodnocení&yen;u000achyby přepětí&quot;}">Maximální napětí meziobvodu pro vyhodnocení<br>chyby přepětí</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Maximal DC link voltage - high voltage error&yen;u000alevel&quot;}">Maximal DC link voltage - high voltage error<br>level</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-K&quot;}">C-K</td>
@@ -840,7 +842,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mV&yen;/A&quot;}">mV/A</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení proudového regulátoru složky Q&quot;}">Zesílení proudového regulátoru složky Q</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller Q gain&quot;}">Current controller Q gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-K&quot;}">C-K</td>
@@ -852,7 +854,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mV&yen;/A&quot;}">mV/A</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení proudového regulátoru složky Q&quot;}">Zesílení proudového regulátoru složky Q</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller Q gain&quot;}">Current controller Q gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Ti&quot;}">C-Ti</td>
@@ -864,7 +866,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrační čas proudového regulátoru&quot;}">Integrační čas proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller integral time&quot;}">Current controller integral time</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Ti&quot;}">C-Ti</td>
@@ -876,7 +878,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrační čas proudového regulátoru&quot;}">Integrační čas proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller integral time&quot;}">Current controller integral time</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-KDr&quot;}">C-KDr</td>
@@ -888,7 +890,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení proudového regulátoru složky D&yen;u000arelativně k zesílení složky Q K&quot;}">Zesílení proudového regulátoru složky D<br>relativně k zesílení složky Q K</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller D relative gain to K&quot;}">Current controller D relative gain to K</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-KDr&quot;}">C-KDr</td>
@@ -900,7 +902,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení proudového regulátoru složky D&yen;u000arelativně k zesílení složky Q K&quot;}">Zesílení proudového regulátoru složky D<br>relativně k zesílení složky Q K</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current controller D relative gain to K&quot;}">Current controller D relative gain to K</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Tc&quot;}">C-Tc</td>
@@ -912,7 +914,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Časová konstanta filtru žádaného proudu&yen;u000a(nevyužito)&quot;}">Časová konstanta filtru žádaného proudu<br>(nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of current command filter (not&yen;u000aused)&quot;}">Time constant of current command filter (not<br>used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Tc&quot;}">C-Tc</td>
@@ -924,7 +926,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Časová konstanta filtru žádaného proudu&yen;u000a(nevyužito)&quot;}">Časová konstanta filtru žádaného proudu<br>(nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of current command filter (not&yen;u000aused)&quot;}">Time constant of current command filter (not<br>used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Filt&quot;}">C-Filt</td>
@@ -936,7 +938,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Procentuální hodnota filtrované části žádaného proudu (100 = 100% filtrováno) (nevyužito)&quot;}">Procentuální hodnota filtrované části žádaného proudu (100 = 100% filtrováno) (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Percentable value of current command (100 =&yen;u000a100% goes via filter) (not used)&quot;}">Percentable value of current command (100 =<br>100% goes via filter) (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-Filt&quot;}">C-Filt</td>
@@ -948,7 +950,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Procentuální hodnota filtrované části žádaného proudu (100 = 100% filtrováno) (nevyužito)&quot;}">Procentuální hodnota filtrované části žádaného proudu (100 = 100% filtrováno) (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Percentable value of current command (100 =&yen;u000a100% goes via filter) (not used)&quot;}">Percentable value of current command (100 =<br>100% goes via filter) (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-LimN&quot;}">C-LimN</td>
@@ -960,7 +962,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení záporné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull&quot;}">Omezení záporné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current amplitude negative limit relatively to M- Inull (limiting output of speed controller)&quot;}">Current amplitude negative limit relatively to M- Inull (limiting output of speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-LimN&quot;}">C-LimN</td>
@@ -972,7 +974,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení záporné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull&quot;}">Omezení záporné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current amplitude negative limit relatively to M- Inull (limiting output of speed controller)&quot;}">Current amplitude negative limit relatively to M- Inull (limiting output of speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-LimP&quot;}">C-LimP</td>
@@ -984,7 +986,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení kladné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull&quot;}">Omezení kladné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current amplitude positive limit relatively to M- Inull (limiting output of speed controller)&quot;}">Current amplitude positive limit relatively to M- Inull (limiting output of speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-LimP&quot;}">C-LimP</td>
@@ -996,7 +998,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení kladné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull&quot;}">Omezení kladné amplitudy proudu (na výstupu rychlostního regulátoru) relativně k M-Inull</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current amplitude positive limit relatively to M- Inull (limiting output of speed controller)&quot;}">Current amplitude positive limit relatively to M- Inull (limiting output of speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-VoltLimMin&quot;}">C-VoltLimMin</td>
@@ -1008,7 +1010,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení záporného napětí na výstupu&yen;u000aproudového regulátoru&quot;}">Omezení záporného napětí na výstupu<br>proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Negative voltage limit (output of current&yen;u000acontroller)&quot;}">Negative voltage limit (output of current<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-VoltLimMin&quot;}">C-VoltLimMin</td>
@@ -1020,7 +1022,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení záporného napětí na výstupu&yen;u000aproudového regulátoru&quot;}">Omezení záporného napětí na výstupu<br>proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Negative voltage limit (output of current&yen;u000acontroller)&quot;}">Negative voltage limit (output of current<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-VoltLimMax&quot;}">C-VoltLimMax</td>
@@ -1032,7 +1034,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení kladného napětí na výstupu&yen;u000aproudového regulátoru&quot;}">Omezení kladného napětí na výstupu<br>proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Possitive voltage limit (output of current&yen;u000acontroller)&quot;}">Possitive voltage limit (output of current<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-VoltLimMax&quot;}">C-VoltLimMax</td>
@@ -1044,7 +1046,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení kladného napětí na výstupu&yen;u000aproudového regulátoru&quot;}">Omezení kladného napětí na výstupu<br>proudového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Possitive voltage limit (output of current&yen;u000acontroller)&quot;}">Possitive voltage limit (output of current<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-CogCompFac&quot;}">C-CogCompFac</td>
@@ -1056,7 +1058,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Faktor kompenzace coggingu 0.. Vypnuto&yen;u000a(před zapnutím musí být změřena kompenzační tabulka pro daný motor)&quot;}">Faktor kompenzace coggingu 0.. Vypnuto<br>(před zapnutím musí být změřena kompenzační tabulka pro daný motor)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cogging compensation factor 0 .. Off (Before&yen;u000ausing function must be measured compensation data of motor)&quot;}">Cogging compensation factor 0 .. Off (Before<br>using function must be measured compensation data of motor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-CogCompFac&quot;}">C-CogCompFac</td>
@@ -1068,7 +1070,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;%&quot;}">%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Faktor kompenzace coggingu 0.. Vypnuto (před zapnutím musí být změřena kompenzační&yen;u000atabulka pro daný motor)&quot;}">Faktor kompenzace coggingu 0.. Vypnuto (před zapnutím musí být změřena kompenzační<br>tabulka pro daný motor)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cogging compensation factor 0 .. Off (Before using function must be measured compensation&yen;u000adata of motor)&quot;}">Cogging compensation factor 0 .. Off (Before using function must be measured compensation<br>data of motor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-K&quot;}">V-K</td>
@@ -1080,7 +1082,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&yen;/1000rpm&quot;}">mA/1000rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení rychlostního regulátoru&quot;}">Zesílení rychlostního regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity controller gain&quot;}">Velocity controller gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-K&quot;}">V-K</td>
@@ -1092,7 +1094,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&yen;/1000rpm&quot;}">mA/1000rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení rychlostního regulátoru&quot;}">Zesílení rychlostního regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity controller gain&quot;}">Velocity controller gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Ti&quot;}">V-Ti</td>
@@ -1104,7 +1106,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrační čas rychlostního regulátoru&quot;}">Integrační čas rychlostního regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity controller integral time&quot;}">Velocity controller integral time</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Ti&quot;}">V-Ti</td>
@@ -1116,7 +1118,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrační čas rychlostního regulátoru&quot;}">Integrační čas rychlostního regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity controller integral time&quot;}">Velocity controller integral time</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-LimN&quot;}">V-LimN</td>
@@ -1128,7 +1130,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení maximální záporné rychlosti (na&yen;u000avýstupu polohového regulátoru)&quot;}">Omezení maximální záporné rychlosti (na<br>výstupu polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity negative limit (limiting output of&yen;u000aposition controller)&quot;}">Velocity negative limit (limiting output of<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-LimN&quot;}">V-LimN</td>
@@ -1140,7 +1142,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení maximální záporné rychlosti (na&yen;u000avýstupu polohového regulátoru)&quot;}">Omezení maximální záporné rychlosti (na<br>výstupu polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity negative limit (limiting output of&yen;u000aposition controller)&quot;}">Velocity negative limit (limiting output of<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-LimP&quot;}">V-LimP</td>
@@ -1152,7 +1154,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení maximální kladné rychlosti (na výstupu&yen;u000apolohového regulátoru)&quot;}">Omezení maximální kladné rychlosti (na výstupu<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity positive limit (limiting output of&yen;u000aposition controller)&quot;}">Velocity positive limit (limiting output of<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-LimP&quot;}">V-LimP</td>
@@ -1164,7 +1166,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Omezení maximální kladné rychlosti (na výstupu&yen;u000apolohového regulátoru)&quot;}">Omezení maximální kladné rychlosti (na výstupu<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity positive limit (limiting output of&yen;u000aposition controller)&quot;}">Velocity positive limit (limiting output of<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Tfb&quot;}">V-Tfb</td>
@@ -1176,7 +1178,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;časová konstanta filtru (dolní propust) skutečné&yen;u000arychlosti (nevyužito)&quot;}">časová konstanta filtru (dolní propust) skutečné<br>rychlosti (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of velocity feedback lowpass filter&yen;u000a(not used)&quot;}">Time constant of velocity feedback lowpass filter<br>(not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Tfb&quot;}">V-Tfb</td>
@@ -1188,7 +1190,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;časová konstanta filtru (dolní propust) skutečné&yen;u000arychlosti (nevyužito)&quot;}">časová konstanta filtru (dolní propust) skutečné<br>rychlosti (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of velocity feedback lowpass filter&yen;u000a(not used)&quot;}">Time constant of velocity feedback lowpass filter<br>(not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Tv&quot;}">V-Tv</td>
@@ -1200,7 +1202,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;časová konstanta filtru (dolní propust) žádané&yen;u000arychlosti (nevyužito)&quot;}">časová konstanta filtru (dolní propust) žádané<br>rychlosti (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of velocity command lowpass&yen;u000afilter (not used)&quot;}">Time constant of velocity command lowpass<br>filter (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-Tv&quot;}">V-Tv</td>
@@ -1212,7 +1214,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;µs&quot;}">µs</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;časová konstanta filtru (dolní propust) žádané&yen;u000arychlosti (nevyužito)&quot;}">časová konstanta filtru (dolní propust) žádané<br>rychlosti (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Time constant of velocity command lowpass&yen;u000afilter (not used)&quot;}">Time constant of velocity command lowpass<br>filter (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-FiFact&quot;}">V-FiFact</td>
@@ -1224,7 +1226,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Faktor filtrace rychlosti 0..nefiltrováno&yen;u000a(nevyužito)&quot;}">Faktor filtrace rychlosti 0..nefiltrováno<br>(nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity filter factor 0 .. not filtered (not used)&quot;}">Velocity filter factor 0 .. not filtered (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V-FiFact&quot;}">V-FiFact</td>
@@ -1236,7 +1238,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Faktor filtrace rychlosti 0..nefiltrováno&yen;u000a(nevyužito)&quot;}">Faktor filtrace rychlosti 0..nefiltrováno<br>(nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Velocity filter factor 0 .. not filtered (not used)&quot;}">Velocity filter factor 0 .. not filtered (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-K&quot;}">P-K</td>
@@ -1248,7 +1250,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.001 1&yen;/s&quot;}">0.001 1/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení polohového regulátoru&quot;}">Zesílení polohového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Position controller gain&quot;}">Position controller gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-K&quot;}">P-K</td>
@@ -1260,7 +1262,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0.001 1&yen;/s&quot;}">0.001 1/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zesílení polohového regulátoru&quot;}">Zesílení polohového regulátoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Position controller gain&quot;}">Position controller gain</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-SFF&quot;}">P-SFF</td>
@@ -1272,7 +1274,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rychlostní předkorekce&quot;}">Rychlostní předkorekce</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Speed feed forward&quot;}">Speed feed forward</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-SFF&quot;}">P-SFF</td>
@@ -1284,7 +1286,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rychlostní předkorekce&quot;}">Rychlostní předkorekce</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Speed feed forward&quot;}">Speed feed forward</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-MaxAngleError&quot;}">P-MaxAngleError</td>
@@ -1296,7 +1298,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;---&quot;}">---</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximální poziční chyba - úhel&quot;}">maximální poziční chyba - úhel</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximal position error - angle part&quot;}">maximal position error - angle part</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-MaxAngleError&quot;}">P-MaxAngleError</td>
@@ -1308,7 +1310,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;---&quot;}">---</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximální poziční chyba - úhel&quot;}">maximální poziční chyba - úhel</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximal position error - angle part&quot;}">maximal position error - angle part</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-MaxRevolError&quot;}">P-MaxRevolError</td>
@@ -1320,7 +1322,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;---&quot;}">---</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximální poziční chyba - otáčky&quot;}">maximální poziční chyba - otáčky</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximal position error - revolution part&quot;}">maximal position error - revolution part</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P-MaxRevolError&quot;}">P-MaxRevolError</td>
@@ -1332,7 +1334,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;---&quot;}">---</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximální poziční chyba - otáčky&quot;}">maximální poziční chyba - otáčky</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;maximal position error - revolution part&quot;}">maximal position error - revolution part</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Type&quot;}">F-Type</td>
@@ -1344,7 +1346,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 3..SSI, 4.. Incremental&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>2, 3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat 2,&yen;u000a3..SSI, 4.. Incremental&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat 2,<br>3..SSI, 4.. Incremental</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Type&quot;}">F-Type</td>
@@ -1356,7 +1358,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 3..SSI, 4.. Incremental&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>2, 3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat 2,&yen;u000a3..SSI, 4.. Incremental&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat 2,<br>3..SSI, 4.. Incremental</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Resolution&quot;}">F-Resolution</td>
@@ -1368,7 +1370,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rozlišení zpětné vazby v rámci jedné otáčky (jen pro čtení pro digitální zpětné vzby 1 a 2)&quot;}">Rozlišení zpětné vazby v rámci jedné otáčky (jen pro čtení pro digitální zpětné vzby 1 a 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback resolution per revolution(read only for&yen;u000adigital feedbacks type 1 and 2)&quot;}">Feedback resolution per revolution(read only for<br>digital feedbacks type 1 and 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Resolution&quot;}">F-Resolution</td>
@@ -1380,7 +1382,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rozlišení zpětné vazby v rámci jedné otáčky (jen pro čtení pro digitální zpětné vzby 1 a 2)&quot;}">Rozlišení zpětné vazby v rámci jedné otáčky (jen pro čtení pro digitální zpětné vzby 1 a 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback resolution per revolution(read only for&yen;u000adigital feedbacks type 1 and 2)&quot;}">Feedback resolution per revolution(read only for<br>digital feedbacks type 1 and 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-IncrEnc&quot;}">F-IncrEnc</td>
@@ -1392,7 +1394,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pulses&quot;}">pulses</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rozlišení inkrementálního snímače&quot;}">Rozlišení inkrementálního snímače</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Incremental encoder feedback resolution&quot;}">Incremental encoder feedback resolution</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-IncrEnc&quot;}">F-IncrEnc</td>
@@ -1404,7 +1406,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pulses&quot;}">pulses</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rozlišení inkrementálního snímače&quot;}">Rozlišení inkrementálního snímače</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Incremental encoder feedback resolution&quot;}">Incremental encoder feedback resolution</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-ExtIncrEnc&quot;}">F-ExtIncrEnc</td>
@@ -1416,7 +1418,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pulses&quot;}">pulses</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rozlišení externího inkrementálního snímače&quot;}">Rozlišení externího inkrementálního snímače</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;External incremental encoder resolution&quot;}">External incremental encoder resolution</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-ResolverPoles&quot;}">F-ResolverPoles</td>
@@ -1428,7 +1430,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet pólů resolveru (nevyužito - pouze pro&yen;u000arozšiřující desku)&quot;}">Počet pólů resolveru (nevyužito - pouze pro<br>rozšiřující desku)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of resolver poles (not used - only for&yen;u000aoptional board)&quot;}">Number of resolver poles (not used - only for<br>optional board)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-ResolverPoles&quot;}">F-ResolverPoles</td>
@@ -1440,7 +1442,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet pólů resolveru (nevyužito - pouze pro&yen;u000arozšiřující desku)&quot;}">Počet pólů resolveru (nevyužito - pouze pro<br>rozšiřující desku)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of resolver poles (not used - only for&yen;u000aoptional board)&quot;}">Number of resolver poles (not used - only for<br>optional board)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-Command&quot;}">K-Command</td>
@@ -1452,7 +1454,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Příkaz bity[1,0]=01 .. SW enable bit[3] = 1 ..&yen;u000aReset chyb&quot;}">Příkaz bity[1,0]=01 .. SW enable bit[3] = 1 ..<br>Reset chyb</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Command bits[1,0]=01 .. SW enable bit[3] = 1 ..&yen;u000aClear errors&quot;}">Command bits[1,0]=01 .. SW enable bit[3] = 1 ..<br>Clear errors</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-Command&quot;}">K-Command</td>
@@ -1464,7 +1466,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Příkaz bity[1,0]=01 .. SW enable bit[3] = 1 ..&yen;u000aReset chyb&quot;}">Příkaz bity[1,0]=01 .. SW enable bit[3] = 1 ..<br>Reset chyb</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Command bits[1,0]=01 .. SW enable bit[3] = 1 ..&yen;u000aClear errors&quot;}">Command bits[1,0]=01 .. SW enable bit[3] = 1 ..<br>Clear errors</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-I&quot;}">K-I</td>
@@ -1476,7 +1478,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud (proudový režim = 1)&quot;}">Žádaný proud (proudový režim = 1)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required current (current mode = 1)&quot;}">Required current (current mode = 1)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-I&quot;}">K-I</td>
@@ -1488,7 +1490,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud (proudový režim = 1)&quot;}">Žádaný proud (proudový režim = 1)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required current (current mode = 1)&quot;}">Required current (current mode = 1)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-V&quot;}">K-V</td>
@@ -1500,7 +1502,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost (rychlostní režim = 2)&quot;}">Žádaná rychlost (rychlostní režim = 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required velocity (velocity mode = 2)&quot;}">Required velocity (velocity mode = 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-V&quot;}">K-V</td>
@@ -1512,7 +1514,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost (rychlostní režim = 2)&quot;}">Žádaná rychlost (rychlostní režim = 2)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required velocity (velocity mode = 2)&quot;}">Required velocity (velocity mode = 2)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-P_Angle&quot;}">K-P_Angle</td>
@@ -1524,7 +1526,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná poloha - úhel (polohový režim = 3)&quot;}">Žádaná poloha - úhel (polohový režim = 3)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position - angle (position mode = 3)&quot;}">Required position - angle (position mode = 3)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-P_Angle&quot;}">K-P_Angle</td>
@@ -1536,7 +1538,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná poloha - úhel (polohový režim = 3)&quot;}">Žádaná poloha - úhel (polohový režim = 3)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position - angle (position mode = 3)&quot;}">Required position - angle (position mode = 3)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-P_Revol&quot;}">K-P_Revol</td>
@@ -1548,7 +1550,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná poloha - otáčky (polohový režim = 3)&quot;}">Žádaná poloha - otáčky (polohový režim = 3)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position - revolutions (position mode =&yen;u000a3)&quot;}">Required position - revolutions (position mode =<br>3)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-P_Revol&quot;}">K-P_Revol</td>
@@ -1560,7 +1562,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná poloha - otáčky (polohový režim = 3)&quot;}">Žádaná poloha - otáčky (polohový režim = 3)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position - revolutions (position mode =&yen;u000a3)&quot;}">Required position - revolutions (position mode =<br>3)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-DigitalOutputForce_Set&quot;}">K-DigitalOutputForce_Set</td>
@@ -1572,7 +1574,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;nastavení výstupů s vyšší prioritou do 1&quot;}">nastavení výstupů s vyšší prioritou do 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;force outputs - set&quot;}">force outputs - set</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-DigitalOutputForce_Set&quot;}">K-DigitalOutputForce_Set</td>
@@ -1584,7 +1586,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;nastavení výstupů s vyšší prioritou do 1&quot;}">nastavení výstupů s vyšší prioritou do 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;force outputs - set&quot;}">force outputs - set</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-DigitalOutputForce_Clr&quot;}">K-DigitalOutputForce_Clr</td>
@@ -1596,7 +1598,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;nastavení výstupů s vyšší prioritou do 0&quot;}">nastavení výstupů s vyšší prioritou do 0</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;force outputs - clear&quot;}">force outputs - clear</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K-DigitalOutputForce_Clr&quot;}">K-DigitalOutputForce_Clr</td>
@@ -1608,7 +1610,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;nastavení výstupů s vyšší prioritou do 0&quot;}">nastavení výstupů s vyšší prioritou do 0</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;force outputs - clear&quot;}">force outputs - clear</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Monitor-Counter&quot;}">Monitor-Counter</td>
@@ -1620,7 +1622,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Hlavní čítač&quot;}">Hlavní čítač</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Main counter&quot;}">Main counter</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIa&quot;}">aIa</td>
@@ -1632,7 +1634,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi A&quot;}">Aktuální proud ve fázi A</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase A&quot;}">Actual current phase A</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIa&quot;}">aIa</td>
@@ -1644,7 +1646,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi A&quot;}">Aktuální proud ve fázi A</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase A&quot;}">Actual current phase A</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIb&quot;}">aIb</td>
@@ -1656,7 +1658,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi B&quot;}">Aktuální proud ve fázi B</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase B&quot;}">Actual current phase B</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIb&quot;}">aIb</td>
@@ -1668,7 +1670,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi B&quot;}">Aktuální proud ve fázi B</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase B&quot;}">Actual current phase B</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIc&quot;}">aIc</td>
@@ -1680,7 +1682,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi C&quot;}">Aktuální proud ve fázi C</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase C&quot;}">Actual current phase C</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIc&quot;}">aIc</td>
@@ -1692,7 +1694,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud ve fázi C&quot;}">Aktuální proud ve fázi C</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current phase C&quot;}">Actual current phase C</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIq&quot;}">aIq</td>
@@ -1704,7 +1706,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud složka Q&quot;}">Aktuální proud složka Q</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current q&quot;}">Actual current q</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aIq&quot;}">aIq</td>
@@ -1716,7 +1718,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud složka Q&quot;}">Aktuální proud složka Q</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current q&quot;}">Actual current q</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aId&quot;}">aId</td>
@@ -1728,7 +1730,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud složka D&quot;}">Aktuální proud složka D</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current d&quot;}">Actual current d</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aId&quot;}">aId</td>
@@ -1740,7 +1742,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální proud složka D&quot;}">Aktuální proud složka D</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual current d&quot;}">Actual current d</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aAngle&quot;}">aAngle</td>
@@ -1752,7 +1754,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha v rámci otáčky (rozlišení : 32&yen;u000abitů na otáčku)&quot;}">Aktuální poloha v rámci otáčky (rozlišení : 32<br>bitů na otáčku)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position per revolution (resolution :&yen;u000a32bit per revolution)&quot;}">Actual position per revolution (resolution :<br>32bit per revolution)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aAngle&quot;}">aAngle</td>
@@ -1764,7 +1766,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha v rámci otáčky (rozlišení : 32&yen;u000abitů na otáčku)&quot;}">Aktuální poloha v rámci otáčky (rozlišení : 32<br>bitů na otáčku)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position per revolution (resolution :&yen;u000a32bit per revolution)&quot;}">Actual position per revolution (resolution :<br>32bit per revolution)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aRevol&quot;}">aRevol</td>
@@ -1776,7 +1778,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha - počet otáček&quot;}">Aktuální poloha - počet otáček</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual number of revolutions&quot;}">Actual number of revolutions</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aRevol&quot;}">aRevol</td>
@@ -1788,7 +1790,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha - počet otáček&quot;}">Aktuální poloha - počet otáček</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual number of revolutions&quot;}">Actual number of revolutions</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aSpeed&quot;}">aSpeed</td>
@@ -1800,7 +1802,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální rychlost motoru&quot;}">Aktuální rychlost motoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual motor speed&quot;}">Actual motor speed</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aSpeed&quot;}">aSpeed</td>
@@ -1812,7 +1814,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální rychlost motoru&quot;}">Aktuální rychlost motoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual motor speed&quot;}">Actual motor speed</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aSpeedError&quot;}">aSpeedError</td>
@@ -1824,7 +1826,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka rychlosti&quot;}">Aktuální regulační odchylka rychlosti</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual speed error&quot;}">Actual speed error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aSpeedError&quot;}">aSpeedError</td>
@@ -1836,7 +1838,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka rychlosti&quot;}">Aktuální regulační odchylka rychlosti</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual speed error&quot;}">Actual speed error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aAngleError&quot;}">aAngleError</td>
@@ -1848,7 +1850,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka polohy - úhel&quot;}">Aktuální regulační odchylka polohy - úhel</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual angle error&quot;}">Actual angle error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aAngleError&quot;}">aAngleError</td>
@@ -1860,7 +1862,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka polohy - úhel&quot;}">Aktuální regulační odchylka polohy - úhel</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual angle error&quot;}">Actual angle error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aRevolError&quot;}">aRevolError</td>
@@ -1872,7 +1874,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka polohy - otáčky&quot;}">Aktuální regulační odchylka polohy - otáčky</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual revol error&quot;}">Actual revol error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aRevolError&quot;}">aRevolError</td>
@@ -1884,7 +1886,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální regulační odchylka polohy - otáčky&quot;}">Aktuální regulační odchylka polohy - otáčky</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual revol error&quot;}">Actual revol error</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveStatus&quot;}">aDriveStatus</td>
@@ -1896,7 +1898,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servozesilovače : bit[0] = 1 .. Enabled, bit[1]&yen;u000a= 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6]&yen;u000a= 1 ..fieldbus mode, ..............&quot;}">Stav servozesilovače : bit[0] = 1 .. Enabled, bit[1]<br>= 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6]<br>= 1 ..fieldbus mode, ..............</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status of drive : bit[0] = 1 .. Enabled, bit[1] = 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6] = 1&yen;u000a..fieldbus mode, .............&quot;}">Status of drive : bit[0] = 1 .. Enabled, bit[1] = 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6] = 1<br>..fieldbus mode, .............</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveStatus&quot;}">aDriveStatus</td>
@@ -1908,7 +1910,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav servozesilovače : bit[0] = 1 .. Enabled, bit[1]&yen;u000a= 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6]&yen;u000a= 1 ..fieldbus mode, ..............&quot;}">Stav servozesilovače : bit[0] = 1 .. Enabled, bit[1]<br>= 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6]<br>= 1 ..fieldbus mode, ..............</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status of drive : bit[0] = 1 .. Enabled, bit[1] = 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6] = 1&yen;u000a..fieldbus mode, ..............&quot;}">Status of drive : bit[0] = 1 .. Enabled, bit[1] = 1 .. HW Enable signal, bit[2] = 1 .. Software enable, bit[3] = 1 .. Brake released, bit [4] = 1 .. No error, bit[5] = 1 .. Initialization finished, bit[6] = 1<br>..fieldbus mode, ..............</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveError&quot;}">aDriveError</td>
@@ -1920,7 +1922,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Chyba servozesilovače (viz manuál)&quot;}">Chyba servozesilovače (viz manuál)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Error of drive (see manual)&quot;}">Error of drive (see manual)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveError&quot;}">aDriveError</td>
@@ -1932,7 +1934,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Chyba servozesilovače (viz manuál)&quot;}">Chyba servozesilovače (viz manuál)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Error of drive (see manual)&quot;}">Error of drive (see manual)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveWarning&quot;}">aDriveWarning</td>
@@ -1944,7 +1946,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Varování (nevyužito)&quot;}">Varování (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Warning (not used)&quot;}">Warning (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aDriveWarning&quot;}">aDriveWarning</td>
@@ -1956,7 +1958,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;--&quot;}">--</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Varování (nevyužito)&quot;}">Varování (nevyužito)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Warning (not used)&quot;}">Warning (not used)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AnInput&quot;}">AnInput</td>
@@ -1968,7 +1970,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogový vstup 1&quot;}">Analogový vstup 1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogue input 1&quot;}">Analogue input 1</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AnInput&quot;}">AnInput</td>
@@ -1980,7 +1982,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0,0%&quot;, &quot;3&quot;: 1}">0,1%</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogový vstup 2&quot;}">Analogový vstup 2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogue input 2&quot;}">Analogue input 2</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;VoltDCLink&quot;}">VoltDCLink</td>
@@ -1992,7 +1994,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;V&quot;}">V</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Napětí meziobvodu&quot;}">Napětí meziobvodu</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DC-link voltage&quot;}">DC-link voltage</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;OnChipTemp&quot;}">OnChipTemp</td>
@@ -2004,7 +2006,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;deg&quot;}">deg</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Teplota procesoru&quot;}">Teplota procesoru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;CPU temperature&quot;}">CPU temperature</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_SetPointAngle&quot;}">ec_SetPointAngle</td>
@@ -2016,7 +2018,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadovaná poloha v rámci otáčky - řízení přes&yen;u000asběrnici&quot;}">Požadovaná poloha v rámci otáčky - řízení přes<br>sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired position per revolution (fieldbus)&quot;}">Desired position per revolution (fieldbus)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_SetPointAngle&quot;}">ec_SetPointAngle</td>
@@ -2028,7 +2030,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadovaná poloha v rámci otáčky - řízení přes&yen;u000asběrnici&quot;}">Požadovaná poloha v rámci otáčky - řízení přes<br>sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired position per revolution (fieldbus)&quot;}">Desired position per revolution (fieldbus)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_SetPointRevol&quot;}">ec_SetPointRevol</td>
@@ -2040,7 +2042,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadovaná poloha počet otáček - řízení přes&yen;u000asběrnici&quot;}">Požadovaná poloha počet otáček - řízení přes<br>sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired number of revolutions (fieldbus)&quot;}">Desired number of revolutions (fieldbus)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_SetPointRevol&quot;}">ec_SetPointRevol</td>
@@ -2052,7 +2054,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadovaná poloha počet otáček - řízení přes&yen;u000asběrnici&quot;}">Požadovaná poloha počet otáček - řízení přes<br>sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired number of revolutions (fieldbus)&quot;}">Desired number of revolutions (fieldbus)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_control&quot;}">ec_control</td>
@@ -2064,7 +2066,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Řídící registr - řízení přes sběrnici&quot;}">Řídící registr - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus control register&quot;}">Fieldbus control register</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_control&quot;}">ec_control</td>
@@ -2076,7 +2078,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Řídící registr - řízení přes sběrnici&quot;}">Řídící registr - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus control register&quot;}">Fieldbus control register</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_currentSetPoint&quot;}">ec_currentSetPoint</td>
@@ -2088,7 +2090,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud - řízení přes sběrnici&quot;}">Žádaný proud - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus current setpoint&quot;}">Fieldbus current setpoint</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_currentSetPoint&quot;}">ec_currentSetPoint</td>
@@ -2100,7 +2102,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud - řízení přes sběrnici&quot;}">Žádaný proud - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus current setpoint&quot;}">Fieldbus current setpoint</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_currentLimit&quot;}">ec_currentLimit</td>
@@ -2112,7 +2114,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Proudové omezení - řízení přes sběrnici&quot;}">Proudové omezení - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus current limitation&quot;}">Fieldbus current limitation</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ec_currentLimit&quot;}">ec_currentLimit</td>
@@ -2124,7 +2126,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Proudové omezení - řízení přes sběrnici&quot;}">Proudové omezení - řízení přes sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Fieldbus current limitation&quot;}">Fieldbus current limitation</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital_Inputs&quot;}">Digital_Inputs</td>
@@ -2136,7 +2138,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2]&yen;u000a.. IN5,bit[3] .. IN7&quot;}">Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2]<br>.. IN5,bit[3] .. IN7</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2] ..&yen;u000aIN5,bit[3] .. IN7&quot;}">Digital inputs : bit[0] .. IN1,bit[1] .. IN3,bit[2] ..<br>IN5,bit[3] .. IN7</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital_Inputs&quot;}">Digital_Inputs</td>
@@ -2148,7 +2150,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2]&yen;u000a.. IN6,bit[3] .. IN8&quot;}">Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2]<br>.. IN6,bit[3] .. IN8</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2] ..&yen;u000aIN6,bit[3] .. IN8&quot;}">Digital inputs : bit[0] .. IN2,bit[1] .. IN4,bit[2] ..<br>IN6,bit[3] .. IN8</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor_temperature&quot;}">Motor_temperature</td>
@@ -2160,7 +2162,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpor teplotního čidla motoru (pouze pro digitální zpětnou vazbu s připojeným teplotním&yen;u000ačidlem)&quot;}">Odpor teplotního čidla motoru (pouze pro digitální zpětnou vazbu s připojeným teplotním<br>čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rezistivity of motor temperature sensor (only for&yen;u000adigital feedback with connected temperature sensor)&quot;}">Rezistivity of motor temperature sensor (only for<br>digital feedback with connected temperature sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Motor_temperature&quot;}">Motor_temperature</td>
@@ -2172,7 +2174,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ohm&quot;}">Ohm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpor teplotního čidla motoru (pouze pro&yen;u000adigitální zpětnou vazbu s připojeným teplotním čidlem)&quot;}">Odpor teplotního čidla motoru (pouze pro<br>digitální zpětnou vazbu s připojeným teplotním čidlem)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rezistivity of motor temperature sensor (only for&yen;u000adigital feedback with connected temperature sensor)&quot;}">Rezistivity of motor temperature sensor (only for<br>digital feedback with connected temperature sensor)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rIq&quot;}">rIq</td>
@@ -2184,7 +2186,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud (vstup do proudového regulátoru)&quot;}">Žádaný proud (vstup do proudového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required current (input - current controller)&quot;}">Required current (input - current controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rIq&quot;}">rIq</td>
@@ -2196,7 +2198,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaný proud (vstup do proudového regulátoru)&quot;}">Žádaný proud (vstup do proudového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required current (input - current controller)&quot;}">Required current (input - current controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ia_rms&quot;}">Ia_rms</td>
@@ -2208,7 +2210,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ia&quot;}">Efektivní hodnota proudu Ia</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ia rms value&quot;}">Current Ia rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ia_rms&quot;}">Ia_rms</td>
@@ -2220,7 +2222,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ia&quot;}">Efektivní hodnota proudu Ia</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ia rms value&quot;}">Current Ia rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ib_rms&quot;}">Ib_rms</td>
@@ -2232,7 +2234,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ib&quot;}">Efektivní hodnota proudu Ib</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ib rms value&quot;}">Current Ib rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ib_rms&quot;}">Ib_rms</td>
@@ -2244,7 +2246,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ib&quot;}">Efektivní hodnota proudu Ib</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ib rms value&quot;}">Current Ib rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ic_rms&quot;}">Ic_rms</td>
@@ -2256,7 +2258,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ic&quot;}">Efektivní hodnota proudu Ic</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ic rms value&quot;}">Current Ic rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Ic_rms&quot;}">Ic_rms</td>
@@ -2268,7 +2270,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Efektivní hodnota proudu Ic&quot;}">Efektivní hodnota proudu Ic</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Current Ic rms value&quot;}">Current Ic rms value</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aI2t&quot;}">aI2t</td>
@@ -2280,7 +2282,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Hodnota I2t&quot;}">Hodnota I2t</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrated value I2t&quot;}">Integrated value I2t</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aI2t&quot;}">aI2t</td>
@@ -2292,7 +2294,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mA&quot;}">mA</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Hodnota i2t&quot;}">Hodnota i2t</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Integrated value I2t&quot;}">Integrated value I2t</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rAngle&quot;}">rAngle</td>
@@ -2304,7 +2306,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná hodnota polohy - v rámci otáčky (vstup&yen;u000apolohového regulátoru)&quot;}">Žádaná hodnota polohy - v rámci otáčky (vstup<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position per revolution (input -&yen;u000aposition controller)&quot;}">Required position per revolution (input -<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rAngle&quot;}">rAngle</td>
@@ -2316,7 +2318,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná hodnota polohy - v rámci otáčky (vstup&yen;u000apolohového regulátoru)&quot;}">Žádaná hodnota polohy - v rámci otáčky (vstup<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required position per revolution (input -&yen;u000aposition controller)&quot;}">Required position per revolution (input -<br>position controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rRevol&quot;}">rRevol</td>
@@ -2328,7 +2330,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná hodnota polohy - počet otáček (vstup&yen;u000apolohového regulátoru)&quot;}">Žádaná hodnota polohy - počet otáček (vstup<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required number of revolutions (input - position&yen;u000acontroller)&quot;}">Required number of revolutions (input - position<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rRevol&quot;}">rRevol</td>
@@ -2340,7 +2342,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 1}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">1</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná hodnota polohy - počet otáček (vstup&yen;u000apolohového regulátoru)&quot;}">Žádaná hodnota polohy - počet otáček (vstup<br>polohového regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required number of revolutions (input - position&yen;u000acontroller)&quot;}">Required number of revolutions (input - position<br>controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rSpeed&quot;}">rSpeed</td>
@@ -2352,7 +2354,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost (vstup rychlostního regulátoru)&quot;}">Žádaná rychlost (vstup rychlostního regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required speed (input - speed controller)&quot;}">Required speed (input - speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rSpeed&quot;}">rSpeed</td>
@@ -2364,7 +2366,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;rpm&quot;}">rpm</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost (vstup rychlostního regulátoru)&quot;}">Žádaná rychlost (vstup rychlostního regulátoru)</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Required speed (input - speed controller)&quot;}">Required speed (input - speed controller)</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DSL_status&quot;}">DSL_status</td>
@@ -2376,7 +2378,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav DSL enkodéru&quot;}">Stav DSL enkodéru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status DSL fb encoder&quot;}">Status DSL fb encoder</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DSL_status&quot;}">DSL_status</td>
@@ -2388,7 +2390,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stav DSL enkodéru&quot;}">Stav DSL enkodéru</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status DSL fb encoder&quot;}">Status DSL fb encoder</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DO&quot;}">DO</td>
@@ -2400,7 +2402,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital výstupy: bit[0] .. Out1, bit[1] .. Out3,&yen;u000abit[2] .. Out5&quot;}">Digital výstupy: bit[0] .. Out1, bit[1] .. Out3,<br>bit[2] .. Out5</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital outputs: bit[0] .. Out1, bit[1] .. Out3,&yen;u000abit[2] .. Out5&quot;}">Digital outputs: bit[0] .. Out1, bit[1] .. Out3,<br>bit[2] .. Out5</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DO&quot;}">DO</td>
@@ -2412,7 +2414,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;bit&quot;}">bit</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital výstupy: bit[0] .. Out2, bit[1] .. Out4,&yen;u000abit[2] .. Out6&quot;}">Digital výstupy: bit[0] .. Out2, bit[1] .. Out4,<br>bit[2] .. Out6</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital outputs: bit[0] .. Out2, bit[1] .. Out4,&yen;u000abit[2] .. Out6&quot;}">Digital outputs: bit[0] .. Out2, bit[1] .. Out4,<br>bit[2] .. Out6</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C-PackeTime&quot;}">C-PackeTime</td>
@@ -2424,7 +2426,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Měřený čas mezi pakety při řízení po sběrnici&quot;}">Měřený čas mezi pakety při řízení po sběrnici</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Measured time between packets for fieldbus&yen;u000amode&quot;}">Measured time between packets for fieldbus<br>mode</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Acc&quot;}">Acc</td>
@@ -2436,7 +2438,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s2&quot;}">pginc/s2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádané zrychlení pohybu [ inc&yen;/s2 ] .. Viz funkční&yen;u000amanuál&quot;}">Žádané zrychlení pohybu [ inc/s2 ] .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired acceleration of movement [ inc&yen;/s2 ] ..&yen;u000asee functional manual&quot;}">Desired acceleration of movement [ inc/s2 ] ..<br>see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Acc&quot;}">Acc</td>
@@ -2448,7 +2450,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s2&quot;}">pginc/s2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádané zrychlení pohybu [ inc&yen;/s2 ] .. Viz funkční&yen;u000amanuál&quot;}">Žádané zrychlení pohybu [ inc/s2 ] .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired acceleration of movement [ inc&yen;/s2 ] ..&yen;u000asee functional manual&quot;}">Desired acceleration of movement [ inc/s2 ] ..<br>see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Dec&quot;}">Dec</td>
@@ -2460,7 +2462,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s2&quot;}">pginc/s2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádané zpomalení pohybu [ inc&yen;/s2 ] .. Viz&yen;u000afunkční manuál&quot;}">Žádané zpomalení pohybu [ inc/s2 ] .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired deceleration of movenent [ inc&yen;/s2 ] ..&yen;u000asee functional manual&quot;}">Desired deceleration of movenent [ inc/s2 ] ..<br>see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Dec&quot;}">Dec</td>
@@ -2472,7 +2474,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s2&quot;}">pginc/s2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádané zpomalení pohybu [ inc&yen;/s2 ] .. Viz&yen;u000afunkční manuál&quot;}">Žádané zpomalení pohybu [ inc/s2 ] .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired deceleration of movenent [ inc&yen;/s2 ] ..&yen;u000asee functional manual&quot;}">Desired deceleration of movenent [ inc/s2 ] ..<br>see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;APosAngle&quot;}">APosAngle</td>
@@ -2484,7 +2486,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální poloha na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Actual position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;APosAngle&quot;}">APosAngle</td>
@@ -2496,7 +2498,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální poloha na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Actual position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;APosRevol&quot;}">APosRevol</td>
@@ -2508,7 +2510,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální poloha na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Actual position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;APosRevol&quot;}">APosRevol</td>
@@ -2520,7 +2522,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální poloha na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální poloha na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Actual position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DPosAngle&quot;}">DPosAngle</td>
@@ -2532,7 +2534,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cílová poloha .. Viz funkční manuál&quot;}">Cílová poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Destination position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Destination position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DPosAngle&quot;}">DPosAngle</td>
@@ -2544,7 +2546,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cílová poloha .. Viz funkční manuál&quot;}">Cílová poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Destination position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Destination position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DPosRevol&quot;}">DPosRevol</td>
@@ -2556,7 +2558,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cílová poloha .. Viz funkční manuál&quot;}">Cílová poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Destination position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Destination position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;DPosRevol&quot;}">DPosRevol</td>
@@ -2568,7 +2570,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;inc&quot;}">inc</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Cílová poloha .. Viz funkční manuál&quot;}">Cílová poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Destination position of movenent[ inc ] .. see&yen;u000afunctional manual&quot;}">Destination position of movenent[ inc ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ASpeed&quot;}">ASpeed</td>
@@ -2580,7 +2582,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální rychlost na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální rychlost na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual speed of movenent[ inc&yen;/s ] .. see&yen;u000afunctional manual&quot;}">Actual speed of movenent[ inc/s ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;ASpeed&quot;}">ASpeed</td>
@@ -2592,7 +2594,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-only&quot;}">read-only</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální rychlost na výstupu pg .. Viz funkční&yen;u000amanuál&quot;}">Aktuální rychlost na výstupu pg .. Viz funkční<br>manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual speed of movenent[ inc&yen;/s ] .. see&yen;u000afunctional manual&quot;}">Actual speed of movenent[ inc/s ] .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;PosSpeed&quot;}">PosSpeed</td>
@@ -2604,7 +2606,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost v polohovém módu .. Viz&yen;u000afunkční manuál&quot;}">Žádaná rychlost v polohovém módu .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired speed of movenent in position mode[&yen;u000ainc&yen;/s ] .. see functional manual&quot;}">Desired speed of movenent in position mode[<br>inc/s ] .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;PosSpeed&quot;}">PosSpeed</td>
@@ -2616,7 +2618,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost v polohovém módu .. Viz&yen;u000afunkční manuál&quot;}">Žádaná rychlost v polohovém módu .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired speed of movenent in position mode[&yen;u000ainc&yen;/s ] .. see functional manual&quot;}">Desired speed of movenent in position mode[<br>inc/s ] .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Speed&quot;}">Speed</td>
@@ -2628,7 +2630,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost v rychlostním módu .. Viz&yen;u000afunkční manuál&quot;}">Žádaná rychlost v rychlostním módu .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired speed of movenent in speed mode[&yen;u000ainc&yen;/s ] .. see functional manual&quot;}">Desired speed of movenent in speed mode[<br>inc/s ] .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Speed&quot;}">Speed</td>
@@ -2640,7 +2642,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;pginc&yen;/s&quot;}">pginc/s</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Žádaná rychlost v rychlostním módu .. Viz&yen;u000afunkční manuál&quot;}">Žádaná rychlost v rychlostním módu .. Viz<br>funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Desired speed of movenent in speed mode[&yen;u000ainc&yen;/s ] .. see functional manual&quot;}">Desired speed of movenent in speed mode[<br>inc/s ] .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode&quot;}">Mode</td>
@@ -2652,7 +2654,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Režim generátoru profilu 0 = rychlostní režim, 1&yen;u000a= polohový režim, 2 = (pouze pro čtení) zpomalování v polohovém režimu .. Viz manuál&quot;}">Režim generátoru profilu 0 = rychlostní režim, 1<br>= polohový režim, 2 = (pouze pro čtení) zpomalování v polohovém režimu .. Viz manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode of profile generator 0 = speed mode, 1 = position mode, 2( only read ) = signalizing deceleration ramp in position mode .. see&yen;u000afunctional manual&quot;}">Mode of profile generator 0 = speed mode, 1 = position mode, 2( only read ) = signalizing deceleration ramp in position mode .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode&quot;}">Mode</td>
@@ -2664,7 +2666,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Režim generátoru profilu 0 = rychlostní režim, 1&yen;u000a= polohový režim, 2 = (pouze pro čtení) zpomalování v polohovém režimu .. Viz manuál&quot;}">Režim generátoru profilu 0 = rychlostní režim, 1<br>= polohový režim, 2 = (pouze pro čtení) zpomalování v polohovém režimu .. Viz manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode of profile generator 0 = speed mode, 1 = position mode, 2( only read ) = signalizing deceleration ramp in position mode .. see&yen;u000afunctional manual&quot;}">Mode of profile generator 0 = speed mode, 1 = position mode, 2( only read ) = signalizing deceleration ramp in position mode .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rdy&quot;}">Rdy</td>
@@ -2676,7 +2678,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Signalizace polohování: 1 = dosažena cílová&yen;u000apoloha .. Viz funkční manuál&quot;}">Signalizace polohování: 1 = dosažena cílová<br>poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Flag end of movemnet 1 = Destination position is reached .. see functional manual&quot;}">Flag end of movemnet 1 = Destination position is reached .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Rdy&quot;}">Rdy</td>
@@ -2688,7 +2690,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Signalizace polohování: 1 = dosažena cílová&yen;u000apoloha .. Viz funkční manuál&quot;}">Signalizace polohování: 1 = dosažena cílová<br>poloha .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Flag end of movemnet 1 = Destination position is reached .. see functional manual&quot;}">Flag end of movemnet 1 = Destination position is reached .. see functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type&quot;}">Type</td>
@@ -2700,7 +2702,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ rychlostního profilu : 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. Viz funkční manuál&quot;}">Typ rychlostního profilu : 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type of speed profile 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. see functional&yen;u000amanual&quot;}">Type of speed profile 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. see functional<br>manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type&quot;}">Type</td>
@@ -2712,7 +2714,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ rychlostního profilu : 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. Viz funkční manuál&quot;}">Typ rychlostního profilu : 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type of speed profile 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. see functional&yen;u000amanual&quot;}">Type of speed profile 0 = harmonic non symetric, 1 = harmonic symetric, 2 = full harmonic, 3 = trapezoidal .. see functional<br>manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;BitsPerRevol&quot;}">BitsPerRevol</td>
@@ -2724,7 +2726,7 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet bitů na otáčku pro vnitřní výpočty pg. Ovlivňuje rozlišení rychlostí a zrychlení&yen;u000a(zpomalení) .. Viz funkční manuál&quot;}">Počet bitů na otáčku pro vnitřní výpočty pg. Ovlivňuje rozlišení rychlostí a zrychlení<br>(zpomalení) .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of bit per revolution for internal pg calculation. It take affect to resolution of speeds and accelerations (decelerations) .. see&yen;u000afunctional manual&quot;}">Number of bit per revolution for internal pg calculation. It take affect to resolution of speeds and accelerations (decelerations) .. see<br>functional manual</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;BitsPerRevol&quot;}">BitsPerRevol</td>
@@ -2736,6 +2738,6 @@ Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden v
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet bitů na otáčku pro vnitřní výpočty pg.&yen;u000aOvlivňuje rozlišení rychlostí a zrychlení (zpomalení) .. Viz funkční manuál&quot;}">Počet bitů na otáčku pro vnitřní výpočty pg.<br>Ovlivňuje rozlišení rychlostí a zrychlení (zpomalení) .. Viz funkční manuál</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of bit per revolution for internal pg calculation. It take affect to resolution of speeds and accelerations (decelerations) .. see&yen;u000afunctional manual&quot;}">Number of bit per revolution for internal pg calculation. It take affect to resolution of speeds and accelerations (decelerations) .. see<br>functional manual</td>
 	</tr>
 </table>
