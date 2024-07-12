@@ -11,7 +11,7 @@
 
 ##Connectors
 ___
-### Strana AC IN
+### AC IN side view
 ___
 
 ![AC IN connector](../../../../source/img/TGS-320-10_15_ACside.png){: style="width:70%;" }
@@ -19,7 +19,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Vstupní fázové napětí**
+-   **X1 - Network connector**
 
     ---
 	
@@ -34,38 +34,39 @@ ___
 </div>
 
 ___
-### Strana status LEDs
+### Status LEDs side view
 ___
 
 
 ![LEDs](../../../../source/img/TGS-320-10_15_LEDSide.png){: style="width:70%;" }
-<!--
+
 <div class="grid cards" markdown>
 
 -	**status LEDs**
 
 	---
 	
-	![status LEDs](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
+	![status LEDs](../img/LEDs.svg){: style="width:100%;" }
 	
 -	LED diodes
 
 	---
 	
-	--8<-- "md/LEDsigAx12.en.md"
+	LED diodes are mirroring status of the control output contacts.
+	When the TGS is ready, and has no error status (overtemperature, overvoltage, undervoltage) the green LED is on.
+	Otherwise the red LED is on.
 
 </div>
--->
    
 ___
-### Strana výstup DC bus, Ready, Error
+### DC bus, control output side
 ___
 
 ![Motor/Feedback connectors](../../../../source/img/TGS-320-10_15_DCbusSide.png){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
--   **X2 - Výstup DC silového napájení**
+-   **X2 - DCbus out connector**
 
     ---
 	
@@ -78,7 +79,7 @@ ___
 
 	--8<-- "md/X2_DC_8pin_PC5.en.md"
 
--   **X3 - Kontrolní výstupy**
+-   **X3 - Control output connector**
 
     ---
 	

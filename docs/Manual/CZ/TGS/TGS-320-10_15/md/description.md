@@ -39,23 +39,25 @@ ___
 
 
 ![LEDs](../../../../source/img/TGS-320-10_15_LEDSide.png){: style="width:70%;" }
-<!--
+
 <div class="grid cards" markdown>
 
--	**LED signalizace**
+-	**status LEDs**
 
 	---
 	
-	![LED signalizace](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
+	![status LEDs](../img/LEDs.svg){: style="width:100%;" }
 	
 -	LED diody
 
 	---
 	
-	--8<-- "md/LEDsigAx12.md"
+	Status LED zrcadlí stav výstupních stavových kontaktů.
+	Když je TGS připraven a nemá žádný chybový stav (přehřátí, přepětí, podpětí), svítí zelená LED.
+	V opačném případě svítí červená LED.
 
 </div>
--->
+   
    
 ___
 ### Strana výstup DC bus, Ready, Error

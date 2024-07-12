@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Vstupní fázové napětí**
+-   **X1 - Network connector**
 
     ---
 	
@@ -36,7 +36,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X2 - Výstup DC silového napájení**
+-   **X2 - DCbus out connector**
 
     ---
 	
@@ -48,7 +48,7 @@ ___
 
 	--8<-- "md/X2_DC_8pin_PC5.en.md"
 
--   **X3 - Kontrolní výstupy**
+-   **X3 - Control output connector**
 
     ---
 	

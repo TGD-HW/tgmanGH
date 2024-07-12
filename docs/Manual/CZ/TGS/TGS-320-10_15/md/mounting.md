@@ -1,4 +1,3 @@
-# Montáž zařízení
 ## Uchycení
 L-profil umožňuje variabilní montáž napaječe do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.
 
