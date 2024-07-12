@@ -4286,6 +4286,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SD cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4406,71 +4427,71 @@
         <li class="md-nav__item">
   <a href="#Ramptype" class="md-nav__link">
     <span class="md-ellipsis">
-      Základní popis
+      Basic principle
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#priklady-rizeni-motoru-prostrednictvim-profil-generatoru" class="md-nav__link">
+  <a href="#examples-of-motor-control-via-profile-generator" class="md-nav__link">
     <span class="md-ellipsis">
-      Příklady řízení motoru prostřednictvím Profil Generátoru
+      Examples of motor control via Profile Generator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Příklady řízení motoru prostřednictvím Profil Generátoru">
+    <nav class="md-nav" aria-label="Examples of motor control via Profile Generator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rizeni-polohy-motoru-tgz-gui" class="md-nav__link">
+  <a href="#motor-position-control-via-tgz-gui" class="md-nav__link">
     <span class="md-ellipsis">
-      Řízení polohy motoru (TGZ GUI)
+      Motor position control via TGZ GUI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rizeni-polohy-motoru-udp" class="md-nav__link">
+  <a href="#motor-position-control-via-udp" class="md-nav__link">
     <span class="md-ellipsis">
-      Řízení polohy motoru (UDP)
+      Motor position control via UDP
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rizeni-rychlosti-motoru-tgz-gui" class="md-nav__link">
+  <a href="#motor-speed-control-via-tgz-gui" class="md-nav__link">
     <span class="md-ellipsis">
-      Řízení rychlosti motoru (TGZ GUI)
+      Motor speed control via TGZ GUI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rizeni-rychlosti-motoru-udp" class="md-nav__link">
+  <a href="#motor-speed-control-via-udp" class="md-nav__link">
     <span class="md-ellipsis">
-      Řízení rychlosti motoru (UDP)
+      Motor speed control via UDP
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sw-limity-pri-rychlostnim-rizeni-tgz-gui" class="md-nav__link">
+  <a href="#software-limits-for-motor-speed-control-in-tgz-gui" class="md-nav__link">
     <span class="md-ellipsis">
-      SW limity při rychlostním řízení (TGZ GUI)
+      Software limits for motor speed control in TGZ GUI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sw-limity-pri-rychlostnim-rizeni-udp" class="md-nav__link">
+  <a href="#software-limits-for-motor-speed-control-udp" class="md-nav__link">
     <span class="md-ellipsis">
-      SW limity při rychlostním řízení (UDP)
+      Software limits for motor speed control (UDP)
     </span>
   </a>
   
@@ -4482,9 +4503,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rozsireny-popis-parametru-generatoru-profilu" class="md-nav__link">
+  <a href="#extended-description-of-profile-generator-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Rozšířený popis parametrů Generátoru profilů
+      Extended description of Profile Generator parameters
     </span>
   </a>
   
@@ -4532,27 +4553,6 @@
   
   <span class="md-ellipsis">
     Emergency braking
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SD cards
   </span>
   
 
@@ -4640,7 +4640,7 @@
         
   
   <span class="md-ellipsis">
-    TGC connection
+    TGZ connection
   </span>
   
 
@@ -6795,30 +6795,28 @@
 
   <h1>Profile generator</h1>
 
-<h2 id="Ramptype">Základní popis<a class="headerlink" href="#Ramptype" title="Permanent link">&para;</a></h2>
-<p>Generátor žádané polohy.
-Umožňuje jednoduchým způsobem polohovat z bodu do bodu a rychlostně řídit servopohon.
-Výstupem generátoru je proměnná 64 bitová poloha, která se skládá ze dvou 32 bitových proměnných <code>APosAngle</code> a <code>APosRevol</code> a dále proměnné <code>ASpeed</code> určující aktuální žádanou hodnotu rychlosti.
-Parametry generátoru jsou <code>Acc</code> a <code>Dec</code>, které určují akceleraci resp. deceleraci pohonu, parametr <code>Type</code> určuje průběh rychlosti při akceleraci a deceleraci (viz. schéma níže).
-Dalším parametrem je <code>PosSpeed</code>, který určuje maximální rychlost při zapolohování, parametry <code>DPosAngle</code> a <code>DposRevol</code> určují cílovou polohu a parametr <code>Speed</code> určuje žádanou hodnotu rychlosti.
-Pomocí proměnných <code>Mode</code> a <code>Rdy</code> se realizuje vlastní ovládání generátoru.
-Proměnná <code>Mode</code> určuje režim PG (hodnota 0 udává rychlostní režim, hodnota 1 udává polohový režim).
-Pokud je polohování úspěšně dokončeno a výstupní poloha je shodná se žádanou, pak je tento stav signalizován hodnotou proměnné <code>Rdy = 1</code>.
-Generátor pracuje tak, že v každé periodě na základě parametrů (<code>Acc, Dec, Type, PosSpeed, DPosAngle a DPosRevol</code>) a stavu proměnných <code>Mode</code> a <code>Speed</code> vypočítá aktuální žádanou hodnotu polohy <code>APosAngle</code> a <code>APosRevol</code> a aktuální žádanou hodnotu rychlosti <code>ASpeed</code>.
-Výpočet generátoru probíhá s interním rozlišením daným parametrem <code>BitsPerRevol</code>.
-Tento parametr pak udává vnitřní počet inkrementů na otáčku.</p>
+<h2 id="Ramptype">Basic principle<a class="headerlink" href="#Ramptype" title="Permanent link">&para;</a></h2>
+<p>It allows easy positioning from point to point and speed control of the actuator.
+The output of the generator is a 64-bit position variable, which consists of two 32-bit variables <code>APosAngle</code> and <code>APosRevol</code>, as well as a variable <code>ASpeed</code> determining the current speed setpoint.
+The parameters of the generator are <code>Acc</code> and <code>Dec</code>, which determine the acceleration resp. deceleration of the drive, the <code>Type</code> parameter determines the course of speed during acceleration and deceleration (see diagram below).
+Another parameter is <code>PosSpeed</code>, which determines the maximum speed during positioning, the <code>DPosAngle</code> and <code>DposRevol</code> parameters determine the target position and the <code>Speed</code> parameter determines the speed setpoint.
+The variables <code>Mode</code> and <code>Rdy</code> are used to control the generator itself.
+The <code>Mode</code> variable specifies the PG mode (value 0 indicates the speed mode, value 1 indicates the position mode).
+If the positioning is successfully completed and the output position is the same as the setpoint, then this state is signaled by the value of the variable <code>Rdy = 1</code>.
+The generator works by calculating the current <code>APosAngle</code> and <code>APosRevol</code> position setpoint and the current <code>ASpeed</code> speed setpoint in each period based on the parameters (<code>Acc, Dec, Type, PosSpeed, DPosAngle, and DPosRevol</code>) and the status of the <code>Mode</code> and <code>Speed</code> variables.
+The calculation of the generator is performed with the internal resolution given by the <code>BitsPerRevol</code> parameter. This parameter then specifies the internal number of increments per revolution.</p>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/TGZrampType1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="TGZ servo ramp type" src="../../../../../../../Manual/source/img/TGZrampType1.webp" style="width:70%;" /></a> </p>
 <ul>
-<li>(a) Polohový mód</li>
-<li>(b) rychlostní režim</li>
-<li>(c) typ náběžných a sestupných ramp</li>
+<li>(a) position mode</li>
+<li>(b) speed mode</li>
+<li>(c) type of ascending and descending ramps</li>
 </ul>
-<p>Následující parametry pracují s tímto rozlišením:</p>
+<p>The following parameters work with this resolution:</p>
 <table>
 <thead>
 <tr>
 <th>Parameter</th>
-<th>Jednotka</th>
+<th>Unit</th>
 </tr>
 </thead>
 <tbody>
@@ -6832,47 +6830,47 @@ Tento parametr pak udává vnitřní počet inkrementů na otáčku.</p>
 </tr>
 </tbody>
 </table>
-<p>Polohové parametry jsou 64 bitové a jsou složeny ze dvou 32 bitových registrů:</p>
+<p>The position parameters are 64-bit and consist of two 32-bit registers:</p>
 <ul>
-<li>Registr Angle udává polohu v rámci jedné otáčky s rozlišením 32 bitů</li>
-<li>Registr Revol je rozšíření o 32 bitů (počet celých otáček):<ul>
+<li>The Angle register indicates the position within one revolution with a resolution of 32 bits</li>
+<li>The Revol register is an extension of 32 bits (number of whole revolutions):<ul>
 <li>DPosRevol, DPosAngle</li>
 <li>APosRevol, APosAngle</li>
 </ul>
 </li>
 </ul>
-<p>V uživatelském programu je možno pro zjednodušení práce s generátorem profilu využívat tyto vestavěné funkce:</p>
+<p>These built-in functions can be used in the user program to simplify work with the profile generator:</p>
 <ul>
-<li>Relativní polohování - jedná se o přejezd o polohu: <br />
-int PosRel(int axis, int Acc, int Dec, int Speed, long long Pos, int AddGear);</li>
-<li>Absolutní polohování - jedná se nájezd do absolutní polohy: <br />
-int PosAbs(int axis, int Acc, int Dec, int Speed, long long Pos, int AddGear);</li>
-<li>Rychlostní přejezd - pohon se roztočí danou rychlostí. <br />
-int RunSpeed(int axis, int Acc, int Speed, int AddGear);</li>
+<li>Relative positioning - this is a position transition:
+  int PosRel(int axis, int Acc, int Dec, int Speed, long long Pos, int AddGear);</li>
+<li>Absolute positioning - this is the approach to the absolute position:
+  int PosAbs(int axis, int Acc, int Dec, int Speed, long long Pos, int AddGear);</li>
+<li>Speed crossing - the drive spins at a given speed.
+  int RunSpeed(int axis, int Acc, int Speed, int AddGear);</li>
 </ul>
-<p>Popis parametrů:
-axis - 0 -&gt; osa 1; axis 1 - osa 2
-Acc,Dec ... Ve stejném významu jako parametry PG popsané výše
-Speed ... Maximální rychlost polohového přejezdu nebo rychlost rychlostního přejezdu
-AddGear ... zatím není implementován (bude určovat spolupráci s modulem Gear - převod)</p>
-<h2 id="priklady-rizeni-motoru-prostrednictvim-profil-generatoru">Příklady řízení motoru prostřednictvím Profil Generátoru<a class="headerlink" href="#priklady-rizeni-motoru-prostrednictvim-profil-generatoru" title="Permanent link">&para;</a></h2>
-<p>Následující tabulky poskytují příklady použití profilu generátoru, který je nastaven na různé režimy řízení motoru.
-Ve sloupci <em>Základní skupiny</em> je uveden název stránky.
-Přepínání mezi jednotlivými stránkami je povoleno v levém horním rohu grafického uživatelského rozhraní TGZ.</p>
+<p>Description of parameters:
+axis - 0 - axis 1, 1 - axis 2
+Acc,Dec - in the same sense as the PG parameters described above
+Speed - Maximum position crossing speed or speed crossing speed
+AddGear - not implemented yet (will determine cooperation with the Gear module)</p>
+<h2 id="examples-of-motor-control-via-profile-generator">Examples of motor control via Profile Generator<a class="headerlink" href="#examples-of-motor-control-via-profile-generator" title="Permanent link">&para;</a></h2>
+<p>The following tables provide examples of using a generator profile that is set to different motor control modes.
+The <strong>Basic Groups</strong> column lists the page name.
+Switching between individual pages is allowed in the upper left corner of the TGZ graphical user interface.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>V prvním kroku je důležité nastavit / načíst správné parametry pohonu.
-Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním rohu (<em>LOAD PARAMETERS FROM FILE</em>), viz. <a href="../../../../TGZ/TGZ_SW/GUI/md/intro/#GUIstart">Návod k TGZ GUI</a></p>
+<p class="admonition-title">Note</p>
+<p>In the first step, it is important to set / load the correct drive parameters.
+Uploading parameters is possible using the blue envelope in the upper right corner (<em>LOAD PARAMETERS FROM FILE</em>), see <a href="../../../../TGZ/TGZ_SW/GUI/md/intro/#GUIstart">TGZ GUI Manual</a></p>
 </div>
-<h3 id="rizeni-polohy-motoru-tgz-gui">Řízení polohy motoru (TGZ GUI)<a class="headerlink" href="#rizeni-polohy-motoru-tgz-gui" title="Permanent link">&para;</a></h3>
+<h3 id="motor-position-control-via-tgz-gui">Motor position control via TGZ GUI<a class="headerlink" href="#motor-position-control-via-tgz-gui" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Krok</th>
-<th>Základní skupina</th>
+<th>Step</th>
+<th>Basicgroups</th>
 <th>Parametr</th>
-<th>Hodnota</th>
-<th>Popis</th>
+<th>Value <sup id="fnref16:1"><a class="footnote-ref" href="#fn:1">1</a></sup></th>
+<th>Desription</th>
 </tr>
 </thead>
 <tbody>
@@ -6881,79 +6879,79 @@ Nahrávání parametrů je umožněno pomocí modré obálky v pravém horním r
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>Načíst parametry pohonu.</td>
+<td>Loaddrive parameters.</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Drive</td>
 <td>D-mode</td>
 <td>7</td>
-<td>Generátor profilů - režim polohy.</td>
+<td>Profilegenerator - position mode.</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Command</td>
 <td>K-Command</td>
 <td>1</td>
-<td>SW enable. Lze jej také zapnout pomocí tlačítka enable pro příslušnou osu na spodní liště. Motor generuje točivý moment.</td>
+<td>SW enable. It can also be turned on using the enable button for the respective axis on the bottom bar. The motor generates torque.</td>
 </tr>
 <tr>
 <td>4</td>
 <td>PG</td>
 <td>Acc</td>
-<td>5 000 000 <sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc/s²] Požadovaná akcelerace.</td>
+<td>5 000 000<sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc/s²] Required acceleration.</td>
 </tr>
 <tr>
 <td>5</td>
 <td>PG</td>
 <td>Dec</td>
-<td>5 000 000 <sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc/s²] Požadované zpomalení.</td>
+<td>5 000 000<sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc/s²] Desired deceleration.</td>
 </tr>
 <tr>
 <td>6</td>
 <td>PG</td>
 <td>PosSpeed</td>
-<td>1 000 000 <sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc/s] Požadovaná rychlost pohybu v pozičním režimu.</td>
+<td>1 000 000<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc/s] Desired speed of movement in position mode.</td>
 </tr>
 <tr>
 <td>7</td>
 <td>PG</td>
 <td>Mode</td>
 <td>1</td>
-<td>Poziční režim.</td>
+<td>Position mode.</td>
 </tr>
 <tr>
 <td>8</td>
 <td>PG</td>
 <td>Type</td>
 <td>1</td>
-<td>Požadovaný typ rampy. Viz Obrázek 1.</td>
+<td>Required ramp type.</td>
 </tr>
 <tr>
 <td>9</td>
 <td>PG</td>
 <td>DPosAngle</td>
 <td>0</td>
-<td>[inc] Požadovaná poloha v rozsahu jedné otáčky. Po zadání hodnoty a stisknutí klávesy Enter se motor otočí do požadované polohy.</td>
+<td>[inc] Desired position within one revolution. After entering the value and pressing the Enter key, the motor rotates to the desired position.</td>
 </tr>
 <tr>
 <td>10</td>
 <td>PG</td>
 <td>DPosRevol</td>
-<td>20 <sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc] Požadovaná poloha v rozsahu víceotáčkového pohybu. Po zadání hodnoty a stisknutí klávesy Enter se motor otočí do požadované polohy.</td>
+<td>20<sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc] Desired position within the multi-turn range. After entering the value and pressing the Enter key, the motor rotates to the desired position.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="rizeni-polohy-motoru-udp">Řízení polohy motoru (UDP)<a class="headerlink" href="#rizeni-polohy-motoru-udp" title="Permanent link">&para;</a></h3>
+<h3 id="motor-position-control-via-udp">Motor position control via UDP<a class="headerlink" href="#motor-position-control-via-udp" title="Permanent link">&para;</a></h3>
 <p><strong>D-mode</strong> <br />
-Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim.</p>
+Description: Servo amplifier mode setting: Profile Generator - position mode.</p>
 <table>
     <tr>
-        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Požadavek&quot;}"><b>Telegram: Požadavek</b></td>
+        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Request&quot;}"><b>Telegram: Request</b></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
     </tr>
     <tr>
@@ -6990,7 +6988,7 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
     </tr>
     <tr>
-        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Odpověď&quot;}"><b>Telegram: Odpověď</b></td>
+        <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram: Response&quot;}"><b>Telegram: Response</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
     </tr>
@@ -7001,7 +6999,7 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim
         <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 3&quot;}" style="color:white;"><b>Byte 3</b></td>
         <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 4&quot;}" style="color:white;"><b>Byte 4</b></td>
         <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 5&quot;}" style="color:white;"><b>Byte 5</b></td>
-        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no error)&quot;}">(Byte 6, 10 = 0 : no error)</td>
     </tr>
     <tr>
         <td bgcolor="#BFBFBF" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x47&quot;}"><b>0x47</b></td>
@@ -7017,11 +7015,11 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim
 </table>
 
 <p><strong>PG – Acc, Dec, PosSpeed, Type, Mode, DPosAngle, DPosRevol</strong> <br />
-Popis: Nastavení požadovaného zrychlení, zpomalení, žádané rychlosti (do najetí do nulové polohy), typu rampy (viz Obrázek 1Obrázek 1), módu Profil Generátoru a nulové požadované hodnoty polohy (počáteční stav).</p>
+Description: Setting of required acceleration, deceleration, ramp type (see fig.), Generator Profile mode and zero position setpoint (initial state).</p>
 <table>
     <tr>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td colspan="5" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td colspan="5" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
         <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7183,7 +7181,7 @@ Popis: Nastavení požadovaného zrychlení, zpomalení, žádané rychlosti (do
     </tr>
     <tr>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
         <td colspan="10" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no Error)&quot;}">(Byte 6, 10 = 0 : no Error)</td>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7289,12 +7287,12 @@ Popis: Nastavení požadovaného zrychlení, zpomalení, žádané rychlosti (do
 </table>
 
 <p><strong>K – Command</strong> <br />
-Popis: SW enable.
-Po zadání tohoto příkazu je motor pod momentem a provede natočení do požadované polohy z předchozího požadavku.</p>
+Description: SW enable.
+After entering this command, the motor is under torque and rotates to the desired position from the previous request.</p>
 <table>
     <tr>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7338,7 +7336,7 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
     </tr>
     <tr>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
         <td colspan="7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no Error)&quot;}">(Byte 6, 10 = 0 : no Error)</td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7374,15 +7372,15 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
     </tr>
 </table>
 
-<h3 id="rizeni-rychlosti-motoru-tgz-gui">Řízení rychlosti motoru (TGZ GUI)<a class="headerlink" href="#rizeni-rychlosti-motoru-tgz-gui" title="Permanent link">&para;</a></h3>
+<h3 id="motor-speed-control-via-tgz-gui">Motor speed control via TGZ GUI<a class="headerlink" href="#motor-speed-control-via-tgz-gui" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Krok</th>
-<th>Základní skupina</th>
-<th>Parametr</th>
-<th>Hodnota</th>
-<th>Popis</th>
+<th>Step</th>
+<th>Basic groups</th>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -7391,67 +7389,67 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>Načíst parametry pohonu.</td>
+<td>Load drive parameters.</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Drive</td>
 <td>D-mode</td>
 <td>7</td>
-<td>Generátor profilů - režim polohy.</td>
+<td>Profile generator - position mode.</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Command</td>
 <td>K-Command</td>
 <td>1</td>
-<td>SW povolení. Lze jej také zapnout pomocí aktivačního tlačítka na spodní liště. Motor generuje točivý moment.</td>
+<td>SW permission. It can also be turned on using the activation button on the bottom bar. The motor generates torque.</td>
 </tr>
 <tr>
 <td>4</td>
 <td>PG</td>
 <td>Acc</td>
-<td>5 000 000 <sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s²] Požadovaná akcelerace.</td>
+<td>5 000 000<sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc / s²] Required acceleration.</td>
 </tr>
 <tr>
 <td>5</td>
 <td>PG</td>
 <td>Dec</td>
 <td>5 000 000<sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s²] Požadovaná dekcelerace.</td>
+<td>[inc / s²] Desired acceleration required.</td>
 </tr>
 <tr>
 <td>6</td>
 <td>PG</td>
 <td>Mode</td>
 <td>0</td>
-<td>Rychlostní režim.</td>
+<td>Speed mode.</td>
 </tr>
 <tr>
 <td>7</td>
 <td>PG</td>
 <td>Type</td>
 <td>1</td>
-<td>Požadovaný typ rampy. Viz Obrázek 1.</td>
+<td>Required ramp type.</td>
 </tr>
 <tr>
 <td>8</td>
 <td>PG</td>
 <td>PosSpeed</td>
-<td>±1 000 000 <sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s] Požadovaná rychlost pohybu v pozičním režimu. Po zadání hodnoty a stisknutí klávesy Enter se motor bude točit požadovanou rychlostí.</td>
+<td>±1 000 000<sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>[inc / s] Desired speed of movement in position mode. After entering the value and pressing the Enter key, the motor will rotate at the desired speed.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="rizeni-rychlosti-motoru-udp">Řízení rychlosti motoru (UDP)<a class="headerlink" href="#rizeni-rychlosti-motoru-udp" title="Permanent link">&para;</a></h3>
+<h3 id="motor-speed-control-via-udp">Motor speed control via UDP<a class="headerlink" href="#motor-speed-control-via-udp" title="Permanent link">&para;</a></h3>
 <p><strong>D-Mode</strong> <br />
-Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim.</p>
+Description: Servo amplifier mode setting: Profile Generator - position mode.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7495,8 +7493,8 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no error)&quot;}">(Byte 6, 10 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7528,12 +7526,12 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – polohový režim
 </table>
 
 <p><strong>PG – Acc, Dec, PosSpeed, Type, Mode</strong> <br />
-Popis: Nastavení požadovaného zrychlení, zpomalení, rychlosti, typu ramp (viz obr) a módu Profil Generátoru.
-Znaménko u rychlosti <code>PosSpeed</code> rozhoduje o směru otáčení motoru.</p>
+Description: Setting of the required acceleration, deceleration, speed, ramp type (see fig.) and Generator Profile mode.
+The sign at speed PosSpeed determines the direction of rotation of the motor.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7643,11 +7641,11 @@ Znaménko u rychlosti <code>PosSpeed</code> rozhoduje o směru otáčení motoru
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5= 0 : žádný Error)&quot;}">(Byte 5= 0 : žádný Error)</td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5= 0 : no error)&quot;}">(Byte 5= 0 : no error)</td>
     </tr>
     <tr>
         <td bgcolor="#005050" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Byte 0&quot;}" style="color:white;"><b>Byte 0</b></td>
@@ -7718,12 +7716,12 @@ Znaménko u rychlosti <code>PosSpeed</code> rozhoduje o směru otáčení motoru
 </table>
 
 <p><strong>K – Command</strong> <br />
-Popis: SW enable.
-Po zadání tohoto příkazu je motor pod momentem a zahájí otáčení v požadovaném směru s požadovanou rychlostí.</p>
+Description: SW enable.
+After entering this command, the motor is under torque and starts turning in the desired direction at the desired speed.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7767,9 +7765,9 @@ Po zadání tohoto příkazu je motor pod momentem a zahájí otáčení v poža
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
-        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : no error)&quot;}">(Byte 5 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7798,15 +7796,15 @@ Po zadání tohoto příkazu je motor pod momentem a zahájí otáčení v poža
     </tr>
 </table>
 
-<h3 id="sw-limity-pri-rychlostnim-rizeni-tgz-gui">SW limity při rychlostním řízení (TGZ GUI)<a class="headerlink" href="#sw-limity-pri-rychlostnim-rizeni-tgz-gui" title="Permanent link">&para;</a></h3>
+<h3 id="software-limits-for-motor-speed-control-in-tgz-gui">Software limits for motor speed control in TGZ GUI<a class="headerlink" href="#software-limits-for-motor-speed-control-in-tgz-gui" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Krok</th>
-<th>Základní skupina</th>
-<th>Parametr</th>
-<th>Hodnota</th>
-<th>Popis</th>
+<th>Step</th>
+<th>Basic groups</th>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -7815,129 +7813,129 @@ Po zadání tohoto příkazu je motor pod momentem a zahájí otáčení v poža
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>Načíst parametry pohonu.</td>
+<td>Load drive parameters.</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Drive</td>
 <td>D-mode</td>
 <td>7</td>
-<td>Generátor profilů -režim polohy.</td>
+<td>Profile generator - position mode.</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Command</td>
 <td>K-Command</td>
 <td>1</td>
-<td>SW povolení. Lze jej také zapnout pomocí aktivačního tlačítka na spodní liště. <strong>Motor generuje točivý moment.</strong></td>
+<td>SW permission. It can also be turned on using the activation button on the bottom bar. The motor generates torque.</td>
 </tr>
 <tr>
 <td>4</td>
 <td>PG</td>
 <td>Acc</td>
 <td>5000000 <sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s<sup>2</sup>]Požadovaná akcelerace.</td>
+<td>[inc /s²] Required acceleration.</td>
 </tr>
 <tr>
 <td>5</td>
 <td>PG</td>
 <td>Dec</td>
 <td>5000000 <sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s<sup>2</sup>]Požadované zpomalení.</td>
+<td>[inc /s²] Desired deceleration.</td>
 </tr>
 <tr>
 <td>6</td>
 <td>PG</td>
 <td>PosSpeed</td>
 <td>1000 000 <sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s] Požadovaná rychlost pohybu vpozičním režimu.</td>
+<td>[inc /s] Desired speed of movement in position mode.</td>
 </tr>
 <tr>
 <td>7</td>
 <td>PG</td>
 <td>Mode</td>
 <td>1</td>
-<td>Poziční režim.</td>
+<td>Position mode.</td>
 </tr>
 <tr>
 <td>8</td>
 <td>PG</td>
 <td>Type</td>
 <td>1</td>
-<td><a href="#Ramptype">Požadovaný typ rampy</a></td>
+<td><a href="#Ramptype">Required ramp type</a>.</td>
 </tr>
 <tr>
 <td>9</td>
 <td>PG</td>
 <td>DPosAngle</td>
 <td>0</td>
-<td>[inc]Požadovaná poloha v rozsahu jedné otáčky. Po zadání hodnoty astisknutí klávesy Enter se <strong>motor otočí do požadovaného úhlu</strong>.</td>
+<td>[inc] Desired position within one revolution. After entering the value and pressing the Enter key, <strong>the motor rotates to the desired angle</strong>.</td>
 </tr>
 <tr>
 <td>10</td>
 <td>PG</td>
 <td>DPosRevol</td>
 <td>0</td>
-<td>[inc]Požadovaná poloha v rozsahu víceotáčkového pohybu. Pozadání hodnoty a stisknutí klávesy Enter se <strong>motor otočí do polohy 0</strong>. Počkejte, až se motor otočí.</td>
+<td>[inc] Desired position within the range of multi-turn motion. After entering the value and pressing the Enter key, <strong>the motor rotates to position 0</strong>. Wait for the motor to rotate.</td>
 </tr>
 <tr>
 <td>11</td>
 <td>PG</td>
 <td>PosSpeed</td>
 <td>0</td>
-<td>[inc /s] Požadovaná rychlost pohybu vpozičním režimu.</td>
+<td>[inc /s] Desired speed of movement in position mode.</td>
 </tr>
 <tr>
 <td>12</td>
 <td>PG</td>
 <td>Mode</td>
 <td>0</td>
-<td>Rychlostní režim.</td>
+<td>Speed mode.</td>
 </tr>
 <tr>
 <td>13</td>
 <td>PG</td>
 <td>PosLimitAnglePosit</td>
 <td>0 <sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>Limit kladné polohy v rámci jedné otáčky vrozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+<td>Positive position limit within one revolution in the range from -2<sup>16</sup> to 2<sup>16</sup>.</td>
 </tr>
 <tr>
 <td>14</td>
 <td>PG</td>
 <td>PosLimitRevolPosit</td>
 <td>20 <sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[± počet otáček] Horní mez polohy v rámci otáček v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+<td>[± speed] Upper limit of the position within the speed in the range from -2<sup>16</sup> to 2<sup>16</sup>.</td>
 </tr>
 <tr>
 <td>15</td>
 <td>PG</td>
 <td>PosLimitAngleNegat</td>
 <td>0 <sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>Limit záporné polohy v rámci jedné otáčky v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+<td>Negative position limit within one revolution in the range from -2<sup>16</sup> to 2<sup>16</sup>.</td>
 </tr>
 <tr>
 <td>16</td>
 <td>PG</td>
 <td>PosLimitRevolNegat</td>
 <td>-20 <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[± počet otáček] Dolní mez polohy v rámci otáček v rozsahu od -2<sup>16</sup>do 2<sup>16</sup></td>
+<td>[± number of revolutions] Lower limit of the position within the speed in the range from -2<sup>16</sup> to 2<sup>16</sup>.</td>
 </tr>
 <tr>
 <td>17</td>
 <td>PG</td>
 <td>PosSpeed</td>
 <td>± 5000 000 <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>[inc /s] Po zadání hodnoty <strong>se motor bude otáčet</strong> rychlostí <code>PosSpeed</code> do polohy <code>PosLimitRevolPosit</code> nebo <code>PosLimitRevolNegat</code>. Směr otáčení je dán znaménkem parametru <code>PosSpeed</code>.</td>
+<td>[inc /s] After entering the value, <strong>the motor will rotate</strong> at <code>PosSpeed</code> to <code>PosLimitRevolPosit</code> or <code>PosLimitRevolNegat</code>. The direction of rotation is given by the sign of the <code>PosSpeed</code> parameter.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="sw-limity-pri-rychlostnim-rizeni-udp">SW limity při rychlostním řízení (UDP)<a class="headerlink" href="#sw-limity-pri-rychlostnim-rizeni-udp" title="Permanent link">&para;</a></h3>
+<h3 id="software-limits-for-motor-speed-control-udp">Software limits for motor speed control (UDP)<a class="headerlink" href="#software-limits-for-motor-speed-control-udp" title="Permanent link">&para;</a></h3>
 <p><strong>D-Mode</strong> <br />
-Popis: Nastavení módu servozesilovače: Profil Generátor – rychlostní režim.</p>
+Description: Servo amplifier mode setting: Profile Generator - position mode.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -7981,8 +7979,8 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – rychlostní rež
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : žádný Error)&quot;}">(Byte 6, 10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10 = 0 : no error)&quot;}">(Byte 6, 10 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8015,12 +8013,12 @@ Popis: Nastavení módu servozesilovače: Profil Generátor – rychlostní rež
 </table>
 
 <p><strong>PG – Acc, Dec, PosSpeed, Type, Mode, DPosAngle, DPosRevol</strong> <br />
-Popis: Nastavení požadovaného zrychlení, zpomalení, rychlosti a typu ramp Profil Generátoru.
-V posledním kroku je zadána nulová požadovaná poloha (výchozí stav).</p>
+Description: Setting of the required acceleration, deceleration, speed and type of ramps of the Generator Profile.
+In the last step, the zero desired position is entered (default state).</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
@@ -8174,7 +8172,7 @@ V posledním kroku je zadána nulová požadovaná poloha (výchozí stav).</p>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
         <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 6, 10, 14, 18, 22 = 0 : no Error)&quot;}">(Byte 6, 10, 14, 18, 22 = 0 : no Error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8249,13 +8247,13 @@ V posledním kroku je zadána nulová požadovaná poloha (výchozí stav).</p>
 </table>
 
 <p><strong>K – Command</strong> <br />
-Popis: SW enable.
-Po zadání tohoto příkazu je motor pod momentem a otočí se do požadované polohy (tj. do polohy 0).
-Je nutné vyčkat než se motor dotočí.</p>
+Description: SW enable.
+After entering this command, the motor is under torque and rotates to the desired position (i.e., to position 0).
+It is necessary to wait until the motor turns.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram&quot;}"><b>Telegram</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8299,8 +8297,8 @@ Je nutné vyčkat než se motor dotočí.</p>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram&quot;}"><b>Telegram</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : no error)&quot;}">(Byte 5 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8330,11 +8328,11 @@ Je nutné vyčkat než se motor dotočí.</p>
 </table>
 
 <p><strong>PG – PosSpeed</strong> <br />
-Popis: Nastavení požadovanou rychlost na nulovou hodnotu.</p>
+Description: Set the desired speed to zero.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8378,8 +8376,8 @@ Popis: Nastavení požadovanou rychlost na nulovou hodnotu.</p>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegramm&quot;}"><b>Telegramm</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : no error)&quot;}">(Byte 5 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8409,11 +8407,11 @@ Popis: Nastavení požadovanou rychlost na nulovou hodnotu.</p>
 </table>
 
 <p><strong>PG – Mode</strong> <br />
-Popis: Nastavení Profil Generátoru do rychlostního režimu.</p>
+Description: Setting the Generator Profile to speed mode.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8457,8 +8455,8 @@ Popis: Nastavení Profil Generátoru do rychlostního režimu.</p>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : no error)&quot;}">(Byte 5 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8488,11 +8486,11 @@ Popis: Nastavení Profil Generátoru do rychlostního režimu.</p>
 </table>
 
 <p><strong>PG – PosLimitAnglePosit, PosLimitRevolPosit, PosLimitAngleNegat, PosLimitRevolNegat</strong> <br />
-Popis: Nastavení pozičních limitů v rámci jedné otáčky a v rámci více otáček.</p>
+Description: Setting of position limits within one revolution and within multiple revolutions.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8580,8 +8578,8 @@ Popis: Nastavení pozičních limitů v rámci jedné otáčky a v rámci více 
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5,10 = 0 : žádný Error)&quot;}">(Byte 5,10 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5,10 = 0 : no error)&quot;}">(Byte 5,10 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8633,12 +8631,12 @@ Popis: Nastavení pozičních limitů v rámci jedné otáčky a v rámci více 
 </table>
 
 <p><strong>PG – PosSpeed</strong> <br />
-Popis: SW enable.
-Po zadání tohoto příkazu je motor pod momentem a provede natočení do požadované polohy z předchozího požadavku.</p>
+Description: SW enable.
+After entering this command, the motor is under torque and rotates to the desired position from the previous request.</p>
 <table>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Požadavek&quot;}"><b>Požadavek</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Request&quot;}"><b>Request</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8682,8 +8680,8 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Telegram:&quot;}"><b>Telegram:</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Odpověď&quot;}"><b>Odpověď</b></td>
-        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : žádný Error)&quot;}">(Byte 5 = 0 : žádný Error)</td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Response&quot;}"><b>Response</b></td>
+        <td colspan="4" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;(Byte 5 = 0 : no error)&quot;}">(Byte 5 = 0 : no error)</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"></td>
@@ -8712,102 +8710,102 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
     </tr>
 </table>
 
-<h2 id="rozsireny-popis-parametru-generatoru-profilu">Rozšířený popis parametrů Generátoru profilů<a class="headerlink" href="#rozsireny-popis-parametru-generatoru-profilu" title="Permanent link">&para;</a></h2>
+<h2 id="extended-description-of-profile-generator-parameters">Extended description of Profile Generator parameters<a class="headerlink" href="#extended-description-of-profile-generator-parameters" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Název parametru</th>
-<th>Popis</th>
+<th>Parametername</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Acc</td>
-<td>Požadované zrychlení pohonu</td>
+<td>Required drive acceleration</td>
 </tr>
 <tr>
 <td>Dec</td>
-<td>Požadované zpomalení pohonu</td>
+<td>Required drive deceleration</td>
 </tr>
 <tr>
 <td>APosAngle</td>
-<td>Aktuální pozice pohonu v rámci jedné otáčky</td>
+<td>Current drive position within one revolution</td>
 </tr>
 <tr>
 <td>APosRevol</td>
-<td>Aktuální pozice pohonu v rámci počtu otáček</td>
+<td>Current drive position within the speed</td>
 </tr>
 <tr>
 <td>DPosAngle</td>
-<td>Požadovaná pozice pohonu v rámci jedné otáčky</td>
+<td>Required drive position within one revolution</td>
 </tr>
 <tr>
 <td>DPosRevol</td>
-<td>Požadovaná pozice pohonu v rámci počtu otáček</td>
+<td>Required drive position within the speed</td>
 </tr>
 <tr>
 <td>ASpeed</td>
-<td>Aktuální rychlost pohonu</td>
+<td>Current drive speed</td>
 </tr>
 <tr>
 <td>PosSpeed</td>
-<td>Požadovaná rychlost pohybu v polohovém módu</td>
+<td>Required speed of movement in position mode</td>
 </tr>
 <tr>
 <td>Speed</td>
-<td>Požadovaná rychlost pohybu v rychlostním módu</td>
+<td>Required speed of movement in speed mode</td>
 </tr>
 <tr>
 <td>Mode</td>
-<td>Mód profil generátoru. 0 = rychlostní, 1 = poziční, 2 (onlyread) = signalizace zpomalovací rampy v pozičním módu</td>
+<td>Generator profile mode. 0 = speed, 1 = position, 2 (only read) = deceleration ramp signaling in position mode</td>
 </tr>
 <tr>
 <td>Rdy</td>
-<td>Signalizace dokončení pohybu pohonu. 1 = Poloha byla dosažena</td>
+<td>Signaling the completion of the drive movement. 1 = Position reached</td>
 </tr>
 <tr>
 <td>Type</td>
-<td>Typ profilu rychlosti 0 = harmonické nesymetrické, 1 = harmonické symetrické, 2 = plně harmonické, 3 = lichoběžníkové</td>
+<td>Velocity profile type 0 = harmonic unbalanced, 1 = harmonic symmetrical, 2 = fully harmonic, 3 = trapezoidal</td>
 </tr>
 <tr>
 <td>BitsPerRevol</td>
-<td>Počet bitů na otáčku pro profil generátorů</td>
+<td>Number of bits per revolution for the generator profile</td>
 </tr>
 <tr>
 <td>RotaryMode</td>
-<td>Speciální režim polohování v rámci jedné otáčky s přejezdem kratší cestou - využití pro přímé motory. 1 = Rotary mód, 0 = standardní mód</td>
+<td>Special positioning mode within one revolution with a shorter path - use for direct motors. 1 = Rotary mode, 0 = Standard mode</td>
 </tr>
 <tr>
 <td>PosOffsetAngle</td>
-<td>Poziční offset v rámci jedné otáčky</td>
+<td>Position offset within one revolution</td>
 </tr>
 <tr>
 <td>PosOffsetRevol</td>
-<td>Poziční offset v rámci počtu otáček</td>
+<td>Position offset within the speed</td>
 </tr>
 <tr>
 <td>PosLimitAnglePosit</td>
-<td>Kladný poziční limit v rámci jedné otáčky v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+<td>Positive position limit within one revolution in the range from -2<sup>16</sup> to 2<sup>16</sup></td>
 </tr>
 <tr>
 <td>PosLimitRevolPosit</td>
-<td>Kladný poziční limit v rámci počtu otáček v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+<td>Positive position limit within the number of revolutions in the range from -2<sup>16</sup> to 2<sup>16</sup></td>
 </tr>
 <tr>
 <td>PosLimitAngleNegat</td>
-<td>Záporný poziční limit v rámci jedné otáčky v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+<td>Negative position limit within one revolution in the range from -2<sup>16</sup> to 2<sup>16</sup></td>
 </tr>
 <tr>
 <td>PosLimitRevolNegat</td>
-<td>Záporný poziční limit v rámci počtu otáček v rozsahu od -2<sup>16</sup> do 2<sup>16</sup></td>
+<td>Negative position limit within the speed in the range from -2<sup>16</sup> to 2<sup>16</sup></td>
 </tr>
 <tr>
 <td>DPosAngleRotary</td>
-<td>V režimu „RotaryMode = 1“ tento parametr určuje požadovanou polohu v rámci jedné otáčky</td>
+<td>In "RotaryMode = 1", this parameter determines the desired position within one revolution</td>
 </tr>
 <tr>
 <td>AccMaxCurrentFeedForward</td>
-<td>Proudová předkorekce</td>
+<td>Current pre-correction</td>
 </tr>
 </tbody>
 </table>
@@ -8815,7 +8813,7 @@ Po zadání tohoto příkazu je motor pod momentem a provede natočení do poža
 <hr />
 <ol>
 <li id="fn:1">
-<p>Uvedené hodnoty jsou pouze orientační. Lze je libovolně měnit.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Values are for guidance only. They can be changed as desired.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

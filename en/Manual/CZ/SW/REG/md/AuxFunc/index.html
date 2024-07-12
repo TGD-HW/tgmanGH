@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rizeni-asm-ve-skalarnim-rezimu-bez-snimace" class="md-skip">
+        <a href="#asynchronous-motor-asm" class="md-skip">
           Skip to content
         </a>
       
@@ -4286,6 +4286,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SD cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4425,27 +4446,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rizeni-asm-ve-skalarnim-rezimu-bez-snimace" class="md-nav__link">
+  <a href="#asynchronous-motor-asm" class="md-nav__link">
     <span class="md-ellipsis">
-      Řízení ASM ve skalárním režimu (bez snímače)
+      Asynchronous motor (ASM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asynchronous motor (ASM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asm-control-in-scalar-mode-no-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASM control in scalar mode (no feedback)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vektorove-rizeni-asm-se-snimacem-hiperface-dsl" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#vector-control-with-hiperface-dsl-sensor" class="md-nav__link">
     <span class="md-ellipsis">
-      Vektorové řízení ASM (se snímačem Hiperface DSL)
+      Vector control (with Hiperface DSL sensor)
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#gear-elektronicky-prevod" class="md-nav__link">
+  <a href="#gear" class="md-nav__link">
     <span class="md-ellipsis">
-      Gear (Elektronický převod)
+      Gear
     </span>
   </a>
   
@@ -4472,27 +4508,6 @@
   
   <span class="md-ellipsis">
     Emergency braking
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SD cards
   </span>
   
 
@@ -4580,7 +4595,7 @@
         
   
   <span class="md-ellipsis">
-    TGC connection
+    TGZ connection
   </span>
   
 
@@ -6735,242 +6750,243 @@
 
   <h1>Other functions</h1>
 
-<h3 id="rizeni-asm-ve-skalarnim-rezimu-bez-snimace">Řízení ASM ve skalárním režimu (bez snímače)<a class="headerlink" href="#rizeni-asm-ve-skalarnim-rezimu-bez-snimace" title="Permanent link">&para;</a></h3>
+<h2 id="asynchronous-motor-asm">Asynchronous motor (ASM)<a class="headerlink" href="#asynchronous-motor-asm" title="Permanent link">&para;</a></h2>
+<h3 id="asm-control-in-scalar-mode-no-feedback">ASM control in scalar mode (no feedback)<a class="headerlink" href="#asm-control-in-scalar-mode-no-feedback" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Parametr</th>
-<th>Popis</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>D-Mode</td>
-<td>20 = režim řízení U/f</td>
+<td>20 = U/f control mode</td>
 </tr>
 <tr>
 <td>M-Inull</td>
-<td>jmenovitý proud, pro každou fázi se počítá i²t, při překročení vypadne do chyby</td>
+<td>nominal current, i²t is calculated for each phase, if exceeded it falls to error</td>
 </tr>
 <tr>
 <td>M-polepairs</td>
-<td>počet pólpárů motoru</td>
+<td>number of motor poles</td>
 </tr>
 <tr>
 <td>M-CommutationSource</td>
-<td>10 = režim ASM</td>
+<td>10 = ASM mode</td>
 </tr>
 <tr>
 <td>M-Un</td>
-<td>jmenovité napětí ASM</td>
+<td>ASM nominal voltage</td>
 </tr>
 <tr>
 <td>IM-fn</td>
-<td>jmenovitá/synchronní frekvence</td>
+<td>nominal/synchronous frequency</td>
 </tr>
 <tr>
 <td>IM-Umin_u_f</td>
-<td>minimální napětí při řízení U/f , pro zvýšení momentu při malých otáčkách</td>
+<td>minimum control voltage U/f , to increase torque at low speed</td>
 </tr>
 <tr>
 <td>IM-Umax_u_f</td>
-<td>maximální napětí při řízení U/f, pro omezení výkonu motoru. Špičková hodnota napětí je rovna napětí meziobvodu jen efektivní hodnota je omezena.</td>
+<td>maximum voltage at U/f control, to limit motor power. The peak voltage is equal to the DCbus voltage only the effective value is limited.</td>
 </tr>
 </tbody>
 </table>
-<p>Řízení motoru je umožněno prostřednictvím PG jako v režimech se synchronním motorem.
-Neprobíhá zde ovšem ani polohová ani rychlostní regulace.
-Výstupem PG je v tomto případě synchronní frekvence.</p>
-<h3 id="vektorove-rizeni-asm-se-snimacem-hiperface-dsl">Vektorové řízení ASM (se snímačem Hiperface DSL)<a class="headerlink" href="#vektorove-rizeni-asm-se-snimacem-hiperface-dsl" title="Permanent link">&para;</a></h3>
+<p>Asynchronous motor control is enabled via PG as in synchronous motor modes.
+However, no position or speed control is used here.
+The PG output in this case is a synchronous frequency.</p>
+<h3 id="vector-control-with-hiperface-dsl-sensor">Vector control (with Hiperface DSL sensor)<a class="headerlink" href="#vector-control-with-hiperface-dsl-sensor" title="Permanent link">&para;</a></h3>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/ASMschematic1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="ASM simplified schematic" src="../../../../../../../Manual/source/img/ASMschematic1.webp" style="width:50%;" /></a></p>
 <table>
 <thead>
 <tr>
-<th>Parametr</th>
-<th>Popis</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>M-CommutationSource</td>
-<td>10 = režim ASM</td>
+<td>10 = ASM mode</td>
 </tr>
 <tr>
 <td>IM-Rs</td>
-<td>odpor statoru</td>
+<td>stator resistance</td>
 </tr>
 <tr>
 <td>IM-Ls</td>
-<td>Indukčnost statoru = Lsσ + Lm</td>
+<td>Stator Inductance = Lsσ + Lm</td>
 </tr>
 <tr>
 <td>IM-Rr</td>
-<td>Odpor rotoru</td>
+<td>Rotor Resistance</td>
 </tr>
 <tr>
 <td>IM-Lr</td>
-<td>Indukčnost rotoru = Lrσ + Lm</td>
+<td>Rotor inductance = Lrσ + Lm</td>
 </tr>
 <tr>
 <td>IM-Lm</td>
-<td>Magnetizační indukčnost</td>
+<td>Magnetizing inductance</td>
 </tr>
 <tr>
 <td>IM-Id_rms</td>
-<td>nominální budící proud Id (efektivní hodnota)</td>
+<td>nominal excitation current Id (rms value)</td>
 </tr>
 </tbody>
 </table>
-<p>Řízení motoru je možné ve všech režimech jako u synchronního motoru.</p>
-<h3 id="gear-elektronicky-prevod">Gear (Elektronický převod)<a class="headerlink" href="#gear-elektronicky-prevod" title="Permanent link">&para;</a></h3>
-<p>Tato funkcionalita umožňuje implementaci elektronické převodovky a elektronické vačky.</p>
+<p>Motor control is possible in all modes as with a synchronous motor.</p>
+<h2 id="gear">Gear<a class="headerlink" href="#gear" title="Permanent link">&para;</a></h2>
+<p>This functionality allows the implementation of an electronic transmission and an electronic cam.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Elektronická vačka je v kontinuálním vývoji a prozatím není implementována.</p>
+<p class="admonition-title">Note</p>
+<p>The electronic cam is in continuous development and has not been implemented yet.</p>
 </div>
-<p>Elektronická převodovka prostřednictvím vstupní polohy a převodového poměru a určuje polohu motoru.
-Nahrazuje méně účinné mechanické převodovky.</p>
+<p>Electronic transmission via input position and gear ratio and determines the position of the motor.
+Replaces less efficient mechanical gearboxes.</p>
 <table>
 <thead>
 <tr>
-<th>Parametr</th>
-<th>Popis</th>
-<th>Čtení/zápis</th>
-<th>Popis</th>
+<th>Parameter</th>
+<th>Unit</th>
+<th>Read/write</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>PositionAngle</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Výstupní poloha v rámci jedné otáčky pro lineární převod nebo ukazatel na CAM pro vačkové převody</td>
+<td>read / write</td>
+<td>Output position within one revolution for linear transmission or pointer to CAM for cam transmissions</td>
 </tr>
 <tr>
 <td>PositionRevol</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Výstupní poloha v rámci více otáček pro lineární převod nebo ukazatel na CAM pro vačkové převody</td>
+<td>read / write</td>
+<td>Multi-speed output position for linear gear or CAM pointer for cam gears</td>
 </tr>
 <tr>
 <td>CamPositionAngle</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Výstupní poloha v rámci jedné otáčky pro vačkové převody</td>
+<td>read / write</td>
+<td>Output position within one revolution for cam gears</td>
 </tr>
 <tr>
 <td>CamPositionRevol</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Výstupní poloha v rámci více otáček pro vačkové převody</td>
+<td>read / write</td>
+<td>Multi-speed output position for cam gears</td>
 </tr>
 <tr>
 <td>OffsetAngle</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Offset výstupní polohy</td>
+<td>read / write</td>
+<td>Output position offset</td>
 </tr>
 <tr>
 <td>OffsetRevol</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Offset výstupní polohy</td>
+<td>read / write</td>
+<td>Output position offset</td>
 </tr>
 <tr>
 <td>Shift</td>
 <td>[inc]</td>
-<td>čtení/zápis</td>
-<td>Požadovaný posun ukazatele na vačku</td>
+<td>read / write</td>
+<td>Required movement of the pointer on the cam</td>
 </tr>
 <tr>
 <td>ActualShiftAngle</td>
 <td>[inc]</td>
-<td>čtení</td>
-<td>Skutečný posun ukazatele na vačku</td>
+<td>read</td>
+<td>Actual pointer movement on the cam</td>
 </tr>
 <tr>
 <td>IncShift</td>
 <td>[inc/servotick]</td>
-<td>čtení/zápis</td>
-<td>Přírůstek ukazatele řazení na vačku</td>
+<td>read / write</td>
+<td>Increment of the shift indicator on the cam</td>
 </tr>
 <tr>
 <td>IncIn</td>
 <td>[inc/servotick]</td>
-<td>čtení/zápis</td>
-<td>Přírůstek rampy Gear.ActualIn</td>
+<td>read / write</td>
+<td>Gear.ActualIn ramp increment</td>
 </tr>
 <tr>
 <td>CamIncPosition</td>
 <td>[inc]</td>
-<td>čtení</td>
-<td>Přírůstek polohy inkrementální vačky</td>
+<td>read</td>
+<td>Incremental cam position increment</td>
 </tr>
 <tr>
 <td>CamScale</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Faktor změny měřítka profilu vačky</td>
+<td>read / write</td>
+<td>Cam profile scaling factor</td>
 </tr>
 <tr>
 <td>SourceNumber</td>
 <td>[-]</td>
-<td>čtení</td>
-<td>Číslo logického serva použitého pro zdroj hlavního polohování</td>
+<td>read</td>
+<td>The number of the logical servo used for the main positioning source</td>
 </tr>
 <tr>
 <td>SourcePosition</td>
 <td>[-]</td>
-<td>čtení</td>
-<td>Typ hlavní pozice 1 = Pozice zápisu, 2 = Pozice, 3 = servotick, 4 = Expozice</td>
+<td>read</td>
+<td>Main position type 1 = Write position, 2 = Position, 3 = servotick, 4 = Exposure</td>
 </tr>
 <tr>
 <td>Mode</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td><strong>Režimy</strong> generátoru převodů 0 = vypnutý generátor převodů, 1 = lineární převod je aktivní, 2 = vačkový převod je aktivní</td>
+<td>read / write</td>
+<td>Gear generator modes 0 = gear generator off, 1 = linear gear active, 2 = cam gear active</td>
 </tr>
 <tr>
 <td>In</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Čitatel převodového poměru</td>
+<td>read / write</td>
+<td>Gear ratio numerator</td>
 </tr>
 <tr>
 <td>Out</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Jmenovatel převodového poměru</td>
+<td>read / write</td>
+<td>Gear ratio denominator</td>
 </tr>
 <tr>
 <td>ActualIn</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Skutečná hodnota převodového poměru čitatele</td>
+<td>read / write</td>
+<td>Actual value of the numerator gear ratio</td>
 </tr>
 <tr>
 <td>CamLine</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Offset v bajtech na první data profilu vačky v CAM_PROFILE_MEMORY nebo DATA_MEMORY</td>
+<td>read / write</td>
+<td>Offset in bytes to the first cam profile data in CAM_PROFILE_MEMORY or DATA_MEMORY</td>
 </tr>
 <tr>
 <td>CamLen</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Číslo dat profilu vačky</td>
+<td>read / write</td>
+<td>Cam profile data number</td>
 </tr>
 <tr>
 <td>CamType</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Typ vačky 0 = otočná vačka, 1 = přední vačka</td>
+<td>read / write</td>
+<td>Cam type 0 = rotating cam, 1 = front cam</td>
 </tr>
 <tr>
 <td>CamTab</td>
 <td>[-]</td>
-<td>čtení/zápis</td>
-<td>Umístění dat o profilu vačky: 0 = na flash paměť, 1 = na SD kartu.</td>
+<td>read / write</td>
+<td>Location of cam profile data: 0 = to flash memory, 1 = to SD card</td>
 </tr>
 </tbody>
 </table>

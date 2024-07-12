@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#potrebne-vybaveni" class="md-skip">
+        <a href="#necessary-equipment" class="md-skip">
           Skip to content
         </a>
       
@@ -4286,6 +4286,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SD/md/SD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SD cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4416,27 +4437,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../SD/md/SD/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SD cards
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4517,7 +4517,7 @@
         
   
   <span class="md-ellipsis">
-    TGC connection
+    TGZ connection
   </span>
   
 
@@ -4618,18 +4618,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#potrebne-vybaveni" class="md-nav__link">
+  <a href="#necessary-equipment" class="md-nav__link">
     <span class="md-ellipsis">
-      Potřebné vybavení:
+      Necessary equipment:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#postup-prehrani-firmware" class="md-nav__link">
+  <a href="#firmware-change-procedure" class="md-nav__link">
     <span class="md-ellipsis">
-      Postup přehrání firmware:
+      Firmware change procedure:
     </span>
   </a>
   
@@ -6726,43 +6726,42 @@
 
   <h1>Firmware upload</h1>
 
-<h2 id="potrebne-vybaveni">Potřebné vybavení:<a class="headerlink" href="#potrebne-vybaveni" title="Permanent link">&para;</a></h2>
+<h2 id="necessary-equipment">Necessary equipment:<a class="headerlink" href="#necessary-equipment" title="Permanent link">&para;</a></h2>
 <ul>
-<li>PC s nainstalovaným TGZ GUI a Ethernetovým rozhraním. </li>
-<li>Ethernetový kabel</li>
-<li>Napájecí zdroj 24VDC</li>
-<li>Servozesilovač TGZ</li>
-<li>Soubor <code>.TGZFW</code> (firmware)</li>
+<li>PC with installed TGZ GUI and Ethernet interface.</li>
+<li>Ethernet cable</li>
+<li>24 VDC power supply</li>
+<li>TGZ servo amplifier</li>
+<li><code>.TGZFW</code> file (firmware)</li>
 </ul>
-<h2 id="postup-prehrani-firmware">Postup přehrání firmware:<a class="headerlink" href="#postup-prehrani-firmware" title="Permanent link">&para;</a></h2>
+<h2 id="firmware-change-procedure">Firmware change procedure:<a class="headerlink" href="#firmware-change-procedure" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Přes ethernetový kabel řipojte TGZ k počítači (konektor X11).</li>
-<li>Připojte 24VDC napájení k servozesilovači TGZ.</li>
-<li>Spusťte TGZ GUI, vyberte příslušný síťový adaptér.
-   Ze seznamu zvolte odpovídající zařízení a připojte k servozesilovači TGZ.</li>
-<li>Zálohujte parametry servozesilovače kliknutím na ikonu
+<li>Connect the TGZ to the computer (connector X11) via the Ethernet cable.</li>
+<li>Connect + 24V and GND (connector X1) to the power supply.</li>
+<li>Start the TGZ GUI, select the appropriate network adapter, select the appropriate device from the list and connect to the TGZ servo amplifier.</li>
+<li>Back up the servo amplifier parameters by clicking on the icon
    <a class="glightbox" href="../../../../../../../../Manual/source/img/icoSave.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Icon Save" src="../../../../../../../../Manual/source/img/icoSave.png" style="width:4%;" /></a>
-   v pravé části menu nahoře. Vyberte všechny skupiny parametrů a klikněte na ikonu <strong>Save</strong>.</li>
-<li>Klikněte na ikonu
+   in the right part of the menu at the top. Select all parameter groups and click the <strong>Save</strong> icon.</li>
+<li>Click the icon
    <a class="glightbox" href="../../../../../../../../Manual/source/img/icoMemory.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Icon Memory" src="../../../../../../../../Manual/source/img/icoMemory.png" style="width:4%;" /></a>
-   v pravé části menu nahoře a vyberte <strong>Upload firmware</strong>.</li>
-<li>Otevřete soubor s firmware (<code>*.TGZFW</code>).</li>
-<li>Počkejte na dokončení nahrání firmware.</li>
-<li>Po dokončení nahrávání restartujte servozesilovač TGZ kliknutím na Yes:
+   in the right part of the menu at the top and select <strong>Upload firmware</strong>.</li>
+<li>Open the firmware file (<code>*.TGZFW</code>).</li>
+<li>Wait for the firmware download to complete.</li>
+<li>When the flashing is complete, restart the TGZ servo amplifier by clicking <strong>Yes</strong>.
    <a class="glightbox" href="../../../../../../../../Manual/source/img/GUIfwUploadComplete.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="FW upload complete" src="../../../../../../../../Manual/source/img/GUIfwUploadComplete.png" style="width:50%;" /></a> <br />
-   Znovu se připojte k servozesilovači TGZ.</li>
-<li>Pokud má nový firmware jinou strukturu parametrů než firmware předchozí, dojde k chybě (<em>chyba 27 - parameter error, 0x08000000</em>).
-   Je tedy nutné načíst parametry ze zálohy prostřednictvím ikony
+   Reconnect to the TGZ servo amplifier.</li>
+<li>If the new firmware has a different parameter structure than the previous firmware, an error will occur (<em>error 27 - parameter error, 0x08000000</em>).
+   It is therefore necessary to load the parameters from the backup via the icon
    <a class="glightbox" href="../../../../../../../../Manual/source/img/icoLoad.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Icon Load" src="../../../../../../../../Manual/source/img/icoLoad.png" style="width:4%;" /></a>
-   v pravé části menu nahoře.
-   Následně je nutné parametry uložit na paměťovou kartu kliknutím na ikonu
+   in the right part of the menu at the top.
+   Then it is necessary to save the parameters to the memory card by clicking on the icon
    <a class="glightbox" href="../../../../../../../../Manual/source/img/icoSave.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Icon Save" src="../../../../../../../../Manual/source/img/icoSave.png" style="width:4%;" /></a>
-   opět v pravé části menu nahoře a zvolit <strong>Save to memory</strong>.
-   Po restartování servozesilovače TGZ se již chyba parametrů (chyba 27) neobjeví.</li>
+    again in the right part of the menu at the top and select <strong>Save to memory</strong>.
+    After restarting the TGZ servo amplifier, the parameter error (error 27) no longer appears.</li>
 </ol>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Neodpojujte napájení, dokud není proces nahrávání dokončen!</p>
+<p class="admonition-title">Attention!</p>
+<p>Do not disturb the power supply until the flashing process is completed!</p>
 </div>
 
 

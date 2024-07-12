@@ -16,7 +16,7 @@
         <link rel="prev" href="../AuxFunc/">
       
       
-        <link rel="next" href="../../../../TGZ/TGZ_SW/SD/md/SD/">
+        <link rel="next" href="../../../../TGZ/TGZ_SW/GUI/md/intro/">
       
       
       <link rel="icon" href="../../../../../../../Manual/source/img/TGsymbol.svg">
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#registry-a-parametry" class="md-skip">
+        <a href="#registers-and-parameters" class="md-skip">
           Skip to content
         </a>
       
@@ -4286,6 +4286,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SD cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4446,13 +4467,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#registry-a-parametry" class="md-nav__link">
+  <a href="#registers-and-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Registry a parametry
+      Registers and parameters
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Registry a parametry">
+    <nav class="md-nav" aria-label="Registers and parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4550,27 +4571,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../TGZ/TGZ_SW/SD/md/SD/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SD cards
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4649,7 +4649,7 @@
         
   
   <span class="md-ellipsis">
-    TGC connection
+    TGZ connection
   </span>
   
 
@@ -6804,16 +6804,16 @@
 
   <h1>Emergency braking</h1>
 
-<p>Po aktivaci nouzového zastavení dojde k zpomalení pohonu prostřednictvím nastavitelné zpomalovací rampy a servozesilovač poté odpojí přívod energie do motoru.
-Pokud je k dispozici statická brzda, dojde po zastavení pohonu k její aktivaci.
-Funkci nouzového zastavení lze aktivovat:</p>
+<p>After activating the emergency stop, the drive decelerates via an adjustable deceleration ramp and the servo amplifier then disconnects the power supply to the motor.
+If a static brake is implemented, it will be activated when the drive is stopped.   </p>
+<p>The emergency stop function can be activated via:</p>
 <ul>
-<li>Chybou pohonu umožňující nouzové zastavení.</li>
-<li>Digitalm vstupem.</li>
-<li>Ochrannou funkcí - pro ochranu komunikačních sběrnic.</li>
+<li>a fault in the drive that allows an emergency stop</li>
+<li>digital input</li>
+<li>protection function – for protection of communication buses.</li>
 </ul>
-<p>Funkce nouzového zastavení je přístupná v <code>position</code> a <code>speed</code> režimech: <code>2,3,6,7</code></p>
-<h2 id="registry-a-parametry">Registry a parametry<a class="headerlink" href="#registry-a-parametry" title="Permanent link">&para;</a></h2>
+<p>Emergency stop function is available in <code>position</code> and <code>speed</code> modes: <code>2,3,6,7</code></p>
+<h2 id="registers-and-parameters">Registers and parameters<a class="headerlink" href="#registers-and-parameters" title="Permanent link">&para;</a></h2>
 <h3 id="d-emerdecramp">D-EmerDecRamp<a class="headerlink" href="#d-emerdecramp" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6839,7 +6839,7 @@ Funkci nouzového zastavení lze aktivovat:</p>
 </tr>
 </tbody>
 </table>
-<p>Nouzová zpomalovací rampa deg/s, 1 až 3600000 deg/s</p>
+<p>mergency deceleration ramp deg/s, 1 up to 3600000 deg/s</p>
 <h3 id="d-errormaskemerdec">D-ErrorMaskEmerDec<a class="headerlink" href="#d-errormaskemerdec" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6865,8 +6865,8 @@ Funkci nouzového zastavení lze aktivovat:</p>
 </tr>
 </tbody>
 </table>
-<p>Maska chyby pohonu pro nouzové zpomalení, bity mají stejný význam jako bity v registru <code>aDriveError</code>.
-Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzové zastavení, pokud je to možné.</p>
+<p>Drive error mask for emergency deceleration, bits have the same meaning as the bits in the <code>aDriveError</code> register.
+If the corresponding bit is set in the event of an error, the drive will perform an emergency stop if possible.</p>
 <h3 id="d-di_maskemerstop">D-DI_MaskEmerStop<a class="headerlink" href="#d-di_maskemerstop" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6892,9 +6892,8 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p>Maska pro digitální vstupy. Vstupy 1, 3, 5 lze přiřadit k ose 1 a vstupy 2, 4, 6 lze přiřadit k ose 2. <br />
-<em>Příklad: D-DI_MaskEmerStop (Ax.2) = 5, vstupy 2 a 6 jsou přiřazeny pro nouzové zastavení.</em>
-<em>Pokud jeden nebo oba nejsou aktivní, provede se nouzové zastavení.</em>   </p>
+<p>The mask for digital inputs, inputs 1, 3, 5 can be assigned to axis 1 and inputs 2, 4, 6 can be assigned to axis 2.<br />
+<em>Example: <code>D-DI_MaskEmerStop</code> (Ax.2) = 5, inputs 2 and 6 are assigned for an emergency stop. If one or both are not active, an emergency stop is performed.</em>   </p>
 <h3 id="d-guardtimeemerstop">D-GuardTimeEmerStop<a class="headerlink" href="#d-guardtimeemerstop" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6920,7 +6919,7 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Ochranný časový limit v ms. Pokud do této doby není vynulován ochranný čítač, provede se rutina nouzového zastavení. Hodnota 0 deaktivuje tuto funkci.</em>   </p>
+<p>Protection timeout in ms. If the protection counter is not reset by this time, an emergency stop routine is performed. A value of 0 deactivates this function.   </p>
 <h3 id="adrivestatus">aDriveStatus<a class="headerlink" href="#adrivestatus" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6946,8 +6945,8 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Bit 8 ... rampa nouzového zastavení aktivní</em> <br />
-<em>Bit 9 ... rampa nouzového zastavení dokončena</em>   </p>
+<p>Bit 8 ... emergency stop ramp active <br />
+Bit 9 ... emergency stop ramp completed   </p>
 <h3 id="adriveerror">aDriveError<a class="headerlink" href="#adriveerror" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6973,7 +6972,7 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Bit 20 ... nouzové zastavení aktivováno digitálním vstupem nebo ochrannou funkcí.</em>   </p>
+<p>Bit 20 ... emergency stop activated by digital input or protection function.  </p>
 <h3 id="adrivewarning">aDriveWarning<a class="headerlink" href="#adrivewarning" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6999,7 +6998,7 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Bit 20 ... podmínka aktivace nouzového zastavení digitálním vstupem nebo ochrannou funkcí. V případě, že pohon není povolen.</em>   </p>
+<p>Bit 20 ...condition for activating the emergency stop by a digital input or protection function. If the drive is not enabled.   </p>
 <h3 id="guardingcounter">GuardingCounter<a class="headerlink" href="#guardingcounter" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -7025,7 +7024,8 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Počítadlo milisekund pro ochrannou funkci. Lze resetovat registrací</em> <code>K-ResetGuarding</code>.   </p>
+<p>Millisecond counter for protection function.
+Can be reset by registering <code>K-ResetGuarding</code>.   </p>
 <h3 id="resetguarding">ResetGuarding<a class="headerlink" href="#resetguarding" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -7051,12 +7051,13 @@ Pokud je v případě chyby nastaven odpovídající bit, měnič provede nouzov
 </tr>
 </tbody>
 </table>
-<p><em>Resetujte <code>GuardingCounter</code> zápisem hodnoty</em> <code>0xAA55</code><em>. Hodnota bude automaticky vymazána.</em></p>
+<p>Reset <code>GuardingCounter</code> by writing a value of <code>0xAA55</code>.
+The value will be deleted automatically.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Výpočet rampy nouzového zpomalení je odvozen od skutečné rychlosti a polohy.
-V případě velké chyby polohy nebo rychlosti před provedením nouzového zastavení lze pozorovat, že křivky rychlosti a polohy nejsou plynulé.
-Nově jsou hodnoty rychlostí v generátoru uživatelských profilů nastaveny na <code>0</code> po chybě.</p>
+<p class="admonition-title">Note</p>
+<p>The calculation of the emergency deceleration ramp is derived from the actual speed and position.
+In the event of a large position or speed error before performing an emergency stop, it can be observed that the speed and position curves are not smooth.
+The speed values in the user profile generator are now set to 0 after an error.</p>
 </div>
 
 
