@@ -1,31 +1,32 @@
-##Technická specifikace
-Servozesilovač TGZ používá PROFIdrive podle uvedené technické specifikace: 
+##Technical Specification
+The TGZ servo amplifier uses PROFIdrive Profile according to the above-mentioned technical specification: 
 
-- Třída použití 1 (*Standard Drive* - regulátor otáček)
-- Třída použití 3 (jednoosý polohovací pohon s lokálním *Motion Control* - regulátor polohy).
+- Application Class 1 (*Standard Drive* – speed regulator)
+- Application Class 3 (Single Axis positioning drive, with local *Motion Control* – position regulator).
 
-Pro ovládání TGZ je k dispozici několik telegramů PROFIdrive pro použití s PLC:
+Several PROFIdrive telegrams are available for use with the PLC for controlling the TGZ:
 
-- Standardní telegram 1 - rozhraní n-údajů, 16 bitů
-- Standardní telegram 3 - rozhraní n-údajů, 32 bitů, s jedním senzorem
-- Standardní telegram 7 - polohovací rozhraní
-- Standardní telegram 9 - polohovací rozhraní plus podrežim MDI
-- Telegram 111 - SinaPos basic positioner
-- Telegram 352 - rozšířený telegram 1 s dalšími stavovými informacemi
+- Standard telegram 1 – n-setpoint interface, 16 bits
+- Standard telegram 3 – n-setpoint interface, 32 bits, with one sensor
+- Standard telegram 7 – positioning interface
+- Standard telegram 9 – positioning interface plus MDI submode
+- Telegram 111 – SinaPos basic positioner
+- Telegram 352 – extended telegram 1 with additional status information
 
-Podrobný popis telegramů naleznete v příslušné dokumentaci.   
+For detailed description of the telegrams see the appropriate documentation.   
 
-Podle specifikace PROFINET podporuje servopohon TGZ třídu shody A.
-Parametry PROFIdrive lze číst a zapisovat přes síť PROFINET, stejně jako cyklická data.
-Synchronizace mezi zařízeními se provádí pouze prostřednictvím PLC v rámci doby cyklu dat RT.
-U dvouosé varianty servopohonu je možná i přesná synchronizace (elektronický převod) uvnitř jednoho TGZ.
+According to the PROFINET specification, the TGZ servo drive supports the Conformance Class A.
+The PROFIdrive parameters can be read and written over PROFINET network, as well as cyclic data.
+Synchronization between devices is done only through PLC within the cycle time of RT data.
+For the two axes servo drive variant, exact synchronization (electronic gearing) inside one TGZ is also possible.
 
-##Doba cyklu dat RT
-Nejrychlejší doba cyklu TGZ pro data PROFINET RT je 1 ms (firmware od srpna 2022 nebo novější).
-Maximální jitter je 250 µs.
+##Cycle Time of RT Data
+TGZ fastest cycle time for the PROFINET RT data is 1 ms (firmware from August 2022 or newer).
+The maximal response jitter is 250 µs.
 
-##Servo typu TGZ-S-48-xxx
-Tato verze má zvláštní zacházení s firmwarem: vzhledem k podobnosti s verzí TGZ-D musí být naprogramována firmwarem určeným pro variantu TGZ-D.
-Proto je nutné použít také soubor `GSDML` s názvem `GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml`, tj. soubor pro dvouosou variantu.
-Při uvádění pohonu do provozu lze použít pouze první osu.
-Druhá osa zůstává vždy v chybovém stavu.
+##TGZ-S-48-xxx Servo Type
+This version has special firmware handling: due to similarity of the TGZ-D version, it must be programmed with the firmware designated for TGZ-D variant.
+Therefore, it is necessary to use also the `GSDML` file named `GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml`, i.e., the file for the double axis variant.
+During the drive commissioning, only the first axis can be used.
+The second axis remains always in an error.
+
