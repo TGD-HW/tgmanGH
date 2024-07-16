@@ -6792,17 +6792,22 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition info">
+<p class="admonition-title">EIx</p>
+<p>Extended inputs work as standard digital inputs 0 – 24 V. 
+See also <a href="../software/#ControllerINI">IO mapping</a>).</p>
+</div>
 </li>
 <li>
-<p><strong>X11 - TGMotion systémový konektor</strong></p>
+<p><strong>X11 - TGMotion service connector</strong></p>
 <hr />
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/RJ45_X11_service.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="X11 service RJ45" src="../../../../../../../Manual/source/img/RJ45_X11_service.png" style="width:60%;" /></a></p>
 </li>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Slouží k připojení systému TGMotion (protokol TCP nebo UDP) pomocí programu Control Observer a dalších uživatelských aplikací.
-Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.</p>
+<p>It is used for connecting the TGMotion system (TCP or UDP protocol) by Control Observer and other user applications.
+Additional supported protocols are Modbus/TCP and Profinet IO (see below).</p>
 </li>
 <li>
 <p><strong>X12 - FSP port</strong></p>
@@ -6812,15 +6817,15 @@ Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.</p>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Tento port se používá jako tzv. Fast Service Port. 
-Slouží pro velmi rychlé peer-to-peer spojení mezi TGMcontrollerem a PC.
-Používá se speciální protokol.
-V počítači musí být nainstalován ovladač <a href="https://www.winpcap.org/">Winpcap</a> nebo <a href="https://npcap.com/">Npcap</a>. 
-Není nutné žádné nastavení, komunikační DLL sama najde správný síťový adaptér PC. 
-Pro dosažení nejlepšího výkonu použijte PCIe síťový adaptér.
-Adaptéry USB-Ethernet lze také použít, ale mají menší výkon.
-Některé levné adaptéry USB-Ethernet s protokolem FSP vůbec nefungují.
-Adaptér musí mít paměť pro alespoň 32 paketů najednou.</p>
+<p>This port is used for so called Fast Service Port.
+Serves for very fast peer-to-peer connection between TGMcontroller and PC.
+Special custom raw protocol is used.
+The PC must install <a href="https://www.winpcap.org/">Winpcap</a> or <a href="https://npcap.com/">Npcap</a> driver.
+No setting is necessary, the communication DLL finds the correct PC network adapter.
+For best performance, use the built-in or PCIe NIC adapters.
+The USB-Ethernet adapters can be also used, but suffer of worse performance.
+Some low cost USB to Ethernet adapters don’t work at all with the FSP protocol.
+The adapter must have space for at least 32 packets at one time.</p>
 </li>
 <li>
 <p><strong>X13 - EtherCAT master</strong></p>
@@ -6830,11 +6835,11 @@ Adaptér musí mít paměť pro alespoň 32 paketů najednou.</p>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Tento port slouží k připojení zařízení EtherCAT na sběrnici EtherCAT.
-Není nutné žádné nastavení.
-Port je schopen pracovat rychlostí 100 Mbit nebo 1 Gbit v závislosti na prvním připojeném zařízení.
-K dispozici je několik 1 Gbitových zařízení EtherCAT, např. servopohony TGZ nebo několik EtherCAT bridge zařízení od jiných výrobců.
-Při použití sběrnice 1 Gbit musí všechna zařízení v řetězci podporovat tuto rychlost.</p>
+<p>EtherCAT master connector – use this port for connecting the EtherCAT devices in the EtherCAT fieldbus.
+No setting is necessary.
+The port is capable of 100 Mbit or 1 Gbit speeds, depending of the first connected device.
+There are a few 1 Gbit EtherCAT devices available, e.g. TGZ servo drives or several EtherCAT bridges from other manufacturers.
+If using the 1 Gbit fieldbus, all the devices in the chain must be using the 1 Gbit speed.</p>
 </li>
 </ul>
 </div>
@@ -7013,7 +7018,7 @@ Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly eve
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/uSD.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="uSD card connector" src="../../../../../../../Manual/source/img/uSD.png" style="width:60%;" /></a></p>
 </li>
 <li>
-<p>Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.</p>
+<p>Use a standard microSD card.</p>
 </li>
 <li>
 <p><strong>X10 - CAN</strong></p>
@@ -7071,11 +7076,11 @@ Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly eve
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/TGZ_LED.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="LED display" src="../../../../../../../Manual/source/img/TGZ_LED.png" style="width:60%;" /></a></p>
 </li>
 <li>
-<p>Při spuštění se na LED displayi zobrazuje IP adresa zařízení.
-    Za textem "IP" následují čísla.
-    Protože čísla mohou mít až 3 číslice, je každé celé číslo odděleno tečkou.
-    Například pro zobrazení čísla "192" se nejprve zobrazí jedna číslice "1" (bez tečky) a poté "92" (s tečkou).
-    Tímto způsobem lze zobrazit i složité IP adresy, například 192.168.128.179.</p>
+<p>The LED display shows the device IP address during startup.
+    The text “IP” is followed by numbers.
+    Since the numbers can have up to 3 digits, each complete number is separated by a dot.
+    For example to display the number “<code>192</code>”, first a single “1” is displayed (without a dot) and then “92.” (with the dot).
+    Complex IP addresses like <code>192.168.128.179</code> can be displayed in this way.</p>
 </li>
 <li>
 <p><strong>status LEDs</strong></p>
@@ -7083,8 +7088,9 @@ Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly eve
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/statusLedsECAT.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="status LEDs" src="../../../../../../../Manual/source/img/statusLedsECAT.svg" style="width:100%;" /></a></p>
 </li>
 <li>
-<p>K dispozici jsou čtyři další LED diody označené jako ERROR (červená barva) a READY (zelená barva).
-    READY ukazuje, že daná osa je v souboru <code>TGM.INI</code> povolena, naopak ERROR znamená, že osa není v souboru <code>TGM.INI</code> namapována na TGMotion.</p>
+<p>There are four additional LED diodes labeled as ERROR (red color) and READY (green color) for two axes.
+    The READY shows that this particular axis is enabled in the <code>TGM.INI</code> file, on the other hand ERROR means the axis is not mapped to TGMotion by the <code>TGM.INI</code> file.
+    See also <a href="../software/#ControllerINI">IO mapping</a> about the entries in the <code>TGM.INI</code> file.</p>
 </li>
 </ul>
 </div>
@@ -7163,6 +7169,10 @@ Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly eve
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">+12 V</td>
 </tr>
+<tr>
+<td style="text-align: center;">The X5 connector is used for an incremental encoder (IRC).</td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -7231,8 +7241,9 @@ Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly eve
 </tbody>
 </table>
 <div class="admonition note">
-<p>Konektor X6 podporuje buď zpětnou vazbu Hiperface DSL, nebo standard EnDAT 2.2.
-Typ použitého komunikačního standardu zpětné vazby je uveden v souboru <code>TGM.INI</code>: <code>Servo[xx].FeedbackType=1</code> pro DSL a <code>Servo[xx].FeedbackType=2</code> pro EnDAT.</p>
+<p class="admonition-title">FB1</p>
+<p>The X6 connector supports either Hiperface DSL feedback or EnDAT 2.2 standard.
+The type of the used feedback communication standard is given in the <code>TGM.INI</code> file: <code>Servo[xx].FeedbackType=1</code> is for <strong>DSL</strong> and <code>Servo[xx].FeedbackType=2</code> is for <strong>EnDAT</strong>.</p>
 </div>
 </li>
 <li>
@@ -7300,8 +7311,8 @@ Typ použitého komunikačního standardu zpětné vazby je uveden v souboru <co
 </tbody>
 </table>
 <div class="admonition note">
-<p>Konektor X7 lze použít pro připojení zpětné vazby DSL nebo SSI.
-Použijte následující nastavení v souboru <code>TGM.INI</code>: <code>Servo[xx].FeedbackType=1</code> pro DSL a <code>Servo[xx].FeedbackType=3</code> pro SSI. </p>
+<p>The X7 connector can be used with DSL or SSI feedback.
+Use the following settings in the <code>TGM.INI</code>: <code>Servo[xx].FeedbackType=1</code> for the DSL and <code>Servo[xx].FeedbackType=3</code> for the SSI.</p>
 </div>
 </li>
 </ul>

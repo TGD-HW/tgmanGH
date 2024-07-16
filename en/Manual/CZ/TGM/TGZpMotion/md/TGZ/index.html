@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interni-zdroj-rizeni-pohonu" class="md-skip">
+        <a href="#internal-servo-control-source" class="md-skip">
           Skip to content
         </a>
       
@@ -5845,27 +5845,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interni-zdroj-rizeni-pohonu" class="md-nav__link">
+  <a href="#internal-servo-control-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Interní zdroj řízení pohonu
+      Internal servo control source
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uzivatelsky-program-v-tgz-plc" class="md-nav__link">
+  <a href="#user-program-in-tgz-plc" class="md-nav__link">
     <span class="md-ellipsis">
-      Uživatelský program v TGZ (PLC)
+      User program in TGZ (PLC)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dalsi-odchylky-od-standardniho-servozesilovace-tgz" class="md-nav__link">
+  <a href="#other-diversions-to-standard-tgz-servo-amplifier" class="md-nav__link">
     <span class="md-ellipsis">
-      Další odchylky od standardního servozesilovače TGZ
+      Other diversions to standard TGZ servo amplifier
     </span>
   </a>
   
@@ -6735,42 +6735,43 @@
 
   <h1>TGZ servoamplifier</h1>
 
-<p>V části výrobku týkající se servozesilovače nedošlo téměř k žádným změnám.
-Pro nastavení parametrů pohonu, motorů atd. se používá service program <code>TGZ GUI</code>.
-Existuje však několik parametrů, které se nastavují v souboru <code>TGM.INI</code> programu <code>TGMotion</code>:</p>
+<p>There are almost no changes in the servo amplifier part of the product.
+The TGZ GUI service program is used for settings the parameters of the drive, motors, etc.
+However, there are a few parameters, which are set up in the TGMotion’s <code>TGM.INI</code> file:</p>
 <ul>
-<li>IP adresa zařízení:
-    TGZ+Motion používá statickou IP adresu ve svém servicem konektoru Ethernet X13. Tato adresa musí být nastavena v souboru <code>TgMotion5xx.ini</code>:
+<li>IP address of the device: TGZ+Motion uses static IP address in its Ethernet service connector X13.
+    This address must be set in the <code>TgMotion5xx.ini</code> file:
     <div class="language-ini highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[DHCP]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">IPAddress</span><span class="o">=</span><span class="s">192.168.1.188</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">Gateway</span><span class="o">=</span><span class="s">192.168.1.1</span><span class="w"> </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">Mask</span><span class="o">=</span><span class="s">255.255.255.0</span><span class="w"> </span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="na">DNS</span><span class="o">=</span><span class="s">192.168.1.1</span>
 </span></code></pre></div>
-    Je nutné správně nastavit <code>Gateway</code>, musí být ve stejné doméně jako IP adresa. 
-    IP adresa v TGZ GUI je určena pouze pro čtení.</li>
+    It is necessary to correctly set the Gateway, it must be in the same domain as the IP address.
+    Note that the IP address in the TGZ GUI is read-only.</li>
 <li>C-SetCycleTime:
-    V konfiguračním souboru se také nastavuje doba cyklu:
+    Cycle time is also set in the configuration file:
     <div class="language-ini highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[System]</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">Cycle_Time</span><span class="o">=</span><span class="s">250</span>
 </span></code></pre></div></li>
 </ul>
-<p>Servozesilovač TGZ a systém TGMotion jsou synchronní a pracují s dobou cyklu 100&nbsp;µs.
-Doporučená hodnota je 250 nebo 500&nbsp;µs. Grafické rozhraní TGZ zobrazuje <code>C-SetCycleTime</code> jako parametr pouze pro čtení.
-Důrazně doporučujeme správně nastavit adresu MAC pomocí TGZ&nbsp;GUI na platnou hodnotu. 
-První hexadecimální číslice by měla být <code>00</code>, druhá a třetí může být <code>0a:35</code> a na poslední tři hodnoty není žádné omezení.
-Důležité je pouze to, aby se adresy MAC všech připojených zařízení v jedné síťové doméně lišily.
-Příklad platné adresy MAC: <code>00:0a:35:01:02:04</code>.</p>
-<h2 id="interni-zdroj-rizeni-pohonu">Interní zdroj řízení pohonu<a class="headerlink" href="#interni-zdroj-rizeni-pohonu" title="Permanent link">&para;</a></h2>
-<p>Servozesilovače TGZ systému TGZ+Motion lze ovládat buď ze serviceho portu prostřednictvím protokolu UDP (grafické rozhraní TGZ - obvykle pro nastavení motoru a pohonu), nebo interně pomocí TGMotion.</p>
-<h2 id="uzivatelsky-program-v-tgz-plc">Uživatelský program v TGZ (PLC)<a class="headerlink" href="#uzivatelsky-program-v-tgz-plc" title="Permanent link">&para;</a></h2>
-<p>Takzvaný uživatelský program (neboli PLC), který se nachází ve standardním servopohonu TGZ, není podporován.
-PLC se používá se subsystémem TGMotion, což umožňuje několik programových priorit, chování v reálném čase a lepší výkon (viz níže).</p>
-<h2 id="dalsi-odchylky-od-standardniho-servozesilovace-tgz">Další odchylky od standardního servozesilovače TGZ<a class="headerlink" href="#dalsi-odchylky-od-standardniho-servozesilovace-tgz" title="Permanent link">&para;</a></h2>
-<p>Všechny parametry se ukládají pouze na SD kartu.
-Ukládání parametrů do interní paměti flash zatím není podporováno.
-Firmware lze aktualizovat pouze pomocí programu <strong>Control Observer</strong>, grafické rozhraní TGZ nelze pro tuto činnost použít.
-Formát souboru firmwaru je zcela odlišný od standardní jednotky TGZ.</p>
+<p>TGMotion and TGZ servo are synchronous and run from cycle time of 100 µs.
+The recommended value is 250 or 500 µs.
+The TGZ GUI displays the <code>C-SetCycleTime</code> as read-only parameter.   </p>
+<p>It is highly recommended to correctly set the MAC address using the TGZ GUI to a valid value.
+The first hexadecimal digits should be <code>00</code>, the second and third could be 0a:35 and there is no restriction to the last three values.
+It is only important that the MAC addresses of all the connected devices in one network domain are different.
+Example of a valid MAC address: <code>00:0a:35:01:02:04</code>.</p>
+<h2 id="internal-servo-control-source">Internal servo control source<a class="headerlink" href="#internal-servo-control-source" title="Permanent link">&para;</a></h2>
+<p>The TGZ servo of the <strong>TGZ+Motion</strong> system can be controlled either from service port via UDP protocol (TGZ GUI – usually for motor and drive setup) or internally by the TGMotion.</p>
+<h2 id="user-program-in-tgz-plc">User program in TGZ (PLC)<a class="headerlink" href="#user-program-in-tgz-plc" title="Permanent link">&para;</a></h2>
+<p>The so-called user program (or PLC) found in standard TGZ servo drive is not supported.
+The PLC is used with the TGMotion subsystem, allowing several program priorities, real-time behavior and better performance.</p>
+<h2 id="other-diversions-to-standard-tgz-servo-amplifier">Other diversions to standard TGZ servo amplifier<a class="headerlink" href="#other-diversions-to-standard-tgz-servo-amplifier" title="Permanent link">&para;</a></h2>
+<p>All the parameters are saved only to the SD card.
+Saving the parameters to internal flash memory is not yet supported.
+The firmware can be updated only by <strong>Control Observer</strong>, the TGZ GUI cannot be used for this action.
+The format of the firmware file is completely different to the standard TGZ drive.</p>
 
 
 

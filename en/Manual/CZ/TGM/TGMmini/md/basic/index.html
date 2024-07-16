@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#strucny-popis" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -5438,18 +5438,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#strucny-popis" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Stručný popis
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rozdily-vuci-tg-motion-na-pc" class="md-nav__link">
+  <a href="#differences-to-tg-motion-on-pc" class="md-nav__link">
     <span class="md-ellipsis">
-      Rozdíly vůči TG Motion na PC
+      Differences to TG Motion on PC
     </span>
   </a>
   
@@ -6726,27 +6726,31 @@
 
   <h1>Basic information</h1>
 
-<h2 id="strucny-popis">Stručný popis<a class="headerlink" href="#strucny-popis" title="Permanent link">&para;</a></h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><br></p>
-<p><a class="glightbox" href="../../img/3Dview.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Basic view" src="../../img/3Dview.png" style="width:35%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../../Manual/CZ/TGM/TGMmini/img/3Dview.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Basic view" src="../../../../../../../Manual/CZ/TGM/TGMmini/img/3Dview.png" style="width:35%;" /></a></p>
 <p><br></p>
-<p><strong>TGMmini</strong> je plnohodnotný počítač s dvoujádrovým procesorem ARM. 
-Obě jádra procesoru jsou využita pro operační sytém Linux (distribuce Debian 10 s real-time rozšířením Xenomai) s grafickou nadstavbou Xfce. 
-Řídicí systém <strong>TG&nbsp;Motion</strong>, umožňující řízení servopohonů a I/O jednotek přes sběrnici EtherCAT, běží z části v real-time prostředí Linuxu a z části v samostatném procesoru s hardwarovým EtherCAT akcelerátorem (vše implementováno v FPGA). 
-Ovládání <strong>TG&nbsp;Motion</strong> se provádí z linuxového prostředí, na všechny potřebné operace jsou k dispozici knihovny, jejichž API rozhraní je totožné s knihovnami DLL pro systém Windows na PC. 
-Uživatelské virtuální PLC programy lze psát a vyvíjet na PC, zdrojový text se pouze přeloží kompilátorem pro procesor ARM a vytvořený binární soubor se přenese na <strong>TGMmini</strong>, kde se spustí. 
-Pro přístup ke sdílené paměti systému <strong>TG&nbsp;Motion</strong> slouží knihovna TGM_Comm_Int_5, opět ve shodné verzi pro PC a <strong>TGMmini</strong>.</p>
-<h2 id="rozdily-vuci-tg-motion-na-pc">Rozdíly vůči TG Motion na PC<a class="headerlink" href="#rozdily-vuci-tg-motion-na-pc" title="Permanent link">&para;</a></h2>
-<p>TG Motion používaný na TGMmini je ve verzi 501 či vyšší. 
-Verze pro PC i TGMmini jsou navzájem kompatibilní. 
-Manuál pro systém TG Motion tuto verzi zahrnuje a je mj. k dispozici na <a href="https://www.tgdrives.cz/">webových stránkách TG Drives</a>. 
-TGMmini podporuje až 64 servopohonů a 16 I/O jednotek na sběrnici EtherCAT.
-Implementován jsou též až dva CNC moduly s interpolátorem. 
-Přímo na hardwaru TGMmini se nachází 8 rychlých vstupů (použitelné např. i pro inkrementální snímač otáček IRC), 8 rychlých výstupů (programovatelné jako digitální nebo PWM výstupy) a sběrnice CAN.   </p>
-<p>Na rozdíl od systému Windows systém Linux rozeznává velikost písmen v názvech souborů a proto soubory se stejným názvem, lišícím se pouze velikostí, jsou chápány jako dva různé soubory. 
-Např. TG Motion používá pro vlastní nastavení soubor <code>TgMotion5xx.ini</code>. 
-Pokud by byl tento soubor uložen na TGMmini např. jako <code>TGMotion5xx.INI</code>, systém jej bude ignorovat.</p>
-<p>Před vlastní prací s TGMmini je vhodné si přečíst <a href="https://www.tgdrives.cz/ke-stazeni/ridici-systemy-pc-a-panely-ke-stazeni/#c426">manuály k TG Motion</a>.</p>
+<p><strong>TGMmini</strong> is a complete computer with dual core ARM processor.
+Both cores are used for Linux operating system (with Xenomai real-time kernel extension and Debian 10 distribution) with graphics desktop Xfce4.
+The real-time <strong>TG Motion</strong> system, which controls servo drives and I/O modules by using EtherCAT, runs partially in Linux environment and partially in FPGA (with hardware EtherCAT accelerator).
+Administration of TG Motion (start, stop, reset) can be performed from Linux desktop or command line.
+There are libraries available for all necessary operations, whose API is compatible with Windows DLL.
+Virtual PLC programs can be coded and cross-compiled on Windows (e.g. by Visual Studio), and are source code compatible with PLC programs running on PC.
+The resulting PLC binary file is then transferred to <strong>TGMmini</strong> and run there.
+Shared memory access is done by library TGM_Comm_Int_5, also compatible with the Windows version.</p>
+<h2 id="differences-to-tg-motion-on-pc">Differences to TG Motion on PC<a class="headerlink" href="#differences-to-tg-motion-on-pc" title="Permanent link">&para;</a></h2>
+<p>TGMmini uses TG Motion version 501 or higher. Both versions (PC and TGMmini) are compatible.
+The TG Motion operation manual covers the version 501 and is available at <a href="https://www.tgdrives.cz/en/download/control-systems-pc-and-panels-download/#c471">TG Drives website</a>. 
+Supported
+are up to 64 servo drives and up to 16 I/O units on EtherCAT bus. TGMmini contains two CNC modules
+together with two interpolators. There are 8 fast digital inputs (usable for IRC encoder as well), 8 fast
+digital outputs (configurable also as PWM outputs) and CAN bus directly controlled by PLC programs.   </p>
+<div class="admonition note">
+<p class="admonition-title">Linux naming</p>
+<p>The file names on Linux operating system are case sensitive (in contrast to Windows system, where the file names are case insensitive).
+For example TG Motion uses config file <code>TgMotion5xx.ini</code>. If it was renamed to <code>TGMotion5xx.INI</code>, system will ignore it.</p>
+</div>
+<p>It is recommended to read <a href="../../../TGMotion/md/PLC/#MotionPLC">TG Motion operation manuals</a> before working with TGMmini.</p>
 
 
 

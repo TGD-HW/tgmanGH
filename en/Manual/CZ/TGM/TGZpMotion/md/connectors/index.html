@@ -6717,7 +6717,6 @@
 
   <h1>Connector description</h1>
 
-<!--##Connectors-->
 <hr />
 <h3 id="view-of-the-enetecat-side">View of the ENET/ECAT side<a class="headerlink" href="#view-of-the-enetecat-side" title="Permanent link">&para;</a></h3>
 <hr />
@@ -6725,16 +6724,16 @@
 <div class="grid cards">
 <ul>
 <li>
-<p><strong>X11 - TGMotion systémový konektor</strong></p>
+<p><strong>X11 - TGMotion system connector</strong></p>
 <hr />
 <!-- ![X11 service RJ45](../../../../source/img/RJ45_X11_service.png){: style="width:60%;" } -->
 </li>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Port Ethernet se používá pro připojení grafického rozhraní TGZ prostřednictvím protokolu UDP.
-Používá se také pro připojení TGMotion (protokol TCP nebo UDP) pomocí Control Observeru a dalších uživatelských aplikací.
-Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.</p>
+<p>Ethernet service port is used for connection of TGZ GUI through UDP protocol.
+It is also used for connecting the TGMotion (TCP or UDP protocol) by Control Observer and other user applications.
+Additional supported protocols are Modbus/TCP and Profinet IO.</p>
 </li>
 <li>
 <p><strong>X12 - FSP port</strong></p>
@@ -6744,15 +6743,15 @@ Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.</p>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Tento port se používá jako tzv. Fast Service Port. 
-Slouží pro velmi rychlé peer-to-peer spojení mezi TGMcontrollerem a PC.
-Používá se speciální protokol.
-V počítači musí být nainstalován ovladač <a href="https://www.winpcap.org/">Winpcap</a> nebo <a href="https://npcap.com/">Npcap</a>. 
-Není nutné žádné nastavení, komunikační DLL sama najde správný síťový adaptér PC. 
-Pro dosažení nejlepšího výkonu použijte PCIe síťový adaptér.
-Adaptéry USB-Ethernet lze také použít, ale mají menší výkon.
-Některé levné adaptéry USB-Ethernet s protokolem FSP vůbec nefungují.
-Adaptér musí mít paměť pro alespoň 32 paketů najednou.</p>
+<p>This port is used for so called Fast Service Port.
+Serves for very fast peer-to-peer connection between TGZ+Motion and PC.
+Special custom raw protocol is used.
+The PC must install the <a href="https://www.winpcap.org/">Winpcap</a> or <a href="https://npcap.com/">Npcap</a> driver.
+No setting is necessary, the communication DLL finds the correct PC network adapter.
+For best performance, use the built-in or PCIe NIC adapters.
+The USB-Ethernet adapters can be also used, but suffer of worse performance.
+Some low cost USB to Ethernet adapters don’t work at all with the FSP protocol.
+The adapter must have space for at least 32 packets at one time.</p>
 </li>
 <li>
 <p><strong>X13 - EtherCAT master</strong></p>
@@ -6762,11 +6761,12 @@ Adaptér musí mít paměť pro alespoň 32 paketů najednou.</p>
 <li>
 <p>RJ45</p>
 <hr />
-<p>Tento port slouží k připojení zařízení EtherCAT na sběrnici EtherCAT.
-Není nutné žádné nastavení.
-Port je schopen pracovat rychlostí 100 Mbit nebo 1 Gbit v závislosti na prvním připojeném zařízení.
-K dispozici je několik 1 Gbitových zařízení EtherCAT, např. servopohony TGZ nebo několik EtherCAT bridge zařízení od jiných výrobců.
-Při použití sběrnice 1 Gbit musí všechna zařízení v řetězci podporovat tuto rychlost.</p>
+<p>EtherCAT master connector – use this port for connecting the EtherCAT devices in the EtherCAT fieldbus.
+No setting is necessary.
+The port is capable of 100 Mbit or 1 Gbit speeds, depending of the first connected device.
+There are a few 1 Gbit EtherCAT devices available, e.g.
+the TGZ servo drive itself.
+If using the 1 Gbit fieldbus, all the devices must be using the 1 Gbit speed.</p>
 </li>
 </ul>
 </div>
