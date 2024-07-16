@@ -336,7 +336,7 @@ Protokol Modbus TCP je ve výchozím nastavení vypnut.
 Chcete-li jej povolit, použijte následující konfiguraci `TGM.INI`:
 ``` ini
 [Modbus]
-Povolit=1
+Enable=1
 ```
 
 Paměť PLC DATA se používá pro ukládání nebo příjem dat Modbus.

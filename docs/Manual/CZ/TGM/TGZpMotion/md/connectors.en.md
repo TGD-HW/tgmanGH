@@ -1,4 +1,3 @@
-<!--##Connectors-->
 ___
 ### View of the ENET/ECAT side
 ___
@@ -8,7 +7,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X11 - TGMotion systémový konektor**
+-   **X11 - TGMotion system connector**
 
     ---
 	<!-- ![X11 service RJ45](../../../../source/img/RJ45_X11_service.png){: style="width:60%;" } -->
@@ -17,9 +16,9 @@ ___
 
 	---
 
-	Port Ethernet se používá pro připojení grafického rozhraní TGZ prostřednictvím protokolu UDP.
-	Používá se také pro připojení TGMotion (protokol TCP nebo UDP) pomocí Control Observeru a dalších uživatelských aplikací.
-	Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.
+	Ethernet service port is used for connection of TGZ GUI through UDP protocol.
+	It is also used for connecting the TGMotion (TCP or UDP protocol) by Control Observer and other user applications.
+	Additional supported protocols are Modbus/TCP and Profinet IO.
 		
 -   **X12 - FSP port**
 
@@ -30,15 +29,15 @@ ___
 
 	---
 
-	Tento port se používá jako tzv. Fast Service Port. 
-	Slouží pro velmi rychlé peer-to-peer spojení mezi TGMcontrollerem a PC.
-	Používá se speciální protokol.
-	V počítači musí být nainstalován ovladač [Winpcap](https://www.winpcap.org/) nebo [Npcap](https://npcap.com/). 
-	Není nutné žádné nastavení, komunikační DLL sama najde správný síťový adaptér PC. 
-	Pro dosažení nejlepšího výkonu použijte PCIe síťový adaptér.
-	Adaptéry USB-Ethernet lze také použít, ale mají menší výkon.
-	Některé levné adaptéry USB-Ethernet s protokolem FSP vůbec nefungují.
-	Adaptér musí mít paměť pro alespoň 32 paketů najednou.
+	This port is used for so called Fast Service Port.
+	Serves for very fast peer-to-peer connection between TGZ+Motion and PC.
+	Special custom raw protocol is used.
+	The PC must install the [Winpcap](https://www.winpcap.org/) or [Npcap](https://npcap.com/) driver.
+	No setting is necessary, the communication DLL finds the correct PC network adapter.
+	For best performance, use the built-in or PCIe NIC adapters.
+	The USB-Ethernet adapters can be also used, but suffer of worse performance.
+	Some low cost USB to Ethernet adapters don’t work at all with the FSP protocol.
+	The adapter must have space for at least 32 packets at one time.
 	
 -   **X13 - EtherCAT master**
 
@@ -49,10 +48,11 @@ ___
 
 	---
 
-	Tento port slouží k připojení zařízení EtherCAT na sběrnici EtherCAT.
-	Není nutné žádné nastavení.
-	Port je schopen pracovat rychlostí 100 Mbit nebo 1 Gbit v závislosti na prvním připojeném zařízení.
-	K dispozici je několik 1 Gbitových zařízení EtherCAT, např. servopohony TGZ nebo několik EtherCAT bridge zařízení od jiných výrobců.
-	Při použití sběrnice 1 Gbit musí všechna zařízení v řetězci podporovat tuto rychlost.
+	EtherCAT master connector – use this port for connecting the EtherCAT devices in the EtherCAT fieldbus.
+	No setting is necessary.
+	The port is capable of 100 Mbit or 1 Gbit speeds, depending of the first connected device.
+	There are a few 1 Gbit EtherCAT devices available, e.g.
+	the TGZ servo drive itself.
+	If using the 1 Gbit fieldbus, all the devices must be using the 1 Gbit speed.
 	
 </div>	

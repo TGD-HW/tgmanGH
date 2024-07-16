@@ -1,4 +1,4 @@
-TGMmini se uchycuje na standarní DIN lištu 35&nbsp;mm pomocí dodávaného adaptéru.
+The TGMmini mounts to a standard 35&nbsp;mm DIN rail using the supplied adapter.
 
 ![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 

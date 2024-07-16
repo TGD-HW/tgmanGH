@@ -1,9 +1,4 @@
-##Obecné informace
-<br>
-
 ![Basic view](../img/3Dview.png){: style="width:35%;" }
-
-<br>
 
 S vývojem softwaru a operačních systémů je stále obtížnější spouštět na počítačích procesy pracující s reálným časem.
 Na druhou stranu komunikační rychlosti jsou při použití standardního gigabitového připojení Ethernet více než dostatečné.

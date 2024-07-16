@@ -58,7 +58,7 @@ Program WinSCP lze stáhnout z internetu např. z adresy [www.winscp.net](https:
 ##Vzdálená správa TGMmini
 TGMmini může běžet v tzv. headless režimu, tj. bez monitoru, klávesnice a myši. 
 Připojení ke grafickému rozhraní TGMmini je možné pomocí VNC protokolu. VNC server na TGMmini je standardně spuštěn, stačí proto na PC pouze spustit vhodný klient VNC. 
-Doporučený program je VNC Viewer (viz. [www.realvnc.com](https://www.realvnc.com/CZ/connect/download/viewer/) ).
+Doporučený program je VNC Viewer (viz. [www.realvnc.com](https://www.realvnc.com/en/connect/download/viewer/) ).
 
 ##USB flash disky
 Přenos dat mezi PC a TGMmini lze provést také pomocí USB disků. 

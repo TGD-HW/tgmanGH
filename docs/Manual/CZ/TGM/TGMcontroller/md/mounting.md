@@ -1,4 +1,4 @@
-TGMmini se uchycuje na standarní DIN lištu 35&nbsp;mm pomocí dodávaného adaptéru.
+TGMcontroller se montuje na rozvaděčovou desku podobně jako servozesilovače TGZ.
 
 ![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 

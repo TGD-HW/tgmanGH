@@ -8,7 +8,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X3 - Napájení řídicí části**
+-   **X3 - Input power**
 
     ---
 	![24V connector 2439670000](../../../../source/img/2439670000.svg){: style="width:60%;" }
@@ -35,7 +35,7 @@ ___
 </div>	
 
 ___
-### Strana IO/USB/SD
+### IO/USB/SD side view
 ___
 
 ![TGMmini IO side](../img/IOside.png){: style="width:60%;" }
@@ -55,7 +55,7 @@ ___
 
 	--8<-- "md/X5_DI_10pin_B2CF.en.md"
 	
--   **X10 - Digital výstupy**
+-   **X10 - Digital outputs**
 
     ---
 	
@@ -67,16 +67,16 @@ ___
 
 	--8<-- "md/X10_DO_10pin_B2CF.en.md"
 	
-	!!! warning "Důležité upozornění"	
+	!!! warning "DO supply"
+		The power supply of the digital outputs must be complete, i.e. the OUTCOM and OUTPWR 24 V pins must be properly connected.
+		In the case the ground wire to OUTCOM is broken, on all output pins OUT0 – OUT7 appears voltage of about 21 V.
+		The outputs can subsequently and unexpectedly switch ON the devices connected to these outputs.
+		To alleviate this problem, a safety relay (like OMRON K8AK-AS1) must be used and properly connected.
+		
+		**TGDrives, s.r.o. is not responsible to any damages and/or injuries caused by wrong 24 V power connection.**
+		**Only properly qualified personnel are permitted to make the device installation and start up.**
 	
-		Napájení digitálních výstupů musí být kompletní, tj. musí být správně připojen zemnící vodič OUTCOM (pin 9) a kladný vodič +24 V (OUTPWR, pin 10).
-		V případě, že je zemnící vodič přerušen, na všech výstupech se po cca jedné sekundě objeví přibližně 21&nbsp;V. 
-		Výstupy pak můžou sepnout připojené zařízení a přepnout je tak do nechtěného stavu. 
-		Pokud by bylo potřeba tento stav ošetřit, je potřeba připojit zemnící vodič přes bezpečnostní relé (např. OMRON K8AKAS1), které bude monitorovat proud tekoucí do výstupního obvodu TGMmini. 
-		**TGDrives, s.r.o. nenese žádnou zodpovědnost za nesprávně zapojené napájení TGMmini a za případné následné chybové situace. 
-		Správné a bezchybné zapojení je plně v kompetenci uživatele TGMmini a musí být provedeno odborným pracovníkem s příslušnou kvalifikací pro montáž elektrických zařízení.**
-	
--   **S1 - CAN terminace linky**
+-   **S1 - CAN bus termination**
 
     ---
 	

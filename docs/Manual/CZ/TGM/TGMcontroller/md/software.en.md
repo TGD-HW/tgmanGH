@@ -1,30 +1,33 @@
-**TGMcontroller** je hardware pro kompletní řídicí systém **TGMotion**. 
-Podrobný popis systému TGMotion je uveden v jeho vlastní příručce.
-Mezi TGMotion na PC a v TGMcontrolleru nejsou žádné funkční rozdíly.
-Virtuální PLC lze v případě potřeby kompletně vyvinout a otestovat na PC a poté pouze zkompilovat pro TGMcontroller a spustit na něm bez dalších změn.
+The **TGMcontroller** is in the fact the complete real-time **TGMotion** control system in the box.
+Detailed description of the TGMotion is given in [TG Motion operation manual](../../TGMotion/md/PLC.md#MotionPLC).
+There are no functional differences between TGMotion on the PC and on the TGMcontroller.
+The virtual PLC can be developed and tested completely on PC if necessary and then only compiled for the TGMcontroller and run on it without any additional changes.
 
-##Control observer
-Control Observer je service a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
-Nejprve musí být připojen k zařízení. K tomu slouží okno *Connection info* :
+##Control Observer
+The Control Observer is a service and monitoring tool running on a Windows PC and plays a big role in the maintenance, firmware update, PLC development and TGMcontroller commissioning.
+First of all it must be connected to the device.
+Use the *Connection Info* window for that:
 
 ![Connection info dialog](../img/connectionInfo.png){: style="width:60%;" }
 
-V menu `Connection Device` zvolte požadovaný typ zařízení.
-Použijte připojení TCP nebo UDP, pokud je IP adresa již známá (zobrazuje se při spuštění na LED displayi) a je platná v rámci ethernetového segmentu.
-Použijte typ FSP, pokud je ethernetový kabel připojen z PC přímo (peer to peer) ke konektoru FSP (X12).
-Počkejte, až bude stav připojení ONLINE. Pak jsou k dispozici všechny funkce a **Control Observer** pracuje přímo se zařízením.
+Select the desired connection type in the `Connection Device` group box.
+Use TCP or UDP connection if the IP address is already known (displayed during startup in the LED display) and valid within an Ethernet segment.
+Use the FSP type if the Ethernet cable is connected from PC directly (peer to peer) to the FSP (X12) connector.
+Wait for the connection status to be ONLINE.
+Then all the features are available and the **Control Observer** works directly with the device.
 
-##Konfigurační soubor `TGM.INI`
-Soubor `TGM.INI` je uložen na SD kartě.
-Lze jej editovat přímo na kartě pomocí počítače nebo jej lze přečíst ze zařízení pomocí Control Observeru, upravit a poté zapsat zpět.
-Použijte okno *Systémové soubory*, upravte odpovídajícím způsobem názvy v editačních polích a použijte tlačítka `[Read]` a poté `[Write]` (řádky souboru INI).
-Názvy souborů v počítači mohou být libovolné, TGMcontroller interně používá správné názvy souborů SD karty.
+##`TGM.INI` configuration file {#ControllerINI}
+The `TGM.INI` file is stored on the SD card.
+It can be edited directly on the card by PC or it can be read from the device by the **Control Observer**, modified and then written back.
+Use the `System Files` window, adjust the names in the edit boxes accordingly and use `[Read]` and then `[Write]` buttons (INI file rows).
+The file names on the PC can be arbitrary, **TGMcontroller** internally uses the correct SD card’s file names.
 
 ![System files dialog](../img/systemFiles.png){: style="width:60%;" }
 
-Po úpravě souboru `TGM.INI` je nutné restartovat TGMcontroller (tlačítkem `[Restart Device]` nebo vypnutím/zapnutím zařízení).
-Vnitřní zpětné vazby a vstupy/výstupy musí být v případě potřeby namapovány na TGMotion v souboru `TGM.INI`. 
-Hodnoty jsou viditelné ve struktuře `SERVO`. Použijte typ serva 92:
+After the `TGM.INI` file modification, it is necessary to restart the TGMcontroller (by Observer’s button `[Restart Device]` or by power off/on sequence).   
+
+The internal feedbacks and inputs/outputs must be mapped to the TGMotion in the `TGM.INI` file if necessary.
+The values are visible in the SERVO structure. Use the servo type 92:
 
 ``` ini
 [Servo_Configuration]
@@ -40,20 +43,19 @@ Servo[01].Axis=2
 Servo[01].FeedbackType=1
 ```
 
-Hodnota `Node` je irelevantní a ignoruje se, ale měla by být v souboru INI jedinečná a v rozsahu 1 - 64.
-`Axis=1` podporuje `FeedbackType 1` (DSL) a `2` (EnDAT), zatímco `Axis=2` podporuje `FeedbackType 1` (DSL) a `3` (SSI).
-Jiné hodnoty jsou neplatné.
-Pokud není typ zpětné vazby uveden, použije se hodnota `1` (DSL).
-Indexy v hranatých závorkách (00 nebo 01 výše) mohou být samozřejmě různé, v rozsahu 0 - 63.   
+The Node value is irrelevant and is ignored, but should be unique in the INI file and in the range of 1 – 64.
+The `Axis=1` supports `FeedbackType 1 (DSL)` and `2 (EnDAT)`, while `Axis=2` supports `FeedbackType 1 (DSL)` and `3 (SSI)`.
+Other values are invalid.
+If the FeedbackType is not specified, value 1 (DSL) is used.
+The indexes in square brackets (00 or 01 above) can be of course different, in the range of 0 – 63.
+Actual position values from feedbacks are stored to the `SERVO[xx]`.
+Position variable (TGMotion SERVO shared memory, accessible by PLC or PC), where the “xx” is the index from the TGM.INI file above.
+Value from the incremental encoder (connector X5) is always mapped to axis 1, variable `SERVO[xx].ExtPosition`.
+Likewise, the digital inputs and outputs are found in the `SERVO[xx].DigitalIn` and `SERVO[xx].DigitalOut` variables.
+The table below shows the used inputs mapping.
+It assumes the `TGM.INI `entries as given above (`SERVO[00].Axis=1` and `SERVO[01].Axis=2`).
 
-Skutečné hodnoty polohy z feedbacku se ukládají do proměnné `SERVO[xx]`.
-Proměnná `Position` (sdílená paměť TGMotion SERVO, přístupná z PLC nebo PC), kde `"xx"` je index z výše uvedeného souboru `TGM.INI`.
-Hodnota z inkrementálního snímače (konektor X5) je vždy namapována na osu 1, proměnná `SERVO[xx].ExtPosition`.
-Stejně tak se digitální vstupy a výstupy nacházejí v proměnných `SERVO[xx].DigitalIn` resp. `SERVO[xx].DigitalOut`.
-V následující tabulce je uvedeno mapování použitých vstupů.
-Předpokládá výše uvedené záznamy v souboru `TGM.INI` (`SERVO[00].Axis=1` a `SERVO[01].Axis=2`).
-
-| Vstupní pin| Osa | Výskyt u bitu | Příklad kódu               |
+| Input pin| Axis | Appears at bit | Code example               |
 |--------------|-----|------------------|----------------------------|
 | DI1           | 1   | DigitalIn.0      | SERVO[00].DigitalIn & 0x001 |
 | DI2           | 2   | DigitalIn.0      | SERVO[01].DigitalIn & 0x001 |
@@ -66,9 +68,9 @@ Předpokládá výše uvedené záznamy v souboru `TGM.INI` (`SERVO[00].Axis=1` 
 | EI1           | 1   | DigitalIn.8      | SERVO[00].DigitalIn & 0x100 |
 | EI2           | 1   | DigitalIn.9      | SERVO[00].DigitalIn & 0x200 |
 
-Mapování výstupů je podobné:
+Outputs mapping is similar:
 
-| Výstupní pin | Osa | Použitý bit  | Kód pro nastavení do '1'                    | Kód pro nastavení do '0'                       |
+| Output pin | Axis | Used bit | Code for set | Code for clear |
 |-----------------|----|---------------|---------------------------------|-------------------------------------|
 | DO1                | 1   | DigitalOut.0  | SERVO[00].DigitalOut \|= 0x01  | SERVO[00].DigitalOut &= ~0x01       |
 | DO2                | 2   | DigitalOut.0  | SERVO[01].DigitalOut \|= 0x01  | SERVO[01].DigitalOut &= ~0x01       |
@@ -77,27 +79,26 @@ Mapování výstupů je podobné:
 | DO5                | 1   | DigitalOut.2  | SERVO[00].DigitalOut \|= 0x04  | SERVO[00].DigitalOut &= ~0x04       |
 | DO6                | 2   | DigitalOut.2  | SERVO[01].DigitalOut \|= 0x04  | SERVO[01].DigitalOut &= ~0x04       |
 
-Hodnoty analogových vstupů AN1, AN2 se objeví v proměnných `SERVO[00].AnalogIn` a `SERVO[01].AnalogIn`.
+Analog inputs values AN1, AN2 appears in the  `SERVO[00].AnalogIn` and `SERVO[01].AnalogIn` variables.
 
+##Communication with PC
+TGMcontroller uses two gigabit Ethernet ports for communicating with outer world.
+The so called service port (X11) implements standard protocols: TCP, UDP, Profinet I/O and Modbus TCP.
+All these protocols can be used simultaneously if desired.
+The important role for these protocols plays the IP address (see below).
+This service port can be used in larger networks where Ethernet switches, routers or bridges are necessary.
+Up to 16 external clients can be connected at the same time.   
 
-##Komunikace s počítačem
-TGMcontroller používá dva gigabitové ethernetové porty pro komunikaci s okolním světem.
-Tzv. service port (X11) implementuje standardní protokoly: TCP, UDP, Profinet I/O a Modbus TCP.
-Všechny tyto protokoly lze v případě potřeby používat současně.
-Důležitou roli pro tyto protokoly hraje IP adresa (viz níže).
-Tento service port lze použít ve větších sítích, kde jsou nutné ethernetové switche, směrovače nebo bridge.
-Současně může být připojeno až 16 externích klientů.   
+As the TGMcontroller can be also used as a replacement for real-time extension of a PC, the Fast Service Port (X12) is implemented.
+It uses a custom protocol and should be used only for peer to peer Ethernet connection, i.e. a direct cable between PC and TGMcontroller.
+The FSP can be characterized by a very fast response time and allows very high data bandwidth.
+It does not use any IP address and therefore is very easy to setup – just plug the Ethernet cable to X12 FSP port and to any free Ethernet NIC adapter on a PC (preferably a built-in adapter on the motherboard or a PCIe adapter).
+The supporting communication Control Observer’s DLL (`TGM_DEV_FSP_5.dll` or `TGM_DEV_FSP_5_x64.dll`) scans all the available PC’s adapters and choose the connected one during startup.
+The disadvantage is that a [Winpcap](https://www.winpcap.org/) or [Npcap](https://npcap.com/) driver must be installed on the PC.
 
-Protože TGMcontroller lze použít také jako náhradu za rozšíření PC v reálném čase, je implementován Fast Service Port (X12).
-Používá vlastní protokol a měl by být používán pouze pro peer to peer ethernetové připojení, tj. přímý kabel mezi PC a TGMcontrollerem.
-FSP se může vyznačovat velmi rychlou dobou odezvy a umožňuje velmi vysokou šířku pásma.
-Nepoužívá žádnou IP adresu, a proto se velmi snadno nastavuje.
-Stačí připojit ethernetový kabel k portu X12 FSP a k libovolnému volnému adaptéru síťové karty Ethernet v počítači (nejlépe k vestavěnému adaptéru na základní desce nebo k adaptéru PCIe).
-Podpůrná knihovna DLL komunikace Control Observer (`TGM_DEV_FSP_5.dll` nebo `TGM_DEV_FSP_5_x64.dll`) prohledá všechny dostupné adaptéry PC a při spuštění vybere ten připojený.
-Nevýhodou je, že v počítači musí být nainstalován ovladač [Winpcap](https://www.winpcap.org/) nebo [Npcap](https://npcap.com/).
-
-##IP adresa
-Výchozí IP adresa je `192.168.1.188`. Lze ji změnit v souboru `TGM.INI`:
+##IP address
+The default IP address is `192.168.1.188`.
+It can be modified in the `TGM.INI` file:
 
 ``` ini
 [DHCP]
@@ -107,17 +108,18 @@ Mask=255.255.255.0
 Gateway=192.168.1.1
 DNS=8.8.8.8
 ```
-Po změně IP adresy nezapomeňte ve stejném ethernetovém segmentu nastavit také správnou adresu brány.   
+After changing the IP address, be sure to set also the right Gateway address in the same Ethernet segment.   
 
-Pro automatické přidělování IP adres je také možné použít DHCP (v sítích se směrovačem).
-Nastavením `Enable=1` se tato funkce aktivuje.
-Když proces DHCP proběhne úspěšně, na LED displayi se zobrazí přidělená IP adresa.
-Upozorňujeme, že to může nějakou dobu trvat.
-Pokud se proces DHCP nezdaří (po uplynutí časového limitu několika desítek sekund), použije se místo toho statická IP adresa ze souboru `TGM.INI`.
+It is also possible to use DHCP for automatic IP address assignment (in the networks with a router).
+Setting `Enable=1` activates this feature.
+The assigned IP address is displayed on the LED display when the DHCP process succeeds.
+Note that it could take some time.
+If the DHCP is not successful (after timeout of several tenths of seconds), the static IP address from `TGM.INI` file is used instead.
 
-##Adresa MAC
-TGMcontroller přečte svou interní jedinečnou hodnotu DNA a vytvoří z ní adresu MAC.
-Automatická adresa MAC začíná vždy `00:0A`. Tuto hodnotu lze přepsat záznamem v souboru TGM.INI v sekci [DHCP]:
+##MAC address
+TGMcontroller reads its internal unique DNA value and invents a MAC address from it.
+The automatic MAC address always begins with `00:0A`.
+The value can be overridden by an entry in the `TGM.INI` file in the `[DHCP]` section:
 
 ``` ini
 [DHCP]
@@ -125,59 +127,63 @@ Automatická adresa MAC začíná vždy `00:0A`. Tuto hodnotu lze přepsat zázn
 MacAddress=00.xx.xx.xx.xx.xx.xx
 ```
 
-První číslo musí být vždy `00`, jinak je položka ignorována.
-Ostatní hodnoty `"xx"` mohou být libovolné.
-Všimněte si, že se používají hexadecimální čísla.
+The first number must be always `00`, otherwise the entry is ignored.
+Other values “`xx`” can be as desired.
 
-##Vývoj a nahrávání PLC
-Zdrojový kód PLC TGMotion je vždy kompatibilní se všemi deriváty TGMotion (Windows PC s rozšířením pro reálný čas, TGMmini, TGZ+Motion, TGMcontroller a případnými budoucími systémy).
-To znamená, že PLC lze naprogramovat a otestovat např. na PC a poté pouze překompilovat pro systém TGMcontroller. PLC musí být napsáno v jazyce C/C++.   
+!!! note "number format"
+	Hexadecimal numbers are used.
 
-Program PLC lze zkompilovat na libovolném počítači se systémem Windows nebo Linux.
-Všechny potřebné aplikace jsou open source.
-Je nutný meziplatformní kompilátor.
-Musí to být kompilátor `GCC` s názvem `gcc-arm-none-eabi`.
-Nejnovější verzi lze stáhnout z [webových stránek ARM](https://developer.arm.com/).
-Vyberte nejnovější verzi ZIP a rozbalte ji do libovolné složky.
-Překladač musí podporovat alespoň standard C++17.
-Projekt pro PLC používá standardní makefile GNU.
-K provedení příkazů `makefile` je nutné použít program `mingw32-make`.
-Program `mingw32-make` lze stáhnout např. ze [sourceforge.net](https://sourceforge.net/projects/mingw/) a musí být dostupný z příkazového řádku (např. přidáním jeho cesty do systémové proměnné `PATH` nebo použitím jeho názvu spolu s cestou v příkazovém řádku).
-Kompilátor GCC není nutné mít v `PATH`.
-Makefile má téměř pevnou strukturu, pouze seznam .c/.h souborů a cestu ke kompilátoru je nutné upravovit.
-Pokud je makefile správný, lze PLC vytvořit příkazem
+##PLC development and upload
+The source code of the TGMotion’s PLC is always compatible with all the TGMotion derivatives (Windows PC with real-time extension, TGMmini, TGZ+Motion, TGMcontroller and possible future systems).
+It means that the PLC can be programmed and tested e.g.
+on PC and then just recompiled for the TGMcontroller system.
+The PLC must be written in C/C++ language.
+The PLC program can be compiled on any PC with Windows or Linux.
+All needed applications are open source.
+A cross compiler is necessary, it must be GCC compiler called gcc-arm-none-eabi.
+The latest version can be downloaded from [ARM website](https://developer.arm.com/).
+Choose the latest ZIP version and extract it to any folder.
+The compiler must support at least the C++17 standard.   
+
+The project for PLC uses the GNU standard makefile.
+It is necessary to use the `mingw32-make`.
+The `mingw32-make` can be downloaded for example at [sourceforge.net](https://sourceforge.net/projects/mingw/)and must be accessible from command line (e.g. by adding its path to the `PATH` system variable or using its filename together with the path on the command line).
+Note that there is no need to have the GCC compiler in `PATH`.   
+
+The makefile has almost fixed structure, only the list of source/header files and the path to the compiler is necessary to edit or modify.
+When the makefile is correct, the PLC can be created by command
 
 ``` powershell
 mingw32-make all
 ```
 
-v adresáři, kde se nachází soubor makefile a zdrojové soubory.
-Volitelně použijte úplnou cestu k souboru mingw32-make.exe, např.
+executed in the directory where the makefile and source files are located.
+Optionally use the full path of the mingw32-make.exe file, like
 
 ``` powershell
 C:\PLC\projects\gnu\mingw32-make all
 ```
 
-Chcete-li znovu sestavit PLC, nejprve vyčistěte mezisoubory pomocí následujících kroků. 
+To rebuild the PLC, first clean the intermediate files by
 
 ``` powershell
 mingw32-make clean
 ```
 
-a pak jej sestavte pomocí
+and then build it by
 
 ``` powershell
 mingw32-make all
 ```
 
-Chcete-li jej zkompilovat s využitím více jader procesoru, použijte volbu `-j<číslo>`, např.
+Use the `–j<number>` option to compile it using more CPU cores, e.g.
 
 ``` powershell
 mingw32-make -j4 all
 ```
-(používá čtyři vlákna pro kompilaci projektu, což urychluje proces).   
+(Uses four threads for project compile, speeding up the build process.)
 
-Příklad souboru makefile:
+Example of the makefile:
 
 ``` mf
 #path to TGM include files
@@ -255,40 +261,38 @@ clean:
 del /Q $(OBJECTS) $(EXECUTABLE) $(BIN_FILE) $(DUMP_FILE)
 ```
 
-Po vytvoření spustitelného souboru `.ELF` vytvoří soubor makefile binární soubor a následně jej orazítkuje samostatným nástrojem `tgm_bin_stamper.exe`.   
+After creating executable `.ELF` file, the makefile creates a binary file and subsequently stamp it by a standalone utility `tgm_bin_stamper.exe`.
+Ask TG Drives representatives for an example PLC program.   
 
-Požádejte zástupce společnosti TG Drives o příklad programu PLC.
-Na SD kartě je také příklad programu spolu s dalšími pomocnými soubory.
-Projekt obsahuje všechny potřebné soubory, nástroje kompilátoru, soubor linkerového skriptu, program stamper, BSP (board support package) a veřejné soubory TGMotion include.
-Soubor `main.cpp` obsahuje nezbytnou přístupovou funkci `GetProcAddress()`, která slouží k získání adres umístění hlavních funkcí PLC: `Program_Ini(), Program_01(), Program_02(), Program_03(), Program_04()`.
-Funkce `GetProcAddress()` musí být umístěna na startovací adrese `0x07800000` a nesmí být optimalizována.
-Dále inicializuje standardní knihovnu jazyka C a všechny závislosti, jako jsou ukazatele na virtuální funkce a inicializace lokálních a globálních proměnných.   
+There is also an example program on the SD card together with other auxiliary files.
+The project contains all the necessary files, compiler tools, linker script file, stamper program, BSP (board support package) and TGMotion public include files.
+The file `main.cpp` contains the necessary access function `GetProcAddress()` which is used to get placement addresses of the main PLC functions: `Program_Ini(), Program_01(), Program_02(), Program_03(), Program_04()`.
+The function `GetProcAddress()` must be placed at startup address `0x07800000` and must not be optimized.
+It also initializes the C standard library and all the dependencies like pointers to virtual functions and initialization of local and global variables.   
 
-Viz. také samostatná příručka o programování PLC pomocí TGMotion.
+See also the separate manual about [PLC programming in TG Motion](../../TGMotion/md/PLC.md#MotionPLC).
 
 
-##Spuštění PLC a autostart
-Kromě okna *Systémové soubory* programu **Control Observer** je k dispozici okno určené pro programování PLC - *PLC Control*.
-Stačí nastavit správný název souboru PLC a nahrát jej do **TGMcontroller**.
-PLC se spustí kliknutím na tlačítko `[Spustit]`. 
+##PLC start and autostart
+In addition to Control Observer’s System Files window, there is a dedicated one for PLC programming – PLC Control.
+Just set the correct PLC filename and Upload it to the TGMcontroller.
+The PLC is started by clicking the button `[Run]`.
 
 ![PLC control dialog](../img/PLCcontrol.png){: style="width:60%;" }
 
-Proces `Run PLC` provede následující sekvenci:
+The Run PLC process performs the following sequence:
 
-1. Zastaví všechny běžící PLC a počká na dokončení všech funkcí `Program_XX()`.
-2. Vymaže paměť PLC DATA.
-3. Vymaže (nastaví na nulu) všechny digitální výstupy připojených I/O zařízení i servopohonů. Nastaví režim všech servopohonů na nulu.
-4. Nastaví také interní digitální výstupy na nulu (pokud jsou namapovány na TGMotion).
-5. Hlavní smyčka serva je zastavena a nejsou přenášeny žádné další zprávy EtherCAT.
-6. PLC se načte do paměti z karty SD.
-7. Hlavní smyčka serva se znovu spustí, komunikace EtherCAT se aktivuje.
-8. Zavolá se inicializační funkce PLC, `Program_Ini()`, a pokud je úspěšná (vrátí 1), zavede se periodické volání funkce `Program_XX()`, tj. PLC se spustí.
+1. Stops any running PLC and wait for all the `Program_XX()` functions to finish.
+2. Clear the PLC DATA memory.
+3. Clear (set to zero) all the digital outputs of connected I/O devices as well as servo drives. Set the mode of all servo drives to zero.
+4. Set also the internal digital outputs to zero (if they are mapped to TGMotion).
+5. The main servo loop is stopped and no additional EtherCAT messages are transmitted.
+6. The PLC is loaded to memory from SD card.
+7. The main servo loop starts again, the EtherCAT communication is active.
+8. The PLC initialization function, `Program_Ini()` is called and when succeeds (returns 1), the periodic call of `Program_XX()` functions is established, i.e. the PLC is started.
 
-   
-	
-PLC lze spustit po spuštění TGMcontrolleru.
-Nastavte položku v `TGM.INI`
+The PLC can be started after the TGMcontroller boots up.
+Set the `TGM.INI` file entry
 
 ``` ini
 [PLC_Configuration]
@@ -296,24 +300,24 @@ Nastavte položku v `TGM.INI`
 Autostart_PLC=1
 ```
 
-Mezi spuštěním PLC a komunikací EtherCAT není žádná synchronizace.
-Obvykle se PLC spouští rychleji než komunikace EtherCAT.
-Programátor s tím musí počítat a čekat například na hodnotu stavu EtherCAT (`operational = 8`) připojených zařízení nebo na požadovaný počet nalezených zařízení EtherCAT na sběrnici (proměnná `SYSTEM.MAIN.Found_Total_Number_Of_ECAT_Devices`).
+There is no synchronization between PLC start and EtherCAT communication.
+Usually the PLC starts up faster than the EtherCAT communication.
+The programmer must count with it and wait for example for EtherCAT state value (operational = 8) of the attached devices, or the requested number of found EtherCAT devices on the fieldbus (variable `SYSTEM.MAIN.Found_Total_Number_Of_ECAT_Devices`).
 
-##Priorita programů PLC a doba cyklu
-Programy v PLC běží s různou prioritou.
-Je na programátorovi, aby zvolil správnou funkci pro úlohy PLC.
+##PLC programs priority and cycle time
+The programs in the PLC runs with different priority.
+It is up to programmer to choose the right function for PLC tasks.
 
-1.  `Program_04()` má nejvyšší prioritu a probíhá v kontextu funkce servocyklu.
-	Je volán periodicky v intervalu daném hodnotou `Cycle_Time` v souboru `TGM.INI` (v mikrosekundách).
-	Přípustné hodnoty jsou 100, 200, 250, 500, 1000, 2000 a pak 3000, ..., 10000 (po 1000 krocích).
-	Je velmi důležité, aby `Program_04()` netrval déle než přibližně polovinu doby cyklu, jinak by TGMotion neměl šanci provést vlastní výpočty.
-	Příliš zaneprázdněná funkce `Program_04()` není kontrolována, ale problém se velmi rychle objeví na straně EtherCAT systému: 
-	požadované polohy servopohonů nebudou aktualizovány a v samotném servozesilovači vznikne následující chyba.
-	Pokud je bezpodmínečně nutné provést náročný výpočet ve funkci `Program_04()`, je jediným řešením prodloužení doby cyklu.
-		
-2. `Program_03()` má prioritu jen o jeden stupeň nižší, než `Program_04()` a podobně `Program_02()` o dva stupně nižší, než `Program_04()`.
-	Programy jsou volány opakovaně s dobou cyklu uvedenou v souboru `TGM.INI`. Například:
+1. Program_04() has the highest priority and runs in the context of servo cycle function.
+   It is called periodically at the interval given by Cycle_Time value in the `TGM.INI` file (in microseconds).
+   The allowed values are 100, 200, 250, 500, 1000, 2000, and then 3000, …, 10000 (in 1000 steps).
+   It is very important that the `Program_04()` does not last more than approx. half of the cycle time, otherwise TGMotion will not have chance to make its own calculations.
+   The are no checks for too busy `Program_04()` function, but the problem appears very quickly on the EtherCAT side of the system: the desired servo positions will not be updated and a following error arises in the servo amplifier iteself.
+   If it is absolutely necessary to do a heavy calculation in the `Program_04()` function, the only solution is to increase the cycle time.
+2. `Program_03()` has a priority just one step below the `Program_04()` and likewise `Program_02()` two steps below `Program_04()`.
+   The programs are called repeatedly with the cycle time given in the `TGM.INI` file.
+   For example:
+
 		
 	``` ini
 	[PLC_Configuration]
@@ -322,20 +326,19 @@ Je na programátorovi, aby zvolil správnou funkci pro úlohy PLC.
 	Cycle_Time_Program_03=800
 	```
 		
-	Hodnoty se udávají v mikrosekundách a musí být násobkem 200.
-	Minimální povolená hodnota je 200&nbsp;µs.
-	Chcete-li danou funkci zcela zakázat, použijte hodnotu nula.
-	TGMcontroller kontroluje uplynulý čas v každé funkci, a pokud do dalšího volání funkce zbývá méně než 100&nbsp;mikrosekund, ke skutečnému volání dojde až při dalším tiku 200 mikrosekund.
-	TGMcontroller tak může naplánovat jiné úlohy s nižší prioritou (komunikace atd.) a `Program_02()` nebo `Program_03()` nemůže přetížit systém.
-		
-3. `Program_01()` se spouští s nejnižší možnou prioritou v systému.
-	To znamená, že ostatní úlohy, jako je komunikace, obsluha sítě Profinet atd., poběží s vyšší prioritou a budou `Program_01()` poměrně často přerušovat.
-	Na druhou stranu `Program_01()` získá veškerý zbývající čas procesoru, což je obvykle více než 90&nbsp;%.
-	Navíc je funkce `Program_01()` volána co nejrychleji (pokud je funkce téměř prázdná, interval volání je přibližně 200 - 400 ns).
-	Tato koncepce umožňuje implementovat do funkce `Program_01()` jakékoli časově náročné výpočty bez obav z přetížení systému.
-	Pro funkci `Program_01()` neexistuje chování v reálném čase.
-	Doba cyklu v souboru `TGM.INI` musí být nastavena na nulu, jiná hodnota není povolena.
-	Funkce `Program_01()` je volána vždy - nelze ji zakázat.
+   The values are given in microseconds and must be a multiple of 200.
+   The minimal allowed value is 200 µs.
+   To disable the given function completely, use value of zero.
+   TGMcontroller checks the elapsed time in each function, and if less than 100 microseconds remain before the next function call, the actual call will not occur until the next 200-microsecond tick.
+   Thus TGMcontroller can schedule other lower priority tasks (communication, etc.) and the `Program_02()` or `Program_03()` cannot overload the system.
+3. `Program_01()` runs at the lowest priority possible within the system.
+   It means that other tasks, such as communication, Profinet handling, etc. will run with higher priority and will interrupt the `Program_01()` quite often.
+   On the other hand, the `Program_01()` get all the remaining CPU time, which is usually more than 90 %.
+   Additionally, the `Program_01()` is called as fast as possible (if the function is almost empty, the call interval is about 200 – 400 ns).
+   This conception allows to implement any time consuming calculations to the `Program_01()` without the fear of the system overload.
+   Note that there is no real-time behavior for the `Program_01()`.
+   The cycle time in the `TGM.INI` file must be set to zero, no other value is allowed.
+   The `Program_01()` is always called – it can not be disabled.
 	
 	``` ini
 	[PLC_Configuration]
@@ -343,57 +346,57 @@ Je na programátorovi, aby zvolil správnou funkci pro úlohy PLC.
 	```
 
 
-V okně *System Timers* programu **Control Observer** se zobrazuje uplynulý čas různých úloh programu TGMotion.
+The Control Observer’s `System Timers` window shows the elapsed time of various TGMotion’s tasks.
 
 ![System timers dialog](../img/systemTimers.png){: style="width:60%;" }
 
-Všimněte si, že maximální uplynulý čas úlohy `Program_01()` (označené jako PLC 1) zahrnuje také čas všech ostatních úloh, které přerušily úlohu `Program_01()`.
-Podobně je tomu i u `Program_02()`, který může být přerušen `Programem_03()` a hlavní rutinou cyklu serva; a u `Program_03()`, přerušeného hlavní funkcí cyklu.
-Maximální hodnotou je tedy součet uplynulého času funkce PLC a úloh s vyšší prioritou.
-Jediné přesné měření času je uvedeno pro funkci `Program_04()`, protože ji nelze přerušit.
+Note that the maximal elapsed time of the `Program_01()` (labeled as PLC 1) includes also the time of all the other tasks which interrupted the `Program_01()`.
+The similar thing happens for `Program_02()` which can be interrupted by `Program_03()` and the main servo cycle routine; and for `Program_03()`, interrupted by the main cycle function.
+So the maximal value could be the sum of elapsed time of the PLC function and the tasks of higher priority.
+The only exact time measurement is given for `Program_04()`, because it cannot be interrupted.
 
-##Zařízení Profinet I/O
-Zařízení Profinet I/O je ve výchozím nastavení zakázáno.
-Použijte následující nastavení pro jeho povolení v souboru `TGM.INI`:
+##Profinet I/O device
+Profinet I/O device is disabled by default.
+Use the following settings in the `TGM.INI` file:
 
 ``` ini
 [Profinet]
 Enable=1
 ```
 
-Každé zařízení Profinet je specifikováno svou MAC adresou, IP adresou a názvem zařízení.
-Tyto atributy by měly být v rámci sítě Profinet jedinečné.
-Zatímco adresa MAC je pevně daná, název a adresu IP lze nastavit pomocí nástroje pro uvedení do provozu (TIA Portal, Proneta atd.).
-Ve výchozím nastavení je název Profinet TGMcontrolleru prázdný a IP adresa je nastavena na `0.0.0.0`.
-Organizace modulů a slotů je dána konfiguračním souborem `GSDML`.
-K dispozici je devět slotů: 1 × DAP, 4 vstupní sloty (velikost 32, 64, 128 nebo 256 bajtů) a 4 výstupní sloty (se stejnými velikostmi).
-Každý slot má přiřazený parametr, který udává offset dat k paměti PLC DATA.
-Tento parametr lze nastavit pomocí nástroje pro uvedení do provozu nebo pomocí programu Profinet PLC.
+Each Profinet device is specified by its MAC address, IP address and device name.
+These attributes should be unique within the Profinet network.
+While the MAC address is fixed, the name and IP address can be set by a commissioning tool (TIA Portal, Proneta, etc.).
+The default TGMcontroller’s Profinet name is empty and IP address is set to `0.0.0.0`.
+The organization of the modules and slots is given by GSDML configuration file.
+There are nine slots: 1 × DAP, 4 inputs slots (size 32, 64, 128 or 256 bytes) and 4 output slots (with the same sizes).
+Each slot has an associated parameter which gives the data offset to PLC DATA memory.
+This parameter can be set by the commissioning tool or by Profinet PLC program.   
 
-!!! warning "Změna IP"
-	
-	Změnou IP adresy zařízení Profinet se změní i adresa serviceho portu X11.
-	To znamená, že může dojít ke ztrátě TCP/UDP nebo jiné komunikace.
-	Řešením je použití stejné adresy pro service protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
+!!! warning "Service IP change"
+	Be aware that changing the IP address of the Profinet device also changes that address of the service port X11.
+	It means that a possible loss of TCP/UDP or other communication is possible.
+	The solution is to use the same address for service protocols and for Profinet or use the FSP (X12) port for direct communication with the PC, independently to the Profinet network.
 		
 ##Modbus TCP
-Protokol Modbus TCP je ve výchozím nastavení vypnut.
-Chcete-li jej povolit, použijte následující konfiguraci `TGM.INI`:
+The Modbus TCP protocol is disabled by default.
+To enable it, use the following `TGM.INI` configuration:
+
 ``` ini
 [Modbus]
-Povolit=1
+Enable=1
 ```
 
-Paměť PLC DATA se používá pro ukládání nebo příjem dat Modbus.
-Číslo registru Modbus se používá jako offset v paměti.
-Protože se čísla registrů počítají po jednom, je k dispozici násobič s výchozí hodnotou 4.
-Také lze použít globální offset pro posun dat Modbus v paměti DATA (výchozí hodnota 0).
-Doporučuje se, aby byl globální offset dělitelný číslem 4.
-Konečná pozice dat Modbus se vypočítá podle následujícího vzorce:
+The PLC DATA memory is used for Modbus data store or receive.
+The Modbus register number is used as an offset to the memory.
+Because the register numbers count by 1, there is a value multiplier available with the default value of 4.
+Also a global offset can be used to shift the Modbus data in the DATA memory (default value 0).
+It is recommended that the global offset is divisible by 4.
+The final position of the Modbus data is calculated by:
 
 `final_offset_to_data_memory = global_offset + (multiplier × modbus_register_number)`
 
-Globální offset a násobitel lze nastavit také v souboru `TGM.INI`. Například:
+The global offset and multiplier can be set also in the `TGM.INI` file. For example:
 
 ``` ini
 [Modbus]
@@ -402,9 +405,9 @@ Offset=16384
 Multiplier=4
 ```
 
-Podporovány jsou následující příkazy Modbus:
+The following Modbus commands are supported:
 
-| příkaz  | číslo |
+| Command  | Number |
 |----------|----------|
 | READ_COILS            | 1  |
 | READ_DISCRETE_INPUTS  | 2  |
@@ -414,58 +417,48 @@ Podporovány jsou následující příkazy Modbus:
 | WRITE_MULTIPLE_COILS  | 15 |
 | WRITE_MULTIPLE_REGISTERS| 16 |
 
-##Aktualizace firmwaru
-Firmware lze snadno aktualizovat pomocí programu **Control Observer**.
-Stačí vybrat správný soubor v editačním poli *Systémový soubor TGM* a použít tlačítko `[Write]`.
-Soubor může být v počítači uložen pod libovolným názvem.
-Při ukládání souboru na kartu SD použije TGMController správný název souboru.
-Po přenosu souboru se zařízení automaticky restartuje.
-Aktualizovaný firmware se uloží na kartu SD.
-Soubor je možné uložit také přímo na SD kartu pomocí PC, v takovém případě musí být název `TGMC.fw` a soubor musí být v kořenovém adresáři karty.
-Viz také další kapitola o obsahu SD karty.
+##Firmware update
+The firmware can be easily upgraded by **Control Observer**.
+Just select the correct file in the `TGM System File` edit box and use the `[Write]` button.
+Note that the file can be stored on the PC under any file name.
+TGMController uses the correct file name when saving the file to the SD card.
+After the file transfer, the device will be automatically restarted.
+The updated firmware is stored to the SD card.
+It is also possible to store the file directly to the SD card by PC, in that case the name must be `TGMC.fw` and the file must be in the root directory of the card.
+See also the next chapter about the SD card contents.
 
 ![System files FW dialog](../img/systemFilesFW.png){: style="width:60%;" }
 
-Může se stát, že se při zpětném čtení souborů ze zařízení se objeví chyba `Device Offline`, zejména při použití protokolu FSP.
-Obvykle to znamená, že použitý ethernetový adaptér nemá dostatek vyrovnávacích paměti (doporučuje se 32 nebo více).
-Protokol FSP je určen pro výkonné adaptéry, konkrétně pro adaptéry PCIe.
+It could happen that a Device Offline error appears during the read back of the files from the device, especially when using FSP protocol.
+This usually means that used Ethernet adapter has not enough packet buffers (32 or more are recommended).
+The FSP protocol is designed for high performance adapters, namely the PCIe ones.
 
-##Obsah karty SD
-Na kartě SD musí být uloženy dva důležité a povinné soubory s pevnými názvy:
+##SD card contents
+Two important and mandatory files with fixed names must be stored on the SD card:
 
-- `TGMC.fw` - soubor firmwaru (ve speciálním binárním formátu)
-- `TGM.INI` - konfigurační textový soubor
+- `TGMC.fw` - firmware file (in special binary format)
+- `TGM.INI` - configuration text file
 
-Existují také možné další soubory:
+There are also possible additional files:
 
-- `TGM_PLC.bin` - virtuální PLC vytvořené uživatelem
-- `Eeprom.bin` - binární konfigurační soubor pro PLC
+- `TGM_PLC.bin` - virtual PLC created by user
+- `Eeprom.bin` - binary configuration file for PLC
 
-Všechny čtyři výše uvedené soubory lze zapsat na kartu SD pomocí serviceho programu **Control Observer** v počítači.
-Tyto soubory lze také vyčíst zpět.
-Protože karta SD používá standardní souborový systém FAT32, lze k ní také přímo přistupovat pomocí počítače a čtečky karet SD.
-Po vložení upravené SD karty zpět do řídicí jednotky TGMcontroller je nutné ji restartovat pomocí programu **Control Observer** nebo sekvencí vypnutí/zapnutí.
-Názvy těchto souborů jsou pevně dané.
+All the four above files can be written to SD card by PC service program Control Observer.
+These files can be also read back.
+Since the SD card uses standard FAT32 file system, it can be also directly accessed by a PC and SD card reader.
+When the modified SD card is inserted back to the TGMcontroller, it must be restarted by Control Observer or by power off/on sequence.
+These file names are fixed.
 
-## Safe boot
-TGMcontroller se normálně zavádí z karty SD.
-V případě vadné karty nebo poškozeného firmwaru je možné zařízení spustit z interní flash paměti.
-Vyjměte SD kartu a restartujte systém.
-Bez SD karty trvá spuštění dlouho.
-Systém načte výchozí obsah souboru `INI` s IP adresou `192.168.1.188`.
-Pokud je to možné, použijte port FSP, protože na straně počítače není nutné žádné nastavení.
-Vložte novou SD kartu naformátovanou na FAT32 a nahrajte všechny potřebné soubory pomocí **Control Observer**: `TGM.INI` a poté firmware TGMcontroller.
-Zařízení se automaticky restartuje a mělo by se správně spustit z SD karty.   
+##Safe boot
+TGMcontroller normally boots from SD card.
+In the case of faulty card or broken firmware, it is possible to start the device from internal flash memory.
+Remove SD card and restart the system.
+It takes a long time to start it without the SD card.
+The system loads a default INI file contents with the IP address `192.168.1.188`.
+Use the FSP port if possible since no settings on the PC side is necessary.
+Insert a new SD card formatted to FAT32 and upload all the necessary files by Control Observer: `TGM.INI` file and then TGMcontroller firmware.
+The device will be automatically restarted and should boot correctly from the SD card.   
 
-Soubor `TGM.INI` je uložen na kartě SD v přirozené textové podobě, takže v případě chybného nastavení je možné jej upravit přímo pomocí počítače.
-Po vložení SD karty zpět do přístroje je nutné provést restart zařízení.
-
-
-
-
-
-
-
-
-
-
+The `TGM.INI` file is stored on the SD card in its natural text form, so it is also possible edit it directly by PC in the case of wrong settings.
+A restart of the TGMcontroller device is necessary after insertion of the SD card back to the device.

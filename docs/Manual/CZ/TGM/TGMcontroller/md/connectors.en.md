@@ -19,7 +19,11 @@ ___
 
 	--8<-- "md/X1_24V_5pin_BCZ_TGM.en.md"
 	
--   **X11 - TGMotion systémový konektor**
+	!!! info "EIx"
+		Extended inputs work as standard digital inputs 0 – 24 V. 
+		See also [IO mapping](software.md#ControllerINI)).
+	
+-   **X11 - TGMotion service connector**
 
     ---
 	![X11 service RJ45](../../../../source/img/RJ45_X11_service.png){: style="width:60%;" }
@@ -28,8 +32,8 @@ ___
 
 	---
 
-	Slouží k připojení systému TGMotion (protokol TCP nebo UDP) pomocí programu Control Observer a dalších uživatelských aplikací.
-	Dalšími podporovanými protokoly jsou Modbus/TCP a Profinet IO.
+	It is used for connecting the TGMotion system (TCP or UDP protocol) by Control Observer and other user applications.
+	Additional supported protocols are Modbus/TCP and Profinet IO (see below).
 		
 -   **X12 - FSP port**
 
@@ -40,15 +44,15 @@ ___
 
 	---
 
-	Tento port se používá jako tzv. Fast Service Port. 
-	Slouží pro velmi rychlé peer-to-peer spojení mezi TGMcontrollerem a PC.
-	Používá se speciální protokol.
-	V počítači musí být nainstalován ovladač [Winpcap](https://www.winpcap.org/) nebo [Npcap](https://npcap.com/). 
-	Není nutné žádné nastavení, komunikační DLL sama najde správný síťový adaptér PC. 
-	Pro dosažení nejlepšího výkonu použijte PCIe síťový adaptér.
-	Adaptéry USB-Ethernet lze také použít, ale mají menší výkon.
-	Některé levné adaptéry USB-Ethernet s protokolem FSP vůbec nefungují.
-	Adaptér musí mít paměť pro alespoň 32 paketů najednou.
+	This port is used for so called Fast Service Port.
+	Serves for very fast peer-to-peer connection between TGMcontroller and PC.
+	Special custom raw protocol is used.
+	The PC must install [Winpcap](https://www.winpcap.org/) or [Npcap](https://npcap.com/) driver.
+	No setting is necessary, the communication DLL finds the correct PC network adapter.
+	For best performance, use the built-in or PCIe NIC adapters.
+	The USB-Ethernet adapters can be also used, but suffer of worse performance.
+	Some low cost USB to Ethernet adapters don’t work at all with the FSP protocol.
+	The adapter must have space for at least 32 packets at one time.
 	
 -   **X13 - EtherCAT master**
 
@@ -59,14 +63,12 @@ ___
 
 	---
 
-	Tento port slouží k připojení zařízení EtherCAT na sběrnici EtherCAT.
-	Není nutné žádné nastavení.
-	Port je schopen pracovat rychlostí 100 Mbit nebo 1 Gbit v závislosti na prvním připojeném zařízení.
-	K dispozici je několik 1 Gbitových zařízení EtherCAT, např. servopohony TGZ nebo několik EtherCAT bridge zařízení od jiných výrobců.
-	Při použití sběrnice 1 Gbit musí všechna zařízení v řetězci podporovat tuto rychlost.
+	EtherCAT master connector – use this port for connecting the EtherCAT devices in the EtherCAT fieldbus.
+	No setting is necessary.
+	The port is capable of 100 Mbit or 1 Gbit speeds, depending of the first connected device.
+	There are a few 1 Gbit EtherCAT devices available, e.g.	TGZ servo drives or several EtherCAT bridges from other manufacturers.
+	If using the 1 Gbit fieldbus, all the devices in the chain must be using the 1 Gbit speed.
 	
-	
-
 </div>	
 
 ___
@@ -106,7 +108,7 @@ ___
     ---
 ![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
--    Použijte microSD kartu průmyslové specifikace. Karta je součástí dodávky servozesilovače TGZ.
+-    Use a standard microSD card.
 
 -   **X10 - CAN**
 
@@ -132,11 +134,11 @@ ___
 	
 	![LED display](../../../../source/img/TGZ_LED.png){: style="width:60%;" }
 	
--	Při spuštění se na LED displayi zobrazuje IP adresa zařízení.
-	Za textem "IP" následují čísla.
-	Protože čísla mohou mít až 3 číslice, je každé celé číslo odděleno tečkou.
-	Například pro zobrazení čísla "192" se nejprve zobrazí jedna číslice "1" (bez tečky) a poté "92" (s tečkou).
-	Tímto způsobem lze zobrazit i složité IP adresy, například 192.168.128.179.
+-	The LED display shows the device IP address during startup.
+	The text “IP” is followed by numbers.
+	Since the numbers can have up to 3 digits, each complete number is separated by a dot.
+	For example to display the number “`192`”, first a single “1” is displayed (without a dot) and then “92.” (with the dot).
+	Complex IP addresses like `192.168.128.179` can be displayed in this way.
 
 -	**status LEDs**
 
@@ -144,8 +146,9 @@ ___
 	
 	![status LEDs](../../../../source/img/statusLedsECAT.svg){: style="width:100%;" }
 	
--	K dispozici jsou čtyři další LED diody označené jako ERROR (červená barva) a READY (zelená barva).
-	READY ukazuje, že daná osa je v souboru `TGM.INI` povolena, naopak ERROR znamená, že osa není v souboru `TGM.INI` namapována na TGMotion.
+-	There are four additional LED diodes labeled as ERROR (red color) and READY (green color) for two axes.
+	The READY shows that this particular axis is enabled in the `TGM.INI` file, on the other hand ERROR means the axis is not mapped to TGMotion by the `TGM.INI` file.
+	See also [IO mapping](software.md#ControllerINI) about the entries in the `TGM.INI` file.
 	
 
 </div>
@@ -175,6 +178,7 @@ ___
 	---
 
 	--8<-- "md/X5_FBE_12pin_B2CF_TGM.en.md"
+	The X5 connector is used for an incremental encoder (IRC).
 
 -   **X6 - Feedback axis 1**
 
@@ -195,9 +199,9 @@ ___
 
 	--8<-- "md/X6_FB1_8pin_B2CF_TGM.en.md"
 	
-	!!! note ""
-		Konektor X6 podporuje buď zpětnou vazbu Hiperface DSL, nebo standard EnDAT 2.2.
-		Typ použitého komunikačního standardu zpětné vazby je uveden v souboru `TGM.INI`: `Servo[xx].FeedbackType=1` pro DSL a `Servo[xx].FeedbackType=2` pro EnDAT.
+	!!! note "FB1"
+		The X6 connector supports either Hiperface DSL feedback or EnDAT 2.2 standard.
+		The type of the used feedback communication standard is given in the `TGM.INI` file: `Servo[xx].FeedbackType=1` is for **DSL** and `Servo[xx].FeedbackType=2` is for **EnDAT**.
 	
 -   **X7 - Feedback axis 2**
 
@@ -219,5 +223,5 @@ ___
 	--8<-- "md/X7_FB2_8pin_B2CF_TGM.en.md"
 	
 	!!! note ""
-		Konektor X7 lze použít pro připojení zpětné vazby DSL nebo SSI.
-		Použijte následující nastavení v souboru `TGM.INI`: `Servo[xx].FeedbackType=1` pro DSL a `Servo[xx].FeedbackType=3` pro SSI. 
+		The X7 connector can be used with DSL or SSI feedback.
+		Use the following settings in the `TGM.INI`: `Servo[xx].FeedbackType=1` for the DSL and `Servo[xx].FeedbackType=3` for the SSI.

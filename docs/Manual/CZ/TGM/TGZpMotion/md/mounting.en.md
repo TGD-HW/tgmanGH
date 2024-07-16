@@ -1,4 +1,4 @@
-TGMmini se uchycuje na standarní DIN lištu 35&nbsp;mm pomocí dodávaného adaptéru.
+The TGZ+Motion device attaches to the mounting plate as a standard TGZ servo amplifier.
 
 ![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 

@@ -1,131 +1,156 @@
-##Adresář `/TGMotion`
-Všechny systémové a konfigurační soubory TG Motion se nacházejí v adresáři `/TGMotion`. Struktura adresáře je následující:
-`{++ /TGMotion/app/cnc++}` – knihovny CNC modulu (`libSF_xxx.so`) a testovací program `Qt_CNC_Tester_5`   
-`{++ /TGMotion/bin ++}` – určen pro uživatelské PLC programy   
-`{++ /TGMotion/rtss ++}` – obsahuje vlastní TG Motion (`tgm501-xeno`) a jeho konfiguraci `TgMotion5xx.ini`   
-`{++ /TGMotion/system ++}` – obslužné programy pro ovládání TG Motion – spuštění, zastavení, reset: služby `tgm_starter_service`, a `tgm_xeno_service`, obslužný program `tgm_sc` a uživatelské rozhraní `tgm_control_panel`.
-Dále jsou zde umístěny systémové knihovny `libTGM_Comm_Int_5.so` a `libTGM_OPC_Server_5.so`, které jsou zaregistrovány do systému Linux pomocí příkazu `ldconfig`.   
-`{++ /TGMotion/tools/TGM_5xx/4034_905 ++}` – další pomocné utility, např. konzole pro zobrazení chybových a uživatelských zpráv `TGM5xxDebugConsole`, servery OPC UA, ModbusTCP, a server pro emulaci DNC na sériovém portu.   
-`{++ /TGMotion/Windows ++}` – zde se nacházejí všechny utility, které lze použít pro práci s TGMmini. Tyto programy běží pod Windows a komunikují s TGMmini pomocí protokolu TCP/IP. K dispozici je mj.
-Control Observer, konzole pro zobrazení chybových a uživatelských zpráv, DLL knihovny CNC modulu a testovací program `Qt_CNC_Tester_5.exe`.
+##`/TGMotion` directory
+All the files necessary for the TG Motion system are located in the `/TGMotion` directory. The structure is as follows:
 
-##Spuštění TG Motion
-Pro administraci TG Motion slouží program `tgm_control_panel`, který lze spustit přímo z pracovní plochy grafického systému Xfce (desktop).  
+- `{++ /TGMotion/app/cnc++}` – CNC module libraries (`libSF_xxx.so`)  and CNC tester program `Qt_CNC_Tester_5`   
+- `{++ /TGMotion/bin ++}` – used for user Virtual PLC programs
+- `{++ /TGMotion/rtss ++}` – used for user Virtual PLC programs (`tgm501-xeno`) and its configuration `TgMotion5xx.ini`   
+- `{++ /TGMotion/system ++}` – TG Motion administration utilities for start, stop, reset. 
+ 	The service manager `tgm_sc` runs the TG Motion service program (`tgm_starter_service`, `tgm_xeno_service`) from command line.
+ 	There is also a GUI program called `tgm_control_panel`.
+ 	The system libraries `libTGM_Comm_Int_5.so` and `libTGM_OPC_Server_5.so` are located here.
+ 	They are registered by `ldconfig`, so it could be used anywhere from TGMmini’s file system.  
+- `{++ /TGMotion/tools/TGM_5xx/4034_905 ++}` – more utilities, e.g. console for displaying messages from **TG Motion** (`TGM5xxDebugConsole`), OPC UA server, ModbusTCP server and DNC emulation through serial port.  
+- `{++ /TGMotion/Windows ++}` – contains useful Windows utilities for working with **TGMmini**.
+ 	Included is e.g.Control Observer, CNC module libraries and the example CNC program `Qt_CNC_Tester_5.exe`.
+
+##TG Motion administration
+The stand-alone program called `tgm_control_panel` is used for TG Motion management.
+Also the Virtual PLC can be started manually from here.   
  
 ![Control panel in Xfce](../img/TGMcontrolPanel.png){: style="width:40%;" }
 
-Konfigurace je uložena v souborech `tgm_starter_service.ini` a `tgm_xeno_service.ini`. Pomocí položky `Autostart` lze nastavit automatické spuštění TG Motion po startu TGMmini.   
-Standardně je povoleno vzdálené ovládání TG Motion po síti Ethernet z PC. Pokud toto ovládání není potřeba, lze jej vypnout v souboru `tgm_xeno_service.ini` nastavením
+The button **Save to INI** saves the actual settings to the `tgm_starter_service.ini` file.
+Saved are the path to the TG Motion binary and state of the Autostart check box.
+The path to the Virtual PLC is not saved.
+It is necessary to set it in the `TgMotion5xx.ini` file directly, e.g. by using the Mousepad editor: 
+
+``` bash
+mousepad /TGMotion/rtss/TgMotion5xx.ini
+```
+
+The remote control of the TG Motion system is enabled by default.
+It can be changed in the `/TGMotion/system/tgm_xeno_service.ini` file by
+
 ```
 [Server]
 Enabled=0
 ```   
-a následným restartem TGMmini.
 
-##Spuštění PLC
-Uživatelský PLC program se spouští a zastavuje standardním způsobem, tak jako na PC. Nejdříve 
-je nutno do registru `SYSTEM.Main.PLC_Name` uložit plnou cestu k souboru typu `.so`. Název souboru je vždy ve formátu UNICODE (kódování UTF-16) a maximální délka názvu včetně cesty je 512 znaků
-(včetně koncové nuly). Poté lze spustit či zastavit PLC program nastavením bitů v registru `SYSTEM.Main.PLC_Ctrl`. Podrobný popis viz. manuál k TG Motion.   
+A restart of TGMmini is necessary.
 
-Pokud běží server pro vzdálený přístup, ovládání PLC lze provádět i pomocí programu Control Observer na PC. V něm je nutno ručně zadat plný název souboru PLC (přípona `.so`). 
-Jméno i cesta k souboru se udává jako lokální název, např. `/TGMotion/bin/Universal_PLC.so`.   
+##Start of Virtual PLC program
+Virtual PLC is controlled in the same way as on the PC.
+First, the complete path name to PLC executable binary file must be written to the `SYSTEM.Main.PLC_Name` register.
+Filename is always in UNICODE (UTF-16) format, maximum path length is 512 characters (including the null terminator).
+Then the PLC can be easily started or stopped by setting the control bits in the `SYSTEM.Main.PLC_Ctrl` register.
+For detailed description see the [TG Motion operation manual](../../TGMotion/md/PLC.md#MotionPLC).
+If the remote server is running (the default option), the PLC can be controlled from PC by utility program **Control Observer**.
+The PLC filename must be entered as local TGMmini filename, e.g. `/TGMotion/bin/Universal_PLC.so`.
+For more information please see the [Control Observer manual](https://www.tgdrives.cz/fileadmin/user_upload/download-TGMotion/TG-Motion-4-Control-Observer_EN.pdf).
 
-Cesta k uživatelskému PLC programu se neukládá. Je nutno ji ručně upravit přímo v konfiguračním souboru `TgMotion5xx.ini`, např. pomocí editoru Mousepad z okna terminálu příkazem:
-```
-mousepad /TGMotion/rtss/TgMotion5xx.ini
-```
+##Connection to shared memory
+All the shared memory access for controlling the TG Motion is done by library `TGM_Comm_Int_5`.
+The standard file name and location is `/TGMotion/system/libTGM_Comm_Int_5.so`.
+All the TGMotion utilities and example programs use this library.
+Its complete description and usage of this library is written in a [separate manual](https://www.tgdrives.cz/en/download/control-systems-pc-and-panels-download/#c471).
 
-##Připojení ke sdílené paměti
-Pro připojení ke sdílené paměti slouží knihovna DLL `TGM_Comm_Int_5`. 
-Na TGMmini se soubor jmenuje `libTGM_Comm_Int_5.so` a je standardně umístěn v adresáři `/TGMotion/system`. 
-Pomocné programy a utility systému TG Motion tuto knihovnu také využívají. 
-Popis knihovny a její použití je uveden v samostatném návodu. Knihovna je zaregistrovaná v systému Linux pomocí příkazu `ldconfig`.
+##Shared memory remote access from PC
+If the server for remote control is running (see above), the shared memory can be accessed remotely from PC.
+The Windows DLL file `TGM_Comm_Int_5.DLL` file together with its plugin `TGM_Mini_5.DLL` is used for this purpose.
+Also the **Control Observer** utility program can be easily used for all the operations with shared memories on TGMmini.
+It is necessary just to know the IP address of the TGMmini on the local network.
 
-##Vzdálené připojení z PC
-Pokud je na TGMmini spuštěn server pro vzdálený přístup, lze ke sdílené paměti TGMmini přistupovat vzdáleně z PC. 
-Pomocí knihovny `TGM_Comm_Int_5.DLL` a její pomocné komponenty `TGM_Mini_5.DLL` lze pracovat s lokální sdílenou pamětí (TG Motion na PC) transparentně, stejně jako se vzdálenou sdílenou pamětí (TG Motion na TGMmini). 
-Stejně tak lze přímo pracovat s programem Control Observer na PC a pomocí něj číst a zapisovat hodnoty do sdílených pamětí TGMmini.
-Pro úspěšné vzdálené připojení je pouze nutné znát IP adresu TGMmini na lokální síti. 
-Nastavení IP adresy je popsáno v kapitole _IP adresa_.
+##File transfer
+Since the TGMmini is complete Linux computer, it is very easy to transfer files from/to PC.
+The SCP protocol is used.
+Suitable Windows client is e.g. user-friendly program called WinSCP [www.winscp.net](https://winscp.net/eng/download.php).
+For successful connection the IP address, username and password are needed.
+It is recommended not to use the superuser (root) for file transfers.
 
-##Přenos souborů do TGMmini po síti Ethernet
-Soubory mezi PC a TGMmini lze snadno přenášet pomocí protokolu SCP. 
-Na PC s Windows je vhodné použít uživatelsky příjemný program WinSCP. 
-Po nastavení IP adresy, přihlašovacího jména a hesla (není vhodné používat uživatele root) se WinSCP připojí, v levém panelu zobrazuje lokální soubory na PC a v pravém panelu soubory TGMmini.
-K dispozici jsou všechny potřebné operace: kopírování, přesun, mazání a editace souborů, stejně tak nastavování atributů a přístupových práv.
-Program WinSCP lze stáhnout z internetu např. z adresy [www.winscp.net](https://winscp.net/eng/download.php).
+##Complete remote control of the TGMmini
+The TGMmini control system can be run in headless mode, i.e. without monitor, keyboard and/or mouse.
+Then it is possible to control the TGMmini by using VNC protocol.
+The VNC server is already setup and running on the TGMmini.
+Recommended Windows VNC Viewer and settings can be found at [www.realvnc.com](https://www.realvnc.com/en/connect/download/viewer/).
 
-##Vzdálená správa TGMmini
-TGMmini může běžet v tzv. headless režimu, tj. bez monitoru, klávesnice a myši. 
-Připojení ke grafickému rozhraní TGMmini je možné pomocí VNC protokolu. VNC server na TGMmini je standardně spuštěn, stačí proto na PC pouze spustit vhodný klient VNC. 
-Doporučený program je VNC Viewer (viz. [www.realvnc.com](https://www.realvnc.com/CZ/connect/download/viewer/) ).
+##Transfer files by USB flash disks
+TGMmini has four USB ports and of course the USB disks can be used.
+The disk must be formatted with FAT32 file system.
+The File Manager on the **TGMmini** desktop displays automatically the content of the USB disk after plug-in.
+It is recommended to disconnect the USB disk before unplug (this operation is called unmount in Linux operating system).
+Right mouse click on the USB icon and selecting **Unmount** command from menu can do this.
+There is also unmount icon in the notification area of the desktop.
+The behavior is controlled by file `/etc/fstab`.
+USB disk appears in the Linux system as `/dev/sda` with its partition as `/dev/sda1`.
+The possible settings in the fstab file could be:
 
-##USB flash disky
-Přenos dat mezi PC a TGMmini lze provést také pomocí USB disků. 
-Pro použití na TGMmini musí být USB disk naformátován pro souborový systém FAT32. 
-Po zasunutí do libovolného USB portu v TGMmini se disk a jeho obsah automaticky objeví ve správci souborů (File Manager), který se jmenuje Thunar. 
-Před vyjmutím USB disku z portu je žádoucí disk odpojit, na Linuxu se tato operace jmenuje `unmount`. Stačí kliknout pravým tlačítkem myši na ikoně disku a zvolit položku menu _Unmount_. 
-Vhodné nastavení v souboru `/etc/fstab` je pro USB disk (zařízení `/dev/sda`):
 ``` bash
 /dev/sda1 /media/usb auto sync,user,noauto 0 0
 ```
-Velmi užitečný je též doplněk prostředí Xfce4 s názvem `xfce4-mount-plugin`, který lze nainstalovat pomocí příkazu
+
+The Xfce4 desktop also has a very handy plugin for managing USB disks `xfce4-mount-plugin`, which can be installed by
+
 ``` bash
-sudo apt-get install xfce4-mount-plugin
+sudo apt install xfce4-mount-plugin
 ```
-##Další nastavení TGMmini
-###IP adresa
-Důležitá informace pro práci s TGMmini je jeho IP adresa v lokální síti. 
-Je vhodné nastavit IP adresu jako statickou, tj. při každém spuštění se TGMmini přiřadí stejná adresa. 
-Samozřejmě musí být tato adresa v lokální síti volná, tj. neobsazena jiným počítačem. 
-Výchozí adresa je `192.168.1.220`. 
-Vše se nastavuje v souboru `/etc/network/interfaces.d/eth0`. 
-Přístup je nutný s administrátorskými právy, tj. v terminálu zadat příkaz: 
+
+##Other TGMmini settings
+###IP address
+One of the most important TGMmini parameter is its IP address on the local network.
+It is recommended to use static IP address for easy and permanent access.
+The default TGMmini IP address is `192.168.1.220`.
+The IP address can be changed in the file `/etc/network/interfaces.d/eth0`.
+Access to this file is allowed only with root privileges, e.g. by terminal command:
+
 ``` bash
 sudo mousepad /etc/network/interfaces.d/eth0
 ```
-a soubor upravit.
 
-###Přístup na internet
-Přímo z TGMmini lze přistupovat na internet. 
-Je nutno nastavit tzv. nameserver v souboru `/etc/resolv.conf`, opět jako administrátor. 
-Číslo nameserveru pro konkrétní síť může být odlišné, s nastavením pomůže administrátor sítě.
-Pokud je funkční přístup na internet, lze aktualizovat operační systém. V terminálu zadejte příkazy:
+or
+
+``` bash
+sudo nano /etc/network/interfaces.d/eth0
+```
+depending on your preferred text editor.
+
+###Internet access
+TGMmini can access internet.
+It is necessary to correctly set up name server IP address in the `/etc/resolv.conf` file, again with root privileges.
+When the internet connection is active, the Debian distribution can be updated by using the commands
+
 ``` bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
-případně i
+or even by
 ``` bash
 sudo apt-get dist-upgrade
 ```
-###MAC adresa
-Každé zařízení na síti Ethernet musí mít jedinečnou adresu adaptéru, tzv. MAC adresu. 
-TGMmini při startu čte jedinečné číslo přímo z procesoru a podle něho nastaví MAC adresu tak, aby byla pro každý vyrobený kus jedinečná. 
-Pokud je přesto nutné MAC adresu změnit, lze to pomocí terminálu zápisem do flash paměti. 
-Je nutné postupně zapsat všech 6 hodnot pomocí příkazu:
+###MAC address
+TGMmini reads a unique number from its processor and creates an Ethernet MAC address from this number.
+If it is necessary to change the MAC address, it can be done manually from command line.
+All the six values of the MAC address must be written one by one by command
 ``` bash
 sudo ethtool -E eth0 magic 0x9500 offset 0x01 value 0xff
 ```
-kde hexadecimální hodnota za parametrem `offset` musí postupně nabývat hodnot `0x01, 0x02, …, 0x06` a hodnoty za parametrem `value` určují MAC adresu. 
-V případě chyby, či pokud je třeba nastavit zpět výchozí MAC adresu, je nutné do všech offsetů `0x01..0x06` zapsat hodnoty `0xff`.
-Výchozí MAC adresa je uvedena na spodní straně TGMmini spolu s výrobním číslem a dalšími údaji.
+where offset is `0x01`, `0x02`, `…`, `0x06` and the number after the value changes accordingly to wanted MAC address.
+In the case of error or need to revert to the default MAC address it is necessary to write `0xff` to all the offsets `0x01` … `0x06`.
+The default MAC address is written on the label of the TGMmini’s case.
 
-###Spořič obrazovky, vypínání monitoru
-Ve výchozím nastavení je TGMmini nastaven tak, že nikdy nevypíná monitor ani nespouští spořič obrazovky. 
-To je zajištěno skriptem `/home/shareman/autostart.sh` a jeho příkazy `xset`. 
-Toto chování lze v souboru `autostart.sh` lehce upravit podle potřeby. 
-Návod k programu `xset` se zobrazí po zadání příkazu `xset` v příkazové řádce terminálu.
+###Screen saver, monitor energy saving
+In its default settings, the screen saver and monitor energy saving is switched off.
+It is performed by script `/home/shareman/autostart.sh` which is called automatically during desktop initialization.
+Settings is done by the xset program.
+The list of all its possible settings can be displayed by invoking `xset` in the command line.
 
-###Autostart aplikací
-Grafické prostředí Xfce umožňuje jednoduše nastavit, které aplikace se spouští při startu. 
-Kromě již zmíněného skriptu `autostart.sh`, který je nezbytný pro správnou práci TG Motion, lze zadat libovolné množství dalších programů, které mají být spuštěny při startu systému. 
-Pomocí položky menu `Start|Settings|Session and Startup` lze vše potřebné nastavit.
-Připraveny jsou položky pro autostart serverů OPC UA, Modbus TCP a emulaci DNC přes sériový port. 
-Není vhodné spouštět všechny tyto servery, vždy jen jeden podle potřeby.
+###Application autostart
+Any application can be auto started during Xfce4 desktop initialization.
+Use the dialog panel `Start|Settings|Session and startup` for that purpose.
+The following servers for TGMmini remote control are already prepared in this dialog: OPC UA, ModbusTCP, serial port DNC emulation.
+It is recommended to use (i.e. enable autostart) only one of these servers.
 
-###Rozlišení obrazovky
-TGMmini umožňuje použít pro monitor připojený přes HDMI následující rozlišení:
+###Screen resolution
+TGMmini supports the following screen resolution:
 
 | **Rozlišení** | **Obnovovací frekvence** |
 | :--- | :---: |
@@ -143,26 +168,28 @@ TGMmini umožňuje použít pro monitor připojený přes HDMI následující ro
 | 1680 × 1050 | 50 Hz |
 | 1920 × 1080 | 47 Hz |
 
-Barevná hloubka je vždy 16 bitů na pixel (16 bpp).   
+The color bit depth is always 16 bits per pixel (RGB565).
+The screen resolution can be set by program called `screen_resolution`, which can be invoked from menu item `Start|Settings|Set Screen Resolution`.   
 
-Pro změnu rozlišení lze použít program `screen_resolution`, který lze spustit pomocí položky menu `Start|Settings|Set Screen Resolution`.   
+Resolutions from 1400 × 1050 and higher uses reduced interval timing CVT-RB and are designed for higher quality displays.
+The full HD resolution 1920 × 1080 works only with several monitors.
+It is necessary to test the right combination of a resolution and a display.   
 
-Rozlišení 1400 × 1050 a vyšší používají tzv. potlačení zatmívacích intervalů CVT, tak aby bylo možno zobrazit vysoké rozlišení při výstupních kmitočtech do 1 GHz. 
-Pro tato rozlišení je nutné použít kvalitní monitor. 
-Full HD rozlišení 1920 x 1080 používá snímkový kmitočet pouze 47 Hz, což zvládnou jen některé monitory.   
+The resolution can be changed in console as well.
+Log in as root and go to the directory /root.
+There are several scripts available for setting the resolution.
+After running the script a reboot is necessary.
+The used terminal connection can be either USB or by SSH protocol, see below in [TGMmini administration](#MiniAdministration).
 
-Rozlišení lze měnit též pomocí konzole, po příhlášení jako root je v adresáři `/root` připravena sada skriptů, kterými lze rozlišení nastavit. 
-Po spuštění příslušného skritpu je nutné TGMmini restartovat pomocí příkazu `reboot`. 
-Tento postup je vhodný v případě, že nastavené rozlišení připojený displej nepodporuje. 
-Jako konzoli lze použít připojení přes USB kabel nebo SSH terminál, viz. níže v kapitole Administrace TGMmini.
+###Hardware mouse cursor
+GMmini supports hardware mouse cursor from firmware V2.2 upwards.
+The pointer is inserted directly to video stream data by hardware.
+This feature reduces the CPU load and eliminates cursor flickering.
+The standard mouse cursor size is 16 × 16 pixels, maximal size is 32 × 32.
+The Xfce desktop environment supports pointer size up to 48 × 48 pixels, in that case the software (by CPU) draw is automatically selected.   
 
-###Hardwarový kurzor myši
-Firmware v2.2 a vyšší obsahuje podporu hardwarového kurzoru myši. 
-Ukazatel je vykreslován přímo do obrazových dat, což přináší výhody menší zátěže procesoru a odstranění blikání kurzoru při změně jeho tvaru. 
-Maximální velikost hardwarového kurzoru je 32 × 32 pixelů. 
-Pro větší ukazatele (prostředí Xfce podporuje maximální velikost 48 × 48) se automaticky aktivuje softwarové vykreslování. 
-Běžná velikost kurzoru je 16 × 16 pixelů.
-Nastavení lze provést v souboru `/usr/share/X11/xorg.conf.d/99-fbdev.conf`. Standardní volby jsou
+The mouse cursor type and behavior is controlled by `/usr/share/X11/xorg.conf.d/99-fbdev.conf` file.
+The standard options are
 
 ```
 Option "HWCursor" "true"
@@ -170,56 +197,57 @@ Option "GlobalHWCursorDisable" "false"
 Option "InverseHWCursorColors" "false"
 ```
 
-Nastavením položky "`HWCursor5`" na "`false`" lze hardwarový kurzor vypnout a bude se používat pouze softwarové vykreslování ukazatele. 
-Pro použití v kiosk módu lze kurzor úplně vypnout pomocí "`HWCursor`" "`true`" a "`GlobalHWCursorDisable`" "`true`". 
-Poslední položka "`InverseHWCursorColors`" umožňuje prohodit černou a bílou barvu u monochromatických kurzorů.
-Podporovány jsou monochromatické a barevné ARGB styly kurzorů. 
-Uživatelské soubory popisující tvar ukazatelů (vizuální styly) lze najít na internetu, umísťují se do adresáře `~/.icons/<název stylu>/cursors`. 
-Přepnutí stylu lze provést v grafickém prostředí Xfce pomocí položky menu `Start|Settings|Mouse and Touchpad`, záložka `Themes`.
+Changing "`HWCursor`" to "`false`" switches to software drawn cursor.
+Setting "`HWCursor`" "`true`" and "`GlobalHWCursorDisable`" "`true`" completely disable the mouse pointer which could be useful in kiosk mode.
+Finally the "`InverseHWCursorColors`" "`true`" option swaps the black and white color for monochromatic cursor visual types.   
 
-###Vizuální styly
-Grafické prostředí Xfce je propracovaný systém pro správu oken a programů v sytému Linux Debian. 
-Lze mj. též měnit vizuální styly, např. velikost a barvy ikon pro práci s okny. 
-Standardní nastavení používá styl optimalizovaný pro dotykové zobrazení, nazvaný `TG_Flat`. 
-K dispozici jsou ale i další styly, vše lze nastavit pomocí `Start|Settings|Window Manager`.
+Both color ARGB and monochromatic cursor files are supported.
+User defined mouse themes can be found on the internet and should be copied to the `~/.icons/<theme name>/cursors directory`.
+The actual theme can be set by menu item `Start|Settings|Mouse and Touchpad`, tab `Themes`.
 
-###Kalibrace dotykové obrazovky
-Pro kalibraci slouží příkaz menu `Start|Calibration|Calibrate touchscreen`. 
-Po úspěšné kalibraci se kalibrační data objeví v okně terminálu. 
-Je nutné je přenést do schránky a zkopírovat do kalibračního souboru. 
-Ten lze otevřít a editovat příkazem `Start|Calibration|Edit calibration data`.
+###Visual styles
+TGMmini is delivered with its own visual style which is suitable for touchscreens.
+The visual style is called `TG_Flat`.
+Other available visual styles can be used by desktop menu command `Start|Settings|Window Manager`.
 
-###Administrace TGMmini
-TGMmini lze připojit k PC pomocí USB kabelu, pak se z hlediska počítače chová jako sériový port.
-Při použití vhodného terminálového programu, např. Putty nebo Tera Term, lze nastavovat a ovládat TGMmini pomocí konzole. 
-Stejně tak je i možný přístup pomocí protokolu SSH přes rozhraní Ethernet. Nutná je pouze znalost IP adresy.
+###Touchscreen calibration
+The touchscreen can be calibrated by `Start|Calibration|Calibrate touchscreen` command.
+After successful calibration the data are just displayed in the terminal windows.
+It is necessary to copy and paste them to the calibration file.
+Another menu command `Start|Calibration|Edit calibration data` can be used for opening the file and replacing the old calibration data with the new one.
 
-###Význam stavové LED diody STS
-1. Krátce po zapnutí TGMmini se rozsvítí červená LED dioda.
+###TGMmini administration {#MiniAdministration}
+A USB cable (connected to micro USB service connector) can be used to connect the TGMmini with a PC – it appears as a serial port console.
+By using a suitable terminal program ([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), [TeraTerm](https://teratermproject.github.io/index-en.html)) all the shell commands can be invoked.
+Also the SSH protocol is enabled, so the Ethernet connection can be used to establish a terminal control.
 
-2. Po spuštění operačního systému Linux se rozbliká zelená LED dioda, červená zhasne.
-3. Následně se spustí řídicí systém TGMotion a zelená LED dioda svítí trvale.
-4. Pokud je aktivován interní I/O modul, tj. používají se vstupy a výstupy na konektorech X5 a X10, červená LED dioda slouží k indikaci stavu výstupů:
-	1. je-li výstupní obvod v chybě (tj. špatné napájení, přepětí nebo zkrat na výstupech, atd.), bliká střídavě zelená a červená LED dioda,
-	2. v opačném případě (tj. výstupní obvod je v pořádku), svítí trvale zelená LED dioda.
-5. Po spuštění procesu vypínání operačního systému se rozsvítí červená LED dioda. Ta trvale svítí do odpojení napájení TGMmini.
+###Status LED (STS) description
+1. Shortly after switching on the TGMmini, the red LED will light up.
+2. When the Linux operating system is started, the green LED will flash and the red LED will go off.
+3. The TGMotion control system is then started and the green LED is permanently lit.
+4. If the internal I/O module is activated, i.e. the inputs and outputs on connectors X5 and X10 are used, the red LED is used to indicate the status of the outputs:
+	1. if the output circuit is in error (i.e., bad power supply, overvoltage or short circuit on the outputs, etc.), the green and red LEDs flash alternately,
+	2. otherwise (i.e. the output circuit is OK), the green LED is steady.
+5. After the operating system shutdown process is started, the red LED lights up. It is permanently lit until the TGMmini power is disconnected.
 
-| **Stav LED** | **Význam** |
-| :--- | :---: |
-| Červená svítí | Start nebo ukončování operačního systému |
-| Zelená bliká | Operační systém spuštěn, TGMotion neběží |
-| Zelená svítí | TGMotion běží, stav bez chyb |
-| Červená bliká se zelenou | TGMotion běží, výstupní modul v chybě |
+| **Indicator** | **Description** |
+|---|---|
+| Red light | Start or shutdown of Linux operating system |
+| Green blinks | Linux is started, TG Motion is not running |
+| Green light | TG Motion runs without problems |
+| Red and green blink alternately | TG Motion runs, internal output module is in error state |
 
-Výše uvedené chování stavové LED diody lze vypnout v souboru `/TGMotion/system/tgm_xeno_service.ini` pomocí zápisu
+
+This behavior can be disabled by 
 ```
 [LED]
 Control=0
 ```
+in the `/TGMotion/system/tgm_xeno_service.ini` file.
 
-V tom případě se rozsvítí pouze červená LED po startu TGMmini. 
-LED diody lze ovládat pomocí sběrnice i2c (adresa `0x28` na sběrnici i2c-1). 
-Sekvence příkazů pomocí terminálu:
+Then only the red LED lights during the startup.
+All the subsequent LED control must be done by a separate program.
+Shell commands used could be:
 
 ``` bash
 /usr/local/sbin/i2cset 1 0x28 0xF6 0xC # (1)
@@ -229,12 +257,12 @@ Sekvence příkazů pomocí terminálu:
 /usr/local/sbin/i2cset 1 0x28 0xF4 0x0 # (5)
 ```
 
-1.	piny `SS2` a `SS3` jako GPIO
-2.	GPIO jako push-pull
-3.	Rozsvícení červené LED :red_circle:
-4.	Rozsvícení zelené LED :green_circle:
-5.	Rozsvícení obou LED :orange_circle:
+1. pins `SS2` and `SS3` as GPIO
+2. GPIO as push-pull
+3. Lighting of the red LED :red_circle:
+4. Green LED :green_circle:
+5. Lighting both LEDs :orange_circle:
 
 
-Je nutné nainstalovat [I2C-tools](https://www.mankier.com/package/i2c-tools), [i2c-tools-4.1.tar.gz](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/i2c-tools-4.1.tar.gz).   
-Samostatné ovládání LED diody mimo TGMotion je nutné pro některé speciální uživatelské programy, jako např. Profinet I/O device.
+It is necessary to install [I2C-tools](https://www.mankier.com/package/i2c-tools), [i2c-tools-4.1.tar.gz](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/i2c-tools-4.1.tar.gz).   
+Separate LED control outside TGMotion is required for some special user programs, such as the Profinet I/O device.

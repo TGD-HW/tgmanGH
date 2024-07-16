@@ -1,4 +1,4 @@
-TGMmini se uchycuje na standarní DIN lištu 35&nbsp;mm pomocí dodávaného adaptéru.
+The TGMcontroller mounts to base plate in the similar way as the standard TGZ servoamplifiers.
 
 ![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 

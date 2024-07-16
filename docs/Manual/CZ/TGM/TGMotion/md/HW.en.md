@@ -48,7 +48,7 @@ Výčet podporovaných síťových karet je uveden v následující tabulce.
 	
 ##Servopohony
 TG Motion běžící na průmyslovém PC může po rozhraní EtherCAT nezávisle komunikovat až s 256 servopohony.
-Může načítat jejich polohy, posílat požadované pozice, načítat data vstupů a nastavovat výstupy (pokud jimi servozesilovače disponují).
+Může načítat jejich polohy, posílat požadované pozice, načítat data vstupů a nastavovat outputs (pokud jimi servozesilovače disponují).
 Pokud se jedná o víceosý servopohon, mohou být jedním servozesilovačem řízeny dvě osy (případně více os). Viz kapitolu Struktura Servo.
 
 | Výrobce | Popis               | Test | Podpora |
@@ -61,7 +61,7 @@ Pokud se jedná o víceosý servopohon, mohou být jedním servozesilovačem ř�
 
 ##I/O jednotky
 TG Motion běžící na průmyslovém PC může po rozhraní EtherCAT nezávisle komunikovat až s 256 I/O jednotkami.
-Může načítat data analogových i digitálních vstupů a nastavovat analogové i digitální výstupy, případně načítat data tenzometrických můstků.
+Může načítat data analogových i digitálních vstupů a nastavovat analogové i digitální outputs, případně načítat data tenzometrických můstků.
 
 ##Podporované a testované typy I/O jednotek
 

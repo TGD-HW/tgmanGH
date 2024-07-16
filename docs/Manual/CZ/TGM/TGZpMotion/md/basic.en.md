@@ -1,10 +1,8 @@
-<br>
-
 ![Basic view](../img/3Dview.png){: style="width:100%;" }
 
 <br>
 
-Zařízení **TGZ+Motion** se skládá ze dvou částí, systému **TGMotion** a servozesilovače **TGZ**, spojených do jednoho celku.
-TGMotion je spuštěn na hardwaru TGZ a umožňuje řízení pohybu v reálném čase pomocí sběrnice EtherCAT.
-Obě části (TGMotion a servozesilovač TGZ) jsou plně popsány ve vlastních příručkách.
-Tento dokument popisuje integraci obou produktů a možné odchylky od jejich standardních příruček.
+**TGZ+Motion** is composed of two parts, **TGMotion** and **TGZ servo amplifier**, combined to one unit.
+It is hosted on the TGZ hardware and allows the real-time motion control by the EtherCAT fieldbus.
+Both parts (TGMotion and TGZ servo drive) are fully described in own manuals.
+This document describes the integration of the two products and possible deviations to their standard manuals.

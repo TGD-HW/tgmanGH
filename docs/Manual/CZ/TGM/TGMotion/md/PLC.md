@@ -1,4 +1,4 @@
-#Virtuální PLC
+#Virtuální PLC {#MotionPLC}
 ##Popis Virtuálního PLC
 
 Modul Virtuální PLC vykonává uživatelem napsaný PLC program.

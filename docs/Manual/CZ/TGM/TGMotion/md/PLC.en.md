@@ -1,5 +1,5 @@
-#Virtuální PLC
-##Popis Virtuálního PLC
+#Virtual PLC {#MotionPLC}
+##Virtual PLC description
 
 Modul Virtuální PLC vykonává uživatelem napsaný PLC program.
 Ten provádí výpočty, zabezpečuje ovládání servopohonů, načítání a nastavování hodnot vstupů a výstupů a stará se o komunikaci s dalšími periferiemi pouze prostřednictvím sdílené paměti.
@@ -13,7 +13,7 @@ Výhodou Virtuálního PLC je jeho rychlost, protože běží přímo ve strojov
 	Stejný PLC kód lze aplikovat na různé servopohony nebo I/O jednotky.
 	Operativně lze také servopohony nebo I/O jednotky měnit, aniž by se musel PLC kód přepisovat. 
 
-##Tvorba PLC
+##Making of a PLC
 
 Program PLC je možné vytvářet v obecném vývojovém prostředí, např. Visual Studio, Delphi.
 Programovací jazyk může být C, C++ a Pascal.

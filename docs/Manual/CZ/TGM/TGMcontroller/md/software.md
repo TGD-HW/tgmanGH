@@ -371,7 +371,6 @@ Každý slot má přiřazený parametr, který udává offset dat k paměti PLC 
 Tento parametr lze nastavit pomocí nástroje pro uvedení do provozu nebo pomocí programu Profinet PLC.
 
 !!! warning "Změna IP"
-	
 	Změnou IP adresy zařízení Profinet se změní i adresa servisního portu X11.
 	To znamená, že může dojít ke ztrátě TCP/UDP nebo jiné komunikace.
 	Řešením je použití stejné adresy pro servisní protokoly a pro Profinet nebo použití portu FSP (X12) pro přímou komunikaci s PC, nezávisle na síti Profinet.
@@ -381,7 +380,7 @@ Protokol Modbus TCP je ve výchozím nastavení vypnut.
 Chcete-li jej povolit, použijte následující konfiguraci `TGM.INI`:
 ``` ini
 [Modbus]
-Povolit=1
+Enable=1
 ```
 
 Paměť PLC DATA se používá pro ukládání nebo příjem dat Modbus.

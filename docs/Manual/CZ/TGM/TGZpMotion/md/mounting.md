@@ -1,4 +1,4 @@
-TGMmini se uchycuje na standarní DIN lištu 35&nbsp;mm pomocí dodávaného adaptéru.
+Zařízení TGZ+Motion se uchycuje k montážní desce jako standardní servozesilovač TGZ.
 
 ![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 
