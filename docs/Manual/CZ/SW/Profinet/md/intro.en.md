@@ -1,11 +1,11 @@
 ![Profinet logo](../../../../source/img/ProfinetLogo.png){: style="width:30%;" } 
 
-PROFINET je registrovaná ochranná známka společností PROFIBUS a PROFINET International (PI).
+PROFINET is a registered trademark of PROFIBUS and PROFINET International (PI).
 
-Tato příručka popisuje nastavení pohonu TGZ v síti PROFINET. Pohony TGZ musí být naprogramovány příslušným firmwarem PROFINET.
-Před použitím pohonu v prostředí PROFINET je nutné se důkladně seznámit s [uživatelským manuálem HW TGZ](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md).
+This manual describes the setup of the TGZ drive in the PROFINET network. The TGZ drives must be programmed with the corresponding PROFINET firmware.
+The [TGZ HW user's manual](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md) must be thoroughly read and used before the drive can be used in PROFINET environment.
 
-Pro programování TGZ PROFINET je nezbytná znalost dokumentu [PROFIdrive Profile, skupina PI, PROFIdrive_3172_V42_Oct15.pdf](https://www.profibus.com/download/profidrive-profile-drive-technology/).
+The knowledge of document [PROFIdrive Profile, group PI, PROFIdrive_3172_V42_Oct15.pdf](https://www.profibus.com/download/profidrive-profile-drive-technology/) is essential to TGZ PROFINET programming.
 
-!!! note "Poznámka"
-	Technické změny, které vylepšují vlastnosti zařízení, mohou být provedeny bez předchozího upozornění!
+!!! note "Note"
+	Technical changes that improve the properties of the device may be made without prior notice!

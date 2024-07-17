@@ -338,41 +338,41 @@ K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších soft
 
 - Vyberte možnost **Motion control** a **TO_PositioningAxis**. Volitelně můžete zadat vhodný název objektu.
 
-![Profinet img](../../../../source/img/profinet75.webp){: style="width:30%;" }
+![Profinet img](../../../../source/img/profinet76.webp){: style="width:70%;" }
 
 - V okně Axis_1 v části `Basic parameters|General` zvolte přepínač **PROFIdrive**.
 
-![Profinet img](../../../../source/img/profinet76.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet77.webp){: style="width:70%;" }
 
 - Přepněte na `Basic parameters|Drive` a vyberte správný pohon.
 
-![Profinet img](../../../../source/img/profinet77.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet78.webp){: style="width:70%;" }
 
 - V případě potřeby upravte **Reference speed** a **Maximum speed** s ohledem limity pohonu.
 
-![Profinet img](../../../../source/img/profinet78.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet79.webp){: style="width:50%;" }
 
 - Vyberte `Basic parameters|Encoder` a přepněte na **Encoder on drive**.
 
-![Profinet img](../../../../source/img/profinet79.webp){: style="width:50%;" }
+![Profinet img](../../../../source/img/profinet80.webp){: style="width:70%;" }
 
 - Volitelně nastavte další parametry v položkách **Extended parameters** podle hardwarového projektu.
 - Po dokončení přepněte do offline režimu a stáhněte upravený projekt do PLC příkazem z nabídky `Online|Download to device` do zařízení.
   Postup je stejný, jak je popsáno výše.
 - Přepněte se zpět do režimu online a dvakrát klikněte na položku **Commissioning** v zobrazení projektu.
 
-![Profinet img](../../../../source/img/profinet80.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet81.webp){: style="width:30%;" }
 
 - Klikněte na tlačítko **Activate** v horní části okna.
 
-![Profinet img](../../../../source/img/profinet81.webp){: style="width:30%;" }
+![Profinet img](../../../../source/img/profinet82.webp){: style="width:70%;" }
 
 - Povolte osu tlačítkem **Enable**.
 
-![Profinet img](../../../../source/img/profinet82.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet83.webp){: style="width:70%;" }
 
 - Nyní je možné v závislosti na zvoleném příkazu provádět Jog osy, Homing a/nebo Positioning.
 
-![Profinet img](../../../../source/img/profinet83.webp){: style="width:70%;" }
+![Profinet img](../../../../source/img/profinet84.webp){: style="width:70%;" }
 
   Podrobný popis technologického objektu naleznete v online dokumentaci.

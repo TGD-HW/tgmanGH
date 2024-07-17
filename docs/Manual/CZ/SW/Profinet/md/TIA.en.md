@@ -1,378 +1,374 @@
-##Použití TGZ v TIA portálu
-- Buďte opatrní, aby se pohon nezačal pohybovat bez předchozího varování.
-- Přijměte příslušná opatření, aby obsluha a service pracovníci byli o tomto nebezpečí informováni.
-- Zaveďte vhodná ochranná opatření, která zajistí, že jakýkoli neúmyslný pohyb pohonů nemůže vést k nebezpečným situacím.
-- Uživatel je zodpovědný za to, že v případě poruchy pohonu bude celý systém nastaven do stavu, který je bezpečný pro zařízení i personál.
+## Using TGZ in TIA Portal
+- Be careful that the drive can start to move without previous warning.
+- Take the appropriate measures to ensure that the operating and service personnel is aware of this danger.
+- Implement appropriate protections to ensure that any unintended movement of the machines cannot result in any dangerous situation.
+- The user is responsible that, in the event of failure of the drive, the complete system is set to state that is safe for both the machinery and personnel.
 
-##Režim polohování s telegramem 111
-Nejpoužívanějším provozním režimem je režim polohování pomocí základního polohování TGZ a funkčního bloku SinaPos TIA portálu s telegramem 111.
-Následují možné kroky pro vytvoření nového projektu se dvěma servozesilovači TGZ, a to ve variantě se dvěma osami.
+## Positioning mode with telegram 111
+The most used operating mode is the positioning mode using the basic positioner of TGZ and the TIA Portal function block SinaPos with telegram 111.
+Following are the possible steps to create a new project with two TGZ servo amplifiers, both in two axes variant.
 
-- Vytvořte nový projekt.
+- Create a new project.
 
 ![Profinet img](../../../../source/img/profinet11.webp){: style="width:90%;" }
 
-- Otevřete projekt.
+- Open the project view.
 
 ![Profinet img](../../../../source/img/profinet12.webp){: style="width:90%;" }
 
-- Nainstalujte soubory XML GSD popisující zařízení TGZ v síti PROFINET.
-  Existují dva typy souborů, jeden pro jednoosou variantu s názvem `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` a druhý pro dvouosou variantu TGZ `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (kde `xxxxx` znamená datum vytvoření souboru).
+- Install the XML GSD files describing the TGZ device in PROFINET network.
+  There are two types of files, one for the single axis variant, called `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` and the second for the double axis TGZ variant `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (where `xxxxx` stands for file creation date).
 
+<!-- add placeholders for GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml and GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml - direct download links from the web -->
 
+  The files can be downloaded from the TG Drives website.
 
-<!--vložit placeholdery na GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml a GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml - linky pro přímé stažení z webu-->
-
-
-
-  Soubory lze stáhnout z webových stránek TG Drives.
-
-- Zvolte položku nabídky `Options|Manage general station description files (GSD)`.
+- Select menu item `Options|Manage general station description files (GSD)`.
 
 ![Profinet img](../../../../source/img/profinet13.webp){: style="width:90%;" }
 
-- Zadejte zdrojovou cestu, kde jsou uloženy soubory GSDML, vyberte příslušný soubor a klikněte na tlačítko **Install**.
+- Enter the source path where the GSDML files are stored, select the appropriate file and click on the **Install** button.
 
-!!! note "Poznámka"
-	Oba soubory lze instalovat současně.
-	
+!!! note "Note"
+    Both files can be installed simultaneously.
+
 ![Profinet img](../../../../source/img/profinet14.webp){: style="width:50%;" }
 
-- Ve stromu projektů vlevo nahoře dvojklikem zvolte položku **Add new device item**.
+- In the Project tree on left top, double click on the **Add new device item**.
 
 ![Profinet img](../../../../source/img/profinet15.webp){: style="width:30%;" }
 
-- Vyberte PLC controller použitý v hardwarovém projektu.
-  V tomto výukovém programu je použit PLC S7-1200.
-  
+- Select the PLC controller used in the hardware project.
+  For this tutorial, the PLC S7-1200 is used.
+
 ![Profinet img](../../../../source/img/profinet16.webp){: style="width:50%;" }
 
 !!! warning "Warning"
-	Dbejte na výběr správné verze firmwaru (zde V4.1).
-	
-- Na portálu TIA by se mělo otevřít okno **Devices & networks**.
-  Pokud ne, použijte položku stromového zobrazení **Devices & networks** v zobrazení projektu a otevřete okno dvojklikem.
+    Be careful to choose the right firmware version (V4.1 here).
+
+- The **Devices & networks** window should open in the TIA portal.
+  If not, use the tree view item **Devices & networks** in the Project view and open the window by double click.
 
 ![Profinet img](../../../../source/img/profinet17.webp){: style="width:90%;" }
 
-- Nyní je čas přidat do projektu jednotky TGZ.
-  V podokně **Catalog pane** otevřete položku **Other field devices** a přejděte na `PROFINET IO|Pohony|TGPohony|tgz-d|tgz-d`.
-  Zařízení přidejte do projektu dvojklikem.
+- Now it is time to add TGZ drives to the project.
+  In the **Catalog pane**, open the **Other field devices** item, and navigate to `PROFINET IO|Drives|TGDrives|tgz-d|tgz-d`.
+  Add the device to the project by double click.
 
 ![Profinet img](../../../../source/img/profinet18.webp){: style="width:50%;" }
 
-- Chcete-li přidat dva servopohony TGZ, proveďte to dvakrát.
-  Pro práci s jednoosou variantou TGZ použijte položku tgz-s.
-  Okno **Devices & network** by mělo vypadat následovně:
+- Do it two times to add two TGZ servo drives.
+  Use `tgz-s` item to work with single axis TGZ variant.
+  The **Devices & network** window should look like:
 
 ![Profinet img](../../../../source/img/profinet19.webp){: style="width:90%;" }
 
-- Přejmenujte jednotky v podokně **Network overview** podle projektu hardwaru.
-  Názvy musí být stejné jako při [přípravě zařízení](network.md#ProfinetIPsettings).
+- Rename the drives in the **Network overview** pane according to the hardware project.
+  The names must be the same as used during [preparing the devices](network.md#ProfinetIPsettings).
 
 ![Profinet img](../../../../source/img/profinet20.webp){: style="width:30%;" }
 
-- Připojte pohony k PLC.
-  Klikněte na modrý text **Not assigned** a zvolte **PROFINET interface_1**.
-  
+- Connect the drives with PLC.
+  Click on the blue text **Not assigned** and select the **PLC PROFINET interface_1**.
+
 ![Profinet img](../../../../source/img/profinet21.webp){: style="width:70%;" }
 
-- Totéž proveďte u druhého TGZ.
+- Do the same for the second TGZ.
 
 ![Profinet img](../../../../source/img/profinet22.webp){: style="width:70%;" }
 
-- Volitelně použijte zobrazení **Topology** a spojte zařízení PLC s TGZ pomocí myši stejným způsobem jako ve skutečnosti.
-  Tento krok není nutný.
+- Optionally use the **Topology** view and connect the PLC and TGZ devices by mouse in the same manner as in reality.
+  This step is not necessary.
 
 ![Profinet img](../../../../source/img/profinet23.webp){: style="width:70%;" }
 ![Profinet img](../../../../source/img/profinet24.webp){: style="width:70%;" }
 
-- Přiřaďte všem zařízením v projektu správné IP adresy.
-  IP adresy a názvy zařízení PROFINET musí odpovídat hodnotám zadaným v [Název a IP adresa zařízení](network.md#ProfinetIPsettings).
-  Aktivujte připojení v poli PLC (zelený obdélník) a v podokně **Properties** níže použijte položku **Ethernet addresses**.
-  Do textového pole zadejte správnou IP adresu spolu s maskou podsítě (obvykle 255.255.255.0).
-  
+- Assign the right IP addresses to all devices in the project.
+  The IP addresses and PROFINET device names must correspond to the values entered in the [Name and IP address of the device](network.md#ProfinetIPsettings).
+  Activate the connection in the PLC box (green rectangle) and in the **Properties** pane below use the **Ethernet addresses** item.
+  Enter the right IP address in the text box, together with the Subnet mask (usually 255.255.255.0).
+
 ![Profinet img](../../../../source/img/profinet25.webp){: style="width:70%;" }
 
-- Podobným způsobem přiřaďte IP adresy dalším zařízením.
+- In a similar way assign the IP addresses to other devices.
 
 ![Profinet img](../../../../source/img/profinet26.webp){: style="width:70%;" }
 
-- Přepněte se do zobrazení **Device view** (vpravo nahoře) a v kombo boxu vyberte první zařízení TGZ (tgz_1).
-  V katalogu hardwaru vpravo dvakrát klikněte na **Siemens telegram 111**.
-  To proveďte dvakrát pro obě osy (slot 1 a slot 2).
-  
+- Switch to **Device view** (on the top right) and select the first TGZ device (`tgz_1`) by the combo box.
+  In the hardware catalog on the right, double click on **Siemens telegram 111**.
+  Do it twice for both axes (slot 1 and slot 2).
+
 ![Profinet img](../../../../source/img/profinet27.webp){: style="width:90%;" }
 
-- Výsledek by měl vypadat takto:
-
+- The result should look like:
 ![Profinet img](../../../../source/img/profinet28.webp){: style="width:60%;" }
 
-- Přejmenujte osy (sloty 1 a 2) podle skutečného hardwarového projektu.
+- Rename the axes (slots 1 and 2) according to the real hardware project.
 
 ![Profinet img](../../../../source/img/profinet29.webp){: style="width:60%;" }
 
-- Totéž proveďte pro druhou jednotku TGZ a získáte něco jako:
+- Do the same for the second TGZ drive and get something like:
 
 ![Profinet img](../../../../source/img/profinet30.webp){: style="width:90%;" }
 
-- Stáhněte projekt do PLC pomocí ikony **Download** do zařízení nebo pomocí příkazu nabídky `Online|Download to device`.
+- Download the project to the PLC by using the icon **Download** to device or by using menu command `Online|Download to device`.
 
 ![Profinet img](../../../../source/img/profinet31.webp){: style="width:60%;" }
 
-- Je nutné najít PLC.
-  V následujícím dialogovém okně klikněte na tlačítko **Start search**.
-  
+- It is necessary to find the PLC.
+  Click on the **Start search** button in the following dialog.
+
 ![Profinet img](../../../../source/img/profinet32.webp){: style="width:70%;" }
 
-- Po chvíli by se měl PLC objevit v seznamu **Select target device**.
-  Vyberte jej a klikněte na tlačítko **Load**.
+- After a while the PLC should appear in the list **Select target device**.
+  Select it and click on the **Load** button.
 
 ![Profinet img](../../../../source/img/profinet33.webp){: style="width:70%;" }
 
-- Dialogové okno **Load preview** ukazuje stav načtení.
+- The dialog box **Load preview** summarizes the load status.
 
 ![Profinet img](../../../../source/img/profinet34.webp){: style="width:70%;" }
 
-- Klikněte na tlačítko **Load** a poté na tlačítko **Finish**.
+- Click on **Load** and then on the **Finish** button.
 
 ![Profinet img](../../../../source/img/profinet35.webp){: style="width:70%;" }
 
-- Zkontrolujte konfiguraci hardwaru.
-  Klikněte na ikonu **Go online** v nástrojové liště.
-  
+- Check the hardware configuration.
+  Click on the icon **Go online** in the command bar.
+
 ![Profinet img](../../../../source/img/profinet36.webp){: style="width:70%;" }
 
-- Vyčkejte na stav zelené značky v zobrazení projektu.
+- Wait for the green mark status in the project view.
 
 ![Profinet img](../../../../source/img/profinet37.webp){: style="width:30%;" }
 
-- Příkazem **Go offline** se přepněte zpět do režimu offline.
+- Switch back to offline mode by the **Go offline** command.
 
 ![Profinet img](../../../../source/img/profinet38.webp){: style="width:70%;" }
 
-- Rozbalte položku **Project view to Program blocks|Main [OB1]** a otevřete ji dvojklikem.
+- Expand the item **Project view to Program blocks|Main [OB1]** and open it by double click.
 
 ![Profinet img](../../../../source/img/profinet39.webp){: style="width:30%;" }
 
-- Otevře se nové okno s bloky PLC.
+- A new window with PLC blocks will open.
 
 ![Profinet img](../../../../source/img/profinet40.webp){: style="width:90%;" }
 
-- Vpravo v podokně **Instructions** vyhledejte funkční blok **SinaPos** (FB).
-  K tomu lze použít pole pro úpravu vyhledávání.
+- Find the function block **SinaPos** (FB) in the **Instructions** pane on the right.
+  The search edit box can be used for that.
 
 ![Profinet img](../../../../source/img/profinet41.webp){: style="width:30%;" }
 
-- Přetáhněte blok SinaPos na řádek **Network 1** a přiřaďte název bloku Data.
-  Použijte nejlépe stejný název jako pro osy (sloty) přiřazené v předchozích krocích.
-  
+- Drag and drop the SinaPos block to the line **Network 1** and assign the Data block name.
+  Preferably use the same name as for axes (slots) assigned in the previous steps.
+
 ![Profinet img](../../../../source/img/profinet42.webp){: style="width:90%;" }
 
-- Připojte telegram ke vstupům HWIDSTW a HWIDZSW funkčního bloku.
+- Connect the telegram with the HWIDSTW and HWIDZSW inputs of the function block.
 
 ![Profinet img](../../../../source/img/profinet43.webp){: style="width:50%;" }
 
-- Výsledek by měl vypadat asi takto:
+- The result should be something like:
 
 ![Profinet img](../../../../source/img/profinet44.webp){: style="width:40%;" }
 
-- Zopakujte přetažení SinaPos FB a přiřazení osy pro **Network 2** společně s osou **Axis_2**.
+- Repeat the SinaPos FB drag and drop and axis assignment for **Network 2** together with **Axis_2**.
 
 ![Profinet img](../../../../source/img/profinet45.webp){: style="width:40%;" }
 
-- Stejný postup platí pro pohon tgz_2 a osy Axis_3 a Axis_4.
+- The same process is for drive tgz_2 and **Axis_3** and **Axis_4**.
 
 ![Profinet img](../../../../source/img/profinet46.webp){: style="width:40%;" }
 ![Profinet img](../../../../source/img/profinet47.webp){: style="width:40%;" }
 
-- Zkompilujte a stáhněte upravený projekt do PLC příkazem `Online|Download to device`  a přepněte TIA Portal zpět do online režimu.
-- Funkční blok lze ovládat pomocí tabulky hlídání.
-  Vytvořte novou tabulku pomocí položky `Project view item PLC_1|Watch and force tables|Add new watch table` a přejmenujte ji na **Axis_1_Control**.
-  
+- Compile and download the modified project to the PLC by the command `Online|Download to device` and switch the TIA Portal back to online mode.
+- The function block can be controlled by a watch table.
+  Create a new table by `Project view item PLC_1|Watch and force tables|Add new watch table` and rename it to **Axis_1_Control**.
+
 ![Profinet img](../../../../source/img/profinet48.webp){: style="width:30%;" }
 
-- Přidejte následující vstupy a výstupy funkčního bloku SinaPos:
+- Add the following SinaPos function block inputs and outputs:
 
 ![Profinet img](../../../../source/img/profinet49.webp){: style="width:90%;" }
 
-- Pokud jsou hodnoty správně nastaveny (ModePos, Position, Velocity, EnableAxis), přepnutím **ExecuteMode** z FALSE na TRUE by se měl spustit požadovaný pohyb.
-  Pro správné chování funkčního bloku musí být Status `16#7002`.
-  Další informace o ovládání tohoto FB naleznete v online [dokumentaci k SinaPos](https://cache.industry.siemens.com/dl/files/845/109736845/att_928039/v1/109736845_G120_CU250S2PN_at_S7_1200_SINA_POS_v10_DOCU_en.pdf).
-- Volitelně můžete vytvořit další sledovací tabulky pro práci s dalšími osami.
+- When the values are correctly set (ModePos, Position, Velocity, EnableAxis), by switching **ExecuteMode** from FALSE to TRUE the desired movement should start.
+  The Status must be `16#7002` for the correct behavior of the function block.
+  See the online [documentation for the SinaPos](https://cache.industry.siemens.com/dl/files/845/109736845/att_928039/v1/109736845_G120_CU250S2PN_at_S7_1200_SINA_POS_v10_DOCU_en.pdf) for additional information how to operate this FB.
+- Optionally create additional watch tables for working with other axes.
 
 ![Profinet img](../../../../source/img/profinet50.webp){: style="width:90%;" }
 
-##Podporované řídicí bity v ConfigEPos
+## Supported Control Bits in ConfigEPos
 
-V hodnotě **ConfigEPos** lze použít další bity pro přesné řízení chování TGZ.
-Při nastavení na `16#0000_0103` (nastaven je také bit 8) je aktivován přenos konstantní žádané hodnoty.
-Když je aktivní úloha posunu, je možné změnit cílovou polohu nebo rychlost a pohon reaguje okamžitě, aniž by bylo nutné přepínat bit ExecuteMode.
-Po ukončení úlohy se pohon vrátí do stavu `S41` (viz. dokumentace PROFIdrive) a čeká na vzestupnou hranu bitu ExecuteMode.   
+Additional bits can be used in **ConfigEPos** value to fine control the TGZ behavior.
+When setting to `16#0000_0103` (bit 8 is also set), the constant setpoint transfer is activated.
+When the traversing task is active, it is possible to change the target position or velocity, and the drive responds immediately without the need of toggling the ExecuteMode bit.
+When the task finishes, the drive goes back to state `S41` (see PROFIdrive documentation) and waits for the rising edge of ExecuteMode bit.
 
-Je také možné nastavit **ConfigEPos** na `16#0010_0103` (nastavte bit 8 a 20).
-Pak pohon udržuje stav `S451`, i když je úloha ukončena, a nová úloha se spustí okamžitě, jakmile přijde nová pozice.
-Pro opuštění stavu `S451` je třeba změnit hodnotu **ConfigEPos** na `16#0000_0103`.
+It is also possible to set the **ConfigEPos** to `16#0010_0103` (set bits 8 and 20).
+Then the drive keeps the state `S451` even if the task is finished, and a new task is immediately started when a new position arrives.
+To exit from state `S451`, the **ConfigEPos** value must be changed to `16#0000_0103`.
 
-!!! note "Poznámka"
+!!! note "Note"
 
-	Všimněte si, že hodnotu `16#0000_0103` nebo `16#0010_010`3 lze použít pouze pro absolutní polohování, tj. když ModePos = 2.
-	Protože minimální doba cyklu je 1 ms, je možné dosáhnout konstantního polohování pomocí PLC.
-	Je nutné správně nastavit hodnoty zrychlení a rychlosti.
-	Doporučuje se také lichoběžníkový rychlostní profil (profil generátor typ 3).
+    Note that the value `16#0000_0103` or `16#0010_0103` can be used only for absolute positioning, i.e., when ModePos = 2.
+    As the minimal cycle time is 1 ms, it is possible to achieve constant positioning by PLC.
+    It is necessary to correctly set acceleration and speed values.
+    Also, the trapezoidal speed profile is recommended (Profile generator type 3).
 
-Bit 8 ConfigEPos je interně mapován na bit 12 řídicího slova POS_STW1 v telegramu (MdiTrTyp).
-Bit 20 je mapován na bit 11 řídicího slova POS_STW1.
-	
-##Použití PLC S7-300 nebo S7-400 s telegramem 111
-Chcete-li používat starší PLC, stáhněte si z internetu knihovnu `DriveLib`.
-V době psaní této příručky byl název souboru [Drive_Lib_V62_S7_300_400.zip](https://support.industry.siemens.com/cs/document/109475044/sinamics-communication-blocks-drivelib-for-reading-and-writing-drive-data-within-tia-portal-context?dti=0&lc=en-CZ).
-Rozbalte jej a nainstalujte do TIA portálu.
-Poté bude postup při vytváření projektu stejný jako výše, pouze použijte záložku **Libraries** a tam najděte funkci **SINA_POS** a přidejte ji do řádku **Main's Network**.
+Bit 8 of the **ConfigEPos** is internally mapped to bit 12 of the POS_STW1 control word in the telegram (MdiTrTyp).
+Bit 20 is mapped to bit 11 of the POS_STW1.
+
+## Using S7-300 or S7-400 PLC with Telegram 111
+
+To use the older PLCs, download a DriveLib library from the internet.
+At the time of writing this manual, the filename was `Drive_Lib_V62_S7_300_400.zip`.
+Extract it and install it to TIA portal.
+After that, the steps to create a project will be the same as above, only use the **Libraries** tab and there find the **SINA_POS** function to add it to the **Main’s Network** line.
 
 ![Profinet img](../../../../source/img/profinet51.webp){: style="width:30%;" }
 
-Servopohon TGZ nyní podporuje režimy spuštění Advanced a Legacy.
-Režim Legacy se používá pro S7-300 nebo S7-400.
-Upravené soubory GSDML (PNIO verze 2.4) jsou k dispozici na [webových stránkách TGDrives](https://www.tgdrives.cz/ke-stazeni/digitalni-servozesilovace-ke-stazeni/#c425).
-K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších softwarových balíčcích.
+The TGZ servo drive now supports startup modes Advanced and Legacy.
+The Legacy mode is used for S7-300 or S7-400.
+The modified GSDML files (PNIO version 2.4) are available at the [TGDrives website](https://www.tgdrives.cz/ke-stazeni/digitalni-servozesilovace-ke-stazeni/#c425).
+There are also GSDML files of version V2.2 for use in older software packages.
 
-##Rychlostní režim pomocí standardního telegramu 3
-- Vytvořte nový projekt a pojmenujte jej *TGZ-S-Tele3*.
+## Speed Mode Using Standard Telegram 3
+
+- Create a new project and name it *TGZ-S-Tele3*.
 
 ![Profinet img](../../../../source/img/profinet52.webp){: style="width:90%;" }
 
-- Otevřete zobrazení projektu.
+- Open the project view.
 
 ![Profinet img](../../../../source/img/profinet53.webp){: style="width:90%;" }
 
-- Dvakrát klikněte na možnost **Add new device**.
+- Double click on **Add new device**.
 
 ![Profinet img](../../../../source/img/profinet54.webp){: style="width:30%;" }
 
-- Zvolte správnou řídicí jednotku PLC a její verzi.
+- Select the right PLC controller and its version.
 
 ![Profinet img](../../../../source/img/profinet55.webp){: style="width:50%;" }
 
-- Vyberte možnost **Network view** a rozbalte strom v `Hardware catalog to item Other field devices|PROFINET IO|Drives|TGDrives|tgz-s|tgz-s`.
+- Select **Network view** and expand the tree in `Hardware catalog to item Other field devices|PROFINET IO|Drives|TGDrives|tgz-s|tgz-s`.
 
 ![Profinet img](../../../../source/img/profinet56.webp){: style="width:70%;" }
 
-- Dvakrát klikněte na tgz-s, zařízení bude přidáno do projektu v **Network view**.
+- Double click on tgz-s, the device will be added to the project in **Network view**.
 
 ![Profinet img](../../../../source/img/profinet57.webp){: style="width:70%;" }
 
-- Přejmenujte zařízení TGZ a dejte mu název zařízení - stejný, který byl nastaven při uvedení do provozu, jak je popsáno v [Název a IP adresa zařízení](network.md#ProfinetIPsettings)
+- Rename the TGZ device and give it a name of the device – the same which was set during commissioning as described in [Name and IP address of the device](network.md#ProfinetIPsettings).
 
 ![Profinet img](../../../../source/img/profinet58.webp){: style="width:70%;" }
 
-- Pro tento příklad použijeme název tgz_2.
+- For this example, we use the name tgz_2.
 
 ![Profinet img](../../../../source/img/profinet59.webp){: style="width:70%;" }
 
-- Připojte pohon TGZ k PLC kliknutím na modrý text **Not assigned** a výběrem PLC_1 PROFINET interface_1.
+- Connect the TGZ drive to PLC by clicking on the **Not assigned** blue text and selecting `PLC_1 PROFINET interface_1`.
 
 ![Profinet img](../../../../source/img/profinet60.webp){: style="width:70%;" }
 
-- Výsledek by měl vypadat takto:
+- The result should look like this:
 
 ![Profinet img](../../../../source/img/profinet61.webp){: style="width:70%;" }
 
-- Přiřaďte PLC IP adresu.
-  Použijte stejnou adresu jako je popsáno v sekci [Název a IP adresa zařízení](network.md#ProfinetIPsettings).
-  
+- Assign the IP address to the PLC.
+  Use the address described in the section [Name and IP address of the device](network.md#ProfinetIPsettings).
+
 ![Profinet img](../../../../source/img/profinet62.webp){: style="width:70%;" }
- 
-- Přiřaďte servopohonu TGZ IP adresu. Opět použijte adresu již uloženou v zařízení TGZ.
+
+- Assign the IP address to the TGZ servo drive. Again, use the address already stored in the TGZ device.
 
 ![Profinet img](../../../../source/img/profinet63.webp){: style="width:70%;" }
 
-- Zvolte telegram 3 do slotu 1 TGZ.
+- Select telegram 3 for slot 1 of the TGZ.
 
 ![Profinet img](../../../../source/img/profinet64.webp){: style="width:70%;" }
 
-- Dvojklikem na položku **Standard telegram 3** se telegram nastaví automaticky.
+- Double click on the **Standard telegram 3** item to set the telegram automatically.
 
 ![Profinet img](../../../../source/img/profinet65.webp){: style="width:70%;" }
 
-- Stáhněte konfiguraci hardwaru do PLC:
+- Download the hardware configuration to PLC:
 
 ![Profinet img](../../../../source/img/profinet66.webp){: style="width:70%;" }
 
-- Klikněte na tlačítko **Start search**.
+- Click on the **Start search** button.
 
 ![Profinet img](../../../../source/img/profinet67.webp){: style="width:70%;" }
 
-- V seznamu by se mělo objevit PLC.
+- The PLC should appear in the list box.
 
 ![Profinet img](../../../../source/img/profinet68.webp){: style="width:70%;" }
 
-- Klikněte na tlačítko **Load**, počkejte na dokončení kompilace a v následujícím dialogovém okně vyberte možnost **Stop all modules** a znovu klikněte na tlačítko **Load**.
+- Click on the **Load** button, wait for compilation to finish, and in the following dialog box select **Stop all modules** and click on the **Load** button again.
 
 ![Profinet img](../../../../source/img/profinet69.webp){: style="width:70%;" }
 
-- Načítání dokončíte kliknutím na tlačítko **Finish**.
+- Finish the loading by clicking on the **Finish** button.
 
 ![Profinet img](../../../../source/img/profinet70.webp){: style="width:70%;" }
 
-- Pokud ještě není vybrán, zvolte v servicem programu TGZ GUI telegram číslo 3: Speed.
+- If not yet selected, choose telegram number 3 in the TGZ GUI service program.
 
 ![Profinet img](../../../../source/img/profinet71.webp){: style="width:70%;" }
 
-- Uložte parametry a restartujte jednotku TGZ.
+- Save parameters and restart the TGZ drive.
 
 ![Profinet img](../../../../source/img/profinet72.webp){: style="width:70%;" }
 
-- Přepněte portál TIA do režimu **Online mode**, v zobrazení projektu by měla být zelená zaškrtávací políčka.
+- Switch TIA portal to **Online mode**, there should be green check marks in the project view.
 
 ![Profinet img](../../../../source/img/profinet73.webp){: style="width:30%;" }
 
-- Pokud se vyskytnou nějaké chyby, zastavte a spusťte PLC.
-  Zkontrolujte také, zda se v servicem programu TGZ GUI zvyšuje parametr `PD_SetDataCounter`.
-  
+- If there are any errors, stop and start the PLC.
+  Also, check that the `PD_SetDataCounter` parameter is increasing in the TGZ GUI service program.
+
 ![Profinet img](../../../../source/img/profinet74.webp){: style="width:30%;" }
 
-- Rozbalte položku `PLC_1|Technology object|Add new object` a dvakrát na ni klikněte.
+- Expand the `PLC_1|Technology object|Add new object` item and double-click on it.
 
 ![Profinet img](../../../../source/img/profinet75.webp){: style="width:30%;" }
 
-- Vyberte možnost **Motion control** a **TO_PositioningAxis**. Volitelně můžete zadat vhodný název objektu.
-
-![Profinet img](../../../../source/img/profinet75.webp){: style="width:30%;" }
-
-- V okně Axis_1 v části `Basic parameters|General` zvolte přepínač **PROFIdrive**.
+- Select **Motion control** and **TO_PositioningAxis**. Optionally, give a suitable name for the object.
 
 ![Profinet img](../../../../source/img/profinet76.webp){: style="width:70%;" }
 
-- Přepněte na `Basic parameters|Drive` a vyberte správný pohon.
+- In the `Axis_1` window under `Basic parameters|General`, select the **PROFIdrive** radio button.
 
 ![Profinet img](../../../../source/img/profinet77.webp){: style="width:70%;" }
 
-- V případě potřeby upravte **Reference speed** a **Maximum speed** s ohledem limity pohonu.
+- Switch to `Basic parameters|Drive` and select the right drive.
 
 ![Profinet img](../../../../source/img/profinet78.webp){: style="width:70%;" }
 
-- Vyberte `Basic parameters|Encoder` a přepněte na **Encoder on drive**.
+- Update the **Reference speed** and **Maximum speed** if necessary, according to the machinery.
 
 ![Profinet img](../../../../source/img/profinet79.webp){: style="width:50%;" }
 
-- Volitelně nastavte další parametry v položkách **Extended parameters** podle hardwarového projektu.
-- Po dokončení přepněte do offline režimu a stáhněte upravený projekt do PLC příkazem z nabídky `Online|Download to device` do zařízení.
-  Postup je stejný, jak je popsáno výše.
-- Přepněte se zpět do režimu online a dvakrát klikněte na položku **Commissioning** v zobrazení projektu.
+- Select `Basic parameters|Encoder` and switch to **Encoder on drive**.
 
 ![Profinet img](../../../../source/img/profinet80.webp){: style="width:70%;" }
 
-- Klikněte na tlačítko **Activate** v horní části okna.
+- Optionally, set up other parameters in the **Extended parameters** items according to the hardware project.
+- When finished, switch to offline mode and download the modified project to the PLC using the menu command `Online|Download to device`. The process is the same as described above.
+- Switch back to online mode and double-click on the **Commissioning** item in the project view.
 
 ![Profinet img](../../../../source/img/profinet81.webp){: style="width:30%;" }
 
-- Povolte osu tlačítkem **Enable**.
+- Click on the **Activate** button at the top of the window.
 
 ![Profinet img](../../../../source/img/profinet82.webp){: style="width:70%;" }
 
-- Nyní je možné v závislosti na zvoleném příkazu provádět Jog osy, Homing a/nebo Positioning.
+- Enable the axis using the **Enable** button.
 
 ![Profinet img](../../../../source/img/profinet83.webp){: style="width:70%;" }
 
-  Podrobný popis technologického objektu naleznete v online dokumentaci.
+- Now you can Jog the axis, perform Homing, and/or Positioning depending on the selected command.
+
+![Profinet img](../../../../source/img/profinet84.webp){: style="width:70%;" }
+
+  For a detailed description of the technology object, refer to the online documentation.

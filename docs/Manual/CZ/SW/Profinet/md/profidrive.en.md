@@ -1,123 +1,80 @@
-##Parametry pohonu PROFIdrive
-Servopohon TGZ podporuje přístup k parametrům prostřednictvím slotů 1 a 2 (slot 2 pouze pro variantu se dvěma osami).
-Pro přístup k parametrům TGZ lze použít tři indexy datových objektů záznamu:
+##PROFIdrive parameters
 
-- `47` - údaje ze starších záznamů. Osa je uvedena přímo v záhlaví požadavku.
-- `0xB02E` - přístup k lokálním základním parametrům. Osa je určena slotem, který provádí přístup.
-- `0xB02F` - přístup ke globálním základním parametrům. Osa je uvedena přímo v hlavičce požadavku.
+The TGZ servo drive supports parameter access through slots 1 and 2 (slot 2 for the variant with two axes only). Three record data object indexes can be used to access TGZ parameters:
 
-##Podporované standardní jednotky PROFIdrive PNU
-Servopohon TGZ podporuje následující standardní a povinné parametry PROFIdrive (PNU):
+- `47` – legacy record data. The axis is specified directly in the request header.
+- `0xB02E` – local base parameters access. The axis is specified by the slot performing the access.
+- `0xB02F` – global base parameters access. The axis is specified directly in the request header.
 
-| Číslo | Popis | Datový typ |
-|-------|-------|------------|
-| 922   | Výběr telegramu | Unsigned16 |
-| 930   | Provozní režim | Unsigned16 |
-| 944   | Počítadlo chybových zpráv | Unsigned16 |
-| 947   | Číslo chyby | Pole Unsigned16 |
-| 964   | Identifikace jednotky | Struktura |
-| 965   | Identifikace režimu | Struktura |
-| 975   | Identifikace objektu jednotky | Struktura |
+##Supported standard PROFIdrive PNUs
 
-!!! info "Info"
-	Popis standardních parametrů PROFIdrive naleznete v dokumentaci PROFIdrive. PNU 922, 930, 944 a 947 jsou pro každou osu jedinečné.
-	
-##Referenční hodnoty PNU
+The TGZ servo drive supports the following standard and mandatory PROFIdrive parameters (PNUs):
 
-| Číslo | Popis                  | Datový typ | Název registru TGZ  | Registrační číslo TGZ |
-|-------|------------------------|------------|---------------------|-----------------------|
-| 2000  | Referenční rychlost    | Float32    | M-Nn                | 0x2118, 0x2218        |
-| 2001  | Referenční napětí      | Float32    | M-Un                | 0x2117, 0x2217        |
-| 2002  | Referenční proud       | Float32    | M-In                | 0x211B, 0x221B        |
-| 2003  | Referenční točivý moment | Float32  | M-Mn                | 0x2119, 0x2219        |
-| 2007  | Referenční zrychlení   | Float32    | PG-PD_Acc           | 0x395E, 0x3A5E        |
+| Number | Description | Data type |
+|--------|-------------|-----------|
+| 922    | Telegram selection | Unsigned16 |
+| 930    | Operating mode | Unsigned16 |
+| 944    | Fault message counter | Unsigned16 |
+| 947    | Fault number | Array of Unsigned16 |
+| 964    | Drive unit identification | Structure |
+| 965    | Profile identification | Structure |
+| 975    | Drive object identification | Structure |
 
-Výše uvedené parametry jsou pro každou osu jedinečné.
-Použijte příslušný identifikátor osy spolu s indexem datového objektu.
+##Reference values PNU
 
-##Další parametry PROFIdrive
+| Number | Description | Data type | TGZ register name | TGZ register number |
+|--------|-------------|-----------|-------------------|---------------------|
+| 2000   | Reference speed | Float32 | M-Nn | 0x2118, 0x2218 |
+| 2001   | Reference voltage | Float32 | M-Un | 0x2117, 0x2217 |
+| 2002   | Reference current | Float32 | M-In | 0x211B, 0x221B |
+| 2003   | Reference torque | Float32 | M-Mn | 0x2119, 0x2219 |
+| 2007   | Reference acceleration | Float32 | PG-PD_Acc | 0x395E, 0x3A5E |
 
-| Číslo | Popis                    | Datový typ  |
-|-------|--------------------------|-------------|
-| 2583  | Kompenzace vůle | Signed32 |
+##Additional PROFIdrive parameters
 
-Čísla parametrů od `2010` do `8191` jsou vyhrazena pro budoucí rozšíření firmwaru.
-PNU `2583` se používají pro kompenzaci vůle a jsou jedinečné pro každou osu.
+| Number | Description | Data type |
+|--------|-------------|-----------|
+| 2583   | Backlash compensation | Signed32 |
 
-##Registry TGZ
-Všechny registry TGZ jsou přístupné jako specifické registry PROFIdrive výrobce, počínaje číslem `0x2000` (`16#2000`, tj. `8192 DEC`).
-Seznam použitelných registrů lze stáhnout z webových stránek TG Drives.
-Všechny parametry TGZ jsou seskupeny dohromady.
-Existuje několik skupin - společné, motor, pohon, generátor profilů atd.
-Skupiny jsou číslovány od nuly, stejně jako parametry ve skupině.
-První dvě hexadecimální čísla tvoří číslo skupiny, `0x2000` je první skupina.
-Poslední dvě hexadecimální čísla určují index parametru v rámci skupiny.
-Například číslo parametru `0x2119` patří do skupiny 1 (Motor) a jeho index je 25 (`0x19 = 16#19 = 25 DEC`).
-Jednoosá varianta TGZ nepoužívá parametry osy 2.
-Pro přístup k parametrům prostřednictvím sítě PROFINET je k úplnému určení správného parametru zapotřebí pouze číslo parametru.
-Položka osy v hlavičce zprávy **PROFIdrive request** je ignorována.   
+The parameter numbers from 2010 to 8191 are reserved for future firmware extensions. PNU 2583 is used for backlash compensation and is unique for each axis.
 
-Všechny registry TGZ jsou vždy 32bitové integer hodnoty.
+##TGZ registers
 
-| Číslo skupiny | Název                       |
-|---------------|-----------------------------|
-| 0x2000        | Společné                    |
-| 0x2100        | Motor, osa 1                |
-| 0x2200        | Motor, osa 2                |
-| 0x2300        | Drive, osa 1                |
-| 0x2400        | Drive, osa 2                |
-| 0x2500        | Proudový regulátor, osa 1   |
-| 0x2600        | Proudový regulátor, osa 2   |
-| 0x2700        | Regulátor rychlosti, osa 1  |
-| 0x2800        | Regulátor rychlosti, osa 2  |
-| 0x2900        | Regulátor polohy, osa 1     |
-| 0x2A00        | Regulátor polohy, osa 2     |
-| 0x2B00        | Feedback, osa 1         |
-| 0x2C00        | Feedback, osa 2         |
-| 0x3100        | Command, osa 1               |
-| 0x3200        | Command, osa 2               |
-| 0x3300        | Monitorování, osa 1         |
-| 0x3400        | Monitorování, osa 2         |
-| 0x3900        | Profile generator, osa 1    |
-| 0x3A00        | Profile generator, osa 2    |
+All TGZ registers are accessible as manufacturer-specific PROFIdrive registers, starting from number 0x2000 (8192 DEC). The list of usable registers can be downloaded from the TG Drives website. Parameters are grouped into categories such as common, motor, drive, profile generator, etc. Groups and parameters within groups are numbered starting from zero. For example, parameter number 0x2119 belongs to group 1 (Motor) with an index of 25 (0x19 = 25 DEC).
 
-Parametry související s PROFINET jsou přístupné pomocí indexových čísel parametrů TGZ:
+##PROFINET related parameters
 
-| Název parametru TGZ  | Název PROFINET                | Popis                                                           | Číslo pro osu 1 | Číslo pro osu 2 |
-|----------------------|-------------------------------|-----------------------------------------------------------------|---------------|---------------|
-| PD_TelegramNumber    | Výběr telegramu (PNU922)      |                                                                 | 0x2321        | 0x2421        |
-| PD_DisplayInfo       | Zobrazení ladicích zpráv      | Zobrazení ladicích zpráv na výstupu grafického rozhraní TGZ     | 0x2323        | NEUPLATŇUJE SE|
-| PD_SetDataCounter    |                                | Počítá cyklické zprávy PROFINET z řadiče I/O                    | 0x2324        | 0x2424        |
-| PD_StatusWord_ZSW1   | Stavové slovo 1 (ZSW1)        | Kopie stavového slova PROFIdrive odeslaná do řadiče I/O         | 0x3500        | 0x3600        |
-| PD_ControlWord_STW1  | Řídicí slovo 1 (STW1)         |                                                                 | 0x3501        | 0x3601        |
-| PD_SATZANW           | SATZANW                       | Výběr bloku procházení                                          | 0x3503        | 0x3603        |
-| PD_AKTSATZ           | AKTSATZ                       | Skutečný procházející blok                                      | 0x3504        | 0x3604        |
-| PD_State             |                                | Režim stavového diagramu                                        | 0x3505        | 0x3605        |
+TGZ parameter names and their corresponding PROFINET names and descriptions:
 
-TGZ podporuje až 10 bloků pro nezávislé použití.
-Každý blok se skládá z režimu, zrychlení, zpomalení, rychlosti a cílové polohy:   
+| TGZ parameter name | PROFINET name | Description | Number for axis 1 | Number for axis 2 |
+|--------------------|---------------|-------------|-------------------|-------------------|
+| PD_TelegramNumber  | Telegram selection (PNU922) | Selects telegram | 0x2321 | 0x2421 |
+| PD_DisplayInfo     | -             | Displays debugging messages on TGZ GUI output | 0x2323 | N/A |
+| PD_SetDataCounter  | -             | Counts cyclic PROFINET messages from I/O controller | 0x2324 | 0x2424 |
+| PD_StatusWord_ZSW1 | Status word 1 (ZSW1) | Copy of PROFIdrive status word sent to I/O controller | 0x3500 | 0x3600 |
+| PD_ControlWord_STW1| Control word 1 (STW1) | - | 0x3501 | 0x3601 |
+| PD_SATZANW         | SATZANW       | Selects traversing block | 0x3503 | 0x3603 |
+| PD_AKTSATZ         | AKTSATZ       | Actual traversing block | 0x3504 | 0x3604 |
+| PD_State           | State diagram mode | State diagram mode | 0x3505 | 0x3605 |
 
-PD_Task1
+TGZ supports up to 10 traversing blocks for independent use. Each block includes mode, acceleration, deceleration, velocity, and target position.
 
-| Název         | Popis                                | Číslo pro osu 1 | Číslo pro osu 2 |
-|---------------|--------------------------------------|---------------|---------------|
-| mod           | Režim (0 - relativní, 1 - absolutní) | 0x3922        | 0x3A22        |
-| acc           | Zrychlení                            | 0x3923        | 0x3A23        |
-| dec           | Zpomalení                            | 0x3924        | 0x3A24        |
-| rychlost      | Rychlost                             | 0x3925        | 0x3A25        |
-| tarPosAngle   | Cílová poloha - úhel                 | 0x3926        | 0x3A26        |
-| tarPosRevol   | Cílová poloha - otáčky               | 0x3927        | 0x3A27        |
+##PD_Task1
 
+Parameters for PD_Task1:
 
-PD_Task2 - Čísla parametrů jsou `0x3928` - `0x392D` pro osu 1 a `0x3A28` - `0x3A2D` pro osu 2.   
-PD_Task3 - Čísla parametrů jsou `0x392E` - `0x3933` pro osu 1 a `0x3A2E` - `0x3A33` pro osu 2.   
-PD_Task4 - Čísla parametrů jsou `0x3934` - `0x3939` pro osu 1 a `0x3A34` - `0x3A39` pro osu 2.   
-PD_Task5 - Čísla parametrů jsou `0x393A` - `0x393F` pro osu 1 a `0x3A3A` - `0x3A3F` pro osu 2.   
-PD_Task6 - Čísla parametrů jsou `0x3940` - `0x3945` pro osu 1 a `0x3A40` - `0x3A45` pro osu 2.   
-PD_Task7 - Čísla parametrů jsou `0x3946` - `0x394B` pro osu 1 a `0x3A46` - `0x3A4B` pro osu 2.   
-PD_Task8 - Čísla parametrů jsou `0x394C` - `0x3951` pro osu 1 a `0x3A4C` - `0x3A51` pro osu 2.   
-PD_Task9 - Čísla parametrů jsou `0x3952` - `0x3957` pro osu 1 a `0x3A52` - `0x3A57` pro osu 2.   
-PD_Task10 - Čísla parametrů jsou `0x3958` - `0x395D` pro osu 1 a `0x3A58` - `0x3A5D` pro osu 2.   
+| Name         | Description              | Number for axis 1 | Number for axis 2 |
+|--------------|--------------------------|-------------------|-------------------|
+| mod          | Mode (0 – relative, 1 – absolute) | 0x3922 | 0x3A22 |
+| acc          | Acceleration             | 0x3923            | 0x3A23            |
+| dec          | Deceleration             | 0x3924            | 0x3A24            |
+| velocity     | Speed                    | 0x3925            | 0x3A25            |
+| tarPosAngle  | Target position – angle  | 0x3926            | 0x3A26            |
+| tarPosRevol  | Target position – revolutions | 0x3927         | 0x3A27            |
+
+##PD_Task2 to PD_Task10
+
+Parameters for PD_Task2 to PD_Task10 follow similar numbering patterns for axes 1 and 2.
 
 
 
