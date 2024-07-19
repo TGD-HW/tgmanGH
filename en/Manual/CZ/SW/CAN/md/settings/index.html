@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nastaveni-rychlosti-komunikace-can" class="md-skip">
+        <a href="#communication-speed-setting-can" class="md-skip">
           Skip to content
         </a>
       
@@ -6431,46 +6431,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nastaveni-rychlosti-komunikace-can" class="md-nav__link">
+  <a href="#communication-speed-setting-can" class="md-nav__link">
     <span class="md-ellipsis">
-      Nastavení rychlosti komunikace CAN
+      Communication Speed Setting CAN
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prijem-a-odesilani-zprav" class="md-nav__link">
+  <a href="#receiving-and-sending-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Příjem a odesílání zpráv
+      Receiving and Sending Messages
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Příjem a odesílání zpráv">
+    <nav class="md-nav" aria-label="Receiving and Sending Messages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#can-status" class="md-nav__link">
     <span class="md-ellipsis">
-      CAN status
+      CAN Status
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#posilani-zprav" class="md-nav__link">
+  <a href="#sending-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Posílání zpráv
+      Sending Messages
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#prijem-zprav" class="md-nav__link">
+  <a href="#receiving-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Příjem zpráv
+      Receiving Messages
     </span>
   </a>
   
@@ -6759,29 +6759,29 @@
 
   <h1>Comunication description</h1>
 
-<h2 id="nastaveni-rychlosti-komunikace-can">Nastavení rychlosti komunikace CAN<a class="headerlink" href="#nastaveni-rychlosti-komunikace-can" title="Permanent link">&para;</a></h2>
-<p>Naleznete jej ve skupině registrů s názvem <em>Common</em></p>
+<h2 id="communication-speed-setting-can">Communication Speed Setting CAN<a class="headerlink" href="#communication-speed-setting-can" title="Permanent link">&para;</a></h2>
+<p>You can find it in the registry group called <em>Common</em>.</p>
 <table>
     <tr>
-        <td bgcolor="#005050" style="color: white;"><b>Registr</b></td>
-        <td bgcolor="#005050" style="color: white;"><b>Popis</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Register</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Description</b></td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">C-CAN_Baudrate</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Zaregistrujte se pro zadání rychlosti komunikace CAN v kilobaudech (20,50,100,125,250,500,800,1000).<br>Pro přijetí rychlosti musí být registr C-CAN_Settings 0. Bod vzorkování je pevně stanoven na 75%</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Register to enter the CAN communication speed in kilobauds (20,50,100,125,250,500,800,1000).<br>To receive the speed, the C-CAN_Settings register must be 0. The sampling point is fixed at 75%</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">C-CAN_Settings</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Registr pro podrobnější nastavení sběrnice CAN. Pokud je zadána nenulová hodnota, přepíše se registr C-CAN_Baudrate vypočítanou rychlostí.<br>Byte 0: TS1<br>Byte 1: TS2<br>Byte 2: SJ<br>Byte 3: Dělitel frekvence, základní frekvence je 16MHz.</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Register for more detailed CAN bus settings. If a non-zero value is entered, the C-CAN_Baudrate register is overwritten at the calculated rate.<br>Byte 0: TS1<br>Byte 1: TS2<br>Byte 2: SJ<br>Byte 3: Frequency divisor, the fundamental frequency is 16MHz.</td>
     </tr>
 </table>
 
-<p>Příklad nastavení rychlosti na 500 kbaud:</p>
+<p>Example of setting the speed to 500kbaud:</p>
 <table>
 <thead>
 <tr>
-<th>Parametr</th>
-<th>Hodnota</th>
+<th>Parameter</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
@@ -6798,7 +6798,7 @@
 <td>4</td>
 </tr>
 <tr>
-<td>Dělitel frekvence</td>
+<td>Frequency divisor</td>
 <td>11</td>
 </tr>
 <tr>
@@ -6807,92 +6807,89 @@
 </tr>
 </tbody>
 </table>
-<h2 id="prijem-a-odesilani-zprav">Příjem a odesílání zpráv<a class="headerlink" href="#prijem-a-odesilani-zprav" title="Permanent link">&para;</a></h2>
-<p>Nastavení pro příjem a odesílání zpráv prostřednictvím komunikace CAN.
-Naleznete je ve skupině registrů <em>UserProg</em>.</p>
-<h3 id="can-status">CAN status<a class="headerlink" href="#can-status" title="Permanent link">&para;</a></h3>
+<h2 id="receiving-and-sending-messages">Receiving and Sending Messages<a class="headerlink" href="#receiving-and-sending-messages" title="Permanent link">&para;</a></h2>
+<p>Settings for receiving and sending messages via CAN communication. You will find them in the <em>UserProg</em> registry group.</p>
+<h3 id="can-status">CAN Status<a class="headerlink" href="#can-status" title="Permanent link">&para;</a></h3>
 <table>
     <tr>
-        <td bgcolor="#005050" style="color: white;"><b>Registr</b></td>
-        <td bgcolor="#005050" style="color: white;"><b>Popis</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Register</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Description</b></td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Status</td>
-        <td bgcolor="#F2F2F2" style="color: black;">bit 0: data odeslána, připravena na další.<br>bit 1 - bit8: nová data ve vyrovnávací paměti 1-8.</td>
+        <td bgcolor="#F2F2F2" style="color: black;">bit 0: data sent, ready for the next one.<br>bit 1 - bit 8: new data in buffers 1-8.</td>
     </tr>
 </table>
 
-<h3 id="posilani-zprav">Posílání zpráv<a class="headerlink" href="#posilani-zprav" title="Permanent link">&para;</a></h3>
+<h3 id="sending-messages">Sending Messages<a class="headerlink" href="#sending-messages" title="Permanent link">&para;</a></h3>
 <table>
     <tr>
-        <td bgcolor="#005050" style="color: white;"><b>Registr</b></td>
-        <td bgcolor="#005050" style="color: white;"><b>Popis</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Register</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Description</b></td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Transmit_ID</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Zprávy CAN ID</td>
+        <td bgcolor="#F2F2F2" style="color: black;">CAN ID messages</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Transmit_Len</td>
-        <td bgcolor="#F2F2F2" style="color: black;">délka zprávy v bajtech</td>
+        <td bgcolor="#F2F2F2" style="color: black;">message length in bytes</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Transmit_Data_Lo</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Odesílá dolních 32 bitů zprávy</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Sends the lower 32 bits of the message</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Transmit_Data_Hi</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Odesílá horních 32 bitů zprávy</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Sends the upper 32 bits of the message</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Transmit_Control</td>
-        <td bgcolor="#F2F2F2" style="color: black;">bit 1: odešle zprávu<br>bit 2: odešle požadavek RTR (žádost o vzdálený přenos)<br>Poté musí být nastavena na 0</td>
+        <td bgcolor="#F2F2F2" style="color: black;">bit 1: sends a message<br>bit 2: sends an RTR request (remote transmission request). Then it must be set to 0</td>
     </tr>
 </table>
 
-<p>Chcete-li zprávu odeslat, napište <code>1</code> do registru <code>CAN_Transmit_Control</code>.
-Před odesláním další zprávy je nutné do tohoto registru napsat <code>0</code> a počkat na zpracování systémem.
-Poté je možné odeslat další zprávu.</p>
-<h3 id="prijem-zprav">Příjem zpráv<a class="headerlink" href="#prijem-zprav" title="Permanent link">&para;</a></h3>
+<p>To send a message, type <code>1</code> in the <code>CAN_Transmit_Control</code> registry. Before sending another message, it is necessary to write <code>0</code> to this register and wait for processing by the system. You can then send another message.</p>
+<h3 id="receiving-messages">Receiving Messages<a class="headerlink" href="#receiving-messages" title="Permanent link">&para;</a></h3>
 <table>
     <tr>
-        <td bgcolor="#005050" style="color: white;"><b>Registr</b></td>
-        <td bgcolor="#005050" style="color: white;"><b>Popis</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Register</b></td>
+        <td bgcolor="#005050" style="color: white;"><b>Description</b></td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Receive_Control</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Kontrolní registr příjmu.</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Receipt control register.</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Recieve_Buffx_ID</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Příjem ID pro vyrovnávací paměť x (x = 1 - 8).</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Receive ID for buffer x (x = 1 - 8).</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Receive_Buffx_Len</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Počet bytů v přijaté zprávě.</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Number of bytes in the received message.</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Receive_Buffx_Data_Lo</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Přijímá spodních 32 bitů zprávy</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Receives the bottom 32 bits of the message</td>
     </tr>
     <tr>
         <td bgcolor="#F2F2F2" style="color: black;">CAN_Receive_Buffx_Data_Hi</td>
-        <td bgcolor="#F2F2F2" style="color: black;">Přijímá horních 32 bitů zprávy</td>
+        <td bgcolor="#F2F2F2" style="color: black;">Receives the top 32 bits of the message</td>
     </tr>
 </table>
 
-<p>K dispozici je 8 vyrovnávacích pamětí pro příjem zpráv.
-Ne všechny zprávy z CAN jsou přijímány, ale pouze ty, na které jsou nastaveny vyrovnávací paměti.
-<code>CAN_Recieve_Buff0_ID</code> (nebo jiná zvolená vyrovnávací paměť) je nastavena na požadované ID.
-Do této vyrovnávací paměti se nahraje zpráva s odpovídajícím ID.
-Následně zápis <code>0x1000</code> do registru <code>CAN_Receive_Control</code> resetuje příjem zpráv a přijme změny <code>CAN_Receive_Buffx_ID</code>.
-Poté, co systém zprávu zpracuje, musí být hodnota registru <code>CAN_Receive_Control</code> nastavena na <code>0</code>.
-Po přijetí zprávy se bit pro konkrétní vyrovnávací paměť nastaví v registru <code>CAN_Status</code>.
-Pro potvrzení přijetí zprávy je v registru <code>AN_Recieve Control</code> nastaven odpovídající bit vyrovnávací paměti (stejný bit jako v <code>CAN_Status</code>).
-Po zpracování systémem musí být registry znovu resetovány.</p>
+<p>There are 8 buffers for receiving messages.
+Not all messages from CAN are received, but only those to which the buffers are set.
+<code>CAN_Recieve_Buff0_ID</code> (or another selected buffer) is set to the required ID.
+A message with the corresponding ID is loaded into this buffer.
+Subsequently, writing <code>0x1000</code> to the <code>CAN_Receive_Control</code> registry resets the message reception and accepts the <code>CAN_Receive_Buffx_ID</code> changes.
+After the system processes the message, the <code>CAN_Receive_Control</code> registry value must be set to <code>0</code>.
+After receiving the message, the bit for the specific buffer is set in the <code>CAN_Status</code> register.
+To acknowledge receipt of the message, the corresponding buffer bit (same bit as in <code>CAN_Status</code>) is set in the <code>CAN_Recieve Control</code> register.
+After processing by the system, the registers must be reset again.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Standardizovaný protokol CAN pro TGZ je ve vývoji.</p>
+<p class="admonition-title">Note</p>
+<p>The standardized CAN protocol for TGZ is under development.</p>
 </div>
 
 

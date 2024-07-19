@@ -6923,15 +6923,15 @@ Inicializaci je nutné provést ve funkci <code>Program_Ini</code>.</p>
 <h3 id="program_01">Program_01<a class="headerlink" href="#program_01" title="Permanent link">&para;</a></h3>
 <p>Deklarace: <code>long Program_01(PLC_DATA *pData)</code>   </p>
 <p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_01</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_01</code>, aby zbyl čas na vykonání funkcí <code>Program_02</code> a <code>Program_03</code>.
+Perioda je definována položkou <code>Cycle_Time_Program_01</code>, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% <code>Cycle_Time_Program_01</code>, aby zbyl čas na vykonání funkcí <code>Program_02</code> a <code>Program_03</code>.
 Tato funkce se nejčastěji používá pro základní obsluhu zařízení, která nemusejí být obsluhována pravidelně každý <code>Cycle_Time</code>.
 Funkce <code>Program_01</code> má nejnižší prioritu a kdykoli může být přerušena funkcemi <code>Program_02</code>, <code>Program_03</code>, <code>Program_04</code> a <code>Program_05</code>.</p>
 <h3 id="program_02">Program_02<a class="headerlink" href="#program_02" title="Permanent link">&para;</a></h3>
 <p>Deklarace: <code>long Program_02(PLC_DATA *pData)</code>   </p>
 <p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_02</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_02</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_03</code>.
+Perioda je definována položkou <code>Cycle_Time_Program_02</code>, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% <code>Cycle_Time_Program_02</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_03</code>.
 Tato funkce se většinou implementuje jako prázdná funkce.
 Funkce <code>Program_02</code> má nízkou prioritu a může být kdykoli přerušena funkcemi <code>Program_03</code>, <code>Program_04</code>, a <code>Program_05</code>.</p>
 <p><strong>Ukázka zdrojového kódu</strong></p>
@@ -6943,8 +6943,8 @@ Funkce <code>Program_02</code> má nízkou prioritu a může být kdykoli přeru
 <h3 id="program_03">Program_03<a class="headerlink" href="#program_03" title="Permanent link">&para;</a></h3>
 <p>Deklarace: <code>long Program_03(PLC_DATA *pData)</code>   </p>
 <p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_03</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_03</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_02</code>.
+Perioda je definována položkou <code>Cycle_Time_Program_03</code>, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% <code>Cycle_Time_Program_03</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_02</code>.
 Tato funkce se většinou implementuje jako prázdná funkce.
 Funkce <code>Program_03</code> má nízkou prioritu a může být kdykoli přerušena funkcemi <code>Program_04</code> a <code>Program_05</code>.</p>
 <p><strong>Ukázka zdrojového kódu</strong></p>
@@ -6956,10 +6956,10 @@ Funkce <code>Program_03</code> má nízkou prioritu a může být kdykoli přeru
 <h3 id="program_04">Program_04<a class="headerlink" href="#program_04" title="Permanent link">&para;</a></h3>
 <p>Deklarace: <code>long Program_04(PLC_DATA *pData)</code>   </p>
 <p>Funkce je z TG Motion volána synchronně s komunikací v rámci <code>Cycle_Time</code>, tedy jednou během každého <code>Cycle_Time</code>.
-Ten je definován v souboru <code>TGMotion4xx.ini</code> položkou Cycle_Time (250&nbps;μs, 500&nbps;μs, 1000&nbps;μs).
+Ten je definován v souboru <code>TGMotion4xx.ini</code> položkou Cycle_Time (250&nbsp;μs, 500&nbsp;μs, 1000&nbsp;μs).
 Funkce Program_04 se nejčastěji používá pro modifikaci žádané polohy servopohonů a obsluhu I/O jednotek.
 Má nejvyšší prioritu (stejně jako funkce Program_05) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbps;% <code>Cycle_Time</code>, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.</p>
+Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbsp;% <code>Cycle_Time</code>, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.</p>
 <div class="admonition info">
 <p class="admonition-title">Upozornění</p>
 <p>Ve funkci Program_04 nesmí být volána funkce <code>SleepFt</code></p>

@@ -6852,96 +6852,114 @@ A detailed description of the individual EtherCAT states can be found in the doc
 <table>
 <thead>
 <tr>
-<th>Error Type</th>
-<th><code>aDriveError</code> Register Value</th>
-<th>Error Number on Display</th>
-<th>Error Description / Possible Cause / Solution</th>
+<th>Fault</th>
+<th>Fault value in <code>aDriveError</code> reg.</th>
+<th>Fault number on display</th>
+<th>Error description / possible cause / solution</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Internal Error</td>
+<td>Internal</td>
 <td>0x00000004</td>
-<td>02</td>
-<td><strong>Cause</strong>: Internal hardware error.<br><strong>Solution</strong>: Contact device supplier (service).</td>
+<td>2</td>
+<td>Reason: Internal hardware error.<br>Solution: Contact the service department.</td>
 </tr>
 <tr>
-<td>Overvoltage</td>
+<td>Over voltage</td>
 <td>0x00000008</td>
-<td>03</td>
-<td>DC link voltage (connector X2) is too high.<br><strong>Cause 1</strong>: Power supply (DC) is poorly sized, misconfigured, or faulty.<br><strong>Solution 1</strong>: Check the power supply and its parameters.<br><strong>Cause 2</strong>: Regenerative energy of the servo drive is higher than the power supply can absorb.<br><strong>Solution 2a</strong>: Increase the deceleration ramp value.<br><strong>Solution 2b</strong>: Connect a different power supply or connect appropriate braking resistors.<br><strong>Cause 3</strong>: Low value of parameter D - VoltDCLinkMaxErrLim.<br><strong>Solution 3</strong>: Adjust the value of D - VoltDCLinkMaxErrLim.</td>
+<td>3</td>
+<td>DC voltage (connector X2) is too high.<br>Cause 1: DC power supply source is wrongly designed or wrongly adjusted or has error.<br>Solution 1: Check power supply source.<br>Cause 2: Recuperation energy of servo drive is higher than DC power supply source can take back. (Chopper resistor power is too low.)<br>Solution 2a: Change deceleration ramp of drive to longer time.<br>Solution 2b: Change DC power supply hardware or chopper resistor.<br>Reason 3: D-VoltDCLinkMaxErrLim parameter is set to low value.<br>Solution 3: Correct D-VoltDCLinkMaxErrLim parameter.</td>
 </tr>
 <tr>
-<td>Undervoltage</td>
+<td>Low voltagex1</td>
 <td>0x00000010</td>
-<td>04</td>
-<td>DC link voltage (connector X2) is too low.<br><strong>Cause 1</strong>: Power supply (DC) is not connected, faulty, switched off, or insufficiently powered.<br><strong>Solution 1</strong>: Check the power supply.<br><strong>Cause 2</strong>: High value of parameter D - VoltDCLinkMinErrLim.<br><strong>Solution 2</strong>: Adjust the value of D - VoltDCLinkMinErrLim.<br><strong>Cause 3</strong>: Short circuit in the DC link.<br><strong>Solution 3</strong>: Contact device supplier (service).</td>
+<td>4</td>
+<td>DC voltage (connector X2) is too low.<br>Cause 1: DC power supply source is not connected or is in fault state or is off.<br>Solution 1: Check power supply.<br>Cause 2: D-VoltDCLinkMinErrLim parameter is set to high value.<br>Solution 2: Correct D-VoltDCLinkMinErrLim parameter.<br>Cause 3: Short circuit on DC-link.<br>Solution 3: Contact the service department.</td>
 </tr>
 <tr>
-<td>STO Diagnostic Error</td>
+<td>STO diagnostic error</td>
 <td>0x00000020</td>
-<td>05</td>
-<td>Diagnostics detected an error in the Safe Torque Off (STO) circuits.<br><strong>Cause</strong>: Internal hardware error.<br><strong>Solution</strong>: Contact service department.</td>
+<td>5</td>
+<td>Diagnostics evaluated a fault in the safe torque off circuitry.<br>Cause: internal hardware error.<br>Solution: Contact the service department.</td>
 </tr>
 <tr>
-<td>Static Brake Error</td>
+<td>Static brake error</td>
 <td>0x00000040</td>
-<td>06</td>
-<td>Diagnostics detected a static brake error.<br><strong>Cause 1</strong>: Brake is disconnected or parameter M-StaticBrake in TGZ GUI is incorrectly set.<br><strong>Solution 1a</strong>: Verify motor type and set parameter M-StaticBrake accordingly.<br><strong>Solution 1b</strong>: Check brake cable connections and brake power connections on the drive.</td>
+<td>6</td>
+<td>Diagnostics have evaluated a static brake fault.<br>Cause 1: Brake is disconnected or is incorrectly specified M-StaticBrake parameter in TGZ GUI.<br>Solution 1a: Check the motor type and set the M-StaticBrake parameter accordingly.<br>Solution 1b: Check the wiring of the brake cables and the wiring of the brake power supply to the servo amplifier.</td>
 </tr>
 <tr>
-<td>Current Measurement Error</td>
+<td>Current measurement error</td>
 <td>0x00000100</td>
-<td>08</td>
-<td>Motor current measurement circuits are faulty.<br><strong>Cause</strong>: Internal hardware error.<br><strong>Solution</strong>: Contact service department.</td>
+<td>8</td>
+<td>The motor current measurement circuits have a fault.<br>Cause: internal hardware error.<br>Solution: Contact the service department.</td>
 </tr>
 <tr>
-<td>Motor Overheated</td>
+<td>Motor over temperature</td>
 <td>0x00000200</td>
-<td>09</td>
-<td>Motor is overheated.<br><strong>Cause 1</strong>: Ambient temperature is too high or cooling conditions are inadequate.<br><strong>Solution 1</strong>: Consider improving cooling conditions.<br><strong>Cause 2</strong>: Motor is overloaded.<br><strong>Solution 2</strong>: Verify drive sizing and motor parameter settings according to motor manufacturer's data.<br><strong>Cause 3</strong>: Temperature sensor wiring error.<br><strong>Solution 3</strong>: If possible, check the temperature sensor wiring, or contact service department.<br><strong>Cause 4</strong>: Parameter settings error.<br><strong>Solution 4</strong>: Verify temperature limit settings and consult with service department. Check motor parameters according to manufacturer data.<br><strong>Cause 5</strong>: Mechanical or electrical fault in the motor.<br><strong>Solution 5</strong>: Contact service department.</td>
+<td>9</td>
+<td>Motor is overheated.<br>Cause 1: The ambient temperature is too high or the cooling conditions are unsuitable.<br>Solution 1: Consider improving the cooling conditions.<br>Cause 2: The engine is overloaded with power.<br>Solution 2: Check drive sizing and motor parameter settings against motor manufacturer's data.<br>Cause 3: Temperature sensor wiring error.<br>Solution 3: If possible, check the wiring of the temperature sensor or contact the service department.<br>Cause 4: Parameter setting error.<br>Solution 4: Check the temperature limit parameter settings and consult the service department. Verify engine parameters against manufacturer's data.<br>Cause 5: Mechanical or electrical fault on the motor.<br>Solution 5: Contact the service department.</td>
 </tr>
 <tr>
-<td>Servo Amplifier Overheated</td>
+<td>Drive over temperature</td>
 <td>0x00000800</td>
 <td>11</td>
-<td>TGZ servo amplifier is overheated.<br><strong>Cause 1</strong>: Ambient temperature is too high or cooling conditions are inadequate.<br><strong>Solution 1</strong>: Consider improving cooling conditions.<br><strong>Cause 2</strong>: Parameter settings error.<br><strong>Solution 2</strong>: Verify temperature limit settings.<br><strong>Cause 3</strong>: Servo amplifier fault.<br><strong>Solution 3</strong>: Contact service department.</td>
+<td>The TGZ servo amplifier is overheating.<br>Cause 1: The ambient temperature is too high or the cooling conditions are unsuitable.<br>Solution 1: Consider improving the cooling conditions.<br>Cause 2: Parameter setting error.<br>Solution 2: Check the temperature limit parameter settings.<br>Cause 3: Failure of the servo amplifier.<br>Solution 3: Contact the service department.</td>
 </tr>
 <tr>
-<td>Feedback Error</td>
+<td>Feedback error</td>
 <td>0x00001000</td>
 <td>12</td>
-<td>Position feedback error.<br><strong>Cause 1</strong>: Wiring and connector error.<br><strong>Solution 1</strong>: Check and repair wiring and connectors X6, X7.<br><strong>Cause 2</strong>: Motor position sensor fault.<br><strong>Solution 2</strong>: Contact service department.<br><strong>Cause 3</strong>: Servo amplifier circuit error.<br><strong>Solution 3</strong>: Contact service department.</td>
+<td>Position feedback error.<br>Cause 1: Wiring and connector connection error.<br>Solution 1: Recheck and repair the wiring and connector connections of feedback connectors.<br>Cause 2: Motor position sensor error.<br>Solution 2: Contact the service department.<br>Cause 3: Fault in the servo amplifier circuitry.<br>Solution 3: Contact the service department.</td>
 </tr>
 <tr>
-<td>Speed Exceeded</td>
+<td>Overspeed error</td>
 <td>0x00004000</td>
 <td>14</td>
-<td>Speed measured by position sensor is greater than parameter M-Nmax.<br><strong>Cause 1</strong>: Incorrectly set parameter M-Nmax.<br><strong>Solution 1</strong>: Adjust parameter according to motor manufacturer's data.<br><strong>Cause 2</strong>: Misconfigured speed controller.<br><strong>Solution 2</strong>: Adjust speed and subsidiary controller settings to avoid oscillation.<br><strong>Cause 3</strong>: Position (speed) measurement error.<br><strong>Solution 3</strong>: Contact motor supplier's service department.</td>
+<td>Contact supplier of drive for more information.<br>The speed measured by the position sensor is greater than the value of the M-Nmax parameter.<br>Cause 1: Improperly set M-Nmax parameter<br>Solution 1: Adjust the parameter according to the data supplied by the motor manufacturer.<br>Cause 2: Incorrectly set speed controller.<br>Solution 2: Adjust the speed and slave controller settings to avoid oscillation.<br>Cause 3: Position (speed) measurement error.<br>Solution 3: Contact the service department of the motor supplier.</td>
 </tr>
 <tr>
-<td>Position Error</td>
+<td>Position error</td>
 <td>0x00008000</td>
 <td>15</td>
-<td>Deviation of the desired and actual position of the position controller exceeded the set limit.<br><strong>Cause 1</strong>: Improperly set control structure parameters.<br><strong>Solution 1</strong>: Review and adjust controller settings within the work cycle to minimize oscillation and position error.<br><strong>Cause 2</strong>: Servo amplifier cannot deliver the required torque to maintain the desired position. There may be a mechanical fault in the driven system.<br><strong>Solution 2</strong>: Verify drive sizing for dynamics and torque. Adjust system acceleration and deceleration if necessary. Check for mechanical faults in the driven system, such as excessive friction or mechanical stops.</td>
+<td>The deviation between the desired and actual position of the position controller has exceeded the specified limit.<br>Cause 1: Improperly set parameters of the control structure.<br>Solution 1: Check and adjust the controller settings within the duty cycle to avoid oscillation and minimize position error.<br>Cause 2: The servo amplifier is unable to deliver the required torque to maintain the desired position. This may also be a mechanical failure of the driven system.<br>Solution 2: Check the drive sizing for dynamics and torque. If necessary, adjust the acceleration, deceleration of the system. Verify that there is no mechanical failure of the driven system, no excessive friction or mechanical stopping of the device, etc.</td>
 </tr>
 <tr>
-<td>Trajectory Error</td>
+<td>Trajectory error</td>
 <td>0x00010000</td>
 <td>16</td>
-<td>Deviation of the desired position from the master system (EtherCAT) exceeded the set limit.<br><strong>Cause 1</strong>: Discontinuity in position data sent by the master system.<br><strong>Solution 1</strong>: Contact the master system supplier.<br><strong>Cause 2</strong>: Related to position error.<br><strong>Solution 2</strong>: See <strong>Solution</strong> for position error.</td>
+<td>The deviation of the requested position from the parent system (ethercat) from the actual position exceeded the specified limit.<br>Cause 1: Discontinuity in the position sent by the parent system.<br>Solution 1: Contact the supplier of the higher-level system.<br>Cause 2: Related to position error.<br>Solution 2: See. Resolution of position error.</td>
 </tr>
 <tr>
-<td>Fieldbus Error</td>
+<td>Fieldbus error</td>
 <td>0x00020000</td>
 <td>17</td>
-<td>Valid data did not arrive via the fieldbus within the specified time.<br><strong>Cause 1</strong>: Wiring fault.<br><strong>Solution 1</strong>: Check wiring and connectors.<br><strong>Cause 2</strong>: Master system fault.<br><strong>Solution 2</strong>: Contact the master system supplier.<br><strong>Cause 3</strong>: Servo amplifier hardware error.<br><strong>Solution 3</strong>: Contact service department.</td>
+<td>Valid data did not arrive over the industrial bus within the specified time.<br>Cause 1: Wiring fault.<br>Solution 1: Check wiring, connectors.<br>Cause 2: Fault on another device on the bus.<br>Solution 2: Diagnose if there is a fault on another device on the bus, or disable it.<br>Cause 3: Control system problem.<br>Solution 3: Check the system parameters and settings or contact the control system supplier.</td>
 </tr>
 <tr>
-<td>Parameter Error</td>
-<td>0x00040000</td>
-<td>18</td>
-<td>Parameter set verification error.<br><strong>Cause</strong>: Incorrect parameter set.<br><strong>Solution</strong>: Contact device supplier.</td>
+<td>Emergency stop</td>
+<td>0x00100000</td>
+<td>20</td>
+<td>Emergency stop has been activated, see. <a href="../../../../../SW/REG/md/ESTOP/">Emergency braking</a>.</td>
+</tr>
+<tr>
+<td>Over current error</td>
+<td>0x00200000</td>
+<td>21</td>
+<td>Motor overload current (short circuit).<br>Cause 1: Short circuit in the motor, wiring or connectors.<br>Solution 1: Check the individual components and remove the short circuit.<br>Cause 2: Low value of the D-Ierr_level parameter.<br>Solution 2: Set the value according to the motor parameters (20% higher than the maximum motor current).<br>Cause 3: Incorrect setting of the current controller.<br>Solution 3: Set the current regulator according to the motor parameters.<br>Cause 4: Failure of the servo amplifier.<br>Solution 4: Contact the service department.</td>
+</tr>
+<tr>
+<td>Brake resistance error</td>
+<td>0x00400000</td>
+<td>22</td>
+<td>Brake resistance error (TGZS servo amplifiers).<br>Cause 1: Incorrect wiring.<br>Solution 1: Check the wiring according to the diagram.<br>Cause 2: Brake resistor is overheated or damaged.<br>Solution 2: Check the sizing of the brake resistor.</td>
+</tr>
+<tr>
+<td>Servo amplifier parameter error</td>
+<td>0x08000000</td>
+<td>27</td>
+<td>Servo amplifier parameter error.<br>Cause 1: SD card is not inserted and reading parameters from SD card is requested.<br>Solution 1: Verify the SD card is inserted correctly.<br>Cause 2: The parameter structure has changed, e.g. after a firmware reload.<br>Solution 2: Read the parameters from a backup file or set the parameters manually and save them to the desired location.<br>Cause 3: The SD card is damaged.<br>Solution 3: Replace the card with a similar type and save the parameters from the backup.<br>Cause 4: The default saving of parameters to flash was not performed. It is necessary even when using the SD card.<br>Solution 4: Save the parameters to flash memory.</td>
 </tr>
 </tbody>
 </table>

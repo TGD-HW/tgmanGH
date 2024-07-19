@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#popis-funkce-struktury-oscilloscope" class="md-skip">
+        <a href="#function-description-of-the-oscilloscope-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -6561,55 +6561,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#popis-funkce-struktury-oscilloscope" class="md-nav__link">
+  <a href="#function-description-of-the-oscilloscope-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Popis funkce struktury Oscilloscope
+      Function description of the Oscilloscope structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#registry-oscilloscope-a-jejich-vyznam" class="md-nav__link">
+  <a href="#oscilloscope-registers-and-their-meaning" class="md-nav__link">
     <span class="md-ellipsis">
-      Registry Oscilloscope a jejich význam
+      Oscilloscope registers and their meaning
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Registry Oscilloscope a jejich význam">
+    <nav class="md-nav" aria-label="Oscilloscope registers and their meaning">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obecne-registry-oscilloscope" class="md-nav__link">
+  <a href="#general-registers-oscilloscope" class="md-nav__link">
     <span class="md-ellipsis">
-      Obecné registry Oscilloscope
+      General registers Oscilloscope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#princip-fungovani-utility-oscilloscope" class="md-nav__link">
+  <a href="#principle-of-operation-of-utility-oscilloscope" class="md-nav__link">
     <span class="md-ellipsis">
-      Princip fungování utility Oscilloscope
+      Principle of operation of utility Oscilloscope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#registry-kanalu" class="md-nav__link">
+  <a href="#channel-registers" class="md-nav__link">
     <span class="md-ellipsis">
-      Registry kanálů
+      Channel registers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pomocne-registry" class="md-nav__link">
+  <a href="#helpful-registers" class="md-nav__link">
     <span class="md-ellipsis">
-      Pomocné registry
+      Helpful registers
     </span>
   </a>
   
@@ -6621,9 +6621,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prehled-a-popis-registru-oscilloscope" class="md-nav__link">
+  <a href="#oscilloscope-registers-overview-and-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Přehled a popis registrů Oscilloscope
+      Oscilloscope registers overview and description
     </span>
   </a>
   
@@ -6777,99 +6777,99 @@
 
   <h1>Oscilloscope</h1>
 
-<h2 id="popis-funkce-struktury-oscilloscope">Popis funkce struktury Oscilloscope<a class="headerlink" href="#popis-funkce-struktury-oscilloscope" title="Permanent link">&para;</a></h2>
-<p>Oscilloscope je sofistikovaný nástroj pro záznam až 32 kanálů - hodnot až 32 různých registrů v závislosti na čase.
-V určitém časovém intervalu detekuje a ukládá do sdílené paměti <code>TGM_Oscilloscope</code> hodnoty zvolených registrů.
-S daty pak lze pracovat v jiných částech PLC nebo ve Windows aplikacích.
-Sdílená paměť <code>TGM_Oscilloscope</code> má zpravidla velikost 1 048 576 bytů. 
-Skutečnou velikost je nutno zjistit z hodnoty registru <code>TGM_System.HEADER.Mem_Size_OSC</code>.
-Paměť <code>TGM_Oscilloscope</code> je společná pro data všech zaznamenávaných kanálů.
-Při záznamu hodnot jednoho kanálu je jemu vyhrazena celá paměť, při záznamu dat více kanálů je paměť rovnoměrně rozdělena mezi jednotlivé kanály.
-Rozložení zaznamenávaných dat v paměti <code>TGM_Oscilloscope</code> a jejich offsety určuje TG Motion; tyto parametry uloží do příslušných registrů.</p>
+<h2 id="function-description-of-the-oscilloscope-structure">Function description of the Oscilloscope structure<a class="headerlink" href="#function-description-of-the-oscilloscope-structure" title="Permanent link">&para;</a></h2>
+<p>Oscilloscope is a sophisticated tool for recording up to 32 channels - the values of up to 32 different registers depending on time.
+It detects and stores the values of the selected registers in the shared memory <code>TGM_Oscilloscope</code> at a certain time interval.
+The data can then be worked with in other parts of the PLC or in Windows applications.
+The <code>TGM_Oscilloscope</code> shared memory is typically 1 048 576 bytes in size. 
+The actual size must be found from the value of the <code>TGM_System.HEADER.Mem_Size_OSC</code> register.
+The <code>TGM_Oscilloscope</code> memory is common to the data of all recorded channels.
+When recording the values of one channel, the entire memory is dedicated to it, when recording data of multiple channels, the memory is evenly divided between the individual channels.
+The layout of the recorded data in the <code>TGM_Oscilloscope</code> memory and their offsets are determined by TG Motion; these parameters are stored in the appropriate registers.</p>
 <div class="admonition info">
-<p class="admonition-title">Poznámka</p>
-<p>Rovnoměrnost rozdělení paměti TGM_Oscilloscope je vztažena k počtu bytů potřebných k záznamu hodnot jednotlivých registrů.
-Např. při záznamu dvou registrů, jednoho typu Long Integer (4 byty) a druhého typu Double (8 bytů), rozdělí TG Motion sdílenou paměť <code>TGM_Oscilloscope</code> v poměru 1:2, aby u obou kanálů mohl být zaznamenán stejný počet vzorků.</p>
+<p class="admonition-title">Note</p>
+<p>The uniformity of the TGM_Oscilloscope memory distribution is related to the number of bytes needed to record the values of each register.
+For example, when recording two registers, one of type Long Integer (4 bytes) and the other of type Double (8 bytes), TG Motion divides the shared memory <code>TGM_Oscilloscope</code> in a 1:2 ratio so that the same number of samples can be recorded for both channels.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Upozornění</p>
-<p>Se zvyšujícím se počtem zaznamenávaných kanálů klesá čas záznamu</p>
+<p class="admonition-title">Warning</p>
+<p>Recording time decreases as the number of recorded channels increases</p>
 </div>
-<p>Na úrovni TG Motion se načtení a záznam dat utilitou <strong>Oscilloscope</strong> do sdílené paměti <code>TGM_Oscilloscope</code> provádí po vykonání <em>Program_04</em>.
-Tím je zaručena časová synchronizace zaznamenaných hodnot.
-Načtení a záznam však nemusí proběhnout každý Cycle_Time; počet Cycle_Time, během nichž dojde k jednomu záznamu, určuje registr <code>Number_Periods</code>.</p>
-<p><a class="glightbox" href="../../img/OscPeriods.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Vliv registru Number_Periods na četnost záznamů Oscilloscope" src="../../img/OscPeriods.png" style="width:60%;" /></a></p>
+<p>At the TG Motion level, the data is read and recorded by the <strong>Oscilloscope</strong> utility into the shared memory <code>TGM_Oscilloscope</code> after executing <em>Program_04</em>.
+This ensures time synchronisation of the recorded values.
+However, a read and write does not have to occur every Cycle_Time; the number of Cycle_Time during which a write occurs is determined by the <code>Number_Periods</code> register.</p>
+<p><a class="glightbox" href="../../img/OscPeriods.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Effect of the Number_Periods register on the frequency of Oscilloscope records" src="../../img/OscPeriods.png" style="width:60%;" /></a></p>
 <div class="admonition info">
-<p class="admonition-title">Poznámka</p>
-<p>Na úrovni Windows nabízí Control Observer utilitu <strong>Oscilloscope</strong>, v níž lze zaznamenaná data zobrazit formou grafu, uložit do souboru, zpětně načíst, měnit parametry záznamu i zobrazování, případně provádět vlastní záznam.</p>
+<p class="admonition-title">Note</p>
+<p>At the Windows level, Control Observer offers the <strong>Oscilloscope</strong> utility, in which the recorded data can be displayed in the form of a graph, saved to a file, read back, change the recording and display parameters, or perform your own recording.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Upozornění</p>
-<p>Oscilloscope funguje jako jedna instance, která může být využívána z PLC i Control Observeru.
-Nelze ji však používat současně z PLC, Control Observeru, případně z jiných aplikací.</p>
+<p class="admonition-title">Warning</p>
+<p>Oscilloscope works as one instance that can be used from both PLC and Control Observer.
+However, it cannot be used simultaneously from PLC, Control Observer or other applications.</p>
 </div>
-<p><a class="glightbox" href="../../img/OscScreenshot.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Utilita Oscilloscope obsažená v Control Observeru" src="../../img/OscScreenshot.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../../img/OscScreenshot.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Oscilloscope utility included in Control Observer" src="../../img/OscScreenshot.png" style="width:60%;" /></a></p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Podrobný popis utility Oscilloscope Control Observeru se nachází v kapitole Control Observer.</p>
+<p class="admonition-title">Note</p>
+<p>For a detailed description of the Oscilloscope Control Observer utility, see the Control Observer chapter.</p>
 </div>
-<h2 id="registry-oscilloscope-a-jejich-vyznam">Registry Oscilloscope a jejich význam<a class="headerlink" href="#registry-oscilloscope-a-jejich-vyznam" title="Permanent link">&para;</a></h2>
-<p>Registry, kterými se utilita Oscilloscope řídí, nebo kam ukládá svá nastavení, se nacházejí ve sdílené paměti <code>TGM_System</code> od offsetu <code>4736</code>.
-Pro přehlednost je lze rozdělit do tří skupin:</p>
+<h2 id="oscilloscope-registers-and-their-meaning">Oscilloscope registers and their meaning<a class="headerlink" href="#oscilloscope-registers-and-their-meaning" title="Permanent link">&para;</a></h2>
+<p>The registers that the Oscilloscope utility uses to control or store its settings are located in the <code>TGM_System</code> shared memory starting at offset <code>4736</code>.
+For clarity, they can be divided into three groups:</p>
 <ul>
-<li><strong>obecné registry</strong> – týkají se nastavení utility Oscilloscope jako celku</li>
-<li><strong>registry kanálů</strong> – platí pouze pro konkrétní kanály</li>
-<li><strong>pomocné registry</strong> – obsahují informace o záznamu</li>
+<li><strong>general registers</strong> - refer to the settings of the Oscilloscope utility as a whole</li>
+<li><strong>channel registries</strong> - only valid for specific channels</li>
+<li><strong>auxiliary registers</strong> - contain information about the record</li>
 </ul>
-<h3 id="obecne-registry-oscilloscope">Obecné registry Oscilloscope<a class="headerlink" href="#obecne-registry-oscilloscope" title="Permanent link">&para;</a></h3>
-<p>Obecné registry slouží k celkovému nastavení a ovládání utility <strong>Oscilloscope</strong>.   </p>
+<h3 id="general-registers-oscilloscope">General registers Oscilloscope<a class="headerlink" href="#general-registers-oscilloscope" title="Permanent link">&para;</a></h3>
+<p>The general registers are used for general setup and control of the <strong>Oscilloscope</strong> utility.   </p>
 <table>
 <thead>
 <tr>
-<th>Parametr</th>
-<th>Popis</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Control</td>
-<td>Slouží k ovládání struktury Oscilloscope.</td>
+<td>Used to control the Oscilloscope structure.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 0: Neprobíhá záznam nebo slouží k zastavení záznamu.</td>
+<td>- 0: Not recording or used to stop recording.</td>
 </tr>
 <tr>
 <td></td>
-<td>- &gt;0: Aktivace záznamu; spouští záznam nebo čekání na Trigger (podle registru Status).</td>
+<td>- &gt;0: Activate a record; triggers a record or wait for a Trigger (depending on the Status register).</td>
 </tr>
 <tr>
 <td>Status</td>
-<td>Zobrazuje stav struktury Oscilloscope.</td>
+<td>Displays the status of the Oscilloscope structure.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 0: Neprobíhá záznam ani čekání na Trigger.</td>
+<td>- 0: No recording or waiting for Trigger.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 1: Probíhá záznam.</td>
+<td>- 1: Recording in progress.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 2: Čekání na Trigger.</td>
+<td>- 2: Waiting for Trigger.</td>
 </tr>
 <tr>
 <td>Number_Periods</td>
-<td>Počet servotiků na jeden vzorek. Určuje počet Cycle_Time, za něž se provede jeden záznam dat Oscilloscope.</td>
+<td>Number of servotics per sample. Specifies the number of Cycle_Time for which one Oscilloscope data record is made.</td>
 </tr>
 <tr>
 <td>Number_Channels</td>
-<td>Počet zaznamenávaných nebo zaznamenaných kanálů.</td>
+<td>Number of recorded or logged channels.</td>
 </tr>
 <tr>
 <td>Memory_Type_Trigger</td>
-<td>Typ sdílené paměti, v níž se nachází triggerovací registr.</td>
+<td>Type of shared memory where the trigger register is located.</td>
 </tr>
 <tr>
 <td></td>
@@ -6896,8 +6896,8 @@ Pro přehlednost je lze rozdělit do tří skupin:</p>
 <td>- 5: TGM_Dio</td>
 </tr>
 <tr>
-<td></td>
 <td>- 6: TGM_Interpolator</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
@@ -6921,76 +6921,76 @@ Pro přehlednost je lze rozdělit do tří skupin:</p>
 </tr>
 <tr>
 <td>Offset_Trigger</td>
-<td>Offset triggerovacího registru v paměti dané registrem Memory_Type_Trigger.</td>
+<td>Offset of the trigger register in the memory given by the Memory_Type_Trigger register.</td>
 </tr>
 <tr>
 <td>Mode_Trigger</td>
-<td>Mód triggerovacího algoritmu.</td>
+<td>Trigger algorithm mode.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 0: Triggerování neaktivní.</td>
+<td>- 0: Triggering inactive.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 1: Triggerování na náběžnou hranu.</td>
+<td>- 1: Triggering on the leading edge.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 2: Triggerování na sestupnou hranu.</td>
+<td>- 2: Triggering on the descending edge.</td>
 </tr>
 <tr>
 <td>Type_Trigger</td>
-<td>Datový typ triggerovacího registru.</td>
+<td>Trigger register data type.</td>
 </tr>
 <tr>
 <td>Level_Trigger</td>
-<td>Hodnota triggerovacího registru, při níž se spustí záznam.</td>
+<td>Trigger register value at which the record is triggered.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Triggerovacím registrem může být jakýkoli registr sdílených pamětí.</p>
+<p class="admonition-title">Note</p>
+<p>The trigger register can be any shared memory register.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Upozornění</p>
-<p>Přesto, že načtené hodnoty triggerovacího registru nemusejí být spojité, triggerovací algoritmus spojitost předpokládá.
-Např. při <code>Level_Trigger = 20</code>, <code>Mode_Trigger = 1</code> a načtených po sobě jdoucích hodnotách triggerovacího registru 17 a 22 se předpokládá, že hodnoty 20 již bylo dosaženo a záznam Oscilloscope se spustí.</p>
+<p class="admonition-title">Warning</p>
+<p>Although the read trigger register values may not be continuous, the trigger algorithm assumes continuity.
+E.g. with <code>Level_Trigger = 20</code>, <code>Mode_Trigger = 1</code> and consecutive trigger register values 17 and 22 loaded, it is assumed that the value 20 has already been reached and the Oscilloscope record is triggered.</p>
 </div>
-<h3 id="princip-fungovani-utility-oscilloscope">Princip fungování utility Oscilloscope<a class="headerlink" href="#princip-fungovani-utility-oscilloscope" title="Permanent link">&para;</a></h3>
-<p>Je-li Mode_Trigger = 0, pak při nastavení registru Control &gt; 0 spustí utilita Oscilloscope záznam dat.
-Záznam lze ukončit nastavením registru Control = 0.
-Je-li Mode_Trigger &gt; 0, pak při nastavení registru Control &gt; 0 aktivuje utilita Oscilloscope triggerovací algoritmus, který každý Cycle_Time testuje a vyhodnocuje hodnoty triggerovacího registru.
-Při splnění triggerovací podmínky se spustí záznam dat.
-Záznam Oscilloscope lze ukončit nastavením registru Control = 0.</p>
+<h3 id="principle-of-operation-of-utility-oscilloscope">Principle of operation of utility Oscilloscope<a class="headerlink" href="#principle-of-operation-of-utility-oscilloscope" title="Permanent link">&para;</a></h3>
+<p>If Mode_Trigger = 0, then when the Control &gt; 0 register is set, the Oscilloscope utility starts recording data.
+The record can be terminated by setting the Control register = 0.
+If Mode_Trigger &gt; 0, then when the Control register is set to Control &gt; 0, the Oscilloscope utility activates a trigger algorithm that tests and evaluates the trigger register values every Cycle_Time.
+When the trigger condition is met, data recording is started.
+The Oscilloscope record can be terminated by setting the Control = 0 register.</p>
 <div class="admonition info">
-<p class="admonition-title">Poznámka</p>
-<p>Jestliže během záznamu Oscilloscope dojde k zaplnění vyhrazené paměti TGM_Oscilloscope, dojde automaticky k zastavení záznamu a registry Control a Status jsou nastaveny na hodnotu 0.</p>
+<p class="admonition-title">Note</p>
+<p>If the dedicated TGM_Oscilloscope memory becomes full during Oscilloscope recording, recording stops automatically and the Control and Status registers are set to 0.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Poznámka</p>
-<p>Kompletní výčet všech registrů Oscilloscope včetně popisu viz. Apendix.</p>
+<p class="admonition-title">Note</p>
+<p>For a complete list of all Oscilloscope registers, including descriptions, see. Appendix.</p>
 </div>
-<h3 id="registry-kanalu">Registry kanálů<a class="headerlink" href="#registry-kanalu" title="Permanent link">&para;</a></h3>
-<p>Tyto registry určují parametry týkající se jednotlivých kanálů.
-Jedná se o umístění zaznamenaných dat v paměti <code>TGM_Oscilloscope</code>, určení zdroje dat (typ paměti a offset) a datový typ zaznamenávaného registru.
-Každému kanálu náleží následující čtveřice registrů.</p>
+<h3 id="channel-registers">Channel registers<a class="headerlink" href="#channel-registers" title="Permanent link">&para;</a></h3>
+<p>These registers determine the parameters related to each channel.
+This is the location of the recorded data in the <code>TGM_Oscilloscope</code> memory, the determination of the data source (memory type and offset) and the data type of the recorded register.
+Each channel has the following quartet of registers.</p>
 <table>
 <thead>
 <tr>
-<th>Paramet r</th>
-<th>Popis</th>
+<th>Parameter r</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Offset</td>
-<td>Offset zaznamenávaných dat kanálu v paměti TGM_Oscilloscope (přidělený systémem TG Motion).</td>
+<td>Offset of recorded channel data in TGM_Oscilloscope memory (allocated by TG Motion).</td>
 </tr>
 <tr>
 <td>Memory_Type_Value</td>
-<td>Typ sdílené paměti, v níž se nachází zaznamenávaný registr.</td>
+<td>Type of shared memory where the register is located.</td>
 </tr>
 <tr>
 <td></td>
@@ -7017,8 +7017,8 @@ Každému kanálu náleží následující čtveřice registrů.</p>
 <td>- 5: TGM_Dio</td>
 </tr>
 <tr>
-<td></td>
 <td>- 6: TGM_Interpolator</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
@@ -7042,193 +7042,195 @@ Každému kanálu náleží následující čtveřice registrů.</p>
 </tr>
 <tr>
 <td>Offset_Value</td>
-<td>Offset zaznamenávaného registru v paměti dané hodnotou Memory_Type_Value.</td>
+<td>Offset of the recorded register in memory given by the Memory_Type_Value value.</td>
 </tr>
 <tr>
 <td>Type_Value</td>
-<td>Datový typ zaznamenávaného registru.</td>
+<td>Data type of the logged register.</td>
 </tr>
 <tr>
 <td></td>
-<td>- 0–3: Integer 32 bitů</td>
+<td>- 0-3: Integer 32 bits</td>
 </tr>
 <tr>
 <td></td>
-<td>- 4–7: Integer 64 bitů</td>
+<td>- 4-7: Integer 64 bits</td>
 </tr>
 <tr>
 <td></td>
-<td>- 8: Double (číslo v plovoucí řádové čárce o velikosti 64 bitů)</td>
+<td>- 8: Double (floating point number of 64 bits)</td>
 </tr>
 <tr>
 <td></td>
-<td>- 9: Float (číslo v plovoucí řádové čárce o velikosti 32 bitů)</td>
+<td>- 9: Float (floating point number of 32 bits)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="pomocne-registry">Pomocné registry<a class="headerlink" href="#pomocne-registry" title="Permanent link">&para;</a></h3>
-<p>Pomocné registry informují o parametrech záznamu utility Oscilloscope.
--   <strong>Number_Samples</strong> – počet vzorků k dispozici
--   <strong>Actual_Samples</strong> – aktuální počet zaznamenaných vzorků
--   <strong>Sample_Time</strong> - časový interval vzorkování <code>(Sample_Time = Cycle_Time × Number_Periods) [μs]</code></p>
+<h3 id="helpful-registers">Helpful registers<a class="headerlink" href="#helpful-registers" title="Permanent link">&para;</a></h3>
+<p>Auxiliary registers inform about the recording parameters of the Oscilloscope utility.</p>
+<ul>
+<li><strong>Number_Samples</strong> - number of samples available</li>
+<li><strong>Actual_Samples</strong> - current number of recorded samples</li>
+<li><strong>Sample_Time</strong> - sampling time interval <code>(Sample_Time = Cycle_Time × Number_Periods) [μs]</code></li>
+</ul>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Registr Actual_Samples se při probíhajícím záznamu s každým vzorkem zvyšuje o 1.
-Při zastavení vzorkování (např. při nastavení registru <code>Control = 0</code>) označuje hodnota registru <code>Actual_Samples</code> poslední provedený vzorek.</p>
+<p class="admonition-title">Note</p>
+<p>The Actual_Samples register is incremented by 1 with each sample while a record is in progress.
+When sampling is stopped (e.g. when the <code>Control = 0</code> register is set), the value of the <code>Actual_Samples</code> register indicates the last sample performed.</p>
 </div>
-<h2 id="prehled-a-popis-registru-oscilloscope">Přehled a popis registrů Oscilloscope<a class="headerlink" href="#prehled-a-popis-registru-oscilloscope" title="Permanent link">&para;</a></h2>
-<p><strong>Obecné registry Oscilloscope</strong></p>
+<h2 id="oscilloscope-registers-overview-and-description">Oscilloscope registers overview and description<a class="headerlink" href="#oscilloscope-registers-overview-and-description" title="Permanent link">&para;</a></h2>
+<p><strong>General registers Oscilloscope</strong></p>
 <table>
     <tr>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;přístup&quot;}"><b>přístup</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;name&quot;}"><b>name</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;access&quot;}"><b>access</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;description&quot;}"><b>description</b></td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Control&quot;}">Control</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4736" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4736}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4736</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;slouží k ovládání struktury Oscilloscope&yen;u000a0 – neprobíhá záznam nebo zastavení záznamu&yen;u000a>0 – aktivace záznamu Oscilloscope (spouští záznam nebo čekání na Trigger)&quot;}">slouží k ovládání struktury Oscilloscope<br>0 – neprobíhá záznam nebo zastavení záznamu<br>&gt;0 – aktivace záznamu Oscilloscope (spouští záznam nebo čekání na Trigger)</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;used to control the Oscilloscope structure&yen;u000a0 - not recording or stopping recording&yen;u000a>0 - activating Oscilloscope recording (starting recording or waiting for Trigger)&&yen;u000a>0 - activating Oscilloscope recording (starting recording or waiting for Trigger)&quot;}">used to control the Oscilloscope structure<br>0 - no recording or stopping recording<br>&gt;0 - activating the Oscilloscope record (starts recording or waiting for Trigger)</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status&quot;}">Status</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
         <td sdval="4740" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4740}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4740</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;stav struktury Oscilloscope 0 – neprobíhá záznam&yen;u000a1 – záznam&yen;u000a2 – čekání na trigger&quot;}">stav struktury Oscilloscope 0 – neprobíhá záznam<br>1 – záznam<br>2 – čekání na trigger</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Oscilloscope structure state 0 - not recording&yen;u000a1 - recording&yen;u000a2 - waiting for trigger&quot;}">Oscilloscope structure state 0 - not recording<br>1 - recording<br>2 - waiting for trigger</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number_Periods&quot;}">Number_Periods</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4744" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4744}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4744</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;počet servotiků na jeden vzorek. Určuje počet Cycle_Time, za něž se provede jeden záznam&yen;u000adat Oscilloscope&quot;}">počet servotiků na jeden vzorek. Určuje počet Cycle_Time, za něž se provede jeden záznam<br>dat Oscilloscope</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;number of servotics per sample. Specifies the number of Cycle_Time for which one record is made&yen;u000adat Oscilloscope&quot;}">number of servotics per sample. Specifies the number of Cycle_Time for which one record is made<br>data Oscilloscope</td>.
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number_Channels&quot;}">Number_Channels</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4748" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4748}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4748</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;počet zaznamenávaných kanálů&quot;}">počet zaznamenávaných kanálů</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;number of recorded channels&quot;}">number of recorded channels</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Memory_Type_Trigger&quot;}">Memory_Type_Trigger</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4752" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4752}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4752</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;typ sdílené paměti, v níž se nachází triggerovací registr&quot;}">typ sdílené paměti, v níž se nachází triggerovací registr</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;type of shared memory that contains the trigger register&quot;}">type of shared memory that contains the trigger register</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Offset_Trigger&quot;}">Offset_Trigger</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4756" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4756}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4756</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset triggerovacího registru v paměti dané registrem Memory_Type_Trigger&quot;}">offset triggerovacího registru v paměti dané registrem Memory_Type_Trigger</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset of trigger register in memory given by Memory_Type_Trigger register&quot;}">offset of trigger register in memory given by Memory_Type_Trigger register</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Mode_Trigger&quot;}">Mode_Trigger</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4760" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4760}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4760</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mód triggerovacího algoritmu 0 – triggerování neaktivní&yen;u000a1 – náběžná hrana 2 – sestupná hrana&quot;}">mód triggerovacího algoritmu 0 – triggerování neaktivní<br>1 – náběžná hrana 2 – sestupná hrana</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;trigger algorithm mode 0 - trigger inactive&yen;u000a1 - leading edge 2 - trailing edge&quot;}">trigger algorithm mode 0 - trigger inactive<br>1 - leading edge 2 - trailing edge</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type_Trigger&quot;}">Type_Trigger</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4764" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4764}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4764</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;datový typ proměné triggerovacího registru&quot;}">datový typ proměné triggerovacího registru</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;data type of trigger register variable&quot;}">data type of trigger register variable</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Level_Trigger&quot;}">Level_Trigger</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4768" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4768}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4768</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;hodnota triggerovacího registru, při níž se spustí záznam&quot;}">hodnota triggerovacího registru, při níž se spustí záznam</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;trigger register value at which the record is triggered&quot;}">trigger register value at which the record is triggered</td>
     </tr>
 </table>
 
-<p><strong>registry kanálu OSC -&gt; CHANNEL_00</strong></p>
+<p><strong>OSC channel registers -&gt; CHANNEL_00</strong></p>
 <table>
     <tr>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;přístup&quot;}"><b>přístup</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;name&quot;}"><b>name</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;access&quot;}"><b>access</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;description&quot;}"><b>description</b></td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Offset&quot;}">Offset</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
         <td sdval="4776" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4776}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4776</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset zaznamenávaných dat kanálu v paměti TGM_Oscilloscope&quot;}">offset zaznamenávaných dat kanálu v paměti TGM_Oscilloscope</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset of recorded channel data in TGM_Oscilloscope memory&quot;}">offset of recorded channel data in TGM_Oscilloscope memory</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Memory_Type_Value&quot;}">Memory_Type_Value</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4780" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4780}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4780</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;typ sdílené paměti, v níž se nachází zaznamenávaný registr 0 – TGM_System&yen;u000a1 – TGM_Data&yen;u000a2 – TGM_Cam_Profile&yen;u000a3 – TGM_Oscilloscope&yen;u000a4 – TGM_Servo&yen;u000a5 – TGM_Dio&yen;u000a6 – TGM_Interpolator&yen;u000a7 – InterpolatorWriteMemory&yen;u000a8 – InterpolatorReadMemory&yen;u000a9 – TGM_ODS&yen;u000a10 – TGM_CNCEX&yen;u000a11 – TGM_GCODE&quot;}">typ sdílené paměti, v níž se nachází zaznamenávaný registr 0 – TGM_System<br>1 – TGM_Data<br>2 – TGM_Cam_Profile<br>3 – TGM_Oscilloscope<br>4 – TGM_Servo<br>5 – TGM_Dio<br>6 – TGM_Interpolator<br>7 – InterpolatorWriteMemory<br>8 – InterpolatorReadMemory<br>9 – TGM_ODS<br>10 – TGM_CNCEX<br>11 – TGM_GCODE</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;type of shared memory in which the register being recorded is located 0 - TGM_System&yen;u000a1 - TGM_Data&yen;u000a2 - TGM_Cam_Profile&yen;u000a3 - TGM_Oscilloscope&yen;u000a4 - TGM_Servo&yen.yen;u000a5 - TGM_Dio&yen;u000a6 - TGM_Interpolator&yen;u000a7 - InterpolatorWriteMemory&yen;u000a8 - InterpolatorReadMemory&yen;u000a9 - TGM_ODS&yen;u000a10 - TGM_CNCEX&yen;u000a11 - TGM_GCODE&quot;}">type of shared memory in which the register being recorded is located 0 - TGM_System<br>1 - TGM_Data<br>2 - TGM_Cam_Profile<br>3 - TGM_Oscilloscope<br>4 - TGM_Servo<br>5 - TGM_Dio<br>6 - TGM_Interpolator<br>7 - InterpolatorWriteMemory<br>8 - InterpolatorReadMemory<br>9 - TGM_ODS<br>10 - TGM_CNCEX<br>11 - TGM_GCODE</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Offset_Value&quot;}">Offset_Value</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4784" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4784}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4784</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset zaznamenávaného registru v paměti dané hodnotou Memory_Type_Value&quot;}">offset zaznamenávaného registru v paměti dané hodnotou Memory_Type_Value</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset of the recorded register in the memory given by the value of Memory_Type_Value&quot;}">offset of the recorded register in the memory given by the value of Memory_Type_Value</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Type_Value&quot;}">Type_Value</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;RW&quot;}">RW</td>
         <td sdval="4788" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4788}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4788</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;datový typ zaznamenávaného registru 0–3 – integer 32 bitů&yen;u000a4–7 – integer 64 bitů&yen;u000a8 – double (číslo v plovoucí řádové čárce o velikosti 64 bitů) 9 – float (číslo v plovoucí řádové čárce o velikosti 32 bitů)&quot;}">datový typ zaznamenávaného registru 0–3 – integer 32 bitů<br>4–7 – integer 64 bitů<br>8 – double (číslo v plovoucí řádové čárce o velikosti 64 bitů) 9 – float (číslo v plovoucí řádové čárce o velikosti 32 bitů)</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;data type of the register being recorded 0-3 - integer 32 bits&yen;u000a4-7 - integer 64 bits&yen;u000a8 - double (floating point number of 64 bits) 9 - float (floating point number of 32 bits)&quot;}">data type of the register being recorded 0-3 - integer 32 bits<br>4-7 - integer 64 bits<br>8 - double (floating point number of 64 bits) 9 - float (floating point number of 32 bits)</td>
     </tr>
 </table>
 
-<p><strong>registry ostatních kanálů OSC -&gt; CHANNEL_01 - CHANNEL_31</strong></p>
+<p><strong>registers of other OSC channels -&gt; CHANNEL_01 - CHANNEL_31</strong></p>
 <table>
     <tr>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;name&quot;}"><b>name</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;description&quot;}"><b>description</b></td>
     </tr>
     <tr>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;CHANNEL_01&quot;}">CHANNEL_01</td>
         <td sdval="4792" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4792}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4792</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registry náležející kanálu 01&quot;}">registry náležející kanálu 01</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registers belonging to channel 01&quot;}">registers belonging to channel 01</td>
     </tr>
     <tr>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;CHANNEL_02&quot;}">CHANNEL_02</td>
         <td sdval="4808" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 4808}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">4808</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registry náležející kanálu 02&quot;}">registry náležející kanálu 02</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registers belonging to channel 02&quot;}">registers belonging to channel 02</td>
     </tr>
     <tr>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;׀&quot;}">׀</td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;׀&quot;}">׀</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;׀&quot;}">׀</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;}"></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;}">׀</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;}"></td>
     </tr>
     <tr>
         <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;CHANNEL_31&quot;}">CHANNEL_31</td>
         <td sdval="5272" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 5272}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">5272</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registry náležející kanálu 31&quot;}">registry náležející kanálu 31</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;registers belonging to channel 31&quot;}">registers belonging to channel 31</td>
     </tr>
 </table>
 
-<p><strong>pomocné registry</strong></p>
+<p><strong>helpful registers</strong></p>
 <table>
     <tr>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;název&quot;}"><b>název</b></td>
-        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;přístup&quot;}"><b>přístup</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;name&quot;}"><b>name</b></td>
+        <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;access&quot;}"><b>access</b></td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;offset&quot;}"><b>offset</b></td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;popis&quot;}"><b>popis</b></td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;description&quot;}"><b>description</b></td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number_Samples&quot;}">Number_Samples</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
         <td sdval="5288" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 5288}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">5288</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;počet vzorků k dispozici&quot;}">počet vzorků k dispozici</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;number of samples available&quot;}">number of samples available</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual_Samples&quot;}">Actual_Samples</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
         <td sdval="5292" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 5292}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">5292</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;aktuální počet zaznamenaných vzorků&quot;}">aktuální počet zaznamenaných vzorků</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;current number of recorded samples&quot;}">current number of recorded samples</td>
     </tr>
     <tr>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Sample_Time&quot;}">Sample_Time</td>
         <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;R&quot;}">R</td>
         <td sdval="5296" sdnum="1029;0;0" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 5296}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0&quot;, &quot;3&quot;: 1}">5296</td>
-        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;časový interval vzorkování (Sample_Time = Cycle_Time × Number_Periods) [μs]&quot;}">časový interval vzorkování (Sample_Time = Cycle_Time × Number_Periods) [μs]</td>
+        <td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;sampling time interval (Sample_Time = Cycle_Time × Number_Periods) [μs]&quot;}">sampling time interval (Sample_Time = Cycle_Time × Number_Periods) [μs]</td>
     </tr>
 </table>
 

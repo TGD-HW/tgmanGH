@@ -6852,7 +6852,7 @@ Detailní popis jednotlivých stavů EtherCAT naleznete v dokumentaci <a href="h
 <thead>
 <tr>
 <th>Druh chyby</th>
-<th>Hodnota chyby v registru <code>aDriveError</code></th>
+<th>Hodnota chyby v registru aDriveError</th>
 <th>Číslo chyby na displeji</th>
 <th>Popis chyby / možná příčina / řešení</th>
 </tr>
@@ -6862,85 +6862,103 @@ Detailní popis jednotlivých stavů EtherCAT naleznete v dokumentaci <a href="h
 <td>Interní chyba</td>
 <td>0x00000004</td>
 <td>02</td>
-<td><strong>Příčina</strong>: Interní hardwarová chyba.<br><strong>Řešení</strong>: Kontaktujte dodavatele zařízení (servis).</td>
+<td>Příčina: Interní hardwarová chyba.<br>Řešení: Kontaktujte dodavatele zařízení (servis).</td>
 </tr>
 <tr>
 <td>Přepětí</td>
 <td>0x00000008</td>
 <td>03</td>
-<td>Napětí meziobvodu (konektor X2) je příliš vysoké.<br><strong>Příčina 1</strong>: Napájecí zdroj (DC) je špatně dimenzován nebo špatně nastaven nebo je v poruše.<br><strong>Řešení 1</strong>: Zkontrolujte napájecí zdroj a jeho parametry.<br><strong>Příčina 2</strong>: Rekuperační energie servopohonu je vyšší, než může zdroj přijmout.<br><strong>Řešení 2a</strong>: Upravte hodnotu decelerační rampy na vyšší číslo.<br><strong>Řešení 2b</strong>: Připojte jiný napájecí zdroj nebo připojte vhodné brzdné rezistory.<br><strong>Příčina 3</strong>: Nízká hodnota parametru D – VoltDCLinkMaxErrLim.<br><strong>Řešení 3</strong>: Upravte hodnotu D – VoltDCLinkMaxErrLim.</td>
+<td>Napětí meziobvodu (konektor X2) je příliš vysoké.<br>Příčina 1: Napájecí zdroj (DC) je špatně dimenzován nebo špatně nastaven nebo je v poruše.<br>Řešení 1: Zkontrolujte napájecí zdroj a jeho parametry.<br>Příčina 2: Rekuperační energie servopohonu je vyšší, než může zdroj přijmout.<br>Řešení 2a: Upravte hodnotu decelerační rampy na vyšší číslo.<br>Řešení 2b: Připojte jiný napájecí zdroj nebo připojte vhodné brzdné rezistory.<br>Příčina 3: Nízká hodnota parametru D – VoltDCLinkMaxErrLim.<br>Řešení 3: Upravte hodnotu D – VoltDCLinkMaxErrLim.</td>
 </tr>
 <tr>
 <td>Podpětí</td>
 <td>0x00000010</td>
 <td>04</td>
-<td>Napětí meziobvodu (konektor X2) je příliš nízké.<br><strong>Příčina 1</strong>: Napájecí zdroj (DC) není připojen, je v poruše, je vypnutý nebo nemá dostatečný výkon.<br><strong>Řešení 1</strong>: Zkontrolujte napájecí zdroj.<br><strong>Příčina 2</strong>: Vysoká hodnota parametru D – VoltDCLinkMinErrLim.<br><strong>Řešení 2</strong>: Upravte hodnotu D – VoltDCLinkMinErrLim.<br><strong>Příčina 3</strong>: Zkrat na meziobvodu.<br><strong>Řešení 3</strong>: Kontaktujte dodavatele zařízení (servis).</td>
+<td>Napětí meziobvodu (konektor X2) je příliš nízké.<br>Příčina 1: Napájecí zdroj (DC) není připojen, je v poruše, je vypnutý nebo nemá dostatečný výkon.<br>Řešení 1: Zkontrolujte napájecí zdroj.<br>Příčina 2: Vysoká hodnota parametru D – VoltDCLinkMinErrLim.<br>Řešení 2: Upravte hodnotu D – VoltDCLinkMinErrLim.<br>Příčina 3: Zkrat na meziobvodu.<br>Řešení 3: Kontaktujte dodavatele zařízení (servis).</td>
 </tr>
 <tr>
 <td>Chyba diag. STO</td>
 <td>0x00000020</td>
 <td>05</td>
-<td>Diagnostika vyhodnotila chybu v obvodech bezpečného přerušení točivého momentu.<br><strong>Příčina</strong>: Interní hardwarová chyba.<br><strong>Řešení</strong>: Kontaktujte servisní oddělení.</td>
+<td>Diagnostika vyhodnotila chybu v obvodech bezpečného přerušení točivého momentu.<br>Příčina: Interní hardwarová chyba.<br>Řešení: Kontaktujte servisní oddělení.</td>
 </tr>
 <tr>
 <td>Chyba statické brzdy</td>
 <td>0x00000040</td>
 <td>06</td>
-<td>Diagnostika vyhodnotila chybu statické brzdy.<br><strong>Příčina 1</strong>: Brzda je odpojena nebo je nesprávně zadán parametr M-StaticBrake v TGZ GUI.<br><strong>Řešení 1a</strong>: Ověřte typ motoru a dle něj nastavte parametr M-StaticBrake.<br><strong>Řešení 1b</strong>: Překontrolujte zapojení kabelů brzdy a zapojení napájení brzdy na měniči.</td>
+<td>Diagnostika vyhodnotila chybu statické brzdy.<br>Příčina 1: Brzda je odpojena nebo je nesprávně zadán parametr M-StaticBrake v TGZ GUI.<br>Řešení 1a: Ověřte typ motoru a dle něj nastavte parametr M-StaticBrake.<br>Řešení 1b: Překontrolujte zapojení kabelů brzdy a zapojení napájení brzdy na měniči.</td>
 </tr>
 <tr>
 <td>Chyba měření proudu</td>
 <td>0x00000100</td>
 <td>08</td>
-<td>Obvody měření proudu motoru mají poruchu.<br><strong>Příčina</strong>: Interní hardwarová chyba.<br><strong>Řešení</strong>: Kontaktujte servisní oddělení.</td>
+<td>Obvody měření proudu motoru mají poruchu.<br>Příčina: Interní hardwarová chyba.<br>Řešení: Kontaktujte servisní oddělení.</td>
 </tr>
 <tr>
 <td>Přehřátý motor</td>
 <td>0x00000200</td>
 <td>09</td>
-<td>Motor je přehřátý.<br><strong>Příčina 1</strong>: Teplota okolí je moc vysoká nebo jsou nevhodné podmínky chlazení.<br><strong>Řešení 1</strong>: Zvažte zlepšení podmínek chlazení.<br><strong>Příčina 2</strong>: Motor je výkonově přetěžován.<br><strong>Řešení 2</strong>: Ověřte dimenzování pohonu a nastavení parametrů motoru dle dat od výrobce motoru.<br><strong>Příčina 3</strong>: Chyba v zapojení teplotního čidla.<br><strong>Řešení 3</strong>: Pokud to lze, ověřte zapojení čidla teploty, případně kontaktujte servisní oddělení.<br><strong>Příčina 4</strong>: Chyba nastavení parametrů.<br><strong>Řešení 4</strong>: Ověřte nastavení parametrů teplotních limitů a konzultujte se servisním oddělením. Ověřte parametry motoru podle dat od výrobce.<br><strong>Příčina 5</strong>: Mechanická nebo elektrická závada na motoru.<br><strong>Řešení 5</strong>: Kontaktujte servisní oddělení.</td>
+<td>Motor je přehřátý.<br>Příčina 1: Teplota okolí je moc vysoká nebo jsou nevhodné podmínky chlazení.<br>Řešení 1: Zvažte zlepšení podmínek chlazení.<br>Příčina 2: Motor je výkonově přetěžován.<br>Řešení 2: Ověřte dimenzování pohonu a nastavení parametrů motoru dle dat od výrobce motoru.<br>Příčina 3: Chyba v zapojení teplotního čidla.<br>Řešení 3: Pokud to lze, ověřte zapojení čidla teploty, případně kontaktujte servisní oddělení.<br>Příčina 4: Chyba nastavení parametrů.<br>Řešení 4: Ověřte nastavení parametrů teplotních limitů a konzultujte se servisním oddělením. Ověřte parametry motoru podle dat od výrobce.<br>Příčina 5: Mechanická nebo elektrická závada na motoru.<br>Řešení 5: Kontaktujte servisní oddělení.</td>
 </tr>
 <tr>
 <td>Přehřátý servozesilovač</td>
 <td>0x00000800</td>
 <td>11</td>
-<td>Servozesilovač TGZ je přehřátý.<br><strong>Příčina 1</strong>: Teplota okolí je moc vysoká nebo jsou nevhodné podmínky chlazení.<br><strong>Řešení 1</strong>: Zvažte zlepšení podmínek chlazení.<br><strong>Příčina 2</strong>: Chyba nastavení parametrů.<br><strong>Řešení 2</strong>: Ověřte nastavení parametrů teplotních limitů.<br><strong>Příčina 3</strong>: Závada servozesilovače.<br><strong>Řešení 3</strong>: Kontaktujte servisní oddělení.</td>
+<td>Servozesilovač TGZ je přehřátý.<br>Příčina 1: Teplota okolí je moc vysoká nebo jsou nevhodné podmínky chlazení.<br>Řešení 1: Zvažte zlepšení podmínek chlazení.<br>Příčina 2: Chyba nastavení parametrů.<br>Řešení 2: Ověřte nastavení parametrů teplotních limitů.<br>Příčina 3: Závada servozesilovače.<br>Řešení 3: Kontaktujte servisní oddělení.</td>
 </tr>
 <tr>
 <td>Chyba zpětné vazby</td>
 <td>0x00001000</td>
 <td>12</td>
-<td>Chyba zpětné vazby polohy.<br><strong>Příčina 1</strong>: Chyba v kabeláži a připojení konektorů.<br><strong>Řešení 1</strong>: Překontrolujte a opravte kabeláž a připojení konektorů X6, X7.<br><strong>Příčina 2</strong>: Chyba snímače polohy motoru.<br><strong>Řešení 2</strong>: Kontaktujte servisní oddělení.<br><strong>Příčina 3</strong>: Chyba v obvodech servozesilovače.<br><strong>Řešení 3</strong>: Kontaktujte servisní oddělení.</td>
+<td>Chyba zpětné vazby polohy.<br>Příčina 1: Chyba v kabeláži a připojení konektorů.<br>Řešení 1: Překontrolujte a opravte kabeláž a připojení konektorů X6, X7.<br>Příčina 2: Chyba snímače polohy motoru.<br>Řešení 2: Kontaktujte servisní oddělení.<br>Příčina 3: Chyba v obvodech servozesilovače.<br>Řešení 3: Kontaktujte servisní oddělení.</td>
 </tr>
 <tr>
 <td>Překročena rychlost</td>
 <td>0x00004000</td>
 <td>14</td>
-<td>Rychlost změřená snímačem polohy je větší než hodnota parametru M-Nmax.<br><strong>Příčina 1</strong>: Nevhodně nastavený parametr M-Nmax.<br><strong>Řešení 1</strong>: Upravte parametr podle dat dodaných výrobcem motoru.<br><strong>Příčina 2</strong>: Špatně nastavený regulátor rychlosti.<br><strong>Řešení 2</strong>: Upravte nastavení rychlostního a podružných regulátorů, aby nedocházelo ke kmitání.<br><strong>Příčina 3</strong>: Chyba měření polohy (rychlosti).<br><strong>Řešení 3</strong>: Kontaktujte servisní oddělení dodavatele motoru.</td>
+<td>Rychlost změřená snímačem polohy je větší než hodnota parametru M-Nmax.<br>Příčina 1: Nevhodně nastavený parametr M-Nmax.<br>Řešení 1: Upravte parametr podle dat dodaných výrobcem motoru.<br>Příčina 2: Špatně nastavený regulátor rychlosti.<br>Řešení 2: Upravte nastavení rychlostního a podružných regulátorů, aby nedocházelo ke kmitání.<br>Příčina 3: Chyba měření polohy (rychlosti).<br>Řešení 3: Kontaktujte servisní oddělení dodavatele motoru.</td>
 </tr>
 <tr>
 <td>Poziční chyba</td>
 <td>0x00008000</td>
 <td>15</td>
-<td>Odchylka žádané a skutečné polohy polohového regulátoru překročila zadanou mez.<br><strong>Příčina 1</strong>: Nevhodně nastavené parametry regulační struktury.<br><strong>Řešení 1</strong>: Prověřte a upravte nastavení regulátorů v rámci pracovního cyklu, aby nedocházelo ke kmitání a byla minimální poziční chyba.<br><strong>Příčina 2</strong>: Servozesilovač není schopen dodat potřebný moment pro dodržení žádané polohy. Může jít i o mechanickou závadu na poháněném systému.<br><strong>Řešení 2</strong>: Ověřte dimenzování pohonu z hlediska dynamiky a momentu. Případně upravte zrychlení, zpomalení systému. Ověřte, že nejde o mechanickou závadu poháněného systému, zda se nevyskytuje nadměrné tření nebo není zařízení na mechanickém dorazu atd.</td>
+<td>Odchylka žádané a skutečné polohy polohového regulátoru překročila zadanou mez.<br>Příčina 1: Nevhodně nastavené parametry regulační struktury.<br>Řešení 1: Prověřte a upravte nastavení regulátorů v rámci pracovního cyklu, aby nedocházelo ke kmitání a byla minimální poziční chyba.<br>Příčina 2: Servozesilovač není schopen dodat potřebný moment pro dodržení žádané polohy. Může jít i o mechanickou závadu na poháněné systému.<br>Řešení 2: Ověřte dimenzování pohonu z hlediska dynamiky a momentu. Případně upravte zrychlení, zpomalení systému. Ověřte, že nejde o mechanickou závadu poháněného systému, zda se nevyskytuje nadměrné tření nebo není zařízení na mechanickém dorazu atd.</td>
 </tr>
 <tr>
 <td>Chyba trajektorie</td>
 <td>0x00010000</td>
 <td>16</td>
-<td>Odchylka žádané polohy z nadřazeného systému (ethercat) od skutečné polohy překročila zadanou mez.<br><strong>Příčina 1</strong>: Nespojitost v poloze zasílané nadřazeným systémem.<br><strong>Řešení 1</strong>: Kontaktujte dodavatele nadřazeného systému.<br><strong>Příčina 2</strong>: Souvislost s poziční chybou.<br><strong>Řešení 2</strong>: Viz. <strong>Řešení</strong> poziční chyby.</td>
+<td>Odchylka žádané polohy z nadřazeného systému (ethercat) od skutečné polohy překročila zadanou mez.<br>Příčina 1: Nespojitost v poloze zasílané nadřazeným systémem.<br>Řešení 1: Kontaktujte dodavatele nadřazeného systému.<br>Příčina 2: Souvislost s poziční chybou.<br>Řešení 2: Viz. Řešení poziční chyby.</td>
 </tr>
 <tr>
 <td>Chyba průmyslové sběrnice</td>
 <td>0x00020000</td>
 <td>17</td>
-<td>Nedorazila platná data po průmyslové sběrnici ve stanoveném čase.<br><strong>Příčina 1</strong>: Závada kabeláže.<br><strong>Řešení 1</strong>: Překontrolujte kabeláž, konektory.<br><strong>Příčina 2</strong>: Závada nadřazeného systému.<br><strong>Řešení 2</strong>: Kontaktujte dodavatele nadřazeného systému.<br><strong>Příčina 3</strong>: Chyba hardwaru servozesilovače.<br><strong>Řešení 3</strong>: Kontaktujte servisní oddělení.</td>
+<td>Nedorazila platná data po průmyslové sběrnici ve stanoveném čase.<br>Příčina 1: Závada kabeláže.<br>Řešení 1: Překontrolujte kabeláž, konektory.<br>Příčina 2: Závada na jiném zařízení na sběrnici.<br>Řešení 2: Diagnostikujte zda není závada na jiném zařízení na sběrnici, případně ho vyřaďte.<br>Příčina 3: Problém řídícího systému.<br>Řešení 3: Ověřte parametry a nastavení systému, případně kontaktujte dodavatele řídícího systému.</td>
+</tr>
+<tr>
+<td>Nouzové zastavení</td>
+<td>0x00100000</td>
+<td>20</td>
+<td>Bylo aktivováno nouzové zastavení viz. <a href="../../../../../SW/REG/md/ESTOP/">Nouzové zabrždění</a>.</td>
+</tr>
+<tr>
+<td>Proudové přetížení</td>
+<td>0x00200000</td>
+<td>21</td>
+<td>Proudové přetížení motoru (zkrat).<br>Příčina 1: Zkrat na motoru, kabeláži nebo v konektorech.<br>Řešení 1: Prověřte jednotlivé komponenty a odstraňte zkrat.<br>Příčina 2: Nízká hodnota parametru D-Ierr_level.<br>Řešení 2: Nastavte hodnotu dle parametrů motoru (o 20% vyšší než je maximální proud motoru).<br>Příčina 3: Chybné nastavení proudového regulátoru.<br>Řešení 3: Nastavte proudový regulator dle parametrů motoru.<br>Příčina 4: Závada servozesilovače.<br>Řešení 4: Kontaktujte servisní oddělení.</td>
+</tr>
+<tr>
+<td>Chyba brzdného odporu</td>
+<td>0x00400000</td>
+<td>22</td>
+<td>Chyba brzdného odporu (Servozesilovače TGZS).<br>Příčina 1: Špatné zapojení.<br>Řešení 1: Ověřte zapojení dle schématu.<br>Příčina 2: Brzdný odpor je přehřátý nebo poškozený.<br>Řešení 2: Ověřte dimenzování brzdného odporu.</td>
 </tr>
 <tr>
 <td>Chyba parametrů</td>
-<td>0x00040000</td>
-<td>18</td>
-<td>Při verifikaci sady parametrů došlo k chybě.<br><strong>Příčina</strong>: Nesprávná sada parametrů.<br><strong>Řešení</strong>: Kontaktujte dodavatele zařízení.</td>
+<td>0x08000000</td>
+<td>27</td>
+<td>Chyba parametrů servozesilovače.<br>Příčina 1: Není vložena SD karta a je požadováno vyčtení parametrů z SD karty.<br>Řešení 1: Ověřte správné vložení SD karty.<br>Příčina 2: Struktura parametrů se změnila např. po přehrátí firmware.<br>Řešení 2: Načtěte parametry ze záložního souboru nebo nastavte ručně a uložte parametry na požadované umístění.<br>Příčina 3: SD karta je poškozena.<br>Řešení 3: Nahraďte kartu kartou podobného typu a uložte na ní parametry ze zálohy.<br>Příčina 4: Nebylo provedeno výchozí uložení parametrů do flash. Je nutné i při využívání SD karty.<br>Řešení 4: Uložte parametry do flash paměti.</td>
 </tr>
 </tbody>
 </table>

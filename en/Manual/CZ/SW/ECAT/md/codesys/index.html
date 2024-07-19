@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#polohovy-pp-a-rychlostni-pv-rezim" class="md-skip">
+        <a href="#profile-position-pp-and-profile-velocity-pv-modes" class="md-skip">
           Skip to content
         </a>
       
@@ -6104,9 +6104,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#polohovy-pp-a-rychlostni-pv-rezim" class="md-nav__link">
+  <a href="#profile-position-pp-and-profile-velocity-pv-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Polohový (PP) a rychlostní (PV) režim
+      Profile Position (PP) and Profile Velocity (PV) Modes
     </span>
   </a>
   
@@ -6717,99 +6717,90 @@
 
   <h1>Codesys</h1>
 
-<h2 id="polohovy-pp-a-rychlostni-pv-rezim">Polohový (PP) a rychlostní (PV) režim<a class="headerlink" href="#polohovy-pp-a-rychlostni-pv-rezim" title="Permanent link">&para;</a></h2>
-<p>Servopohon TGZ podporuje další režimy polohování - profilovou polohu a profilovou rychlost.
-V takovém případě využívá svůj interní profil-generátor.
-Řídicí jednotka pouze nastaví požadovanou cílovou polohu (nebo rychlost) a servopohon provede všechny potřebné výpočty (zrychlení/zpomalení) pro vytvoření profilu polohy nebo rychlosti.
-Komunikace mezi řídicí jednotkou a zařízením nemusí probíhat v reálném čase.
-Toto je identické pro sběrnice EtherCAT i CAN.</p>
+<h2 id="profile-position-pp-and-profile-velocity-pv-modes">Profile Position (PP) and Profile Velocity (PV) Modes<a class="headerlink" href="#profile-position-pp-and-profile-velocity-pv-modes" title="Permanent link">&para;</a></h2>
+<p>The TGZ servo drive supports additional positioning modes – profile position and profile velocity. In such cases, it uses its internal profile generator. The controller only sets the desired target position (or velocity), and the servo drive performs all the necessary calculations (acceleration/deceleration) to create a position or velocity profile. Communication between the controller and the device does not need to be in real-time. This process works identically for both EtherCAT and CAN field buses.</p>
 <ul>
-<li>Připravte servopohon pomocí serviceho programu TGZ_GUI: nastavte registr <code>D-Mode</code> na <code>7</code>: polohový režim PG.
-  Toto nastavení je stejné pro režimy PP a PV.</li>
+<li>Prepare the servo drive using the TGZ_GUI service program: set the <code>D-Mode</code> register to <code>7</code>: position PG mode. This setting is the same for both PP and PV modes.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys1.webp" style="width:70%;" /></a></p>
 <ul>
-<li>V závislosti na použitém typu sběrnice vyberte v položce <code>UseCANbus</code> buď <code>EtherCAT</code>, nebo <code>CAN</code>.</li>
+<li>Depending on the fieldbus used, select <code>EtherCAT</code> or <code>CAN</code> in the <code>UseCANbus</code> setting.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys2.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys2.webp" style="width:70%;" /></a></p>
 <ul>
-<li>Pokud byla sběrnice změněna, uložte parametry a restartujte pohon.</li>
-<li>Otevřete vývojový systém CODESYS a vytvořte nový projekt <strong>Standard project</strong>.</li>
+<li>If the fieldbus has been changed, save the parameters and restart the drive.</li>
+<li>Open the CODESYS development system and create a new <strong>Standard project</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys3.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys3.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Zařízení Control Win (soft real-time) je vhodné pro režimy PP a PV.</li>
+<li>The Control Win device (soft real-time) is sufficient for PP and PV modes.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys4.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys4.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Přidejte soubor s popisem zařízení TGZ (XML pro EtherCAT, EDS pro CANopen) do úložiště zařízení (pokud tak ještě nebylo učiněno).</li>
+<li>Add the TGZ device description file (XML for EtherCAT, EDS for CANopen) to the device repository (if not yet done).</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys5.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys5.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Zvolte <strong>Install</strong> a vyberte správný soubor.</li>
+<li>Choose <strong>Install</strong> and select the correct description file.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys6.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys6.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Pravým tlačítkem myši klikněte na <strong>Device (CODESYS Control Win V3 x64)</strong> a vyberte možnost <strong>Add device</strong>.</li>
+<li>Right-click on <strong>Device (CODESYS Control Win V3 x64)</strong> and select <strong>Add Device</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys7.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys7.webp" style="width:50%;" /></a></p>
 <ul>
-<li>V následujícím dialogu vyberte položku <strong>EtherCAT Master SoftMotion</strong> a klikněte na tlačítko <strong>Add Device</strong>.</li>
+<li>In the dialog that appears, select <strong>EtherCAT Master SoftMotion</strong> and click <strong>Add Device</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys8.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys8.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Klikněte na položku <strong>EtherCAT_Master_SoftMotion</strong> ve stromu zařízení a v dialogovém okně <strong>Add device</strong> vyberte EtherCAT slave TGZ-Drives/TGZ/TGZ Drive V5 a přidejte jej do projektu.</li>
+<li>Click on <strong>EtherCAT_Master_SoftMotion</strong> in the device tree. In the <strong>Add Device</strong> dialog, select the EtherCAT slave TGZ-Drives/TGZ/TGZ Drive V5 and add it to the project.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys9.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys9.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Zavřete dialogové okno <strong>Add device</strong> a ve stromu zařízení projektu vyberte položku <strong>TGZ Drive</strong>.
-  Klikněte pravým tlačítkem myši a vyberte položku <strong>Add SoftMotionLight CiA402 Axis</strong>.</li>
+<li>Close the <strong>Add Device</strong> dialog and select <strong>TGZ Drive</strong> in the project device tree. Right-click and choose <strong>Add SoftMotionLight CiA402 Axis</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys10.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys10.webp" style="width:40%;" /></a></p>
 <ul>
-<li>Přejmenujte přidanou osu na <strong>Drive</strong> pomocí kontextové nabídky <strong>Refactoring</strong>.</li>
+<li>Rename the added axis to <strong>Drive</strong> using the context menu <strong>Refactoring</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys11.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys11.webp" style="width:60%;" /></a>
 <a class="glightbox" href="../../../../../../../Manual/source/img/codesys12.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys12.webp" style="width:35%;" /></a></p>
 <ul>
-<li>Spusťte <strong>Control Win PLC</strong> ze systémové lišty Windows.</li>
+<li>Start <strong>Control Win PLC</strong> from the Windows system tray.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys13.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys13.webp" style="width:20%;" /></a></p>
 <ul>
-<li>Dvojklikem na položku <strong>Device (CODESYS Control Win V3 x64)</strong> otevřete okno s nastavením komunikace.
-  Stisknutím klávesy Enter navažte spojení.</li>
+<li>Double-click on <strong>Device (CODESYS Control Win V3 x64)</strong> to open the communication settings window. Establish a connection by pressing Enter.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys14.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys14.webp" style="width:90%;" /></a></p>
 <ul>
-<li>Přihlaste se k zařízení pomocí uživatelského jména a hesla.</li>
+<li>Log in to the device using the username and password.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys15.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys15.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Po úspěšném přihlášení by měla ikona zařízení svítit zeleně.</li>
+<li>After a successful login, the device icon should display a green light.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys16.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys16.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Otevřete okno vlastností EtherCAT_Master_SoftMotion a tlačítkem <strong>Select</strong> vyberte síťovou kartu použitou pro sběrnici EtherCAT.</li>
+<li>Open the <strong>EtherCAT_Master_SoftMotion</strong> properties window by double-clicking on the item and select the network card used for the EtherCAT fieldbus by clicking the <strong>Select</strong> button.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys17.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys17.webp" style="width:80%;" /></a></p>
 <ul>
-<li>Zaškrtněte políčko <strong>Use LRW instead of LWR/LRD</strong>.</li>
+<li>Check the <strong>Use LRW instead of LWR/LRD</strong> box.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys18.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys18.webp" style="width:50%;" /></a></p>
 <ul>
-<li>Chcete-li systému pomoci s identifikací zařízení na sběrnici, nastavte správné ID zařízení v poli TGZ_Drive properties. 
-  Povolte <strong>Experts settings</strong>, poté vyberte <strong>Configured station alias (ADO 0x0012)</strong> a nastavte <strong>Value</strong> na stejné číslo jako u registru <code>C-ID</code> v servicem programu TGZ_GUI (v tomto příkladu 5).</li>
+<li>To assist the system in identifying the device on the fieldbus, set the correct device ID in the <strong>TGZ_Drive properties</strong> window. Enable <strong>Expert settings</strong>, then select <strong>Configured station alias (ADO 0x0012)</strong> and set the <strong>Value</strong> to the same number as in the <code>C-ID</code> register in the TGZ_GUI service program (5 in this example).</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys19.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys19.webp" style="width:70%;" /></a></p>
-<p>Skupina <strong>Common</strong> v TGZ_GUI</p>
+<p>Group <strong>Common</strong> in TGZ_GUI</p>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys20.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys20.webp" style="width:80%;" /></a></p>
 <ul>
-<li>V okně <strong>TGZ_Drive properties</strong> vyberte kartu <strong>Startup Parameters</strong> a změňte hodnotu objektů SDO <code>6060 a 6860 z 8 na 1</code>.</li>
+<li>In the <strong>TGZ_Drive properties</strong> window, select the <strong>Startup Parameters</strong> tab and change the value of SDO objects <code>6060</code> and <code>6860</code> from <code>8</code> to <code>1</code>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys21.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys21.webp" style="width:60%;" /></a></p>
 <ul>
-<li>SoftMotion Lite lze snadno testovat a ovládat pomocí připravené vizualizace s názvem VISU_SML_StartupDrive.
-  Chcete-li ji použít, deklarujte v kódu PLC_PRG pomocnou proměnnou typu SML_StartupDrive a pojmenujte ji <strong>sml_visu</strong> a také nastavte ukazatel na stejný objekt. </li>
+<li>The SoftMotion Lite can be easily tested and controlled using a prepared visualization named <strong>VISU_SML_StartupDrive</strong>. To use it, declare a helper variable in the PLC_PRG code of type <code>SML_StartupDrive</code> and name it <strong>sml_visu</strong>, and also set a pointer to the same object.</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>PROGRAM PLC_PRG
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>VAR
@@ -6818,47 +6809,39 @@ Toto je identické pro sběrnice EtherCAT i CAN.</p>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>END_VAR
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>p_sml_visu^(Axis := Drive);
 </span></code></pre></div>
-<p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys22.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys22.webp" style="width:50%;" /></a></p>
-<p>Příkaz <code>p_sml_visu^(Axis := Drive)</code> přiřadí proměnné <code>sml_visu</code> osy SoftMotion Lite.
-  Mohl by být spuštěn pouze jednou, např. v události <strong>StartDone</strong>, ale pro jednoduchost je zde volán periodicky.
-  Proměnná <code>sml_visu</code> je potřebná v šabloně vizualizace (viz níže).</p>
+<p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys22.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys22.webp" style="width:50%;" /></a>
+The statement <code>p_sml_visu^(Axis := Drive)</code> assigns the SoftMotion Lite Axis to the <code>sml_visu</code> variable. It could be run only once, e.g., in the <strong>StartDone</strong> event, but for simplicity, it is called periodically here. The <code>sml_visu</code> variable is needed in the visualization template (see below).</p>
 <ul>
-<li>Vizualizaci do aplikace přidáte kliknutím pravým tlačítkem myši na položku <strong>Application</strong> a výběrem položky <strong>Add Object/Visualization menu item</strong>.</li>
+<li>Add a visualization to the application by right-clicking on the <strong>Application</strong> item and selecting <strong>Add Object/Visualization menu item</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys23.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys23.webp" style="width:45%;" /></a></p>
 <ul>
-<li>Ponechte výchozí název <strong>Visualization</strong> a klikněte na tlačítko <strong>Add</strong>.</li>
+<li>Keep the default name <strong>Visualization</strong> and click on the <strong>Add</strong> button.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys24.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys24.webp" style="width:30%;" /></a></p>
 <ul>
-<li>V okně <strong>Visualization Toolbox</strong> vyberte položku SML a poté šablonu VISU_SML_StartupDrive.</li>
+<li>In the <strong>Visualization Toolbox</strong> window, select SML and then the <strong>VISU_SML_StartupDrive</strong> template.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys25.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys25.webp" style="width:20%;" /></a></p>
 <ul>
-<li>Přetáhněte šablonu do okna <strong>Visualization</strong> a v následujícím dialogovém okně přiřaďte <strong>m_Startup</strong> výše vytvořené proměnné sml_visu.</li>
+<li>Drag and drop the template into the <strong>Visualization</strong> window and, in the following dialog box, assign <strong>m_Startup</strong> to the <code>sml_visu</code> variable created above.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys26.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys26.webp" style="width:80%;" /></a></p>
 <ul>
-<li>V případě potřeby můžete změnit velikost šablony v okně</li>
+<li>Position and resize the template as needed in the window.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/codesys27.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../../Manual/source/img/codesys27.webp" style="width:80%;" /></a></p>
 <ul>
 <li>
-<p>Přihlaste se a spusťte PLC.
-  Nyní si pohrajte s vizualizací.
-  Povolte <strong>bDriveStart</strong>, <strong>bRegulatorOn</strong> a poté <strong>Enable</strong>.
-  Vyzkoušejte absolutní a relativní pohyby.
-  Blok MC_MoveVelocity_SML změní režim pohonu na PV.
-  Pohyb kdykoli zastavte pomocí MC_Stop_SML.
-  Pro přístup k interním členům funkčního bloku AXIS_REF_SML se používají parametry Read a Write.</p>
+<p>Login and start the PLC. Now interact with the visualization. Enable <strong>bDriveStart</strong>, <strong>bRegulatorOn</strong>, and then <strong>Enable</strong>. Try absolute and relative movements. The <strong>MC_MoveVelocity_SML</strong> block changes the drive mode to PV. Stop the movement at any time using <strong>MC_Stop_SML</strong>. <strong>Read</strong> and <strong>Write</strong> parameters are used to access the internal members of the <strong>AXIS_REF_SML</strong> function block.</p>
 </li>
 <li>
-<p>Sledujte proměnné <code>Control word</code>, <code>Status word</code> a <code>Mode of operation</code> v rozhraní TGZ_GUI.</p>
+<p>Observe the <strong>Control word</strong>, <strong>Status word</strong>, and <strong>Mode of operation</strong> in the TGZ_GUI.</p>
 </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Nezapomeňte, že servo bude polohovat, takže buďte opatrní!</p>
+<p>Remember that the servo will position the motor, so be careful!</p>
 </div>
 
 

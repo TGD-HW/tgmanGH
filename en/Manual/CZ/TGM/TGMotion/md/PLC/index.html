@@ -6520,18 +6520,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vyzadovany-algoritmus-plc" class="md-nav__link">
+  <a href="#required-plc-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Vyžadovaný algoritmus PLC
+      Required PLC algorithm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#komunikace-s-plc" class="md-nav__link">
+  <a href="#communication-with-plc" class="md-nav__link">
     <span class="md-ellipsis">
-      Komunikace s PLC
+      Communication with PLC
     </span>
   </a>
   
@@ -6748,99 +6748,99 @@
 
 <h1 id="MotionPLC">Virtual PLC<a class="headerlink" href="#MotionPLC" title="Permanent link">&para;</a></h1>
 <h2 id="virtual-plc-description">Virtual PLC description<a class="headerlink" href="#virtual-plc-description" title="Permanent link">&para;</a></h2>
-<p>Modul Virtuální PLC vykonává uživatelem napsaný PLC program.
-Ten provádí výpočty, zabezpečuje ovládání servopohonů, načítání a nastavování hodnot vstupů a výstupů a stará se o komunikaci s dalšími periferiemi pouze prostřednictvím sdílené paměti.
-Virtuální PLC je z TG Motion periodicky volán v intervalu nastaveném v <code>Cycle_Time</code>.
-Velikost <code>Cycle_Time</code> je definována v souboru <code>TGMotion4xx.ini</code>. 
-Výhodou Virtuálního PLC je jeho rychlost, protože běží přímo ve strojovém kódu CPU.</p>
+<p>The Virtual PLC module executes a PLC program written by the user.
+It performs calculations, controls servo drives, reads and sets input and output values and takes care of communication with other peripherals only via shared memory.
+The virtual PLC is periodically called from TG Motion at the interval set in <code>Cycle_Time</code>.
+The <code>Cycle_Time</code> size is defined in the <code>TGMotion4xx.ini</code> file. 
+The advantage of the Virtual PLC is its speed because it runs directly in the CPU machine code.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Skupiny Servo a I/O unifikují ovládací rozhraní pro různé typy servopohonů a I/O jednotek.
-Stejný PLC kód lze aplikovat na různé servopohony nebo I/O jednotky.
-Operativně lze také servopohony nebo I/O jednotky měnit, aniž by se musel PLC kód přepisovat. </p>
+<p class="admonition-title">Warning</p>
+<p>The Servo and I/O groups unify the control interface for different types of servo drives and I/O units.
+The same PLC code can be applied to different servo drives or I/O units.
+Servo drives or I/O units can also be changed operationally without rewriting the PLC code. </p>
 </div>
 <h2 id="making-of-a-plc">Making of a PLC<a class="headerlink" href="#making-of-a-plc" title="Permanent link">&para;</a></h2>
-<p>Program PLC je možné vytvářet v obecném vývojovém prostředí, např. Visual Studio, Delphi.
-Programovací jazyk může být C, C++ a Pascal.
-Ve vývojovém prostředí je třeba vytvořit soubor <code>*.tgm</code>, který musí zveřejnit právě šest funkcí s názvy: 
-<code>Program_01, Program_02, Program_03, Program_04, Program_05</code> a <code>Program_Ini</code>.
-Uvedené názvy jsou povinné včetně velikosti písmen.
-Programový modul <code>*.tgm</code> nesmí být propojen s jakýmikoli externími moduly či knihovnami DLL, veškerá programová funkčnost (funkce, podprogramy, …) musí být vytvořena programátorem přímo v modulu.
-Nesmějí se volat jakékoli funkce API Windows, je zakázáno dynamicky alokovat paměť (funkce <code>malloc</code> apod.). </p>
+<p>The PLC program can be created in a general development environment, e.g. Visual Studio, Delphi.
+The programming language can be C, C++ and Pascal.
+In the development environment, you need to create a <code>*.tgm</code> file, which must publish just six functions with names: 
+<code>Program_01, Program_02, Program_03, Program_04, Program_05</code> and <code>Program_Ini</code>.
+The names given are mandatory, including the case of the letters.
+The <code>*.tgm</code> program module must not be linked with any external modules or DLLs, all program functionality (functions, subroutines, ...) must be created by the programmer directly in the module.
+Any Windows API functions must not be called, dynamic memory allocation (<code>malloc</code> function, etc.) is forbidden. </p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Všechny dále uvedené příklady zdrojových kódů jsou uváděny pro programovací jazyk C/C++.</p>
+<p class="admonition-title">Warning</p>
+<p>All the following source code examples are for the C/C++ programming language.</p>
 </div>
-<h2 id="vyzadovany-algoritmus-plc">Vyžadovaný algoritmus PLC<a class="headerlink" href="#vyzadovany-algoritmus-plc" title="Permanent link">&para;</a></h2>
-<p>Obecný algoritmus PLC vyžaduje následující postup vykonávání, a to přesně v uvedeném pořadí:</p>
+<h2 id="required-plc-algorithm">Required PLC algorithm<a class="headerlink" href="#required-plc-algorithm" title="Permanent link">&para;</a></h2>
+<p>The general PLC algorithm requires the following sequence of execution, in the exact order listed:</p>
 <ul>
 <li>
-<p><strong>Načtení vstupů</strong> <br />
-    V první fázi je nutné načíst hodnoty registrů všech požadovaných vstupů.
-    A to jak polohy a stavy servopohonů, tak i hodnoty digitálních a analogových vstupů (viz strukturu Servo a strukturu I/O).</p>
+<p><strong>Reading entries</strong>
+    In the first phase, it is necessary to read the register values of all required inputs.
+    This includes the positions and states of the servo drives as well as the values of the digital and analog inputs (see Servo structure and I/O structure).</p>
 </li>
 <li>
-<p><strong>Zpracování hodnot a výpočty</strong> <br />
-    Dalším krokem je zpracování načtených hodnot a výpočty hodnot nových (žádané polohy servopohonů ahodnoty digitálních a analogových výstupů).</p>
+<p><strong>Value processing and calculations</strong>
+    The next step is to process the read values and calculate new values (desired positions of actuators and values of digital and analogue outputs).</p>
 </li>
 <li>
-<p><strong>Nastavení výstupů</strong> <br />
-    Posledním krokem je zaslání žádaných poloh servopohonům a nastavení hodnot digitálních a analogových
-    výstupů prostřednictvím zapsání hodnot do příslušných registrů.</p>
+<p><strong>Setting Outputs</strong>
+    The last step is to send the desired positions to the actuators and set the digital and analogue values
+    outputs by writing values to the appropriate registers.</p>
 </li>
 </ul>
-<h2 id="komunikace-s-plc">Komunikace s PLC<a class="headerlink" href="#komunikace-s-plc" title="Permanent link">&para;</a></h2>
-<p>Ostatní komponenty systému TG Motion a uživatelské aplikace běžící pod Windows mohou komunikovat s PLC pomocí sdílené paměti <code>TGM_Data</code>.
-TG Motion do ní nijak nezasahuje a její obsah nijak nepřepisuje.
-Struktura této paměti a její využití je plně v režii programátora PLC.
-Velikost sdílené paměti <code>TGM_Data</code> je obvykle 524 288 byte.
-Skutečnou velikost paměti obsahuje registr <code>TGM_System.HEADER.Mem_Size_Data</code>.
-Paměť může obsahovat uživatelské registry, data vaček, atd.
-Nejčastěji je využívána aplikacemi pro vizualizaci běžícími pod Windows.</p>
-<h1 id="funkce-plc">Funkce PLC<a class="headerlink" href="#funkce-plc" title="Permanent link">&para;</a></h1>
-<h2 id="obecny-popis-funkci">Obecný popis funkcí<a class="headerlink" href="#obecny-popis-funkci" title="Permanent link">&para;</a></h2>
-<p>Programovací modul Virtuálního PLC má k dispozici právě 6 funkcí.
-Ty se liší prioritou provádění a požadavkem na své úplné provedení během jednoho <code>Cycle_Time</code>.
-Pro správný a bezchybný chod Virtuálního PLC je nutné, aby požadovaný kód byl umístěn v příslušné funkci (viz dále):</p>
+<h2 id="communication-with-plc">Communication with PLC<a class="headerlink" href="#communication-with-plc" title="Permanent link">&para;</a></h2>
+<p>Other TG Motion components and user applications running under Windows can communicate with the PLC using the shared memory <code>TGM_Data</code>.
+TG Motion does not interfere with it in any way and does not rewrite its content.
+The structure of this memory and its use is fully in the PLC programmer's control.
+The size of the shared memory <code>TGM_Data</code> is usually 524 288 bytes.
+The actual memory size is contained in the <code>TGM_System.HEADER.Mem_Size_Data</code> register.
+The memory can contain user registers, cam data, etc.
+It is most often used by visualization applications running under Windows.</p>
+<h1 id="functions-plc">Functions PLC<a class="headerlink" href="#functions-plc" title="Permanent link">&para;</a></h1>
+<h2 id="general-description-of-functions">General description of functions<a class="headerlink" href="#general-description-of-functions" title="Permanent link">&para;</a></h2>
+<p>The programming module of the Virtual PLC has 6 functions available.
+These differ in their execution priority and the requirement for their complete execution within one <code>Cycle_Time</code>.
+For correct and error-free operation of the Virtual PLC it is necessary that the required code is placed in the appropriate function (see below):</p>
 <ul>
-<li><strong>Program_Ini( )</strong> – funkce volaná pouze jednou při spuštění PLC.</li>
-<li><strong>Program_01( )</strong> – nejnižší priorita, volitelná perioda volání.</li>
-<li><strong>Program_02( )</strong> – nižší priorita, volitelná perioda volání.</li>
-<li><strong>Program_03( )</strong> – vyšší priorita, volitelná perioda volání.</li>
-<li><strong>Program_04( )</strong> – nejvyšší priorita, volá se každý Cycle_Time.</li>
-<li><strong>Program_05( )</strong> – nejvyšší priorita, volá se synchronně s výpočtem poloh interpolátoru (vícekrát během jednoho Cycle_Time)</li>
+<li><strong>Program_Ini( )</strong> - function called only once when starting the PLC.</li>
+<li><strong>Program_01( )</strong> - lowest priority, selectable calling period.</li>
+<li><strong>Program_02( )</strong> - lower priority, selectable calling period.</li>
+<li><strong>Program_03( )</strong> - higher priority, selectable calling period.</li>
+<li><strong>Program_04( )</strong> - highest priority, it is called every Cycle_Time.</li>
+<li><strong>Program_05( )</strong> - highest priority, called synchronously with the interpolator position calculation (multiple times during one Cycle_Time)</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Všechny funkce musejí být implementovány, některé nemusejí obsahovat výkonný kód.
-Vždy je nutné zabezpečit návratovou hodnotu funkce.
-Viz příklad kódu funkce <strong>Program_02</strong>.</p>
+<p class="admonition-title">Warning</p>
+<p>All functions must be implemented, some do not need to contain executable code.
+It is always necessary to provide the return value of the function.
+See code example of the <strong>Program_02</strong> function.</p>
 </div>
-<h2 id="struktura-plc_data">Struktura PLC_DATA<a class="headerlink" href="#struktura-plc_data" title="Permanent link">&para;</a></h2>
-<p>Struktura slouží pro komunikaci mezi TG Motion a PLC.
-TG Motion vytvoří 6 instancí struktury <code>PLC_DATA</code>.
-Každá z 6 funkcí (Program_01 – Program_05, Program_Ini) má právě 1 parametr, ukazatel na strukturu PLC_DATA.
-Při volání funkce jí TG Motion předá ukazatel na jí náležející instanci struktury.
-Struktura PLC_DATA obsahuje ukazatele na sdílené paměti a ukazatele na vnitřní diagnostické funkce TG Motion.</p>
-<h3 id="definice-diagnostickych-funkci">Definice diagnostických funkcí<a class="headerlink" href="#definice-diagnostickych-funkci" title="Permanent link">&para;</a></h3>
+<h2 id="plc_data-structure">PLC_DATA structure<a class="headerlink" href="#plc_data-structure" title="Permanent link">&para;</a></h2>
+<p>The structure is used for communication between TG Motion and PLC.
+TG Motion creates 6 instances of the <code>PLC_DATA</code> structure.
+Each of the 6 functions (Program_01 - Program_05, Program_Ini) has just 1 parameter, a pointer to the PLC_DATA structure.
+When a function is called, TG Motion passes it a pointer to the structure instance that belongs to it.
+The PLC_DATA structure contains pointers to shared memories and pointers to TG Motion's internal diagnostic functions.</p>
+<h3 id="definition-of-diagnostic-functions">Definition of diagnostic functions<a class="headerlink" href="#definition-of-diagnostic-functions" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#ifdef __cplusplus</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#endif</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_cdecl</span><span class="w"> </span><span class="nf">RTWPRINTF_STRING</span><span class="p">(</span><span class="n">LPCWSTR</span><span class="w"> </span><span class="n">strText</span><span class="p">);</span><span class="w"> </span><span class="c1">// výpis řetězce do konzole</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_cdecl</span><span class="w"> </span><span class="nf">RTWPRINTF_STRING</span><span class="p">(</span><span class="n">LPCWSTR</span><span class="w"> </span><span class="n">strText</span><span class="p">);</span><span class="w"> </span><span class="c1">// dump the string to the console</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_cdecl</span><span class="w"> </span><span class="nf">RTWPRINTF_LONG</span><span class="p">(</span><span class="n">LPCWSTR</span><span class="w"> </span><span class="n">strFormat</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">lVal</span><span class="p">);</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// výpis hodnoty proměnné lVal do konzole</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// dump the value of the lVal variable to the console</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">SWPRINTF</span><span class="p">(</span><span class="kt">wchar_t</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">sizeOfBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="w"> </span><span class="o">*</span><span class="n">strFormat</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// zápis formátovaného textu do řetězce buffer</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">SLEEPFT</span><span class="p">(</span><span class="n">PLARGE_INTEGER</span><span class="w"> </span><span class="n">Pause</span><span class="p">);</span><span class="w"> </span><span class="c1">// čekání</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">typedef</span><span class="w"> </span><span class="n">BOOL</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">CAN_TRANSMIT</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">Number</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Id</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Dlc</span><span class="p">,</span><span class="w"> </span><span class="n">PUCHAR</span><span class="w"> </span><span class="n">Tx_Data</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">typedef</span><span class="w"> </span><span class="n">BOOL</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">CAN_TRANSMITREMOTE</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">Number</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Id</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Dlc</span><span class="p">,</span><span class="w"> </span><span class="n">PUCHAR</span><span class="w"> </span><span class="n">Tx_Data</span><span class="p">);</span><span class="w"> </span><span class="c1">// rezervováno</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// writing formatted text to the buffer string</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">SLEEPFT</span><span class="p">(</span><span class="n">PLARGE_INTEGER</span><span class="w"> </span><span class="n">Pause</span><span class="p">);</span><span class="w"> </span><span class="c1">// waiting</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">typedef</span><span class="w"> </span><span class="n">BOOL</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">CAN_TRANSMIT</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">Number</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Id</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Dlc</span><span class="p">,</span><span class="w"> </span><span class="n">PUCHAR</span><span class="w"> </span><span class="n">Tx_Data</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">typedef</span><span class="w"> </span><span class="n">BOOL</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">CAN_TRANSMITREMOTE</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">Number</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Id</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">Dlc</span><span class="p">,</span><span class="w"> </span><span class="n">PUCHAR</span><span class="w"> </span><span class="n">Tx_Data</span><span class="p">);</span><span class="w"> </span><span class="c1">// reserved</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">RTWPRINTF_EX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">severity</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="w"> </span><span class="o">*</span><span class="n">strFormat</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// výpis formátovaného textu do konzole</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// dump formatted text to the console</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cp">#ifdef __cplusplus</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">};</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cp">#endif</span>
 </span></code></pre></div>
-<h3 id="ukazatele-na-diagnosticke-funkce">Ukazatele na diagnostické funkce<a class="headerlink" href="#ukazatele-na-diagnosticke-funkce" title="Permanent link">&para;</a></h3>
+<h3 id="pointers-to-diagnostic-functions">Pointers to diagnostic functions<a class="headerlink" href="#pointers-to-diagnostic-functions" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_PLC_IMPORT_FUNCTIONS</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">RTWPRINTF_STRING</span><span class="w"> </span><span class="o">*</span><span class="n">pRtWprintf_String</span><span class="p">;</span>
@@ -6852,54 +6852,54 @@ Struktura PLC_DATA obsahuje ukazatele na sdílené paměti a ukazatele na vnitř
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">RTWPRINTF_EX</span><span class="w"> </span><span class="o">*</span><span class="n">pRtWprintf_Ex</span><span class="p">;</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span><span class="w"> </span><span class="n">PLC_IMPORT_FUNCTIONS</span><span class="p">;</span>
 </span></code></pre></div>
-<h3 id="vlastni-struktura-plc_data">Vlastní struktura PLC_DATA<a class="headerlink" href="#vlastni-struktura-plc_data" title="Permanent link">&para;</a></h3>
+<h3 id="custom-plc_data-structure">Custom PLC_DATA structure<a class="headerlink" href="#custom-plc_data-structure" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_PLC_DATA</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">structSize</span><span class="p">;</span><span class="w"> </span><span class="c1">// velikost struktury v bytech</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PSystem_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_System</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PData_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Data</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">POsc_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Oscilloscope</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PCam_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Cam_Profile</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PServo_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Servo</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PDio_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Dio</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PInterpolator_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_Interpolator</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">Pointer_interpolator_params</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_InterpolatorWriteMemory</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">Pointer_interpolator_get_position</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_InterpolatorReadMemory</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PCNCEx</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_CNCEX</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PGCode</span><span class="p">;</span><span class="w"> </span><span class="c1">// ukazatel na sdílenou paměť TGM_GCODE</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve3_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve4_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve5_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReciveDataCan1</span><span class="p">;</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReciveDataCan2</span><span class="p">;</span><span class="w"> </span><span class="c1">// rezervováno</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">PLC_IMPORT_FUNCTIONS</span><span class="w"> </span><span class="n">functions</span><span class="p">;</span><span class="w"> </span><span class="c1">// struktura s ukazateli na diagnostické funkce</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">structSize</span><span class="p">;</span><span class="w"> </span><span class="c1">// structure size in bytes</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PSystem_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_System</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PData_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Data</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">POsc_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Oscilloscope</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PCam_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Cam_Profile</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PServo_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Servo</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PDio_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Dio</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PInterpolator_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_Interpolator</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">Pointer_interpolator_params</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_InterpolatorWriteMemory</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">Pointer_interpolator_get_position</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_InterpolatorReadMemory</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PCNCEx</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_CNCEX</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PGCode</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to shared memory TGM_GCODE</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve3_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve4_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReserve5_Memory</span><span class="p">;</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReciveDataCan1</span><span class="p">;</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">PReciveDataCan2</span><span class="p">;</span><span class="w"> </span><span class="c1">// reserved</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">PLC_IMPORT_FUNCTIONS</span><span class="w"> </span><span class="n">functions</span><span class="p">;</span><span class="w"> </span><span class="c1">// structure with pointers to diagnostic functions</span>
 </span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">}</span><span class="w"> </span><span class="n">PLC_DATA</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">PPLC_DATA</span><span class="p">;</span>
 </span></code></pre></div>
-<h2 id="funkce-podle-priority">Funkce podle priority<a class="headerlink" href="#funkce-podle-priority" title="Permanent link">&para;</a></h2>
-<p>V této kapitole jsou funkce řazeny od nejnižší priority po prioritu nejvyšší.
-U funkce <code>Program_Ini</code> se o prioritu v pravém slova smyslu nejedná.
-Tato funkce je volána pouze jednou při spuštění Virtuálního PLC.</p>
+<h2 id="functions-by-priority">Functions by priority<a class="headerlink" href="#functions-by-priority" title="Permanent link">&para;</a></h2>
+<p>In this chapter, the functions are ordered from lowest priority to highest priority.
+The <code>Program_Ini</code> function is not a priority in the true sense of the word.
+This function is called only once when starting the Virtual PLC.</p>
 <h3 id="program_ini">Program_Ini<a class="headerlink" href="#program_ini" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_Ini(PLC_DATA *pData)</code>   </p>
-<p>Tato funkce je volaná jen jednou, a to při spuštění Virtuálního PLC.
-Slouží zejména k inicializaci proměnných Virtuálního PLC.
-Výkonný kód funkce <code>Program_Ini</code> nesmí být prázdný.
-Délka vykonávání funkce není omezena.</p>
+<p>Declaration: <code>long Program_Ini(PLC_DATA *pData)</code>   </p>
+<p>This function is called only once, when the Virtual PLC is started.
+It is used mainly for initializing the Virtual PLC variables.
+The executive code of the <code>Program_Ini</code> function must not be empty.
+There is no limit to the length of time that a person may serve.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Při startu Virtuálního PLC (v těle funkce Program_Ini) je vhodné zkontrolovat verze PLC a TG Motion.</p>
+<p class="admonition-title">Warning</p>
+<p>When starting the Virtual PLC (in the body of the Program_Ini function) it is advisable to check the PLC and TG Motion versions.</p>
 </div>
-<p><strong>Návratové hodnoty funkce</strong></p>
+<p><strong>Function return values</strong></p>
 <ul>
-<li>0 – chyba (spouštění PLC se zastaví; uživatel musí chybu vyřešit a znovu spustit PLC).</li>
-<li>1 – funkce proběhla v pořádku.</li>
+<li>0 - error (PLC start-up stops; the user must solve the error and restart the PLC).</li>
+<li>1 - the function ended without errors.</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Při nahrání Virtuálního PLC se neinicializují hodnoty globálních proměnných, nevolají se konstruktory globálních objektů.
-Inicializaci je nutné provést ve funkci <code>Program_Ini</code>.</p>
+<p class="admonition-title">Warning</p>
+<p>When loading the Virtual PLC, the values of global variables are not initialized, the constructors of global objects are not called.
+The initialization must be done in the <code>Program_Ini</code> function.</p>
 </div>
-<p><strong>Ukázka zdrojového kódu</strong></p>
+<p><strong>Source code sample</strong></p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">long</span><span class="w"> </span><span class="nf">Program_Ini</span><span class="p">(</span><span class="n">PLC_DATA</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pData</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pData</span><span class="o">-&gt;</span><span class="n">structSize</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">PLC_DATA</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -6909,214 +6909,216 @@ Inicializaci je nutné provést ve funkci <code>Program_Ini</code>.</p>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pData</span><span class="o">-&gt;</span><span class="n">functions</span><span class="p">.</span><span class="n">pSleepFt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pHeader</span><span class="o">-&gt;</span><span class="n">Compatibility_Id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ID_COMPATIBILITY</span><span class="p">)</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">{</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">pData</span><span class="o">-&gt;</span><span class="n">functions</span><span class="p">.</span><span class="n">pswprintf</span><span class="p">(</span><span class="n">info_ini</span><span class="p">,</span><span class="w"> </span><span class="n">SIZE_INFO</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;Error start of PLC PLC_COMPABILITY_ID = %d</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">TGM_COMPABILITY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">d</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="s">&quot;, ID_COMPATIBILITY, pHeader-&gt;Compatibility_Id);</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">pData</span><span class="o">-&gt;</span><span class="n">functions</span><span class="p">.</span><span class="n">pswprintf</span><span class="p">(</span><span class="n">info_ini</span><span class="p">,</span><span class="w"> </span><span class="n">SIZE_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="s">&quot;Error start of PLC PLC_COMPABILITY_ID = %d</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">TGM_COMPATIBILITY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">d</span><span class="w"> </span><span class="err">\</span><span class="n">n</span><span class="s">&quot;, ID_COMPATIBILITY, pHeader-&gt;Compatibility_Id);</span>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">pData</span><span class="o">-&gt;</span><span class="n">functions</span><span class="p">.</span><span class="n">pRtWprintf_String</span><span class="p">(</span><span class="n">info_ini</span><span class="p">);</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1">//****************************************** Update PLC Version ***********************************</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">Verze_PLC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get_Version</span><span class="p">(</span><span class="n">PLC_VERSION</span><span class="p">);</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">Version_PLC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get_Version</span><span class="p">(</span><span class="n">PLC_VERSION</span><span class="p">);</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1">//*************************************************************************************************</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="program_01">Program_01<a class="headerlink" href="#program_01" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_01(PLC_DATA *pData)</code>   </p>
-<p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_01</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_01</code>, aby zbyl čas na vykonání funkcí <code>Program_02</code> a <code>Program_03</code>.
-Tato funkce se nejčastěji používá pro základní obsluhu zařízení, která nemusejí být obsluhována pravidelně každý <code>Cycle_Time</code>.
-Funkce <code>Program_01</code> má nejnižší prioritu a kdykoli může být přerušena funkcemi <code>Program_02</code>, <code>Program_03</code>, <code>Program_04</code> a <code>Program_05</code>.</p>
+<p>Declaration: <code>long Program_01(PLC_DATA *pData)</code>   </p>
+<p>The function is called from TG Motion with the period specified in the <code>TGMotion4xx.ini</code> configuration file.
+The period is defined by the <code>Cycle_Time_Program_01</code> item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The length of the function execution should not exceed 20&nbsp;% of <code>Cycle_Time_Program_01</code> to leave time for the execution of <code>Program_02</code> and <code>Program_03</code> functions.
+This function is most often used for basic servicing of devices that do not need to be serviced regularly every <code>Cycle_Time</code>.
+Function <code>Program_01</code> has the lowest priority and can be interrupted at any time by functions <code>Program_02</code>, <code>Program_03</code>, <code>Program_04</code> and <code>Program_05</code>.</p>
 <h3 id="program_02">Program_02<a class="headerlink" href="#program_02" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_02(PLC_DATA *pData)</code>   </p>
-<p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_02</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_02</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_03</code>.
-Tato funkce se většinou implementuje jako prázdná funkce.
-Funkce <code>Program_02</code> má nízkou prioritu a může být kdykoli přerušena funkcemi <code>Program_03</code>, <code>Program_04</code>, a <code>Program_05</code>.</p>
-<p><strong>Ukázka zdrojového kódu</strong></p>
+<p>Declaration: <code>long Program_02(PLC_DATA *pData)</code>   </p>
+<p>The function is called from TG Motion with the period specified in the <code>TGMotion4xx.ini</code> configuration file.
+The period is defined by the <code>Cycle_Time_Program_02</code> item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The duration of the function execution should not exceed 20&nbsp;% of <code>Cycle_Time_Program_02</code> to leave time for the execution of the <code>Program_01</code> and <code>Program_03</code> functions.
+This function is usually implemented as an empty function.
+The <code>Program_02</code> function has low priority and can be interrupted at any time by the <code>Program_03</code>, <code>Program_04</code>, and <code>Program_05</code> functions.</p>
+<p><strong>Source code sample</strong></p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">long</span><span class="w"> </span><span class="nf">Program_02</span><span class="p">(</span><span class="n">PLC_DATA</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="program_03">Program_03<a class="headerlink" href="#program_03" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_03(PLC_DATA *pData)</code>   </p>
-<p>Funkce je z TG Motion volána s periodou danou v konfiguračním souboru <code>TGMotion4xx.ini</code>.
-Perioda je definována položkou <code>Cycle_Time_Program_03</code>, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% <code>Cycle_Time_Program_03</code>, aby zbyl čas na vykonání funkcí <code>Program_01</code> a <code>Program_02</code>.
-Tato funkce se většinou implementuje jako prázdná funkce.
-Funkce <code>Program_03</code> má nízkou prioritu a může být kdykoli přerušena funkcemi <code>Program_04</code> a <code>Program_05</code>.</p>
-<p><strong>Ukázka zdrojového kódu</strong></p>
+<p>Declaration: <code>long Program_03(PLC_DATA *pData)</code>   </p>
+<p>The function is called from TG Motion with the period specified in the <code>TGMotion4xx.ini</code> configuration file.
+The period is defined by the <code>Cycle_Time_Program_03</code> item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The length of the function execution should not exceed 20&nbsp;% of <code>Cycle_Time_Program_03</code> to leave time for the execution of the <code>Program_01</code> and <code>Program_02</code> functions.
+This function is usually implemented as an empty function.
+The <code>Program_03</code> function has low priority and can be interrupted at any time by the <code>Program_04</code> and <code>Program_05</code> functions.</p>
+<p><strong>Source code sample</strong></p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">long</span><span class="w"> </span><span class="nf">Program_03</span><span class="p">(</span><span class="n">PLC_DATA</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="program_04">Program_04<a class="headerlink" href="#program_04" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_04(PLC_DATA *pData)</code>   </p>
-<p>Funkce je z TG Motion volána synchronně s komunikací v rámci <code>Cycle_Time</code>, tedy jednou během každého <code>Cycle_Time</code>.
-Ten je definován v souboru <code>TGMotion4xx.ini</code> položkou Cycle_Time (250&nbps;μs, 500&nbps;μs, 1000&nbps;μs).
-Funkce Program_04 se nejčastěji používá pro modifikaci žádané polohy servopohonů a obsluhu I/O jednotek.
-Má nejvyšší prioritu (stejně jako funkce Program_05) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbps;% <code>Cycle_Time</code>, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.</p>
+<p>Declaration: <code>long Program_04(PLC_DATA *pData)</code>   </p>
+<p>The function is called from TG Motion synchronously with the communication within the <code>Cycle_Time</code>, i.e. once during each <code>Cycle_Time</code>.
+It is defined in the <code>TGMotion4xx.ini</code> file by the Cycle_Time item (250&nbsp;μs, 500&nbsp;μs, 1000&nbsp;μs).
+The Program_04 function is most often used to modify the desired position of servo drives and to operate I/O units.
+It has the highest priority (as does the Program_05 function) and always executes in its entirety without interruption.
+The execution time of the Program_04 function must not exceed 10&nbsp;% of <code>Cycle_Time</code> to ensure timing accuracy of communication with servo drives and I/O units.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Ve funkci Program_04 nesmí být volána funkce <code>SleepFt</code></p>
+<p class="admonition-title">Warning</p>
+<p>The function <code>SleepFt</code> must not be called in the function Program_04</p>
 </div>
 <h3 id="program_05">Program_05<a class="headerlink" href="#program_05" title="Permanent link">&para;</a></h3>
-<p>Deklarace: <code>long Program_05(PLC_DATA *pData)</code>   </p>
-<p>Funkce je z TG Motion volána synchronně s interpolátorem, tedy několikrát během každého <code>Cycle_Time</code>.
-Funkce Program_05 se nejčastěji používá pro modifikaci polohy vypočtené modulem interpolátoru.
-Má nejvyšší prioritu (stejně jako funkce Program_04) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_05 nesmí přesáhnout 10 μs, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.</p>
+<p>Declaration: <code>long Program_05(PLC_DATA *pData)</code>   </p>
+<p>The function is called from TG Motion synchronously with the interpolator, i.e. several times during each <code>Cycle_Time</code>.
+The Program_05 function is most often used to modify the position calculated by the interpolator module.
+It has the highest priority (as does the Program_04 function) and always executes in its entirety without interruption.
+The execution time of the Program_05 function must not exceed 10 μs to ensure timing accuracy of communication with servo drives and I/O units.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Ve funkci Program_05 nesmí být volána funkce <code>SleepFt</code></p>
+<p class="admonition-title">Warning</p>
+<p>The function <code>SleepFt</code> must not be called in the function Program_05</p>
 </div>
-<h2 id="casova-souslednost-volani-funkci">Časová souslednost volání funkcí<a class="headerlink" href="#casova-souslednost-volani-funkci" title="Permanent link">&para;</a></h2>
+<h2 id="timing-sequence-of-function-calls">Timing sequence of function calls<a class="headerlink" href="#timing-sequence-of-function-calls" title="Permanent link">&para;</a></h2>
 <p><strong>Cycle_Time = 250 μs</strong></p>
-<p><a class="glightbox" href="../../img/PLC_250us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Algoritmus vykonávání PLC pro Cycle_Time = 250 μs" src="../../img/PLC_250us.png" style="width:40%;" /></a></p>
-<p>Po spuštění PLC a úspěšném vykonání funkce <code>Program_Ini</code> se spustí cyklické volání smyčky trvající 250 μs.
-Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 50 μs.</p>
+<p><a class="glightbox" href="../../img/PLC_250us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="PLC execution algorithm for Cycle_Time = 250 μs" src="../../img/PLC_250us.png" style="width:40%;" /></a></p>
+<p>After starting the PLC and successful execution of the <code>Program_Ini</code> function, a cyclic loop call lasting 250 μs is started.
+It is evenly divided into 5 equal time periods called regularly every 50 μs.</p>
 <ul>
 <li>
-<p><strong>Čas 0 μs</strong> <br />
-    Provedou se potřebné interní výpočty a přijmou se data z EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.   </p>
+<p><strong>Time 0 μs</strong>
+    The necessary internal calculations are performed and the EtherCAT data is received. The function Program_05 is then called and the entire function is executed without interruption.   </p>
 </li>
 <li>
-<p><strong>Čas 50 μs</strong>
-    Provedou se potřebné interní výpočty a pošlou se data do EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.   </p>
+<p><strong>Time 50 μs</strong>
+    The necessary internal calculations are performed and the data is sent to EtherCAT. The function Program_05 is then called and the entire function is executed without interruption.   </p>
 </li>
 <li>
-<p><strong>Čas 100 μs</strong>
-    Provedou se potřebné interní výpočty a vypočtou se data žádané polohy pomocí PG generátorů.
-    Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 100 μs</strong>
+    The necessary internal calculations are performed and the desired position data is calculated using PG generators.
+    Then    willfunction Program_05, which will be executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 150 μs</strong>
-    Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-    Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-    Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.</p>
+<p><strong>Time 150 μs</strong>
+    The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+    Then the function Program_04 is called, which is also executed without interruption.
+    Finally, all the data needed for the Oscilloscope is recorded.</p>
 </li>
 <li>
-<p><strong>Čas 200 μs</strong>
-    Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení. <br />
-    Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.   </p>
+<p><strong>Time 200 μs</strong>
+    The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption. <br />
+    If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.   </p>
 </li>
 </ul>
 <p><strong>Cycle_Time = 500 μs</strong></p>
-<p><a class="glightbox" href="../../img/PLC_500us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Algoritmus vykonávání PLC pro Cycle_Time = 500 μs" src="../../img/PLC_500us.png" style="width:40%;" /></a></p>
-<p>Po spuštění PLC a úspěšném vykonání funkce <code>Program_Ini</code> se spustí cyklické volání smyčky trvající 500 μs.
-Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 100 μs.</p>
+<p><a class="glightbox" href="../../img/PLC_500us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="PLC execution algorithm for Cycle_Time = 500 μs" src="../../img/PLC_500us.png" style="width:40%;" /></a></p>
+<p>After starting the PLC and successful execution of the <code>Program_Ini</code> function, a cyclic loop call lasting 500 μs is started.
+It is evenly divided into 5 equal time periods called regularly every 100 μs.</p>
 <ul>
 <li>
-<p><strong>Čas 0 μs</strong>
-    Provedou se potřebné interní výpočty a přijmou se data z EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 0 μs</strong>
+    The necessary internal calculations are performed and the EtherCAT data is received. The function Program_05 is then called and the entire function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 100 μs</strong>
-    Provedou se potřebné interní výpočty a pošlou se data do EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 100 μs</strong>
+    The necessary internal calculations are performed and the data is sent to EtherCAT. The function Program_05 is then called and the entire function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 200 μs</strong>
-    Provedou se potřebné interní výpočty a vypočtou se data žádané polohy pomocí PG generátorů.
-    Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 200 μs</strong>
+    The necessary internal calculations are performed and the desired position data is calculated using PG generators.
+    Then the function Program_05 is called and the whole function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 300 μs</strong>
-    Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-    Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-    Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.</p>
+<p><strong>Time 300 μs</strong>
+    The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+    Then the function Program_04 is called, which is also executed without interruption.
+    Finally, all the data needed for the Oscilloscope is recorded.</p>
 </li>
 <li>
-<p><strong>Čas 400 μs</strong>
-    Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-    Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.</p>
+<p><strong>Time 400 μs</strong>
+    The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+    If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.</p>
 </li>
 </ul>
 <p><strong>Cycle_Time = 1000 μs</strong></p>
-<p><a class="glightbox" href="../../img/PLC_1000us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Algoritmus vykonávání PLC pro Cycle_Time = 1000 μs" src="../../img/PLC_1000us.png" style="width:40%;" /></a></p>
-<p>Po spuštění PLC a úspěšném vykonání funkce <code>Program_Ini</code> se spustí cyklické volání smyčky trvající 1000 μs.
-Ta je rovnoměrně rozdělena na 10 stejných časových úseků volaných pravidelně každých 100 μs.</p>
+<p><a class="glightbox" href="../../img/PLC_1000us.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="PLC execution algorithm for Cycle_Time = 1000 μs" src="../../img/PLC_1000us.png" style="width:40%;" /></a></p>
+<p>After starting the PLC and successful execution of the <code>Program_Ini</code> function, a cyclic loop call lasting 1000 μs is started.
+It is evenly divided into 10 equal time periods called regularly every 100 μs.</p>
 <ul>
 <li>
-<p><strong>Čas 0 μs</strong>
-    Provedou se potřebné interní výpočty a přijmou se data z EtherCAT.
-    Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 0 μs</strong>
+    The necessary internal calculations are performed and the EtherCAT data is received.
+    Then the function Program_05 is called and the whole function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 100 μs</strong>
-    Provedou se potřebné interní výpočty a pošlou se data do EtherCAT.
-    Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 100 μs</strong>
+    The necessary internal calculations are performed and the data is sent to EtherCAT.
+    Then the function Program_05 is called and the whole function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 200 μs</strong>
-    Provedou se potřebné interní výpočty a pošlou se data do EtherCAT.
-    Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.</p>
+<p><strong>Time 200 μs</strong>
+    The necessary internal calculations are performed and the data is sent to EtherCAT.
+    Then the function Program_05 is called and the whole function is executed without interruption.</p>
 </li>
 <li>
-<p><strong>Čas 300 μs</strong>
-    Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-    Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-    Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.</p>
+<p><strong>Time 300 μs</strong>
+    The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+    Then the function Program_04 is called, which is also executed without interruption.
+    Finally, all the data needed for the Oscilloscope is recorded.</p>
 </li>
 <li>
-<p><strong>Čas 400 μs, 500 μs, 600 μs, 700 μs, 800 μs, 900 μs</strong>
-    Ve všech těchto časových úsecích se provedou potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-    Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.</p>
+<p><strong>Time 400 μs, 500 μs, 600 μs, 700 μs, 800 μs, 900 μs</strong>
+    In all of these time periods, the necessary internal calculations are performed and the Program_05 function is called, which is executed in its entirety without interruption.
+    If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.</p>
 </li>
 </ul>
-<h1 id="nastroje-pro-ladeni-plc">Nástroje pro ladění PLC<a class="headerlink" href="#nastroje-pro-ladeni-plc" title="Permanent link">&para;</a></h1>
+<h1 id="tools-for-plc-debugging">Tools for PLC debugging<a class="headerlink" href="#tools-for-plc-debugging" title="Permanent link">&para;</a></h1>
 <h2 id="control-observer">Control Observer<a class="headerlink" href="#control-observer" title="Permanent link">&para;</a></h2>
-<p>Hlavním nástrojem pro ladění Virtuálního PLC z prostředí Windows je Control Observer. Je dodáván se systémem TG Motion.
-Jedná se o soubor utilit vyvinutý pro diagnostiku systému TG Motion, odlaďování PLC a obslužných Windows aplikací.
-Control Observer obsahuje nástroje pro přímé testování a ovládání servopohonů, načtení a spuštění PLC kódu a zobrazení parametrů systémového časovače.
-Další skupina utilit slouží k zobrazování, sledování, či změně zvolených registrů sdílené paměti.
-Control Observer je samostatně spustitelný program <code>Control_Observer_II.exe</code> bez nutnosti instalace, který se dodává s 3 knihovnami:</p>
+<p>The main tool for debugging the Virtual PLC from the Windows environment is the Control Observer. It is supplied with TG Motion.
+It is a set of utilities developed for TG Motion system diagnostics, PLC debugging and Windows applications.
+Control Observer contains tools for direct testing and control of servo drives, loading and running PLC code and displaying system timer parameters.
+Another group of utilities is used to view, monitor, or modify selected shared memory registers.
+Control Observer is a self-executable program <code>Control_Observer_II.exe</code> without installation, which comes with 3 libraries:</p>
 <ul>
-<li><code>TGM_Comm_Int_2.dll</code> – zabezpečuje komunikaci s TG Motion běžícím na stejném počítači.</li>
-<li><code>TGM_Mini.dll</code> – obsluhuje TG Motion běžící v TGMmini.</li>
-<li><code>TGM_Remote.dll</code> – umožňuje spojení pomocí sítě LAN s TG Motion běžícím na jiném počítači</li>
+<li><code>TGM_Comm_Int_2.dll</code> - provides communication with TG Motion running on the same computer.</li>
+<li><code>TGM_Mini.dll</code> - handles TG Motion running in TGMmini.</li>
+<li><code>TGM_Remote.dll</code> - allows connection via LAN to TG Motion running on another computer</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Pro přístup k datům sdílené paměti TGM_Data slouží v utilitě Select Registers záložka Free Registers, typ paměti DAT.</p>
+<p class="admonition-title">Warning</p>
+<p>To access the TGM_Data shared memory data, the <strong>Select Registers</strong> utility uses the Free Registers page, memory type DAT.</p>
 </div>
-<p><strong>Součásti Control Observeru</strong></p>
+<p><strong>Components of Control Observer</strong></p>
 <ul>
-<li><strong>Servo Tester</strong> – utilita k testování a ovládání servopohonů.</li>
-<li><strong>PLC Loader</strong> – slouží k načtení PLC a jeho spuštění.</li>
-<li><strong>System Timer</strong> – zobrazuje aktuální vytížení CPU jednotlivými procesy TG Motion.</li>
-<li><strong>Oscilloscope</strong> – slouží ke grafickému zobrazování hodnot vybraných registrů v závislosti na čase.</li>
-<li><strong>Graphic Viewer</strong> – používá se ke grafickému zobrazení kontinuální řady vybraných registrů.</li>
+<li><strong>Servo Tester</strong> - utility for testing and controlling servo drives.</li>
+<li><strong>PLC Loader</strong> - used to load the PLC and start it.</li>
+<li><strong>System Timer</strong> - displays the current CPU load of each TG Motion process.</li>
+<li><strong>Oscilloscope</strong> - used to graphically display the values of selected registers depending on time.</li>
+<li><strong>Graphic Viewer</strong> - used to graphically display a continuous series of selected registers.</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Pro podrobnější popis viz kapitolu Control Observer.</p>
+<p class="admonition-title">Warning</p>
+<p>See the Control Observer chapter for a more detailed description.</p>
 </div>
-<h2 id="vypisy">Výpisy<a class="headerlink" href="#vypisy" title="Permanent link">&para;</a></h2>
-<p>Pro výpisy do konzole RTX Server se používají diagnostické funkce ze struktury <code>PLC_DATA</code>.
-Jedná se o 3 typy diagnostických funkcí:</p>
-<p>–   výpis řetězce do konzole
-–   výpis hodnoty proměnné lVal (hodnota typu long) do konzole
-–   výpis formátovaného textu do konzole</p>
+<h2 id="console">Console<a class="headerlink" href="#console" title="Permanent link">&para;</a></h2>
+<p>Diagnostic functions from the <code>PLC_DATA</code> structure are used to write to the RTX Server console.
+These are 3 types of diagnostic functions:</p>
+<ul>
+<li>dump the string to the console</li>
+<li>dump the value of the lVal variable (value of the long type) into the console</li>
+<li>output of formatted text to the console</li>
+</ul>
 <h2 id="oscilloscope">Oscilloscope<a class="headerlink" href="#oscilloscope" title="Permanent link">&para;</a></h2>
-<p>Oscilloscope je samostatná utilita běžící v TG Motion.
-Slouží k zachycení hodnot požadovaných registrů v přesném časovém intervalu <code>Cycle_Time</code> a jejich ukládání do sdílené paměti <code>TGM_Oscilloscope</code>.
-To se děje ihned po vykonání funkce Program_04.
-O zobrazení zachycených dat a nastavení parametrů ovlivňujících zaznamenávání hodnot se stará utilita Oscilloscope v Control Observeru.</p>
+<p>Oscilloscope is a separate utility running in TG Motion.
+It is used to capture the values of the required registers in the exact time interval <code>Cycle_Time</code> and store them in the shared memory <code>TGM_Oscilloscope</code>.
+This happens immediately after the Program_04 function is executed.
+The Oscilloscope utility in the Control Observer takes care of displaying the captured data and setting the parameters affecting the recording of values.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>Pro podrobnější popis viz kapitolu Oscilloscope.</p>
+<p class="admonition-title">Warning</p>
+<p>See the Oscilloscope chapter for a more detailed description.</p>
 </div>
-<h2 id="aplikace-windows">Aplikace Windows<a class="headerlink" href="#aplikace-windows" title="Permanent link">&para;</a></h2>
-<p>Přístup do sdílených pamětí mají také aplikace běžící pod operačním systémem Windows.
-Jejich prostřednictvím lze číst hodnoty registrů, případně je i měnit.</p>
+<h2 id="windows-applications">Windows applications<a class="headerlink" href="#windows-applications" title="Permanent link">&para;</a></h2>
+<p>Applications running under the Windows operating system also have access to shared memory.
+They can be used to read the values of registers or even change them.</p>
 <div class="admonition info">
-<p class="admonition-title">Upozornění</p>
-<p>TG Motion běží v real-time prostředí, tedy s vyšší prioritou, než mají procesy běžící pod systémem Windows.
-Z Windows aplikací tedy nelze zajistit bezeztrátové zachycení všech potřebných hodnot, případně operativní reakci na nastalé situace.</p>
+<p class="admonition-title">Warning</p>
+<p>TG Motion runs in a real-time environment, i.e. with a higher priority than processes running under Windows.
+Therefore, it is not possible to ensure lossless capture of all necessary values from Windows applications, or to provide an operational response to situations that arise.</p>
 </div>
 
 

@@ -6677,24 +6677,25 @@
 
 <p><a class="glightbox" href="../../../../../../../Manual/source/img/ECATlogo1.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="ECAT logo" src="../../../../../../../Manual/source/img/ECATlogo1.png" style="width:30%;" /></a>
 <a class="glightbox" href="../../../../../../../Manual/source/img/CANopenLogo1.png" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="CANopen logo" src="../../../../../../../Manual/source/img/CANopenLogo1.png" style="width:30%;" /></a>   </p>
-<p>EtherCAT je registrovaná ochranná známka a patentovaná technologie, licencovaná společností Beckhoff Automation GmbH.
-CANopen a CiA jsou registrované ochranné známky společnosti CAN in Automation.</p>
-<p>Tento návod popisuje nastavení pohonu TGZ v síti EtherCAT nebo CANopen. Pohony TGZ musí být naprogramovány příslušným firmwarem.
-Před použitím pohonu v prostředí EtherCAT nebo CANopen je nutné se důkladně seznámit s <a href="../../../../TGZ/TGZ-D-48-13/md/mark/">uživatelským manuálem HW TGZ</a>.</p>
-<p>Pro programování TGZ je nezbytná znalost následujících dokumentů:</p>
+<p>EtherCAT is a registered trademark and patented technology, licensed by Beckhoff Automation GmbH.   </p>
+<p>CANopen and CiA are registered community trademarks of CAN in Automation.   </p>
+<p>CODESYS is copyrighted by CODESYS Development GmbH.   </p>
+<p>This manual describes the setup of the TGZ drive in the EtherCAT or CANopen network. The TGZ drives must be programmed with the corresponding firmware.
+The <a href="../../../../TGZ/TGZ-D-48-13/md/mark/">TGZ HW user's manual</a> must be thoroughly read and used before the drive can be used in the EtherCAT or CANopen environment.</p>
+<p>The knowledge of the following documents is essential to TGZ programming:</p>
 <ul>
-<li>Aplikační vrstva CANopen a komunikační profil (CiA 301)</li>
-<li>Profil zařízení Pohony a řízení pohybu (CiA 402)</li>
-<li>Prováděcí směrnice pro profil pohonu CiA402 (ETG.6010)</li>
-<li>EtherCAT Slave Controller - Technologie</li>
-<li>EtherCAT Slave Controller - popis registru</li>
+<li>CANopen application layer and communication profile (CiA 301)</li>
+<li>Device Profile Drives and Motion Control (CiA 402)</li>
+<li>Implementation Directive for CiA402 Drive Profile (ETG.6010)</li>
+<li>EtherCAT Slave Controller – Technology</li>
+<li>EtherCAT Slave Controller – Register Description</li>
 </ul>
-<p>Servopohon TGZ lze ovládat pomocí několika sběrnic a protokolů.
-Tato příručka popisuje řízení servopohonu pomocí sběrnice CAN s využitím standardu CANopen a také pomocí ethernetového připojení s využitím standardu EtherCAT s aplikačním protokolem CAN over EtherCAT (CoE).
-Je implementován standardní profil pohonu CiA DSP402.</p>
+<p>TGZ servo drive can be controlled by several field buses and protocols.
+This manual describes the servo control by CAN bus using CANopen standard as well as by Ethernet connection using EtherCAT standard with CAN application protocol over EtherCAT (CoE).
+The standard drive profile CiA DSP402 is implemented.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Technické změny, které vylepšují vlastnosti zařízení, mohou být provedeny bez předchozího upozornění!</p>
+<p class="admonition-title">Note</p>
+<p>Technical changes that improve the properties of the device may be made without prior notice!</p>
 </div>
 
 
