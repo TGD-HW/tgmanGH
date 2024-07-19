@@ -8,13 +8,11 @@ Velikost `Cycle_Time` je definována v souboru `TGMotion4xx.ini`.
 Výhodou Virtuálního PLC je jeho rychlost, protože běží přímo ve strojovém kódu CPU.
 
 !!! info "Upozornění"
-
 	Skupiny Servo a I/O unifikují ovládací rozhraní pro různé typy servopohonů a I/O jednotek.
 	Stejný PLC kód lze aplikovat na různé servopohony nebo I/O jednotky.
 	Operativně lze také servopohony nebo I/O jednotky měnit, aniž by se musel PLC kód přepisovat. 
 
 ##Tvorba PLC
-
 Program PLC je možné vytvářet v obecném vývojovém prostředí, např. Visual Studio, Delphi.
 Programovací jazyk může být C, C++ a Pascal.
 Ve vývojovém prostředí je třeba vytvořit soubor `*.tgm`, který musí zveřejnit právě šest funkcí s názvy: 
@@ -28,7 +26,6 @@ Nesmějí se volat jakékoli funkce API Windows, je zakázáno dynamicky alokova
 	Všechny dále uvedené příklady zdrojových kódů jsou uváděny pro programovací jazyk C/C++.
 	
 ##Vyžadovaný algoritmus PLC
-
 Obecný algoritmus PLC vyžaduje následující postup vykonávání, a to přesně v uvedeném pořadí:
 
 -	**Načtení vstupů**   
@@ -192,8 +189,8 @@ return 1;
 Deklarace: `long Program_01(PLC_DATA *pData)`   
 
 Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_01`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_01`, aby zbyl čas na vykonání funkcí `Program_02` a `Program_03`.
+Perioda je definována položkou `Cycle_Time_Program_01`, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% `Cycle_Time_Program_01`, aby zbyl čas na vykonání funkcí `Program_02` a `Program_03`.
 Tato funkce se nejčastěji používá pro základní obsluhu zařízení, která nemusejí být obsluhována pravidelně každý `Cycle_Time`.
 Funkce `Program_01` má nejnižší prioritu a kdykoli může být přerušena funkcemi `Program_02`, `Program_03`, `Program_04` a `Program_05`.
 
@@ -202,8 +199,8 @@ Funkce `Program_01` má nejnižší prioritu a kdykoli může být přerušena f
 Deklarace: `long Program_02(PLC_DATA *pData)`   
 
 Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_02`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_02`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_03`.
+Perioda je definována položkou `Cycle_Time_Program_02`, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% `Cycle_Time_Program_02`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_03`.
 Tato funkce se většinou implementuje jako prázdná funkce.
 Funkce `Program_02` má nízkou prioritu a může být kdykoli přerušena funkcemi `Program_03`, `Program_04`, a `Program_05`.
 
@@ -221,8 +218,8 @@ return 1;
 Deklarace: `long Program_03(PLC_DATA *pData)`   
 
 Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_03`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_03`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_02`.
+Perioda je definována položkou `Cycle_Time_Program_03`, její hodnota se pohybuje v rozmezí 100–10000&nbsp;μs (horní hranice není omezena).
+Délka vykonávání funkce by neměla přesáhnout 20&nbsp;% `Cycle_Time_Program_03`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_02`.
 Tato funkce se většinou implementuje jako prázdná funkce.
 Funkce `Program_03` má nízkou prioritu a může být kdykoli přerušena funkcemi `Program_04` a `Program_05`.
 
@@ -240,10 +237,10 @@ return 1;
 Deklarace: `long Program_04(PLC_DATA *pData)`   
 
 Funkce je z TG Motion volána synchronně s komunikací v rámci `Cycle_Time`, tedy jednou během každého `Cycle_Time`.
-Ten je definován v souboru `TGMotion4xx.ini` položkou Cycle_Time (250&nbps;μs, 500&nbps;μs, 1000&nbps;μs).
+Ten je definován v souboru `TGMotion4xx.ini` položkou Cycle_Time (250&nbsp;μs, 500&nbsp;μs, 1000&nbsp;μs).
 Funkce Program_04 se nejčastěji používá pro modifikaci žádané polohy servopohonů a obsluhu I/O jednotek.
 Má nejvyšší prioritu (stejně jako funkce Program_05) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbps;% `Cycle_Time`, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.
+Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbsp;% `Cycle_Time`, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.
 
 !!! info "Upozornění"
 	Ve funkci Program_04 nesmí být volána funkce `SleepFt`
@@ -356,7 +353,6 @@ Control Observer je samostatně spustitelný program `Control_Observer_II.exe` b
 -	`TGM_Remote.dll` – umožňuje spojení pomocí sítě LAN s TG Motion běžícím na jiném počítači
 
 !!! info "Upozornění"
-
 	Pro přístup k datům sdílené paměti TGM_Data slouží v utilitě Select Registers záložka Free Registers, typ paměti DAT.
 	
 **Součásti Control Observeru**
@@ -394,6 +390,5 @@ Přístup do sdílených pamětí mají také aplikace běžící pod operační
 Jejich prostřednictvím lze číst hodnoty registrů, případně je i měnit.
 
 !!! info "Upozornění"
-
 	TG Motion běží v real-time prostředí, tedy s vyšší prioritou, než mají procesy běžící pod systémem Windows.
 	Z Windows aplikací tedy nelze zajistit bezeztrátové zachycení všech potřebných hodnot, případně operativní reakci na nastalé situace.

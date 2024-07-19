@@ -131,6 +131,7 @@ Každému kanálu náleží následující čtveřice registrů.
 ###Pomocné registry
 
 Pomocné registry informují o parametrech záznamu utility Oscilloscope.
+
 -	**Number_Samples** – počet vzorků k dispozici
 -	**Actual_Samples** – aktuální počet zaznamenaných vzorků
 -	**Sample_Time** - časový interval vzorkování `(Sample_Time = Cycle_Time × Number_Periods) [μs]`

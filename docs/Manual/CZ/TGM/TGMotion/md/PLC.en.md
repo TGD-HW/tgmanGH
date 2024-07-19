@@ -1,105 +1,101 @@
 #Virtual PLC {#MotionPLC}
 ##Virtual PLC description
 
-Modul Virtuální PLC vykonává uživatelem napsaný PLC program.
-Ten provádí výpočty, zabezpečuje ovládání servopohonů, načítání a nastavování hodnot vstupů a výstupů a stará se o komunikaci s dalšími periferiemi pouze prostřednictvím sdílené paměti.
-Virtuální PLC je z TG Motion periodicky volán v intervalu nastaveném v `Cycle_Time`.
-Velikost `Cycle_Time` je definována v souboru `TGMotion4xx.ini`. 
-Výhodou Virtuálního PLC je jeho rychlost, protože běží přímo ve strojovém kódu CPU.
+The Virtual PLC module executes a PLC program written by the user.
+It performs calculations, controls servo drives, reads and sets input and output values and takes care of communication with other peripherals only via shared memory.
+The virtual PLC is periodically called from TG Motion at the interval set in `Cycle_Time`.
+The `Cycle_Time` size is defined in the `TGMotion4xx.ini` file. 
+The advantage of the Virtual PLC is its speed because it runs directly in the CPU machine code.
 
-!!! info "Upozornění"
-
-	Skupiny Servo a I/O unifikují ovládací rozhraní pro různé typy servopohonů a I/O jednotek.
-	Stejný PLC kód lze aplikovat na různé servopohony nebo I/O jednotky.
-	Operativně lze také servopohony nebo I/O jednotky měnit, aniž by se musel PLC kód přepisovat. 
+!!! info "Warning"
+	The Servo and I/O groups unify the control interface for different types of servo drives and I/O units.
+	The same PLC code can be applied to different servo drives or I/O units.
+	Servo drives or I/O units can also be changed operationally without rewriting the PLC code. 
 
 ##Making of a PLC
+The PLC program can be created in a general development environment, e.g. Visual Studio, Delphi.
+The programming language can be C, C++ and Pascal.
+In the development environment, you need to create a `*.tgm` file, which must publish just six functions with names: 
+`Program_01, Program_02, Program_03, Program_04, Program_05` and `Program_Ini`.
+The names given are mandatory, including the case of the letters.
+The `*.tgm` program module must not be linked with any external modules or DLLs, all program functionality (functions, subroutines, ...) must be created by the programmer directly in the module.
+Any Windows API functions must not be called, dynamic memory allocation (`malloc` function, etc.) is forbidden. 
 
-Program PLC je možné vytvářet v obecném vývojovém prostředí, např. Visual Studio, Delphi.
-Programovací jazyk může být C, C++ a Pascal.
-Ve vývojovém prostředí je třeba vytvořit soubor `*.tgm`, který musí zveřejnit právě šest funkcí s názvy: 
-`Program_01, Program_02, Program_03, Program_04, Program_05` a `Program_Ini`.
-Uvedené názvy jsou povinné včetně velikosti písmen.
-Programový modul `*.tgm` nesmí být propojen s jakýmikoli externími moduly či knihovnami DLL, veškerá programová funkčnost (funkce, podprogramy, …) musí být vytvořena programátorem přímo v modulu.
-Nesmějí se volat jakékoli funkce API Windows, je zakázáno dynamicky alokovat paměť (funkce `malloc` apod.). 
-
-!!! info "Upozornění"
+!!! info "Warning"
+	All the following source code examples are for the C/C++ programming language.
 	
-	Všechny dále uvedené příklady zdrojových kódů jsou uváděny pro programovací jazyk C/C++.
+##Required PLC algorithm
+The general PLC algorithm requires the following sequence of execution, in the exact order listed:
+
+-	**Reading entries**
+	In the first phase, it is necessary to read the register values of all required inputs.
+	This includes the positions and states of the servo drives as well as the values of the digital and analog inputs (see Servo structure and I/O structure).
+
+-	**Value processing and calculations**
+	The next step is to process the read values and calculate new values (desired positions of actuators and values of digital and analogue outputs).
+
+-	**Setting Outputs**
+	The last step is to send the desired positions to the actuators and set the digital and analogue values
+	outputs by writing values to the appropriate registers.
 	
-##Vyžadovaný algoritmus PLC
+##Communication with PLC
 
-Obecný algoritmus PLC vyžaduje následující postup vykonávání, a to přesně v uvedeném pořadí:
+Other TG Motion components and user applications running under Windows can communicate with the PLC using the shared memory `TGM_Data`.
+TG Motion does not interfere with it in any way and does not rewrite its content.
+The structure of this memory and its use is fully in the PLC programmer's control.
+The size of the shared memory `TGM_Data` is usually 524 288 bytes.
+The actual memory size is contained in the `TGM_System.HEADER.Mem_Size_Data` register.
+The memory can contain user registers, cam data, etc.
+It is most often used by visualization applications running under Windows.
 
--	**Načtení vstupů**   
-	V první fázi je nutné načíst hodnoty registrů všech požadovaných vstupů.
-	A to jak polohy a stavy servopohonů, tak i hodnoty digitálních a analogových vstupů (viz strukturu Servo a strukturu I/O).
+#Functions PLC
+##General description of functions
 
--	**Zpracování hodnot a výpočty**   
-	Dalším krokem je zpracování načtených hodnot a výpočty hodnot nových (žádané polohy servopohonů ahodnoty digitálních a analogových výstupů).
+The programming module of the Virtual PLC has 6 functions available.
+These differ in their execution priority and the requirement for their complete execution within one `Cycle_Time`.
+For correct and error-free operation of the Virtual PLC it is necessary that the required code is placed in the appropriate function (see below):
 
--	**Nastavení výstupů**   
-	Posledním krokem je zaslání žádaných poloh servopohonům a nastavení hodnot digitálních a analogových
-	výstupů prostřednictvím zapsání hodnot do příslušných registrů.
+-	**Program_Ini( )** - function called only once when starting the PLC.
+-	**Program_01( )** - lowest priority, selectable calling period.
+-	**Program_02( )** - lower priority, selectable calling period.
+-	**Program_03( )** - higher priority, selectable calling period.
+-	**Program_04( )** - highest priority, it is called every Cycle_Time.
+-	**Program_05( )** - highest priority, called synchronously with the interpolator position calculation (multiple times during one Cycle_Time)
+
+!!! info "Warning"
+	All functions must be implemented, some do not need to contain executable code.
+	It is always necessary to provide the return value of the function.
+	See code example of the **Program_02** function.
 	
-##Komunikace s PLC
+##PLC_DATA structure
+The structure is used for communication between TG Motion and PLC.
+TG Motion creates 6 instances of the `PLC_DATA` structure.
+Each of the 6 functions (Program_01 - Program_05, Program_Ini) has just 1 parameter, a pointer to the PLC_DATA structure.
+When a function is called, TG Motion passes it a pointer to the structure instance that belongs to it.
+The PLC_DATA structure contains pointers to shared memories and pointers to TG Motion's internal diagnostic functions.
 
-Ostatní komponenty systému TG Motion a uživatelské aplikace běžící pod Windows mohou komunikovat s PLC pomocí sdílené paměti `TGM_Data`.
-TG Motion do ní nijak nezasahuje a její obsah nijak nepřepisuje.
-Struktura této paměti a její využití je plně v režii programátora PLC.
-Velikost sdílené paměti `TGM_Data` je obvykle 524 288 byte.
-Skutečnou velikost paměti obsahuje registr `TGM_System.HEADER.Mem_Size_Data`.
-Paměť může obsahovat uživatelské registry, data vaček, atd.
-Nejčastěji je využívána aplikacemi pro vizualizaci běžícími pod Windows.
-
-#Funkce PLC
-##Obecný popis funkcí
-
-Programovací modul Virtuálního PLC má k dispozici právě 6 funkcí.
-Ty se liší prioritou provádění a požadavkem na své úplné provedení během jednoho `Cycle_Time`.
-Pro správný a bezchybný chod Virtuálního PLC je nutné, aby požadovaný kód byl umístěn v příslušné funkci (viz dále):
-
--	**Program_Ini( )** – funkce volaná pouze jednou při spuštění PLC.
--	**Program_01( )** – nejnižší priorita, volitelná perioda volání.
--	**Program_02( )** – nižší priorita, volitelná perioda volání.
--	**Program_03( )** – vyšší priorita, volitelná perioda volání.
--	**Program_04( )** – nejvyšší priorita, volá se každý Cycle_Time.
--	**Program_05( )** – nejvyšší priorita, volá se synchronně s výpočtem poloh interpolátoru (vícekrát během jednoho Cycle_Time)
-
-!!! info "Upozornění"
-	Všechny funkce musejí být implementovány, některé nemusejí obsahovat výkonný kód.
-	Vždy je nutné zabezpečit návratovou hodnotu funkce.
-	Viz příklad kódu funkce **Program_02**.
-	
-##Struktura PLC_DATA
-Struktura slouží pro komunikaci mezi TG Motion a PLC.
-TG Motion vytvoří 6 instancí struktury `PLC_DATA`.
-Každá z 6 funkcí (Program_01 – Program_05, Program_Ini) má právě 1 parametr, ukazatel na strukturu PLC_DATA.
-Při volání funkce jí TG Motion předá ukazatel na jí náležející instanci struktury.
-Struktura PLC_DATA obsahuje ukazatele na sdílené paměti a ukazatele na vnitřní diagnostické funkce TG Motion.
-
-###Definice diagnostických funkcí
+###Definition of diagnostic functions
 
 ``` c
 #ifdef __cplusplus
 extern "C" {
 #endif
-typedef int _cdecl RTWPRINTF_STRING(LPCWSTR strText); // výpis řetězce do konzole
+typedef int _cdecl RTWPRINTF_STRING(LPCWSTR strText); // dump the string to the console
 typedef int _cdecl RTWPRINTF_LONG(LPCWSTR strFormat, long lVal);
-// výpis hodnoty proměnné lVal do konzole
+// dump the value of the lVal variable to the console
 typedef int __cdecl SWPRINTF(wchar_t *buffer, size_t sizeOfBuffer, const wchar_t *strFormat, ...);
-// zápis formátovaného textu do řetězce buffer
-typedef void __cdecl SLEEPFT(PLARGE_INTEGER Pause); // čekání
-typedef BOOL __cdecl CAN_TRANSMIT(ULONG Number, ULONG Id, ULONG Dlc, PUCHAR Tx_Data ); // rezervováno
-typedef BOOL __cdecl CAN_TRANSMITREMOTE(ULONG Number, ULONG Id, ULONG Dlc, PUCHAR Tx_Data); // rezervováno
+// writing formatted text to the buffer string
+typedef void __cdecl SLEEPFT(PLARGE_INTEGER Pause); // waiting
+typedef BOOL __cdecl CAN_TRANSMIT(ULONG Number, ULONG Id, ULONG Dlc, PUCHAR Tx_Data ); // reserved
+typedef BOOL __cdecl CAN_TRANSMITREMOTE(ULONG Number, ULONG Id, ULONG Dlc, PUCHAR Tx_Data); // reserved
 typedef int __cdecl RTWPRINTF_EX(int severity, const wchar_t *strFormat, ...);
-// výpis formátovaného textu do konzole
+// dump formatted text to the console
 #ifdef __cplusplus
 };
 #endif
 ```
 
-###Ukazatele na diagnostické funkce
+###Pointers to diagnostic functions
 ``` c
 typedef struct _PLC_IMPORT_FUNCTIONS
 {
@@ -113,57 +109,57 @@ RTWPRINTF_EX *pRtWprintf_Ex;
 } PLC_IMPORT_FUNCTIONS;
 ```
 
-###Vlastní struktura PLC_DATA
+###Custom PLC_DATA structure
 ``` c
 typedef struct _PLC_DATA
 {
-size_t structSize; // velikost struktury v bytech
-void *PSystem_Memory; // ukazatel na sdílenou paměť TGM_System
-void *PData_Memory; // ukazatel na sdílenou paměť TGM_Data
-void *POsc_Memory; // ukazatel na sdílenou paměť TGM_Oscilloscope
-void *PCam_Memory; // ukazatel na sdílenou paměť TGM_Cam_Profile
-void *PServo_Memory; // ukazatel na sdílenou paměť TGM_Servo
-void *PDio_Memory; // ukazatel na sdílenou paměť TGM_Dio
-void *PInterpolator_Memory; // ukazatel na sdílenou paměť TGM_Interpolator
-void *Pointer_interpolator_params; // ukazatel na sdílenou paměť TGM_InterpolatorWriteMemory
-void *Pointer_interpolator_get_position; // ukazatel na sdílenou paměť TGM_InterpolatorReadMemory
-void *PCNCEx; // ukazatel na sdílenou paměť TGM_CNCEX
-void *PGCode; // ukazatel na sdílenou paměť TGM_GCODE
-void *PReserve3_Memory; // rezervováno
-void *PReserve4_Memory; // rezervováno
-void *PReserve5_Memory; // rezervováno
-void *PReciveDataCan1; // rezervováno
-void *PReciveDataCan2; // rezervováno
-PLC_IMPORT_FUNCTIONS functions; // struktura s ukazateli na diagnostické funkce
+size_t structSize; // structure size in bytes
+void *PSystem_Memory; // pointer to shared memory TGM_System
+void *PData_Memory; // pointer to shared memory TGM_Data
+void *POsc_Memory; // pointer to shared memory TGM_Oscilloscope
+void *PCam_Memory; // pointer to shared memory TGM_Cam_Profile
+void *PServo_Memory; // pointer to shared memory TGM_Servo
+void *PDio_Memory; // pointer to shared memory TGM_Dio
+void *PInterpolator_Memory; // pointer to shared memory TGM_Interpolator
+void *Pointer_interpolator_params; // pointer to shared memory TGM_InterpolatorWriteMemory
+void *Pointer_interpolator_get_position; // pointer to shared memory TGM_InterpolatorReadMemory
+void *PCNCEx; // pointer to shared memory TGM_CNCEX
+void *PGCode; // pointer to shared memory TGM_GCODE
+void *PReserve3_Memory; // reserved
+void *PReserve4_Memory; // reserved
+void *PReserve5_Memory; // reserved
+void *PReciveDataCan1; // reserved
+void *PReciveDataCan2; // reserved
+PLC_IMPORT_FUNCTIONS functions; // structure with pointers to diagnostic functions
 } PLC_DATA, *PPLC_DATA;
 ```
 
-##Funkce podle priority
-V této kapitole jsou funkce řazeny od nejnižší priority po prioritu nejvyšší.
-U funkce `Program_Ini` se o prioritu v pravém slova smyslu nejedná.
-Tato funkce je volána pouze jednou při spuštění Virtuálního PLC.
+##Functions by priority
+In this chapter, the functions are ordered from lowest priority to highest priority.
+The `Program_Ini` function is not a priority in the true sense of the word.
+This function is called only once when starting the Virtual PLC.
 
 ###Program_Ini
-Deklarace: `long Program_Ini(PLC_DATA *pData)`   
+Declaration: `long Program_Ini(PLC_DATA *pData)`   
 
-Tato funkce je volaná jen jednou, a to při spuštění Virtuálního PLC.
-Slouží zejména k inicializaci proměnných Virtuálního PLC.
-Výkonný kód funkce `Program_Ini` nesmí být prázdný.
-Délka vykonávání funkce není omezena.
+This function is called only once, when the Virtual PLC is started.
+It is used mainly for initializing the Virtual PLC variables.
+The executive code of the `Program_Ini` function must not be empty.
+There is no limit to the length of time that a person may serve.
 
-!!! info "Upozornění"
-	Při startu Virtuálního PLC (v těle funkce Program_Ini) je vhodné zkontrolovat verze PLC a TG Motion.
+!!! info "Warning"
+	When starting the Virtual PLC (in the body of the Program_Ini function) it is advisable to check the PLC and TG Motion versions.
 	
-**Návratové hodnoty funkce**
+**Function return values**
 
--	0 – chyba (spouštění PLC se zastaví; uživatel musí chybu vyřešit a znovu spustit PLC).
--	1 – funkce proběhla v pořádku.
+- 0	- error (PLC start-up stops; the user must solve the error and restart the PLC).
+- 1	- the function ended without errors.
 
-!!! info "Upozornění"
-	Při nahrání Virtuálního PLC se neinicializují hodnoty globálních proměnných, nevolají se konstruktory globálních objektů.
-	Inicializaci je nutné provést ve funkci `Program_Ini`.
+!!! info "Warning"
+	When loading the Virtual PLC, the values of global variables are not initialized, the constructors of global objects are not called.
+	The initialization must be done in the `Program_Ini` function.
 	
-**Ukázka zdrojového kódu**
+**Source code sample**
 
 ``` c
 long Program_Ini(PLC_DATA *pData)
@@ -175,13 +171,13 @@ if (pData->functions.pswprintf == NULL) return 0;
 if (pData->functions.pSleepFt == NULL) return 0;
 if (pHeader->Compatibility_Id != ID_COMPATIBILITY)
 {
-pData->functions.pswprintf(info_ini, SIZE_INFO, L"Error start of PLC PLC_COMPABILITY_ID = %d
-TGM_COMPABILITY_ID = %d \n", ID_COMPATIBILITY, pHeader->Compatibility_Id);
+pData->functions.pswprintf(info_ini, SIZE_INFO, L "Error start of PLC PLC_COMPABILITY_ID = %d
+TGM_COMPATIBILITY_ID = %d \n", ID_COMPATIBILITY, pHeader->Compatibility_Id);
 pData->functions.pRtWprintf_String(info_ini);
 return 0;
 }
 //****************************************** Update PLC Version ***********************************
-Verze_PLC = Get_Version(PLC_VERSION);
+Version_PLC = Get_Version(PLC_VERSION);
 //*************************************************************************************************
 return 1;
 }
@@ -189,25 +185,25 @@ return 1;
 
 ###Program_01
 
-Deklarace: `long Program_01(PLC_DATA *pData)`   
+Declaration: `long Program_01(PLC_DATA *pData)`   
 
-Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_01`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_01`, aby zbyl čas na vykonání funkcí `Program_02` a `Program_03`.
-Tato funkce se nejčastěji používá pro základní obsluhu zařízení, která nemusejí být obsluhována pravidelně každý `Cycle_Time`.
-Funkce `Program_01` má nejnižší prioritu a kdykoli může být přerušena funkcemi `Program_02`, `Program_03`, `Program_04` a `Program_05`.
+The function is called from TG Motion with the period specified in the `TGMotion4xx.ini` configuration file.
+The period is defined by the `Cycle_Time_Program_01` item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The length of the function execution should not exceed 20&nbsp;% of `Cycle_Time_Program_01` to leave time for the execution of `Program_02` and `Program_03` functions.
+This function is most often used for basic servicing of devices that do not need to be serviced regularly every `Cycle_Time`.
+Function `Program_01` has the lowest priority and can be interrupted at any time by functions `Program_02`, `Program_03`, `Program_04` and `Program_05`.
 
 ###Program_02
 
-Deklarace: `long Program_02(PLC_DATA *pData)`   
+Declaration: `long Program_02(PLC_DATA *pData)`   
 
-Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_02`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_02`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_03`.
-Tato funkce se většinou implementuje jako prázdná funkce.
-Funkce `Program_02` má nízkou prioritu a může být kdykoli přerušena funkcemi `Program_03`, `Program_04`, a `Program_05`.
+The function is called from TG Motion with the period specified in the `TGMotion4xx.ini` configuration file.
+The period is defined by the `Cycle_Time_Program_02` item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The duration of the function execution should not exceed 20&nbsp;% of `Cycle_Time_Program_02` to leave time for the execution of the `Program_01` and `Program_03` functions.
+This function is usually implemented as an empty function.
+The `Program_02` function has low priority and can be interrupted at any time by the `Program_03`, `Program_04`, and `Program_05` functions.
 
-**Ukázka zdrojového kódu**
+**Source code sample**
 
 ``` c
 long Program_02(PLC_DATA *pData)
@@ -218,15 +214,15 @@ return 1;
 
 ###Program_03
 
-Deklarace: `long Program_03(PLC_DATA *pData)`   
+Declaration: `long Program_03(PLC_DATA *pData)`   
 
-Funkce je z TG Motion volána s periodou danou v konfiguračním souboru `TGMotion4xx.ini`.
-Perioda je definována položkou `Cycle_Time_Program_03`, její hodnota se pohybuje v rozmezí 100–10000&nbps;μs (horní hranice není omezena).
-Délka vykonávání funkce by neměla přesáhnout 20&nbps;% `Cycle_Time_Program_03`, aby zbyl čas na vykonání funkcí `Program_01` a `Program_02`.
-Tato funkce se většinou implementuje jako prázdná funkce.
-Funkce `Program_03` má nízkou prioritu a může být kdykoli přerušena funkcemi `Program_04` a `Program_05`.
+The function is called from TG Motion with the period specified in the `TGMotion4xx.ini` configuration file.
+The period is defined by the `Cycle_Time_Program_03` item, its value ranges from 100 to 10000&nbsp;μs (the upper limit is not limited).
+The length of the function execution should not exceed 20&nbsp;% of `Cycle_Time_Program_03` to leave time for the execution of the `Program_01` and `Program_02` functions.
+This function is usually implemented as an empty function.
+The `Program_03` function has low priority and can be interrupted at any time by the `Program_04` and `Program_05` functions.
 
-**Ukázka zdrojového kódu**
+**Source code sample**
 
 ``` c
 long Program_03(PLC_DATA *pData)
@@ -237,163 +233,159 @@ return 1;
 
 ###Program_04
 
-Deklarace: `long Program_04(PLC_DATA *pData)`   
+Declaration: `long Program_04(PLC_DATA *pData)`   
 
-Funkce je z TG Motion volána synchronně s komunikací v rámci `Cycle_Time`, tedy jednou během každého `Cycle_Time`.
-Ten je definován v souboru `TGMotion4xx.ini` položkou Cycle_Time (250&nbps;μs, 500&nbps;μs, 1000&nbps;μs).
-Funkce Program_04 se nejčastěji používá pro modifikaci žádané polohy servopohonů a obsluhu I/O jednotek.
-Má nejvyšší prioritu (stejně jako funkce Program_05) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_04 nesmí přesáhnout 10&nbps;% `Cycle_Time`, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.
+The function is called from TG Motion synchronously with the communication within the `Cycle_Time`, i.e. once during each `Cycle_Time`.
+It is defined in the `TGMotion4xx.ini` file by the Cycle_Time item (250&nbsp;μs, 500&nbsp;μs, 1000&nbsp;μs).
+The Program_04 function is most often used to modify the desired position of servo drives and to operate I/O units.
+It has the highest priority (as does the Program_05 function) and always executes in its entirety without interruption.
+The execution time of the Program_04 function must not exceed 10&nbsp;% of `Cycle_Time` to ensure timing accuracy of communication with servo drives and I/O units.
 
-!!! info "Upozornění"
-	Ve funkci Program_04 nesmí být volána funkce `SleepFt`
+!!! info "Warning"
+	The function `SleepFt` must not be called in the function Program_04
 	
 ###Program_05
 
-Deklarace: `long Program_05(PLC_DATA *pData)`   
+Declaration: `long Program_05(PLC_DATA *pData)`   
 
-Funkce je z TG Motion volána synchronně s interpolátorem, tedy několikrát během každého `Cycle_Time`.
-Funkce Program_05 se nejčastěji používá pro modifikaci polohy vypočtené modulem interpolátoru.
-Má nejvyšší prioritu (stejně jako funkce Program_04) a vždy se vykoná celá bez přerušení.
-Délka vykonávání funkce Program_05 nesmí přesáhnout 10 μs, aby byla zabezpečena časová přesnost komunikace se servopohony a I/O jednotkami.
+The function is called from TG Motion synchronously with the interpolator, i.e. several times during each `Cycle_Time`.
+The Program_05 function is most often used to modify the position calculated by the interpolator module.
+It has the highest priority (as does the Program_04 function) and always executes in its entirety without interruption.
+The execution time of the Program_05 function must not exceed 10 μs to ensure timing accuracy of communication with servo drives and I/O units.
 
-!!! info "Upozornění"
-	Ve funkci Program_05 nesmí být volána funkce `SleepFt`
+!!! info "Warning"
+	The function `SleepFt` must not be called in the function Program_05
 
-##Časová souslednost volání funkcí
+##Timing sequence of function calls
 **Cycle_Time = 250 μs**
 
-![Algoritmus vykonávání PLC pro Cycle_Time = 250 μs](../img/PLC_250us.png){: style="width:40%;" }
+![PLC execution algorithm for Cycle_Time = 250 μs](../img/PLC_250us.png){: style="width:40%;" }
 
-Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 250 μs.
-Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 50 μs.
+After starting the PLC and successful execution of the `Program_Ini` function, a cyclic loop call lasting 250 μs is started.
+It is evenly divided into 5 equal time periods called regularly every 50 μs.
 
--	**Čas 0 μs**   
-	Provedou se potřebné interní výpočty a přijmou se data z EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.   
+-	**Time 0 μs**
+	The necessary internal calculations are performed and the EtherCAT data is received. The function Program_05 is then called and the entire function is executed without interruption.   
 
--	**Čas 50 μs**
-	Provedou se potřebné interní výpočty a pošlou se data do EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.   
+-	**Time 50 μs**
+	The necessary internal calculations are performed and the data is sent to EtherCAT. The function Program_05 is then called and the entire function is executed without interruption.   
 
--	**Čas 100 μs**
-	Provedou se potřebné interní výpočty a vypočtou se data žádané polohy pomocí PG generátorů.
-	Poté se	zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 100 μs**
+	The necessary internal calculations are performed and the desired position data is calculated using PG generators.
+	Then	willfunction Program_05, which will be executed without interruption.
 
--	**Čas 150 μs**
-	Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-	Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-	Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.
+-	**Time 150 μs**
+	The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+	Then the function Program_04 is called, which is also executed without interruption.
+	Finally, all the data needed for the Oscilloscope is recorded.
 
--	**Čas 200 μs**
-	Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.   
-	Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.   
+-	**Time 200 μs**
+	The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.   
+	If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.   
 	
 	
 **Cycle_Time = 500 μs**
 
-![Algoritmus vykonávání PLC pro Cycle_Time = 500 μs](../img/PLC_500us.png){: style="width:40%;" }
+![PLC execution algorithm for Cycle_Time = 500 μs](../img/PLC_500us.png){: style="width:40%;" }
 	
-Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 500 μs.
-Ta je rovnoměrně rozdělena na 5 stejných časových úseků volaných pravidelně každých 100 μs.
+After starting the PLC and successful execution of the `Program_Ini` function, a cyclic loop call lasting 500 μs is started.
+It is evenly divided into 5 equal time periods called regularly every 100 μs.
 	
--	**Čas 0 μs**
-	Provedou se potřebné interní výpočty a přijmou se data z EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 0 μs**
+	The necessary internal calculations are performed and the EtherCAT data is received. The function Program_05 is then called and the entire function is executed without interruption.
 	
--	**Čas 100 μs**
-	Provedou se potřebné interní výpočty a pošlou se data do EtherCAT. Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 100 μs**
+	The necessary internal calculations are performed and the data is sent to EtherCAT. The function Program_05 is then called and the entire function is executed without interruption.
 
--	**Čas 200 μs**
-	Provedou se potřebné interní výpočty a vypočtou se data žádané polohy pomocí PG generátorů.
-	Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 200 μs**
+	The necessary internal calculations are performed and the desired position data is calculated using PG generators.
+	Then the function Program_05 is called and the whole function is executed without interruption.
 
--	**Čas 300 μs**
-	Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-	Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-	Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.
+-	**Time 300 μs**
+	The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+	Then the function Program_04 is called, which is also executed without interruption.
+	Finally, all the data needed for the Oscilloscope is recorded.
 	
--	**Čas 400 μs**
-	Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-	Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.
+-	**Time 400 μs**
+	The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+	If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.
 	
 **Cycle_Time = 1000 μs**
 
-![Algoritmus vykonávání PLC pro Cycle_Time = 1000 μs](../img/PLC_1000us.png){: style="width:40%;" }
+![PLC execution algorithm for Cycle_Time = 1000 μs](../img/PLC_1000us.png){: style="width:40%;" }
 	
-Po spuštění PLC a úspěšném vykonání funkce `Program_Ini` se spustí cyklické volání smyčky trvající 1000 μs.
-Ta je rovnoměrně rozdělena na 10 stejných časových úseků volaných pravidelně každých 100 μs.
+After starting the PLC and successful execution of the `Program_Ini` function, a cyclic loop call lasting 1000 μs is started.
+It is evenly divided into 10 equal time periods called regularly every 100 μs.
 	
--	**Čas 0 μs**
-	Provedou se potřebné interní výpočty a přijmou se data z EtherCAT.
-	Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 0 μs**
+	The necessary internal calculations are performed and the EtherCAT data is received.
+	Then the function Program_05 is called and the whole function is executed without interruption.
 	
--	**Čas 100 μs**
-	Provedou se potřebné interní výpočty a pošlou se data do EtherCAT.
-	Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 100 μs**
+	The necessary internal calculations are performed and the data is sent to EtherCAT.
+	Then the function Program_05 is called and the whole function is executed without interruption.
 
--	**Čas 200 μs**
-	Provedou se potřebné interní výpočty a pošlou se data do EtherCAT.
-	Poté se zavolá funkce Program_05, která se vykoná celá bez přerušení.
+-	**Time 200 μs**
+	The necessary internal calculations are performed and the data is sent to EtherCAT.
+	Then the function Program_05 is called and the whole function is executed without interruption.
 
--	**Čas 300 μs**
-	Provedou se potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-	Poté se zavolá funkce Program_04, která se také vykoná celá bez přerušení.
-	Nakonec se zaznamenají všechna data potřebná pro Oscilloscope.
+-	**Time 300 μs**
+	The necessary internal calculations are performed and the function Program_05 is called, which is executed without interruption.
+	Then the function Program_04 is called, which is also executed without interruption.
+	Finally, all the data needed for the Oscilloscope is recorded.
 	
--	**Čas 400 μs, 500 μs, 600 μs, 700 μs, 800 μs, 900 μs**
-	Ve všech těchto časových úsecích se provedou potřebné interní výpočty a zavolá se funkce Program_05, která se vykoná celá bez přerušení.
-	Pokud je během kteréhokoli cyklu volná výpočetní kapacita, jsou v případě potřeby obsluhovány funkce Program_01, Program_02 a Program_03.
+-	**Time 400 μs, 500 μs, 600 μs, 700 μs, 800 μs, 900 μs**
+	In all of these time periods, the necessary internal calculations are performed and the Program_05 function is called, which is executed in its entirety without interruption.
+	If the computing capacity is free during any cycle, the Program_01, Program_02 and Program_03 functions are operated if necessary.
 	
-#Nástroje pro ladění PLC
+#Tools for PLC debugging
 ##Control Observer
 
-Hlavním nástrojem pro ladění Virtuálního PLC z prostředí Windows je Control Observer. Je dodáván se systémem TG Motion.
-Jedná se o soubor utilit vyvinutý pro diagnostiku systému TG Motion, odlaďování PLC a obslužných Windows aplikací.
-Control Observer obsahuje nástroje pro přímé testování a ovládání servopohonů, načtení a spuštění PLC kódu a zobrazení parametrů systémového časovače.
-Další skupina utilit slouží k zobrazování, sledování, či změně zvolených registrů sdílené paměti.
-Control Observer je samostatně spustitelný program `Control_Observer_II.exe` bez nutnosti instalace, který se dodává s 3 knihovnami:
+The main tool for debugging the Virtual PLC from the Windows environment is the Control Observer. It is supplied with TG Motion.
+It is a set of utilities developed for TG Motion system diagnostics, PLC debugging and Windows applications.
+Control Observer contains tools for direct testing and control of servo drives, loading and running PLC code and displaying system timer parameters.
+Another group of utilities is used to view, monitor, or modify selected shared memory registers.
+Control Observer is a self-executable program `Control_Observer_II.exe` without installation, which comes with 3 libraries:
 
--	`TGM_Comm_Int_2.dll` – zabezpečuje komunikaci s TG Motion běžícím na stejném počítači.
--	`TGM_Mini.dll` – obsluhuje TG Motion běžící v TGMmini.
--	`TGM_Remote.dll` – umožňuje spojení pomocí sítě LAN s TG Motion běžícím na jiném počítači
+-	`TGM_Comm_Int_2.dll` - provides communication with TG Motion running on the same computer.
+-	`TGM_Mini.dll` - handles TG Motion running in TGMmini.
+-	`TGM_Remote.dll` - allows connection via LAN to TG Motion running on another computer
 
-!!! info "Upozornění"
-
-	Pro přístup k datům sdílené paměti TGM_Data slouží v utilitě Select Registers záložka Free Registers, typ paměti DAT.
+!!! info "Warning"
+	To access the TGM_Data shared memory data, the **Select Registers** utility uses the Free Registers page, memory type DAT.
 	
-**Součásti Control Observeru**
+**Components of Control Observer**
 
--	**Servo Tester** – utilita k testování a ovládání servopohonů.
--	**PLC Loader** – slouží k načtení PLC a jeho spuštění.
--	**System Timer** – zobrazuje aktuální vytížení CPU jednotlivými procesy TG Motion.
--	**Oscilloscope** – slouží ke grafickému zobrazování hodnot vybraných registrů v závislosti na čase.
--	**Graphic Viewer** – používá se ke grafickému zobrazení kontinuální řady vybraných registrů.
+- **Servo Tester** - utility for testing and controlling servo drives.
+- **PLC Loader** - used to load the PLC and start it.
+- **System Timer** - displays the current CPU load of each TG Motion process.
+- **Oscilloscope** - used to graphically display the values of selected registers depending on time.
+- **Graphic Viewer** - used to graphically display a continuous series of selected registers.
 	
-!!! info "Upozornění"
-
-	Pro podrobnější popis viz kapitolu Control Observer.
+!!! info "Warning"
+	See the Control Observer chapter for a more detailed description.
 	
-##Výpisy
-Pro výpisy do konzole RTX Server se používají diagnostické funkce ze struktury `PLC_DATA`.
-Jedná se o 3 typy diagnostických funkcí:
+##Console
+Diagnostic functions from the `PLC_DATA` structure are used to write to the RTX Server console.
+These are 3 types of diagnostic functions:
 
-–	výpis řetězce do konzole
-–	výpis hodnoty proměnné lVal (hodnota typu long) do konzole
-–	výpis formátovaného textu do konzole
+- dump the string to the console
+- dump the value of the lVal variable (value of the long type) into the console
+- output of formatted text to the console
 	
 ##Oscilloscope
-Oscilloscope je samostatná utilita běžící v TG Motion.
-Slouží k zachycení hodnot požadovaných registrů v přesném časovém intervalu `Cycle_Time` a jejich ukládání do sdílené paměti `TGM_Oscilloscope`.
-To se děje ihned po vykonání funkce Program_04.
-O zobrazení zachycených dat a nastavení parametrů ovlivňujících zaznamenávání hodnot se stará utilita Oscilloscope v Control Observeru.
+Oscilloscope is a separate utility running in TG Motion.
+It is used to capture the values of the required registers in the exact time interval `Cycle_Time` and store them in the shared memory `TGM_Oscilloscope`.
+This happens immediately after the Program_04 function is executed.
+The Oscilloscope utility in the Control Observer takes care of displaying the captured data and setting the parameters affecting the recording of values.
 
-!!! info "Upozornění"
+!!! info "Warning"
+	See the Oscilloscope chapter for a more detailed description.
 
-	Pro podrobnější popis viz kapitolu Oscilloscope.
+##Windows applications
+Applications running under the Windows operating system also have access to shared memory.
+They can be used to read the values of registers or even change them.
 
-##Aplikace Windows
-Přístup do sdílených pamětí mají také aplikace běžící pod operačním systémem Windows.
-Jejich prostřednictvím lze číst hodnoty registrů, případně je i měnit.
-
-!!! info "Upozornění"
-
-	TG Motion běží v real-time prostředí, tedy s vyšší prioritou, než mají procesy běžící pod systémem Windows.
-	Z Windows aplikací tedy nelze zajistit bezeztrátové zachycení všech potřebných hodnot, případně operativní reakci na nastalé situace.
+!!! info "Warning"
+	TG Motion runs in a real-time environment, i.e. with a higher priority than processes running under Windows.
+	Therefore, it is not possible to ensure lossless capture of all necessary values from Windows applications, or to provide an operational response to situations that arise.

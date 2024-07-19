@@ -1,8 +1,7 @@
 ##Struktura UDP dat
-První dva bajty dat jsou identifikátor.
-Konstantní dva znaky jsou „GT“ `0x4754`.
-Následující bajty označené jako Byte `0`, `1` atd. v následující tabulce představují vlastní příkazy a data.
-Popis je níže.
+The first two bytes of data are the identifier.
+The two constant characters are "GT" `0x4754`.
+The following bytes, labeled Byte 0, 1, and so on, in the following table represent custom commands and data and are described below.
 
 <table>
 	<tr>
@@ -183,33 +182,27 @@ Popis je níže.
 	</tr>
 </table>
 
-| Název       | Význam                                                                                   |
+| Name        | Meaning                                                                                   |
 |-------------|------------------------------------------------------------------------------------------|
-| group #     | Číslo skupiny parametrů                                                                  |
-| param #     | Číslo parametru ve skupině                                                               |
-| OK          | Zápis/Čtení OK ("= 0 ")                                                                   |
-| Err         | Chybový kód ("≠ 0" 1 = chybný příkaz 2 = neplatná adresa, 3 = RO / mimo dosah, 4 = chyba v datovém firmwaru) |
-| Number      | Číslo parametru (Int32) in a contiguous area                                              |
-| # OK        | Číslo úspěšně zapsaného parametru                                                        |
-| a.offs      | Ofset v oblasti 32bitových registrů (jeden 32bitový registr)                             |
+| group #     | Parameter group number                                                                  |
+| param #     | Parameter number in the group                                                             |
+| OK          | Write / Read OK ("= 0")                                                                   |
+| Err         | Error code ("≠ 0" 1 = wrong command, 2 = invalid address, 3 = RO / out of range, 4 = data firmware error) |
+| Number      | Parameter number (Int32) in a contiguous area                                              |
+| # OK        | The number of the successfully written parameter                                           |
+| a.offs      | Offset in the area of 32-bit registers (one 32-bit register)                              |
 
-Popis jednotlivých registrů s informacemi o `group #` a `param #` najdete [ZDE](../../../TGZ/TGZ_SW/GUI/md/parameters.md#GUIbasicParams)
+A description of each register with information about `group #` and `param #` can be found [HERE](../../../TGZ/TGZ_SW/GUI/md/parameters.md#GUIbasicParams).
 
-**Žádost (master -> slave)**
-Minimální délka dat UDP je pro čtení 2 + 3 bajty a 2 + 4 bajty pro zápis.
-Paket může obsahovat několik požadavků.
-Maximální celková délka paketu je 1470 bajtů + 2 (+2 označuje část identifikátoru).   
+**Request (master -> slave)**
+The minimum length of UDP data is 2 + 3 bytes for reading and 2 + 4 bytes for writing. The packet can contain several requests. The maximum total packet length is 1470 bytes + 2 (+2 indicates part of the identifier).
 
-**Odezva (slave -> master)**
-Příkaz, počet parametrů a číslo parametru ve skupině jsou stejné jako v případě žádosti.
-Pro práci se spojitou oblastí registrů je nutné použít počet parametrů.
-Délka odpovědi na požadavek na čtení je prodloužena o 4 bajtovou hodnotu parametru.
-Odpověď na požadavek na zápis se rozšíří o výsledek write: = 0 - write OK, ≠ 0 - write error code.
-Odpovědi jsou také seskupeny do jednoho paketu.
-Master musí navrhnout aplikaci tak, aby bylo možné odesílat odpovědi s jedním paketem o celkové délce max. 2 + 1 470 bajtů (2+ označuje sekci identifikátoru).
+**Response (slave -> master)**
+The command, the number of parameters, and the parameter number in the group are the same as in the case of the request. To work with a contiguous area of registers, it is necessary to use the number of parameters. The length of the response to a read request is extended by the 4-byte value of the parameter. The response to a write request is extended by the result write: = 0 - write OK, ≠ 0 - write error code. The responses are also grouped into one packet. The master must design the application so that it is possible to send responses with one packet with a total length of max. 2 + 1 470 bytes (2+ indicates the identifier section).
 
-##Příklad komunikace
-*Požadavek*
+## Example of Communication
+*Request*
+
 
 <table>
     <tr>
@@ -269,7 +262,7 @@ Master musí navrhnout aplikaci tak, aby bylo možné odesílat odpovědi s jedn
     </tr>
 </table>
 
-*Odpověď*
+*Response*
 
 <table>
     <tr>
@@ -334,7 +327,7 @@ Master musí navrhnout aplikaci tak, aby bylo možné odesílat odpovědi s jedn
     </tr>
 </table>
 
-*Struktura dat UDP pro čtení textové zprávy*
+*UDP data structure for reading a text message*
 
 <table>
 	<tr>
@@ -387,7 +380,8 @@ Master musí navrhnout aplikaci tak, aby bylo možné odesílat odpovědi s jedn
 	</tr>
 </table>
 
-| parametr | význam                                                                |
-|----------|-----------------------------------------------------------------------|
-| a.off    | offset první zprávy (řádku) 0..255                                    |
-| number   | počet po sobě jdoucích zpráv (řádků) v telegramu 1..4 (délka zprávy je 256 bajtů) |
+| parameter | meaning                                                                      |
+|-----------|------------------------------------------------------------------------------|
+| a.off     | offset of the first message (line) 0..255                                    |
+| number    | number of consecutive messages (lines) in telegram 1..4 (message length is 256 bytes) |
+

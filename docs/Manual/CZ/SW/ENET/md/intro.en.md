@@ -1,11 +1,15 @@
-Servozesilovač lze monitorovat a ovládat přes Ethernet UDP.
-Ethernetový kabel musí být připojen ke konektoru RJ45 (X11).
-Podporované rychlosti jsou 100 Mb/s a 1 000 Mb/s.
-MAC adresu může nastavit uživatel.
-Všechny kontrolní součty (IP, UDP) musí být platné, jinak bude paket ignorován.
-Port UDP je pevný a nastavený na 0x1F6.
-IP adresa servozesilovače TGZ je statická, výchozí je `192.168.1.200`.
-Servozesilovač funguje v komunikaci jako "slave" (tj. reaguje pouze na požadavky).
-Odešle paket odpovědi pro každý přijatý paket ve správném formátu.
-Master (PC) musí vždy čekat na odpověď od servozesilovače před odesláním dalšího dotazu.
-Pokud PC neobdrží odpověď ve stanovené lhůtě, může se pokusit odeslat další požadavek.
+The servo amplifier can be monitored and controlled via Ethernet UDP.
+The Ethernet cable must be connected to the RJ45 connector "ETH3".
+Supported speeds are 100 Mbps and 1,000 Mbps.   
+
+The MAC address can be set by the user.   
+
+All checksums (IP, UDP) must be valid, otherwise the packet will be ignored.   
+
+The UDP port is fixed and set to `0x1F6`.
+The IP address of the TGZ servo amplifier is static, the default is `192.168.1.200`   
+
+The servo amplifier functions in communication as a *slave* (i.e. it responds only to requests).
+Sends a response packet for each received packet in the correct format.
+The master (PC) must always wait for a response from the servo amplifier before sending another query.
+If the PC does not receive a response within the specified time, it may try to send another request.

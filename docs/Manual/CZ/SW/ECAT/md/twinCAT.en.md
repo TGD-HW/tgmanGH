@@ -1,62 +1,61 @@
-- Použijte nejnovější soubor EtherCAT XML pro TGZ a zkopírujte jej do složky TwinCAT (`TwinCAT\3.1\Config\Io\EtherCAT`).
-- Vytvořte nový projekt\
-- Připojte TGZ k síti EtherCAT
-- Nastavte registr `D-Mode` servozesilovače TGZ na hodnotu 3 (režim polohy).
-  Proveďte to pro první nebo obě osy (verze pohonu TGZ-D). 
-  V případě potřeby nastavení uložte.
-- Použijte příkaz **Scan** v kontextové nabídce `I/O | Zařízení`
+- Use the newest EtherCAT XML file for TGZ and copy it to the TwinCAT folder (`TwinCAT\3.1\Config\Io\EtherCAT`).
+- Create a new project\
+- Connect TGZ to the EtherCAT network
+- Set the D-Mode register of the TGZ servo amplifier to 3 (position mode).
+  Do this for the first or both axes (TGZ-D drive version).
+  Save the settings if necessary.
+- Use the **Scan** command in the context menu of `I/O | Devices`
 
 ![TwinCAT](../../../../source/img/twincat01devices.webp){: style="width:35%;" }
 
-- Připojte pohon ke konfiguraci **NC-Configuration**
+- Append the drive to the **NC-Configuration**
 
 ![TwinCAT](../../../../source/img/twincat02drive.webp){: style="width:35%;" }
 
-- Dvojklikem na položku **TGZ Drive** ve stromu zařízení se otevře okno vlastností.
+- Double-click on the **TGZ Drive** entry in the device tree to open the properties window.
 
 ![TwinCAT](../../../../source/img/twincat03properties.webp){: style="width:35%;" }
 
-- PDO lze sledovat a měnit v kartě **Process Data**. Na obrázku níže je zobrazeno nastavení pro režim CST.
+- PDOs can be observed and changed in the **Process Data** tab. The image below displays the settings for CST mode.
 
 ![TwinCAT](../../../../source/img/twincat04CSTset.webp){: style="width:60%;" }
 
-- Po dokončení nastavení aktivujte konfiguraci.
+- When the setup is complete, activate the configuration.
 
 ![TwinCAT](../../../../source/img/twincat05config.webp){: style="width:35%;" }
 
-- Pomocí stromové položky `MOTION | NC-Task 1 SAF | Axes | Axis 1` zobrazíte všechny vlastnosti osy. Vyberte kartu **Online** a klikněte na tlačítko **Set**.
+- Use the tree item `MOTION | NC-Task 1 SAF | Axes | Axis 1` to display all axis properties. Select the **Online** tab and then click on the **Set** button.
 
 ![TwinCAT](../../../../source/img/twincat06motion.webp){: style="width:60%;" }
 
-- Kliknutím na tlačítko **All** zaškrtnětě všechna zaškrtávací políčka.
+- Enable all checkboxes by clicking on the **All** button.
 
 ![TwinCAT](../../../../source/img/twincat07enableAll.webp){: style="width:25%;" }
 
-- Osa by nyní měla být povolena a připravena k pohybu v režimu cyklického synchronního polohování (CST). V případě potřeby použijte červené tlačítko F6 pro resetování chyby a/nebo modré tlačítko F8 pro referenci osy.
-- Jak je popsáno v kapitole [Mapování PDO a varianty jednotky TGZ](objects.md#PDO_TGZ), jsou hodnoty PDO stejné pro jednoosou i dvouosou verzi TGZ. 
-  Proto při použití varianty TGZ-S v systému TwinCAT nebude osa 2 použitelná a musí být ignorována.
-  
-##Nastavení režimu cyklické synchronní rychlosti (CSV)
-- Použijte konfigurační režimu TwinCAT
+- The axis should now be enabled and ready for movement in cyclic synchronous positioning mode (CST). If needed, use the red **F6** button to reset the error and/or the blue **F8** button to reference the axis.
+- As described in the chapter [PDO mapping and TGZ drive variants](objects.md#PDO_TGZ), the PDO values are the same for the single and double axis TGZ versions. Therefore, when using the TGZ-S variant in TwinCAT, Axis 2 will not be usable and must be ignored.
 
-- Aktivujte kartu **Process Data** jednotky TGZ a v kombinovaném poli vyberte položku **Cyclic synchronous velocity mode (CSV)**.
+##Cyclic Synchronous Velocity (CSV) Mode Setup
+
+- Use the TwinCAT configuration mode
+- Activate the **Process Data** tab of the TGZ drive and select the **Cyclic synchronous velocity mode (CSV)** item in the combo box.
 
 ![TwinCAT](../../../../source/img/twincat08CSVitem.webp){: style="width:60%;" }
 
-- Znovu připojte data osy kliknutím na tlačítko **Yes** v následujícím dialogovém okně.
+- Reconnect the axis data by clicking **Yes** in the following dialog box.
 
 ![TwinCAT](../../../../source/img/twincat09axisConfirm.webp){: style="width:25%;" }
 
-- Aktivujte kartu **Startup** a změňte hodnotu objektu `0x6060:00` (Mode of operation). Dvakrát klikněte na tuto položku.
+- Activate the **Startup** tab and change the value of the object `0x6060:00` (Mode of operation). Double-click on this item.
 
 ![TwinCAT](../../../../source/img/twincat10startupTab.webp){: style="width:50%;" }
 
-- V následujícím dialogovém okně změňte hodnotu `Data` na `09` a klikněte na tlačítko OK.
+- In the following dialog box, change the `Data` value to `09` and click **OK**.
 
 ![TwinCAT](../../../../source/img/twincat11data09.webp){: style="width:50%;" }
 
-- V případě potřeby proveďte totéž pro druhou osu (objekt `0x6860:00`).
-- Nezapomeňte nastavit příslušný režim pohonu TGZ (registr `D-Mode`), jak je popsáno v kapitole [Režimy provozu 0x6060](objects.md#0x6060).
-- Aktivujte konfiguraci a přepněte do režimu **Run**. 
-  TwinCAT nyní používá regulátor otáček k provedení pohybu.
-  Pro dosažení plynulého polohování je nutné správně nastavit parametry regulátoru.
+- If necessary, do the same for the second axis (`0x6860:00`).
+- Remember to set the appropriate TGZ drive mode (D-Mode register) as described in the chapter [Modes of Operation 0x6060](objects.md#0x6060).
+- Activate the configuration and switch to **Run** mode.
+  TwinCAT will now use the speed regulator to perform motion.
+  Properly setting the regulator parameters is essential for achieving smooth positioning.
