@@ -1,5 +1,5 @@
 ![TG logo](Manual/source/img/TGlogoFull.svg){: style="width:30%;" }   
 
-**English warm welcome**   
+**Welcome to the TG Drives user manual**   
 
-To all of you
+Continue by selecting a product category in the top bar, or try searching in the search box.

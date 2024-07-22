@@ -1,63 +1,63 @@
 <!--	## Schémata zapojení motorových kabelů -->
 ###Z1 - Kabel motorový a Hiperface DSL (304)
-![Schéma zapojení kabelu 304](../img/cableSCH_CZ_1.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 304](../img/cableSCH_1.svg){: style="width:100%;" }   
 <br>
 ###Z2 - Kabel motorový a Hiperface DSL (283)
-![Schéma zapojení kabelu 283](../img/cableSCH_CZ_2.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 283](../img/cableSCH_2.svg){: style="width:100%;" }   
 <br>
 ###Z3 - Kabel motorový a Hiperface DSL CSTA 8p (305)
-![Schéma zapojení kabelu 305](../img/cableSCH_CZ_3.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 305](../img/cableSCH_3.svg){: style="width:100%;" }   
 <br>
 ###Z4 - Kabel motorový a Hiperface DSL (306)
-![Schéma zapojení kabelu 306](../img/cableSCH_CZ_4.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 306](../img/cableSCH_4.svg){: style="width:100%;" }   
 <br>
 ###Z5 - Kabel motorový TGZ (226)
-![Schéma zapojení kabelu 226](../img/cableSCH_CZ_5.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 226](../img/cableSCH_5.svg){: style="width:100%;" }   
 <br>
 ###Z6 - Kabel motorový TGZ (Z6)
-![Schéma zapojení kabelu Z6](../img/cableSCH_CZ_6.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu Z6](../img/cableSCH_6.svg){: style="width:100%;" }   
 <br>
 ###Z7 - Kabel motorový TGZ CSTA 8p (84)
-![Schéma zapojení kabelu 84](../img/cableSCH_CZ_7.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 84](../img/cableSCH_7.svg){: style="width:100%;" }   
 <br>
 ###Z8 - Kabel motorový TGZ (21)
-![Schéma zapojení kabelu 21](../img/cableSCH_CZ_8.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 21](../img/cableSCH_8.svg){: style="width:100%;" }   
 <br>
 ###Z9 - Kabel ENDAT 2.2 (293)
-![Schéma zapojení kabelu 293](../img/cableSCH_CZ_9.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 293](../img/cableSCH_9.svg){: style="width:100%;" }   
 <br>
 ###Z10 - Kabel ENDAT 2.2 ITEC (343)
-![Schéma zapojení kabelu 283](../img/cableSCH_CZ_10.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 283](../img/cableSCH_10.svg){: style="width:100%;" }   
 <br>
 ###Z11 - Kabel ENDAT 2.2 (319)
-![Schéma zapojení kabelu 319](../img/cableSCH_CZ_11.svg){: style="width:100%;" }   
+![Schéma zapojení kabelu 319](../img/cableSCH_11.svg){: style="width:100%;" }   
 <br>
 ###Z12 - Propojka Renishaw (Tonic) - TGZ
-![Schéma zapojení propojky Renishaw](../img/cableSCH_CZ_12.svg){: style="width:100%;" }   
+![Schéma zapojení propojky Renishaw](../img/cableSCH_12.svg){: style="width:100%;" }   
 <br>
 ###Z13 - Zapojení termistorů - TGZ
-![Zapojení termistorů - TGZ](../img/cableSCH_CZ_13.svg){: style="width:100%;" }   
+![Zapojení termistorů - TGZ](../img/cableSCH_13.svg){: style="width:100%;" }   
 <br>
 ###Z14 - Kabel SSI/BISS 5V
-![Kabel SSI/BISS 5V](../img/cableSCH_CZ_14.svg){: style="width:100%;" }   
+![Kabel SSI/BISS 5V](../img/cableSCH_14.svg){: style="width:100%;" }   
 <br>
 ###Z15 - Kabel SSI/BISS 12V
-![Kabel SSI/BISS 12V](../img/cableSCH_CZ_15.svg){: style="width:100%;" }   
+![Kabel SSI/BISS 12V](../img/cableSCH_15.svg){: style="width:100%;" }   
 <br>
 ###Z16 - Kabel - volné vývody SSI/BISS 5V (395)
-![Kabel - volné vývody SSI/BISS 5V (395)](../img/cableSCH_CZ_16.svg){: style="width:100%;" }   
+![Kabel - volné vývody SSI/BISS 5V (395)](../img/cableSCH_16.svg){: style="width:100%;" }   
 <br>
 ###Z17 - Kabel motorový TGZ Boost
-![Kabel motorový TGZ Boost](../img/cableSCH_CZ_17.svg){: style="width:100%;" }   
+![Kabel motorový TGZ Boost](../img/cableSCH_17.svg){: style="width:100%;" }   
 <br>
 ###Z18 - Kabel externí IRC
-![Kabel externí IRC](../img/cableSCH_CZ_18.svg){: style="width:100%;" }    
+![Kabel externí IRC](../img/cableSCH_18.svg){: style="width:100%;" }    
 <br>
 ###Z19 - Motorový kabel TGZ-S-48-50/100-UNI
-![Motorový kabel TGZ-S-48-50/100-UNI](../img/cableSCH_CZ_19.svg){: style="width:100%;" }    
+![Motorový kabel TGZ-S-48-50/100-UNI](../img/cableSCH_19.svg){: style="width:100%;" }    
 <br>
 ###Z20 - Zpětnovazební kabel TGZ-S-48-50/100-UNI
-![Zpětnovazební kabel TGZ-S-48-50/100-UNI](../img/cableSCH_CZ_20.svg){: style="width:100%;" }    
+![Zpětnovazební kabel TGZ-S-48-50/100-UNI](../img/cableSCH_20.svg){: style="width:100%;" }    
 
 <!-- TGZ RI schematics -->
 

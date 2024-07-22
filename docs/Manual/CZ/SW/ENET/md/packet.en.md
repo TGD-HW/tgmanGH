@@ -1,4 +1,4 @@
-##Struktura UDP dat
+##UDP data structure
 The first two bytes of data are the identifier.
 The two constant characters are "GT" `0x4754`.
 The following bytes, labeled Byte 0, 1, and so on, in the following table represent custom commands and data and are described below.
