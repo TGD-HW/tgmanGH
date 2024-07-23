@@ -11,8 +11,8 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   features:
-    # - navigation.instant
-    # - navigation.instant.progress
+#    - navigation.instant
+#    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.path
@@ -127,8 +127,8 @@ plugins:
                 TIA portál: TIA portal
                 Interpolátor: Interpolator
                 Schémata kabelů: Cable connections
-
-  #mike nefungoval
+  - offline:
+      enabled:
   # - mike:
         # alias_type: copy
         # redirect_template: null

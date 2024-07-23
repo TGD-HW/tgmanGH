@@ -1,5 +1,6 @@
 <!--## Rozměry zařízení-->
-![TGZ-D-48-13 Dimensions](../img/dim.png){: style="width:100%;" }
+![TGZ-D-48-13 Dimensions](../img/dim1.webp){: style="width:60%;" }
+![TGZ-D-48-13 Dimensions 2](../img/dim2.webp){: style="width:60%;" }
 
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

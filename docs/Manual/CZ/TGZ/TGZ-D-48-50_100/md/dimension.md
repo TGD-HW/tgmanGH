@@ -1,6 +1,6 @@
 <!--## Rozměry zařízení-->
-![TGZ-D-48-50/100 Dimensions](../img/dim.png){: style="width:60%;" }
-
+![TGZ-D-48-50/100 Dimmensions](../img/dim1.svg){: style="width:60%;" }
+![TGZ-D-48-50/100 Dimmensions 2](../img/dim2.svg){: style="width:60%;" }
 <!-- priklad TeX zapisu $f=5 \times x$-->
 
 <!-- <style type="text/css">

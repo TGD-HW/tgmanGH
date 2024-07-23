@@ -1,13 +1,8 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
-![3D view IO side](../img/IOside.svg){: style="width:80%;" }
+![3D view IO side](../img/IOside.svg){: style="width:85%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.svg){: style="width:70%;" }
+![3D view FB side](../img/MotSide.svg){: style="width:85%;" }
 
 ##Konektory
 ___

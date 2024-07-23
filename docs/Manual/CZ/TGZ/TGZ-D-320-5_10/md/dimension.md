@@ -1,6 +1,5 @@
-<!--## Rozměry zařízení-->
-![TGZ-D-320-5/10 Dimensions](../img/dim.png){: style="width:50%;" }
-
+![TGZ-D-320-5/10 Dimensions](../img/dim1.webp){: style="width:50%;" }
+![TGZ-D-320-5/10 Dimensions 2](../img/dim2.webp){: style="width:50%;" }
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
