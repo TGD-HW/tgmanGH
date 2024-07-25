@@ -1,5 +1,5 @@
-<!--## Rozměry zařízení-->
-![TGZ-S-230-5/15 Dimensions](../img/dim.png){: style="width:60%;" }
+![TGZ-S-400-10/20 Dimensions](../img/dim1.webp){: style="width:80%;" }
+![TGZ-S-400-10/20 Dimensions 2](../img/dim2.webp){: style="width:80%;" }
 
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

@@ -1,5 +1,5 @@
-<!--## Rozměry zařízení-->
-![TGZ-D-560-30/50 Dimensions](../img/dim.png){: style="width:60%;" }
+![TGZ-D-560-30/50 Dimensions](../img/dim1.webp){: style="width:80%;" }
+![TGZ-D-560-30/50 Dimensions 2](../img/dim2.webp){: style="width:80%;" }
 
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

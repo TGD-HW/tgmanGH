@@ -1,8 +1,3 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D view
 ![3D view IO side](../img/IOside.svg){: style="width:70%;" }
 <br>
