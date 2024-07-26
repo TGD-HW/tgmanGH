@@ -6,6 +6,10 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+svg text {
+    font-family: 'Titillium Web', sans-serif;
+}
+
 :root {
   @extend %root;
   // Primary color shades
