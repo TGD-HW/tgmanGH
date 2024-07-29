@@ -196,11 +196,11 @@ Dolních 16 bitů je nastaveno na nulu.
 Tento objekt existuje také pro druhou osu jako `0x68FD`, ale je namapován na stejné vstupy, takže oba objekty vracejí stejnou hodnotu.
 Pro snadnější přístup k digitálním vstupům lze použít také objekt `0x4000`.
 
-###Digitální výstupy 0x60FE<sub>1</sub> a maska 0x60FE<sub>2</sub>
+###Digitální výstupy 0x60FE~1~ a maska 0x60FE~2~
 Vyšších 16 bitů hodnoty `UNSIGNED32` se používá jako digitální výstupy (servopohon TGZ má 6 digitálních výstupů, na výstupní piny jsou připojeny pouze bity 16 - 21).
 Nižších 16 bitů se ignoruje.
 To platí i pro masku digitálního výstupu.
-Tyto objekty existují také pro druhou osu jako 0x68FE<sub>1</sub> a 0x68FE<sub>2</sub>, ale jsou namapovány na stejné digitální výstupy.
+Tyto objekty existují také pro druhou osu jako 0x68FE~1~ a 0x68FE~2~, ale jsou namapovány na stejné digitální výstupy.
 Změna objektu jedné osy změní i objekt druhé osy.
 Pro snadnější přístup k digitálním výstupům lze použít objekt `0x4001`.
 
@@ -496,12 +496,12 @@ Toto mapování PDO využívá plné 64bitové hodnoty polohy, což umožňuje �
 Pohon pracuje pouze v režimu cyklické synchronní polohy. Režim pohonu (`D-Mode`) musí být servisním programem TGZ_GUI nastaven na hodnotu 3 (režim polohy).
 Pro výběr nativního mapování PDO musí EtherCAT master provést následující sekvenci ve stavu `PRE-OPERATIONAL` pomocí přístupu SDO:
 
-- Nastavení objektu 0x1C12<sub>0</sub> na `0` (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C12<sub>1</sub> na `0x1721` (velikost dat `UNSIGNED16`)
-- Nastavení objektu 0x1C12<sub>0</sub> na `1`  (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C13<sub>0</sub> na `0`  (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C13<sub>1</sub> na `0x1B21` (velikost dat `UNSIGNED16`)
-- Nastavení objektu 0x1C13<sub>0</sub> na `1` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C12~0~ na `0` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C12~1~ na `0x1721` (velikost dat `UNSIGNED16`)
+- Nastavení objektu 0x1C12~0~ na `1`  (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C13~0~ na `0`  (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C13~1~ na `0x1B21` (velikost dat `UNSIGNED16`)
+- Nastavení objektu 0x1C13~0~ na `1` (velikost dat `UNSIGNED8`)
 
 Alternativně lze mapovací čísla `0x1721` a `0x1B21` nastavit pomocí programu TGZ_GUI pomocí registrů `PDO_Out_Mapping_1C12_1` a `PDO_In_Mapping_1C13_1`.   
 
@@ -559,12 +559,12 @@ Existuje pouze jedno vysílací PDO CoE `0x1B01`, které obsahuje všechny potř
 
 Pro výběr mapování CoE musí master použít následující sekvenci pomocí zápisu SDO ve stavu PRE-OPERATIONAL:
 
-- Nastavení objektu 0x1C12<sub>0</sub> na `0` (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C12<sub>1</sub> na `0x1701` (velikost dat `UNSIGNED16`)
-- Nastavení objektu 0x1C12<sub>0</sub> na `1` (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C13<sub>0</sub> na `0` (velikost dat `UNSIGNED8`)
-- Nastavení objektu 0x1C13<sub>1</sub> na `0x1B01` (velikost dat `UNSIGNED16`)
-- Nastavení objektu 0x1C13<sub>0</sub> na `1` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C12~0~ na `0` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C12~1~ na `0x1701` (velikost dat `UNSIGNED16`)
+- Nastavení objektu 0x1C12~0~ na `1` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C13~0~ na `0` (velikost dat `UNSIGNED8`)
+- Nastavení objektu 0x1C13~1~ na `0x1B01` (velikost dat `UNSIGNED16`)
+- Nastavení objektu 0x1C13~0~ na `1` (velikost dat `UNSIGNED8`)
 
 Alternativně lze mapovací čísla `0x1701` (`0x1702`, `0x1703`) a `0x1B01` nastavit pomocí programu TGZ_GUI pomocí registrů `PDO_Out_Mapping_1C12_1` a `PDO_In_Mapping_1C13_1`.
 CoE RPDO pro režim CSP, IP nebo PP (`0x1701`) má následující strukturu (40 bajtů):

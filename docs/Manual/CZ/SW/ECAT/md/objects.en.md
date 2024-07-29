@@ -127,6 +127,7 @@ In this case, the value is added to the desired value of the current regulator.
 This is the position the drive should move to in PP, IP, or CSP mode.
 The value is multiplied by the ratio given by the Position Encoder Resolution object (`0x608F`).
 It is then used as an input value for TGZ's profile generator (PP mode) or directly as a desired 64-bit position in increments (IP or CSP).
+
 $$
 DesiredTGZposition = TargetPosition607A \times \frac{PositionEncoderNumerator608F_1}{PositionEncoderDivisor608F_2}
 $$
@@ -182,11 +183,11 @@ The lower 16 bits are set to zero.
 This object also exists for the second axis as `0x68FD`, but it is mapped to the same inputs, so both objects return the same value.
 For easier access to digital inputs, the object `0x4000` can also be used.
 
-### Digital Outputs `0x60FE<sub>1</sub>` and Mask `0x60FE<sub>2</sub>`
+### Digital Outputs 0x60FE~1~ and Mask 0x60FE~2~
 The higher 16 bits of the UNSIGNED32 value are used as digital outputs (TGZ servo drive has 6 digital outputs, so only bits 16 – 21 are connected to the output pins).
 The lower 16 bits are ignored.
 This also applies to the digital output mask.
-These objects also exist for the second axis as `0x68FE<sub>1</sub>` and `0x68FE<sub>2</sub>`, but they are mapped to the same digital outputs.
+These objects also exist for the second axis as 0x68FE~1~ and 0x68FE~2~, but they are mapped to the same digital outputs.
 Changing the object of one axis changes the object of the other axis as well.
 For easier access to digital outputs, the object `0x4001` can be used.
 
@@ -368,106 +369,107 @@ The default transmit PDO mapping (direction TGZ → controller)
 	<tr>
 		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Index&quot;}"><b>Index</b></td>
 		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Sub-index&quot;}"><b>Sub-index</b></td>
-		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Hodnota&quot;}"><b>Hodnota</b></td>
-		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Popis&quot;}"><b>Popis</b></td>
+		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Value&quot;}"><b>Value</b></td>
+		<td bgcolor="#70AD47" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Description&quot;}"><b>Description</b></td>
 	</tr>
 	<tr>
-		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO1 (první osa, 8 bajtů)&quot;}"><b>TPDO1 (první osa, 8 bajtů)</b></td>
+		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO1 (first axis, 8 bytes)&quot;}"><b>TPDO1 (first axis, 8 bytes)</b></td>
 	</tr>
 	<tr>
 		<td rowspan="5" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A00&quot;}"><b>0x1A00</b></td>
 		<td>0</td>
 		<td>4</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet záznamů&quot;}">Počet záznamů</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of entries&quot;}">Number of entries</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">1</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x60410010&quot;}">0x60410010</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stavové slovo 0x6041&quot;}">Stavové slovo 0x6041</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status word 0x6041&quot;}">Status word 0x6041</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x60640020&quot;}">0x60640020</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální hodnota polohy 0x6064&quot;}">Aktuální hodnota polohy 0x6064</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Position actual value 0x6064&quot;}">Position actual value 0x6064</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">3</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x60610008&quot;}">0x60610008</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zobrazení provozních režimů 0x6061&quot;}">Zobrazení provozních režimů 0x6061</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Modes of operation display 0x6061&quot;}">Modes of operation display 0x6061</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x10010008&quot;}">0x10010008</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Registr chyb 0x1001&quot;}">Registr chyb 0x1001</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Error register 0x1001&quot;}">Error register 0x1001</td>
 	</tr>
 	<tr>
-		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO2 (druhá osa, 8 bajtů)&quot;}"><b>TPDO2 (druhá osa, 8 bajtů)</b></td>
+		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO2 (second axis, 8 bytes)&quot;}"><b>TPDO2 (second axis, 8 bytes)</b></td>
 	</tr>
 	<tr>
 		<td rowspan="5" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A01&quot;}"><b>0x1A01</b></td>
 		<td>0</td>
 		<td>4</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet záznamů&quot;}">Počet záznamů</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of entries&quot;}">Number of entries</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">1</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x68410010&quot;}">0x68410010</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Stavové slovo 0x6841&quot;}">Stavové slovo 0x6841</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Status word 0x6841&quot;}">Status word 0x6841</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x68640020&quot;}">0x68640020</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Aktuální hodnota polohy 0x6864&quot;}">Aktuální hodnota polohy 0x6864</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Position actual value 0x6864&quot;}">Position actual value 0x6864</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">3</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x68610008&quot;}">0x68610008</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Zobrazení provozních režimů 0x6861&quot;}">Zobrazení provozních režimů 0x6861</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Modes of operation display 0x6861&quot;}">Modes of operation display 0x6861</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40000008&quot;}">0x40000008</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digitální vstupy 0x4000&quot;}">Digitální vstupy 0x4000</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Digital inputs 0x4000&quot;}">Digital inputs 0x4000</td>
 	</tr>
 	<tr>
-		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO3 (první osa, 6 bajtů)&quot;}"><b>TPDO3 (první osa, 6 bajtů)</b></td>
+		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO3 (first axis, 6 bytes)&quot;}"><b>TPDO3 (first axis, 6 bytes)</b></td>
 	</tr>
 	<tr>
 		<td rowspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x1A02&quot;}"><b>0x1A02</b></td>
 		<td>0</td>
 		<td>2</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet záznamů&quot;}">Počet záznamů</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of entries&quot;}">Number of entries</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">1</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x606C0020&quot;}">0x606C0020</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Skutečná rychlost 0x606C&quot;}">Skutečná rychlost 0x606C</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual velocity 0x606C&quot;}">Actual velocity 0x606C</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40020110&quot;}">0x40020110</td>
-		 <td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogový vstup 1 0x4002sub1&quot;}">Analogový vstup 1 0x4002sub1</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analog input 1 0x4002sub1&quot;}">Analog input 1 0x4002sub1</td>
 	</tr>
 	<tr>
-		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO4 (druhá osa, 6 bajtů)&quot;}"><b>TPDO4 (druhá osa, 6 bajtů)</b></td>
+		<td colspan="4" bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;TPDO4 (second axis, 6 bytes)&quot;}"><b>TPDO4 (second axis, 6 bytes)</b></td>
 	</tr>
 	<tr>
 		<td rowspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b></b></td>
 		<td>0</td>
 		<td>2</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Počet záznamů&quot;}">Počet záznamů</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Number of entries&quot;}">Number of entries</td>
 	</tr>
 	<tr>
 		<td bgcolor="#E2EFD9">1</td>
 		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x686C0020&quot;}">0x686C0020</td>
-		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Skutečná rychlost 0x686C&quot;}">Skutečná rychlost 0x686C</td>
+		<td bgcolor="#E2EFD9" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Actual velocity 0x686C&quot;}">Actual velocity 0x686C</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;0x40020210&quot;}">0x40020210</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analogový vstup 2 0x4002sub2&quot;}">Analogový vstup 2 0x4002sub2</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Analog input 2 0x4002sub2&quot;}">Analog input 2 0x4002sub2</td>
 	</tr>
 </table>
+
 
 
 ## PDO Mapping for CANopen over EtherCAT (CoE)
@@ -484,14 +486,14 @@ The drive operates only in Cyclic Synchronous Position mode.
 The drive mode (D-Mode) must be set to 3 (position mode) by the TGZ_GUI service program.
 To select native PDO mapping, the EtherCAT master must make the following sequence in the PRE-OPERATIONAL state using SDO access:
 
-- Set object 0x1C12<sub>0</sub> to 0 (data size UNSIGNED8)
-- Set object 0x1C12<sub>1</sub> to 0x1721 (data size UNSIGNED16)
-- Set object 0x1C12<sub>0</sub> to 1 (data size UNSIGNED8)
-- Set object 0x1C13<sub>0</sub> to 0 (data size UNSIGNED8)
-- Set object 0x1C13<sub>1</sub> to 0x1B21 (data size UNSIGNED16)
-- Set object 0x1C13<sub>0</sub> to 1 (data size UNSIGNED8)
+- Set object 0x1C12~0~ to `0` (data size UNSIGNED8)
+- Set object 0x1C12~1~ to `0x1721` (data size UNSIGNED16)
+- Set object 0x1C12~0~ to `1` (data size UNSIGNED8)
+- Set object 0x1C13~0~ to `0` (data size UNSIGNED8)
+- Set object 0x1C13~1~ to `0x1B21` (data size UNSIGNED16)
+- Set object 0x1C13~0~ to `1` (data size UNSIGNED8)
 
-Alternatively, the mapping numbers 0x1721 and 0x1B21 can be set using the TGZ_GUI program with PDO_Out_Mapping_1C12_1 and PDO_In_Mapping_1C13_1 registers.
+Alternatively, the mapping numbers `0x1721` and `0x1B21` can be set using the TGZ_GUI program with `PDO_Out_Mapping_1C12_1` and `PDO_In_Mapping_1C13_1` registers.
 
 The native RPDO has the following structure (44 bytes):
 
@@ -548,12 +550,12 @@ There is only one CoE transmit PDO `0x1B01`, which contains all the necessary ac
 
 To select CoE mapping, the master must use the following sequence by SDO write in the PRE-OPERATIONAL state:
 
-- Set object `0x1C12<sub>0</sub>` to `0` (zero) (data size UNSIGNED8)
-- Set object `0x1C12<sub>1</sub>` to `0x1701` (data size UNSIGNED16)
-- Set object `0x1C12<sub>0</sub>` to `1` (one) (data size UNSIGNED8)
-- Set object `0x1C13<sub>0</sub>` to `0` (zero) (data size UNSIGNED8)
-- Set object `0x1C13<sub>1</sub>` to `0x1B01` (data size UNSIGNED16)
-- Set object `0x1C13<sub>0</sub>` to `1` (one) (data size UNSIGNED8)
+- Set object 0x1C12~0~ to `0` (zero) (data size UNSIGNED8)
+- Set object 0x1C12~1~ to `0x1701` (data size UNSIGNED16)
+- Set object 0x1C12~0~ to `1` (one) (data size UNSIGNED8)
+- Set object 0x1C13~0~ to `0` (zero) (data size UNSIGNED8)
+- Set object 0x1C13~1~ to `0x1B01` (data size UNSIGNED16)
+- Set object 0x1C13~0~ to `1` (one) (data size UNSIGNED8)
 
 Alternatively, the mapping numbers `0x1701` (`0x1702`, `0x1703`) and `0x1B01` can be set by using the TGZ_GUI program with the `PDO_Out_Mapping_1C12_1` and `PDO_In_Mapping_1C13_1` registers.
 
