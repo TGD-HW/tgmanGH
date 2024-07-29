@@ -540,7 +540,7 @@ The full DSP402 state machine is implemented using control word 0x6040 (0x6840) 
 The following fixed receive PDO (direction controller -> TGZ) mappings are available:
 
 
-| Režim                            | Hodnota     |
+| Mode                            | Value     |
 |----------------------------------|---------|
 | Cyclic synchronous position  (CSP) | 0x1701  |
 | Cyclic synchronous velocity  (CSV) | 0x1702  |
