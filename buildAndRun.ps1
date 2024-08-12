@@ -1,5 +1,5 @@
 # Change directory to the location of the Python script
-Set-Location -Path "docs\Manual\source\CZ\tab\"
+Set-Location -Path "docs\Manual\source\tab\"
 
 # Run the Python script
 try {
@@ -11,7 +11,7 @@ try {
 }
 
 # Change directory back to the original location
-Set-Location -Path "../../../../../"
+Set-Location -Path "../../../../"
 
 # Build the MkDocs site
 try {
