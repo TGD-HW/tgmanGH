@@ -127,6 +127,7 @@ plugins:
                 TIA portál: TIA portal
                 Interpolátor: Interpolator
                 Schémata kabelů: Cable connections
+                Nastavení parametrů: Parameter settings
   - offline:
       enabled:
   # - mike:
@@ -351,9 +352,10 @@ nav:
                 - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
+                - Nastavení parametrů: 'Manual/CZ/SW/REG/md/MotorSettings.md'                
                 - Profile generator: 'Manual/CZ/SW/REG/md/PG.md'
                 - Další funkce: 'Manual/CZ/SW/REG/md/AuxFunc.md'
-                - Nouzové zabrždění: 'Manual/CZ/SW/REG/md/ESTOP.md'               
+                - Nouzové zabrždění: 'Manual/CZ/SW/REG/md/ESTOP.md'
             - 'TGZ GUI': 
                 - Instalace a spuštění: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/intro.md'
                 - Připojení k TGZ: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/connection.md'
