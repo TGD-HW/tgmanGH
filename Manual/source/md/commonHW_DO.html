@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../img/TGsymbol.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -165,7 +165,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Vyhledávání">
         
@@ -6783,7 +6783,7 @@ Napájení je rozděleno na dvě skupiny.
 Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konektoru X8).
 Výstupy DO2,4,6 jsou napájeny z napájecího vstupu VCC DO2,4,6 (pin 11 konektoru X8).   </p>
 <p>Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
-<a class="glightbox" href="../img/TGZ_DO_simplified.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
+<a class="glightbox" href="../img/TGZ_DO_simplified.svg" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
 <p>Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.</p>
 <div class="admonition warning">
 <p class="admonition-title">Varování</p>
@@ -6796,18 +6796,18 @@ Dojde-li např. k přetížení DO2, inteligentní ochrana odpojí napájení ce
 DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.   </p>
 <h2 id="typicke-zapojeni">Typické zapojení<a class="headerlink" href="#typicke-zapojeni" title="Permanent link">&para;</a></h2>
 <p>Typické schéma připojení zátěže k DO je nejčastěji <em>horní spínač</em>.   </p>
-<p><a class="glightbox" href="../img/HS_switch.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../img/HS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../img/HS_switch.svg" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../img/HS_switch.svg" style="width:30%;" /></a>   </p>
 <p>Zátěž je připojena mezi DO a GNDIO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví napájecí napětí VDDIO.
 Povelem <code>vypni</code> (log. 0) se na zátěži objeví GNDIO.</p>
 <p>Opačným případem je připojení zátěže k DO jako <em>dolní spínač</em>.   </p>
-<p><a class="glightbox" href="../img/LS_switch.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../img/LS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../img/LS_switch.svg" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../img/LS_switch.svg" style="width:30%;" /></a>   </p>
 <p>Zátěž je připojena mezi VDDIO a DO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
 Povelem <code>vypni</code> (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   </p>
 <h2 id="induktivni-zatez">Induktivní zátěž<a class="headerlink" href="#induktivni-zatez" title="Permanent link">&para;</a></h2>
 <p>Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
 Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   </p>
-<p><a class="glightbox" href="../img/InductiveLoad.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../img/InductiveLoad.svg" style="width:35%;" /></a>
-<a class="glightbox" href="../img/InductiveLoadLS.svg" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
+<p><a class="glightbox" href="../img/InductiveLoad.svg" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../img/InductiveLoad.svg" style="width:35%;" /></a>
+<a class="glightbox" href="../img/InductiveLoadLS.svg" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Anti-kickback</p>
 <p>Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.

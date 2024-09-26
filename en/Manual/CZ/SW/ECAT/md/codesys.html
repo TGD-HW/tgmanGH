@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../Manual/source/img/TGsymbol.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -165,7 +165,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
@@ -6745,83 +6745,83 @@
 <ul>
 <li>Prepare the servo drive using the TGZ_GUI service program: set the <code>D-Mode</code> register to <code>7</code>: position PG mode. This setting is the same for both PP and PV modes.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys1.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys1.webp" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys1.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys1.webp" style="width:70%;" /></a></p>
 <ul>
 <li>Depending on the fieldbus used, select <code>EtherCAT</code> or <code>CAN</code> in the <code>UseCANbus</code> setting.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys2.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys2.webp" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys2.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys2.webp" style="width:70%;" /></a></p>
 <ul>
 <li>If the fieldbus has been changed, save the parameters and restart the drive.</li>
 <li>Open the CODESYS development system and create a new <strong>Standard project</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys3.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys3.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys3.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys3.webp" style="width:50%;" /></a></p>
 <ul>
 <li>The Control Win device (soft real-time) is sufficient for PP and PV modes.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys4.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys4.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys4.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys4.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Add the TGZ device description file (XML for EtherCAT, EDS for CANopen) to the device repository (if not yet done).</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys5.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys5.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys5.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys5.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Choose <strong>Install</strong> and select the correct description file.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys6.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys6.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys6.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys6.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Right-click on <strong>Device (CODESYS Control Win V3 x64)</strong> and select <strong>Add Device</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys7.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys7.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys7.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys7.webp" style="width:50%;" /></a></p>
 <ul>
 <li>In the dialog that appears, select <strong>EtherCAT Master SoftMotion</strong> and click <strong>Add Device</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys8.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys8.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys8.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys8.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Click on <strong>EtherCAT_Master_SoftMotion</strong> in the device tree. In the <strong>Add Device</strong> dialog, select the EtherCAT slave TGZ-Drives/TGZ/TGZ Drive V5 and add it to the project.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys9.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys9.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys9.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys9.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Close the <strong>Add Device</strong> dialog and select <strong>TGZ Drive</strong> in the project device tree. Right-click and choose <strong>Add SoftMotionLight CiA402 Axis</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys10.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys10.webp" style="width:40%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys10.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys10.webp" style="width:40%;" /></a></p>
 <ul>
 <li>Rename the added axis to <strong>Drive</strong> using the context menu <strong>Refactoring</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys11.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys11.webp" style="width:60%;" /></a>
-<a class="glightbox" href="../../../../../../Manual/source/img/codesys12.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys12.webp" style="width:35%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys11.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys11.webp" style="width:60%;" /></a>
+<a class="glightbox" href="../../../../../../Manual/source/img/codesys12.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys12.webp" style="width:35%;" /></a></p>
 <ul>
 <li>Start <strong>Control Win PLC</strong> from the Windows system tray.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys13.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys13.webp" style="width:20%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys13.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys13.webp" style="width:20%;" /></a></p>
 <ul>
 <li>Double-click on <strong>Device (CODESYS Control Win V3 x64)</strong> to open the communication settings window. Establish a connection by pressing Enter.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys14.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys14.webp" style="width:90%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys14.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys14.webp" style="width:90%;" /></a></p>
 <ul>
 <li>Log in to the device using the username and password.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys15.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys15.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys15.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys15.webp" style="width:50%;" /></a></p>
 <ul>
 <li>After a successful login, the device icon should display a green light.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys16.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys16.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys16.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys16.webp" style="width:50%;" /></a></p>
 <ul>
 <li>Open the <strong>EtherCAT_Master_SoftMotion</strong> properties window by double-clicking on the item and select the network card used for the EtherCAT fieldbus by clicking the <strong>Select</strong> button.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys17.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys17.webp" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys17.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys17.webp" style="width:80%;" /></a></p>
 <ul>
 <li>Check the <strong>Use LRW instead of LWR/LRD</strong> box.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys18.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys18.webp" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys18.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys18.webp" style="width:50%;" /></a></p>
 <ul>
 <li>To assist the system in identifying the device on the fieldbus, set the correct device ID in the <strong>TGZ_Drive properties</strong> window. Enable <strong>Expert settings</strong>, then select <strong>Configured station alias (ADO 0x0012)</strong> and set the <strong>Value</strong> to the same number as in the <code>C-ID</code> register in the TGZ_GUI service program (5 in this example).</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys19.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys19.webp" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys19.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys19.webp" style="width:70%;" /></a></p>
 <p>Group <strong>Common</strong> in TGZ_GUI</p>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys20.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys20.webp" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys20.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys20.webp" style="width:80%;" /></a></p>
 <ul>
 <li>In the <strong>TGZ_Drive properties</strong> window, select the <strong>Startup Parameters</strong> tab and change the value of SDO objects <code>6060</code> and <code>6860</code> from <code>8</code> to <code>1</code>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys21.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys21.webp" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys21.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys21.webp" style="width:60%;" /></a></p>
 <ul>
 <li>The SoftMotion Lite can be easily tested and controlled using a prepared visualization named <strong>VISU_SML_StartupDrive</strong>. To use it, declare a helper variable in the PLC_PRG code of type <code>SML_StartupDrive</code> and name it <strong>sml_visu</strong>, and also set a pointer to the same object.</li>
 </ul>
@@ -6832,28 +6832,28 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>END_VAR
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>p_sml_visu^(Axis := Drive);
 </span></code></pre></div>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys22.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys22.webp" style="width:50%;" /></a>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys22.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys22.webp" style="width:50%;" /></a>
 The statement <code>p_sml_visu^(Axis := Drive)</code> assigns the SoftMotion Lite Axis to the <code>sml_visu</code> variable. It could be run only once, e.g., in the <strong>StartDone</strong> event, but for simplicity, it is called periodically here. The <code>sml_visu</code> variable is needed in the visualization template (see below).</p>
 <ul>
 <li>Add a visualization to the application by right-clicking on the <strong>Application</strong> item and selecting <strong>Add Object/Visualization menu item</strong>.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys23.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys23.webp" style="width:45%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys23.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys23.webp" style="width:45%;" /></a></p>
 <ul>
 <li>Keep the default name <strong>Visualization</strong> and click on the <strong>Add</strong> button.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys24.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys24.webp" style="width:30%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys24.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys24.webp" style="width:30%;" /></a></p>
 <ul>
 <li>In the <strong>Visualization Toolbox</strong> window, select SML and then the <strong>VISU_SML_StartupDrive</strong> template.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys25.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys25.webp" style="width:20%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys25.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys25.webp" style="width:20%;" /></a></p>
 <ul>
 <li>Drag and drop the template into the <strong>Visualization</strong> window and, in the following dialog box, assign <strong>m_Startup</strong> to the <code>sml_visu</code> variable created above.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys26.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys26.webp" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys26.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys26.webp" style="width:80%;" /></a></p>
 <ul>
 <li>Position and resize the template as needed in the window.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys27.webp" data-type="image" data-width="150%" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys27.webp" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/codesys27.webp" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Codesys img" src="../../../../../../Manual/source/img/codesys27.webp" style="width:80%;" /></a></p>
 <ul>
 <li>
 <p>Login and start the PLC. Now interact with the visualization. Enable <strong>bDriveStart</strong>, <strong>bRegulatorOn</strong>, and then <strong>Enable</strong>. Try absolute and relative movements. The <strong>MC_MoveVelocity_SML</strong> block changes the drive mode to PV. Stop the movement at any time using <strong>MC_Stop_SML</strong>. <strong>Read</strong> and <strong>Write</strong> parameters are used to access the internal members of the <strong>AXIS_REF_SML</strong> function block.</p>
