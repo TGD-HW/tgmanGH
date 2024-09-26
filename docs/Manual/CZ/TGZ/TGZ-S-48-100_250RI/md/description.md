@@ -261,7 +261,7 @@ ___
     ---
 
 	Doporučený průřez kabelu 25-35 mm<sup>2</sup> (3 - 2 AWG), lisovací oko M8.
-	Doporučené kabelové oko [BM 01737](https://www.tme.eu/CZ/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
+	Doporučené kabelové oko [BM 01737](https://www.tme.eu/cz/details/bm01737/konektory-neizolovane/bm-group/bm-01737/).
 </div>
 
 !!! info "Průřez"
