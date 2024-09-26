@@ -1,1 +1,1 @@
-![regulation structure TGZ](../../../../source/img/TGZstructure1.webp){: style="width:100%;" }
+![TGZ regulation structure](../../../../source/img/TGZstructure1.svg){: style="width:100%;" }

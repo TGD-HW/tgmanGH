@@ -57,10 +57,12 @@ plugins:
        loop: false
        effect: zoom
        slide_effect: slide
-       width: 150%
+       width: 100vw
        height: auto
        zoomable: true
        draggable: true
+       shadow: true
+       manual: false
        skip_classes:
          - custom-skip-class-name
        auto_caption: false
