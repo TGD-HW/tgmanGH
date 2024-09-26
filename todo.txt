@@ -1,0 +1,7 @@
+todo tgman
+
+S-230 rozměrový obrázek chybí (github server)
+igor modely ukostření u všech
+
+firmware strom verzí
+filtry viz LP mail
