@@ -24,8 +24,8 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="1.4142136"
-     inkscape:cx="650.53822"
-     inkscape:cy="196.22213"
+     inkscape:cx="818.82963"
+     inkscape:cy="170.05918"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
      inkscape:window-x="1912"
@@ -53,44 +53,6 @@
          d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
          sodipodi:nodetypes="sssss"
          id="path17" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="marker113"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Square"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
-         d="M -5,-5 V 5 H 5 V -5 Z"
-         id="path113" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Square"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Square"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
-         d="M -5,-5 V 5 H 5 V -5 Z"
-         id="path18" />
     </marker>
     <marker
        style="overflow:visible"
@@ -143,9 +105,9 @@
     <rect
        style="fill:#e3e3e3;fill-opacity:1;stroke:#000000;stroke-width:0.483657;stroke-dasharray:none;stroke-dashoffset:4.39999;stroke-opacity:1;paint-order:normal"
        id="rect9"
-       width="45.579483"
+       width="68.070877"
        height="14.15701"
-       x="222.87096"
+       x="200.37956"
        y="49.786098"
        inkscape:label="V" />
     <rect
@@ -205,7 +167,7 @@
        id="path1-7" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:0.425, 0.425;stroke-dashoffset:0"
-       d="m 222.86883,60.069001 45.58374,0.169397"
+       d="m 221.86578,60.069001 46.587,0.169397"
        id="path1-5" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.423717;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:0.423717, 0.423717;stroke-dashoffset:0"
@@ -286,7 +248,7 @@
     <g
        id="g23"
        inkscape:label="LP"
-       transform="translate(40.877632,42.315126)">
+       transform="translate(49.701636,38.185637)">
       <rect
          style="fill:#e3e3e3;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-dasharray:none;stroke-dashoffset:4.39999;stroke-opacity:1;paint-order:normal"
          id="rect15"
@@ -312,8 +274,8 @@
            y="21.240335">IIR LP</tspan></text>
     </g>
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
-       d="m 188.71397,60.765676 c 2.63095,0 2.63095,0 2.63095,0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.424999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
+       d="m 188.71397,60.765679 c 9.2525,0 9.2525,0 9.2525,0"
        id="path23" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -329,14 +291,6 @@
        id="path40" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
-       d="m 218.2071,61.288642 c 2.63095,0 2.63095,0 2.63095,0"
-       id="path41" />
-    <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 218.2071,61.288641 h -4.13694 v 0"
-       id="path42" />
-    <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
        d="m 275.17133,61.474493 c 2.63095,0 2.63095,0 2.63095,0"
        id="path43" />
     <path
@@ -344,12 +298,12 @@
        d="m 275.17132,61.474492 h -5.71588"
        id="path44" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
-       d="m 316.5647,61.474493 c 2.63095,0 2.63095,0 2.63095,0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425001;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
+       d="m 311.35206,61.474491 c 7.76767,0 7.76767,0 7.76767,0"
        id="path45" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 316.56469,61.474492 H 285.68538"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Dot)"
+       d="M 305.69924,61.474492 H 285.68538"
        id="path46" />
     <g
        id="g49"
@@ -553,10 +507,6 @@
        d="m 263.77302,140.49123 c 0,-2.63095 0,-2.63095 0,-2.63095"
        id="path95" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker12)"
-       d="m 263.78709,124.37948 c 0,-58.134449 0,-58.134449 0,-58.134449"
-       id="path96" />
-    <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 80.948262,112.48224 -17.380591,-0.0385 v -5.96966"
        id="path97" />
@@ -591,7 +541,7 @@
     <g
        id="g108"
        inkscape:label="switch"
-       transform="rotate(90,142.20904,64.299611)">
+       transform="rotate(90,145.35121,64.234484)">
       <path
          style="fill:#ffffff;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
          d="m 128.382,18.45055 h 2.84311"
@@ -606,20 +556,20 @@
          id="path108" />
     </g>
     <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 188.05811,53.272137 v 7.509456"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot)"
+       d="M 191.13514,49.593894 V 60.765679"
        id="path109" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 188.0581,45.45319 V 42.318684"
+       d="M 191.13514,42.212829 V 39.078323"
        id="path110" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Square)"
-       d="m 259.68005,96.316537 h 53.55412 V 64.587225"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot)"
+       d="m 259.73918,96.316537 h 48.11281 V 64.587225"
        id="path111" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker113)"
-       d="M 313.23417,44.646265 V 58.514212"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Dot)"
+       d="M 307.85199,44.374669 V 58.242616"
        id="path112" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.425;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.425, 0.425;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#marker12)"
@@ -678,82 +628,82 @@
        id="rect124"
        width="16.629511"
        height="3.8261349"
-       x="193.77797"
-       y="46.83342" />
+       x="197.13564"
+       y="43.626133" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
-       x="194.3669"
-       y="49.820766"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
+       x="197.72456"
+       y="46.61348"
        id="text124"><tspan
          sodipodi:role="line"
          id="tspan124"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="194.3669"
-         y="49.820766">D-MODE= 2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         x="197.72456"
+         y="46.61348">D-MODE= 2</tspan></text>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:0.25, 0.25;stroke-dashoffset:0"
-       d="m 189.2156,48.646465 h 4.24606"
+       d="m 192.57326,45.439177 h 4.24606"
        id="path124" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:0.25, 0.25;stroke-dashoffset:0"
        id="rect128"
        width="18.847775"
        height="7.8740473"
-       x="286.61368"
-       y="52.236488" />
+       x="275.40338"
+       y="49.379101" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
-       x="287.20261"
-       y="55.223835"
+       x="275.99231"
+       y="52.366447"
        id="text128"><tspan
          sodipodi:role="line"
          id="tspan128"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="287.20261"
-         y="55.223835">D-MODE=3, 7</tspan><tspan
+         x="275.99231"
+         y="52.366447">D-MODE=3, 7</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="287.20261"
-         y="58.864414"
+         x="275.99231"
+         y="56.007027"
          id="tspan129">(6),(10)</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:0.25, 0.25;stroke-dashoffset:0"
        id="rect129"
        width="16.163843"
        height="3.8261349"
-       x="314.52682"
-       y="43.820637" />
+       x="309.14465"
+       y="43.549042" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
-       x="315.11575"
-       y="46.807983"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
+       x="309.73358"
+       y="46.536388"
        id="text130"><tspan
          sodipodi:role="line"
          id="tspan130"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="315.11575"
-         y="46.807983">D-MODE= 1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         x="309.73358"
+         y="46.536388">D-MODE= 1</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:0.25, 0.25;stroke-dashoffset:0"
        id="rect130"
        width="16.883512"
        height="3.8261349"
-       x="314.58597"
-       y="67.436142" />
+       x="309.25394"
+       y="67.707733" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
-       x="315.1749"
-       y="70.423485"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Light';fill:#ffffff;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
+       x="309.84286"
+       y="70.695076"
        id="text131"><tspan
          sodipodi:role="line"
          id="tspan131"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'EmbeddedTitilliumWeb';fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="315.1749"
-         y="70.423485">D-MODE= 9</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         x="309.84286"
+         y="70.695076">D-MODE= 9</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:0.25, 0.25;stroke-dashoffset:0"
        id="rect131"
@@ -855,6 +805,14 @@
          d="m 174.48608,60.781593 h -2.16042"
          id="path6" />
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.425;stroke-dasharray:none;marker-end:url(#marker12)"
+       d="M 263.787,124.10444 263.7436,71.61858 H 210.95922 V 66.188156"
+       id="path9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.425;stroke-dasharray:none"
+       d="m 311.35207,61.474491 h -1.34475 l -3.81259,-2.51796"
+       id="path22" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1417,26 +1375,26 @@
            y="35.172832">ec_speedSetPoint</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
          x="143.83328"
          y="35.172832"
          id="text125"
          inkscape:label="P-K,..."
-         transform="translate(45.531008,9.2218425)"><tspan
+         transform="translate(48.608049,5.9814822)"><tspan
            id="tspan125"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.175px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.175px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="143.83328"
            y="35.172832">K-V</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
          x="143.83328"
          y="35.172832"
          id="text126"
          inkscape:label="P-K,..."
-         transform="translate(162.98412,11.648308)"><tspan
+         transform="translate(157.60194,11.376712)"><tspan
            id="tspan126"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.175px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.175px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="143.83328"
            y="35.172832">K-I</tspan></text>
       <text
@@ -1451,6 +1409,18 @@
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="143.83328"
            y="35.172832">rIq</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
+         x="143.83328"
+         y="35.172832"
+         id="text127-0"
+         inkscape:label="P-K,..."
+         transform="translate(211.04432,33.991003)"><tspan
+           id="tspan127-3"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="143.83328"
+           y="35.172832">aIq</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:'EmbeddedTitilliumWeb';-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
@@ -1470,48 +1440,16 @@
            id="tspan136">aAngle, aRevol</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
-         x="318.18298"
-         y="103.34079"
-         id="text138"
-         inkscape:label="V-K,..."><tspan
-           sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
-           x="318.18298"
-           y="103.34079"
-           id="tspan139">F-Type</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
-         x="316.98618"
-         y="104.46951"
-         id="text140"
-         inkscape:label="V-K,..."
-         transform="translate(1.1968001,2.3062231)"><tspan
-           sodipodi:role="line"
-           id="tspan141"
-           x="316.98618"
-           y="104.46951"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web'"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:EmbeddedTitilliumWeb;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
-             x="316.98618"
-             y="104.46951"
-             id="tspan140">1: Sick Hiperface DSL</tspan></tspan><tspan
-           sodipodi:role="line"
-           id="tspan142"
-           x="316.98618"
-           y="107.19995"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web'">2: Heidenhain EnDat 2.2</tspan><tspan
-           sodipodi:role="line"
-           x="316.98618"
-           y="109.9304"
-           id="tspan143"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web'">3: SSI</tspan><tspan
-           sodipodi:role="line"
-           x="316.98618"
-           y="112.66084"
-           id="tspan144"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web'">4: Incremental</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-dashoffset:16.6299"
+         x="143.83328"
+         y="35.172832"
+         id="text22"
+         inkscape:label="P-K,..."
+         transform="translate(71.009331,35.477896)"><tspan
+           id="tspan22"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.93477px;font-family:EmbeddedTitilliumWeb;-inkscape-font-specification:'Titillium Web Bold';fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="143.83328"
+           y="35.172832">aSpeed</tspan></text>
     </g>
   </g>
   <g
