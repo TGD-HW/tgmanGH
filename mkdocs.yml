@@ -418,7 +418,7 @@ nav:
                 - Software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'              
 #                - Montáž: 'Manual/CZ/TGM/TGZpMotion/md/mounting.md'
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
-        - Software:
+        - SW/FW:
             - EtherCAT:
                 - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'

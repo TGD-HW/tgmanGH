@@ -1,4 +1,5 @@
-todo tgman
+ssi, hipDSL, endat - překlopit do EN verze
+na FBE implementovat popis k Renishaw + EN verze
 
 S-230 rozměrový obrázek chybí (github server)
 igor modely ukostření u všech
