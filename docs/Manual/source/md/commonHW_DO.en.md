@@ -50,6 +50,6 @@ We recommend using a rectifier or schottky diode connected according to the sche
 	When switching small inductive loads with a current of less than approx. 100 mA (miniature relays, etc.), there is no need to implement an external protection diode D1.
 
 
-##Parametry
+##Parameters
 
 --8<-- "md/X8_commonHW_DO_tab.en.md"

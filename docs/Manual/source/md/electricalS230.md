@@ -1,47 +1,47 @@
 #**Elektrická instalace**
 ##Instalace zařízení
+![Shielding connection of the DCbus](../../../../source/img/TGZ-S-230_shielding1.webp){: style="width:85%;" }   
+
 Během elektrické instalace servozesilovače je nutné se řídit bezpečnostními pokyny a dbát na dodržení těchto zásad:
 
 - Instalaci servozesilovače smí provádět pouze odborní pracovníci s příslušnou kvalifikací pro montáž elektrických zařízení.
-- Nesprávné síťové napětí, nevhodný motor nebo chybné zapojení mohou servozesilovač poškodit. 
-  Zkontrolujte, zda je servozesilovač vhodný pro daný motor. 
-  Porovnejte jmenovité napětí a proud připojovaných zařízení. 
-  Zapojte zařízení podle příslušných schémat zapojení.  
+- Nesprávné síťové napětí, nevhodný motor nebo chybné zapojení mohou servozesilovač poškodit. Zkontrolujte, zda je servozesilovač vhodný pro daný motor. Porovnejte jmenovité napětí a proud připojovaných zařízení. Zapojte zařízení podle příslušných schémat zapojení (kap. „Popis zařízení“).  
 - Ujistěte se, že maximální přípustné jmenovité napětí na svorkách nebude překročeno o více než 10&nbsp;% ani v nejvíce nepříznivých situacích (viz ČSN&nbsp;EN&nbsp;60204-1).
-- Příliš vysoký jmenovitý proud externího jištění ohrozí kabely a zařízení.
-  Jištění napájecího napětí a napájení ovládacích obvodů 24&nbsp;VDC musí nainstalovat uživatel.
+- Příliš vysoký jmenovitý proud externího jištění ohrozí kabely a zařízení. Jištění napájecího napětí a napájení ovládacích obvodů 24&nbsp;VDC musí nainstalovat uživatel.
 - Stav servozesilovače musí být monitorován tak, aby byly rozpoznány kritické situace.
-- Pro změnu nastavení servozesilovače lze používat konfigurační software.
-  Jakékoli změny nebo zásahy, které nebyly předem konzultovány a odsouhlaseny výrobcem zařízení, způsobí zneplatnění záruky.
+- Pro změnu nastavení servozesilovače lze používat konfigurační software. Jakékoli změny nebo zásahy, které nebyly předem konzultovány a odsouhlaseny výrobcem zařízení, způsobí zneplatnění záruky.
 
 Nainstalujte elektrický systém servozesilovače následovně:
 
 - Zvolte kabely v souladu s normou ČSN&nbsp;EN&nbsp;60204.
-- Nainstalujte stínění a zemnění servozesilovače vyhovující požadavkům na elektromagnetickou kompatibilitu.
-  Uzemněte montážní desku a kryt motoru.
+- Nainstalujte stínění a zemnění servozesilovače vyhovující požadavkům na elektromagnetickou kompatibilitu. Uzemněte montážní desku a kryt motoru.
 - Zapojte servozesilovač a konektory s ohledem na běžné zásady a doporučení pro potlačení elektromagnetického rušení. 
 
 ##Stínění
-###Postup přípravy a zapojení kabelů
+###Postup zapojení motorového kabelu s&nbsp;připojením stínění   
 
-![Shielding connection 1](../../../../source/img/TGZ-S-400_M1Shielding.png){: style="width:60%;" }
+![Shielding connection of the DCbus](../../../../source/img/TGZ-S-230_shielding2.webp){: style="width:85%;" }
 
-- Používejte pouze originální kabely TG Drives - pokud možno co nejkratší kabely dle vzájemné vzdálenosti a&nbsp;uspořádání jednotlivých zařízení v&nbsp;rozvaděči.
-- Z obou konců kabelu odstraňte vnější (oranžovou) izolaci v&nbsp;délce 60 až 70 mm. Dávejte pozor, abyste nepoškodili vrstvu (síťku) stínění kabelu.
-- Odizolujte konce všech vodičů a&nbsp;nasaďte na ně kontaktní dutinky.
-- V místě, kde se bude hlavní stínění (oplet) motorového kabelu dotýkat zemnící svorky stínicího přípravku opatrně odstraňte v šířce stínicí svorky hlavní izolaci kabelu.
-- Zapojte vodiče kabelu s dutinkami do obou protikusů (silový a zpětnovazební) dle schématu zapojení.
-- Připojte konektory do servozesilovače TGZ.
-- Vložte motorový kabel do připravených svorek na ocelovém přípravku.
-- Upevněte kabel k plechovému přípravku stahovacími pásky v místě k tomu určeném.
+- Odstraňte vhodnou délku vnější izolace motorového kabelu, aby bylo možné pohodlně bez mechanického pnutí připojit konektory do servozesilovače.
+- Vnější oplet motorového kabelu zkraťte a vložte do bužírky.
+- Stínění zpětnovazebního páru nezkracujte. Na konec tohoto stínění nainstalujte faston 6,3 mm. 
+- Přibližně 15-20cm od konce kabelů z nich odstraňte pruh vnější izolace v šířce přibližně 15-20 mm.
+  Dejte pozor, abyste nepoškodili oplet kabelu.
+- Na připravené odizolované konce vodičů osaďte kontaktní dutinky adekvátní jejich průřezu.
+- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
+- Přichyťte motorové kabely k montážní desce rozvaděče pomocí plechových spon v místě dříve odstraněného pruhu vnější izolace.
+- Připojte konektor faston stínění zpětné vazby k připravenému protikusu na krytu servozesilovače.
+  Protikus se nachází vedle konektoru zpětné vazby `X6`.
 
-![Shielding connection 2](../../../../source/img/TGZ-S-400_M1ShieldingDetail.png){: style="width:30%;" }
-![Shielding connection 3](../../../../source/img/TGZ-S-400_M1ShieldingDetail1.png){: style="width:60%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-S-230_shielding3.webp){: style="width:50%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-S-230_shielding4.webp){: style="width:50%;" }
 
-Celkový pohled na sestavu TGZ-S-400 včetně síťového EMC filtru RWMO NCZx.
+- V případě, že používáte motorové kabely delší než 5 m je výrazně doporučeno použít feritový toroid na fázové vodiče. Ideální je připravit jeden závit (2 průvleky), viz. obrázek.
 
-![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-D-320-10_15_shielding4.webp){: style="width:50%;" }
 
+- V případě použití kabelů delších než 20 m je použití feritového kroužku z pohledu EMC nedostatečné, navíc by se kroužek mohl přehřívat.
+  V takovém případě je nezbytné vyměnit feritový kroužek za motorovou tlumivku.
 
 ###Technologie stínění
 
@@ -49,7 +49,7 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 <br>
 
-![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width:80%;" }
+![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width:70%;" }
 
 ###Potlačení rušení
 

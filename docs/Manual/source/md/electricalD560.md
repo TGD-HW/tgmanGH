@@ -3,45 +3,43 @@
 Během elektrické instalace servozesilovače je nutné se řídit bezpečnostními pokyny a dbát na dodržení těchto zásad:
 
 - Instalaci servozesilovače smí provádět pouze odborní pracovníci s příslušnou kvalifikací pro montáž elektrických zařízení.
-- Nesprávné síťové napětí, nevhodný motor nebo chybné zapojení mohou servozesilovač poškodit. 
-  Zkontrolujte, zda je servozesilovač vhodný pro daný motor. 
-  Porovnejte jmenovité napětí a proud připojovaných zařízení. 
-  Zapojte zařízení podle příslušných schémat zapojení.  
+- Nesprávné síťové napětí, nevhodný motor nebo chybné zapojení mohou servozesilovač poškodit. Zkontrolujte, zda je servozesilovač vhodný pro daný motor. Porovnejte jmenovité napětí a proud připojovaných zařízení. Zapojte zařízení podle příslušných schémat zapojení (kap. „Popis zařízení“).  
 - Ujistěte se, že maximální přípustné jmenovité napětí na svorkách nebude překročeno o více než 10&nbsp;% ani v nejvíce nepříznivých situacích (viz ČSN&nbsp;EN&nbsp;60204-1).
-- Příliš vysoký jmenovitý proud externího jištění ohrozí kabely a zařízení.
-  Jištění napájecího napětí a napájení ovládacích obvodů 24&nbsp;VDC musí nainstalovat uživatel.
+- Příliš vysoký jmenovitý proud externího jištění ohrozí kabely a zařízení. Jištění napájecího napětí a napájení ovládacích obvodů 24&nbsp;VDC musí nainstalovat uživatel.
 - Stav servozesilovače musí být monitorován tak, aby byly rozpoznány kritické situace.
-- Pro změnu nastavení servozesilovače lze používat konfigurační software.
-  Jakékoli změny nebo zásahy, které nebyly předem konzultovány a odsouhlaseny výrobcem zařízení, způsobí zneplatnění záruky.
+- Pro změnu nastavení servozesilovače lze používat konfigurační software. Jakékoli změny nebo zásahy, které nebyly předem konzultovány a odsouhlaseny výrobcem zařízení, způsobí zneplatnění záruky.
 
 Nainstalujte elektrický systém servozesilovače následovně:
 
 - Zvolte kabely v souladu s normou ČSN&nbsp;EN&nbsp;60204.
-- Nainstalujte stínění a zemnění servozesilovače vyhovující požadavkům na elektromagnetickou kompatibilitu.
-  Uzemněte montážní desku a kryt motoru.
+- Nainstalujte stínění a zemnění servozesilovače vyhovující požadavkům na elektromagnetickou kompatibilitu. Uzemněte montážní desku a kryt motoru.
 - Zapojte servozesilovač a konektory s ohledem na běžné zásady a doporučení pro potlačení elektromagnetického rušení. 
 
 ##Stínění
-###Postup přípravy a zapojení kabelů
+###Postup zapojení kabelu pro DC BUS (napájení výkonové části) s&nbsp;připojením stínění
 
-![Shielding connection 1](../../../../source/img/TGZ-S-400_M1Shielding.png){: style="width:60%;" }
-
-- Používejte pouze originální kabely TG Drives - pokud možno co nejkratší kabely dle vzájemné vzdálenosti a&nbsp;uspořádání jednotlivých zařízení v&nbsp;rozvaděči.
-- Z obou konců kabelu odstraňte vnější (oranžovou) izolaci v&nbsp;délce 60 až 70 mm. Dávejte pozor, abyste nepoškodili vrstvu (síťku) stínění kabelu.
+- Používejte pokud možno co nejkratší kabely dle vzájemné vzdálenosti a&nbsp;uspořádání jednotlivých zařízení v&nbsp;rozvaděči.
+- Z obou konců kabelu odstraňte vnější izolaci&nbsp;délce 25 až 35 mm včetně stínění a zakončete smršťovací bužírkou, aby části stínění nemohly tvořit nežádoucí kontakt se živými částmi zapojení.
 - Odizolujte konce všech vodičů a&nbsp;nasaďte na ně kontaktní dutinky.
-- V místě, kde se bude hlavní stínění (oplet) motorového kabelu dotýkat zemnící svorky stínicího přípravku opatrně odstraňte v šířce stínicí svorky hlavní izolaci kabelu.
-- Zapojte vodiče kabelu s dutinkami do obou protikusů (silový a zpětnovazební) dle schématu zapojení.
-- Připojte konektory do servozesilovače TGZ.
-- Vložte motorový kabel do připravených svorek na ocelovém přípravku.
-- Upevněte kabel k plechovému přípravku stahovacími pásky v místě k tomu určeném.
+- Přibližně uprostřed kabelu odstraňte vnější izolaci v&nbsp;šířce odpovídající kabelovému oku (obvykle 15 – 20 mm). 
+  Dávejte pozor, abyste nepoškodili síťku stínění kabelu.
+- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
+- Na odizolovanou část kabelu (viz předchozí bod) nasaďte stínicí sponu a upevněte ji včetně kabelu k desce rozvaděče pomocí předem připraveného otvoru se závitem.
+- Stínění kabelu musí po dotažení šroubu doléhat na desku rozvaděče. Jen tak je zaručen kvalitní kontakt.
 
-![Shielding connection 2](../../../../source/img/TGZ-S-400_M1ShieldingDetail.png){: style="width:30%;" }
-![Shielding connection 3](../../../../source/img/TGZ-S-400_M1ShieldingDetail1.png){: style="width:60%;" }
+![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding1.webp){: style="width:85%;" }
 
-Celkový pohled na sestavu TGZ-S-400 včetně síťového EMC filtru RWMO NCZx.
+###Postup zapojení motorového kabelu s&nbsp;připojením stínění
 
-![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
+- Odstraňte vhodnou délku vnější izolace motorového kabelu tak, aby bylo možné pohodlně připevnit vnější stínění kabelu do připravené svorky na stínícím přípravku.
+- Odstraňte vhodnou délku vnějšího opletu kabelu tak, aby jeho šířka byla přibližně stejná jako šířka svorky pro obejmutí kabelu.
+- Stínění zpětnovazebního páru a případně stínění vodičů připojení brzdy nezkracujte. 
+- Na připravené odizolované konce vodičů osaďte kontaktní dutinky.
+- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
+- Vložte připravený kabel s vnějším opletem do největší stínicí svorky a zajistěte kabel proti nežádoucímu pohybu např. plastovými páskami (na obrázku černé) v místě tomu určeném.
+- Vložte zbývající části (zpětnovazební pár + brzdový pár) včetně jejich stínění do připravených zemnicích svorek.
 
+![Shielding connection motor 1](../../../../source/img/TGZ-D-560-3_9_shielding2.webp){: style="width:60%;" }
 
 ###Technologie stínění
 
@@ -49,7 +47,7 @@ Uvedené ilustrace ukazují nevhodné a&nbsp;vhodné připojení stínění:
 
 <br>
 
-![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width:80%;" }
+![Shielding connection technology](../../../../source/img/cableShielding4.svg){: style="width:70%;" }
 
 ###Potlačení rušení
 
