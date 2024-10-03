@@ -2129,11 +2129,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electrical.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD320.html</loc>
+        <lastmod>2024-10-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD320.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD320.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD560.html</loc>
         <lastmod>2024-10-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD560.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD560.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalS230.html</loc>
+        <lastmod>2024-10-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalS230.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalS230.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/electrical_S-400.html</loc>
@@ -4299,11 +4313,25 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electrical.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD320.html</loc>
+        <lastmod>2024-10-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD320.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD320.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD560.html</loc>
         <lastmod>2024-10-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalD560.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalD560.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalS230.html</loc>
+        <lastmod>2024-10-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electricalS230.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/electricalS230.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/electrical_S-400.html</loc>
