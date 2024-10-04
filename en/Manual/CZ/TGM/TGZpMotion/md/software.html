@@ -6831,7 +6831,7 @@ The TGZ+Motion IP address must be set to a free number in the network.
 It is also possible to connect the PC network adapter directly to the X11 service port, in that case the static IP address of the PC adapter is necessary.
 The Control Observer application is used for a complete monitoring of the TGMotion subsystem.
 Here is an example of the connected TGZ+Motion device (using TCP protocol and IP address <code>192.168.128.188</code>):</p>
-<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
 <h2 id="fast-service-port-fsp">Fast service port (FSP)<a class="headerlink" href="#fast-service-port-fsp" title="Permanent link">&para;</a></h2>
 <p>This port serves as very fast and very easy port to setup connection to PC.
 To use it just connect directly the PC network card with the X12 connector.
@@ -6993,7 +6993,7 @@ Cycle_Time_Program_01=0
 ```
 </code></pre></div>
 <p>The Control Observer’s <em>System Timers</em> window shows the elapsed time of various TGMotion’s tasks.</p>
-<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
 <p>Note that the maximal elapsed time of the <code>Program_01()</code> (labeled as PLC 1) includes also the time of all the other tasks which interrupted the <code>Program_01()</code>.
 The similar thing happens for <code>Program_02()</code> which can be interrupted by <code>Program_03()</code> and the main servo cycle routine; and for <code>Program_03()</code>, interrupted by the main cycle function.
 So the maximal value could be the sum of elapsed time of the PLC function and the tasks of higher priority.
@@ -7002,7 +7002,7 @@ The only exact time measurement is given for <code>Program_04()</code>, because 
 <p>In addition to Control Observer’s System Files window, there is a dedicated one for <strong>PLC programming</strong> – <strong>PLC Control</strong>.
 Just set the correct PLC filename and Upload it to the TGZ+Motion.
 The PLC is started by clicking the button <code>[Run]</code>.</p>
-<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
 <p>The Run PLC process performs the following sequence:</p>
 <ol>
 <li>Stops any running PLC and wait for all the Program_XX() functions to finish.</li>
@@ -7179,7 +7179,7 @@ TGZ+Motion uses the correct file name when saving the file to the SD card.
 After the file transfer, the device will be automatically restarted.
 The updated firmware is stored to the SD card.
 It is also possible to store the file directly to the SD card by PC, in that case the name must be <code>TGZM-S.fw</code> for single axis drive or <code>TGZM-D.fw</code> for double axis one and the file must be in the root directory of the card.</p>
-<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
 <p>It could happen that a Device Offline error appears during the read back of the files from the device, especially when using FSP protocol.
 This usually means that used Ethernet adapter has not enough packet buffers (32 or more are recommended).
 The FSP protocol is designed for high performance adapters, namely the PCIe ones.</p>

@@ -1907,6 +1907,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1935,6 +1937,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1943,9 +1947,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#electrical-installation-of-the-device" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Electrical installation of the device
+      Overview
     </span>
   </a>
   
@@ -1960,15 +1964,6 @@
   
     <nav class="md-nav" aria-label="Shield connection procedure">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cable-connection-procedure-for-dc-bus-power-supply-with-shield-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cable connection procedure for DC BUS (power supply) with shield connection:
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#motor-cable-connection-procedure-with-shield-connection" class="md-nav__link">
@@ -6798,9 +6793,8 @@
                   
 
 
-  <h1>Electrical installation</h1>
-
-<h2 id="electrical-installation-of-the-device">Electrical installation of the device<a class="headerlink" href="#electrical-installation-of-the-device" title="Permanent link">&para;</a></h2>
+<h1 id="electrical-installation-of-the-device"><strong>Electrical installation of the device</strong><a class="headerlink" href="#electrical-installation-of-the-device" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>During the electrical installation of the servo amplifier, the safety instructions must be observed and the following principles must be observed:</p>
 <ul>
 <li>The servo amplifier may only be installed by qualified personnel for the installation of electrical equipment.</li>
@@ -6817,31 +6811,39 @@
 <li>Connect the servo amplifier and connectors according to common principles and recommendations for suppressing electromagnetic interference.</li>
 </ul>
 <h2 id="shield-connection-procedure">Shield connection procedure<a class="headerlink" href="#shield-connection-procedure" title="Permanent link">&para;</a></h2>
-<h3 id="cable-connection-procedure-for-dc-bus-power-supply-with-shield-connection">Cable connection procedure for DC BUS (power supply) with shield connection:<a class="headerlink" href="#cable-connection-procedure-for-dc-bus-power-supply-with-shield-connection" title="Permanent link">&para;</a></h3>
+<h3 id="motor-cable-connection-procedure-with-shield-connection">Motor cable connection procedure with shield connection:<a class="headerlink" href="#motor-cable-connection-procedure-with-shield-connection" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/TGZ-S-230_shielding2.webp" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection of the DCbus" src="../../../../../../Manual/source/img/TGZ-S-230_shielding2.webp" style="width:85%;" /></a></p>
 <ul>
 <li>Use only original TG Drives cables - the shortest possible cables according to the mutual distance and arrangement of individual devices in the switchboard.</li>
-<li>Remove the outer (orange) insulation of 25 to 35 mm from both ends of the cable. Be careful not to damage the shield layer of the cable.</li>
-<li>Fold the shield back in front of the uninsulated part of the cable and secure with a heat shrink tubing.</li>
-<li>Strip the ends of all wires and fit the contact sleeves on them.</li>
-<li>Approximately in the middle of the cable, remove the outer insulation in the width corresponding to the cable eye (usually 15 - 20 mm). Be careful not to damage the cable shield.</li>
-<li>On the stripped part of the cable (see previous point), place a cable lug with a diameter of approx. 6 - 8 mm in the clamped state.</li>
-<li>Connect the connectors according to the wiring diagram and connect to the device.</li>
-<li>Fasten the cable lug to the base plate of the switchboard with a screw. The cable lug must rest on the shield net after tightening the screw, this is the only way to ensure quality contact.</li>
+<li>Remove a suitable length of outer insulation from the motor cable to allow the connectors to be conveniently connected to the servo amplifier without mechanical stress.</li>
+<li>Shorten the outer braid of the motor cable and insert it into the heat shrink tube.</li>
+<li>Do not shorten the shielding of the feedback pair. Install a 6.3 mm faston at the end of this shielding.
+  You can put the feedback wires into heat shrink tube optionally.</li>
+<li>Remove a strip of outer insulation approximately 15-20 mm wide approximately 15-20 cm from the end of the wires.
+  Take care not to damage the cable braid.</li>
+<li>Fit ferrules adequate to the cross section of the wires onto the prepared stripped ends.</li>
+<li>Connect the wires to the housings according to the wiring diagram and connect it to the TGZ device.</li>
+<li>Attach the motor cables to the mounting plate using sheet metal clips at the location of the previously removed strip of outer insulation.</li>
+<li>Connect the faston on the feedback shielding to the prepared counterpart connector on the servo amplifier cover.
+  The counter piece is located next to the <code>X6</code> feedback connector.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/cableShielding1.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection DC" src="../../../../../../Manual/source/img/cableShielding1.png" style="width:70%;" /></a></p>
-<h3 id="motor-cable-connection-procedure-with-shield-connection">Motor cable connection procedure with shield connection:<a class="headerlink" href="#motor-cable-connection-procedure-with-shield-connection" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/TGZ-S-230_shielding3.webp" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection motor 1" src="../../../../../../Manual/source/img/TGZ-S-230_shielding3.webp" style="width:50%;" /></a>
+<a class="glightbox" href="../../../../../../Manual/source/img/TGZ-S-230_shielding4.webp" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection motor 1" src="../../../../../../Manual/source/img/TGZ-S-230_shielding4.webp" style="width:50%;" /></a></p>
 <ul>
-<li>At a distance of 12 - 15 cm from the end of the outer insulation, remove the cable insulation in a width corresponding to the cable lug (usually 15 - 20 mm). Be careful not to damage the cable shield (mesh).</li>
-<li>Attach a cable lug with a diameter of approx. 6 - 8 mm in the clamped state.</li>
-<li>Connect the connectors according to the wiring diagram and connect to the device.</li>
-<li>Fasten the cable lug to the base plate with a screw. The cable lug must rest on the shield net after tightening the screw, this is the only way to ensure quality contact.</li>
+<li>If you are using motor cables longer than 5 m it is strongly recommended to use a ferrite toroid on the phase conductors.
+  It is ideal to make one turn around the core as shown in the picture.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/cableShielding2.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection motor 1" src="../../../../../../Manual/source/img/cableShielding2.png" style="width:50%;" /></a>
-<a class="glightbox" href="../../../../../../Manual/source/img/cableShielding3.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection motor 2" src="../../../../../../Manual/source/img/cableShielding3.png" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/TGZ-D-320-10_15_shielding4.webp" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection motor 1" src="../../../../../../Manual/source/img/TGZ-D-320-10_15_shielding4.webp" style="width:50%;" /></a></p>
+<ul>
+<li>In the case of cables longer than 20 m, the use of a ferrite toroid is insufficient from an EMC point of view.
+  Additionally the ring could overheat.
+  In this case it is necessary to replace the ferrite toroid with a motor choke.
+  Contact TG Drives sales for further information about additional motor choke.</li>
+</ul>
 <h3 id="shielding-technology">Shielding technology<a class="headerlink" href="#shielding-technology" title="Permanent link">&para;</a></h3>
 <p>The figures show an unsuitable and suitable shield connection:</p>
 <p><br></p>
-<p><a class="glightbox" href="../../../../source/img/cableShielding4.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection technology" src="../../../../source/img/cableShielding4.png" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../source/img/cableShielding4.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Shielding connection technology" src="../../../../source/img/cableShielding4.png" style="width:70%;" /></a></p>
 <h3 id="reducing-emi">Reducing EMI<a class="headerlink" href="#reducing-emi" title="Permanent link">&para;</a></h3>
 <p><strong>The following guidelines will help you reduce electrical interference problems in your application:</strong></p>
 <ul>
@@ -6855,7 +6857,7 @@
 </ul>
 <h3 id="recommended-cabling">Recommended cabling<a class="headerlink" href="#recommended-cabling" title="Permanent link">&para;</a></h3>
 <p>The figures below show the recommended cabling:</p>
-<p><a class="glightbox" href="../../../../source/img/cableMan.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Cable management technology" src="../../../../source/img/cableMan.png" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../source/img/cableMan.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Cable management technology" src="../../../../source/img/cableMan.png" style="width:80%;" /></a></p>
 
 
 

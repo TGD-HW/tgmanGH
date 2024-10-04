@@ -6855,7 +6855,7 @@ Virtuální PLC lze v případě potřeby kompletně vyvinout a otestovat na PC 
 <h2 id="control-observer">Control observer<a class="headerlink" href="#control-observer" title="Permanent link">&para;</a></h2>
 <p>Control Observer je servisní a monitorovací nástroj běžící na počítači s Windows a hraje velkou roli při údržbě, aktualizaci firmwaru, vývoji PLC a uvádění řídicí jednotky TGM do provozu.
 Nejprve musí být připojen k zařízení. K tomu slouží okno <em>Connection info</em> :</p>
-<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
 <p>V menu <code>Connection Device</code> zvolte požadovaný typ zařízení.
 Použijte připojení TCP nebo UDP, pokud je IP adresa již známá (zobrazuje se při spuštění na LED displeji) a je platná v rámci ethernetového segmentu.
 Použijte typ FSP, pokud je ethernetový kabel připojen z PC přímo (peer to peer) ke konektoru FSP (X12).
@@ -6865,7 +6865,7 @@ Počkejte, až bude stav připojení ONLINE. Pak jsou k dispozici všechny funkc
 Lze jej editovat přímo na kartě pomocí počítače nebo jej lze přečíst ze zařízení pomocí Control Observeru, upravit a poté zapsat zpět.
 Použijte okno <em>Systémové soubory</em>, upravte odpovídajícím způsobem názvy v editačních polích a použijte tlačítka <code>[Read]</code> a poté <code>[Write]</code> (řádky souboru INI).
 Názvy souborů v počítači mohou být libovolné, TGMcontroller interně používá správné názvy souborů SD karty.</p>
-<p><a class="glightbox" href="../img/systemFiles.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="System files dialog" src="../img/systemFiles.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFiles.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files dialog" src="../img/systemFiles.png" style="width:60%;" /></a></p>
 <p>Po úpravě souboru <code>TGM.INI</code> je nutné restartovat TGMcontroller (tlačítkem <code>[Restart Device]</code> nebo vypnutím/zapnutím zařízení).
 Vnitřní zpětné vazby a vstupy/výstupy musí být v případě potřeby namapovány na TGMotion v souboru <code>TGM.INI</code>. 
 Hodnoty jsou viditelné ve struktuře <code>SERVO</code>. Použijte typ serva 92:</p>
@@ -7179,7 +7179,7 @@ Dále inicializuje standardní knihovnu jazyka C a všechny závislosti, jako js
 <p>Kromě okna <em>Systémové soubory</em> programu <strong>Control Observer</strong> je k dispozici okno určené pro programování PLC - <em>PLC Control</em>.
 Stačí nastavit správný název souboru PLC a nahrát jej do <strong>TGMcontroller</strong>.
 PLC se spustí kliknutím na tlačítko <code>[Spustit]</code>. </p>
-<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
 <p>Proces <code>Run PLC</code> provede následující sekvenci:</p>
 <ol>
 <li>Zastaví všechny běžící PLC a počká na dokončení všech funkcí <code>Program_XX()</code>.</li>
@@ -7242,7 +7242,7 @@ TGMcontroller tak může naplánovat jiné úlohy s nižší prioritou (komunika
 </li>
 </ol>
 <p>V okně <em>System Timers</em> programu <strong>Control Observer</strong> se zobrazuje uplynulý čas různých úloh programu TGMotion.</p>
-<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
 <p>Všimněte si, že maximální uplynulý čas úlohy <code>Program_01()</code> (označené jako PLC 1) zahrnuje také čas všech ostatních úloh, které přerušily úlohu <code>Program_01()</code>.
 Podobně je tomu i u <code>Program_02()</code>, který může být přerušen <code>Programem_03()</code> a hlavní rutinou cyklu serva; a u <code>Program_03()</code>, přerušeného hlavní funkcí cyklu.
 Maximální hodnotou je tedy součet uplynulého času funkce PLC a úloh s vyšší prioritou.
@@ -7334,7 +7334,7 @@ Po přenosu souboru se zařízení automaticky restartuje.
 Aktualizovaný firmware se uloží na kartu SD.
 Soubor je možné uložit také přímo na SD kartu pomocí PC, v takovém případě musí být název <code>TGMC.fw</code> a soubor musí být v kořenovém adresáři karty.
 Viz také další kapitola o obsahu SD karty.</p>
-<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="100vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
 <p>Může se stát, že se při zpětném čtení souborů ze zařízení se objeví chyba <code>Device Offline</code>, zejména při použití protokolu FSP.
 Obvykle to znamená, že použitý ethernetový adaptér nemá dostatek vyrovnávacích paměti (doporučuje se 32 nebo více).
 Protokol FSP je určen pro výkonné adaptéry, konkrétně pro adaptéry PCIe.</p>
