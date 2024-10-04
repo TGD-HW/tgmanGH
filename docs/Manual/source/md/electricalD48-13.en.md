@@ -18,23 +18,24 @@ Install the servo amplifier electrical system as follows:
 ##Shield connection procedure
 ###Motor cable connection procedure with shield connection:
 
-![Shielding connection 1](../../../../source/img/TGZ-S-400_M1Shielding.webp){: style="width:60%;" }
+![Shielding connection motor](../../../../source/img/TGZ-D-48-13_shielding1.webp){: style="width:85%;" } 
 
 - Use only original TG Drives cables - the shortest possible cables according to the mutual distance and arrangement of individual devices in the switchboard.
-- Remove the outer (orange) insulation in length of 60 to 70 mm from the end of the cable. Be careful not to damage the shielding layer (mesh) of the cable.
-- Strip the ends of all wires and fit the contact ferrules.
-- At the point where the main shield (braid) of the motor cable will contact the ground terminal of the shielding fixture, carefully remove the main cable insulation across the width of the shielding fixture.
-- Insert the wires with ferrules to the connector housings according the wiring diagram.
-- Connect the connectors to the TGZ servo amplifier.
-- Insert the motor cable into the prepared terminals on the steel plate.
-- Secure the cable to the steel plate with tie wraps at the designated location.
-
-![Shielding connection 2](../../../../source/img/TGZ-S-400_M1ShieldingDetail.webp){: style="width:30%;" }
-![Shielding connection 3](../../../../source/img/TGZ-S-400_M1ShieldingDetail1.webp){: style="width:60%;" }
-
-TGZ-S-400 assembly including the RWMO NCZx EMC filter overall view.
-
-![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
+- Remove a suitable length of outer insulation from the motor cable to allow the connectors to be conveniently connected to the servo amplifier without mechanical stress.
+- Shorten the outer braid of the motor cable and insert it into the heat shrink tube.
+- Do not shorten the shielding of the feedback pair.
+  Install the cable lug on its end, which is to be attached to the base L-profile of the servo amplifier.
+  You can put the feedback wires into heat shrink tube optionally.
+- Remove a strip of outer insulation approximately 15-20 mm wide approximately 15-20 cm from the end of the wires.
+  Take care not to damage the cable braid.
+- Fit ferrules adequate to the cross section of the wires onto the prepared stripped ends.
+- Connect the wires to the housings according to the wiring diagram and connect it to the TGZ device.
+- Attach the motor cables to the mounting plate using sheet metal clips at the location of the previously removed strip of outer insulation.
+- Screw the cable lug of the feedback shield into the prepared thread on the base L-profile of the servo amplifier.
+- If you are using motor cables longer than 5 m it is strongly recommended to use a ferrite toroid on the phase conductors.
+  It is ideal to make one turn around the core as shown in the picture.
+    
+![Shielding connection motor](../../../../source/img/TGZ-D-48-13_shielding2.webp){: style="width:85%;" }
 
 ###Shielding technology
 The figures show an unsuitable and suitable shield connection:

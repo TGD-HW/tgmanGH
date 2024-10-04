@@ -57,7 +57,7 @@ plugins:
        loop: false
        effect: zoom
        slide_effect: slide
-       width: 100vw
+       width: 80vw
        height: auto
        zoomable: true
        draggable: true
@@ -68,7 +68,6 @@ plugins:
        auto_caption: false
        caption_position: bottom
        background: white
-       shadow: true
   - i18n:
        docs_structure: suffix
        reconfigure_search: true

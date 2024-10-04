@@ -16,9 +16,20 @@ Install the servo amplifier electrical system as follows:
 - Connect the servo amplifier and connectors according to common principles and recommendations for suppressing electromagnetic interference.
 
 ##Shield connection procedure
-###Motor cable connection procedure with shield connection:
+###DC BUS connection procedure with shield connection: 
 
-![Shielding connection 1](../../../../source/img/TGZ-S-400_M1Shielding.webp){: style="width:60%;" }
+- Use the shortest cables possible according to the distance and arrangement of the individual devices in the cabinet.
+- Remove 25 to 35 mm of outer insulation from both ends of the cable, including the shielding, and terminate with shrinkable tube so that the cut strands cannot make unwanted contact with live parts of the wiring.
+- Strip the ends of all conductors and fit the contact ferrules.
+- Remove the outer insulation in a width corresponding to the cable clip (usually 15 - 20 mm) approximately in the middle of the cable.
+  Be careful not to damage the cable braid.
+- Connect the ferrule assembled wires to the connector housings and plug them into the TGZ device.
+- Place the shielding clip on the stripped part of the cable and fix it, including the cable, to the base plate using screw into the prepared threaded hole.
+- The cable shielding must make surface contact with base plate after tightening the screw.
+
+![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding1.webp){: style="width:85%;" }
+
+###Motor cable connection procedure with shield connection:
 
 - Use only original TG Drives cables - the shortest possible cables according to the mutual distance and arrangement of individual devices in the switchboard.
 - Remove the outer (orange) insulation in length of 60 to 70 mm from the end of the cable. Be careful not to damage the shielding layer (mesh) of the cable.
@@ -29,12 +40,7 @@ Install the servo amplifier electrical system as follows:
 - Insert the motor cable into the prepared terminals on the steel plate.
 - Secure the cable to the steel plate with tie wraps at the designated location.
 
-![Shielding connection 2](../../../../source/img/TGZ-S-400_M1ShieldingDetail.webp){: style="width:30%;" }
-![Shielding connection 3](../../../../source/img/TGZ-S-400_M1ShieldingDetail1.webp){: style="width:60%;" }
-
-TGZ-S-400 assembly including the RWMO NCZx EMC filter overall view.
-
-![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-D-560-3_9_shielding2.webp){: style="width:60%;" }
 
 ###Shielding technology
 The figures show an unsuitable and suitable shield connection:

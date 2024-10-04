@@ -1,7 +1,10 @@
 na FBE implementovat popis k Renishaw + EN verze
 
 S-230 rozměrový obrázek chybí (github server)
-igor modely ukostření u všech
+igor některé modely chybí
+překlopit konstření i do EN verze
+u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
+Pavlík jebe data k chobotnici a TGS-560-25 sem: \\tgd-n1\_VyvojHW\Manual\WEB
 
 firmware strom verzí
 filtry viz LP mail
