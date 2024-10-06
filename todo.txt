@@ -1,5 +1,3 @@
-na FBE implementovat popis k Renishaw + EN verze
-
 S-230 rozměrový obrázek chybí (github server)
 igor některé modely chybí
 překlopit konstření i do EN verze

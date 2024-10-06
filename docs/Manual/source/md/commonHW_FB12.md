@@ -69,3 +69,38 @@ Příklady propojení servozesilovače a motoru jsou k dispozici v sekci `Ostatn
 - [Připojení snímače SSI/BISS s napájením +12V](../../CZ/ETC/TGcable/md/description.md#Z15)
 - [Připojení snímače SSI/BISS s napájením +5V - volné vývody](../../CZ/ETC/TGcable/md/description.md#Z16)
 - [Připojení snímače SSI/BISS v kabelovém provedení a napájení +5V](../../CZ/ETC/TGcable/md/description.md#Z14)
+
+Níže najdete příklad nastavení parametrů polohový snímač RLS AksIM-2, 20 bitů, snímač polohy MB053DCC20BEDT00.
+
+![BISS-C timing diagram](../img/BISS-Ctiming.png){: style="width:80%;" }
+
+!!! note "CDS bit"
+
+	Bit CDS je pro ostatní parametry považován za bit č. 0 zprávy.
+	
+![BISS-C TGZ parameters](../img/BISS-C_TGZparams.png){: style="width:60%;" }
+
+**Popis parametrů**   
+
+- `F-Type` - 6 .. Biss kodér, 7 .. SSI kodér
+- `F-SSI_PositionResolution` - počet bitů polohy ve zprávě =resolution
+- `F-SSI_RevolutionBits` - počet bitů pro počítání otáček v případě víceotáčkových snímačů
+- `F-SSI_number_message_bits` - počet bitů celé zprávy. V případě Biss-C bez start bitu.
+- `F-SSI_first_position_MSB_BitNumber` - číslo bitu prvního bitu obsahujícího polohu. Počáteční bit se nepočítá (není součástí).
+- `F-SSI_FreqDivisor` - dělitel komunikační frekvence.  Výpočet F = 75Mhz / F-SSI_FreqDivisor
+- `F-SSI_MinComCLKPeriod` - minimální perioda dotazování na polohu. Uvádí se v počtu clock period. Je to parametr pro senzory, které nejsou schopny dosáhnout maximální (možné) frekvence.
+- `F-SSI_FirstBitDataPart0` - číslo bitu prvního bitu volitelné datové části telegramu 0. Počáteční bit se nepočítá (není součástí).
+- `F-SSI_NumBitsDataPart0` - délka volitelné části DATA 0.
+- `F-SSI_FirstBitDataPart1` - číslo bitu prvního bitu volitelné části DATA telegramu 1. Počáteční bit se nepočítá (není součástí).
+- `F-SSI_NumBitsDataPart1` - délka nepovinné části DATA 1.
+- `F-SSI_CRC_CalcFromBit` - číslo bitu prvního bitu, ze kterého se počítá CRC. Pokud je nastaveno -1, CRC se nevypočítává. Délka CRC musí být 6 bitů na konci zprávy. Polynom x6 +x1 +x0.  
+- `F-SSI_ErrorMaskDataPart0`, `F-SSI_ErrorMaskDataPart1` - Masky pro zpětnou indikaci chyby. Pokud je nastavený bit v Masce shodný s odpovídajícím bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.
+- `F-SSI_NegativeErrorMaskDataPart0`, `F-SSI_NegativeErrorMaskDataPart1` - Masky pro indikaci chyby zpětné vazby. Pokud je nastavený bit v masce totožný s odpovídajícím invertovaným bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.  
+
+!!! note „Chyba zpětné vazby“
+
+	Pro indikaci chyby zpětné vazby je nutné správně nastavit odpovídající parametry `F-SSI_FirstBitDataPartx` a `F-SSI_NumBitsDataPartx` a tato funkce musí být čidlem podporována.    
+	
+!!! note „Nastavené parametry“
+
+	Některé parametry jsou akceptovány ihned po nastavení, ale doporučuje se je uložit a restartovat TGZ.
