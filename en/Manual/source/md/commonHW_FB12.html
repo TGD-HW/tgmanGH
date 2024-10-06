@@ -4327,13 +4327,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#podporovane-polohove-snimace" class="md-nav__link">
+  <a href="#supported-position-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Podporované polohové snímače
+      Supported position sensors
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Podporované polohové snímače">
+    <nav class="md-nav" aria-label="Supported position sensors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6805,7 +6805,7 @@ Then just connect a suitable Hiperface DSL position sensor at pins 7-8.</p>
 <p>Make sure that you use the correct firmware for the selected feedback type.
 Contact your supplier for further details.</p>
 </div>
-<h2 id="podporovane-polohove-snimace">Podporované polohové snímače<a class="headerlink" href="#podporovane-polohove-snimace" title="Permanent link">&para;</a></h2>
+<h2 id="supported-position-sensors">Supported position sensors<a class="headerlink" href="#supported-position-sensors" title="Permanent link">&para;</a></h2>
 <h3 id="hiperface-dsl"><a href="https://www.hiperfacedsl.com/index_en.html">Hiperface DSL</a><a class="headerlink" href="#hiperface-dsl" title="Permanent link">&para;</a></h3>
 <p><a class="glightbox" href="../../../../Manual/source/img/HiperfaceDSLLogo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="DSL logo" src="../../../../Manual/source/img/HiperfaceDSLLogo.png" style="width:10%;" /></a> is a purely digital protocol requiring a minimal number of wires between the servo drive and the motor.
 The robustness of this protocol enables the use of a single-cable motor, meaning both power and data conductors are within single cable.
@@ -6849,6 +6849,38 @@ If the sensor type uses +5V power, the power wires must be connected to the appr
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z16">Connection of SSI/BISS sensor with +5V power - free wires</a></li>
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z14">Connection of SSI/BISS sensor with +5V power and cable type</a></li>
 </ul>
+<p>Below you can find and example of parameters and settings for TGZ amplifier interconnecting with AksIM-2, 20 bits, MB053DCC20BEDT00 position sensor.</p>
+<p><a class="glightbox" href="../../../../Manual/source/img/BISS-Ctiming.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C timing diagram" src="../../../../Manual/source/img/BISS-Ctiming.png" style="width:80%;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">CDS bit</p>
+<p>Bit named as CDS is considered for other parameters as bit 0 of a message</p>
+</div>
+<p><a class="glightbox" href="../../../../Manual/source/img/BISS-C_TGZparams.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C TGZ parameters" src="../../../../Manual/source/img/BISS-C_TGZparams.png" style="width:60%;" /></a></p>
+<p><strong>Parameters description</strong>   </p>
+<ul>
+<li><code>F-Type</code> - 6 .. Biss encoder, 7 .. SSI encoder</li>
+<li><code>F-SSI_PositionResolution</code>  - number of position bits in message =resolution</li>
+<li><code>F-SSI_RevolutionBits</code>  -  number of bits for turn counting in case of  multi-turn sensors</li>
+<li><code>F-SSI_number_message_bits</code> – number of bits of the whole message. In case of Biss-C without start bit.</li>
+<li><code>F-SSI_first_position_MSB_BitNumber</code> – bit number of the first bit containing position. Start bit is not count (not included).</li>
+<li><code>F-SSI_FreqDivisor</code> – divisor of the communication frequency.  Calculation F = 75Mhz / F-SSI_FreqDivisor</li>
+<li><code>F-SSI_MinComCLKPeriod</code> – minimal period of position questioning. It is present in numbers of clock periodes. It is parameter for sensors which are not able reach maximal (possible) frequency.</li>
+<li><code>F-SSI_FirstBitDataPart0</code> – bit number of the first bit of optional Data part of telegram 0.  Start bit is not count (not included).</li>
+<li><code>F-SSI_NumBitsDataPart0</code> – length of optional DATA part 0.</li>
+<li><code>F-SSI_FirstBitDataPart1</code> – bit number of the first bit in optional DATA part of telegram 1. Start bit is not count (not included).</li>
+<li><code>F-SSI_NumBitsDataPart1</code> – length of optional DATA part 1.</li>
+<li><code>F-SSI_CRC_CalcFromBit</code> – bit number of first bit from which is CRC calculated. If is set -1, CRC is not calculated. CRC length has to be 6 bits on the end of the message. Polynom x6 +x1 +x0.  </li>
+<li><code>F-SSI_ErrorMaskDataPart0</code>, <code>F-SSI_ErrorMaskDataPart1</code> – Masks for feedback error indication. If set bit in the Mask is identical to corresponding bit in v F-SSI_DataPart_x, feedback error is indicated.</li>
+<li><code>F-SSI_NegativeErrorMaskDataPart0</code>, <code>F-SSI_NegativeErrorMaskDataPart1</code>  –  Masks for feedback error indication. If set bit in the Mask is identical to corresponding inverted bit in v F-SSI_DataPart_x, feedback error is indicated.  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Feedback error</p>
+<p>To indicate feedback error is necessary to correctly set corresponding parameters F-SSI_FirstBitDataPartx a F-SSI_NumBitsDataPartx and the functionality has to be supported by an encoder.    </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Parameters set</p>
+<p>Some parameters are accepted immediately after setting, but it is recommended to save them and restart TGZ.</p>
+</div>
 
 
 

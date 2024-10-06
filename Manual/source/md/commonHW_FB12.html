@@ -6845,6 +6845,36 @@ Pokud je snímač typu s napájením (+5V) je potřeba připojit napájecí vodi
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z16">Připojení snímače SSI/BISS s napájením +5V - volné vývody</a></li>
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z14">Připojení snímače SSI/BISS v kabelovém provedení a napájení +5V</a></li>
 </ul>
+<p>Níže najdete příklad nastavení parametrů polohový snímač RLS AksIM-2, 20 bitů, snímač polohy MB053DCC20BEDT00.</p>
+<p><a class="glightbox" href="../img/BISS-Ctiming.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C timing diagram" src="../img/BISS-Ctiming.png" style="width:80%;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">CDS bit</p>
+<p>Bit CDS je pro ostatní parametry považován za bit č. 0 zprávy.</p>
+</div>
+<p><a class="glightbox" href="../img/BISS-C_TGZparams.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C TGZ parameters" src="../img/BISS-C_TGZparams.png" style="width:60%;" /></a></p>
+<p><strong>Popis parametrů</strong>   </p>
+<ul>
+<li><code>F-Type</code> - 6 .. Biss kodér, 7 .. SSI kodér</li>
+<li><code>F-SSI_PositionResolution</code> - počet bitů polohy ve zprávě =resolution</li>
+<li><code>F-SSI_RevolutionBits</code> - počet bitů pro počítání otáček v případě víceotáčkových snímačů</li>
+<li><code>F-SSI_number_message_bits</code> - počet bitů celé zprávy. V případě Biss-C bez start bitu.</li>
+<li><code>F-SSI_first_position_MSB_BitNumber</code> - číslo bitu prvního bitu obsahujícího polohu. Počáteční bit se nepočítá (není součástí).</li>
+<li><code>F-SSI_FreqDivisor</code> - dělitel komunikační frekvence.  Výpočet F = 75Mhz / F-SSI_FreqDivisor</li>
+<li><code>F-SSI_MinComCLKPeriod</code> - minimální perioda dotazování na polohu. Uvádí se v počtu clock period. Je to parametr pro senzory, které nejsou schopny dosáhnout maximální (možné) frekvence.</li>
+<li><code>F-SSI_FirstBitDataPart0</code> - číslo bitu prvního bitu volitelné datové části telegramu 0. Počáteční bit se nepočítá (není součástí).</li>
+<li><code>F-SSI_NumBitsDataPart0</code> - délka volitelné části DATA 0.</li>
+<li><code>F-SSI_FirstBitDataPart1</code> - číslo bitu prvního bitu volitelné části DATA telegramu 1. Počáteční bit se nepočítá (není součástí).</li>
+<li><code>F-SSI_NumBitsDataPart1</code> - délka nepovinné části DATA 1.</li>
+<li><code>F-SSI_CRC_CalcFromBit</code> - číslo bitu prvního bitu, ze kterého se počítá CRC. Pokud je nastaveno -1, CRC se nevypočítává. Délka CRC musí být 6 bitů na konci zprávy. Polynom x6 +x1 +x0.  </li>
+<li><code>F-SSI_ErrorMaskDataPart0</code>, <code>F-SSI_ErrorMaskDataPart1</code> - Masky pro zpětnou indikaci chyby. Pokud je nastavený bit v Masce shodný s odpovídajícím bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.</li>
+<li><code>F-SSI_NegativeErrorMaskDataPart0</code>, <code>F-SSI_NegativeErrorMaskDataPart1</code> - Masky pro indikaci chyby zpětné vazby. Pokud je nastavený bit v masce totožný s odpovídajícím invertovaným bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.  </li>
+</ul>
+<p>!!! note „Chyba zpětné vazby“</p>
+<div class="language-text highlight"><pre><span></span><code>Pro indikaci chyby zpětné vazby je nutné správně nastavit odpovídající parametry `F-SSI_FirstBitDataPartx` a `F-SSI_NumBitsDataPartx` a tato funkce musí být čidlem podporována.
+</code></pre></div>
+<p>!!! note „Nastavené parametry“</p>
+<div class="language-text highlight"><pre><span></span><code>Některé parametry jsou akceptovány ihned po nastavení, ale doporučuje se je uložit a restartovat TGZ.
+</code></pre></div>
 
 
 
