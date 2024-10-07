@@ -205,6 +205,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../CZ/TGZ/TGZ-S-48-100_250/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_250-O
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_250-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_250-O/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 # TGZ-S-48-100_250RI
 file_path = "parameters.xlsx"
 sheet_name = "TGZ-S-48-100_250RI"
@@ -223,6 +232,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../CZ/TGZ/TGZ-S-48-100_300/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_300-O
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_300-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_300-O/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
 # TGZ-S-48-100_300RI
 file_path = "parameters.xlsx"
 sheet_name = "TGZ-S-48-100_300RI"
@@ -239,6 +257,15 @@ range_start = "A1"
 range_end = "B100"
 markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
 output_file = "../../CZ/TGZ/TGZ-S-48-100_425/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_425-O
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-S-48-100_425-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_425-O/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
 # TGZ-S-230-5_15
@@ -302,6 +329,33 @@ range_start = "A1"
 range_end = "B100"
 markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
 output_file = "../../CZ/TGZ/TGZ-S-400-14_30/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-3_9
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-560-3_9"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-3_9/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-7_15
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-560-7_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-7_15/md/parameters.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-10_20
+file_path = "parameters.xlsx"
+sheet_name = "TGZ-D-560-10_20"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-10_20/md/parameters.md"
 save_markdown_table(markdown_table, output_file)
 
 # TGZ-D-560-30_50
@@ -454,6 +508,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../CZ/TGZ/TGZ-S-48-100_250/md/parameters.en.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_250-O
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_250-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_250-O/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
 # TGZ-S-48-100_250RI
 file_path = "parametersEN.xlsx"
 sheet_name = "TGZ-S-48-100_250RI"
@@ -472,6 +535,15 @@ markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, ran
 output_file = "../../CZ/TGZ/TGZ-S-48-100_300/md/parameters.en.md"
 save_markdown_table(markdown_table, output_file)
 
+# TGZ-S-48-100_300-O
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_300-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_300-O/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
 # TGZ-S-48-100_300RI
 file_path = "parametersEN.xlsx"
 sheet_name = "TGZ-S-48-100_300RI"
@@ -488,6 +560,15 @@ range_start = "A1"
 range_end = "B100"
 markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
 output_file = "../../CZ/TGZ/TGZ-S-48-100_425/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-S-48-100_425-O
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-S-48-100_425-O"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-S-48-100_425-O/md/parameters.en.md"
 save_markdown_table(markdown_table, output_file)
 
 # TGZ-S-230-5_15
@@ -551,6 +632,33 @@ range_start = "A1"
 range_end = "B100"
 markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
 output_file = "../../CZ/TGZ/TGZ-S-400-14_30/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-3_9
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-560-3_9"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-3_9/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-7_15
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-560-7_15"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-7_15/md/parameters.en.md"
+save_markdown_table(markdown_table, output_file)
+
+# TGZ-D-560-10_20
+file_path = "parametersEN.xlsx"
+sheet_name = "TGZ-D-560-10_20"
+range_start = "A1"
+range_end = "B100"
+markdown_table = excel_to_markdown_table(file_path, sheet_name, range_start, range_end)
+output_file = "../../CZ/TGZ/TGZ-D-560-10_20/md/parameters.en.md"
 save_markdown_table(markdown_table, output_file)
 
 # TGZ-D-560-30_50
