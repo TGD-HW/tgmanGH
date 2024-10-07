@@ -72,13 +72,13 @@ Příklady propojení servozesilovače a motoru jsou k dispozici v sekci `Ostatn
 
 Níže najdete příklad nastavení parametrů polohový snímač RLS AksIM-2, 20 bitů, snímač polohy MB053DCC20BEDT00.
 
-![BISS-C timing diagram](../img/BISS-Ctiming.png){: style="width:80%;" }
+![BISS-C timing diagram](../img/BISS-Ctiming.png){: style="width:60%;" }
 
 !!! note "CDS bit"
 
 	Bit CDS je pro ostatní parametry považován za bit č. 0 zprávy.
 	
-![BISS-C TGZ parameters](../img/BISS-C_TGZparams.png){: style="width:60%;" }
+![BISS-C TGZ parameters](../img/BISS-C_TGZparams.png){: style="width:70%;" }
 
 **Popis parametrů**   
 
@@ -97,10 +97,10 @@ Níže najdete příklad nastavení parametrů polohový snímač RLS AksIM-2, 2
 - `F-SSI_ErrorMaskDataPart0`, `F-SSI_ErrorMaskDataPart1` - Masky pro zpětnou indikaci chyby. Pokud je nastavený bit v Masce shodný s odpovídajícím bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.
 - `F-SSI_NegativeErrorMaskDataPart0`, `F-SSI_NegativeErrorMaskDataPart1` - Masky pro indikaci chyby zpětné vazby. Pokud je nastavený bit v masce totožný s odpovídajícím invertovaným bitem v F-SSI_DataPart_x, je indikována chyba zpětné vazby.  
 
-!!! note „Chyba zpětné vazby“
+!!! note "Chyba zpětné vazby"
 
 	Pro indikaci chyby zpětné vazby je nutné správně nastavit odpovídající parametry `F-SSI_FirstBitDataPartx` a `F-SSI_NumBitsDataPartx` a tato funkce musí být čidlem podporována.    
 	
-!!! note „Nastavené parametry“
+!!! note "Nastavené parametry"
 
 	Některé parametry jsou akceptovány ihned po nastavení, ale doporučuje se je uložit a restartovat TGZ.

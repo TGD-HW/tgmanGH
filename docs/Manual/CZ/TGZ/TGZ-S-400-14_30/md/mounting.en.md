@@ -8,6 +8,6 @@ Below are the dimensions and position of the individual mounting elements.
 --8<-- "md/mechMounting.en.md"
 
 ##Distance
-For the TGZ-S-400-3/9 servo it is recommended to keep a minimum horizontal distance between the individual devices of at least 10 mm, the recommended vertical distance is at least 50 mm.
+For the TGZ-S-400-14/30 servo it is recommended to keep a minimum horizontal distance between the individual devices of at least 10 mm, the recommended vertical distance is at least 50 mm.
 
 ![TGZ-S-230-5/15 Distance](../../../../source/img/placement1.png)

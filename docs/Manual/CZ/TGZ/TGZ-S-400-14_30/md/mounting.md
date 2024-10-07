@@ -8,6 +8,6 @@ L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na
 --8<-- "md/mechMounting.md"
 
 ## Rozestupy
-U servozesilovače TGZ-S-400-3/9 je doporučeno dodržet minimální horizontální vzdálenost mezi jednotlivými zařízeními alespoň 10 mm, doporučená vertikální vzdálenost je pak minimálně 50 mm.
+U servozesilovače TGZ-S-400-14/30 je doporučeno dodržet minimální horizontální vzdálenost mezi jednotlivými zařízeními alespoň 10 mm, doporučená vertikální vzdálenost je pak minimálně 50 mm.
 
 ![TGZ-S-230-5/15 Distance](../../../../source/img/placement1.png)

@@ -76,13 +76,13 @@ Examples of servo drive and motor connections are available in the `Etc. | Cable
 
 Below you can find and example of parameters and settings for TGZ amplifier interconnecting with AksIM-2, 20 bits, MB053DCC20BEDT00 position sensor.
 
-![BISS-C timing diagram](../img/BISS-Ctiming.png){: style="width:80%;" }
+![BISS-C timing diagram](../img/BISS-Ctiming.png){: style="width:60%;" }
 
 !!! note "CDS bit"
 
 	Bit named as CDS is considered for other parameters as bit 0 of a message
 	
-![BISS-C TGZ parameters](../img/BISS-C_TGZparams.png){: style="width:60%;" }
+![BISS-C TGZ parameters](../img/BISS-C_TGZparams.png){: style="width:70%;" }
 
 **Parameters description**   
 
