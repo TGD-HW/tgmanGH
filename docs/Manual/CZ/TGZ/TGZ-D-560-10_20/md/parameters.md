@@ -2,7 +2,7 @@
 | :---: | :---: |
 | Ovládací napětí | 24 VDC ± 10 %, 2 A* |
 | Výkonové napájecí napětí | 24-560 VDC |
-| Instalovaný příkon pro provoz S1 | 33 kW |
+| Instalovaný příkon pro provoz S1 | 10kW |
 | Trvalý proud na jednu osu | 30 A |
 | Trvalý celkový proud při provozu dvou os | 60 A |
 | Maximální výstupní proud (max. 5 s) | 2 x 50 A |

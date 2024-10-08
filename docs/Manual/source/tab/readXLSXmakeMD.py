@@ -764,9 +764,6 @@ markdown_table = nonBold(file_path, sheet_name, range_start, range_end)
 output_file = "../../source/md/X8_commonHW_AI_tab.en.md"
 save_markdown_table(markdown_table, output_file)
 
-
-
-
 ##########################################################################################
 # Connectors parameter MD generator
 ##########################################################################################
@@ -1230,6 +1227,32 @@ markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../source/md/X3_DO_4pin_BCZ.md"
 save_markdown_table(markdown_table, output_file)
 
+# X2 - 3pin Weidmuller BLZ 7.62 - TGZ560-3/9 DCBUS
+file_path = "connectors.xlsx"
+sheet_name = "X2_560_DC_3pin_BLZ__7_62"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X2_560_DC_3pin_BLZ__7_62.md"
+save_markdown_table(markdown_table, output_file)
+
+# X3 - 6pin Weidmuller BLZ 7.62 - TGZ560-3/9 M1
+file_path = "connectors.xlsx"
+sheet_name = "X3_M1_6pin_BLZ__7_62"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X3_M1_6pin_BLZ__7_62.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 6pin Weidmuller BLZ 7.62 - TGZ560-3/9 M2
+file_path = "connectors.xlsx"
+sheet_name = "X4_M2_6pin_BLZ__7_62"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X4_M2_6pin_BLZ__7_62.md"
+save_markdown_table(markdown_table, output_file)
 
 ##########################################################################################
 # Connectors EN parameter MD generator
