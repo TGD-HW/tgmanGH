@@ -1,13 +1,8 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D view
-![3D view IO side](../img/IOside.svg){: style="width:70%;" }
+![3D view IO side](../img/IOside.webp){: style="width:75%;" }
 <br>
 <br>
-![3D view motor side](../img/MotSide.svg){: style="width:75%;" }
+![3D view FB side](../img/Motside.webp){: style="width:60%;" }
 
 ##Connectors
 ___

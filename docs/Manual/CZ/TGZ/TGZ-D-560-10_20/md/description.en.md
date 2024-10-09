@@ -6,93 +6,38 @@
 
 ##Connectors
 ___
-### View of the ENET/ECAT side a DCbus
+### View of the ENET/ECAT side
 ___
 
-![ENET/ECAT/DCbus connectors](../../../../source/img/TGZ-D-560-30_50_DCbus.svg){: style="width:60%;" }
+![ENET/ECAT/24V connectors](../../../../source/img/TGZ-D-560-10_20_enetCon.webp){: style="width:80%;" }
 
-
-<div class="grid cards" markdown>
-
--   **X2 - DC bus konektor**
-
-    ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/D560DCbusCon.svg){: style="width:70%;" }
-
--    Šroubovací svorky M8
-
-	---
-
-	--8<-- "md/X2_D560DCbus.en.md"
-
-</div>
-
-___
-### View of the CAN/IO/SD Side, +24V napájení, motor
-___
-
-![IO/CAN/SD + motor connectors](../../../../source/img/TGZ-D-560-30_50_Mot.svg){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
 -   **X1 - Control supply voltage**
 
     ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
+	Housing back side view (wire side):  
+	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
 	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 
--   **X3 - Motor connector axis 1**
+</div>
 
-    ---
-	
-	![Motor connector 1](../../../../source/img/2626-1104.svg){: style="width:70%;" }
+___
+### View of the CAN/IO/SD Side
+___
 
--    Wago push-in CAGE CLAMP®
+![IO/CAN/SD connectors](../../../../source/img/TGZ-D-560-10_20_IO.webp){: style="width:80%;" }
 
-    ---
-
-	--8<-- "md/X3_M1_4pin_wago_2636.en.md"
-	
--   **X4 - Motor connector axis 2**
-
-    ---
-	
-	![Motor connector 2](../../../../source/img/2626-1104.svg){: style="width:70%;" }
-
--    Wago push-in CAGE CLAMP®
-
-    ---
-
-	--8<-- "md/X4_M2_4pin_wago_2636.en.md"
-	
--   **X14 - brake/Termistor axis 1**
-
-    ---
-	
-	![Brake/Thermistor 1](../../../../source/img/1876530000R.svg){: style="width:70%;" }
-
--    Wago LSF svorky
-
-    ---
-
-	--8<-- "md/X14_BR1_4pin_LSF.en.md"
-	
--   **X15 - brake/Termistor axis 2**
-
-    ---
-	
-	![Brake/Thermistor 2](../../../../source/img/1876530000R.svg){: style="width:70%;" }
-
--    Wago LSF svorky
-
-    ---
-
-	--8<-- "md/X15_BR2_4pin_LSF.en.md"
+<div class="grid cards" markdown>
 
 -   **X8 - Digital I/O, analog inputs**
 
@@ -178,10 +123,10 @@ ___
 
    
 ___
-### Feedback side view
+### View of the FB/motor side
 ___
 
-![Feedback connectors](../../../../source/img/TGZ-D-560-30_50_FBconns.svg){: style="width:60%;" }
+![Motor/Feedback connectors 1](../../../../source/img/TGZ-D-560-10_20_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -246,6 +191,67 @@ ___
 	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	
+-   **X3 - Motor connector axis 1**
+
+    ---
+	
+	Housing back side view (wire side):
+	
+	![Motor connector](../../../../source/img/1164960000.webp){: style="width:70%;" }   
+	
+	![Motor connector angle](../../../../source/img/1164960000_1.webp){: style="width:70%;" } 	
+	
+	
+-    Weidmüller BLZ 7.62HP/06/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X3_M1_6pin_BLZ__7_62.en.md"
+
+	!!! warning "Connector orientation"
+	
+		Be careful to connect the terminals correctly	
+		
+-   **X4 - Motor connector axis 2**
+
+    ---
+	
+	Housing back side view (wire side):
+	
+	![Motor connector](../../../../source/img/1164960000.webp){: style="width:70%;" }   
+	
+	![Motor connector angle](../../../../source/img/1164960000_1.webp){: style="width:70%;" } 	
+	
+	
+-    Weidmüller BLZ 7.62HP/06/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X4_M2_6pin_BLZ__7_62.en.md"
+
+	!!! warning "Connector orientation"
+	
+		Be careful to connect the terminals correctly		
+	
+-   **X2 - Power supply voltage**
+
+    ---
+	
+	Housing back side view (wire side):
+	![PWR connector back view](../../../../source/img/1093440000.webp){: style="width:50%;" }   
+	
+	![PWR connector 3D view](../../../../source/img/1093440000_1.webp){: style="width:50%;" }	
+
+-    Weidmüller BLZ 7.62HP/03/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X2_560_DC_3pin_BLZ__7_62.en.md"
+	
+	!!! warning "Connector orientation"
+	
+		Be careful to connect the terminals correctly	
 
 </div>
 

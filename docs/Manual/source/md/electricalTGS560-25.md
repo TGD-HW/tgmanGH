@@ -1,6 +1,6 @@
 #**Elektrická instalace**
 ##Instalace zařízení
-![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding.webp){: style="width:85%;" }   
+![Shielding connection of the DCbus](../../../../source/img/TGS-560-25_50_shielding.webp){: style="width:85%;" }   
 
 Během elektrické instalace servozesilovače je nutné se řídit bezpečnostními pokyny a dbát na dodržení těchto zásad:
 
@@ -30,18 +30,6 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Stínění kabelu musí po dotažení šroubu doléhat na desku rozvaděče. Jen tak je zaručen kvalitní kontakt.
 
 ![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding1.webp){: style="width:85%;" }
-
-###Postup zapojení motorového kabelu s&nbsp;připojením stínění
-
-- Odstraňte vhodnou délku vnější izolace motorového kabelu tak, aby bylo možné pohodlně připevnit vnější stínění kabelu do připravené svorky na stínícím přípravku.
-- Odstraňte vhodnou délku vnějšího opletu kabelu tak, aby jeho šířka byla přibližně stejná jako šířka svorky pro obejmutí kabelu.
-- Stínění zpětnovazebního páru a případně stínění vodičů připojení brzdy nezkracujte. 
-- Na připravené odizolované konce vodičů osaďte kontaktní dutinky.
-- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-- Vložte připravený kabel s vnějším opletem do největší stínicí svorky a zajistěte kabel proti nežádoucímu pohybu např. plastovými páskami (na obrázku černé) v místě tomu určeném.
-- Vložte zbývající části (zpětnovazební pár + brzdový pár) včetně jejich stínění do připravených zemnicích svorek.
-
-![Shielding connection motor 1](../../../../source/img/TGZ-D-560-3_9_shielding2.webp){: style="width:60%;" }
 
 ###Technologie stínění
 

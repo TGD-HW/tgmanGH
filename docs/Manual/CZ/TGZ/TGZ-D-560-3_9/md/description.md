@@ -17,10 +17,11 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	Pohled zezadu (strana vodičů)
-	![1941040000](../../../../source/img/1941040000.webp){: style="width:50%;" }   
+	Pohled zezadu (strana vodičů)   
 	
-	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:50%;" }	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
 -    Weidmüller BCZ 3.81/05/180F SN OR BX
 
@@ -206,7 +207,7 @@ ___
 
 	--8<-- "md/X3_M1_6pin_BLZ__7_62.md"
 
-	!!! warning "Orientace konektoru"
+	!!! warning "Orientace konektorů"
 	
 		Pozor na správnou orientaci konektoru při zapojování kabeláže.	
 		
@@ -243,6 +244,10 @@ ___
     ---
 
 	--8<-- "md/X2_560_DC_3pin_BLZ__7_62.md"
+	
+	!!! warning "Orientace konektorů"
+	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.		
 	
 
 </div>

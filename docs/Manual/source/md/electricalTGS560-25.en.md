@@ -1,6 +1,6 @@
 #**Electrical installation of the device**
 ##Overview
-![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding.webp){: style="width:85%;" }   
+![Shielding connection of the DCbus](../../../../source/img/TGS-560-25_50_shielding.webp){: style="width:85%;" }   
 
 During the electrical installation of the servo amplifier, the safety instructions must be observed and the following principles must be observed:
 
@@ -30,19 +30,6 @@ Install the servo amplifier electrical system as follows:
 - The cable shielding must make surface contact with base plate after tightening the screw.
 
 ![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding1.webp){: style="width:85%;" }
-
-###Motor cable connection procedure with shield connection:
-
-- Use only original TG Drives cables - the shortest possible cables according to the mutual distance and arrangement of individual devices in the switchboard.
-- Remove the outer (orange) insulation in length of 60 to 70 mm from the end of the cable. Be careful not to damage the shielding layer (mesh) of the cable.
-- Strip the ends of all wires and fit the contact ferrules.
-- At the point where the main shield (braid) of the motor cable will contact the ground terminal of the shielding fixture, carefully remove the main cable insulation across the width of the shielding fixture.
-- Insert the wires with ferrules to the connector housings according the wiring diagram.
-- Connect the connectors to the TGZ servo amplifier.
-- Insert the motor cable into the prepared terminals on the steel plate.
-- Secure the cable to the steel plate with tie wraps at the designated location.
-
-![Shielding connection motor 1](../../../../source/img/TGZ-D-560-3_9_shielding2.webp){: style="width:60%;" }
 
 ###Shielding technology
 The figures show an unsuitable and suitable shield connection:

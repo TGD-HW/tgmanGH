@@ -13,7 +13,7 @@ u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je po
 
 Pavlík jebe data k chobotnici a TGS-560-25 sem: \\tgd-n1\_VyvojHW\Manual\WEB
 
-doplnit nová serva do rozcestníku connectors
+doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, ERR přes STO - hlavně teda RDY
 
 firmware strom verzí
 filtry viz LP mail
