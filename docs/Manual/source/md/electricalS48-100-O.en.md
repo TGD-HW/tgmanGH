@@ -25,13 +25,13 @@ Install the servo amplifier electrical system as follows:
   Install the cable lug on its end, which is to be attached to the top metal sheet of the servo amplifier.
   You can put the feedback wires into heat shrink tube optionally.
   
-![Feedback shielding 1](../../../../source/img/TGZ-S-48-100-O_shielding2.webp){: style="width:70%;" }
+![Feedback shielding 1](../../../../source/img/TGZ-S-48-100O_shielding2.webp){: style="width:70%;" }
   
 - Remove a strip of outer insulation approximately 15-20 mm wide approximately 15-20 cm from the end of the wires.
   Take care not to damage the cable braid.
 - Fit ferrules adequate to the cross section of the wires onto the prepared stripped ends.
 
-![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100-O_shielding1.webp){: style="width:70%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100O_shielding1.webp){: style="width:70%;" }
 
 - Connect the wires to the housings according to the wiring diagram and connect it to the TGZ device.
   See power board connector description below.

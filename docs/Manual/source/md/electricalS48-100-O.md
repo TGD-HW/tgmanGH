@@ -23,13 +23,13 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Stínění zpětnovazebního páru nezkracujte.
   Na jeho konec nainstalujte kabelové oko, které je určeno k uchycení na horní plechový profil servozesilovače.
   
-![Feedback shielding 1](../../../../source/img/TGZ-S-48-100-O_shielding2.webp){: style="width:70%;" }
+![Feedback shielding 1](../../../../source/img/TGZ-S-48-100O_shielding2.webp){: style="width:70%;" }
   
 - Přibližně 15-20 cm od konce kabelů z nich odstraňte pruh vnější izolace v šířce přibližně 15-20 mm.
   Dejte pozor, abyste nepoškodili oplet kabelu.
 - Na připravené odizolované konce vodičů osaďte kabelová oka (fázové vodiče) a kontaktní dutinky (zpětná vazba) adekvátní jejich průřezu.
 
-![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100-O_shielding1.webp){: style="width:70%;" }
+![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100O_shielding1.webp){: style="width:70%;" }
 
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
   Níže je popis konektorů výkonové desky servozesilovače.

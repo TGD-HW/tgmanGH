@@ -187,11 +187,6 @@ ___
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 </div>
-___
-### Pohled na PCB
-___
-
-![PCB connections](../../../../source/img/TGZ-S-48-100_250_brd.png){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>
