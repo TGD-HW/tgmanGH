@@ -1,15 +1,16 @@
 ##3D náhled
-![3D view IO side](../img/IOside.webp){: style="width:75%;" }
+![3D view IO side](../img/IOside.svg){: style="width:75%;" }
 <br>
 <br>
-![3D view FB side](../img/Motside.webp){: style="width:60%;" }
+![3D view FB side](../img/Motside.svg){: style="width:60%;" }
 
 ##Konektory
 ___
-### Strana komunikace/ethernet/ethercat a DCbus
+### Strana komunikace/ethernet/ethercat a 24V napájení
 ___
 
-![ENET/ECAT/DCbus connectors](../../../../source/img/TGZ-D-560-30_50_DCbus.svg){: style="width:60%;" }
+![ENET/ECAT/24V connectors](../../../../source/img/TGZ-D-560-3_9_enetCon.webp){: style="width:80%;" }
+
 
 
 <div class="grid cards" markdown>
@@ -28,10 +29,10 @@ ___
 </div>
 
 ___
-### Strana CAN/IO/SD, +24V napájení, motor
+### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD + motor connectors](../../../../source/img/TGZ-D-560-30_50_Mot.svg){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-D-560-3_9_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -177,10 +178,10 @@ ___
 
    
 ___
-### Strana Feedback
+### Strana FB/motor
 ___
 
-![Feedback connectors](../../../../source/img/TGZ-D-560-30_50_FBconns.svg){: style="width:60%;" }
+![Motor/Feedback connectors 1](../../../../source/img/TGZ-D-560-3_9_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 

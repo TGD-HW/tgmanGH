@@ -1,12 +1,12 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
 | Ovládací napětí | 24 VDC ± 10 %, 2 A* |
-| Výkonové napájecí napětí | 24-560 VDC |
-| Instalovaný příkon pro provoz S1 | 10kW |
-| Trvalý proud na jednu osu | 30 A |
-| Trvalý celkový proud při provozu dvou os | 60 A |
-| Maximální výstupní proud (max. 5 s) | 2 x 50 A |
-| Ztráty při jmenovité zátěži | 900 W |
+| Výkonové napájecí napětí | 140-600 VDC |
+| Instalovaný příkon pro provoz S1 | 7,8 kW |
+| Trvalý proud na jednu osu | 7 A |
+| Trvalý celkový proud při provozu dvou os | 14 A |
+| Maximální výstupní proud (max. 5 s) | 2 x 15 A |
+| Ztráty při jmenovité zátěži | 100 W |
 | Stupeň krytí | IP20 |
 | **KOMUNIKACE** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
@@ -18,11 +18,10 @@
 | LED displej | Chybové hlášení, 2x7 segment LED |
 | LED signalizace (osa 1 a 2 zvlášť) | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **OSTATNÍ KONEKTORY** |   |
-| Napájení výkonové části | šroubovací svorky M8x12 |
-| Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
-| Motorový konektor | 1 x 4pin WAGO push-in |
-| Brzdový konektor | 2 x 4pin  WEIDMÜLLER LSF |
+| Napájení výkonové části | 1 x 3pin WEIDMÜLLER BLZ 7.62HP/03/180LR |
+| Napájení řídicí části | 1 x 5pin WEIDMÜLLER BCZ 3.81/05/180F |
+| Motorový konektor | 2 x 6pin WEIDMÜLLER  BLZ 7.62HP/06/180LR |
 | Zpětnovazební konektor | 2 x 8pin WEIDMÜLLER B2CF 3.50/08/180 |
 | Externí enkodér | 1 x 12pin WEIDMÜLLER B2CF 3.50/12/180 |
 | **EMI FILTR** |
-| Doporučený filtr | Filtr obsahující napájecí modul TGS-560 |
+| Doporučený filtr | Filtr obsahující napájecí modul TGS-560-25/50 |
