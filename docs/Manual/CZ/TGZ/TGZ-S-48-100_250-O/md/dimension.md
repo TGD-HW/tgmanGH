@@ -1,5 +1,4 @@
 ![TGZ-S-48-50/100 Dimensions](../img/dim1.webp){: style="width:60%;" }
-![TGZ-S-48-50/100 Dimensions 2](../img/dim2.webp){: style="width:60%;" }
 
 
 <!-- <style type="text/css">

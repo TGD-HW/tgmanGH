@@ -33,7 +33,7 @@ theme:
     accent: teal
   favicon: Manual/source/img/TGsymbol.svg
 extra:
-    generator: true #hlaska Made with MkDown disable - muze se enablovat aby meli vetsi podporu
+    generator: true #hlaska Made with MkDocs - muze se enablovat aby meli vetsi podporu
     homepage: https://www.dev.tgdrives.cz/
     # version:
         # provider: mike
@@ -57,7 +57,7 @@ plugins:
        loop: false
        effect: zoom
        slide_effect: slide
-       width: 80vw
+       width: auto
        height: auto
        zoomable: true
        draggable: true

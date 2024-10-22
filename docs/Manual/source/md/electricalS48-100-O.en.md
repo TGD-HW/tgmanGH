@@ -34,9 +34,9 @@ Install the servo amplifier electrical system as follows:
 ![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100O_shielding1.webp){: style="width:70%;" }
 
 - Connect the wires to the housings according to the wiring diagram and connect it to the TGZ device.
-  See power board connector description below.
+  See main terminal image below.
 
-![Power board view](../../../../source/img/TGZ-S-48-100_250RI_brd.en.webp){: style="width:85%;" }
+![External terminals view](../../../../source/img/TGZ-S-48-100_250Oterm.webp){: style="width:85%;" }
 
 - Attach the motor cables to the mounting plate using sheet metal clips at the location of the previously removed strip of outer insulation.
 - Screw the cable lug of the feedback shield into the prepared thread on the top profile of the servo amplifier.

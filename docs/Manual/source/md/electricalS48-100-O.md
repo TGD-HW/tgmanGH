@@ -32,9 +32,9 @@ Nainstalujte elektrický systém servozesilovače následovně:
 ![Shielding connection motor 1](../../../../source/img/TGZ-S-48-100O_shielding1.webp){: style="width:70%;" }
 
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-  Níže je popis konektorů výkonové desky servozesilovače.
+  Níže je nákres hlavní svorkovnice zařízení.
 
-![Power board view](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:85%;" }
+![Power board view](../../../../source/img/TGZ-S-48-100_250Oterm.webp){: style="width:85%;" }
 
 - Přichyťte motorový kabel k montážní desce rozvaděče pomocí plechové spony v místě dříve odstraněného pruhu vnější izolace.
 - Přišroubujte kabelové oko stínění zpětné vazby do připraveného závitu horním plechovém profilu servozesilovače.
