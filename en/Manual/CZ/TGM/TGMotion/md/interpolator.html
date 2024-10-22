@@ -8382,7 +8382,7 @@ The shared memory <code>TGM_Interpolator</code> serves as an interface between t
 Most registers are read-only and display the current CNC module values.
 Since the G-code is usually written in units of [mm], the Interpolators also work with units of [mm].
 To set the conversion [mm] to [inc], use the Command structure or the Ratio register (see below).</p>
-<p><a class="glightbox" href="../img/interpolatorBlock.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Interpolator Block Diagram" src="../img/interpolatorBlock.png" style="width:100%;" /></a></p>
+<p><a class="glightbox" href="../img/interpolatorBlock.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Interpolator Block Diagram" src="../img/interpolatorBlock.png" style="width:100%;" /></a></p>
 <h2 id="plc-and-windows-application-competence">PLC and Windows application competence<a class="headerlink" href="#plc-and-windows-application-competence" title="Permanent link">&para;</a></h2>
 <h3 id="plc">PLC<a class="headerlink" href="#plc" title="Permanent link">&para;</a></h3>
 <p>It sets the basic parameters of the Interpolator, operates M-functions and solves the emergency stop of the Interpolator.
@@ -8693,7 +8693,7 @@ H(s) = \frac{q}{s^2 + p \cdot s + q}
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="../img/filterChar.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Graphical representation of the progress of some filter types" src="../img/filterChar.png" style="width:50%;" /></a></p>
+<p><a class="glightbox" href="../img/filterChar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Graphical representation of the progress of some filter types" src="../img/filterChar.png" style="width:50%;" /></a></p>
 <h3 id="activation-and-parameterization-of-iir-filter">Activation and parameterization of IIR Filter<a class="headerlink" href="#activation-and-parameterization-of-iir-filter" title="Permanent link">&para;</a></h3>
 <p>The IIR Filter parameter values can be set using the Command structure.
 For the register value <code>Command = -1</code> the Command parameters have the following meaning:</p>

@@ -8070,7 +8070,7 @@
 <p>The TGZ servo amplifier includes feedback circuits for axis 1 and axis 2 on the <strong>X6</strong> and <strong>X7</strong> connectors in the standard (UNI) version.
 It is possible to connect Endat, SSI, BISS, incremental encoder feedback and, after applying the FBSELx jumper, also Hiperface DSL.   </p>
 <p>A simplified internal wiring diagram is shown in the figure below.</p>
-<p><a class="glightbox" href="../../../../Manual/source/img/FB12internals.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ FB12 schematic" src="../../../../Manual/source/img/FB12internals.svg" style="width:80%;" /></a></p>
+<p><a class="glightbox" href="../../../../Manual/source/img/FB12internals.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ FB12 schematic" src="../../../../Manual/source/img/FB12internals.svg" style="width:80%;" /></a></p>
 <p>These are 2 very fast RS485 bus drivers capable of operating at data rates up to 20 Mbit/s.</p>
 <div class="admonition note">
 <p class="admonition-title">Cable length</p>
@@ -8091,7 +8091,7 @@ Contact your supplier for further details.</p>
 </div>
 <h2 id="supported-position-sensors">Supported position sensors<a class="headerlink" href="#supported-position-sensors" title="Permanent link">&para;</a></h2>
 <h3 id="hiperface-dsl"><a href="https://www.hiperfacedsl.com/index_en.html">Hiperface DSL</a><a class="headerlink" href="#hiperface-dsl" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../Manual/source/img/HiperfaceDSLLogo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="DSL logo" src="../../../../Manual/source/img/HiperfaceDSLLogo.png" style="width:10%;" /></a> is a purely digital protocol requiring a minimal number of wires between the servo drive and the motor.
+<p><a class="glightbox" href="../../../../Manual/source/img/HiperfaceDSLLogo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DSL logo" src="../../../../Manual/source/img/HiperfaceDSLLogo.png" style="width:10%;" /></a> is a purely digital protocol requiring a minimal number of wires between the servo drive and the motor.
 The robustness of this protocol enables the use of a single-cable motor, meaning both power and data conductors are within single cable.
 Only the digital absolute position is transmitted, without any analog signals.
 Power and data are transmitted using a single pair of wires.
@@ -8108,7 +8108,7 @@ Then, just connect a suitable sensor to pins 7-8.   </p>
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z4">Motor connection with free wires</a></li>
 </ul>
 <h3 id="endat-22"><a href="https://endat.heidenhain.com/endat2">Endat 2.2</a><a class="headerlink" href="#endat-22" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../Manual/source/img/Endat2_2Logo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Endat logo" src="../../../../Manual/source/img/Endat2_2Logo.png" style="width:10%;" /></a> is a purely digital protocol requiring 6 wires (3 pairs) between the servo drive and the motor.
+<p><a class="glightbox" href="../../../../Manual/source/img/Endat2_2Logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endat logo" src="../../../../Manual/source/img/Endat2_2Logo.png" style="width:10%;" /></a> is a purely digital protocol requiring 6 wires (3 pairs) between the servo drive and the motor.
 These are differential pairs for clock, data (synchronous), and one pair for power (+12V).
 Unlike Hiperface DSL, it does not use a circuit for power transmission over the data pair.
 Only the digital absolute position is transmitted, without any analog signals.
@@ -8121,7 +8121,7 @@ If this type of feedback is required, all the above-mentioned signals must be co
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z11">Motor connection with free wires</a></li>
 </ul>
 <h3 id="biss-c"><a href="https://biss-interface.com/">BISS-C</a><a class="headerlink" href="#biss-c" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../Manual/source/img/BISSlogo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS logo" src="../../../../Manual/source/img/BISSlogo.png" style="width:10%;" /></a> is a purely digital protocol, requiring 6 wires (3 pairs) between the servo drive and the motor.
+<p><a class="glightbox" href="../../../../Manual/source/img/BISSlogo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="BISS logo" src="../../../../Manual/source/img/BISSlogo.png" style="width:10%;" /></a> is a purely digital protocol, requiring 6 wires (3 pairs) between the servo drive and the motor.
 These are differential pairs for clock, data (synchronous), and one pair for power (+5V or +12V).
 A circuit for power transmission via the data pair, as in Hiperface DSL, is not used.
 Only the digital absolute position is transmitted without any analog signals.   </p>
@@ -8134,12 +8134,12 @@ If the sensor type uses +5V power, the power wires must be connected to the appr
 <li><a href="../../CZ/ETC/TGcable/md/description.html#Z14">Connection of SSI/BISS sensor with +5V power and cable type</a></li>
 </ul>
 <p>Below you can find and example of parameters and settings for TGZ amplifier interconnecting with AksIM-2, 20 bits, MB053DCC20BEDT00 position sensor.</p>
-<p><a class="glightbox" href="../../../../Manual/source/img/BISS-Ctiming.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C timing diagram" src="../../../../Manual/source/img/BISS-Ctiming.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../../../../Manual/source/img/BISS-Ctiming.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="BISS-C timing diagram" src="../../../../Manual/source/img/BISS-Ctiming.png" style="width:60%;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">CDS bit</p>
 <p>Bit named as CDS is considered for other parameters as bit 0 of a message</p>
 </div>
-<p><a class="glightbox" href="../../../../Manual/source/img/BISS-C_TGZparams.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="BISS-C TGZ parameters" src="../../../../Manual/source/img/BISS-C_TGZparams.png" style="width:70%;" /></a></p>
+<p><a class="glightbox" href="../../../../Manual/source/img/BISS-C_TGZparams.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="BISS-C TGZ parameters" src="../../../../Manual/source/img/BISS-C_TGZparams.png" style="width:70%;" /></a></p>
 <p><strong>Parameters description</strong>   </p>
 <ul>
 <li><code>F-Type</code> - 6 .. Biss encoder, 7 .. SSI encoder</li>

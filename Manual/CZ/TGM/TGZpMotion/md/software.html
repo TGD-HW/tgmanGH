@@ -8106,7 +8106,7 @@ IP adresa TGZ+Motion musí být nastavena na volné číslo v síti.
 Je také možné připojit síťový adaptér PC přímo k servisnímu portu X11, v takovém případě je nutná statická IP adresa adaptéru PC.
 Aplikace <strong>Control Observer</strong> slouží ke kompletnímu monitorování subsystému <strong>TGMotion</strong>.
 Zde je příklad připojeného zařízení <strong>TGZ+Motion</strong> (pomocí protokolu TCP a IP adresy <code>192.168.128.188</code>):</p>
-<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
 <h2 id="fast-service-port-fsp">Fast service port (FSP)<a class="headerlink" href="#fast-service-port-fsp" title="Permanent link">&para;</a></h2>
 <p>Tento port slouží jako velmi rychlý port pro nastavení připojení k počítači.
 Pro jeho použití stačí připojit přímo síťovou kartu PC pomocí konektoru X12.
@@ -8271,7 +8271,7 @@ TGZ+Motion tak může naplánovat jiné úlohy s nižší prioritou (komunikace 
 </li>
 </ol>
 <p>V okně <em>System Timers</em> programu <strong>Control Observer</strong> se zobrazuje uplynulý čas různých úloh programu TGMotion.</p>
-<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
 <p>Všimněte si, že maximální uplynulý čas úlohy <code>Program_01()</code> (označené jako PLC 1) zahrnuje také čas všech ostatních úloh, které přerušily úlohu <code>Program_01()</code>.
 Podobně je tomu i u <code>Program_02()</code>, který může být přerušen <code>Programem_03()</code> a hlavní rutinou cyklu serva; a u <code>Program_03()</code>, přerušeného hlavní funkcí cyklu.
 Maximální hodnotou je tedy součet uplynulého času funkce PLC a úloh s vyšší prioritou.
@@ -8280,7 +8280,7 @@ Jediné přesné měření času je uvedeno pro funkci <code>Program_04()</code>
 <p>Kromě okna <em>Systémové soubory</em> programu <strong>Control Observer</strong> je k dispozici okno určené pro programování PLC - <em>PLC Control</em>.
 Stačí nastavit správný název souboru PLC a nahrát jej do <strong>TGZ+Motion</strong>.
 PLC se spustí kliknutím na tlačítko <code>[Spustit]</code>. </p>
-<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
 <p>Proces <code>Run PLC</code> provede následující sekvenci:</p>
 <ol>
 <li>Zastaví všechny běžící PLC a počká na dokončení všech funkcí <code>Program_XX()</code>.</li>
@@ -8458,7 +8458,7 @@ Po přenosu souboru se zařízení automaticky restartuje.
 Aktualizovaný firmware se uloží na kartu SD.
 Soubor je možné uložit také přímo na SD kartu pomocí PC, v takovém případě musí být název <code>TGMC.fw</code> a soubor musí být v kořenovém adresáři karty.
 Viz také další kapitola o obsahu SD karty.</p>
-<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
 <p>Může se stát, že se při zpětném čtení souborů ze zařízení se objeví chyba <code>Device Offline</code>, zejména při použití protokolu FSP.
 Obvykle to znamená, že použitý ethernetový adaptér nemá dostatek vyrovnávacích paměti (doporučuje se 32 nebo více).
 Protokol FSP je určen pro výkonné adaptéry, konkrétně pro adaptéry PCIe.</p>

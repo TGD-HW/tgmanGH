@@ -8140,7 +8140,7 @@ The virtual PLC can be developed and tested completely on PC if necessary and th
 <p>The Control Observer is a service and monitoring tool running on a Windows PC and plays a big role in the maintenance, firmware update, PLC development and TGMcontroller commissioning.
 First of all it must be connected to the device.
 Use the <em>Connection Info</em> window for that:</p>
-<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/connectionInfo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connection info dialog" src="../img/connectionInfo.png" style="width:60%;" /></a></p>
 <p>Select the desired connection type in the <code>Connection Device</code> group box.
 Use TCP or UDP connection if the IP address is already known (displayed during startup in the LED display) and valid within an Ethernet segment.
 Use the FSP type if the Ethernet cable is connected from PC directly (peer to peer) to the FSP (X12) connector.
@@ -8151,7 +8151,7 @@ Then all the features are available and the <strong>Control Observer</strong> wo
 It can be edited directly on the card by PC or it can be read from the device by the <strong>Control Observer</strong>, modified and then written back.
 Use the <code>System Files</code> window, adjust the names in the edit boxes accordingly and use <code>[Read]</code> and then <code>[Write]</code> buttons (INI file rows).
 The file names on the PC can be arbitrary, <strong>TGMcontroller</strong> internally uses the correct SD card’s file names.</p>
-<p><a class="glightbox" href="../img/systemFiles.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files dialog" src="../img/systemFiles.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFiles.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="System files dialog" src="../img/systemFiles.png" style="width:60%;" /></a></p>
 <p>After the <code>TGM.INI</code> file modification, it is necessary to restart the TGMcontroller (by Observer’s button <code>[Restart Device]</code> or by power off/on sequence).   </p>
 <p>The internal feedbacks and inputs/outputs must be mapped to the TGMotion in the <code>TGM.INI</code> file if necessary.
 The values are visible in the SERVO structure. Use the servo type 92:</p>
@@ -8470,7 +8470,7 @@ It also initializes the C standard library and all the dependencies like pointer
 <p>In addition to Control Observer’s System Files window, there is a dedicated one for PLC programming – PLC Control.
 Just set the correct PLC filename and Upload it to the TGMcontroller.
 The PLC is started by clicking the button <code>[Run]</code>.</p>
-<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/PLCcontrol.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PLC control dialog" src="../img/PLCcontrol.png" style="width:60%;" /></a></p>
 <p>The Run PLC process performs the following sequence:</p>
 <ol>
 <li>Stops any running PLC and wait for all the <code>Program_XX()</code> functions to finish.</li>
@@ -8531,7 +8531,7 @@ Cycle_Time_Program_01=0
 ```
 </code></pre></div>
 <p>The Control Observer’s <code>System Timers</code> window shows the elapsed time of various TGMotion’s tasks.</p>
-<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemTimers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="System timers dialog" src="../img/systemTimers.png" style="width:60%;" /></a></p>
 <p>Note that the maximal elapsed time of the <code>Program_01()</code> (labeled as PLC 1) includes also the time of all the other tasks which interrupted the <code>Program_01()</code>.
 The similar thing happens for <code>Program_02()</code> which can be interrupted by <code>Program_03()</code> and the main servo cycle routine; and for <code>Program_03()</code>, interrupted by the main cycle function.
 So the maximal value could be the sum of elapsed time of the PLC function and the tasks of higher priority.
@@ -8623,7 +8623,7 @@ After the file transfer, the device will be automatically restarted.
 The updated firmware is stored to the SD card.
 It is also possible to store the file directly to the SD card by PC, in that case the name must be <code>TGMC.fw</code> and the file must be in the root directory of the card.
 See also the next chapter about the SD card contents.</p>
-<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
+<p><a class="glightbox" href="../img/systemFilesFW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="System files FW dialog" src="../img/systemFilesFW.png" style="width:60%;" /></a></p>
 <p>It could happen that a Device Offline error appears during the read back of the files from the device, especially when using FSP protocol.
 This usually means that used Ethernet adapter has not enough packet buffers (32 or more are recommended).
 The FSP protocol is designed for high performance adapters, namely the PCIe ones.</p>

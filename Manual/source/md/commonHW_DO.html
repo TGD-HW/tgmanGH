@@ -8067,7 +8067,7 @@ Napájení je rozděleno na dvě skupiny.
 Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konektoru X8).
 Výstupy DO2,4,6 jsou napájeny z napájecího vstupu VCC DO2,4,6 (pin 11 konektoru X8).   </p>
 <p>Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
-<a class="glightbox" href="../img/TGZ_DO_simplified.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
+<a class="glightbox" href="../img/TGZ_DO_simplified.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
 <p>Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.</p>
 <div class="admonition warning">
 <p class="admonition-title">Varování</p>
@@ -8080,18 +8080,18 @@ Dojde-li např. k přetížení DO2, inteligentní ochrana odpojí napájení ce
 DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.   </p>
 <h2 id="typicke-zapojeni">Typické zapojení<a class="headerlink" href="#typicke-zapojeni" title="Permanent link">&para;</a></h2>
 <p>Typické schéma připojení zátěže k DO je nejčastěji <em>horní spínač</em>.   </p>
-<p><a class="glightbox" href="../img/HS_switch.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../img/HS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../img/HS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../img/HS_switch.svg" style="width:30%;" /></a>   </p>
 <p>Zátěž je připojena mezi DO a GNDIO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví napájecí napětí VDDIO.
 Povelem <code>vypni</code> (log. 0) se na zátěži objeví GNDIO.</p>
 <p>Opačným případem je připojení zátěže k DO jako <em>dolní spínač</em>.   </p>
-<p><a class="glightbox" href="../img/LS_switch.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../img/LS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../img/LS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../img/LS_switch.svg" style="width:30%;" /></a>   </p>
 <p>Zátěž je připojena mezi VDDIO a DO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
 Povelem <code>vypni</code> (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   </p>
 <h2 id="induktivni-zatez">Induktivní zátěž<a class="headerlink" href="#induktivni-zatez" title="Permanent link">&para;</a></h2>
 <p>Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
 Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   </p>
-<p><a class="glightbox" href="../img/InductiveLoad.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../img/InductiveLoad.svg" style="width:35%;" /></a>
-<a class="glightbox" href="../img/InductiveLoadLS.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
+<p><a class="glightbox" href="../img/InductiveLoad.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../img/InductiveLoad.svg" style="width:35%;" /></a>
+<a class="glightbox" href="../img/InductiveLoadLS.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Anti-kickback</p>
 <p>Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.

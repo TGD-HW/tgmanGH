@@ -8067,7 +8067,7 @@ The power supply is divided into two groups.
 The DO1,3,5 outputs are powered from the VCC DO1,3,5 power input (pin 12 of connector X8).
 The DO2,4,6 outputs are powered from the VCC DO2,4,6 power input (pin 11 of connector X8).   </p>
 <p>For a simplified wiring diagram of the digital outputs, see the figure:
-<a class="glightbox" href="../../../../Manual/source/img/TGZ_DO_simplified.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../../../../Manual/source/img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
+<a class="glightbox" href="../../../../Manual/source/img/TGZ_DO_simplified.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../../../../Manual/source/img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
 <p>Since these are push-pull outputs, the output state is defined at all times and there is no high-Z option.
 Logic 0 (DO connected to GNDIO) or logic 1 (DO connected to VDDIO).
 The outputs are never floating.</p>
@@ -8083,18 +8083,18 @@ If, for example, DO2 is overloaded, the intelligent protection disconnects the p
 In this case, DO1, DO3 and DO5 will operate without any interruption.</p>
 <h2 id="typical-wiring">Typical wiring<a class="headerlink" href="#typical-wiring" title="Permanent link">&para;</a></h2>
 <p>The typical connection diagram of the load to the DO is most often <em>high side switch</em>. </p>
-<p><a class="glightbox" href="../../../../Manual/source/img/HS_switch.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../../../../Manual/source/img/HS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../../../../Manual/source/img/HS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../../../../Manual/source/img/HS_switch.svg" style="width:30%;" /></a>   </p>
 <p>The load is connected between the DO and GNDIO. The DO <code>ON</code> command (log 1) causes the supply voltage VDDIO to appear on the load.
 The command <code>OFF</code> (log 0) causes GNDIO to appear on the load.</p>
 <p>The opposite case is to connect the load to the DO as a <em>low side switch</em>.   </p>
-<p><a class="glightbox" href="../../../../Manual/source/img/LS_switch.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../../../../Manual/source/img/LS_switch.svg" style="width:30%;" /></a>   </p>
+<p><a class="glightbox" href="../../../../Manual/source/img/LS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../../../../Manual/source/img/LS_switch.svg" style="width:30%;" /></a>   </p>
 <p>The load is connected between VDDIO and DO. The DO command <code>ON</code> (log 1) causes the VDDIO supply voltage to appear at both ends of the load, i.e. no current flows through the load. The load is not energized.
 With the command <code>OFF</code> (log 0), VDDIO appears on the load against GNDIO and the load is switched on - current flows and the load is energized.  </p>
 <h2 id="inductive-load">Inductive load<a class="headerlink" href="#inductive-load" title="Permanent link">&para;</a></h2>
 <p>When switching inductive loads of higher power (typically relay coils, contactors, valves, etc.) it is necessary to use an external protection diode D1 (anti-kickback) suitably current and voltage rated.
 We recommend using a rectifier or schottky diode connected according to the schematic:   </p>
-<p><a class="glightbox" href="../../../../Manual/source/img/InductiveLoad.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../../../../Manual/source/img/InductiveLoad.svg" style="width:35%;" /></a>
-<a class="glightbox" href="../../../../Manual/source/img/InductiveLoadLS.svg" data-type="image" data-width="80vw" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../../../../Manual/source/img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
+<p><a class="glightbox" href="../../../../Manual/source/img/InductiveLoad.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../../../../Manual/source/img/InductiveLoad.svg" style="width:35%;" /></a>
+<a class="glightbox" href="../../../../Manual/source/img/InductiveLoadLS.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../../../../Manual/source/img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Anti-kickback</p>
 <p>When switching inductive loads, a voltage surge is generated on the inductance being switched off.
