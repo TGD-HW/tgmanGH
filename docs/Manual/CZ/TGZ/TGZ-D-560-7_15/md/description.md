@@ -189,7 +189,65 @@ ___
 	--8<-- "md/X7_FB2_8pin_B2CF.md"
 	
 	Další informace ohledně zpětné vazby 2 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+		
+-   **X3 - Motorový konektor osa 1**
+
+    ---
+	Pohled ze strany vodičů:
+	
+	![Motor connector](../../../../source/img/1164960000.webp){: style="width:70%;" }   
+	
+	![Motor connector angle](../../../../source/img/1164960000_1.webp){: style="width:70%;" } 	
+	
+	
+-    Weidmüller BLZ 7.62HP/06/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X3_M1_6pin_BLZ__7_62.md"
+
+	!!! warning "Orientace konektorů"
+	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.	
+		
+-   **X4 - Motorový konektor osa 2**
+
+    ---
+	Pohled ze strany vodičů:
+	
+	![Motor connector](../../../../source/img/1164960000.webp){: style="width:70%;" }   
+	
+	![Motor connector angle](../../../../source/img/1164960000_1.webp){: style="width:70%;" } 	
+	
+	
+-    Weidmüller BLZ 7.62HP/06/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X4_M2_6pin_BLZ__7_62.md"
+
+	!!! warning "Orientace konektoru"
+	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.			
+	
+-   **X2 - Napájení silové části**
+
+    ---
+	Pohled na konektor ze strany vodičů:
+	![PWR connector back view](../../../../source/img/1093440000.webp){: style="width:50%;" }   
+	
+	![PWR connector 3D view](../../../../source/img/1093440000_1.webp){: style="width:50%;" }	
+
+-    Weidmüller BLZ 7.62HP/03/180LR SN BK BX
+
+    ---
+
+	--8<-- "md/X2_560_DC_3pin_BLZ__7_62.md"
+	
+	!!! warning "Orientace konektorů"
+	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.		
+	
 
 </div>
-
 
