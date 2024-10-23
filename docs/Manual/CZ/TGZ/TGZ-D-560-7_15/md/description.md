@@ -11,20 +11,22 @@ ___
 
 ![ENET/ECAT/24V connectors](../../../../source/img/TGZ-D-560-3_9_enetCon.webp){: style="width:80%;" }
 
-
-
 <div class="grid cards" markdown>
 
--   **X2 - DC bus konektor**
+-   **X1 - Napájení řídicí části**
 
     ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/D560DCbusCon.svg){: style="width:70%;" }
+	Pohled zezadu (strana vodičů)   
+	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Šroubovací svorky M8
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
-	--8<-- "md/X2_D560DCbus.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
 
 </div>
 
@@ -35,65 +37,6 @@ ___
 ![IO/CAN/SD connectors](../../../../source/img/TGZ-D-560-3_9_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
-
--   **X1 - Napájení řídicí části**
-
-    ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
-
--    Weidmüller BCZ 3.81/05/180 SN OR BX
-
-	---
-
-	--8<-- "md/X1_24V_5pin_BCZ.md"
-
--   **X3 - Motorový konektor osa 1**
-
-    ---
-	
-	![Motor connector 1](../../../../source/img/2626-1104.svg){: style="width:70%;" }
-
--    Wago push-in svorky
-
-    ---
-
-	--8<-- "md/X3_M1_4pin_wago_2636.md"
-	
--   **X4 - Motorový konektor osa 2**
-
-    ---
-	
-	![Motor connector 2](../../../../source/img/2626-1104.svg){: style="width:70%;" }
-
--    Wago push-in svorky
-
-    ---
-
-	--8<-- "md/X4_M2_4pin_wago_2636.md"
-	
--   **X14 - Brzda/Termistor osa 1**
-
-    ---
-	
-	![Brake/Thermistor 1](../../../../source/img/1876530000R.svg){: style="width:70%;" }
-
--    Wago LSF svorky
-
-    ---
-
-	--8<-- "md/X14_BR1_4pin_LSF.md"
-	
--   **X15 - Brzda/Termistor osa 2**
-
-    ---
-	
-	![Brake/Thermistor 2](../../../../source/img/1876530000R.svg){: style="width:70%;" }
-
--    Wago LSF svorky
-
-    ---
-
-	--8<-- "md/X15_BR2_4pin_LSF.md"
 
 -   **X8 - Digitální I/O, analogové vstupy**
 
