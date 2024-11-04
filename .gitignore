@@ -9,8 +9,8 @@ node_modules/
 #folders
 dist/
 site/*
+venv/*
 .github/
-*.xlsx#
 
 # Compiled Java class files
 *.class
@@ -44,12 +44,4 @@ Thumbs.db
 *.app
 *.exe
 *.war
-
-# Large media files
-*.mp4
-*.tiff
-*.avi
-*.flv
-*.mov
-*.wmv
 
