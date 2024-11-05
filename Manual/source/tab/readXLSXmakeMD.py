@@ -1254,6 +1254,24 @@ markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../source/md/X4_M2_6pin_BLZ__7_62.md"
 save_markdown_table(markdown_table, output_file)
 
+# X4 - 5pin Weidmuller - BCZ 3.81/05/180 SN OR BX - +24V logic power TGS560
+file_path = "connectors.xlsx"
+sheet_name = "X4_TGS560_24V_5pin_BCZ"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X4_TGS560_24V_5pin_BCZ.md"
+save_markdown_table(markdown_table, output_file)
+
+# S1 - DIP switch 4pos. TGS560
+file_path = "connectors.xlsx"
+sheet_name = "S1_TGS560_DIP"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/S1_TGS560_DIP.md"
+save_markdown_table(markdown_table, output_file)
+
 ##########################################################################################
 # Connectors EN parameter MD generator
 ##########################################################################################
