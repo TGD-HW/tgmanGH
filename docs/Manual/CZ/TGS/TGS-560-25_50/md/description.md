@@ -18,9 +18,9 @@ ___
 
     ---
 	
-	![Mains IN](../../../../source/img/1778078.svg){: style="width:60%;" }
+	![Mains IN](../../../../source/img/1060470000.webp){: style="width:60%;" }
 
--    Phoenix PC 5/ 3-STCL1-7,62
+-    WEIDMÜLLER BVF 7.62HP/04/180F
 
 	---
 	
@@ -30,9 +30,9 @@ ___
 
     ---
 	
-	![DCbus out](../../../../source/img/1778078.svg){: style="width:60%;" }
+	![DCbus out](../../../../source/img/1060490000.webp){: style="width:60%;" }
 
--    Phoenix PC 5/ 3-STCL1-7,62
+-   WEIDMÜLLER BVF 7.62HP/06/180F
 
 	---
 	
@@ -42,13 +42,13 @@ ___
 
     ---
 	
-	![Brake res.](../../../../source/img/1778078.svg){: style="width:60%;" }
+	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }
 
--    Phoenix PC 5/ 3-STCL1-7,62
+-   WEIDMÜLLER BLZ 7.62HP/03/180F
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"	
+	--8<-- "md/X1_ACIN_PC5.md"
 
 </div>
   
@@ -63,14 +63,17 @@ ___
 -   **X3 - Napájení řídicí části**
 
     ---
+	Pohled zezadu (strana vodičů)   
 	
-	![24Vin connector](../../../../source/img/1778120.svg){: style="width:85%;" }
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Phoenix PC 5/ 8-STCL1-7,62
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
-	--8<-- "md/X2_DC_8pin_PC5.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
 
 -   **X2 - Kontrolní výstupy**
 
@@ -94,25 +97,25 @@ ___
 
 <div class="grid cards" markdown>
 
--   **S1**
+-   **S1 - Výběr režimu zařízení**
 
     ---
 	
-	![DCout connector](../../../../source/img/1778120.svg){: style="width:85%;" }
+	![DIP switch](../../../../source/img/DS03-254-04BE.webp){: style="width:40%;" }
 
--    Phoenix PC 5/ 8-STCL1-7,62
+-    DIP switch 4 pozice
 
-	---
+    ---
 
-	--8<-- "md/X2_DC_8pin_PC5.md"
+	--8<-- "md/S1_TGS560_DIP.md"
 
--   **LED**
+-   **LED signalizace**
 
     ---
 	
-	![DO](../../../../source/img/1792790000.svg){: style="width:50%;" }
+	![LED](../../../../source/img/1792790000.svg){: style="width:50%;" }
 
--    Weidmüller BCZ 3.81/04/180 SN BK BX
+-   LED 
 
     ---
 
