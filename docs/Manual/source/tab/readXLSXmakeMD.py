@@ -1272,6 +1272,43 @@ markdown_table = connectors(file_path, sheet_name, range_start, range_end)
 output_file = "../../source/md/S1_TGS560_DIP.md"
 save_markdown_table(markdown_table, output_file)
 
+# S1 - DIP switch 4pos. TGS560
+file_path = "connectors.xlsx"
+sheet_name = "LED_TGS560"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/LED_TGS560.md"
+save_markdown_table(markdown_table, output_file)
+
+# X4 - 4pin Weidmuller - BVF 7.62HP/04/180F - ACIN TGS560-25
+file_path = "connectors.xlsx"
+sheet_name = "X4_ACIN_4pin_TGS560_25"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X4_ACIN_4pin_TGS560_25.md"
+save_markdown_table(markdown_table, output_file)
+
+# X1 - 6pin Weidmuller - BVF 7.62HP/06/180F - DCout TGS560-25
+file_path = "connectors.xlsx"
+sheet_name = "X1_DC_6pin_TGS560_25"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X1_DC_6pin_TGS560_25.md"
+save_markdown_table(markdown_table, output_file)
+
+# X5 - 3pin Weidmuller - BLZ 7.62HP/03/180F - BRres TGS560-25
+file_path = "connectors.xlsx"
+sheet_name = "X5_RBR_3pin_TGS560_25"
+range_start = "A1"
+range_end = "D100"
+markdown_table = connectors(file_path, sheet_name, range_start, range_end)
+output_file = "../../source/md/X5_RBR_3pin_TGS560_25.md"
+save_markdown_table(markdown_table, output_file)
+
+
 ##########################################################################################
 # Connectors EN parameter MD generator
 ##########################################################################################

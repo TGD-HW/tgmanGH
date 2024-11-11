@@ -18,29 +18,36 @@ ___
 
     ---
 	
-	![Mains IN](../../../../source/img/1060470000.webp){: style="width:60%;" }
+	Pohled na konektor zezadu (strana vodičů)
+	
+	![Mains IN](../../../../source/img/1060470000.webp){: style="width:70%;" }
 
 -    WEIDMÜLLER BVF 7.62HP/04/180F
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"
+	--8<-- "md/X4_ACIN_4pin_TGS560_25.md"
 	
 -   **X1 - Výstup DC bus**
 
     ---
 	
-	![DCbus out](../../../../source/img/1060490000.webp){: style="width:60%;" }
+	Pohled na konektor zezadu (strana vodičů)
+	
+	![DCbus out](../../../../source/img/1060490000.webp){: style="width:80%;" }
 
--   WEIDMÜLLER BVF 7.62HP/06/180F
+-    WEIDMÜLLER BVF 7.62HP/06/180F
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"	
+	--8<-- "md/X1_DC_6pin_TGS560_25.md"
+	
 	
 -   **X5 - Brzdný odpor**
 
     ---
+		
+	Pohled na konektor zezadu (strana vodičů)
 	
 	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }
 
@@ -48,7 +55,7 @@ ___
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"
+	--8<-- "md/X5_RBR_3pin_TGS560_25.md"
 
 </div>
   
@@ -73,14 +80,21 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X4_TGS560_24V_5pin_BCZ.md"
 
 -   **X2 - Kontrolní výstupy**
 
     ---
+		
+	Pohled na konektor zezadu (strana vodičů)
 	
-	![DO](../../../../source/img/1792790000.svg){: style="width:50%;" }
-
+	![DO](../../../../source/img/1792970000_1.webp){: style="width:60%;" }
+	![DO1](../../../../source/img/1792970000_2.webp){: style="width:60%;" }
+		
+	Pohled na konektor zepředu (z pohledu TGS)
+	
+	![DO2](../../../../source/img/1792970000_3.webp){: style="width:60%;" }
+	
 -    Weidmüller BCZ 3.81/04/180 SN BK BX
 
     ---
@@ -113,13 +127,13 @@ ___
 
     ---
 	
-	![LED](../../../../source/img/1792790000.svg){: style="width:50%;" }
+	![LED](../img/LED.webp){: style="width:85%;" }
 
 -   LED 
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.md"
+	--8<-- "md/LED_TGS560.md"
 	
 </div>
 
