@@ -6,7 +6,7 @@ Servozesilovač TGZ má vestavěnou funkci PROFINET Bridge, takže pro malý po�
 
 !!! warning "Varování"
 	Nastavení servozesilovače TGZ smí provádět pouze odborný pracovník s dostatečnými znalostmi techniky pohonů.
-	Veškerá elektrická zapojení musí být provedena v souladu s [uživatelským manuálem HW TGZ](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md).
+	Veškerá elektrická zapojení musí být provedena v souladu s [uživatelským manuálem HW TGZ](../../../../CZ/TGZ/TGZ-D-48-13_26/md/mark.md).
 	
 ##Rychlý průvodce nastavením
 - Zkontrolujte instalaci a montáž. Dodržujte všechny bezpečnostní pokyny uvedené v návodu k použití.

@@ -6,7 +6,7 @@
 
 ##Connectors
 ___
-### Strana silových konektorů
+###Power connectors side
 ___
 
 ![PWR connections](../../../../source/img/TGS-560-50_100_PWR.svg){: style="width:70%;" }

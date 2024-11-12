@@ -12,4 +12,4 @@ TGZ servo amplifier supports all the standard CAN bus speeds: 10, 20, 50, 100, 1
 The speed is selected by CAN_BaudRate register using TGZ_GUI service program.   
 
 Only professional staff member with a sufficient knowledge of drive technology is allowed to setup the TGZ servo amplifier.
-All the electrical connections must be done in conformance with the [TGZ HW user's manual](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md).
+All the electrical connections must be done in conformance with the [TGZ HW user's manual](../../../../CZ/TGZ/TGZ-D-48-13_26/md/mark.md).

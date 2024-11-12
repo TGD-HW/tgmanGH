@@ -3,7 +3,7 @@ Set-Location -Path "docs\Manual\source\tab\"
 
 # Run the Python script
 try {
-    python readXLSXmakeMD.py
+    python readXLSXmakeMDautomate.py
 } catch {
     Write-Host "An error occurred while running the Python script."
     pause

@@ -3,7 +3,7 @@ Napájecí moduly **TGS** jsou doplňkovým zařízením k digitálním servozes
 Zařízení slouží pro převod vstupního střídavého napětí 1 x 230 V<sub>AC</sub> nebo 3 x 400 V<sub>AC</sub> ze sítě na výkonové napájecí napětí servozesilovače 320 V<sub>DC</sub>, resp 560 V<sub>DC</sub>.
 Jeden napájecí modul **TGS** může napájet i několik digitálních servozesilovačů **TGZ** současně, jejich počet pak závisí na konfiguraci jednotlivých pohonů.
 
-![Device marking](../../../../source/img/markingTGS.svg){: style="width:60%;" }
+![Device marking](../../../../source/img/markingTGS.webp){: style="width:60%;" }
 
 ##Bezpečnostní pokyny
 ###Bezpečnost

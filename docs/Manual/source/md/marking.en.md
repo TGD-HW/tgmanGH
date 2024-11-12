@@ -6,7 +6,7 @@ TGZ is an economical and high-quality servomotor control solution.
 TGZ servo amplifiers are currently offered in several versions determined by number of controlled axes, power supply voltage, type of feedback (Hiperface DSL, EnDAT, SSI) and type of communication (EtherCAT, CANopen, PROFINET).
 The type of the feedback and communication is given by installed firmware and can be changed by user.
 
-![Device marking](../../../../source/img/marking.svg){: style="width: 70%;" }
+![Device marking](../../../../source/img/marking.webp){: style="width: 70%;" }
 
 ##Safety instructions
 ###Safety

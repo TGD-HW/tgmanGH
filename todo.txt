@@ -11,8 +11,6 @@ je potřeba naplnit tabulky parametrů, tabulky konektorů, přidat je do zobraz
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 
-Pavlík jebe data k chobotnici a TGS-560-25 sem: \\tgd-n1\_VyvojHW\Manual\WEB
-
 doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, ERR přes STO - hlavně teda RDY
 
 firmware strom verzí

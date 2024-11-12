@@ -14,12 +14,12 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X2 - DC bus konektor**
+-   **X2 - DC bus connector**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/D560DCbusCon.svg){: style="width:70%;" }
 
--    Šroubovací svorky M8
+-    Screw terminals M8
 
 	---
 

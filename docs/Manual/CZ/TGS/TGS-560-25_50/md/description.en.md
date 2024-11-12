@@ -6,59 +6,134 @@
 
 ##Connectors
 ___
-### Strana silových konektorů
+###Power connectors side
 ___
 
-![PWR connections](../../../../source/img/TGS-560-50_100_PWR.svg){: style="width:70%;" }
+![PWR connections](../../../../source/img/TGS-560-25_50_PWRconns.webp){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>
 
--   **X1 - Network connector**
+-   **X4 - Mains connector**
 
     ---
 	
-	![PWR connector](../../../../source/img/1778078.svg){: style="width:60%;" }
+	Cable side view
+	
+	![Mains IN](../../../../source/img/1060470000.webp){: style="width:70%;" }
 
--    Phoenix PC 5/ 3-STCL1-7,62
+-    WEIDMÜLLER BVF 7.62HP/04/180F
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.en.md"
+	--8<-- "md/X4_ACIN_4pin_TGS560_25.md"
+	
+-   **X1 - DC bus connector**
+
+    ---
+	
+	Cable side view
+	
+	![DCbus out](../../../../source/img/1060490000.webp){: style="width:80%;" }
+
+-    WEIDMÜLLER BVF 7.62HP/06/180F
+
+	---
+	
+	--8<-- "md/X1_DC_6pin_TGS560_25.md"
+	
+	
+-   **X5 - Brake resistor**
+
+    ---
+		
+	Cable side view
+	
+	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }
+
+-   WEIDMÜLLER BLZ 7.62HP/03/180F
+
+	---
+	
+	--8<-- "md/X5_RBR_3pin_TGS560_25.md"
 
 </div>
   
 ___
-### Strana napájení řízení, kontrolních výstupů, term.
+### Logic power side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGS-560-50_100_Top.svg){: style="width:70%;" }
+![Motor/Feedback connectors](../../../../source/img/TGS-560-25_50_24Vside.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
--   **X2 - DCbus out connector**
+-   **X3 - Logic power**
 
     ---
+	Cable side view   
 	
-	![DCout connector](../../../../source/img/1778120.svg){: style="width:85%;" }
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Phoenix PC 5/ 8-STCL1-7,62
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
-	--8<-- "md/X2_DC_8pin_PC5.en.md"
+	--8<-- "md/X4_TGS560_24V_5pin_BCZ.md"
 
--   **X3 - Control output connector**
+-   **X2 - Control outputs**
 
     ---
+		
+	Cable side view
 	
-	![DO](../../../../source/img/1792790000.svg){: style="width:50%;" }
-
+	![DO](../../../../source/img/1792970000_1.webp){: style="width:60%;" }
+	![DO1](../../../../source/img/1792970000_2.webp){: style="width:60%;" }
+		
+	Front view (TGS side)
+	
+	![DO2](../../../../source/img/1792970000_3.webp){: style="width:60%;" }
+	
 -    Weidmüller BCZ 3.81/04/180 SN BK BX
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.en.md"
+	--8<-- "md/X3_DO_4pin_BCZ.md"
+	
+</div>
+
+___
+### Mode selector side
+___
+
+![LED&DIP](../../../../source/img/TGS-560-25_50_DIPside.webp){: style="width:70%;" }
+
+<div class="grid cards" markdown>
+
+-   **S1 - Mode select**
+
+    ---
+	
+	![DIP switch](../../../../source/img/DS03-254-04BE.webp){: style="width:70%;" }
+
+-    4 position DIP switch
+
+    ---
+
+	--8<-- "md/S1_TGS560_DIP.md"
+
+-   **LED signalization**
+
+    ---
+	
+	![LED](../img/LED.webp){: style="width:90%;" }
+
+-   LED 
+
+    ---
+
+	--8<-- "md/LED_TGS560.md"
 	
 </div>
 

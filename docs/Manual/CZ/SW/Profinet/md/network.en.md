@@ -6,7 +6,7 @@ The TGZ servo amplifier has built-in PROFINET bridge functionality, so for a sma
 
 !!! warning "Warning"
     Only professional staff member with sufficient knowledge of drive technology is allowed to set up the TGZ servo amplifier.
-    All the electrical connections must be done in conformance with the [TGZ user’s manual](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md).
+    All the electrical connections must be done in conformance with the [TGZ user’s manual](../../../../CZ/TGZ/TGZ-D-48-13_26/md/mark.md).
 
 ##Fast Guide to Setup
 - Check the installation and assembly. Consult all the safety instructions in the user’s manual.

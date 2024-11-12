@@ -5,7 +5,7 @@ EtherCAT je registrovaná ochranná známka a patentovaná technologie, licencov
 CANopen a CiA jsou registrované ochranné známky společnosti CAN in Automation.
 
 Tento návod popisuje nastavení pohonu TGZ v síti EtherCAT nebo CANopen. Pohony TGZ musí být naprogramovány příslušným firmwarem.
-Před použitím pohonu v prostředí EtherCAT nebo CANopen je nutné se důkladně seznámit s [uživatelským manuálem HW TGZ](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md).
+Před použitím pohonu v prostředí EtherCAT nebo CANopen je nutné se důkladně seznámit s [uživatelským manuálem HW TGZ](../../../../CZ/TGZ/TGZ-D-48-13_26/md/mark.md).
 
 Pro programování TGZ je nezbytná znalost následujících dokumentů:
 

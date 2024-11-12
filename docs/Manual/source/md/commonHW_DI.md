@@ -1,19 +1,12 @@
-##Základní popis {#commonDI1-8}
-Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrováno osm rychlých izolovaných digitálních vstupů.
-Šest z nich (DI1-6) lze u výrobce nakonfigurovat buď pro klasickou funkci digitálního vstupu, nebo jako přímé vstupy pro hallovy sondy.
-V obou případech je nutné připojit napájecí napětí na VDDIO proti GNDIO, jelikož jsou vstupy aktivní a vyžadují napájení.
-Stačí připojení napájecího napětí na jeden ze dvou napájecích vstupu VDDIO, aby aktivní vstupy fungovaly správně.
-Zbývající digitální vstupy č. 7 a č. 8 jsou standardní, pasivní, s nominální vstupní úrovní +24V a nevyžadují připojení VDDIO.
-Všechny digitální vstupy 1-8 mají integrovanou ochranu proti přepólování (až do -70 V) a proti přepětí (nad 30 V).
-
-##Parametry DI
-
---8<-- "md/X8_commonHW_DI_tab.md"
-
-##Použití s hallovými sondami
-Pokud chcete využít přímého připojení hallových sond určených pro komutaci motoru do konektoru **X8** na vstupy `1,3,5` (osa 1) nebo `2,4,6` (osa 2) je potřeba požádat výrobce předem o správně HW uzpůsobenou verzi.
-Tato verze se liší jak v hardware, tak ve firmware.
-Dbejte na to, aby takto použité hallovy sondy byly **přizpůsobeny pro napájecí napětí až 30V**, jelikož digitální vstupy servozesilovače TGZ pracují na nominální hladině **24V**.
-Použití hallových sond s napájecím napětím 5V nebo 12V nebude v tomto případě fungovat.   
-
-Pokud není možné z nějakého důvodu zajistit vhodné hallovy sondy a jejich napájecí napětí 24V, doporučujeme použít speciální přizpůsobovací modul [TGHall](../../CZ/ETC/TGHall/md/description.md#TGhall_1), který si vyžádejte u společnosti TG Drives.
+|  č. vstupu  |  rozsah napětí log. 0  |  rozsah napětí log. 1  |  nominální vstupní napětí  |  rozsah napájení DI/DO  |  spotřeba v log. 1 (17V) ±20%  |  spotřeba v log. 1 (24V) ±20%  |  vlastní spotřeba v log.1 (28V) ±20%  |  Nominální vstupní odpor ±20% |  Přiřazeno k ose  |  Max. vstupní frekvence - obdélník  |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|  #  |  V<sub>log0</sub>  |  V<sub>log1</sub>  |  V<sub>nom</sub> |  VDD<sub>IO</sub> |  I<sub>in17</sub> |  I<sub>in24</sub> |  I<sub>in28</sub> |  R<sub>in,Nom</sub>  |  Osa č.  |  f<sub>max,Sq</sub> |
+| - |  V |  V |  V |  V  |  mA |  mA |  mA |  kΩ  | -					  | kHz					  |
+| 1 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 1 | 50 |
+| 2 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 2 | 50 |
+| 3 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 1 | 50 |
+| 4 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 2 | 50 |
+| 5 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 1 | 50 |
+| 6 |  0-10  |  17-28V  | 24 |  17-28V | 2.05 | 2.92 | 4.15 | 8.2 | 2 | 50 |
+| 7 |  0-10  |  17-28V  | 24 |  nevyžaduje | 1.25 | 3.32 | 4.5 | 7.2 | 1 | 50 |
+| 8 |  0-10  |  17-28V  | 24 |  nevyžaduje | 1.25 | 3.32 | 4.5 | 7.2 | 2 | 50 |

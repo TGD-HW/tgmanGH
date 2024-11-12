@@ -8,7 +8,7 @@ CANopen and CiA are registered community trademarks of CAN in Automation.
 CODESYS is copyrighted by CODESYS Development GmbH.   
 
 This manual describes the setup of the TGZ drive in the EtherCAT or CANopen network. The TGZ drives must be programmed with the corresponding firmware.
-The [TGZ HW user's manual](../../../../CZ/TGZ/TGZ-D-48-13/md/mark.md) must be thoroughly read and used before the drive can be used in the EtherCAT or CANopen environment.
+The [TGZ HW user's manual](../../../../CZ/TGZ/TGZ-D-48-13_26/md/mark.md) must be thoroughly read and used before the drive can be used in the EtherCAT or CANopen environment.
 
 The knowledge of the following documents is essential to TGZ programming:
 

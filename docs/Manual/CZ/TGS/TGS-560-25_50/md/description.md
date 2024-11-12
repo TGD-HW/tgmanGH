@@ -115,7 +115,7 @@ ___
 
     ---
 	
-	![DIP switch](../../../../source/img/DS03-254-04BE.webp){: style="width:40%;" }
+	![DIP switch](../../../../source/img/DS03-254-04BE.webp){: style="width:70%;" }
 
 -    DIP switch 4 pozice
 
@@ -127,7 +127,7 @@ ___
 
     ---
 	
-	![LED](../img/LED.webp){: style="width:85%;" }
+	![LED](../img/LED.webp){: style="width:90%;" }
 
 -   LED 
 

@@ -4,21 +4,20 @@
 | SEL2 | 2. bit kódu | 0100 |
 | SEL3 | 3. bit kódu | 0010 |
 | SEL4 | 4. (nejnižší) bit kódu – LSB | 0001 |
-|   |   |   |
-| Zvolený 4 bit. kód | Význam – volba funkce |
-| 0 | brzdný odpor interní |
-| 1 | brzdný odpor 1 kW |
-| 10 | brzdný odpor 1 kW |
-| 11 | brzdný odpor 1 kW |
-| 100 | brzdný odpor 1 kW |
-| 101 | brzdný odpor 1 kW |
-| 110 | brzdný odpor 1 kW |
-| 111 | brzdný odpor 1 kW |
-| 1000 | brzdný odpor 1 kW |
-| 1001 | brzdný odpor 1 kW |
-| 1010 | brzdný odpor 1 kW |
-| 1011 | brzdný odpor 1 kW |
-| 1100 | brzdný odpor 1 kW |
-| 1101 | brzdný odpor 1 kW |
-| 1110 | brzdný odpor 1 kW |
-| 1111 | brzdný odpor 1 kW |
+| **Zvolený 4 bit. kód** | **Význam – volba funkce** |
+| 0 | výchozí nastavení |
+| 1 | rezervováno |
+| 10 | rezervováno |
+| 11 | rezervováno |
+| 100 | rezervováno |
+| 101 | rezervováno |
+| 110 | rezervováno |
+| 111 | rezervováno |
+| 1000 | rezervováno |
+| 1001 | rezervováno |
+| 1010 | rezervováno |
+| 1011 | rezervováno |
+| 1100 | rezervováno |
+| 1101 | rezervováno |
+| 1110 | rezervováno |
+| 1111 | rezervováno |

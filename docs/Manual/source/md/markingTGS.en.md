@@ -3,7 +3,7 @@ Power modules **TGS** are supplementary devices for digital servo amplifiers **T
 These devices convert the input alternating current of 1 x 230 V<sub>AC</sub> or 3 x 400 V<sub>AC</sub> from the grid to the servo amplifier's power supply voltage of 320 V<sub>DC</sub> or 560 V<sub>DC</sub> respectively.
 One **TGS** power module can power several **TGZ** digital servo amplifiers simultaneously, with the number of amplifiers depending on the configuration of each drive.
 
-![Device marking](../../../../source/img/markingTGS.en.svg){: style="width:60%;" }
+![Device marking](../../../../source/img/markingTGS.en.webp){: style="width:60%;" }
 
 ##Safety instructions
 ###Safety

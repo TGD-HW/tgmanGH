@@ -44,14 +44,14 @@ extra:
 #        description: Na našich webových stránkách používáme soubory cookies. Některé z nich jsou nezbytné, zatímco jiné nám pomáhají vylepšit tento web a váš uživatelský zážitek. Souhlasíte s používáním všech cookies? 
 plugins:
   - search
-  - table-reader:
-      base_path: "config_dir"
-      data_path: "docs/Manual/source/common/tab"
-      search_page_directory: True
-      allow_missing_files: False
-      select_readers:
-        - read_excel
-        - read_csv
+  # - table-reader:
+      # base_path: "config_dir"
+      # data_path: "docs/Manual/source/common/tab"
+      # search_page_directory: True
+      # allow_missing_files: False
+      # select_readers:
+      #  - read_excel
+      #  - read_csv
   - glightbox:
        touchNavigation: true
        loop: false
@@ -188,14 +188,14 @@ nav:
     #- About: 'about.md'
         - 'TGZ':
             - 'TGZ-D-48-13/26': 
-                - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md'
-                - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/param.md'
-                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/description.md'                  
-                - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13/md/dimension.md'
-                - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13/md/mounting.md'
-                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13/md/electric.md'
-                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13/md/schematic.md'      
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13/md/safe.md'
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/description.md'                  
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/schematic.md'      
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/safe.md'
             - 'TGZ-D-48-50/100':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/param.md'
