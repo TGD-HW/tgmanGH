@@ -63,10 +63,17 @@ ___
 -   **X5 - Kontrolní výstupy**
 
     ---
+		
+	Pohled na konektor zezadu (strana vodičů)
 	
-	![DO](../../../../source/img/1792790000.svg){: style="width:50%;" }
-
--    Weidmüller BCZ 3.81/04/180F SN BK BX
+	![DO](../../../../source/img/1792970000_1.webp){: style="width:60%;" }
+	![DO1](../../../../source/img/1792970000_2.webp){: style="width:60%;" }
+		
+	Pohled na konektor zepředu (z pohledu TGS)
+	
+	![DO2](../../../../source/img/1792970000_3.webp){: style="width:60%;" }
+	
+-    Weidmüller BCZ 3.81/04/180 SN BK BX
 
     ---
 
