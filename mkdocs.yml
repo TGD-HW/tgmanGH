@@ -486,7 +486,7 @@ nav:
                 - Nastavení sítě: 'Manual/CZ/SW/Profinet/md/network.md'
                 - TIA portál: 'Manual/CZ/SW/Profinet/md/TIA.md'
                 - PROFIdrive: 'Manual/CZ/SW/Profinet/md/profidrive.md'                    
-                - PROFIsafe:  'Manual/CZ/SW/Profinet/md/profisafe.md'                    
+                # - PROFIsafe:  'Manual/CZ/SW/Profinet/md/profisafe.md'                    
             - EtherNET UDP:
                 - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       
