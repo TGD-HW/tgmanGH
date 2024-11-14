@@ -20,9 +20,9 @@ ___
 	
 	Cable side view
 	
-	![Mains IN](../../../../source/img/1060470000.webp){: style="width:70%;" }
+	![Mains IN](../../../../source/img/1930070000.webp){: style="width:70%;" }
 
--    WEIDMÜLLER BVF 7.62HP/04/180F
+-    WEIDMÜLLER BVZ 7.62HP/04/180F
 
 	---
 	
@@ -34,9 +34,9 @@ ___
 	
 	Cable side view
 	
-	![DCbus out](../../../../source/img/1060490000.webp){: style="width:80%;" }
+	![DCbus out](../../../../source/img/1930090000.webp){: style="width:80%;" }
 
--    WEIDMÜLLER BVF 7.62HP/06/180F
+-    WEIDMÜLLER BVZ 7.62HP/06/180F
 
 	---
 	

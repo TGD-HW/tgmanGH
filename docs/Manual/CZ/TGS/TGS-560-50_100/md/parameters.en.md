@@ -18,8 +18,8 @@
 | **SIGNALING** |   |
 | LED signaling | 1x green (Ready)  1x red (Error) |
 | **CONNECTORS** |   |
-| Power supply of the control part | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
-| Network connector | 1 x 7pin WAGO push-in |
+| Logic power | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
+| Mains connector | 1 x 7pin WAGO push-in |
 | DC bus connector | screw M8x12 |
 | Digital outputs connector | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |
 | DI connector | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |

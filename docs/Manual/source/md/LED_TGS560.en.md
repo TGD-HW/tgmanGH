@@ -8,6 +8,6 @@
 | short flash | 6 | brake resistor overtemperature |
 | short flash | 7 | reserved |
 | short flash | 8 | reserved |
-| **Green LED** | **Description** | ** ** |
-| permanently on | device ready, no errors |   |
-| permanently off | device not ready |   |
+| **Green LED** | **Description** |
+| permanently on | device ready, no errors |
+| permanently off | device not ready |

@@ -1,13 +1,6 @@
 igor chybí:
 D-48-50/100 stínění
 D-560-30/50 rozměry + stínění
-S-48-100/xyz stínění
-chobotnice vše - je potřeba přidat parametry konektorů
-D-560-3/9 model
-
-komplet dodělat TGZ-D-560-3_9, 7_15, 10_20. Mám jen nakopírovány složky a přejmenován odkaz na params.
-je potřeba naplnit tabulky parametrů, tabulky konektorů, přidat je do zobrazení YML
-
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 

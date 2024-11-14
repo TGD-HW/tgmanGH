@@ -17,8 +17,8 @@
 | **SIGNALING** |   |
 | LED signaling | 1x green (Ready)  1x red (Error) |
 | **CONNECTORS** |   |
-| Power supply of the control part | 1 x 5pin WEIDMÜLLER BCZ 3.81/05/180F |
-| AC IN connector | 1 x 4pin WEIDMÜLLER BVF 7.62HP/04/180F |
-| DC bus connector | 1 x 6pin WEIDMÜLLER BVF 7.62HP/06/180F |
+| Logic power | 1 x 5pin WEIDMÜLLER BCZ 3.81/05/180F |
+| Mains connector | 1 x 4pin WEIDMÜLLER BVZ 7.62HP/04/180F |
+| DC bus connector | 1 x 6pin WEIDMÜLLER BVZ 7.62HP/06/180F |
 | Digital outputs connector | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180F |
 | Brake resistor | 1 x 3pin WEIDMÜLLER BLZ 7.62HP/03/180F |

@@ -13,15 +13,6 @@ try {
 # Change directory back to the original location
 Set-Location -Path "../../../../"
 
-# Build the MkDocs site
-try {
-    mkdocs build --clean
-} catch {
-    Write-Host "An error occurred while building the MkDocs site."
-    pause
-    exit 1
-}
-
 # Serve the MkDocs site
 try {
     mkdocs serve

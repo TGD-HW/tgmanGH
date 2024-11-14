@@ -17,6 +17,6 @@
 | **SIGNALING** |   |
 | LED signaling | 1x green (Ready)  1x red (Error) |
 | **CONNECTORS** |   |
-| Network connector | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
+| Mains connector | 1 x 3pin PHOENIX  PC 5/ 3-STCL1-7,62   |
 | DC bus connector | 1 x 8pin PHOENIX PC 5/ 8-STCL1-7,62 |
 | Digital outputs connector | 1 x 4pin WEIDMÜLLER BCZ 3.81/04/180 SN BK BX |

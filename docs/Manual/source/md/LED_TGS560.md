@@ -8,6 +8,6 @@
 | krátké bliknutí | 6 | vysoká teplota brzdného rezistoru |
 | krátké bliknutí | 7 | rezervováno |
 | krátké bliknutí | 8 | rezervováno |
-| **Zelená LED** | **Význam** | ** ** |
-| trvalý svit | Zařízení připraveno |   |
-| trvale vypnuto | Zařízení nepřipraveno |   |
+| **Zelená LED** | **Význam** |
+| trvalý svit | Zařízení připraveno |
+| trvale vypnuto | Zařízení nepřipraveno |

@@ -9,7 +9,7 @@ ___
 ### Strana silových konektorů
 ___
 
-![PWR connections](../../../../source/img/TGS-560-50_100_PWR.svg){: style="width:70%;" }
+![PWR connections](../../../../source/img/TGS-560-50_100_PWR.webp){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>
@@ -18,13 +18,13 @@ ___
 
     ---
 	
-	![PWR connector](../../../../source/img/1778078.svg){: style="width:60%;" }
+	![PWR connector](../../../../source/img/2636-1107.webp){: style="width:80%;" }
 
--    Phoenix PC 5/ 3-STCL1-7,62
+-   Wago 2636-1107
 
 	---
 	
-	--8<-- "md/X1_ACIN_PC5.md"
+	--8<-- "md/X2_ACIN_7pin_2636.md"
 	
 -   **X6 - DC bus konektor**
 
@@ -43,7 +43,7 @@ ___
 ### Strana napájení řízení, kontrolních výstupů, term.
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGS-560-50_100_Top.svg){: style="width:70%;" }
+![Motor/Feedback connectors](../../../../source/img/TGS-560-50_100_Topside.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -90,6 +90,18 @@ ___
     ---
 
 	--8<-- "md/S1_TGS560_DIP.md"
+	
+-   **LED signalizace**
+
+    ---
+	
+	![LED](../img/LED.webp){: style="width:90%;" }
+
+-   LED 
+
+    ---
+
+	--8<-- "md/LED_TGS560.md"
 	
 </div>
 
