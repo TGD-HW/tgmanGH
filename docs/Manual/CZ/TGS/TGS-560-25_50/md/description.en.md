@@ -1,8 +1,8 @@
 ##3D view
-![3D view IO side](../img/IOside.svg){: style="width:70%;" }
+![3D view IO side](../img/IOside.webp){: style="width:60%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.svg){: style="width:70%;" }
+![3D view FB side](../img/MotSide.webp){: style="width:80%;" }
 
 ##Connectors
 ___
@@ -26,7 +26,7 @@ ___
 
 	---
 	
-	--8<-- "md/X4_ACIN_4pin_TGS560_25.md"
+	--8<-- "md/X4_ACIN_4pin_TGS560_25.en.md"
 	
 -   **X1 - DC bus connector**
 
@@ -40,7 +40,7 @@ ___
 
 	---
 	
-	--8<-- "md/X1_DC_6pin_TGS560_25.md"
+	--8<-- "md/X1_DC_6pin_TGS560_25.en.md"
 	
 	
 -   **X5 - Brake resistor**
@@ -55,7 +55,7 @@ ___
 
 	---
 	
-	--8<-- "md/X5_RBR_3pin_TGS560_25.md"
+	--8<-- "md/X5_RBR_3pin_TGS560_25.en.md"
 
 </div>
   
@@ -80,7 +80,7 @@ ___
 
 	---
 
-	--8<-- "md/X4_TGS560_24V_5pin_BCZ.md"
+	--8<-- "md/X4_TGS560_24V_5pin_BCZ.en.md"
 
 -   **X2 - Control outputs**
 
@@ -99,7 +99,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.md"
+	--8<-- "md/X3_DO_4pin_BCZ.en.md"
 	
 </div>
 
@@ -121,7 +121,7 @@ ___
 
     ---
 
-	--8<-- "md/S1_TGS560_DIP.md"
+	--8<-- "md/S1_TGS560_DIP.en.md"
 
 -   **LED signalization**
 
@@ -133,7 +133,7 @@ ___
 
     ---
 
-	--8<-- "md/LED_TGS560.md"
+	--8<-- "md/LED_TGS560.en.md"
 	
 </div>
 

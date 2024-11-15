@@ -4,10 +4,10 @@
 ## Konektory
 -->
 ##3D view
-![3D view IO side](../img/IOside.svg){: style="width:70%;" }
+![3D view IO side](../img/IOside.en.svg){: style="width:70%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.svg){: style="width:70%;" }
+![3D view FB side](../img/MotSide.en.svg){: style="width:70%;" }
 
 ##Connectors
 ___
