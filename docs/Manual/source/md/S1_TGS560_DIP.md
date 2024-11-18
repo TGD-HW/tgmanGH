@@ -5,14 +5,14 @@
 | SEL3 | 3. bit kódu | 0010 |
 | SEL4 | 4. (nejnižší) bit kódu – LSB | 0001 |
 | **Zvolený 4 bit. kód** | **Význam – volba funkce** |
-| 0 | výchozí nastavení |
-| 1 | rezervováno |
-| 10 | rezervováno |
-| 11 | rezervováno |
-| 100 | rezervováno |
-| 101 | rezervováno |
-| 110 | rezervováno |
-| 111 | rezervováno |
+| 0000 | výchozí nastavení |
+| 0001 | rezervováno |
+| 0010 | rezervováno |
+| 0011 | rezervováno |
+| 0100 | rezervováno |
+| 0101 | rezervováno |
+| 0110 | rezervováno |
+| 0111 | rezervováno |
 | 1000 | rezervováno |
 | 1001 | rezervováno |
 | 1010 | rezervováno |

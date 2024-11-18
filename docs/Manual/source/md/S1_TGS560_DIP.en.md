@@ -5,14 +5,14 @@
 | SEL3 | 3rd code bit | 0010 |
 | SEL4 | 4th code bit – LSB | 0001 |
 | **Selected 4 bit. code** | **Meaning – mode** |
-| 0 | default |
-| 1 | reserved |
-| 10 | reserved |
-| 11 | reserved |
-| 100 | reserved |
-| 101 | reserved |
-| 110 | reserved |
-| 111 | reserved |
+| 0000 | default |
+| 0001 | reserved |
+| 0010 | reserved |
+| 0011 | reserved |
+| 0100 | reserved |
+| 0101 | reserved |
+| 0110 | reserved |
+| 0111 | reserved |
 | 1000 | reserved |
 | 1001 | reserved |
 | 1010 | reserved |
