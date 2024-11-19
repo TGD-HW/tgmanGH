@@ -4,34 +4,34 @@
     "NoAxis": "S",
     "Comm": "EtherCAT",
     "FB": "Hiperface DSL",
-    "FW": "https://tgdcz-my.sharepoint.com/:u:/g/personal/puczok_tgdrives_cz/EStEKVV7LT9Ev-eaPbF1IpUB-W-XNB54YYu6llPT1KE9iA?e=aiI8Pe"
+    "FW": "https://www.tgdrives.cz/fileadmin/user_upload/_TGZ_FW/TGZ4/TGZD/Ethercat/Endat/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW"
   },
   {
     "controlHW": "4",
     "NoAxis": "S",
     "Comm": "EtherCAT",
     "FB": "Endat 2.2",
-    "FW": "https://tgdcz-my.sharepoint.com/:u:/g/personal/puczok_tgdrives_cz/EStEKVV7LT9Ev-eaPbF1IpUB-W-XNB54YYu6llPT1KE9iA?e=aiI8Pe"
+    "FW": "https://www.tgdrives.cz/fileadmin/user_upload/_TGZ_FW/TGZ4/TGZD/Ethercat/Endat/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW"
   },  
   {
     "controlHW": "4",
     "NoAxis": "S",
     "Comm": "EtherCAT",
     "FB": "Biss C, SSI",
-    "FW": "https://tgdcz-my.sharepoint.com/:u:/g/personal/puczok_tgdrives_cz/EStEKVV7LT9Ev-eaPbF1IpUB-W-XNB54YYu6llPT1KE9iA?e=aiI8Pe"
+    "FW": "https://www.tgdrives.cz/fileadmin/user_upload/_TGZ_FW/TGZ4/TGZD/Ethercat/Endat/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW"
   },  
   {
     "controlHW": "5",
     "NoAxis": "S",
     "Comm": "EtherCAT",
     "FB": "Hiperface DSL",
-    "FW": "https://tgdcz-my.sharepoint.com/:u:/g/personal/puczok_tgdrives_cz/EStEKVV7LT9Ev-eaPbF1IpUB-W-XNB54YYu6llPT1KE9iA?e=aiI8Pe"
+    "FW": "https://www.tgdrives.cz/fileadmin/user_upload/_TGZ_FW/TGZ4/TGZD/Ethercat/Endat/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW"
   },
   {
     "controlHW": "5",
     "NoAxis": "D",
     "Comm": "EtherCAT",
     "FB": "Endat 2.2",
-    "FW": "https://tgdcz-my.sharepoint.com/:u:/g/personal/puczok_tgdrives_cz/EStEKVV7LT9Ev-eaPbF1IpUB-W-XNB54YYu6llPT1KE9iA?e=aiI8Pe"
+    "FW": "https://www.tgdrives.cz/fileadmin/user_upload/_TGZ_FW/TGZ4/TGZD/Ethercat/Endat/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW"
   }
 ]
