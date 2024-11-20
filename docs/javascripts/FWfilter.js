@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     FB: document.getElementById("filter-FB")
   };
   // Load firmware data
-  fetch("../../../../../javascripts/FW.json")
+  //fetch("../../../../../javascripts/FW.json") //works on local
+  fetch("/javascripts/FW.json")	//works on github
     .then(response => response.json())
     .then(data => {
       // Initial render
