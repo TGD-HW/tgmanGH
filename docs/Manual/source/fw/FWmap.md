@@ -31,15 +31,15 @@ FW se dělí:
     <option value="">All</option>
     <option value="EtherCAT">EtherCAT</option>
     <option value="Profinet">Profinet</option>
-    <option value="CoE + CANOpen">CoE + CANOpen</option>
+    <option value="CoEcanopen">CoE + CANOpen</option>
   </select>
 
   <label for="filter-FB">Feedback:</label>
   <select id="filter-FB">
     <option value="">All</option>
-    <option value="Hiperface DSL">Hiperface DSL</option>
-    <option value="Endat 2.2">Endat 2.2</option>
-	<option value="Biss C, SSI">Biss C, SSI</option>
+    <option value="HiperfaceDSL">Hiperface DSL</option>
+    <option value="Endat2_2">Endat 2.2</option>
+    <option value="BissC_SSI">Biss C, SSI</option>
   </select>
 </div>
 

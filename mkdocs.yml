@@ -478,7 +478,7 @@ nav:
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
         - SW/FW:
             - Rozdělení FW:
-                - Základní informace: 'Manual/CZ/SW/FW/md/FWmap.md'
+                - Základní informace: 'Manual/source/fw/FWmap.md'
             - EtherCAT:
                 - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'
