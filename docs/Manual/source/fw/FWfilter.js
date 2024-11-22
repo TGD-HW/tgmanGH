@@ -56,15 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Construct the base URL for the GitHub repository
     const baseUrl = "https://raw.githubusercontent.com/TGD-HW/tgmanGH/main/docs/Manual/source/fw";
     
-    // Assuming the files are directly accessible under the folder path on the server
-    // You can adjust the logic here if you have a specific naming convention for the files
-    // For demonstration purposes, we will return a placeholder array.
-    
-    // Replace this with actual logic to fetch the file list from the server if needed.
+    // Construct the full URL for the firmware file based on the folder path
+    // Assuming the firmware files follow a specific naming convention
     return [
-      `${baseUrl}/${folderPath}/firmware1.bin`,
-      `${baseUrl}/${folderPath}/firmware2.bin`,
-      `${baseUrl}/${folderPath}/firmware3.bin`
+      `${baseUrl}/${folderPath}/TGZ_4_220414_ENDAT_LengthCompOK.TGZFW`
+      // Add more files here if needed, or implement logic to dynamically list files
     ];
   };
 });
