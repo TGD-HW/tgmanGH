@@ -1,4 +1,4 @@
-![FW logo](../../../../source/img/icoLoad.png){: style="width:3%;" }
+<!--![FW logo](../../../../source/img/icoLoad.png){: style="width:3%;" }-->
 ##Úvod
 Update firmware (FW) u servozesilovače TGZ běžně probíhá pomocí software TGZ GUI. Je potřeba zvolit odpovídající firmware na základě konkrétního typu servozesilovače. Soubor firmware má příponu *.TGZFW.
 ##Možné kombinace
