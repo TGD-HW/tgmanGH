@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X4 - Vstupní fázové napětí**
+-   **X1 - Vstupní fázové napětí**
 
     ---
 	
@@ -28,7 +28,7 @@ ___
 	
 	--8<-- "md/X4_ACIN_4pin_TGS560_25.md"
 	
--   **X1 - Výstup DC bus**
+-   **X4 - Výstup DC bus**
 
     ---
 	

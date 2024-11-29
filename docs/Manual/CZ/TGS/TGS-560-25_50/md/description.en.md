@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X4 - Mains connector**
+-   **X1 - Mains connector**
 
     ---
 	
@@ -28,7 +28,7 @@ ___
 	
 	--8<-- "md/X4_ACIN_4pin_TGS560_25.en.md"
 	
--   **X1 - DC bus connector**
+-   **X4 - DC bus connector**
 
     ---
 	
