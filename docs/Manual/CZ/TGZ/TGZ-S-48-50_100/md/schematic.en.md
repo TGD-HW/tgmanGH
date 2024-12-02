@@ -1,3 +1,3 @@
 
 
-![Example schematic](../img/TGZ-S-48-50_100_schematic.svg){: style="width:100%;" }
+![Example schematic](../img/TGZ-S-48-50_100_schematic.webp){: style="width:100%;" }

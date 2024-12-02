@@ -1,6 +1,6 @@
 ##Example of TGZ-D-320 servo amplifier wiring together with TGS-320 power supply module
 
-![Example schematic](../img/TGZ-D-320-5_10_schematic.svg){: style="width:100%;" }
+![Example schematic](../img/TGZ-D-320-5_10_schematic.webp){: style="width:100%;" }
 
 ##Example of wiring multiple TGZ-D-320 servo amplifiers together with TGS-320
 

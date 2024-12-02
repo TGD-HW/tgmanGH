@@ -1,6 +1,6 @@
 ## Příklad schématu zapojení servozesilovače
 
-![Example schematic](../img/TGZ-S-400_schematic.svg){: style="width:100%;" }
+![Example schematic](../img/TGZ-S-400_schematic.webp){: style="width:100%;" }
 
 ## Příklad zapojení více servozesilovačů TGZ-S-400 se síťovým EMI filtrem
 

@@ -1,6 +1,6 @@
 ##Single TGZ-S-400 device schematic
 
-![Example schematic](../img/TGZ-S-400_schematic.svg){: style="width:100%;" }
+![Example schematic](../img/TGZ-S-400_schematic.webp){: style="width:100%;" }
 
 ##Multiple TGZ-S-400 devices connection with an input EMC filter
 
