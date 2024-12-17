@@ -181,13 +181,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - Manual/source/fw/FW.json
-  - Manual/source/fw/FWfilter.js
 extra_css:
  - stylesheets/extra.css
- - stylesheets/FWfilter.css
-include:
- - javascripts/FW.json
 nav:
         - Úvod: 'index.md'
     #- About: 'about.md'
@@ -477,8 +472,8 @@ nav:
 #                - Montáž: 'Manual/CZ/TGM/TGZpMotion/md/mounting.md'
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
         - SW/FW:
-            - Rozdělení FW:
-                - Základní informace: 'Manual/source/fw/FWmap.md'
+#            - Rozdělení FW:
+#                - Základní informace: 'Manual/source/fw/FWmap.md'
             - EtherCAT:
                 - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'

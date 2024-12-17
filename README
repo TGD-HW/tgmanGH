@@ -1,0 +1,6 @@
+This project uses the following tools and extensions:
+- MkDocs Material (MIT License)
+- Glightbox (MIT License)
+- Pymdownx (MIT License)
+- i18n Plugin for MkDocs Material
+- mathjax
