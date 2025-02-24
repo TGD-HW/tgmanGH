@@ -61,7 +61,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-![TGZ-S-48-100/250 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-100_250RI_enetCon.svg){: style="width:80%;" }
+![TGZ-S-48-100/250 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-100_250RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -111,7 +111,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250RI_IO.svg){: style="width:80%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -190,7 +190,7 @@ ___
 ### Strana feedback
 ___
 
-![Feedback connectors](../../../../source/img/TGZ-S-48-100_250RI_FBconns.svg){: style="width:80%;" }
+![Feedback connectors](../../../../source/img/TGZ-S-48-100_250RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -246,7 +246,7 @@ ___
 ### Strana motor
 ___
 
-![Motor connection](../../../../source/img/TGZ-S-48-100_250RI_Mot.svg){: style="width:80%;" }
+![Motor connection](../../../../source/img/TGZ-S-48-100_250RI_Mot.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
