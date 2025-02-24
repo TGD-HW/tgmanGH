@@ -10,7 +10,7 @@ node_modules/
 dist/
 site/*
 venv/*
-.github/
+#.github/
 
 # Compiled Java class files
 *.class
