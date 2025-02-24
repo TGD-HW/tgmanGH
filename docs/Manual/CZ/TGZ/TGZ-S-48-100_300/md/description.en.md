@@ -39,6 +39,7 @@ ___
 	!!! info "Connector crimps"
 	
 		Match the type of crimps to the selected wire cross section.
+
 -   **X8 - Digital I/O, analog inputs**
 
     ---
@@ -194,10 +195,10 @@ ___
 	
 </div>
 ___
-### Pohled na PCB
+### PCB view
 ___
 
-![PCB connections](../../../../source/img/TGZ-S-48-100_250_brd.png){: style="width:70%;" }
+![PCB connections](../../../../source/img/TGZ-S-48-100_250RI_brd.en.webp){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>

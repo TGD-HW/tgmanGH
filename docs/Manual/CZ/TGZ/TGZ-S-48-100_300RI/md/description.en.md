@@ -243,7 +243,7 @@ ___
 </div>
  
 ___
-### Strana motor
+### Motor side
 ___
 
 ![Motor connection](../../../../source/img/TGZ-S-48-100_250RI_Mot.svg){: style="width:80%;" }
@@ -260,8 +260,8 @@ ___
 
     ---
 
-	Doporučený průřez kabelu 25-35 mm<sup>2</sup> (3 - 2 AWG), lisovací oko M8.
-	Doporučené kabelové oko [BM 01737](https://www.tme.eu/CZ/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
+	Recommended wire cross section 25-35 mm<sup>2</sup> (3 - 2 AWG), crimping ring tube for the M8 screw.
+	Recommended crimping ring tube [BM 01737](https://www.tme.eu/cz/en/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
 </div>
 
 !!! info "Wire cross section"

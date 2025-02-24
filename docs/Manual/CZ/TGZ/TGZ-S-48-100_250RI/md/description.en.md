@@ -243,7 +243,7 @@ ___
 </div>
  
 ___
-### Strana motor
+### Motor side
 ___
 
 ![Motor connection](../../../../source/img/TGZ-S-48-100_250RI_Mot.svg){: style="width:80%;" }

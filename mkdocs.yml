@@ -34,7 +34,7 @@ theme:
   favicon: Manual/source/img/TGsymbol.svg
 extra:
     generator: true #hlaska Made with MkDocs - muze se enablovat aby meli vetsi podporu
-    homepage: https://www.dev.tgdrives.cz/
+    homepage: https://www.tgdrives.cz/
     # version:
         # provider: mike
         #default: stable

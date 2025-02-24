@@ -197,7 +197,7 @@ ___
 ### Pohled na PCB
 ___
 
-![PCB connections](../../../../source/img/TGZ-S-48-100_250_brd.png){: style="width:70%;" }
+![PCB connections](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:70%;" }
 
 
 <div class="grid cards" markdown>

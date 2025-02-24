@@ -8,6 +8,7 @@
 | short flash | 6 | brake resistor overtemperature |
 | short flash | 7 | reserved |
 | short flash | 8 | reserved |
+| permanently on | - | DCbus undervoltage + mains error. Softstart disabled. No other errors. |
 | **Green LED** | **Description** |
 | permanently on | device ready, no errors |
 | permanently off | device not ready |
