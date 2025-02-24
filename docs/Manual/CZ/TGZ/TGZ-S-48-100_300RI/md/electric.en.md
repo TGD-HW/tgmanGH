@@ -1,2 +1,1 @@
---8<-- "md/electrical.en.md"
-
+--8<-- "md/electricalS48-100RI.en.md"
