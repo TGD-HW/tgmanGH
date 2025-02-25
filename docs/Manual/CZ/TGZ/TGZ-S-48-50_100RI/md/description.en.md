@@ -157,7 +157,9 @@ ___
     ---
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
 
--   Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
+-   It is not primarily recommended to use the microSD slot in devices where significant vibrations are expected.
+	SD card is not included with the "RI" version of servoamplifiers.
+	For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 

@@ -147,7 +147,9 @@ ___
     ---
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
 
--   Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
+-   It is not primarily recommended to use the microSD slot in devices where significant vibrations are expected.
+	SD card is not included with the "RI" version of servoamplifiers.
+	For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
@@ -256,7 +258,7 @@ ___
 	
 	![Motor connection](../../../../source/img/pressfitM8.webp){: style="width:30%;" }
 
--    Pressfit M8 
+-    Pressfit M8 [^5]
 
     ---
 
@@ -265,8 +267,8 @@ ___
 </div>
 
 !!! info "Wire cross section"
-	The size of the cross section and the length of the cable depends on the type of servomotor, cable and operation of the drive.
-	You can contact the manufacturer for an exact calculation corresponding to your project.
+	The cross section and the length of the cables depends on the type of servomotor, cable and operation of the drive. Standard supplied length is 1 m.
+	Please contact your supplier for an exact calculation corresponding to your project.
 
 	
 
@@ -276,6 +278,9 @@ ___
 
 ![Top view](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:80%;" }
 
+\* +DC is marked as VCC and -DC is marked as GND on the PCB silkscreen layer.   
+
+\** For detailed information about P8 usage please see [example schematic](schematic.en.md).
 
 
 **X2 - Power supply voltage (DCbus)**   
@@ -283,8 +288,8 @@ ___
 | Designation / Type            | Cable Cross-Section (AWG) |           | Type and Size of Terminal Lug                        | Recommended Lug Type |
 |--------------------------------|-------------------------------------|-----------|------------------------------------------------------|----------------------|
 |                                | min                                 | max       |                                                      |                      |
-| DC bus (-DC, +DC) – 4 cables   | 8                                   | 7        | Crimp lug M5, AWG 8        | [GS5-10JST](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/) |
-| DC bus (-DC, +DC) – 8 cables   | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
+| DC bus (-DC, +DC) – 4 cables [^5]   | 8                                   | 7        | Crimp lug M5, AWG 8        | [GS5-10JST](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/) |
+| DC bus (-DC, +DC) – 8 cables [^5]  | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
 
 
 
@@ -323,11 +328,15 @@ ___
 
 	--8<-- "md/P7_BR_4pin_Microfit.en.md"
 	
+	!!! warning "P8 connection"
+	
+		Please connect pin 4 of P8 connector according to [recommended wiring diagram](schematic.en.md) for static brake to work properly.	
+	
 	!!! info "Connector crimps"
 	
 		Match the type of crimps to the selected wire cross section.
 		
--   **P8 - Static brake - additional connector**
+-   **P8 - Static brake**
 
     ---
 	
@@ -339,9 +348,9 @@ ___
 
 	--8<-- "md/P8_BR_4pin_Microfit.en.md"
 	
-	!!! note "P8 connector"
+	!!! warning "P8 connection"
 	
-		This connector does not connect for standard use of the single axis servo amplifier.
+		Please connect pin 4 of P8 connector according to [recommended wiring diagram](schematic.en.md) for static brake to work properly.	
 	
 	!!! info "Connector crimps"
 	
@@ -371,6 +380,7 @@ ___
 
 [^3]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
 [^4]: When crimping and connecting the Molex Micro-Fit connectors, follow the [Molex Micro-Fit Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^5]: Standard supplied wire length is 1 m.
 
 ###Procedure for changing feedback type of FB1 and FB2
 There are 4 positions (R118-R121) for a 0R/0603 resistors that may be used to replace the external connection of FBSEL (pins 5-7 and 6-8 of the FB1 and FB2) on the control board.

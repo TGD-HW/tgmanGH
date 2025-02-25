@@ -1,5 +1,5 @@
 ##3D náhled
-![TGZ-S-48-100/250RI connectors](../img/connectors.png){: style="width:90%;" }
+![TGZ-S-48-100/250RI connectors](../img/connectors.png){: style="width:100%;" }
 ##Blokové schéma s připojením hlavních rozhraní
 ![TGZ-S-48-100/250RI connectors](../img/blokDiagram.png){: style="width:70%;" }
 
@@ -147,7 +147,9 @@ ___
     ---
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
 
--   Použijte microSD kartu. Vhodná karta je součástí dodávky servozesilovače TGZ.
+-   V servozesilovačích typu "RI" není primárně doporučeno používat microSD slot u zařízení, kde se předpokládají velké vibrace.
+	SD karta není u těchto verzí součástí dodávky.
+	Pro více informací ohledně SD karet navštivte sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
@@ -256,12 +258,12 @@ ___
 	
 	![Motor connection](../../../../source/img/pressfitM8.webp){: style="width:30%;" }
 
--    Pressfit M8 
+-    Pressfit M8 [^5]
 
     ---
 
 	Doporučený průřez kabelu 25-35 mm<sup>2</sup> (3 - 2 AWG), lisovací oko M8.
-	Doporučené kabelové oko [BM 01737](https://www.tme.eu/CZ/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
+	Doporučené kabelové oko [BM 01737](https://www.tme.eu/cz/details/bm01737/konektory-neizolovane/bm-group/bm-01737/).
 </div>
 
 !!! info "Průřez"
@@ -277,14 +279,17 @@ ___
 ![Top view](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:80%;" }
 
 
+\* +DC je označeno jako VCC a -DC je označeno jako GND v potisku PCB.   
+
+\** Věnujte pozornost správnému zapojení konektoru P8 viz. [příklad zapojení](schematic.md).
 
 **X2 - Napájení silové části (DCbus)**   
 
 | Označení / typ                  | Průřez kabelů (mm<sup>2</sup>) |           | Typ a rozměry koncovky                              | Doporučený typ oka |
 |---------------------------------|----------------------|-----------|-----------------------------------------------------|--------------------|
 |                                 | min                  | max       |                                                     |                    |
-| DC bus (-DC, +DC) – 4 kabely   | 8                    | 10        | Krimpovací oko M5, 6 – 10 mm<sup>2</sup> (8 AWG)               | [GS5-10JST](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)          |
-| DC bus (-DC, +DC) – 8 kabelů   | 4                    | 6         | Krimpovací oko M5, 4 – 6 mm<sup>2</sup> (10–9 AWG)             | [BM 01325](https://www.tme.eu/cz/details/bm01325/konektory-neizolovane/bm-group/bm-01325/)           |
+| DC bus (-DC, +DC) – 4 kabely [^5]  | 8                    | 10        | Krimpovací oko M5, 6 – 10 mm<sup>2</sup> (8 AWG)               | [GS5-10JST](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)          |
+| DC bus (-DC, +DC) – 8 kabelů [^5]  | 4                    | 6         | Krimpovací oko M5, 4 – 6 mm<sup>2</sup> (10–9 AWG)             | [BM 01325](https://www.tme.eu/cz/details/bm01325/konektory-neizolovane/bm-group/bm-01325/)           |
 
 
 <div class="grid cards" markdown>
@@ -323,6 +328,10 @@ ___
 
 	--8<-- "md/P7_BR_4pin_Microfit.md"
 	
+	!!! warning "připojení P8"
+	
+		Pro správné fungování statické motorové brzdy připojte prosím pin 4 konektoru P8 dle [doporučeného schématu zapojení](schematic.md).		
+	
 	!!! info "Konektorové krimpy"
 	
 		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
@@ -339,9 +348,9 @@ ___
 
 	--8<-- "md/P8_BR_4pin_Microfit.md"
 	
-	!!! note "Konektor P8"
+	!!! warning "připojení P8"
 	
-		Tento konektor se pro standardní použití jednoosého servozesilovače <nobr>TGZ-S-48-100/250</nobr> nezapojuje
+		Pro správné fungování statické motorové brzdy připojte prosím pin 4 konektoru P8 dle [doporučeného schématu zapojení](schematic.md).		
 	
 	!!! info "Konektorové krimpy"
 	
@@ -370,7 +379,8 @@ ___
 </div>
 
 [^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
-[^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^5]: Standardně jsou dodávány kabely délky 1 m.
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).

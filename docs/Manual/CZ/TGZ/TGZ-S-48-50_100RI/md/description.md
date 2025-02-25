@@ -157,7 +157,9 @@ ___
     ---
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
 
--   Použijte microSD kartu. Vhodná karta je součástí dodávky servozesilovače TGZ.
+-   V servozesilovačích typu "RI" není primárně doporučeno používat microSD slot u zařízení, kde se předpokládají velké vibrace.
+	SD karta není u těchto verzí součástí dodávky.
+	Pro více informací ohledně SD karet navštivte sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 

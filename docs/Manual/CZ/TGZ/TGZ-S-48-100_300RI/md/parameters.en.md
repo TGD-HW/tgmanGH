@@ -16,12 +16,12 @@
 | 3 DI (TTL), 1 AI, 2 PT1000 | 1 x 12pin MOLEX 5031491200 CLIK-MATE 1.5 |
 | **FEEDBACK** |   |
 | FB1, FB2, FB3 | 3 x 10pin MOLEX 5031481090 CLIK-MATE 1.5 |
-| FE | 1 x 12pin MOLEX 5031481290 CLIK-MATE 1.5 |
+| FBE | 1 x 12pin MOLEX 5031481290 CLIK-MATE 1.5 |
 | **SIGNALING** |   |
 | LED display | Error message, 2x7 LED segment |
 | LED signaling | 1x green (SERVO OK)1x red (SERVO ERROR) |
 | **POWER SUPPLY** |   |
-| DC BUS (+DC, -DC) –on PCB marked as „VCC, GND“ | 8 x Pressfit M8 |
+| DC BUS (+DC, -DC) –on PCB marked as „VCC, GND“ | 8 x Pressfit M5 |
 | Control, STO | 1 x 5pin MOLEX Micro-Lock, 5055700501 |
 | **OTHER CONNECTORS** |   |
 | Motor connector | 3 x Pressfit M8 |
