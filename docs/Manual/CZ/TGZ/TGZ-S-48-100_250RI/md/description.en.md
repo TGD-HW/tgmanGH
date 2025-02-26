@@ -258,7 +258,7 @@ ___
 	
 	![Motor connection](../../../../source/img/pressfitM8.webp){: style="width:30%;" }
 
--    Pressfit M8 [^5]
+-    Pressfit M8
 
     ---
 
@@ -267,7 +267,7 @@ ___
 </div>
 
 !!! info "Wire cross section"
-	The cross section and the length of the cables depends on the type of servomotor, cable and operation of the drive. Standard supplied length is 1 m.
+	The cross section and the length of the cables depends on the type of servomotor, cable and operation of the drive.
 	Please contact your supplier for an exact calculation corresponding to your project.
 
 	
@@ -290,6 +290,9 @@ ___
 |                                | min                                 | max       |                                                      |                      |
 | DC bus (-DC, +DC) – 4 cables [^5]   | 8                                   | 7        | Crimp lug M5, AWG 8        | [GS5-10JST](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/) |
 | DC bus (-DC, +DC) – 8 cables [^5]  | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
+
+!!! info "DC bus wire length"
+	Default supplied DCbus wires length is 1 m. 
 
 
 
@@ -380,7 +383,7 @@ ___
 
 [^3]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
 [^4]: When crimping and connecting the Molex Micro-Fit connectors, follow the [Molex Micro-Fit Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
-[^5]: Standard supplied wire length is 1 m.
+[^5]: Default supplied DCbus wires length is 1 m.
 
 ###Procedure for changing feedback type of FB1 and FB2
 There are 4 positions (R118-R121) for a 0R/0603 resistors that may be used to replace the external connection of FBSEL (pins 5-7 and 6-8 of the FB1 and FB2) on the control board.

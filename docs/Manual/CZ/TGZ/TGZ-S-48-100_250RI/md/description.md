@@ -258,7 +258,7 @@ ___
 	
 	![Motor connection](../../../../source/img/pressfitM8.webp){: style="width:30%;" }
 
--    Pressfit M8 [^5]
+-    Pressfit M8
 
     ---
 
@@ -291,6 +291,8 @@ ___
 | DC bus (-DC, +DC) – 4 kabely [^5]  | 8                    | 10        | Krimpovací oko M5, 6 – 10 mm<sup>2</sup> (8 AWG)               | [GS5-10JST](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)          |
 | DC bus (-DC, +DC) – 8 kabelů [^5]  | 4                    | 6         | Krimpovací oko M5, 4 – 6 mm<sup>2</sup> (10–9 AWG)             | [BM 01325](https://www.tme.eu/cz/details/bm01325/konektory-neizolovane/bm-group/bm-01325/)           |
 
+!!! info "délka přívodních vodičů"
+	Výchozí dodávaná délka přívodních (DC) vodičů je 1 m.
 
 <div class="grid cards" markdown>
 
@@ -380,7 +382,7 @@ ___
 
 [^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
 [^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
-[^5]: Standardně jsou dodávány kabely délky 1 m.
+[^5]: Standardně jsou dodávány přívodní vodiče (DC) délky 1 m.
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
