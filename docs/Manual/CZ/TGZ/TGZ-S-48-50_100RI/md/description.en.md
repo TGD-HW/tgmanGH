@@ -1,6 +1,6 @@
 ##3D view
-![TGZ-S-48-50/100RI connectors 1](../img/IOside.webp){: style="width:80%;" }
-![TGZ-S-48-50/100RI connectors 2](../img/MotSide.webp){: style="width:90%;" }
+![TGZ-S-48-50/100RI connectors 1](../img/IOside.en.webp){: style="width:80%;" }
+![TGZ-S-48-50/100RI connectors 2](../img/MotSide.en.webp){: style="width:90%;" }
 ##Block diagram with connection of main interfaces
 ![TGZ-S-48-50/100RI connectors](../img/blokDiagram.webp){: style="width:70%;" }
 
