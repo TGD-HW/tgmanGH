@@ -185,7 +185,6 @@ extra_css:
  - stylesheets/extra.css
 nav:
         - Úvod: 'index.md'
-    #- About: 'about.md'
         - 'TGZ':
             - 'TGZ-D-48-13/26': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/mark.md'
@@ -194,7 +193,8 @@ nav:
                 - Rozměry: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/mounting.md'
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/electric.md'
-                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/schematic.md'      
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/safe.md'
             - 'TGZ-D-48-50/100':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
