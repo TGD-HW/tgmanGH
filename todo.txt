@@ -6,5 +6,4 @@ u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je po
 
 doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, ERR přes STO - hlavně teda RDY
 
-firmware strom verzí
-filtry viz LP mail
+-O verze doplnit aktuální nákresy a popis svorkovnic
