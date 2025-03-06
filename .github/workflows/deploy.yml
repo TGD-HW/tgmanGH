@@ -28,5 +28,6 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install pymdown-extensions
       - run: pip install mkdocs-static-i18n
-      - run: pip install mkdocs-glightbox      
+      - run: pip install mkdocs-glightbox
+      - run: pip install mkdocs-git-committers-plugin-2      
       - run: mkdocs gh-deploy --force

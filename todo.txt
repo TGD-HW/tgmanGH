@@ -1,9 +1,12 @@
 igor chybí:
-D-48-50/100 stínění
-D-560-30/50 rozměry + stínění
+D560 najít obrázky stínění - případně vykuchat od napaječe TGS560 malého
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 
 doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, ERR přes STO - hlavně teda RDY
 
 -O verze doplnit aktuální nákresy a popis svorkovnic
+
+prozkoumat tags, vyzkoušet:
+https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title
+nakopírovat electrical D-560-3/9 do ostatních + přidat EN verzi (chybí)
