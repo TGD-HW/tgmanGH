@@ -7,7 +7,7 @@
 !!! note "Note"
 	The external temperature sensor PT1000 is used to measure the motor temperature.
 	
-##Description of communication, input/output and controlling:
+##Description of communication, input/output and control:
 ###Communication interfaces
 - Ethernet 100/1000 Mb/s with UDP protocol, designed for parameter recording, monitoring, testing, but also online control;
 - CAN bus protocol can be modified according to customer requirements;
@@ -18,13 +18,13 @@
   This interface enables high-speed communication up to 20Mbit/s.
   
 ###Inputs / outputs:
-The built-in TGZ servo amplifiers have 8 isolated digital inputs, 3 TTL digital inputs, 6 isolated digital outputs, 1 analog input and 2 PT1000 thermistor inputs implemented. It is possible to control these inputs and outputs using a user program (C language):
+The built-in TGZ servo amplifiers have 8 isolated digital inputs, 3 digital inputs, 6 isolated digital outputs, 1 analog input and 2 PT1000 thermistor inputs implemented. It is possible to control these inputs and outputs using a user program (C language):
 
 | I/O    | Type              | Count | Value                                               |
 |--------|--------------------|-------|-----------------------------------------------------|
 | input  | analog             | 1     | 0-10 V                                              |
 | input  | thermistor         | 2     | standard PT1000                                     |
-| input  | digital            | 3     | 0-30 VDC (0-0.8 V low / 2.4-30 V high), TTL         |
+| input  | digital            | 3     | 0-30 VDC (0-0.8 V low / 2.4-30 V high)         |
 | input  | isolated digital   | 8     | 0-24 VDC (0-10 V low / 13-24 V high), 20 mA         |
 | output | isolated digital   | 6     | 5-24 VDC, 300 mA / max. output                      |
 
@@ -125,7 +125,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X7 - Digital inputs TTL + Analog inputs**
+-   **X7 - Digital inputs + Analog inputs**
 
     ---
 	![DITTL + AIN + PT1000](../../../../source/img/5031491200.svg){: style="width:70%;" }

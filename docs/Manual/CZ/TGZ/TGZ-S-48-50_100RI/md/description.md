@@ -18,7 +18,7 @@
   Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
   
 ###Vstupy / výstupy:
-Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy TTL, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
+Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
 Tyto vstupy a výstupy je možné ovládat pomocí uživatelského programu (jazyk C).
 Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
 
@@ -26,7 +26,7 @@ Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
 |---------|------------------|--------|----------------------------------------------------|
 | vstup   | analogový        | 1      | 0-10 V                                             |
 | vstup   | termistor        | 2      | standard PT1000                                    |
-| vstup   | digitální        | 3      | 0-30 VDC (0-0,8 V low/2,4-30 V high), TTL      |
+| vstup   | digitální        | 3      | 0-30 VDC (0-0,8 V low/2,4-30 V high)      |
 | vstup   | izolovaný digitální | 8   | 0-24 VDC (0-10 V low/13-24 V high), 20 mA      |
 | výstup  | izolovaný digitální | 6   | 5-24 VDC, 300 mA / max. výstup                     |
 
@@ -125,7 +125,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X7 - Digitální vstupy TTL + Analogové vstupy**
+-   **X7 - Digitální vstupy + Analogové vstupy**
 
     ---
 	![DITTL + AIN + PT1000](../../../../source/img/5031491200.svg){: style="width:70%;" }
