@@ -143,6 +143,7 @@ plugins:
         # javascript_dir: js
   - git-revision-date-localized:
       enable_creation_date: true
+      fallback_to_build_date: true
       type: timeago
       enabled: !ENV [CI, false]      
 markdown_extensions:
