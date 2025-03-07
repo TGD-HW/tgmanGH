@@ -31,8 +31,11 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
       - run: pip install pymdown-extensions
+      - run: pip install mkdocs-static-i18n
+      - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-git-committers-plugin-2
+      - run: pip install git-revision-date-localized
       - run: mkdocs build
       - run: mkdocs gh-deploy --force
