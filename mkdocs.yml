@@ -3,6 +3,7 @@ site_url: https://tgd-hw.github.io/tgmanGH/
 copyright: Copyright &copy; 2024 TG Drives, s.r.o.
 theme:
   name: 'material'
+  custom_dir: overrides  
   language: cs
   font: false
   logo: Manual/source/img/TGlogoFullWhite.svg
@@ -142,7 +143,8 @@ plugins:
         # javascript_dir: js
   - git-revision-date-localized:
       enable_creation_date: true
-      type: date
+      type: timeago
+      enabled: !ENV [CI, false]      
 markdown_extensions:
  - pymdownx.arithmatex:
     generic: true

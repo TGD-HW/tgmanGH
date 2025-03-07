@@ -1,7 +1,5 @@
 #**Elektrická instalace**
 ##Instalace zařízení
-![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding.webp){: style="width:85%;" }   
-
 Během elektrické instalace servozesilovače je nutné se řídit bezpečnostními pokyny a dbát na dodržení těchto zásad:
 
 - Instalaci servozesilovače smí provádět pouze odborní pracovníci s příslušnou kvalifikací pro montáž elektrických zařízení.
@@ -18,30 +16,27 @@ Nainstalujte elektrický systém servozesilovače následovně:
 - Zapojte servozesilovač a konektory s ohledem na běžné zásady a doporučení pro potlačení elektromagnetického rušení. 
 
 ##Stínění
-###Postup zapojení kabelu pro DC BUS (napájení výkonové části) s&nbsp;připojením stínění
-
-- Používejte pokud možno co nejkratší kabely dle vzájemné vzdálenosti a&nbsp;uspořádání jednotlivých zařízení v&nbsp;rozvaděči.
-- Z obou konců kabelu odstraňte vnější izolaci&nbsp;délce 60 až 70 mm včetně stínění a zakončete smršťovací bužírkou, aby části stínění nemohly tvořit nežádoucí kontakt se živými částmi zapojení.
-- Odizolujte konce všech vodičů a&nbsp;nasaďte na ně kontaktní dutinky.
-- Přibližně uprostřed kabelu odstraňte vnější izolaci v&nbsp;šířce odpovídající kabelovému oku (obvykle 15 – 20 mm). 
-  Dávejte pozor, abyste nepoškodili síťku stínění kabelu.
-- Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-- Na odizolovanou část kabelu (viz předchozí bod) nasaďte stínicí sponu a upevněte ji včetně kabelu k desce rozvaděče pomocí předem připraveného otvoru se závitem.
-- Stínění kabelu musí po dotažení šroubu doléhat na desku rozvaděče. Jen tak je zaručen kvalitní kontakt.
-
-![Shielding connection of the DCbus](../../../../source/img/TGZ-D-560-3_9_shielding1.webp){: style="width:85%;" }
-
 ###Postup zapojení motorového kabelu s&nbsp;připojením stínění
 
-- Odstraňte vhodnou délku vnější izolace motorového kabelu tak, aby bylo možné pohodlně připevnit vnější stínění kabelu do připravené svorky na stínícím přípravku.
-- Odstraňte vhodnou délku vnějšího opletu kabelu tak, aby jeho šířka byla přibližně stejná jako šířka svorky pro obejmutí kabelu.
-- Stínění zpětnovazebního páru a případně stínění vodičů připojení brzdy nezkracujte. 
-- Na připravené odizolované konce vodičů osaďte kontaktní dutinky.
+- Odstraňte vhodnou délku vnější izolace motorového kabelu, aby bylo možné pohodlně bez mechanického pnutí připojit konektory do servozesilovače.
+- Vnější oplet motorového kabelu zkraťte a vložte do bužírky.
+- Stínění zpětnovazebního páru nezkracujte.
+  Na jeho konec nainstalujte kabelové oko, které je určeno k uchycení na L-profil servozesilovače.
+- Přibližně 15-20 cm od konce kabelů z nich odstraňte pruh vnější izolace v šířce přibližně 15-20 mm.
+  Dejte pozor, abyste nepoškodili oplet kabelu.
+- Na připravené odizolované konce vodičů osaďte kabelová oka a kontaktní dutinky (viz. obr.) adekvátní jejich průřezu.
+- Na motorový PE vodič nainstalujete kabelové oko a přišroubujte ho šroubem do připraveného závitu na L-profilu servozesilovače.
 - Zapojte konektory dle schématu zapojení a&nbsp;připojte k&nbsp;zařízení.
-- Vložte připravený kabel s vnějším opletem do největší stínicí svorky a zajistěte kabel proti nežádoucímu pohybu např. plastovými páskami (na obrázku černé) v místě tomu určeném.
-- Vložte zbývající části (zpětnovazební pár + brzdový pár) včetně jejich stínění do připravených zemnicích svorek.
+- Přichyťte motorový kabel k montážní desce rozvaděče pomocí plechové spony v místě dříve odstraněného pruhu vnější izolace.
+- Přišroubujte kabelové oko stínění zpětné vazby do připraveného závitu na L-profilu servozesilovače.
 
-![Shielding connection motor 1](../../../../source/img/TGZ-D-560-3_9_shielding2.webp){: style="width:60%;" }
+![Shielding connection motor](../../../../source/img/TGZ-S-48-50_100RI_shielding1.webp){: style="width:85%;" }
+
+- V případě, že používáte motorové kabely delší než 5 m je výrazně doporučeno použít feritový toroid na fázové vodiče. 
+  Ideální je připravit jeden závit (2 průvleky).
+
+![Shielding connection motor 1](../../../../source/img/TGZ-D-320-10_15_shielding4.webp){: style="width:50%;" }
+
 
 ###Technologie stínění
 

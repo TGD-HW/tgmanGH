@@ -9,4 +9,4 @@ doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, 
 
 prozkoumat tags, vyzkoušet:
 https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title
-nakopírovat electrical D-560-3/9 do ostatních + přidat EN verzi (chybí)
+
