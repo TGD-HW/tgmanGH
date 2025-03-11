@@ -91,6 +91,14 @@ ___
 
 	--8<-- "md/X3_DO_4pin_BCZ.en.md"
 	
+	The RDY and ERR outputs behave similar to relay contacts with a maximum allowable external power supply voltage of 28 VDC and a maximum load of 700 mA. 
+	They are most commonly used for signaling a power module fault to a higher-level system.
+	
+	| **Contact closed** | **Status** | **Description** |
+	| :---: | :---: | :---: |
+	| RDY | TGS OK | The TGS module has not detected an error; voltage and temperatures are within acceptable limits. |
+	| ERR | TGS error | The TGS module has detected one or more errors. |
+	
 </div>
 
 

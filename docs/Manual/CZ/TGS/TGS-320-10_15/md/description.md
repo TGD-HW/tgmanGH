@@ -92,6 +92,15 @@ ___
 
 	--8<-- "md/X3_DO_4pin_BCZ.md"
 	
+	
+	Výstupy RDY a ERR se chovají jako kontakty relé s maximálním přípustným externím napájením 28 VDC a maximálním zatížením 700 mA.
+	Nejčastěji se používají pro signalizaci poruchy napájecího modulu do nadřazeného systému.
+	
+	| **Kontakt sepnut** | **Stav** | **Popis** |
+	| :---: | :---: | :---: |
+	| RDY | TGS OK | Modul nezaznamenal chybu, napětí i teploty jsou v pořádku |
+	| ERR | TGS chyba | Modul zaznamenal jednu nebo více chyb |
+	
 </div>
 
 

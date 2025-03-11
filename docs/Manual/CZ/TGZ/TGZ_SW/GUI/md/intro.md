@@ -1,7 +1,7 @@
 ##Získání aplikace
 Pro nastavení servozesilovače slouží ovládací a servisní software aplikace **TGZ GUI**.
 Současně je zde umožněno monitorování parametrů servozesilovače TGZ.
-Software **TGZ GUI** lze stáhnout [ZDE](https://www.tgdrives.cz/fileadmin/user_upload/download-TGZ/TGZ_GUI.zip)
+Aktuální verzi softwaru **TGZ GUI** lze stáhnout na webu TG Drives v sekci [Ke stažení](https://dev025.tgdrives.cz/cs/produkty/servozesilovace#products-content)
 
 ##Instalace a spuštění {#GUIstart}
 **Instalace TGZ GUI:**   

@@ -1,8 +1,3 @@
-<!--
-# Popis zařízení   
-
-## Konektory
--->
 ##3D náhled
 ![3D view IO side](../img/IOside.webp){: style="width:70%;" }
 <br>
