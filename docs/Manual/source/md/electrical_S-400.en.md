@@ -34,7 +34,13 @@ Install the servo amplifier electrical system as follows:
 
 TGZ-S-400 assembly including the RWMO NCZx EMC filter overall view.
 
-![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
+![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }   
+
+Overall view of the TGZ-S-400 assembly, including the input EMI filter RWMO NCZx and the motor choke. 
+The motor choke is recommended when using long motor cables to further reduce EMI.
+
+![Shielding connection 5](../../../../source/img/TGZ-S-400_M1ShieldingChoke1.webp){: style="width:85%;" }
+![Shielding connection 6](../../../../source/img/TGZ-S-400_M1ShieldingChoke2.webp){: style="width:85%;" }
 
 ###Shielding technology
 The figures show an unsuitable and suitable shield connection:

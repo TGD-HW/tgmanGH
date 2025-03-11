@@ -1,5 +1,4 @@
 igor chybí:
-D560 najít obrázky stínění - případně vykuchat od napaječe TGS560 malého
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 
@@ -9,4 +8,3 @@ doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, 
 
 prozkoumat tags, vyzkoušet:
 https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title
-

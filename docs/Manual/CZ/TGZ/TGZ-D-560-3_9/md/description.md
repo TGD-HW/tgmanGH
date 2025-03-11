@@ -28,6 +28,10 @@ ___
 	---
 
 	--8<-- "md/X1_24V_5pin_BCZ.md"
+	
+	!!! warning "Odrušení přívodu"
+	
+		Věnujte prosím pozornost instalaci odrušovacího toroidu dle [návodu](../../../../source/md/logicPWR.md#LogicPWR_EMI).
 
 </div>
 

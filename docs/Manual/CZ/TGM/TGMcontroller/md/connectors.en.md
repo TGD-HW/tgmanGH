@@ -11,9 +11,13 @@ ___
 -   **X1 - Control supply voltage**
 
     ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
+	Housing back side view (wire side):  
+	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 

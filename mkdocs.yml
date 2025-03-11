@@ -1,6 +1,6 @@
 site_name: TG Drives
 site_url: https://tgd-hw.github.io/tgmanGH/
-copyright: Copyright &copy; 2024 TG Drives, s.r.o.
+copyright: Copyright &copy; 2025 TG Drives, s.r.o.
 theme:
   name: 'material'
   custom_dir: overrides  
@@ -131,6 +131,7 @@ plugins:
                 Schémata kabelů: Cable connections
                 Nastavení parametrů: Parameter settings
                 Firmware: Firmware
+                Napájení logiky: Logic power
   - offline:
       enabled:
   # - mike:
@@ -429,7 +430,8 @@ nav:
                 - Analogové vstupy: 'Manual/source/md/commonHW_AI.md'  
                 - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'
                 - Zpětná vazba FBE: 'Manual/source/md/commonHW_FBE.md'
-                - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'  
+                - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'
+                - Napájení logiky: 'Manual/source/md/logicPWR.md'                
                 - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'

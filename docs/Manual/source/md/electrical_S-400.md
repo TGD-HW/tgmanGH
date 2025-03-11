@@ -42,6 +42,11 @@ Celkový pohled na sestavu TGZ-S-400 včetně síťového EMC filtru RWMO NCZx.
 
 ![Shielding connection 4](../../../../source/img/TGZ-S-400_shielding1.webp){: style="width:85%;" }
 
+Celkový pohled na sestavu TGZ-S-400 včetně síťového EMC filtru RWMO NCZx a motorové tlumivky.
+Motorová tlumivka se doporučuje při použití dlouhých motorých kabelů za účelem snížení rušení.
+
+![Shielding connection 5](../../../../source/img/TGZ-S-400_M1ShieldingChoke1.webp){: style="width:85%;" }
+![Shielding connection 6](../../../../source/img/TGZ-S-400_M1ShieldingChoke2.webp){: style="width:85%;" }
 
 ###Technologie stínění
 

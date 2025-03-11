@@ -17,16 +17,23 @@ ___
 -   **X1 - Control supply voltage**
 
     ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
+	Housing back side view (wire side):  
+	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.en.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
+	
+	!!! warning "EMI suppression"
+	
+		Please pay attention to the installation of the suppression toroidal core according to the [instructions](../../../../source/md/logicPWR.en.md#LogicPWR_EMI).
 
 </div>
-
 ___
 ### View of the CAN/IO/SD Side
 ___

@@ -27,10 +27,13 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.en.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
+	
+	!!! warning "EMI suppression"
+	
+		Please pay attention to the installation of the suppression toroidal core according to the [instructions](../../../../source/md/logicPWR.en.md#LogicPWR_EMI).
 
 </div>
-
 ___
 ### View of the CAN/IO/SD Side
 ___
