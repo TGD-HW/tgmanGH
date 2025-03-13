@@ -71,7 +71,14 @@ ___
     ---
 	
 	![DCout connector](../../../../source/img/1778120.svg){: style="width:85%;" }
-	![DCout connector](../../../../source/img/TGS-320_Rb.png){: style="width:85%;" }	
+	
+	The X2 connector comes with jumper wires prepared for use with the internal chopper resistor.
+	
+	![DCout connector 2](../../../../source/img/1778120jumper.svg){: style="width:100%;" }   
+	
+	If an external chopper (brake) resistor is used, the jumper wires must be removed and the resistor connected according to the [schematic](schematic.en.md).		
+	
+	![DCout connector 3](../../../../source/img/TGS-320_Rb.png){: style="width:85%;" }	
 
 -    Phoenix PC 5/ 8-STCL1-7,62
 

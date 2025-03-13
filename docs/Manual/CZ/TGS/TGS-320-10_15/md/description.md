@@ -72,6 +72,13 @@ ___
     ---
 	
 	![DCout connector](../../../../source/img/1778120.svg){: style="width:85%;" }
+	
+	Konektor X2 je standardně dodáván včetně propojovacích vodičů v konfiguraci pro použítí s interním brzdným odporem.   
+	
+	![PWR connector](../../../../source/img/1778120jumper.svg){: style="width:100%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodiče a rezistor připojit dle [schématu](schematic.md).   
+	
 	![DCout connector](../../../../source/img/TGS-320_Rb.png){: style="width:85%;" }	
 
 -    Phoenix PC 5/ 8-STCL1-7,62

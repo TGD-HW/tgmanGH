@@ -209,6 +209,13 @@ ___
 	
 	![PWR connector](../../../../source/img/1943660000.svg){: style="width:100%;" }
 
+	Konektor X2 je standardně dodáván včetně propojovaho vodiče v konfiguraci pro použítí bez brzdného odporu.
+	
+	![PWR connector](../../../../source/img/1943660000jumper.svg){: style="width:100%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodič a rezistor připojit dle [schématu](schematic.md).
+	
+
 -    Weidmüller BLZP 5.08HC/10/180 SN OR BX
 
     ---

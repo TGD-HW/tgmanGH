@@ -49,7 +49,13 @@ ___
 		
 	Pohled na konektor zezadu (strana vodičů)
 	
-	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }
+	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }   
+	
+	Konektor X5 je standardně dodáván včetně propojovacího vodiče v konfiguraci pro použítí interního brzdného odporu.
+	
+	![PWR connector](../../../../source/img/1095690000jumper.svg){: style="width:60%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodiče z konektorů X5 a X3 (TERM) a rezistor připojit dle [schématu](schematic.md).	
 
 -   WEIDMÜLLER BLZ 7.62HP/03/180F
 
@@ -75,6 +81,12 @@ ___
 	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
 	
 	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
+	
+	Konektor X3 je standardně dodáván včetně propojovacího vodiče v konfiguraci pro použítí interního brzdného odporu.
+	
+	![1941040000_2](../../../../source/img/1941040000jumper.svg){: style="width:60%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodiče z konektorů X3 a X5 a rezistor připojit dle [schématu](schematic.md).		
 
 -    Weidmüller BCZ 3.81/05/180F SN OR BX
 

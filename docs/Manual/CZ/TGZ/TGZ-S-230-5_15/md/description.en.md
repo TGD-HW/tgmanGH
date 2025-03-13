@@ -214,6 +214,12 @@ ___
     ---
 	
 	![PWR connector](../../../../source/img/1943660000.svg){: style="width:100%;" }
+	
+	The X2 connector comes with jumper wire prepared for use without the external chopper resistor.
+	
+	![PWR connector](../../../../source/img/1943660000jumper.svg){: style="width:100%;" }   
+	
+	If an external chopper (brake) resistor is used, the jumper wire must be removed and the resistor connected according to the [schematic](schematic.en.md).		
 
 -    Weidmüller BLZP 5.08HC/10/180 SN OR BX
 

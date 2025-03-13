@@ -50,6 +50,12 @@ ___
 	Cable side view
 	
 	![Brake res.](../../../../source/img/1095690000.webp){: style="width:60%;" }
+		
+	The X5 connector comes with jumper wires prepared for use with the internal chopper resistor.
+	
+	![PWR connector](../../../../source/img/1095690000jumper.svg){: style="width:60%;" }   
+	
+	If an external chopper (brake) resistor is used, the jumper wires must be removed from both X5 and X3 connectors and the resistor connected according to the [schematic](schematic.en.md).		
 
 -   WEIDMÜLLER BLZ 7.62HP/03/180F
 
@@ -75,7 +81,13 @@ ___
 	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
 	
 	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
-
+	
+	The X3 connector comes with jumper wires prepared for use with the internal chopper resistor.
+	
+	![1941040000_2](../../../../source/img/1941040000jumper.svg){: style="width:60%;" }   
+	
+	If an external chopper (brake) resistor is used, the jumper wires must be removed both from the X3 and X5 connectors and the resistor connected according to the [schematic](schematic.en.md).	  
+	
 -    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---

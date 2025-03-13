@@ -220,6 +220,12 @@ ___
     ---
 	
 	![PWR connector](../../../../source/img/1095780000.svg){: style="width:100%;" }
+	
+	Konektor X2 je standardně dodáván včetně propojovacích vodičů v konfiguraci pro použítí interního brzdného odporu.
+	
+	![PWR connector](../../../../source/img/1095780000jumper.svg){: style="width:100%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodiče a rezistor připojit dle [schématu](schematic.md).
 
 -    Weidmüller  BLZ 7.62HP/12/180F
 

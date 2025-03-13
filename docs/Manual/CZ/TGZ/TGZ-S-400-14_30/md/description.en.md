@@ -220,6 +220,12 @@ ___
     ---
 	
 	![PWR connector](../../../../source/img/1095780000.svg){: style="width:100%;" }
+	
+	The X2 connector comes with jumper wires prepared for use with the internal chopper resistor.
+	
+	![PWR connector](../../../../source/img/1095780000jumper.svg){: style="width:100%;" }   
+	
+	If an external chopper (brake) resistor is used, the jumper wires must be removed and the resistor connected according to the [schematic](schematic.en.md).	
 
 -    Weidmüller  BLZ 7.62HP/12/180F
 
