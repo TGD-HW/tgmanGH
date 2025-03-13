@@ -2,11 +2,11 @@
 | :---: | :---: |
 | Control voltage | 24 VDC ± 10 %, 2 A* |
 | Power supply voltage | 140-600 VDC |
-| Installed power consumption for S1 operation | 3,4 kW |
-| Constant current on one axis | 3 A |
-| Continuous total current when operating two axes | 6 A |
-| Maximum output current (max. 5s) | 2 x 9 A |
-| Losses at rated load | 60 W |
+| Installed power consumption for S1 operation | 7,8 kW |
+| Constant current on one axis | 7 A |
+| Continuous total current when operating two axes | 14 A |
+| Maximum output current (max. 5s) | 2 x 15 A |
+| Losses at rated load | 100 W |
 | Protection level | IP20 |
 | **COMMUNICATION** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |

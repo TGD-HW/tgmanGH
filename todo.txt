@@ -6,5 +6,12 @@ doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, 
 
 -O verze doplnit aktuální nákresy a popis svorkovnic
 
+S400/S230/TGS - jako spíš, že už to dostanou propojený a jen v případě, že budou mít R ext, tak si ty propojky vyhoděj. - uvést v man
+á bych tam napsal, že je nějaká default konfigurace, kterou rovnou dodáváme a když budou chtít Rext - tak šup kukni tady do schématu, kam to máš strčit.
+[10:38:43] tgd-pkudlacek: " Konektor X2 je standartně dodávám včetně propojovacích vodičů v konfiguraci pro použítí interního brzdného odporu.
+[10:39:15] tgd-pkudlacek: u S230 je samozřejmě jen jedna propojka
+
 prozkoumat tags, vyzkoušet:
 https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title
+
+prozkoumat analytics
