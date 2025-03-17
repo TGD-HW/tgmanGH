@@ -2,14 +2,9 @@ igor chybí:
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 
-doporučení obecně protáhnout kontakty napaječe (pokud je k dispozici) RDY, ERR přes STO - hlavně teda RDY
+-O verze doplnit aktuální nákresy a popis svorkovnic - potřebuju model STEP
 
--O verze doplnit aktuální nákresy a popis svorkovnic
-
-S400/S230/TGS - jako spíš, že už to dostanou propojený a jen v případě, že budou mít R ext, tak si ty propojky vyhoděj. - uvést v man
-á bych tam napsal, že je nějaká default konfigurace, kterou rovnou dodáváme a když budou chtít Rext - tak šup kukni tady do schématu, kam to máš strčit.
-[10:38:43] tgd-pkudlacek: " Konektor X2 je standartně dodávám včetně propojovacích vodičů v konfiguraci pro použítí interního brzdného odporu.
-[10:39:15] tgd-pkudlacek: u S230 je samozřejmě jen jedna propojka
+parametry TGZ vs man
 
 prozkoumat tags, vyzkoušet:
 https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title

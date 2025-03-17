@@ -6,12 +6,13 @@
 | Výstupní napětí (DC)  | 560 VDC |
 | Maximální trvalý výstupní proud (DC)  | 50 A |
 | Maximální krátkodobý výstupní proud (DC, 1s)  | 100 A |
-| Maximální výstupní výkon  | 33 kW |
+| Instalovaný příkon pro provoz S1 | 28 kVA |
 | Maximální brzdný výkon (interní rezistor)  | 400 W |
 | Maximální brzdný výkon (externí rezistor)  |   |
 | Ztráty při maximálním výstupním výkonu  | 150 W |
 | Jištění  | 63 A |
 | Stupeň krytí | IP20 |
+| Teplota okolí | 0 ~ 40 °C |
 | **VÝSTUPY** |   |
 | Bezpotenciálový kontakt RDY | Max. 28 VDC / 700 mA |
 | Bezpotenciálový kontakt ERR | Max. 28 VDC / 700 mA |

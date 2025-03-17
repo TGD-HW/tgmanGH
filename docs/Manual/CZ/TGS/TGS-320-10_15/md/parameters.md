@@ -5,12 +5,13 @@
 | Výstupní napětí (DC)  | 320 VDC  |
 | Maximální trvalý výstupní proud (DC)  | 10 A  |
 | Maximální krátkodobý výstupní proud (DC, 1s)  | 15 A  |
-| Maximální výstupní výkon  | 3 200 W  |
+| Instalovaný příkon pro provoz S1 | 3,2 kVA |
 | Maximální brzdný výkon (interní rezistor)  | 100 W  |
 | Maximální brzdný výkon (externí rezistor)  | 3 200 W |
 | Ztráty při maximálním výstupním výkonu  | 80 W  |
 | Jištění  | 16 A (char. Z, dvoupól) |
 | Stupeň krytí | IP20 |
+| Teplota okolí | 0 ~ 40 °C |
 | **VÝSTUPY** |   |
 | Bezpotenciálový kontakt RDY | Max. 28 VDC / 700 mA |
 | Bezpotenciálový kontakt ERR | Max. 28 VDC / 700 mA |

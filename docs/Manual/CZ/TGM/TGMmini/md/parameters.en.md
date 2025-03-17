@@ -3,6 +3,7 @@
 | Supply voltage | 24 V DC (± 20 %) |
 | Recommended PSU current | min. 1 A |
 | DO supply | 24 V DC (± 20 %) |
+| Ambient operating temperature | 0 ~ 40 °C |
 | **COMMUNICATION** |   |
 | Ethernet | 10/100 Mbit RJ45 |
 | EtherCAT | 100 Mbps |

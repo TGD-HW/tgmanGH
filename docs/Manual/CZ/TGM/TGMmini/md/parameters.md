@@ -3,6 +3,7 @@
 | Napájecí napětí | 24 V DC (± 20 %) |
 | Proudový odběr | min. 1 A |
 | Napájení DO | 24 V DC (± 20 %) |
+| Teplota okolí | 0 ~ 40 °C |
 | **KOMUNIKACE** |   |
 | Ethernet | 10/100 Mbit RJ45 |
 | EtherCAT | 100 Mbps |

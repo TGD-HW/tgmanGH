@@ -1,12 +1,13 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
-| Ovládací napětí | 24 VDC ± 10 %, 1 A* |
-| Výkonové napájecí napětí | 6–48 VDC (abs. Max. 59 VDC) |
-| Instalovaný příkon pro provoz S1 | 4,8 kW |
+| Ovládací napětí | 24 VDC ± 10 %, 600 mA |
+| Výkonové napájecí napětí | 0–48 VDC |
+| Instalovaný příkon pro provoz S1 | 4,8 kVA |
 | Trvalý proud na jednu osu | 100A |
 | Maximální výstupní proud (max. 5 s) | 300 A |
 | Ztráty při jmenovité zátěži | 70 W |
 | Stupeň krytí | IP20 |
+| Teplota okolí | -32 ~ +40 °C |
 | **KOMUNIKACE** |   |
 | CAN | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | ETHERCAT IN/OUT | 100/1000 Mb/s, 2 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |

@@ -5,12 +5,13 @@
 | Output voltage (DC)  | 320 VDC  |
 | Maximum continuous output current (DC)  | 10 A  |
 | Maximum short-term output current (DC, 1s)  | 15 A  |
-| Maximum output power  | 3 200 W  |
+| Installed power consumption for S1 operation | 3,2 kVA |
 | Maximum braking power (internal resistor)  | 100 W  |
 | Maximum braking power (external resistor)  | 3 200 W |
 | Losses at maximum output power  | 80 W  |
 | Overcurrent protection | 16 A (char. Z, dual) |
 | Protection level | IP20 |
+| Ambient operating temperature | 0 ~ 40 °C |
 | **OUTPUTS** |   |
 | RDY digital output (contact) | Max. 28 VDC / 700 mA |
 | ERR digital output (contact) | Max. 28 VDC / 700 mA |

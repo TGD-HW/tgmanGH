@@ -5,12 +5,13 @@
 | Output voltage (DC)  | 560 VDC |
 | Maximum continuous output current (DC)  | 25 A |
 | Maximum short-term output current (DC, 1s)  | 50 A |
-| Maximum output power  | 15 kW |
+| Installed power consumption for S1 operation | 14 kVA |
 | Maximum braking power (internal resistor) | 400 W |
 | Maximum braking power (external resistor) | 9 kW |
 | Losses at maximum output power | 100 W |
 | Recommended circuit breaker | 32 A |
 | Protection level | IP20 |
+| Ambient operating temperature | 0 ~ 40 °C |
 | **OUTPUTS** |   |
 | RDY digital output (contact) | Max. 28 VDC / 700 mA |
 | ERR digital output (contact) | Max. 28 VDC / 700 mA |

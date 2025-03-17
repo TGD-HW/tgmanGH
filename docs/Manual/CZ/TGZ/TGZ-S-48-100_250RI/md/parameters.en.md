@@ -1,12 +1,13 @@
 | **POWER SUPPLY** |   |
 | :---: | :---: |
-| Control voltage | 24 VDC ± 10 %, 1 A* |
-| Power supply voltage | 0–48 VDC (abs. max. 59 VDC) |
-| Installed power consumption for S1 operation | 4,8 kW |
+| Control voltage | 24 VDC ± 10 %, 600 mA |
+| Power supply voltage | 0–48 VDC |
+| Installed power consumption for S1 operation | 4,8 kVA |
 | Constant current on one axis | 100A |
 | Maximum output current (max. 5s) | 250 A |
 | Losses at rated load | 70 W |
 | Protection level | IP20 |
+| Ambient operating temperature | -32 ~ +40 °C |
 | **COMMUNICATION** |   |
 | CAN | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | ETHERCAT IN/OUT | 100/1000 Mb/s, 2 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |

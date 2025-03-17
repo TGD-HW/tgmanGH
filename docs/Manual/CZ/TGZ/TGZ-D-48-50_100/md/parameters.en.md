@@ -1,13 +1,14 @@
 | **POWER SUPPLY** |   |
 | :---: | :---: |
-| Control voltage | 24 VDC ± 10 %, 400 mA* |
+| Control voltage | 24 VDC ± 10 %, 600 mA* |
 | Power supply voltage | 0–48 VDC |
-| Installed power consumption for S1 operation | 4,8 kW |
+| Installed power consumption for S1 operation | 4,8 kVA |
 | Constant current on one axis | 50 A |
 | Continuous total current when operating two axes | 2 x 50 A |
 | Maximum output current (max. 5s) | 2 x 100 A |
 | Losses at rated load | 50 W |
 | Protection level | IP20 |
+| Ambient operating temperature | 0 ~ 40 °C |
 | **COMMUNICATION** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
 | ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
