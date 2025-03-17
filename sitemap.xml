@@ -2360,6 +2360,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X1_24V_5pin_BCZ_D4850.html</loc>
+        <lastmod>2025-03-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X1_24V_5pin_BCZ_D4850.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ_D4850.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X1_24V_5pin_BCZ_TGM.html</loc>
         <lastmod>2025-03-17</lastmod>
         <changefreq>daily</changefreq>
@@ -5242,6 +5249,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X1_24V_5pin_BCZ.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ_D4850.html</loc>
+        <lastmod>2025-03-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ_D4850.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X1_24V_5pin_BCZ_D4850.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X1_24V_5pin_BCZ_TGM.html</loc>
