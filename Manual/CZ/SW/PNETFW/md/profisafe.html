@@ -20,7 +20,7 @@
     
     
       
-        <title>TGZ - Česky</title>
+        <title>Profisafe - Česky</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tgz" class="md-skip">
+        <a href="#available-safety-functions" class="md-skip">
           Přeskočit obsah
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TGZ
+              Profisafe
             
           </span>
         </div>
@@ -9416,34 +9416,13 @@
 
 
 
-<h1 id="tgz">TGZ<a class="headerlink" href="#tgz" title="Permanent link">&para;</a></h1>
-<h1 id="profisafe-internal-technical-specification">PROFIsafe internal technical specification<a class="headerlink" href="#profisafe-internal-technical-specification" title="Permanent link">&para;</a></h1>
-<p>Document revision:</p>
-<table>
-<thead>
-<tr>
-<th>REVISION</th>
-<th>COMMENT</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>11/2024</td>
-<td>Initial document version</td>
-</tr>
-</tbody>
-</table>
-<p>PROFINET is registered trademark of PROFIBUS and PROFINET International (PI).<br />
-Note: Technical changes that improve the properties of the device may be made without prior notice!<br />
-This document is the intellectual property of TG Drives. All rights reserved. No part of this work may be reproduced in any form (by copying or otherwise), processed, copied or distributed electronically without the written permission of TG Drives.<br />
-Printed in the Czech Republic.</p>
-<h1 id="about-this-technical-description">About this technical description<a class="headerlink" href="#about-this-technical-description" title="Permanent link">&para;</a></h1>
-<h1 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h1>
+  <h1>Profisafe</h1>
+
 <h2 id="available-safety-functions">Available safety functions<a class="headerlink" href="#available-safety-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Abbr.</th>
+<th></th>
 <th>Function</th>
 <th>Category</th>
 <th>PROFIsafe</th>
@@ -9469,16 +9448,16 @@ Printed in the Czech Republic.</p>
 <td>No</td>
 </tr>
 <tr>
-<td>SS2</td>
-<td>Safe stop 2 (deceleration monitoring)</td>
+<td>SOS</td>
+<td>Safe operating stop</td>
 <td>Safe stop</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr>
-<td>SOS</td>
-<td>Safe operating stop</td>
+<td>SS2</td>
+<td>Safe stop 2 (deceleration monitoring)</td>
 <td>Safe stop</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -9503,6 +9482,10 @@ Printed in the Czech Republic.</p>
 </tbody>
 </table>
 <p>Each safety function can be activated by PROFIsafe, digital inputs (DI) or both. SLS and SLP can be also activated permanently by using the safety parameters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The function SLP is fully functional only with a multiturn absolute encoder.</strong></p>
+</div>
 <h3 id="profisafe">PROFIsafe<a class="headerlink" href="#profisafe" title="Permanent link">&para;</a></h3>
 <p>One or more of the safety functions can be activated. The standard PROFIsafe telegram 902 is used. There is a standard library LdrvSafe_SinaTlg902 available. The telegram 902 allows detailed control of each safety function with additional parameters and also returns a safe axis position together with the time stamp for velocity calculation.</p>
 <h3 id="digital-inputs">Digital inputs<a class="headerlink" href="#digital-inputs" title="Permanent link">&para;</a></h3>
@@ -9510,37 +9493,44 @@ Printed in the Czech Republic.</p>
 <h3 id="permanent-safety-function-selection">Permanent safety function selection<a class="headerlink" href="#permanent-safety-function-selection" title="Permanent link">&para;</a></h3>
 <p>Two of the safety functions can be also selected permanently via the safety parameters: Safe limit speed (SLS) and safe limit position (SLP). The SLS can work simultaneously with the PROFIsafe control – fine selection of the limited speed percent value is possible by telegram 902. On the other hand, the permanent SLP uses always the safety position 1 only.</p>
 <h3 id="active-safety-function-signaling-by-digital-outputs">Active safety function signaling by digital outputs<a class="headerlink" href="#active-safety-function-signaling-by-digital-outputs" title="Permanent link">&para;</a></h3>
-<p>Digital output pins 3&amp;5 for the first axis or 4&amp;6 can be selected for signaling a selected safety function. Only ONE function can be selected for signaling. The normal digital outputs function is not available in that case. Active safety function is signaled by setting both the outputs low. </p>
+<p>Digital output pins 3&amp;5 for the first axis or 4&amp;6 can be selected for signaling a selected safety function. Only ONE function can be selected for signaling. The normal digital outputs function is not available in that case. Active safety function is signaled by setting both the outputs low.</p>
 <h2 id="principle-of-operation">Principle of operation<a class="headerlink" href="#principle-of-operation" title="Permanent link">&para;</a></h2>
 <p>All safety functions assume that the PLC controller invokes the desired action. The TGZ monitors the speed and/or position and invokes the appropriate safety reaction in the case the conditions are not met. Additionally, when a safety function is selected, the TGZ also activates the wanted action internally (i.e. stops the motion, sets internal position limits, limits the speed, etc.).<br />
 The safety functions monitoring is done in a safety manner by using two independent processors.<br />
-Disabling the power motor output is done in a safety manner by using two independent FPGA disablers connected in sequence.</p>
+Disabling the power motor output is done in a safety manner by using two independent FPGA circuit breakers connected in a sequence.</p>
 <h2 id="safe-torque-off-sto">Safe torque off – STO<a class="headerlink" href="#safe-torque-off-sto" title="Permanent link">&para;</a></h2>
 <p>In addition to already available hardware STO safety function, which has its dedicated input pins, additional STO is available. STO turns off the drive output that powers the motor.</p>
 <h3 id="sto-activation">STO activation<a class="headerlink" href="#sto-activation" title="Permanent link">&para;</a></h3>
-<p>STO can be activated by any of the following inputs or events:
-- PROFIsafe STO bit in control word set to zero
-- SS1
-- SS2 in case of deceleration or standstill speed monitor fail
-- SOS in case of standstill speed monitor fail
-- SLS in case of speed threshold violation
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to STO
-- Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</p>
+<p>STO can be activated by any of the following inputs or events:</p>
+<ul>
+<li>PROFIsafe STO bit in control word set to zero</li>
+<li>SS1</li>
+<li>SS2 in case of deceleration or standstill speed monitor fail</li>
+<li>SOS in case of standstill speed monitor fail</li>
+<li>SLS in case of speed threshold violation</li>
+<li>SLP in case of position range overflow/underflow and when the SLP’s stop function is set to STO</li>
+<li>Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
 <h3 id="sto-signaling">STO signaling<a class="headerlink" href="#sto-signaling" title="Permanent link">&para;</a></h3>
-<p>STO active status can be evaluated by:
-- PROFIsafe status bit STO set to logical one
-- Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</p>
+<p>STO active status can be evaluated by:</p>
+<ul>
+<li>PROFIsafe status bit STO set to logical one</li>
+<li>Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
 <h3 id="sto-sequence">STO sequence<a class="headerlink" href="#sto-sequence" title="Permanent link">&para;</a></h3>
-<p>When the STO is activated the following actions are done simultaneously:
-- Output driver power stage is set to zero
-- The axis is disabled (software disable) and its PROFIdrive state goes to S1 – Switching On Inhibited.
-- The motor velocity goes to zero and the motor cannot be started accidentally.</p>
-<blockquote>
-<p><strong>Warning: After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.</strong></p>
-</blockquote>
+<p>When the STO is activated the following actions are done simultaneously:</p>
+<ul>
+<li>Output driver power stage is set to zero</li>
+<li>The axis is disabled (software disable) and its PROFIdrive state goes to S1 – Switching On Inhibited.</li>
+<li>The motor velocity goes to zero and the motor cannot be started accidentally.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.</strong></p>
+</div>
 <h3 id="sto-deactivation">STO deactivation<a class="headerlink" href="#sto-deactivation" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Deselect the function by PROFIsafe control word and/or by settings both mapped digital inputs to high level.</li>
+<li>Deselect the function by PROFIsafe control word bit STO to logical 1 and/or by settings both mapped digital inputs to high level.</li>
 <li>Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h2 id="ss1-time-based-safe-stop">SS1 – time based safe stop<a class="headerlink" href="#ss1-time-based-safe-stop" title="Permanent link">&para;</a></h2>
@@ -9550,17 +9540,103 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </blockquote>
 <p>In other words the drive decelerates once SS1 has been selected, and goes into the STO state once the delay time has expired. The STO state is always selected after the timeout regardless the axis is still moving or not.</p>
 <h3 id="ss1-activation">SS1 activation<a class="headerlink" href="#ss1-activation" title="Permanent link">&para;</a></h3>
-<p>The SS1 function can be activated by any of the following events:
-- PROFIsafe SS1 bit in the control word set to zero
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SS1
-- Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</p>
+<p>The SS1 function can be activated by any of the following events:</p>
+<ul>
+<li>PROFIsafe SS1 bit in the control word set to zero</li>
+<li>SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SS1</li>
+<li>Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
 <h3 id="ss1-signaling">SS1 signaling<a class="headerlink" href="#ss1-signaling" title="Permanent link">&para;</a></h3>
-<p>STO active status can be evaluated by:
-- PROFIsafe status bit SS1 set to logical one
-- Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</p>
+<p>STO active status can be evaluated by:</p>
+<ul>
+<li>PROFIsafe status bit SS1 set to logical one</li>
+<li>Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
 <h3 id="ss1-sequence">SS1 sequence<a class="headerlink" href="#ss1-sequence" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The SS1 is selected either by bit SS1 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>The TGZ stops the movement with the deceleration specified in the safety parameters.</li>
+<li>After fixed time (also specified in the safety parameters) the STO is activated, even if the axis is still moving.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.</strong></p>
+</div>
 <h3 id="ss1-deactivation">SS1 deactivation<a class="headerlink" href="#ss1-deactivation" title="Permanent link">&para;</a></h3>
-<h1 id="technical-implementation">Technical implementation<a class="headerlink" href="#technical-implementation" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Deselect the function by PROFIsafe control word bit SS1 to logical 1 and/or by settings both mapped digital inputs to high level.</li>
+<li>Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
+</ul>
+<h2 id="sos-safe-operating-stop">SOS – safe operating stop<a class="headerlink" href="#sos-safe-operating-stop" title="Permanent link">&para;</a></h2>
+<p>Definition according to EN 61800-5-2:</p>
+<blockquote>
+<p>"This SOS function is used for safe monitoring of the standstill position of a drive."</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Contrary to SS1 and SS2, SOS does not automatically brake the drive. It only monitors the standstill position. This means that the PLC must ensure that the drive is stopped before activating the SOS function.</p>
+</div>
+<p>The motor remains under power and the drive is in the enabled state. The SOS function is activated when the motor is not in the standstill position after the timeout has elapsed. The standstill check is done by the <strong>standstill tolerance window safe parameter</strong>.</p>
+<h3 id="sos-activation">SOS activation<a class="headerlink" href="#sos-activation" title="Permanent link">&para;</a></h3>
+<p>The SOS function can be activated by any of the following events:</p>
+<ul>
+<li>PROFIsafe SOS bit in the control word set to zero</li>
+<li>SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SOS</li>
+<li>Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
+<h3 id="sos-signaling">SOS signaling<a class="headerlink" href="#sos-signaling" title="Permanent link">&para;</a></h3>
+<p>STO active status can be evaluated by:</p>
+<ul>
+<li>PROFIsafe status bit SOS set to logical one</li>
+<li>Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
+<h3 id="sos-sequence">SOS sequence<a class="headerlink" href="#sos-sequence" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The SOS is selected either by bit SOS to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>The TGZ waits for the timeout to elapse. During this time the motor must be stopped by the PLC.</li>
+<li>After the timeout, the TGZ checks if the motor is in standstill. If not, the <strong>STO</strong> function is activated.</li>
+</ol>
+<h3 id="sos-deactivation">SOS deactivation<a class="headerlink" href="#sos-deactivation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Deselect the function by PROFIsafe control word bit SOS to logical 1 and/or by settings both mapped digital inputs to high level.</li>
+<li>If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
+</ul>
+<h2 id="ss2-safe-stop-with-deceleration-monitoring">SS2 – safe stop with deceleration monitoring<a class="headerlink" href="#ss2-safe-stop-with-deceleration-monitoring" title="Permanent link">&para;</a></h2>
+<p>Definition according to EN 61800-5-2:</p>
+<blockquote>
+<p>"The function SS2 brakes the motor, monitors the magnitude of the motor deceleration, and after a delay time, initiates the SOS function."</p>
+</blockquote>
+<p>In other words the drive decelerates once SS2 has been selected, and goes into the SOS state if the deceleration monitoring has failed. After the timeout the SS2 function checks if the motor is in standstill. If not, the SOS function is activated. The standstill check is done by the <strong>standstill tolerance window safe parameter</strong>.</p>
+<h3 id="ss2-activation">SS2 activation<a class="headerlink" href="#ss2-activation" title="Permanent link">&para;</a></h3>
+<p>The SS2 function can be activated by any of the following events:</p>
+<ul>
+<li>PROFIsafe SS2 bit in the control word set to zero</li>
+<li>SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SS2</li>
+<li>Digital inputs (5&amp;7 – axis 1, 6&amp;8 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
+<h3 id="ss2-signaling">SS2 signaling<a class="headerlink" href="#ss2-signaling" title="Permanent link">&para;</a></h3>
+<p>STO active status can be evaluated by:</p>
+<ul>
+<li>PROFIsafe status bit SS2 set to logical one</li>
+<li>Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</li>
+</ul>
+<h3 id="ss2-sequence">SS2 sequence<a class="headerlink" href="#ss2-sequence" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The SS2 is selected either by bit SS2 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>The TGZ stops the movement with the deceleration specified in the safety parameters.</li>
+<li>When the timeout elapses or the motor is in standstill, continuous check of the the zero speed is activated (SOS function).</li>
+<li>If the motor is not in standstill, the <strong>STO</strong> function is activated.</li>
+</ol>
+<h3 id="ss2-deactivation">SS2 deactivation<a class="headerlink" href="#ss2-deactivation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Deselect the function by PROFIsafe control word bit SS2 to logical 1 and/or by settings both mapped digital inputs to high level.</li>
+<li>If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
+</ul>
+<h2 id="sls-safe-limit-speed">SLS – safe limit speed<a class="headerlink" href="#sls-safe-limit-speed" title="Permanent link">&para;</a></h2>
+<p>Definition according to EN 61800-5-2:</p>
+<blockquote>
+<p>"The SLS function prevents the motor from exceeding the specified speed limit.</p>
+</blockquote>
 
 
 
@@ -9583,7 +9659,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="1. dubna 2025 11:55:25"><span class="timeago" datetime="2025-04-01T11:55:25+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="1. dubna 2025 11:55:25">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="1. dubna 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="1. dubna 2025 20:01:03">2025-04-01</span>
   </span>
 
     

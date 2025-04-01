@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#profidrive-parameters" class="md-skip">
+        <a href="#homing-modes" class="md-skip">
           Skip to content
         </a>
       
@@ -7370,6 +7370,111 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#homing-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homing modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fault-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fault buffer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fault buffer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-faults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Faults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-counters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fault Counters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledging-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledging Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-between-tgz-coordinates-and-profidrive-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship between TGZ coordinates and PROFIdrive values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlash-compensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backlash compensation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speed-control-mode-and-normalized-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speed control mode and normalized values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profidrive-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       PROFIdrive parameters
@@ -7417,7 +7522,7 @@
         <li class="md-nav__item">
   <a href="#profinet-related-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      PROFINET related parameters
+      ProfiNET related parameters
     </span>
   </a>
   
@@ -9545,6 +9650,201 @@
 
   <h1>PROFIdrive</h1>
 
+<h2 id="homing-modes">Homing modes<a class="headerlink" href="#homing-modes" title="Permanent link">&para;</a></h2>
+<p>The drive must be in operational state with positioning mode set (telegrams <code>7</code>, <code>9</code> or <code>111</code>). No task must be active and the drive must be in standstill. The mode is selected by the <code>Homing_Mode</code> parameter in the TGZ_GUI application. To initiate a homing procedure, set the control word <code>STW1</code> bit <code>11</code> to one. As the homing procedure is running, the status word <code>ZSW1</code> bits <code>10, 11 and 13</code> are set to zero. After successful homing, these bits <code>10, 11 and 13</code> go to one. In the case of any error during homing, only the bit <code>13</code> is set. The homing procedure can be aborted by setting the <code>STW1 bit 11</code> to zero. It is also necessary to finish the successful homing procedure by setting the <code>STW1 bit 11</code> to zero. Only after this the drive goes back to the basic operational state.</p>
+<p>The following homing modes are available:</p>
+<table>
+<thead>
+<tr>
+<th>Mode no.</th>
+<th>Mode description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Set zero to the actual position. Uses the actual position as the home point reference.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Find limit input. Movement starts in positive or negative direction until the limit switch is detected. Then the reverse movement is used until the limit switch is no longer active. The actual position is used as the home point. <code>Homing_NegLimSwitchMask</code> and <code>Homing_PosLimitSwitchMask</code> parameters are used to select the digital input bit of the limit switch. The sign of <code>Homing_Velocity_Direction</code> parameter determines the homing direction.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Find limit input, then zero angle. Similar to mode 1, but after the home position is set, the motor moves to the zero angle of the feedback.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Find home input. This mode is similar to mode 1, but uses the homing switch as the input (parameter <code>Homing_ReferenceSwitchMask</code>). The initial direction is determined by the sign of <code>Homing_Velocity_Direction</code> parameter. The positive and negative switches are also taken into account in the algorithm.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Find home input, then zero angle. Similar to mode 4, after the home position is set, the drive goes to the zero angle of the feedback.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Move to mechanical stop. The drive moves until it encounters a hard stop, causing the position error to be exceeded. The move stops afterwards and the home position is set.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Move to mechanical stop, then zero angle. Similar to mode 8, after the home position is set, the motor moves to the zero angle of the feedback.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h2>
+<p>The TGZ amplifier allows up to ten tasks to be used in positioning mode. The task numbers are set by the <code>SATZANW</code> signal in telegrams <code>7, 9</code> or <code>111</code>. The task parameters can be set by TGZ_GUI. The target position is always 64 bits (in TGZ units) to allow full value precision. The mode of the task is either 0 - relative positioning, or 1 - absolute target value. No action is performed for invalid task numbers. Valid values are 0 - 9 <code>(PD_Task1 - PD_Task10</code>). For a detailed description of the task and direct <strong>Manual data input (MDI)</strong> mode, see the <strong>PROFIdrive Profile</strong> documentation.</p>
+<h2 id="jog">Jog<a class="headerlink" href="#jog" title="Permanent link">&para;</a></h2>
+<p>The jogging function is supported in both position (telegrams <code>7, 9, 111</code>) and speed mode (telegrams <code>1, 3, 352</code>). All the jog parameters can be set by the TGZ_GUI application. Two jog setpoints are available by using the control word <code>STW1</code> bits <code>8 and 9</code>. If both bits are set the drive either stops in speed mode or does nothing in positioning mode.</p>
+<p>The drive works in speed mode when the jog is active, i.e., it moves the axis with the desired jog speed endlessly until stopped.</p>
+<p>The functionality is implemented according to the standard described in the PROFIdrive Profile documentation.</p>
+<h2 id="fault-buffer">Fault buffer<a class="headerlink" href="#fault-buffer" title="Permanent link">&para;</a></h2>
+<p>TGZ follows the standard PROFIdrive fault buffer mechanism. Since a standard fault buffer
+entry is 16 bits wide, but TGZ uses 32-bit fault numbers, each error situation occupies two
+consecutive entries in the buffer (PNU 947). The buffer can store up to eight error
+situations, forming a 16-entry array (each entry being 2 bytes long).
+To read an error situation, the parameter index is used. Since each error spans two 16-bit
+values, two reads are necessary:</p>
+<ul>
+<li>Even index → Lower 16 bits of the error</li>
+<li>Odd index → Upper 16 bits of the error</li>
+</ul>
+<p>Typically, indexes 0 and 1 are used to retrieve the most recent error.</p>
+<h3 id="reading-faults">Reading Faults<a class="headerlink" href="#reading-faults" title="Permanent link">&para;</a></h3>
+<p>PROFIdrive supports multi-register reads, allowing efficient fault retrieval. The SinaPara
+function block can be used as follows:</p>
+<ul>
+<li>Set <code>sxParameter[0].siParaNo = 947</code> and <code>sxParameter[1].siParaNo = 947</code>
+(PNU number).</li>
+<li>Set <code>sxParameter[0].siIndex = 0</code> and <code>sxParameter[1].siIndex = 1</code>.</li>
+<li>Set <code>ParaNo = 2</code> (to read two parameters).</li>
+<li>TGZ automatically sets the read format to 16#42 (42h means 16-bit word value).</li>
+</ul>
+<p>Alternatively, the SinaParaS function block can be used for a simpler implementation.</p>
+<h3 id="fault-counters">Fault Counters<a class="headerlink" href="#fault-counters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PNU 944 (Fault Message Counter): Incremented by 2 for each new error situation.</li>
+<li>PNU 952 (Fault Situation Counter): Incremented by 1 per new error.</li>
+</ul>
+<h3 id="acknowledging-errors">Acknowledging Errors<a class="headerlink" href="#acknowledging-errors" title="Permanent link">&para;</a></h3>
+<p>When an error is acknowledged via bit 7 of the control word, the fault buffer shifts down,
+removing the most recent error.
+The fault buffer can be completely cleared by writing zero to the parameter PNU952.
+For more details, refer to the PROFIdrive Profile Manual.</p>
+<h2 id="error-codes">Error codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h2>
+<p>The error code is copied to the fault buffer in the case of any drive error. The standard PROFIdrive fault buffer mechanism is used. Because the standard PROFIdrive error code has a width of 16 bits only and TGZ uses 32-bit errors, there are always two fault messages containing the full 32-bit error word. Therefore, the parameter <code>947</code> is organized with 8 fault situations with 2 fault messages. The message with index <code>0</code> contains the low 16 bits of the error code and the message with index <code>1</code> the high 16 bits.</p>
+<p>The fault buffer can be completely cleared by writing zero to the parameter <code>952</code>.</p>
+<p>Telegram <code>111</code> contains space for the last active error code, where the <code>WARN code</code> field (PZD11) contains the low 16 bits and the <code>FAULT code</code> field (PZD10) contains the high 16 bits of the TGZ error code. Similarly, the telegram <code>352</code> has fields for <code>WARN (PZD5)</code> and <code>FAULT (PZD6)</code>. They are coded in the same manner. The TGZ error codes are bit-oriented, i.e., there are up to 32 errors possible, and they are cumulative, i.e., several bits can be set at the same time.</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>reserved (internal error)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Over voltage DC-Link</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Under voltage DC-link</td>
+</tr>
+<tr>
+<td>5</td>
+<td>STO diagnostics</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Holding brake error</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Motor temperature</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Drive temperature</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Feedback</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Over speed</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Position error (countouring)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Fieldbus (loss of communication)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Current regulator error</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Emergency stop</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Driver saturation</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Regen power</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Invalid parameter</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relationship-between-tgz-coordinates-and-profidrive-values">Relationship between TGZ coordinates and PROFIdrive values<a class="headerlink" href="#relationship-between-tgz-coordinates-and-profidrive-values" title="Permanent link">&para;</a></h2>
+<p>The TGZ drive uses 64-bit values for position. This value consists of number of revolutions in upper 32 bits, and number of increments within one turn.
+On the other hand, PROFIdrive standard uses only 32-bit values for position. For this reason, some kind of up and downscaling is necessary.
+The wanted position value from PROFIdrive telegram is expanded to 64 bits and then shifted left by 32 minus the number of bits specified in the TGZ settings – Profile generator (PG) value <code>BitsPerRevol</code>.
+If <code>BitsPerRevol=20</code>, then the value from PROFIdrive is shifted left by 12 bits. The shifting has the same effect as multiplying the value by 2^12 (i.e., 4096).
+The similar downscaling is performed when sending actual position value from TGZ to the PROFIdrive controller: the 64-bit TGZ position is shifted right by <code>32 - BitsPerRevol</code> (which is the same operation as dividing by 2<sup>32-BitsPerRevol</sup>) and the resulting lower 32 bits are sent in the PROFIdrive telegram.</p>
+<p>The values of velocity are not scaled at all because both TGZ and PROFIdrive telegrams use 32-bit values. Therefore, the meaning of velocity is the same as velocity for the Profile generator.
+Acceleration and deceleration must be set directly in the TGZ by service program TGZ_GUI in the PROFIdrive section and can be changed by PROFIdrive telegrams only by means of override (percentage) values contained in the respective telegrams.</p>
+<h2 id="backlash-compensation">Backlash compensation<a class="headerlink" href="#backlash-compensation" title="Permanent link">&para;</a></h2>
+<p>The firmware from August 2023 or newer implements the backlash compensation. The standard parameter <code>PNU 2583</code> is used for the backlash value.
+It is stored as signed 32-bit integer value and has the same physical meaning as desired or actual position in telegrams <code>9</code> or <code>111</code>.
+To use the backlash compensation, a successful homing procedure must be performed first.</p>
+<p>The positive movement direction is performed when the actual position is incremented. Likewise, the negative movement is defined when the position is decremented.
+The compensation itself is dependent on the sign of the backlash:</p>
+<ul>
+<li>Positive backlash value: when the wanted position is in the positive direction, the backlash value is added to the value. On the other hand, for the negative movement, no value is added to the desired position.</li>
+<li>Negative backlash value: during the negative movement the backlash is subtracted from the wanted position, making the result more negative. For the positive direction, no value is added to the final desired position.</li>
+</ul>
+<p>Use of the positive or negative backlash depends on the chosen homing procedure and its final movement. If the homing finishes with the negative movement, use the positive backlash, because the looseness is already adjusted to the left side. Likewise choose the negative backlash value when the last homing movement goes in the positive direction.</p>
+<p>The backlash value can be set only by the parameter <code>PNU 2583</code> by PLC, there is no equivalent in the TGZ register area.
+The program block called <code>SinParaS</code> can be used in the TIA portal for setting the <code>PNU 2583</code>.</p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/profinet10.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" src="../../../../../../Manual/source/img/profinet10.webp" style="width:50%;" /></a></p>
+<p>The <code>hardwareId</code> input is set to the same value as <code>HWIDSTW</code> input of <code>SinaPos</code> block, i.e., the telegram identifier of the TGZ. <code>AxisNo</code> can be <code>0</code> for the first axis or <code>1</code> for the second one.
+As the backlash is of type <code>DINT</code> (signed 32-bit integer), the wanted backlash value must be written to the <code>ValueWrite2</code> input.
+The write is performed by toggling <code>Start</code> from <code>False</code> to <code>True</code>.</p>
+<h2 id="speed-control-mode-and-normalized-values">Speed control mode and normalized values<a class="headerlink" href="#speed-control-mode-and-normalized-values" title="Permanent link">&para;</a></h2>
+<p>Telegrams <code>1</code>, <code>3</code> and <code>352</code> are used for speed control mode. These telegrams use normalized speed values in the <code>N2</code> or <code>N4</code> format.
+Setpoint and actual speed are expressed as a percentage of the reference value. TGZ amplifier uses the nominal speed register named <code>M-Nn</code> for this purpose – it must be non-zero, otherwise the speed control mode would not work.
+Normalized <code>N2</code> or <code>N4</code> values in the telegram are in the range from <code>-200 %</code> to <code>200 %</code> of the reference <code>M-Nn</code> value.</p>
+<p>The <code>M-Nn</code> register can be read by the standard <code>PNU</code> parameter <code>60 000</code> <strong>Velocity reference value</strong>.
+Complete access (read/write) is possible by direct TGZ parameters access, register numbers are <code>0x211B</code> for axis <code>1</code> and <code>0x221B</code> for axis <code>2</code>.
+See also chapter <a href="#tgz-registers">TGZ registers</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that <code>PNU 60 000</code> is read as floating point value, while direct access to TGZ registers is always 32-bit integer.</p>
+</div>
+<p>The internal speed profile generator uses register <code>PD_Dec</code> (<code>0x355F / 0x365F</code>) as the acceleration value when changing the speed.</p>
 <h2 id="profidrive-parameters">PROFIdrive parameters<a class="headerlink" href="#profidrive-parameters" title="Permanent link">&para;</a></h2>
 <p>The TGZ servo drive supports parameter access through slots 1 and 2 (slot 2 for the variant with two axes only). Three record data object indexes can be used to access TGZ parameters:</p>
 <ul>
@@ -9669,13 +9969,13 @@
 <p>The parameter numbers from 2010 to 8191 are reserved for future firmware extensions. PNU 2583 is used for backlash compensation and is unique for each axis.</p>
 <h2 id="tgz-registers">TGZ registers<a class="headerlink" href="#tgz-registers" title="Permanent link">&para;</a></h2>
 <p>All TGZ registers are accessible as manufacturer-specific PROFIdrive registers, starting from number 0x2000 (8192 DEC). The list of usable registers can be downloaded from the TG Drives website. Parameters are grouped into categories such as common, motor, drive, profile generator, etc. Groups and parameters within groups are numbered starting from zero. For example, parameter number 0x2119 belongs to group 1 (Motor) with an index of 25 (0x19 = 25 DEC).</p>
-<h2 id="profinet-related-parameters">PROFINET related parameters<a class="headerlink" href="#profinet-related-parameters" title="Permanent link">&para;</a></h2>
-<p>TGZ parameter names and their corresponding PROFINET names and descriptions:</p>
+<h2 id="profinet-related-parameters">ProfiNET related parameters<a class="headerlink" href="#profinet-related-parameters" title="Permanent link">&para;</a></h2>
+<p>TGZ parameter names and their corresponding ProfiNET names and descriptions:</p>
 <table>
 <thead>
 <tr>
 <th>TGZ parameter name</th>
-<th>PROFINET name</th>
+<th>ProfiNET name</th>
 <th>Description</th>
 <th>Number for axis 1</th>
 <th>Number for axis 2</th>
@@ -9699,7 +9999,7 @@
 <tr>
 <td>PD_SetDataCounter</td>
 <td>-</td>
-<td>Counts cyclic PROFINET messages from I/O controller</td>
+<td>Counts cyclic ProfiNET messages from I/O controller</td>
 <td>0x2324</td>
 <td>0x2424</td>
 </tr>
@@ -9815,7 +10115,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 1, 2025 11:55:25"><span class="timeago" datetime="2025-04-01T11:55:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 1, 2025 11:55:25">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 1, 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 1, 2025 20:01:03">2025-04-01</span>
   </span>
 
     

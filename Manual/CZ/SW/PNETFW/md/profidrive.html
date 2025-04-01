@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parametry-pohonu-profidrive" class="md-skip">
+        <a href="#rezimy-homing-reference" class="md-skip">
           Přeskočit obsah
         </a>
       
@@ -7368,6 +7368,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rezimy-homing-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Režimy homing (reference)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Režimy homing (reference)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dostupne-rezimy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dostupné režimy:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polohove-ulohy-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polohové úlohy (Tasks)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chybovy-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chybový buffer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chybový buffer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cteni-chyb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Čtení chyb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pocitadla-chyb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Počitadla chyb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potvrzovani-chyb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potvrzování chyb
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chybove-kody" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chybové kódy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vztah-mezi-souradnicemi-tgz-a-hodnotami-profidrive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vztah mezi souřadnicemi TGZ a hodnotami PROFIdrive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kompenzace-vule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kompenzace vůle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rezim-regulace-otacek-a-normalizovane-hodnoty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Režim regulace otáček a normalizované hodnoty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parametry-pohonu-profidrive" class="md-nav__link">
     <span class="md-ellipsis">
       Parametry pohonu PROFIdrive
@@ -7409,6 +7529,30 @@
       Registry TGZ
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Registry TGZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registry-pro-polohove-ulohy-pd_task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registry pro polohové úlohy (PD_Task)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pd_task1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PD_Task1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9516,6 +9660,225 @@
 
   <h1>PROFIdrive</h1>
 
+<h2 id="rezimy-homing-reference">Režimy homing (reference)<a class="headerlink" href="#rezimy-homing-reference" title="Permanent link">&para;</a></h2>
+<p>Pohon musí být v provozním stavu s nastaveným polohovacím režimem (telegramy <code>7</code>, <code>9</code> nebo <code>111</code>). Nesmí být aktivní žádná polohová úloha (task)  pohon musí být v klidovém stavu. Režim se vybírá parametrem <code>Homing_Mode</code> v aplikaci TGZ_GUI. K zahájení homing procedury nastavte v řídicím slovu <code>STW1</code> bit <code>11</code> na hodnotu 1. Během běhu homing procedury jsou bity <code>10, 11 a 13</code> ve stavovém slovu <code>ZSW1</code> vynulovány. Po úspěšném dokončení homingu přejdou bity <code>10, 11 a 13</code> na hodnotu 1. V případě chyby během homingu se nastaví pouze bit <code>13</code>. Proceduru homing lze přerušit nastavením <code>STW1 bit 11</code> na 0. Pro dokončení úspěšného homingu je rovněž nutné nastavit <code>STW1 bit 11</code> zpět na 0. Teprve poté se pohon vrátí do základního provozního stavu.</p>
+<h3 id="dostupne-rezimy">Dostupné režimy:<a class="headerlink" href="#dostupne-rezimy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Číslo režimu</th>
+<th>Popis režimu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Nastavení nulové polohy na aktuální pozici. Používá aktuální pozici jako referenční bod pro home.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Nalezení koncového spínače. Pohyb se spustí kladným nebo záporným směrem, dokud není detekován koncový spínač. Poté se provede reverzní pohyb, dokud koncový spínač nepřestane být aktivní. Aktuální pozice se nastaví jako home. Parametry <code>Homing_NegLimSwitchMask</code> a <code>Homing_PosLimitSwitchMask</code> určují digitální vstup odpovídající koncovému spínači. Směr homingu určuje znaménko parametru <code>Homing_Velocity_Direction</code>.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nalezení koncového spínače, poté nulový úhel. Podobné jako režim 1, ale po nastavení home polohy se motor přesune na nulový úhel zpětné vazby.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nalezení homing spínače. Podobné jako režim 1, ale jako vstup se používá homing spínač (<code>Homing_ReferenceSwitchMask</code>). Počáteční směr určuje znaménko parametru <code>Homing_Velocity_Direction</code>. Algoritmus rovněž zohledňuje kladný a záporný koncový spínač.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nalezení homing spínače, poté nulový úhel. Podobné jako režim 4, ale po nastavení home polohy se motor přesune na nulový úhel zpětné vazby.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Pohyb k mechanickému dorazu. Pohon se pohybuje, dokud nenarazí na pevnou mechanickou překážku, což způsobí překročení polohové chyby. Poté se pohyb zastaví a home poloha se nastaví.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pohyb k mechanickému dorazu, poté nulový úhel. Podobné jako režim 8, ale po nastavení home polohy se motor přesune na nulový úhel zpětné vazby.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="polohove-ulohy-tasks">Polohové úlohy (Tasks)<a class="headerlink" href="#polohove-ulohy-tasks" title="Permanent link">&para;</a></h2>
+<p>Zesilovač TGZ umožňuje používat až deset úloh v režimu polohování.
+Čísla úloh se nastavují signálem <code>SATZANW</code> v telegramu <code>7, 9 nebo 111</code>.
+Parametry úlohy lze nastavit pomocí rozhraní TGZ_GUI.
+Cílová poloha je vždy 64bitová (v jednotkách TGZ), aby byla umožněna plná přesnost hodnoty.
+Režim úlohy je buď 0 - relativní polohování, nebo 1 - absolutní cílová hodnota.
+Pro neplatné číslo úlohy se neprovede žádná akce.
+Platné hodnoty jsou 0 - 9 <code>(PD_Task1 - PD_Task10</code>).
+Podrobný popis úlohy a přímého režimu <strong>Manual data input (MDI)</strong> naleznete v dokumentaci k <strong>PROFIdrive Profile</strong> .
+Popis registrů TGZ pro polohové úlohy naleznete v <a href="#registry-pro-polohové-úlohy-pd_task">popisu registrů</a>.</p>
+<h2 id="jog">Jog<a class="headerlink" href="#jog" title="Permanent link">&para;</a></h2>
+<p>Funkce jog je podporována jak v polohovém (telegramy <code>7, 9, 111</code>), tak v rychlostním režimu (telegramy <code>1, 3, 352</code>).
+Všechny parametry funkce jog lze nastavit pomocí aplikace TGZ_GUI.
+Pomocí řídicího slova <code>STW1 bitů 8 a 9</code> jsou k dispozici dvě nastavené hodnoty jog.
+Pokud jsou nastaveny oba bity, pohon se buď zastaví v režimu rychlosti, nebo v režimu polohování nedělá nic.</p>
+<p>Pohon pracuje v rychlostním režimu, když je jog aktivní, tj. pohybuje osou požadovanou rychlostí jog nekonečně dlouho, dokud se nezastaví.</p>
+<p>Funkce je implementována podle standardu popsaného v dokumentaci PROFIdrive Profile.</p>
+<h2 id="chybovy-buffer">Chybový buffer<a class="headerlink" href="#chybovy-buffer" title="Permanent link">&para;</a></h2>
+<p>TGZ využívá standardní mechanismus chybového bufferu PROFIdrive. Protože standardní položka v chybovém bufferu má šířku 16 bitů, ale TGZ používá 32bitová chybová čísla, každá chybová situace zabírá dvě po sobě jdoucí položky v bufferu (PNU 947). Buffer může uložit až osm chybových situací, což tvoří pole o 16 položkách (každá položka je 2 bajty dlouhá).<br />
+K přečtení chybové situace se používá index parametru. Jelikož každá chyba zabírá dva 16bitové hodnoty, jsou nutná dvě čtení:</p>
+<ul>
+<li>Sudý index → Dolních 16 bitů chyby  </li>
+<li>Lichý index → Horních 16 bitů chyby  </li>
+</ul>
+<p>Typicky se k získání nejnovější chyby používají indexy 0 a 1.  </p>
+<h3 id="cteni-chyb">Čtení chyb<a class="headerlink" href="#cteni-chyb" title="Permanent link">&para;</a></h3>
+<p>PROFIdrive podporuje vícenásobné čtení registrů, což umožňuje efektivní načítání chyb. Funkční blok SinaPara lze použít následujícím způsobem:</p>
+<ul>
+<li>Nastavte <code>sxParameter[0].siParaNo = 947</code> a <code>sxParameter[1].siParaNo = 947</code><br />
+(PNU číslo).  </li>
+<li>Nastavte <code>sxParameter[0].siIndex = 0</code> a <code>sxParameter[1].siIndex = 1</code>.  </li>
+<li>Nastavte <code>ParaNo = 2</code> (pro čtení dvou parametrů).  </li>
+<li>TGZ automaticky nastaví formát čtení na <code>16#42</code> (42h znamená 16bitovou hodnotu).  </li>
+</ul>
+<p>Alternativně lze pro jednodušší implementaci použít funkční blok SinaParaS.  </p>
+<h3 id="pocitadla-chyb">Počitadla chyb<a class="headerlink" href="#pocitadla-chyb" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PNU 944 (Čítač chybových hlášení)</strong>: Zvyšuje se o 2 při každé nové chybové situaci.  </li>
+<li><strong>PNU 952 (Čítač chybových situací)</strong>: Zvyšuje se o 1 při každé nové chybě.  </li>
+</ul>
+<h3 id="potvrzovani-chyb">Potvrzování chyb<a class="headerlink" href="#potvrzovani-chyb" title="Permanent link">&para;</a></h3>
+<p>Když je chyba potvrzena prostřednictvím bitu 7 v řídicím slovu, chybový buffer se posune dolů a nejnovější chyba je odstraněna.<br />
+Chybový buffer lze zcela vymazat zapsáním nuly do parametru <strong>PNU 952</strong>.<br />
+Podrobnosti naleznete v PROFIdrive Profile Manual.  </p>
+<h2 id="chybove-kody">Chybové kódy<a class="headerlink" href="#chybove-kody" title="Permanent link">&para;</a></h2>
+<p>V případě jakékoli chyby pohonu se chybový kód zkopíruje do vyrovnávací paměti chyb.
+Používá se standardní mechanismus vyrovnávací paměti chyb PROFIdrive.
+Protože standardní chybový kód PROFIdrive má šířku pouze 16 bitů a TGZ používá 32bitové chyby, existují vždy dvě chybové zprávy obsahující celé 32bitové chybové slovo.
+Proto je parametr <code>947</code> organizován s 8 chybovými situacemi se 2 chybovými zprávami.
+Zpráva s indexem <code>0</code> obsahuje dolních 16 bitů chybového kódu a zpráva s indexem <code>1</code> horních 16 bitů.
+Vyrovnávací paměť poruch lze zcela vymazat zápisem nuly do parametru <code>952</code>.</p>
+<p>Telegram <code>111</code> obsahuje prostor pro poslední aktivní chybový kód, přičemž pole <code>WARN code (PZD11)</code> obsahuje dolních 16 bitů a pole <code>FAULT code (PZD10)</code> obsahuje horních 16 bitů chybového kódu TGZ.
+Podobně má telegram <code>352</code> pole pro <code>WARN (PZD5) a FAULT (PZD6)</code>. Jsou kódovány stejným způsobem.
+Chybové kódy TGZ jsou bitově orientované, tj. je možných až 32 chyb, a jsou kumulativní, tj. může být nastaveno několik bitů současně.</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Popis chyby</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>rezervováno (interní chyba)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Přepětí na DC sběrnici</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Podpětí na DC sběrnici</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Diagnostika STO</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Chyba zadržovací brzdy</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Teplota motoru</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Teplota pohonu</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Zpětná vazba</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Překročená rychlost</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Polohová chyba (konturování)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Průmyslová sběrnice (ztráta komunikace)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Chyba regulátoru proudu</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Nouzové zastavení</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Saturace budiče</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Regenerativní výkon</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Neplatný parametr</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vztah-mezi-souradnicemi-tgz-a-hodnotami-profidrive">Vztah mezi souřadnicemi TGZ a hodnotami PROFIdrive<a class="headerlink" href="#vztah-mezi-souradnicemi-tgz-a-hodnotami-profidrive" title="Permanent link">&para;</a></h2>
+<p>Jednotka TGZ používá pro polohu 64bitové hodnoty.
+Tato hodnota se skládá z počtu otáček v horních 32 bitech a počtu přírůstků v rámci jedné otáčky.
+Naproti tomu standard PROFIdrive používá pro polohu pouze 32bitové hodnoty.
+Z tohoto důvodu je nutný určitý druh škálování.
+Hledaná hodnota polohy z telegramu PROFIdrive je rozšířena na 64 bitů a poté posunuta doleva o 32 minus počet bitů uvedený v nastavení TGZ - hodnota <code>BitsPerRevol</code> generátoru profilu (PG).
+Pokud je například <code>BitsPerRevol=20</code>, pak je hodnota z PROFIdrive posunuta doleva o 12 bitů.
+Posunutí má stejný účinek jako vynásobení hodnoty 212 (tj. 4096).
+Podobné snížení se provádí při odesílání aktuální hodnoty polohy z TGZ do řídicí jednotky PROFIdrive: 64bitová poloha TGZ se posune doprava o 32 - <code>BitsPerRevol</code> (což je stejná operace jako dělení 2(32-B itsPerRevol) ) a výsledných dolních 32 bitů se odešle v telegramu PROFIdrive.   </p>
+<p>Hodnoty rychlosti nejsou vůbec škálovány, protože telegramy TGZ i PROFIdrive používají 32bitové hodnoty.
+Význam rychlosti je proto stejný jako význam rychlosti pro profil generátor.  </p>
+<p>Akcelerace a decelerace musí být nastaveny přímo v TGZ servisním programem TGZ_GUI v sekci PROFIdrive a můžou být změněny telegramy PROFIdrive pouze pomocí přepisovacích (procentuálních) hodnot obsažených v příslušných telegramech.</p>
+<h2 id="kompenzace-vule">Kompenzace vůle<a class="headerlink" href="#kompenzace-vule" title="Permanent link">&para;</a></h2>
+<p>Firmware ze srpna 2023 nebo novější implementuje kompenzaci vůle.
+Pro hodnotu vůle se používá standardní parametr <code>PNU 2583</code>.
+Je uložen jako celočíselná 32bitová hodnota se znaménkem a má stejný fyzikální význam jako požadovaná nebo skutečná poloha v telegramu <code>9</code> nebo <code>111</code>.</p>
+<p>Chcete-li použít kompenzaci vůle, je třeba nejprve provést úspěšnou <a href="#režimy-homing-reference">referenci</a> (homing).</p>
+<p><strong>Kladný</strong> směr pohybu se provádí při inkrementaci skutečné polohy.
+Stejně tak je definován <strong>záporný</strong> směr pohybu, když je pozice dekrementována.</p>
+<p>Samotná kompenzace závisí na znaménku vůle:</p>
+<ul>
+<li>Kladná hodnota vůle: pokud je požadovaná poloha v kladném směru, je k hodnotě přičtena hodnota vůle.
+  Naopak při záporném pohybu se k požadované poloze nepřičítá žádná hodnota.</li>
+<li>Záporná hodnota vůle: při záporném pohybu se vůle odečítá od požadované polohy, takže výsledek je zápornější.
+  Při kladném směru se ke konečné požadované poloze nepřičítá žádná hodnota.</li>
+</ul>
+<p>Použití kladné nebo záporné vůle závisí na zvoleném postupu polohování a jeho konečném pohybu.
+Pokud polohování končí záporným pohybem, použijte kladnou vůli, protože vůle je již nastavena na levou stranu.
+Stejně tak zvolte zápornou hodnotu vůle, pokud poslední naváděcí pohyb probíhá v kladném směru.</p>
+<p>Hodnotu vůle lze nastavit pouze pomocí parametru <code>PNU 2583</code> v PLC, v oblasti registru TGZ není žádný ekvivalent.</p>
+<p>Pro nastavení <code>PNU 2583</code> lze v portálu TIA použít programový blok s názvem <strong>SinParaS</strong>.</p>
+<p><a class="glightbox" href="../../../../source/img/profinet10.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" src="../../../../source/img/profinet10.webp" style="width:50%;" /></a></p>
+<p>Vstup <code>hardwareId je</code> nastaven na stejnou hodnotu jako vstup <code>HWIDSTW</code> bloku SinaPos, tj. identifikátor telegramu TGZ.
+AxisNo může být 0 pro první osu nebo 1 pro druhou osu.
+Protože je vůle typu DINT (celé číslo se znaménkem 32bit), musí být požadovaná hodnota vůle zapsána na vstup <code>ValueWrite2</code>.
+Zápis se provede přepnutím Start z False na True.</p>
+<h2 id="rezim-regulace-otacek-a-normalizovane-hodnoty">Režim regulace otáček a normalizované hodnoty<a class="headerlink" href="#rezim-regulace-otacek-a-normalizovane-hodnoty" title="Permanent link">&para;</a></h2>
+<p>Telegramy <code>1, 3 a 352</code> se používají pro režim regulace otáček.
+Tyto telegramy používají normalizované hodnoty otáček ve formátu N2 nebo N4 (kapitola 6.3.4.5 příručky PROFIdrive).
+Požadované a skutečné otáčky jsou vyjádřeny v procentech referenční hodnoty.
+Servozesilovač TGZ k tomuto účelu používá registr jmenovitých otáček s názvem <code>M-Nn</code> - ten musí být nenulový, jinak by režim regulace otáček nefungoval.
+Normalizované hodnoty N2 nebo N4 v telegramu jsou v rozsahu od -200 % do 200 % referenční hodnoty <code>M-Nn</code>.
+Registr <code>M-Nn</code> lze číst pomocí standardního parametru <code>PNU 60 000</code> <strong>Velocity reference value</strong>.
+Kompletní přístup (čtení/zápis) je možný přímým přístupem k parametrům TGZ, čísla registrů jsou <code>0x211B</code> pro osu 1 a <code>0x221B</code> pro osu 2.
+Viz. také Registry TGZ.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Všimněte si, že <code>PNU 60 000</code> se čte jako desetinné číslo (FLOAT32), zatímco přímý <a href="#registry-tgz">přístup</a> k registrům TGZ je vždy 32bitovým celým číslem.</p>
+</div>
+<p>Interní generátor rychlostního profilu používá při změně rychlosti jako hodnotu zrychlení registr <code>PD_Dec (0x355F / 0x365F)</code>.</p>
 <h2 id="parametry-pohonu-profidrive">Parametry pohonu PROFIdrive<a class="headerlink" href="#parametry-pohonu-profidrive" title="Permanent link">&para;</a></h2>
 <p>Servopohon TGZ podporuje přístup k parametrům prostřednictvím slotů 1 a 2 (slot 2 pouze pro variantu se dvěma osami).
 Pro přístup k parametrům TGZ lze použít tři indexy datových objektů záznamu:</p>
@@ -9657,7 +10020,7 @@ Poslední dvě hexadecimální čísla určují index parametru v rámci skupiny
 Například číslo parametru <code>0x2119</code> patří do skupiny 1 (Motor) a jeho index je 25 (<code>0x19 = 16#19 = 25 DEC</code>).
 Jednoosá varianta TGZ nepoužívá parametry osy 2.
 Pro přístup k parametrům prostřednictvím sítě PROFINET je k úplnému určení správného parametru zapotřebí pouze číslo parametru.
-Položka osy v hlavičce zprávy <strong>PROFIdrive request</strong> je ignorována.   </p>
+Položka osy v hlavičce zprávy <strong>PROFIdrive request</strong> je ignorována.</p>
 <p>Všechny registry TGZ jsou vždy 32bitové integer hodnoty.</p>
 <table>
 <thead>
@@ -9815,9 +10178,10 @@ Položka osy v hlavičce zprávy <strong>PROFIdrive request</strong> je ignorov�
 </tr>
 </tbody>
 </table>
-<p>TGZ podporuje až 10 bloků pro nezávislé použití.
-Každý blok se skládá z režimu, zrychlení, zpomalení, rychlosti a cílové polohy:   </p>
-<p>PD_Task1</p>
+<h3 id="registry-pro-polohove-ulohy-pd_task">Registry pro polohové úlohy (PD_Task)<a class="headerlink" href="#registry-pro-polohove-ulohy-pd_task" title="Permanent link">&para;</a></h3>
+<p>TGZ podporuje až 10 polohových úloh (task) pro nezávislé použití.
+Každá úloha se skládá z režimu, zrychlení, zpomalení, rychlosti a cílové polohy:</p>
+<h3 id="pd_task1">PD_Task1<a class="headerlink" href="#pd_task1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -9866,15 +10230,17 @@ Každý blok se skládá z režimu, zrychlení, zpomalení, rychlosti a cílové
 </tr>
 </tbody>
 </table>
-<p>PD_Task2 - Čísla parametrů jsou <code>0x3928</code> - <code>0x392D</code> pro osu 1 a <code>0x3A28</code> - <code>0x3A2D</code> pro osu 2. <br />
-PD_Task3 - Čísla parametrů jsou <code>0x392E</code> - <code>0x3933</code> pro osu 1 a <code>0x3A2E</code> - <code>0x3A33</code> pro osu 2. <br />
-PD_Task4 - Čísla parametrů jsou <code>0x3934</code> - <code>0x3939</code> pro osu 1 a <code>0x3A34</code> - <code>0x3A39</code> pro osu 2. <br />
-PD_Task5 - Čísla parametrů jsou <code>0x393A</code> - <code>0x393F</code> pro osu 1 a <code>0x3A3A</code> - <code>0x3A3F</code> pro osu 2. <br />
-PD_Task6 - Čísla parametrů jsou <code>0x3940</code> - <code>0x3945</code> pro osu 1 a <code>0x3A40</code> - <code>0x3A45</code> pro osu 2. <br />
-PD_Task7 - Čísla parametrů jsou <code>0x3946</code> - <code>0x394B</code> pro osu 1 a <code>0x3A46</code> - <code>0x3A4B</code> pro osu 2. <br />
-PD_Task8 - Čísla parametrů jsou <code>0x394C</code> - <code>0x3951</code> pro osu 1 a <code>0x3A4C</code> - <code>0x3A51</code> pro osu 2. <br />
-PD_Task9 - Čísla parametrů jsou <code>0x3952</code> - <code>0x3957</code> pro osu 1 a <code>0x3A52</code> - <code>0x3A57</code> pro osu 2. <br />
-PD_Task10 - Čísla parametrů jsou <code>0x3958</code> - <code>0x395D</code> pro osu 1 a <code>0x3A58</code> - <code>0x3A5D</code> pro osu 2.   </p>
+<ul>
+<li>PD_Task2 - Čísla parametrů jsou <code>0x3928</code> - <code>0x392D</code> pro osu 1 a <code>0x3A28</code> - <code>0x3A2D</code> pro osu 2.</li>
+<li>PD_Task3 - Čísla parametrů jsou <code>0x392E</code> - <code>0x3933</code> pro osu 1 a <code>0x3A2E</code> - <code>0x3A33</code> pro osu 2.</li>
+<li>PD_Task4 - Čísla parametrů jsou <code>0x3934</code> - <code>0x3939</code> pro osu 1 a <code>0x3A34</code> - <code>0x3A39</code> pro osu 2.</li>
+<li>PD_Task5 - Čísla parametrů jsou <code>0x393A</code> - <code>0x393F</code> pro osu 1 a <code>0x3A3A</code> - <code>0x3A3F</code> pro osu 2.</li>
+<li>PD_Task6 - Čísla parametrů jsou <code>0x3940</code> - <code>0x3945</code> pro osu 1 a <code>0x3A40</code> - <code>0x3A45</code> pro osu 2.</li>
+<li>PD_Task7 - Čísla parametrů jsou <code>0x3946</code> - <code>0x394B</code> pro osu 1 a <code>0x3A46</code> - <code>0x3A4B</code> pro osu 2.</li>
+<li>PD_Task8 - Čísla parametrů jsou <code>0x394C</code> - <code>0x3951</code> pro osu 1 a <code>0x3A4C</code> - <code>0x3A51</code> pro osu 2.</li>
+<li>PD_Task9 - Čísla parametrů jsou <code>0x3952</code> - <code>0x3957</code> pro osu 1 a <code>0x3A52</code> - <code>0x3A57</code> pro osu 2.</li>
+<li>PD_Task10 - Čísla parametrů jsou <code>0x3958</code> - <code>0x395D</code> pro osu 1 a <code>0x3A58</code> - <code>0x3A5D</code> pro osu 2.</li>
+</ul>
 
 
 
@@ -9897,7 +10263,7 @@ PD_Task10 - Čísla parametrů jsou <code>0x3958</code> - <code>0x395D</code> pr
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="1. dubna 2025 11:55:25"><span class="timeago" datetime="2025-04-01T11:55:25+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="1. dubna 2025 11:55:25">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="1. dubna 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="1. dubna 2025 20:01:03">2025-04-01</span>
   </span>
 
     

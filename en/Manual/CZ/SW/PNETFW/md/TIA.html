@@ -7374,6 +7374,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-data-mapping-in-telegram-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional data mapping in telegram 111
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional data mapping in telegram 111">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital-outputs-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital outputs mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-inputs-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital inputs mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actual-current-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actual current calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actual-torque-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actual torque calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-the-pzd-value-from-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting the PZD value from telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-error-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate error values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-s7-300-or-s7-400-plc-with-telegram-111" class="md-nav__link">
     <span class="md-ellipsis">
       Using S7-300 or S7-400 PLC with Telegram 111
@@ -9587,7 +9656,7 @@ Following are the possible steps to create a new project with two TGZ servo ampl
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet19.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet19.webp" style="width:90%;" /></a></p>
 <ul>
 <li>Rename the drives in the <strong>Network overview</strong> pane according to the hardware project.
-  The names must be the same as used during <a href="network.html#ProfinetIPsettings">preparing the devices</a>.</li>
+  The names must be the same as used during preparing the devices.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet20.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet20.webp" style="width:30%;" /></a></p>
 <ul>
@@ -9607,7 +9676,7 @@ Following are the possible steps to create a new project with two TGZ servo ampl
 <a class="glightbox" href="../../../../../../Manual/source/img/profinet24.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet24.webp" style="width:70%;" /></a></p>
 <ul>
 <li>Assign the right IP addresses to all devices in the project.
-  The IP addresses and PROFINET device names must correspond to the values entered in the <a href="network.html#ProfinetIPsettings">Name and IP address of the device</a>.
+  The IP addresses and PROFINET device names must correspond to the values entered in the <a href="network.html#ip-address-and-device-name-profinetipsettings">Name and IP address of the device</a>.
   Activate the connection in the PLC box (green rectangle) and in the <strong>Properties</strong> pane below use the <strong>Ethernet addresses</strong> item.
   Enter the right IP address in the text box, together with the Subnet mask (usually 255.255.255.0).</li>
 </ul>
@@ -9740,6 +9809,28 @@ Also, the trapezoidal speed profile is recommended (Profile generator type 3).</
 </div>
 <p>Bit 8 of the <strong>ConfigEPos</strong> is internally mapped to bit 12 of the POS_STW1 control word in the telegram (MdiTrTyp).
 Bit 20 is mapped to bit 11 of the POS_STW1.</p>
+<h2 id="additional-data-mapping-in-telegram-111">Additional data mapping in telegram 111<a class="headerlink" href="#additional-data-mapping-in-telegram-111" title="Permanent link">&para;</a></h2>
+<p>Telegram 111 allows to use additional data in its structure:</p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_tele_111_structure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_tele_111_structure.png" style="width:90%;" /></a></p>
+<p>Each PZD box represents 16 bits of data. The PZD12 can be used for additional user data.
+The setting is done by using TGZ GUI service program by the PD-Tele111_UserOut and PD-Tele111_UserIn registers from the PROFIdrive group.</p>
+<h3 id="digital-outputs-mapping">Digital outputs mapping<a class="headerlink" href="#digital-outputs-mapping" title="Permanent link">&para;</a></h3>
+<p>Low 8 bits of the telegram user value (PZD12) go directly to K-DigitalOutputForce_Set register of the corresponding axis.
+High 8 bits of the user value go directly to K-DigitalOutputForce_Clr register of the axis.</p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_tele_111_userout.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_tele_111_userout.png" style="width:50%;" /></a></p>
+<h3 id="digital-inputs-mapping">Digital inputs mapping<a class="headerlink" href="#digital-inputs-mapping" title="Permanent link">&para;</a></h3>
+<p>Low 4 bits of the MON-Digital_Inputs (of the telegram’s axis) are copied to the PZD12 value. Higher 12 bits are set to zero.</p>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_tele_111_userin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_tele_111_userin.png" style="width:50%;" /></a></p>
+<h3 id="actual-current-calculation">Actual current calculation<a class="headerlink" href="#actual-current-calculation" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_current_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_current_calc.png" style="width:50%;" /></a></p>
+<p>The <code>M-In</code> (nominal current of the motor) must be set to nonzero value, otherwise zero is always returned. The resulting PZD12 value (actual current) is then normalized to percent value, where 16384 is 100 % of nominal current. There is no overflow checking, i.e. if the <code>MON-I_rms</code> overflows 200 % of <code>M-In</code>, the resulting value will be wrong (negative value).</p>
+<h3 id="actual-torque-calculation">Actual torque calculation<a class="headerlink" href="#actual-torque-calculation" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_torque_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_torque_calc.png" style="width:50%;" /></a></p>
+<p>The <code>M-Mn</code> (nominal motor torque) must be set to nonzero value, otherwise zero is always returned. Actual current <code>MON-aIq</code> is multiplied by torque constant <code>M-kT</code> and normalized to nominal torque. Because the <code>MON-aIq</code> is measured in mA, the normalization constant is 16.384 (not 16384). The resulting PZD12 value (actual torque) is normalized to percent value, where 16384 is 100 % of nominal torque. There is no overflow checking of the value.</p>
+<h3 id="extracting-the-pzd-value-from-telegram">Extracting the PZD value from telegram<a class="headerlink" href="#extracting-the-pzd-value-from-telegram" title="Permanent link">&para;</a></h3>
+<p>The SinaPos functional block does not offer direct access to the telegram 111 user values, so they must be extracted directly from the telegram data. Just add 22 to address (input and/or output) of the telegram. Each PZD is 2 bytes long and the PZD12 is on the eleventh position, therefore the address offset is 22.</p>
+<h3 id="immediate-error-values">Immediate error values<a class="headerlink" href="#immediate-error-values" title="Permanent link">&para;</a></h3>
+<p>Telegram 111 contains space for the last active error code, where the <code>WARN</code> code field (PZD11) contains the low 16 bits and the <code>FAULT</code> code field (PZD10) contains the high 16 bits of the TGZ error code. Similarly, the telegram 352 has fields for <code>WARN</code> (PZD5) and <code>FAULT</code> (PZD6), they are coded in the same manner. See chapters <a href="profidrive.html#fault-buffer">Fault buffer</a> and <a href="profidrive.html#error-codes">Error codes</a>.</p>
 <h2 id="using-s7-300-or-s7-400-plc-with-telegram-111">Using S7-300 or S7-400 PLC with Telegram 111<a class="headerlink" href="#using-s7-300-or-s7-400-plc-with-telegram-111" title="Permanent link">&para;</a></h2>
 <p>To use the older PLCs, download a DriveLib library from the internet.
 At the time of writing this manual, the filename was <code>Drive_Lib_V62_S7_300_400.zip</code>.
@@ -9776,7 +9867,7 @@ There are also GSDML files of version V2.2 for use in older software packages.</
 </ul>
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet57.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet57.webp" style="width:70%;" /></a></p>
 <ul>
-<li>Rename the TGZ device and give it a name of the device – the same which was set during commissioning as described in <a href="network.html#ProfinetIPsettings">Name and IP address of the device</a>.</li>
+<li>Rename the TGZ device and give it a name of the device – the same which was set during commissioning as described in <a href="network.html#ip-address-and-device-name-profinetipsettings">Name and IP address of the device</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet58.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet58.webp" style="width:70%;" /></a></p>
 <ul>
@@ -9793,7 +9884,7 @@ There are also GSDML files of version V2.2 for use in older software packages.</
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet61.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet61.webp" style="width:70%;" /></a></p>
 <ul>
 <li>Assign the IP address to the PLC.
-  Use the address described in the section <a href="network.html#ProfinetIPsettings">Name and IP address of the device</a>.</li>
+  Use the address described in the section <a href="network.html#ip-address-and-device-name-profinetipsettings">Name and IP address of the device</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../Manual/source/img/profinet62.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/profinet62.webp" style="width:70%;" /></a></p>
 <ul>
@@ -9910,7 +10001,7 @@ There are also GSDML files of version V2.2 for use in older software packages.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 1, 2025 11:55:25"><span class="timeago" datetime="2025-04-01T11:55:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 1, 2025 11:55:25">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 1, 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 1, 2025 20:01:03">2025-04-01</span>
   </span>
 
     
