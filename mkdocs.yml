@@ -132,6 +132,8 @@ plugins:
                 Nastavení parametrů: Parameter settings
                 Firmware: Firmware
                 Napájení logiky: Logic power
+                Dělení firmware: Firmware groups
+                Standardní firmware: Standard firmware
   - offline:
       enabled:
   # - mike:
@@ -500,23 +502,30 @@ nav:
 #                - Montáž: 'Manual/CZ/TGM/TGZpMotion/md/mounting.md'
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
         - SW/FW:
-#            - Rozdělení FW:
-#                - Základní informace: 'Manual/source/fw/FWmap.md'
-            - EtherCAT:
-                - Základní informace: 'Manual/CZ/SW/ECAT/md/intro.md'
-                - Popis komunikace: 'Manual/CZ/SW/ECAT/md/packet.md'
-                - Nastavení sítě: 'Manual/CZ/SW/ECAT/md/network.md'
-                - Sběrnice EtherCAT: 'Manual/CZ/SW/ECAT/md/EtherCAT.md'
-                - Katalog objektů: 'Manual/CZ/SW/ECAT/md/objects.md'         
-                - TGZ a TwinCAT: 'Manual/CZ/SW/ECAT/md/twinCAT.md'
-                - Codesys: 'Manual/CZ/SW/ECAT/md/codesys.md'   
-            - Profinet RT:
-                - Základní informace: 'Manual/CZ/SW/Profinet/md/intro.md'
-                - Obecné: 'Manual/CZ/SW/Profinet/md/general.md'
-                - Nastavení sítě: 'Manual/CZ/SW/Profinet/md/network.md'
-                - TIA portál: 'Manual/CZ/SW/Profinet/md/TIA.md'
-                - PROFIdrive: 'Manual/CZ/SW/Profinet/md/profidrive.md'                    
-                # - PROFIsafe:  'Manual/CZ/SW/Profinet/md/profisafe.md'                    
+            - Dělení firmware:
+                - Základní informace: 'Manual/source/md/FWintro.md'
+            - Standardní firmware:
+                - Základní informace: 'Manual/CZ/SW/STDFW/md/intro.md'
+                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'                
+                - Popis komunikace: 'Manual/CZ/SW/STDFW/md/packet.md'
+                - Nastavení sítě: 'Manual/CZ/SW/STDFW/md/network.md'   
+            - ProfiNET firmware:
+                - Základní informace: 'Manual/CZ/SW/PNETFW/md/intro.md'
+                - Obecné: 'Manual/CZ/SW/PNETFW/md/general.md'
+                - Nastavení sítě: 'Manual/CZ/SW/PNETFW/md/network.md'
+                - TIA portál: 'Manual/CZ/SW/PNETFW/md/TIA.md'
+                - PROFIdrive: 'Manual/CZ/SW/PNETFW/md/profidrive.md'                    
+                # - PROFIsafe:  'Manual/CZ/SW/PNETFW/md/profisafe.md'
+            - CoE firmware:
+                - Základní informace: 'Manual/CZ/SW/COEFW/md/intro.md'            
+                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'
+                - Katalog objektů: 'Manual/CZ/SW/COEFW/md/objects.md'         
+                - TGZ a TwinCAT: 'Manual/CZ/SW/COEFW/md/twinCAT.md'
+                - Codesys: 'Manual/CZ/SW/COEFW/md/codesys.md'
+            - TGZ+Motion firmware:
+                - Základní informace: 'Manual/CZ/TGM/TGZpMotion/md/basic.md'
+                - Nastavení sítě: 'Manual/CZ/TGM/TGZpMotion/md/TGZ.md'
+                - Popis software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'                  
             - EtherNET UDP:
                 - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
                 - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       

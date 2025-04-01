@@ -2,7 +2,7 @@ Síť EtherCAT se připojuje pomocí konektoru X13 (Fieldbus IN) a konektoru X12
 Konektor IN použijte ve směru k zařízení EtherCAT master a konektor OUT k připojení dalších zařízení EtherCAT v řetězci.
 Standardní rychlost je 100Mbit/s, existuje také možnost použít připojení 1Gbit/s.
 V takovém případě musí všechna zařízení (včetně mastera) používat gigabitovou rychlost.
-Pro volbu požadované rychlosti komunikace použijte registr `C-Enable_1G`, viz. [Nastavení komunikace EtherCAT](EtherCAT.md#ECATcommSettings).
+Pro volbu požadované rychlosti komunikace použijte registr `C-Enable_1G`, viz. [Nastavení komunikace EtherCAT](../../COEFW/md/EtherCAT.md#ECATcommSettings).
 Při připojování síťových kabelů EtherCAT musí být napájení zařízení vypnuto.   
 
 Sběrnice CAN je připojena pomocí konektoru X10. Není zde žádný zakončovací odpor 120Ω.

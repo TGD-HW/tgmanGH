@@ -1,10 +1,12 @@
-igor chybí:
+Honza profinet check případně přijeb
+
+
+štěpán má dodat nové obr viz teams.
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 
 -O verze doplnit aktuální nákresy a popis svorkovnic - potřebuju model STEP
 
-parametry TGZ vs man
 
 prozkoumat tags, vyzkoušet:
 https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title

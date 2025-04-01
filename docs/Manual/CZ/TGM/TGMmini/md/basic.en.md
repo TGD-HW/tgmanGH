@@ -16,7 +16,7 @@ Shared memory access is done by library TGM_Comm_Int_5, also compatible with the
 
 ##Differences to TG Motion on PC
 TGMmini uses TG Motion version 501 or higher. Both versions (PC and TGMmini) are compatible.
-The TG Motion operation manual covers the version 501 and is available at [TG Drives website](https://www.tgdrives.cz/en/download/control-systems-pc-and-panels-download/#c471). 
+The TG Motion operation manual covers the version 501 and is available at [TG Drives website in the TGMmini section](https://dev025.tgdrives.cz/products/control-systems#downloadsSection). 
 Supported
 are up to 64 servo drives and up to 16 I/O units on EtherCAT bus. TGMmini contains two CNC modules
 together with two interpolators. There are 8 fast digital inputs (usable for IRC encoder as well), 8 fast
