@@ -1,7 +1,7 @@
 The EtherCAT network is connected using the X13 (Fieldbus IN) connector and X12 (Fieldbus OUT) connector.
 Use the IN connector in the direction to the EtherCAT master and the OUT connector to connect other EtherCAT devices in the chain.
 The standard speed is 100Mbit/s, there is also possibility to use 1Gbit/s connection, and in that case all the devices (including the master) must use gigabit speed.
-Use the `C-Enable_1G` register for selecting desired communication speed, see. [EtherCAT settings](EtherCAT.md#ECATcommSettings).
+Use the `C-Enable_1G` register for selecting desired communication speed, see. [EtherCAT settings](../../COEFW/md/EtherCAT.en.md#ECATcommSettings).
 See chapter Communication setup below for more detailed description.   
 
 When connecting the EtherCAT network cables, the **supply of the equipment must be switched off**.   

@@ -448,6 +448,37 @@ nav:
                 - Osciloskop: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/osc.md'
                 - Přehrávání firmware: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/FW.md'                
                 - Uživatelský program: 'Manual/CZ/TGZ/TGZ_SW/GUI/md/userProg.md'
+        - TGZ firmware:
+            - Dělení firmware:
+                - Základní informace: 'Manual/source/md/FWintro.md'
+            - Standardní firmware:
+                - Základní informace: 'Manual/CZ/SW/STDFW/md/intro.md'
+                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'                
+                - Popis komunikace: 'Manual/CZ/SW/STDFW/md/packet.md'
+                - Nastavení sítě: 'Manual/CZ/SW/STDFW/md/network.md'   
+            - ProfiNET firmware:
+                - Základní informace: 'Manual/CZ/SW/PNETFW/md/intro.md'
+                - Obecné: 'Manual/CZ/SW/PNETFW/md/general.md'
+                - Nastavení sítě: 'Manual/CZ/SW/PNETFW/md/network.md'
+                - TIA portál: 'Manual/CZ/SW/PNETFW/md/TIA.md'
+                - PROFIdrive: 'Manual/CZ/SW/PNETFW/md/profidrive.md'                    
+                # - PROFIsafe:  'Manual/CZ/SW/PNETFW/md/profisafe.md'
+            - CoE firmware:
+                - Základní informace: 'Manual/CZ/SW/COEFW/md/intro.md'            
+                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'
+                - Katalog objektů: 'Manual/CZ/SW/COEFW/md/objects.md'         
+                - TGZ a TwinCAT: 'Manual/CZ/SW/COEFW/md/twinCAT.md'
+                - Codesys: 'Manual/CZ/SW/COEFW/md/codesys.md'
+            - TGZ+Motion firmware:
+                - Základní informace: 'Manual/CZ/TGM/TGZpMotion/md/basic.md'
+                - Nastavení sítě: 'Manual/CZ/TGM/TGZpMotion/md/TGZ.md'
+                - Popis software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'                  
+            - EtherNET UDP:
+                - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
+                - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       
+            - CAN:
+                - Základní informace: 'Manual/CZ/SW/CAN/md/intro.md'
+                - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'                      
         - 'TGS':
             - TGS-320-10/15:
                 - Základní informace: 'Manual/CZ/TGS/TGS-320-10_15/md/mark.md'
@@ -501,37 +532,6 @@ nav:
                 - Software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'              
 #                - Montáž: 'Manual/CZ/TGM/TGZpMotion/md/mounting.md'
 #                - Příklad zapojení: 'Manual/CZ/TGM/TGZpMotion/md/schematic.md'   
-        - SW/FW:
-            - Dělení firmware:
-                - Základní informace: 'Manual/source/md/FWintro.md'
-            - Standardní firmware:
-                - Základní informace: 'Manual/CZ/SW/STDFW/md/intro.md'
-                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'                
-                - Popis komunikace: 'Manual/CZ/SW/STDFW/md/packet.md'
-                - Nastavení sítě: 'Manual/CZ/SW/STDFW/md/network.md'   
-            - ProfiNET firmware:
-                - Základní informace: 'Manual/CZ/SW/PNETFW/md/intro.md'
-                - Obecné: 'Manual/CZ/SW/PNETFW/md/general.md'
-                - Nastavení sítě: 'Manual/CZ/SW/PNETFW/md/network.md'
-                - TIA portál: 'Manual/CZ/SW/PNETFW/md/TIA.md'
-                - PROFIdrive: 'Manual/CZ/SW/PNETFW/md/profidrive.md'                    
-                # - PROFIsafe:  'Manual/CZ/SW/PNETFW/md/profisafe.md'
-            - CoE firmware:
-                - Základní informace: 'Manual/CZ/SW/COEFW/md/intro.md'            
-                - Sběrnice EtherCAT: 'Manual/CZ/SW/COEFW/md/EtherCAT.md'
-                - Katalog objektů: 'Manual/CZ/SW/COEFW/md/objects.md'         
-                - TGZ a TwinCAT: 'Manual/CZ/SW/COEFW/md/twinCAT.md'
-                - Codesys: 'Manual/CZ/SW/COEFW/md/codesys.md'
-            - TGZ+Motion firmware:
-                - Základní informace: 'Manual/CZ/TGM/TGZpMotion/md/basic.md'
-                - Nastavení sítě: 'Manual/CZ/TGM/TGZpMotion/md/TGZ.md'
-                - Popis software: 'Manual/CZ/TGM/TGZpMotion/md/software.md'                  
-            - EtherNET UDP:
-                - Základní informace: 'Manual/CZ/SW/ENET/md/intro.md'
-                - Popis komunikace: 'Manual/CZ/SW/ENET/md/packet.md'       
-            - CAN:
-                - Základní informace: 'Manual/CZ/SW/CAN/md/intro.md'
-                - Popis komunikace: 'Manual/CZ/SW/CAN/md/settings.md'    
             - TGMotion:
                 - PLC: 'Manual/CZ/TGM/TGMotion/md/PLC.md'
                 - Hardware: 'Manual/CZ/TGM/TGMotion/md/HW.md'
@@ -541,7 +541,7 @@ nav:
                 # - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
                 # - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'
                 # - CNC modul: 'Manual/CZ/TGM/TGMotion/md/CNC.md'    
-                # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md'   
+                # - CNC struktury: 'Manual/CZ/TGM/TGMotion/md/CNCs.md' 
         - 'Ostatní': 
             - TGHall: 'Manual/CZ/ETC/TGHall/md/description.md'
             - Schémata kabelů: 'Manual/CZ/ETC/TGcable/md/description.md'
