@@ -162,12 +162,12 @@ Servopohon používá fixní mapování PDO, které je popsáno v tabulce níže
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;currentqActValue_1&quot;}">currentqActValue_1</td>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Signed 16bit integer&quot;}">Signed 16bit integer</td>
-				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-32768 .. -M-Ipeak, 32767 .. M-Ipeak&yen;u000aI = M-Ipeak * currentqActValue &yen;/ 32767&quot;}">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = M-Ipeak * currentqActValue / 32767</td>
+				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-32768 .. -M-Ipeak, 32767 .. M-Ipeak&yen;u000aI = M-Ipeak * currentqActValue &yen;/ 32767&quot;}">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = 32767 * currentqActValue / M-Ipeak</td>
 			</tr>
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;currentqActValue_2&quot;}">currentqActValue_2</td>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Signed 16bit integer&quot;}">Signed 16bit integer</td>
-				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-32768 .. -M-Ipeak, 32767 .. M-Ipeak&yen;u000aI = M-Ipeak * currentqActValue &yen;/ 32767&quot;}">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = M-Ipeak * currentqActValue / 32767</td>
+				<td colspan="3" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-32768 .. -M-Ipeak, 32767 .. M-Ipeak&yen;u000aI = M-Ipeak * currentqActValue &yen;/ 32767&quot;}">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = 32767 * currentqActValue / M-Ipeak</td>
 			</tr>
 			<tr>
 				<td colspan="2" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;mappedParameter_1&quot;}">mappedParameter_1</td>

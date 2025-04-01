@@ -161,12 +161,12 @@ The EtherCAT master can use the following PDO communication periods: 250 µs, 50
     <tr>
         <td colspan="2">currentqActValue_1</td>
         <td colspan="2">Signed 16bit integer</td>
-        <td colspan="3">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = M-Ipeak * currentqActValue / 32767</td>
+        <td colspan="3">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = 32767 * currentqActValue / M-Ipeak</td>
     </tr>
     <tr>
         <td colspan="2">currentqActValue_2</td>
         <td colspan="2">Signed 16bit integer</td>
-        <td colspan="3">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = M-Ipeak * currentqActValue / 32767</td>
+        <td colspan="3">-32768 .. -M-Ipeak, 32767 .. M-Ipeak<br>I = 32767 * currentqActValue / M-Ipeak</td>
     </tr>
     <tr>
         <td colspan="2">mappedParameter_1</td>

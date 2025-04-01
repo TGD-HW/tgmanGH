@@ -1,10 +1,12 @@
-##Použití TGZ v TIA portálu
+## Použití TGZ v TIA portálu
+
 - Buďte opatrní, aby se pohon nezačal pohybovat bez předchozího varování.
 - Přijměte příslušná opatření, aby obsluha a servisní pracovníci byli o tomto nebezpečí informováni.
 - Zaveďte vhodná ochranná opatření, která zajistí, že jakýkoli neúmyslný pohyb pohonů nemůže vést k nebezpečným situacím.
 - Uživatel je zodpovědný za to, že v případě poruchy pohonu bude celý systém nastaven do stavu, který je bezpečný pro zařízení i personál.
 
-##Režim polohování s telegramem 111
+## Režim polohování s telegramem 111
+
 Nejpoužívanějším provozním režimem je režim polohování pomocí základního polohování TGZ a funkčního bloku SinaPos TIA portálu s telegramem 111.
 Následují možné kroky pro vytvoření nového projektu se dvěma servozesilovači TGZ, a to ve variantě se dvěma osami.
 
@@ -203,7 +205,7 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 
 ![Profinet img](../../../../source/img/profinet50.webp){: style="width:90%;" loading="lazy" }
 
-##Podporované řídicí bity v ConfigEPos
+## Podporované řídicí bity v ConfigEPos
 
 V hodnotě **ConfigEPos** lze použít další bity pro přesné řízení chování TGZ.
 Při nastavení na `16#0000_0103` (nastaven je také bit 8) je aktivován přenos konstantní žádané hodnoty.
@@ -219,12 +221,69 @@ Pro opuštění stavu `S451` je třeba změnit hodnotu **ConfigEPos** na `16#000
 	Všimněte si, že hodnotu `16#0000_0103` nebo `16#0010_010`3 lze použít pouze pro absolutní polohování, tj. když ModePos = 2.
 	Protože minimální doba cyklu je 1 ms, je možné dosáhnout konstantního polohování pomocí PLC.
 	Je nutné správně nastavit hodnoty zrychlení a rychlosti.
-	Doporučuje se také lichoběžníkový rychlostní profil (profil generátor typ 3).
+	Doporučuje se také lichoběžníkový (trapezoidní) rychlostní profil (profil generátor typ 3).
 
 Bit 8 ConfigEPos je interně mapován na bit 12 řídicího slova POS_STW1 v telegramu (MdiTrTyp).
 Bit 20 je mapován na bit 11 řídicího slova POS_STW1.
 	
-##Použití PLC S7-300 nebo S7-400 s telegramem 111
+## Další mapování dat v telegramu 111  
+
+Telegram 111 umožňuje použití doplňkových dat ve své struktuře:  
+
+![Profinet img](../../../../source/img/pnet_tele_111_structure.png){: style="width:90%;" loading="lazy"}  
+
+Každý blok PZD představuje 16 bitů dat. PZD12 může být využito pro dodatečná uživatelská data.  
+Nastavení se provádí v servisním programu **TGZ GUI** pomocí registrů `PD-Tele111_UserOut` a `PD-Tele111_UserIn` ze skupiny PROFIdrive.  
+
+### Mapování digitálních výstupů  
+
+Dolních 8 bitů uživatelské hodnoty telegramu (PZD12) je přímo přesměrováno do registru `K-DigitalOutputForce_Set` odpovídající osy (tj. osy, ke které je přiřazen telegram). 
+Horních 8 bitů uživatelské hodnoty je přesměrováno do registru `K-DigitalOutputForce_Clr` odpovídající osy.  
+
+![Profinet img](../../../../source/img/pnet_tele_111_userout.png){: style="width:50%;" loading="lazy"}  
+
+### Mapování digitálních vstupů  
+
+Dolní 4 bity `MON-Digital_Inputs` (příslušné osy) jsou zkopírovány do hodnoty PZD12.  
+Horních 12 bitů je nastaveno na nulu.  
+
+![Profinet img](../../../../source/img/pnet_tele_111_userin.png){: style="width:50%;" loading="lazy"}  
+
+### Výpočet skutečného proudu  
+
+![Profinet img](../../../../source/img/pnet_current_calc.png){: style="width:50%;" loading="lazy"}  
+
+Parametr `M-In` (jmenovitý proud motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Výsledná hodnota PZD12 (skutečný proud) je poté normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého proudu.  
+Neprobíhá žádná kontrola přetečení, tj. pokud `MON-I_rms` překročí 200 % hodnoty `M-In`, výsledná hodnota bude nesprávná (negativní hodnota).  
+
+### Výpočet skutečného momentu  
+
+![Profinet img](../../../../source/img/pnet_torque_calc.png){: style="width:50%;" loading="lazy"}  
+
+Parametr `M-Mn` (jmenovitý moment motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Skutečný proud `MON-aIq` je vynásoben momentovou konstantou `M-kT` a normalizován na jmenovitý moment.  
+Protože `MON-aIq` je měřen v mA, normalizační konstanta je 16,384 (nikoli 16384). Výsledná hodnota PZD12 (skutečný moment) je normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého momentu. Neprobíhá žádná kontrola přetečení hodnoty.  
+
+### Extrakce hodnoty PZD z telegramu  
+
+Funkční blok **SinaPos** nenabízí přímý přístup k uživatelským hodnotám telegramu 111, proto je nutné je extrahovat přímo z dat telegramu.  
+Stačí přičíst **22** k adrese (vstupní a/nebo výstupní) telegramu. Každé PZD je dlouhé **2 bajty**, přičemž PZD12 se nachází na **jedenácté pozici**, takže adresní posun činí **22**.  
+
+### Okamžité chybové hodnoty  
+
+Telegram 111 obsahuje prostor pro poslední aktivní chybový kód:  
+
+- Pole `WARN` (PZD11) obsahuje dolních 16 bitů chybového kódu TGZ.  
+- Pole `FAULT` (PZD10) obsahuje horních 16 bitů chybového kódu TGZ.  
+
+Podobně telegram **352** obsahuje pole:  
+
+- `WARN` (PZD5)  
+- `FAULT` (PZD6)  
+
+Kódování odpovídá stejnému principu. Více informací naleznete v kapitolách [Chybový buffer](./profidrive.en.md#fault-buffer) a [Chybové kódy](./profidrive.en.md#error-codes).  
+
+## Použití PLC S7-300 nebo S7-400 s telegramem 111
+
 Chcete-li používat starší PLC, stáhněte si z internetu knihovnu `DriveLib`.
 V době psaní této příručky byl název souboru [Drive_Lib_V62_S7_300_400.zip](https://support.industry.siemens.com/cs/document/109475044/sinamics-communication-blocks-drivelib-for-reading-and-writing-drive-data-within-tia-portal-context?dti=0&lc=en-CZ).
 Rozbalte jej a nainstalujte do TIA portálu.
@@ -237,7 +296,8 @@ Režim Legacy se používá pro S7-300 nebo S7-400.
 Upravené soubory GSDML (PNIO verze 2.4) jsou k dispozici na [webových stránkách TGDrives](https://www.tgdrives.cz/ke-stazeni/digitalni-servozesilovace-ke-stazeni/#c425).
 K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších softwarových balíčcích.
 
-##Rychlostní režim pomocí standardního telegramu 3
+## Rychlostní režim pomocí standardního telegramu 3
+
 - Vytvořte nový projekt a pojmenujte jej *TGZ-S-Tele3*.
 
 ![Profinet img](../../../../source/img/profinet52.webp){: style="width:90%;" loading="lazy" }

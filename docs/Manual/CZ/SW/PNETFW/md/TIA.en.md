@@ -1,10 +1,12 @@
 ## Using TGZ in TIA Portal
+
 - Be careful that the drive can start to move without previous warning.
 - Take the appropriate measures to ensure that the operating and service personnel is aware of this danger.
 - Implement appropriate protections to ensure that any unintended movement of the machines cannot result in any dangerous situation.
 - The user is responsible that, in the event of failure of the drive, the complete system is set to state that is safe for both the machinery and personnel.
 
 ## Positioning mode with telegram 111
+
 The most used operating mode is the positioning mode using the basic positioner of TGZ and the TIA Portal function block SinaPos with telegram 111.
 Following are the possible steps to create a new project with two TGZ servo amplifiers, both in two axes variant.
 
@@ -64,7 +66,7 @@ Following are the possible steps to create a new project with two TGZ servo ampl
 ![Profinet img](../../../../source/img/profinet19.webp){: style="width:90%;" loading="lazy"}
 
 - Rename the drives in the **Network overview** pane according to the hardware project.
-  The names must be the same as used during [preparing the devices](network.md#ProfinetIPsettings).
+  The names must be the same as used during preparing the devices.
 
 ![Profinet img](../../../../source/img/profinet20.webp){: style="width:30%;" loading="lazy"}
 
@@ -84,7 +86,7 @@ Following are the possible steps to create a new project with two TGZ servo ampl
 ![Profinet img](../../../../source/img/profinet24.webp){: style="width:70%;" loading="lazy"}
 
 - Assign the right IP addresses to all devices in the project.
-  The IP addresses and PROFINET device names must correspond to the values entered in the [Name and IP address of the device](network.md#ProfinetIPsettings).
+  The IP addresses and PROFINET device names must correspond to the values entered in the [Name and IP address of the device](./network.en.md#ip-address-and-device-name-profinetipsettings).
   Activate the connection in the PLC box (green rectangle) and in the **Properties** pane below use the **Ethernet addresses** item.
   Enter the right IP address in the text box, together with the Subnet mask (usually 255.255.255.0).
 
@@ -219,6 +221,48 @@ To exit from state `S451`, the **ConfigEPos** value must be changed to `16#0000_
 Bit 8 of the **ConfigEPos** is internally mapped to bit 12 of the POS_STW1 control word in the telegram (MdiTrTyp).
 Bit 20 is mapped to bit 11 of the POS_STW1.
 
+## Additional data mapping in telegram 111
+
+Telegram 111 allows to use additional data in its structure:
+
+![Profinet img](../../../../source/img/pnet_tele_111_structure.png){: style="width:90%;" loading="lazy"}
+
+Each PZD box represents 16 bits of data. The PZD12 can be used for additional user data.
+The setting is done by using TGZ GUI service program by the PD-Tele111_UserOut and PD-Tele111_UserIn registers from the PROFIdrive group.
+
+### Digital outputs mapping
+
+Low 8 bits of the telegram user value (PZD12) go directly to K-DigitalOutputForce_Set register of the corresponding axis.
+High 8 bits of the user value go directly to K-DigitalOutputForce_Clr register of the axis.
+
+![Profinet img](../../../../source/img/pnet_tele_111_userout.png){: style="width:50%;" loading="lazy"}
+
+### Digital inputs mapping
+
+Low 4 bits of the MON-Digital_Inputs (of the telegram’s axis) are copied to the PZD12 value. Higher 12 bits are set to zero.
+
+![Profinet img](../../../../source/img/pnet_tele_111_userin.png){: style="width:50%;" loading="lazy"}
+
+### Actual current calculation
+
+![Profinet img](../../../../source/img/pnet_current_calc.png){: style="width:50%;" loading="lazy"}
+
+The `M-In` (nominal current of the motor) must be set to nonzero value, otherwise zero is always returned. The resulting PZD12 value (actual current) is then normalized to percent value, where 16384 is 100 % of nominal current. There is no overflow checking, i.e. if the `MON-I_rms` overflows 200 % of `M-In`, the resulting value will be wrong (negative value).
+
+### Actual torque calculation
+
+![Profinet img](../../../../source/img/pnet_torque_calc.png){: style="width:50%;" loading="lazy"}
+
+The `M-Mn` (nominal motor torque) must be set to nonzero value, otherwise zero is always returned. Actual current `MON-aIq` is multiplied by torque constant `M-kT` and normalized to nominal torque. Because the `MON-aIq` is measured in mA, the normalization constant is 16.384 (not 16384). The resulting PZD12 value (actual torque) is normalized to percent value, where 16384 is 100 % of nominal torque. There is no overflow checking of the value.
+
+### Extracting the PZD value from telegram
+
+The SinaPos functional block does not offer direct access to the telegram 111 user values, so they must be extracted directly from the telegram data. Just add 22 to address (input and/or output) of the telegram. Each PZD is 2 bytes long and the PZD12 is on the eleventh position, therefore the address offset is 22.
+
+### Immediate error values
+
+Telegram 111 contains space for the last active error code, where the `WARN` code field (PZD11) contains the low 16 bits and the `FAULT` code field (PZD10) contains the high 16 bits of the TGZ error code. Similarly, the telegram 352 has fields for `WARN` (PZD5) and `FAULT` (PZD6), they are coded in the same manner. See chapters [Fault buffer](./profidrive.en.md#fault-buffer) and [Error codes](./profidrive.en.md#error-codes).
+
 ## Using S7-300 or S7-400 PLC with Telegram 111
 
 To use the older PLCs, download a DriveLib library from the internet.
@@ -259,7 +303,7 @@ There are also GSDML files of version V2.2 for use in older software packages.
 
 ![Profinet img](../../../../source/img/profinet57.webp){: style="width:70%;" loading="lazy"}
 
-- Rename the TGZ device and give it a name of the device – the same which was set during commissioning as described in [Name and IP address of the device](network.md#ProfinetIPsettings).
+- Rename the TGZ device and give it a name of the device – the same which was set during commissioning as described in [Name and IP address of the device](./network.en.md#ip-address-and-device-name-profinetipsettings).
 
 ![Profinet img](../../../../source/img/profinet58.webp){: style="width:70%;" loading="lazy"}
 
@@ -276,7 +320,7 @@ There are also GSDML files of version V2.2 for use in older software packages.
 ![Profinet img](../../../../source/img/profinet61.webp){: style="width:70%;" loading="lazy"}
 
 - Assign the IP address to the PLC.
-  Use the address described in the section [Name and IP address of the device](network.md#ProfinetIPsettings).
+  Use the address described in the section [Name and IP address of the device](./network.en.md#ip-address-and-device-name-profinetipsettings).
 
 ![Profinet img](../../../../source/img/profinet62.webp){: style="width:70%;" loading="lazy"}
 
