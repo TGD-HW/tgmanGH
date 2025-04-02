@@ -7492,6 +7492,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="profisafe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PROFIsafe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7763,7 +7786,7 @@
   
   
   <span class="md-ellipsis">
-    Popis software
+    Software description
     
   </span>
   
@@ -9286,7 +9309,7 @@
   
   
   <span class="md-ellipsis">
-    Popis software
+    Software description
     
   </span>
   
@@ -9822,10 +9845,14 @@ High 8 bits of the user value go directly to K-DigitalOutputForce_Clr register o
 <p>Low 4 bits of the MON-Digital_Inputs (of the telegram’s axis) are copied to the PZD12 value. Higher 12 bits are set to zero.</p>
 <p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_tele_111_userin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_tele_111_userin.png" style="width:50%;" /></a></p>
 <h3 id="actual-current-calculation">Actual current calculation<a class="headerlink" href="#actual-current-calculation" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_current_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_current_calc.png" style="width:50%;" /></a></p>
+<div class="arithmatex">\[
+PZD12 = 16384 \cdot \frac{MON \text{-} Irms}{M \text{-} In}
+\]</div>
 <p>The <code>M-In</code> (nominal current of the motor) must be set to nonzero value, otherwise zero is always returned. The resulting PZD12 value (actual current) is then normalized to percent value, where 16384 is 100 % of nominal current. There is no overflow checking, i.e. if the <code>MON-I_rms</code> overflows 200 % of <code>M-In</code>, the resulting value will be wrong (negative value).</p>
 <h3 id="actual-torque-calculation">Actual torque calculation<a class="headerlink" href="#actual-torque-calculation" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../../../Manual/source/img/pnet_torque_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../../../Manual/source/img/pnet_torque_calc.png" style="width:50%;" /></a></p>
+<div class="arithmatex">\[
+PZD12 = 16,384 \cdot \frac{M \text{-} kT \cdot MON \text{-} aIq}{M \text{-} Mn}
+\]</div>
 <p>The <code>M-Mn</code> (nominal motor torque) must be set to nonzero value, otherwise zero is always returned. Actual current <code>MON-aIq</code> is multiplied by torque constant <code>M-kT</code> and normalized to nominal torque. Because the <code>MON-aIq</code> is measured in mA, the normalization constant is 16.384 (not 16384). The resulting PZD12 value (actual torque) is normalized to percent value, where 16384 is 100 % of nominal torque. There is no overflow checking of the value.</p>
 <h3 id="extracting-the-pzd-value-from-telegram">Extracting the PZD value from telegram<a class="headerlink" href="#extracting-the-pzd-value-from-telegram" title="Permanent link">&para;</a></h3>
 <p>The SinaPos functional block does not offer direct access to the telegram 111 user values, so they must be extracted directly from the telegram data. Just add 22 to address (input and/or output) of the telegram. Each PZD is 2 bytes long and the PZD12 is on the eleventh position, therefore the address offset is 22.</p>
@@ -10001,7 +10028,7 @@ There are also GSDML files of version V2.2 for use in older software packages.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 1, 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 1, 2025 20:01:03">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 09:32:26"><span class="timeago" datetime="2025-04-02T09:32:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 09:32:26">2025-04-02</span>
   </span>
 
     

@@ -7490,6 +7490,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="profisafe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PROFIsafe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -9819,11 +9842,15 @@ Horních 8 bitů uživatelské hodnoty je přesměrováno do registru <code>K-Di
 Horních 12 bitů je nastaveno na nulu.  </p>
 <p><a class="glightbox" href="../../../../source/img/pnet_tele_111_userin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../source/img/pnet_tele_111_userin.png" style="width:50%;" /></a>  </p>
 <h3 id="vypocet-skutecneho-proudu">Výpočet skutečného proudu<a class="headerlink" href="#vypocet-skutecneho-proudu" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../source/img/pnet_current_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../source/img/pnet_current_calc.png" style="width:50%;" /></a>  </p>
+<div class="arithmatex">\[
+PZD12 = 16384 \cdot \frac{MON \text{-} Irms}{M \text{-} In}
+\]</div>
 <p>Parametr <code>M-In</code> (jmenovitý proud motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Výsledná hodnota PZD12 (skutečný proud) je poté normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého proudu.<br />
 Neprobíhá žádná kontrola přetečení, tj. pokud <code>MON-I_rms</code> překročí 200 % hodnoty <code>M-In</code>, výsledná hodnota bude nesprávná (negativní hodnota).  </p>
 <h3 id="vypocet-skutecneho-momentu">Výpočet skutečného momentu<a class="headerlink" href="#vypocet-skutecneho-momentu" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../../../../source/img/pnet_torque_calc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Profinet img" loading="lazy" src="../../../../source/img/pnet_torque_calc.png" style="width:50%;" /></a>  </p>
+<div class="arithmatex">\[
+PZD12 = 16,384 \cdot \frac{M \text{-} kT \cdot MON \text{-} aIq}{M \text{-} Mn}
+\]</div>
 <p>Parametr <code>M-Mn</code> (jmenovitý moment motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Skutečný proud <code>MON-aIq</code> je vynásoben momentovou konstantou <code>M-kT</code> a normalizován na jmenovitý moment.<br />
 Protože <code>MON-aIq</code> je měřen v mA, normalizační konstanta je 16,384 (nikoli 16384). Výsledná hodnota PZD12 (skutečný moment) je normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého momentu. Neprobíhá žádná kontrola přetečení hodnoty.  </p>
 <h3 id="extrakce-hodnoty-pzd-z-telegramu">Extrakce hodnoty PZD z telegramu<a class="headerlink" href="#extrakce-hodnoty-pzd-z-telegramu" title="Permanent link">&para;</a></h3>
@@ -10012,7 +10039,7 @@ K dispozici jsou také soubory GSDML verze V2.2 pro použití ve starších soft
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="1. dubna 2025 20:01:03"><span class="timeago" datetime="2025-04-01T20:01:03+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="1. dubna 2025 20:01:03">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2. dubna 2025 09:32:26"><span class="timeago" datetime="2025-04-02T09:32:26+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2. dubna 2025 09:32:26">2025-04-02</span>
   </span>
 
     
