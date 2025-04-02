@@ -245,13 +245,17 @@ Low 4 bits of the MON-Digital_Inputs (of the telegram’s axis) are copied to th
 
 ### Actual current calculation
 
-![Profinet img](../../../../source/img/pnet_current_calc.png){: style="width:50%;" loading="lazy"}
+$$
+PZD12 = 16384 \cdot \frac{MON \text{-} Irms}{M \text{-} In}
+$$
 
 The `M-In` (nominal current of the motor) must be set to nonzero value, otherwise zero is always returned. The resulting PZD12 value (actual current) is then normalized to percent value, where 16384 is 100 % of nominal current. There is no overflow checking, i.e. if the `MON-I_rms` overflows 200 % of `M-In`, the resulting value will be wrong (negative value).
 
 ### Actual torque calculation
 
-![Profinet img](../../../../source/img/pnet_torque_calc.png){: style="width:50%;" loading="lazy"}
+$$
+PZD12 = 16,384 \cdot \frac{M \text{-} kT \cdot MON \text{-} aIq}{M \text{-} Mn}
+$$
 
 The `M-Mn` (nominal motor torque) must be set to nonzero value, otherwise zero is always returned. Actual current `MON-aIq` is multiplied by torque constant `M-kT` and normalized to nominal torque. Because the `MON-aIq` is measured in mA, the normalization constant is 16.384 (not 16384). The resulting PZD12 value (actual torque) is normalized to percent value, where 16384 is 100 % of nominal torque. There is no overflow checking of the value.
 

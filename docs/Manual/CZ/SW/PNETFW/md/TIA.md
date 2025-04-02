@@ -251,14 +251,18 @@ Horních 12 bitů je nastaveno na nulu.
 
 ### Výpočet skutečného proudu  
 
-![Profinet img](../../../../source/img/pnet_current_calc.png){: style="width:50%;" loading="lazy"}  
+$$
+PZD12 = 16384 \cdot \frac{MON \text{-} Irms}{M \text{-} In}
+$$
 
 Parametr `M-In` (jmenovitý proud motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Výsledná hodnota PZD12 (skutečný proud) je poté normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého proudu.  
 Neprobíhá žádná kontrola přetečení, tj. pokud `MON-I_rms` překročí 200 % hodnoty `M-In`, výsledná hodnota bude nesprávná (negativní hodnota).  
 
 ### Výpočet skutečného momentu  
 
-![Profinet img](../../../../source/img/pnet_torque_calc.png){: style="width:50%;" loading="lazy"}  
+$$
+PZD12 = 16,384 \cdot \frac{M \text{-} kT \cdot MON \text{-} aIq}{M \text{-} Mn}
+$$
 
 Parametr `M-Mn` (jmenovitý moment motoru) musí být nastaven na nenulovou hodnotu, jinak se vždy vrací nula. Skutečný proud `MON-aIq` je vynásoben momentovou konstantou `M-kT` a normalizován na jmenovitý moment.  
 Protože `MON-aIq` je měřen v mA, normalizační konstanta je 16,384 (nikoli 16384). Výsledná hodnota PZD12 (skutečný moment) je normalizována na procentuální hodnotu, kde 16384 odpovídá 100 % jmenovitého momentu. Neprobíhá žádná kontrola přetečení hodnoty.  
