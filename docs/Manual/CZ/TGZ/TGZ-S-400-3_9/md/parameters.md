@@ -1,7 +1,7 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
 | Ovládací napětí | 24 VDC ± 10 %, 600 mA |
-| Výkonové napájecí napětí | 400 VAC/50Hz 6A |
+| Výkonové napájecí napětí | 3 x 400 VAC/50Hz 6A |
 | Instalovaný příkon pro provoz S1 | 1,68 kVA |
 | Trvalý proud na jednu osu | 3 A |
 | Maximální výstupní proud (max. 5 s) | 9 A |

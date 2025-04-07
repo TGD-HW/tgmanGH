@@ -1,192 +1,217 @@
-## Available safety functions
+## Dostupné bezpečnostní funkce
 
-|       | Function                              | Category      | PROFIsafe | DI  | Permanent
-|-------|---------------------------------------|---------------|-----------|-----|----------
-| STO   | Safe torque off                       | Safe stop     | Yes       | Yes | No
-| SS1   | Safe stop 1 (time based)              | Safe stop     | Yes       | Yes | No
-| SOS   | Safe operating stop                   | Safe stop     | Yes       | Yes | No
-| SS2   | Safe stop 2 (deceleration monitoring) | Safe stop     | Yes       | Yes | No
-| SLS   | Safe limit speed                      | Safe speed    | Yes       | Yes | Yes
-| SLP   | Safe limit position                   | Safe position | Yes       | Yes | Yes
+|       | Funkce                                  | Kategorie      | PROFIsafe | DI  | Trvalá
+|-------|-----------------------------------------|---------------|-----------|-----|----------
+| STO   | Bezpečné vypnutí točivého momentu       | Bezpečné zastavení | Ano       | Ano | Ne
+| SS1   | Bezpečné zastavení 1 (časově závislé)   | Bezpečné zastavení | Ano       | Ano | Ne
+| SOS   | Bezpečné provozní zastavení            | Bezpečné zastavení | Ano       | Ano | Ne
+| SS2   | Bezpečné zastavení 2 (monitorování zpomalení) | Bezpečné zastavení | Ano       | Ano | Ne
+| SLS   | Bezpečná omezená rychlost               | Bezpečná rychlost  | Ano       | Ano | Ano
+| SLP   | Bezpečná omezená poloha                 | Bezpečná poloha  | Ano       | Ano | Ano
 
-Each safety function can be activated by PROFIsafe, digital inputs (DI) or both. SLS and SLP can be also activated permanently by using the safety parameters.
+Každá bezpečnostní funkce může být aktivována pomocí PROFIsafe, digitálních vstupů (DI) nebo obojího.
+Funkce SLS a SLP mohou být také trvale aktivovány pomocí bezpečnostních parametrů.
 
-!!! warning "Warning"
-    **The function SLP is fully functional only with a multiturn absolute encoder.**
+!!! warning "Varování"
+    **Funkce SLP je plně funkční pouze s víceotáčkovým absolutním snímačem.**
 
 
 ### PROFIsafe
 
-One or more of the safety functions can be activated. The standard PROFIsafe telegram 902 is used. There is a standard library LdrvSafe_SinaTlg902 available. The telegram 902 allows detailed control of each safety function with additional parameters and also returns a safe axis position together with the time stamp for velocity calculation.
+Může být aktivována jedna nebo více bezpečnostních funkcí.
+Používá se standardní telegram PROFIsafe 902.
+K dispozici je standardní knihovna ``LdrvSafe_SinaTlg902``.
+Telegram 902 umožňuje detailní řízení každé bezpečnostní funkce s dodatečnými parametry a také vrací bezpečnou polohu osy spolu s časovým razítkem pro výpočet rychlosti.
 
-### Digital inputs
+### Digitální vstupy
 
-Each axis can use two dedicated digital inputs pins for a safety function invoke. Only ONE function can be activated in a time. The selection is done via the safety parameters independently for each axis. The first axis uses digital inputs pins DI 5 and DI 7, the second axis uses DI6 and DI8 pins. Function is active by setting the mentioned pins low. Both inputs (DI5 & 7 or DI6 & 8) must be changed simultaneously within 10 ms. If this time is violated, the safety function is activated forever till restart of the TGZ.
+Každá osa může pro vyvolání bezpečnostní funkce využívat dva vyhrazené piny digitálních vstupů.
+V daném okamžiku může být aktivována pouze JEDNA funkce.
+Výběr se provádí pomocí bezpečnostních parametrů nezávisle pro každou osu.
+První osa používá piny digitálních vstupů DI 5 a DI 7, druhá osa používá piny DI 6 a DI 8.
+Funkce je aktivní nastavením zmíněných pinů do nízkého stavu.
+Oba vstupy (DI5 a 7 nebo DI6 a 8) musí být změněny současně během 10 ms.
+Pokud je tento čas překročen, bezpečnostní funkce se aktivuje trvale až do restartu TGZ.
 
-### Permanent safety function selection
+### Trvalý výběr bezpečnostní funkce
 
-Two of the safety functions can be also selected permanently via the safety parameters: Safe limit speed (SLS) and safe limit position (SLP). The SLS can work simultaneously with the PROFIsafe control – fine selection of the limited speed percent value is possible by telegram 902. On the other hand, the permanent SLP uses always the safety position 1 only.
+Dvě z bezpečnostních funkcí lze také trvale vybrat pomocí bezpečnostních parametrů: Bezpečná omezená rychlost (SLS) a bezpečná omezená poloha (SLP).
+Funkce SLS může pracovat současně s řízením PROFIsafe – jemné nastavení procentuální hodnoty omezené rychlosti je možné pomocí telegramu 902.
+Na druhou stranu, trvalá funkce SLP vždy používá pouze bezpečnostní polohu 1.
 
-### Active safety function signaling by digital outputs
+### Signalizace aktivní bezpečnostní funkce pomocí digitálních výstupů
 
-Digital output pins 3&5 for the first axis or 4&6 can be selected for signaling a selected safety function. Only ONE function can be selected for signaling. The normal digital outputs function is not available in that case. Active safety function is signaled by setting both the outputs low.
+Pro signalizaci vybrané bezpečnostní funkce lze vybrat piny digitálních výstupů 3 a 5 pro první osu nebo 4 a 6.
+Pro signalizaci lze vybrat pouze JEDNU funkci.
+V tomto případě není k dispozici normální funkce digitálních výstupů.
+Aktivní bezpečnostní funkce je signalizována nastavením obou výstupů do nízkého stavu.
 
-## Principle of operation
+## Princip činnosti
 
-All safety functions assume that the PLC controller invokes the desired action. The TGZ monitors the speed and/or position and invokes the appropriate safety reaction in the case the conditions are not met. Additionally, when a safety function is selected, the TGZ also activates the wanted action internally (i.e. stops the motion, sets internal position limits, limits the speed, etc.).  
-The safety functions monitoring is done in a safety manner by using two independent processors.  
-Disabling the power motor output is done in a safety manner by using two independent FPGA circuit breakers connected in a sequence.
+Všechny bezpečnostní funkce předpokládají, že PLC řídicí jednotka vyvolá požadovanou akci.
+TGZ monitoruje rychlost a/nebo polohu a v případě, že nejsou splněny podmínky, vyvolá příslušnou bezpečnostní reakci.
+Navíc, když je vybrána bezpečnostní funkce, TGZ také interně aktivuje požadovanou akci (tj.
+zastaví pohyb, nastaví interní limity polohy, omezí rychlost atd.).
+Monitorování bezpečnostních funkcí probíhá bezpečným způsobem pomocí dvou nezávislých procesorů.
+Bezpečné vypnutí napájení motoru se provádí bezpečným způsobem pomocí dvou nezávislých jističů FPGA zapojených do série.
 
-## Safe torque off – STO
+## Bezpečné vypnutí točivého momentu – STO
 
-In addition to already available hardware STO safety function, which has its dedicated input pins, additional STO is available. STO turns off the drive output that powers the motor.
+Kromě již dostupné hardwarové bezpečnostní funkce STO, která má vyhrazené vstupní piny, je k dispozici dodatečná funkce STO.
+STO vypne výstup pohonu, který napájí motor.
 
-### STO activation
+### Aktivace STO
 
-STO can be activated by any of the following inputs or events:
+STO může být aktivováno kterýmkoli z následujících vstupů nebo událostí:
 
-- PROFIsafe STO bit in control word set to zero
+- Bit STO v řídicím slově PROFIsafe nastaven na nulu
 - SS1
-- SS2 in case of deceleration or standstill speed monitor fail
-- SOS in case of standstill speed monitor fail
-- SLS in case of speed threshold violation
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to STO
-- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- SS2 v případě selhání monitorování zpomalení nebo rychlosti zastavení
+- SOS v případě selhání monitorování rychlosti zastavení
+- SLS v případě překročení prahové hodnoty rychlosti
+- SLP v případě překročení/podkročení rozsahu polohy a když je funkce zastavení SLP nastavena na STO
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### STO signaling
+### Signalizace STO
 
-STO active status can be evaluated by:
+Aktivní stav STO lze vyhodnotit pomocí:
 
-- PROFIsafe status bit STO set to logical one
-- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+- Stavový bit STO v PROFIsafe nastaven na logickou jedničku
+- Digitální výstupy (3 a 5 – osa 1, 4 a 6 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### STO sequence
+### Sekvence STO
 
-When the STO is activated the following actions are done simultaneously:
+Při aktivaci STO se současně provádějí následující akce:
 
-- Output driver power stage is set to zero
-- The axis is disabled (software disable) and its PROFIdrive state goes to S1 – Switching On Inhibited.
-- The motor velocity goes to zero and the motor cannot be started accidentally.
+- Výkonový stupeň budiče výstupu je nastaven na nulu
+- Osa je deaktivována (softwarové vypnutí) a její stav PROFIdrive přechází do S1 – Blokování zapnutí.
+- Rychlost motoru klesne na nulu a motor nelze náhodně spustit.
 
-!!! warning "Warning"
-    **After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.**
+!!! warning "Varování"
+    **Po odpojení napájení (STO aktivní) se motor může nežádoucím způsobem pohybovat (např. motor může doběhnout), a proto představuje riziko pro osoby.**
 
-### STO deactivation
+### Deaktivace STO
 
-- Deselect the function by PROFIsafe control word bit STO to logical 1 and/or by settings both mapped digital inputs to high level.
-- Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+- Zrušte výběr funkce nastavením bitu STO v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
+- Povolte osu pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
-## SS1 – time based safe stop
+## SS1 – časově závislé bezpečné zastavení
 
-Definition according to EN 61800-5-2:
+Definice podle EN 61800-5-2:
 
-> "The function SS1 brakes the motor and trips the function STO after a delay time."
+> "Funkce SS1 brzdí motor a po uplynutí zpoždění vypne funkci STO."
 
-In other words the drive decelerates once SS1 has been selected, and goes into the STO state once the delay time has expired. The STO state is always selected after the timeout regardless the axis is still moving or not.
+Jinými slovy, pohon po výběru SS1 zpomalí a po uplynutí doby zpoždění přejde do stavu STO.
+Stav STO je vždy vybrán po uplynutí časového limitu bez ohledu na to, zda se osa stále pohybuje nebo ne.
 
-### SS1 activation
+### Aktivace SS1
 
-The SS1 function can be activated by any of the following events:
+Funkce SS1 může být aktivována kteroukoli z následujících událostí:
 
-- PROFIsafe SS1 bit in the control word set to zero
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SS1
-- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- Bit SS1 v řídicím slově PROFIsafe nastaven na nulu
+- SLP v případě překročení/podkročení rozsahu polohy a když je funkce zastavení SLP nastavena na SS1
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SS1 signaling
+### Signalizace SS1
 
-STO active status can be evaluated by:
+Aktivní stav STO lze vyhodnotit pomocí:
 
-- PROFIsafe status bit SS1 set to logical one
-- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+- Stavový bit SS1 v PROFIsafe nastaven na logickou jedničku
+- Digitální výstupy (3 a 5 – osa 1, 4 a 6 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SS1 sequence
+### Sekvence SS1
 
-1. The SS1 is selected either by bit SS1 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.
-2. The TGZ stops the movement with the deceleration specified in the safety parameters.
-3. After fixed time (also specified in the safety parameters) the STO is activated, even if the axis is still moving.
+1. Funkce SS1 je vybrána buď nastavením bitu SS1 na nízkou úroveň v řídicím slově PROFIsafe, nebo nastavením digitálních vstupů (pokud jsou mapovány) na nízkou úroveň.
+2. TGZ zastaví pohyb se zpomalením specifikovaným v bezpečnostních parametrech.
+3. Po uplynutí pevně stanovené doby (také specifikované v bezpečnostních parametrech) se aktivuje funkce STO, i když se osa stále pohybuje.
 
-!!! warning "Warning"
-    **After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.**
+!!! warning "Varování"
+    **Po odpojení napájení (STO aktivní) se motor může nežádoucím způsobem pohybovat (např. motor může doběhnout), a proto představuje riziko pro osoby.**
 
-### SS1 deactivation
+### Deaktivace SS1
 
-- Deselect the function by PROFIsafe control word bit SS1 to logical 1 and/or by settings both mapped digital inputs to high level.
-- Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+- Zrušte výběr funkce nastavením bitu SS1 v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
+- Povolte osu pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
-## SOS – safe operating stop
+## SOS – bezpečné provozní zastavení (Safe Operating Stop)
 
-Definition according to EN 61800-5-2:
+Definice podle EN 61800-5-2:
 
-> "This SOS function is used for safe monitoring of the standstill position of a drive."
+> "Tato funkce SOS se používá pro bezpečné monitorování klidové polohy pohonu."
 
-!!! note "Note"
-    Contrary to SS1 and SS2, SOS does not automatically brake the drive. It only monitors the standstill position. This means that the PLC must ensure that the drive is stopped before activating the SOS function.
+!!! note "Poznámka"
+    Na rozdíl od SS1 a SS2 funkce SOS automaticky nebrzdí pohon, pouze monitoruje klidovou polohu. To znamená, že PLC musí zajistit, aby byl pohon zastaven před aktivací funkce SOS.
 
-The motor remains under power and the drive is in the enabled state. The SOS function is activated when the motor is not in the standstill position after the timeout has elapsed. The standstill check is done by the **standstill tolerance window safe parameter**.
+Motor zůstává pod napětím a pohon je v povoleném stavu.
+Funkce SOS se aktivuje, když motor není v klidové poloze po uplynutí časového limitu.
+Kontrola klidového stavu se provádí pomocí **bezpečnostního parametru tolerance klidového stavu**.
 
-### SOS activation
+### Aktivace SOS
 
-The SOS function can be activated by any of the following events:
+Funkce SOS může být aktivována kteroukoli z následujících událostí:
 
-- PROFIsafe SOS bit in the control word set to zero
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SOS
-- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- Bit SOS v řídicím slově PROFIsafe nastaven na nulu
+- SLP v případě překročení/podkročení rozsahu polohy a když je funkce zastavení SLP nastavena na SOS
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SOS signaling
+### Signalizace SOS
 
-STO active status can be evaluated by:
+Aktivní stav STO lze vyhodnotit pomocí:
 
-- PROFIsafe status bit SOS set to logical one
-- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+- Stavový bit SOS v PROFIsafe nastaven na logickou jedničku
+- Digitální výstupy (3 a 5 – osa 1, 4 a 6 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SOS sequence
+### Sekvence SOS
 
-1. The SOS is selected either by bit SOS to low in PROFIsafe control word or by digital inputs (if mapped) to low level.
-2. The TGZ waits for the timeout to elapse. During this time the motor must be stopped by the PLC.
-3. After the timeout, the TGZ checks if the motor is in standstill. If not, the **STO** function is activated.
+1. Funkce SOS je vybrána buď nastavením bitu SOS na nízkou úroveň v řídicím slově PROFIsafe, nebo nastavením digitálních vstupů (pokud jsou mapovány) na nízkou úroveň.
+2. TGZ čeká na uplynutí časového limitu. Během této doby musí být motor zastaven PLC.
+3. Po uplynutí časového limitu TGZ zkontroluje, zda je motor v klidovém stavu. Pokud ne, aktivuje se funkce **STO**.
 
-### SOS deactivation
+### Deaktivace SOS
 
-- Deselect the function by PROFIsafe control word bit SOS to logical 1 and/or by settings both mapped digital inputs to high level.
-- If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+- Zrušte výběr funkce nastavením bitu SOS v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
+- Pokud je aktivována funkce STO, musí být osa povolena pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
-## SS2 – safe stop with deceleration monitoring
+## SS2 – bezpečné zastavení s monitorováním zpomalení
 
-Definition according to EN 61800-5-2:
+Definice podle EN 61800-5-2:
 
-> "The function SS2 brakes the motor, monitors the magnitude of the motor deceleration, and after a delay time, initiates the SOS function."
+> "Funkce SS2 brzdí motor, monitoruje velikost zpomalení motoru a po uplynutí zpoždění iniciuje funkci SOS."
 
-In other words the drive decelerates once SS2 has been selected, and goes into the SOS state if the deceleration monitoring has failed. After the timeout the SS2 function checks if the motor is in standstill. If not, the SOS function is activated. The standstill check is done by the **standstill tolerance window safe parameter**.
+Jinými slovy, pohon po výběru SS2 zpomalí a pokud monitorování zpomalení selže, přejde do stavu SOS.
+Po uplynutí časového limitu funkce SS2 zkontroluje, zda je motor v klidovém stavu.
+Pokud ne, aktivuje se funkce SOS.
+Kontrola klidového stavu se provádí pomocí **bezpečnostního parametru tolerance klidového stavu**.
 
-### SS2 activation
+### Aktivace SS2
 
-The SS2 function can be activated by any of the following events:
+Funkce SS2 může být aktivována kteroukoli z následujících událostí:
 
-- PROFIsafe SS2 bit in the control word set to zero
-- SLP in case of position range overflow/underflow and when the SLP’s stop function is set to SS2
-- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- Bit SS2 v řídicím slově PROFIsafe nastaven na nulu
+- SLP v případě překročení/podkročení rozsahu polohy a když je funkce zastavení SLP nastavena na SS2
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SS2 signaling
+### Signalizace SS2
 
-STO active status can be evaluated by:
+Aktivní stav STO lze vyhodnotit pomocí:
 
-- PROFIsafe status bit SS2 set to logical one
-- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+- Stavový bit SS2 v PROFIsafe nastaven na logickou jedničku
+- Digitální výstupy (3 a 5 – osa 1, 4 a 6 – osa 2) nastavené do nízkého stavu, pokud jsou mapovány bezpečnostními parametry
 
-### SS2 sequence
+### Sekvence SS2
 
-1. The SS2 is selected either by bit SS2 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.
-2. The TGZ stops the movement with the deceleration specified in the safety parameters.
-3. When the timeout elapses or the motor is in standstill, continuous check of the the zero speed is activated (SOS function).
-4. If the motor is not in standstill, the **STO** function is activated.
+1. Funkce SS2 je vybrána buď nastavením bitu SS2 na nízkou úroveň v řídicím slově PROFIsafe, nebo nastavením digitálních vstupů (pokud jsou mapovány) na nízkou úroveň.
+2. TGZ zastaví pohyb se zpomalením specifikovaným v bezpečnostních parametrech.
+3. Po uplynutí časového limitu nebo když je motor v klidovém stavu, se aktivuje nepřetržitá kontrola nulové rychlosti (funkce SOS).
+4. Pokud motor není v klidovém stavu, aktivuje se funkce **STO**.
 
-### SS2 deactivation
+### Deaktivace SS2
 
-- Deselect the function by PROFIsafe control word bit SS2 to logical 1 and/or by settings both mapped digital inputs to high level.
-- If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+- Zrušte výběr funkce nastavením bitu SS2 v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
+- Pokud je aktivována funkce STO, musí být osa povolena pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
-## SLS – safe limit speed
+## SLS – bezpečná omezená rychlost
 
-Definition according to EN 61800-5-2:
+Definice podle EN 61800-5-2:
 
-> "The SLS function prevents the motor from exceeding the specified speed limit.
+> "Funkce SLS zabraňuje překročení specifikovaného rychlostního limitu motorem."

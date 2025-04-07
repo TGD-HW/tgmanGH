@@ -1,7 +1,7 @@
 ##Obtaining software
 The control and service software of the **TGZ GUI** application is used to set the servo amplifier.
 At the same time, it is possible to monitor the parameters of the TGZ servo amplifier.
-Latest **TGZ GUI** software is available at TG Drives website in the [Downloads section](https://dev025.tgdrives.cz/products/servodrives).
+Latest **TGZ GUI** software is available at TG Drives website in the [Downloads section](https://www.tgdrives.cz/products/servodrives).
 
 ##Installation and startup {#GUIstart}
 **Installing TGZ GUI:**   

@@ -1,7 +1,7 @@
 | **POWER SUPPLY** |   |
 | :---: | :---: |
 | Control voltage | 24 VDC ± 10 %, 2 A* |
-| Power supply voltage | 140-600 VDC |
+| Power supply voltage | 0 ~ 560 VDC |
 | Installed power consumption for S1 operation | 11 kVA |
 | Constant current on one axis | 10 A |
 | Continuous total current when operating two axes | 16 A |

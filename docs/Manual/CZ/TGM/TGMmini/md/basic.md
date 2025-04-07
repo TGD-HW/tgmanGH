@@ -15,7 +15,7 @@ Pro přístup ke sdílené paměti systému **TG&nbsp;Motion** slouží knihovna
 ##Rozdíly vůči TG Motion na PC
 TG Motion používaný na TGMmini je ve verzi 501 či vyšší. 
 Verze pro PC i TGMmini jsou navzájem kompatibilní. 
-Manuál pro systém TG Motion tuto verzi zahrnuje a je mj. k dispozici na [webových stránkách TG Drives v sekci TGMmini](https://dev025.tgdrives.cz/cs/produkty/ridici-systemy#downloadsSection). 
+Manuál pro systém TG Motion tuto verzi zahrnuje a je mj. k dispozici na [webových stránkách TG Drives v sekci TGMmini](https://www.tgdrives.cz/cs/produkty/ridici-systemy#downloadsSection). 
 TGMmini podporuje až 64 servopohonů a 16 I/O jednotek na sběrnici EtherCAT.
 Implementován jsou též až dva CNC moduly s interpolátorem. 
 Přímo na hardwaru TGMmini se nachází 8 rychlých vstupů (použitelné např. i pro inkrementální snímač otáček IRC), 8 rychlých výstupů (programovatelné jako digitální nebo PWM výstupy) a sběrnice CAN.   
