@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['ods_2572',['ODS',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a83f7958af2bf095ae34a37ffe083d815a03bca049e84ba7d10ef0e3ec7529f301',1,'CTGM_COMM_INT_5::ODS()'],['../d2/da5/tgm_8h.html#aefb1e45eb5a54c36d2d4c2d065d6b1eba03bca049e84ba7d10ef0e3ec7529f301',1,'ODS():&#160;tgm.h']]],
+  ['offline_5fconnection_5fnot_5fopened_2573',['Offline_Connection_Not_Opened',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a8341fa485263157e6751b6831b55630b',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fconnection_5fproceeds_2574',['Offline_Connection_Proceeds',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a6dcb6c31d9c91e6b6646f1488fb5cbf3',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fdevice_5foffline_2575',['Offline_Device_Offline',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a7d7ebc0458ad86802e55e250c8674f5f',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fincompatible_5fdevice_5fid_2576',['Offline_Incompatible_DEVICE_ID',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a40e09c8d014e2b22824d0171f40c97eb',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fincompatible_5fdevice_5fmem_5fid_2577',['Offline_Incompatible_DEVICE_Mem_ID',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91afd2a45e2f60a12bc4197e408bf143e62',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fincompatible_5fdll_5fid_2578',['Offline_Incompatible_DLL_ID',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91adf51106bd61bcd803cde0c8a401179b4',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fincompatible_5fdll_5fmem_5fid_2579',['Offline_Incompatible_DLL_Mem_ID',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a0f134c98de34a196b196381f0e5285d3',1,'CTGM_COMM_INT_5']]],
+  ['offline_5finit_5fconnection_5ffailed_2580',['Offline_Init_Connection_Failed',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a7c8cdce5b5aad8d6459587efd9b4e463',1,'CTGM_COMM_INT_5']]],
+  ['offline_5finterface_5fnot_5fcreate_2581',['Offline_Interface_Not_Create',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a25d4d5a0cd00528444990ede7f03521b',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fm02_2582',['OFFLINE_M02',['../db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a54ca1eb237f7ac4e763b7eceb315b25a',1,'cnc']]],
+  ['offline_5fnot_5fdetect_5fcomm_5fdll_2583',['Offline_Not_Detect_Comm_DLL',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91af383ec141af8a22dfe412b47dc09edde',1,'CTGM_COMM_INT_5']]],
+  ['offline_5fopen_5fconnection_5ffailed_2584',['Offline_Open_Connection_Failed',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91ab0ef353dc638ad42adf35e02523503ce',1,'CTGM_COMM_INT_5']]],
+  ['ok_2585',['OK',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a576a35cbf790dd533ac64ea892209c44ae0aa021e21dddbd6d8cecec71e9cf564',1,'CTGM_COMM_INT_5']]],
+  ['ok_5f00_2586',['OK_00',['../d2/da5/tgm_8h.html#a6caeadbc8ce0770f57faf2ac412a416aa4f6230a2aa218286079ba3174d304734',1,'tgm.h']]],
+  ['ok_5foffline_5fdata_2587',['OK_Offline_Data',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a576a35cbf790dd533ac64ea892209c44ae63357a0e63466d56bb414b826eab77f',1,'CTGM_COMM_INT_5']]],
+  ['online_2588',['Online',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a54f664c70c22054ea0d8d26fc3997ce7',1,'CTGM_COMM_INT_5']]],
+  ['online_5fincompatible_5fid_2589',['Online_Incompatible_ID',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a01cd36d7831aa800f50e8837fe733f91a0d019a97829b903da570dd92617562e4',1,'CTGM_COMM_INT_5']]],
+  ['osc_2590',['OSC',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a83f7958af2bf095ae34a37ffe083d815a0e0ec5752ef20d94dc6fbb13507f5e5e',1,'CTGM_COMM_INT_5']]],
+  ['oscilloscope_2591',['OSCILLOSCOPE',['../d2/da5/tgm_8h.html#aefb1e45eb5a54c36d2d4c2d065d6b1ebaa08642f4a8f897d6a0a8e02191eaf6c4',1,'tgm.h']]],
+  ['out_5fof_5ftrajectory_5fm50_2592',['OUT_OF_TRAJECTORY_M50',['../db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8aae3ab0bc29203138db4cf1e6f5037601',1,'cnc']]]
+];

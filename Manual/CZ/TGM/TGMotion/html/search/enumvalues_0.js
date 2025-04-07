@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['akd_2454',['AKD',['../d2/da5/tgm_8h.html#a51ecd4663e788716784abaa367d112d5a9331aa616db8c0999634503ab04c97de',1,'tgm.h']]],
+  ['akd2g_5fdual_5faxis_2455',['AKD2G_DUAL_AXIS',['../d2/da5/tgm_8h.html#a51ecd4663e788716784abaa367d112d5aaf481e3c7bf354ccac35cd9ae159e8fd',1,'tgm.h']]],
+  ['akd2g_5fsingle_5faxis_2456',['AKD2G_SINGLE_AXIS',['../d2/da5/tgm_8h.html#a51ecd4663e788716784abaa367d112d5adf7dcb7c0490e9e901d0bfd5b5935a76',1,'tgm.h']]],
+  ['astring_2457',['ASTRING',['../d2/da5/tgm_8h.html#a03be1dd9b7c525ccf00fea5ac8374ccaa26af04c8819cd164599fb6a3d6e6be83',1,'tgm.h']]],
+  ['axis_5fa_2458',['AXIS_A',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda3ac741f99992d6f449f80c1567b9ef39',1,'cnc']]],
+  ['axis_5fb_2459',['AXIS_B',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdac9f471f9b6abae297fd74720b67d2e51',1,'cnc']]],
+  ['axis_5fc_2460',['AXIS_C',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda749dbde1da7daeca8e34fbd28c4e3ecf',1,'cnc']]],
+  ['axis_5fio_2461',['AXIS_IO',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda78032179e59535c1d0c8853ca633ae53',1,'cnc']]],
+  ['axis_5fnone_2462',['AXIS_NONE',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaba69c71132474e01b421adb40e0c5d70',1,'cnc']]],
+  ['axis_5fo_2463',['AXIS_O',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaa2276353bf20d257a44ccde269ed1867',1,'cnc']]],
+  ['axis_5fs_2464',['AXIS_S',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda49b544e2728ee34871d61f3a9d521606',1,'cnc']]],
+  ['axis_5fs2_2465',['AXIS_S2',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdad5f8f4b07db240ba5a15a98294db702c',1,'cnc']]],
+  ['axis_5ft_2466',['AXIS_T',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda097ac50fe3e7219720c0364f893d5a2d',1,'cnc']]],
+  ['axis_5fu_2467',['AXIS_U',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaf34403821eb4104c581804a722d8296a',1,'cnc']]],
+  ['axis_5fv_2468',['AXIS_V',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdac1925efdcb9973e8ec634fca74cf146e',1,'cnc']]],
+  ['axis_5fw_2469',['AXIS_W',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdae98c122857389d5d8dbbfc51c2e73959',1,'cnc']]],
+  ['axis_5fx_2470',['AXIS_X',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdafb7ec808a21c7770ccd7060e715983ba',1,'cnc']]],
+  ['axis_5fxy_2471',['AXIS_XY',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda7db6dcc7651dcfaced15af7bde9f114b',1,'cnc']]],
+  ['axis_5fy_2472',['AXIS_Y',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda3e69e41ce011d74658d6ccce110e5f1a',1,'cnc']]],
+  ['axis_5fz_2473',['AXIS_Z',['../db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda19aa520601d5d2f29571f14a3278216f',1,'cnc']]]
+];

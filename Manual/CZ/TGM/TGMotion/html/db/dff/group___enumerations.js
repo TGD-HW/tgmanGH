@@ -1,0 +1,76 @@
+var group___enumerations =
+[
+    [ "axis_idx", "db/dff/group___enumerations.html#ga4d76c4f80d095ad01f0bb4d34b221afd", [
+      [ "AXIS_NONE", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaba69c71132474e01b421adb40e0c5d70", null ],
+      [ "AXIS_X", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdafb7ec808a21c7770ccd7060e715983ba", null ],
+      [ "AXIS_Y", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda3e69e41ce011d74658d6ccce110e5f1a", null ],
+      [ "AXIS_Z", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda19aa520601d5d2f29571f14a3278216f", null ],
+      [ "AXIS_C", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda749dbde1da7daeca8e34fbd28c4e3ecf", null ],
+      [ "AXIS_B", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdac9f471f9b6abae297fd74720b67d2e51", null ],
+      [ "AXIS_U", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaf34403821eb4104c581804a722d8296a", null ],
+      [ "AXIS_V", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdac1925efdcb9973e8ec634fca74cf146e", null ],
+      [ "AXIS_W", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdae98c122857389d5d8dbbfc51c2e73959", null ],
+      [ "AXIS_A", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda3ac741f99992d6f449f80c1567b9ef39", null ],
+      [ "AXIS_O", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdaa2276353bf20d257a44ccde269ed1867", null ],
+      [ "AXIS_S", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda49b544e2728ee34871d61f3a9d521606", null ],
+      [ "AXIS_T", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda097ac50fe3e7219720c0364f893d5a2d", null ],
+      [ "AXIS_IO", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda78032179e59535c1d0c8853ca633ae53", null ],
+      [ "AXIS_S2", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afdad5f8f4b07db240ba5a15a98294db702c", null ],
+      [ "AXIS_XY", "db/dff/group___enumerations.html#gga4d76c4f80d095ad01f0bb4d34b221afda7db6dcc7651dcfaced15af7bde9f114b", null ]
+    ] ],
+    [ "cnc_status", "db/dff/group___enumerations.html#ga813eb11ac16c0cc311c77df8f6a242d8", [
+      [ "OFFLINE_M02", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a54ca1eb237f7ac4e763b7eceb315b25a", null ],
+      [ "INVALID_00", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a7205e6e99dbad420edc3fad82a9b1225", null ],
+      [ "COMPILING_01", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a44bba654967867f9d8440e42fdbbe349", null ],
+      [ "COMPILE_FINISHED_M01", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ab90f3787f8ea3afd8c909914ace9a8fc", null ],
+      [ "SIMULATING_10", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a2c88723e33a67b83995e8fa4701f0c22", null ],
+      [ "SIMULATION_END_M10", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ac1a7a229d3b38008b6063fcb7159a0ac", null ],
+      [ "SIMULATION_BREAK_M11", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8af79305f1ce5a984bd0c96bd3d82bdb38", null ],
+      [ "TEST_20", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ae41fbe97c8be0c907d3cae94cb983727", null ],
+      [ "TEST_END_M20", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a9033689a20695d5ca35964eaff1ad530", null ],
+      [ "TEST_BREAK_M21", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ab2c723432a7cf2cb5856227cc8df2091", null ],
+      [ "TRAJECTORY_START_M30", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a21a9368ca5125a3f033af2e869e8c216", null ],
+      [ "TRAJECTORY_BREAK_M31", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a06ffe7fe8192485e220659ea79a1707b", null ],
+      [ "TRAJECTORY_END_M32", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ad7c926bf069bb46a192cef58221ded4c", null ],
+      [ "TRAJECTORY_BREAK_M0_M33", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a7c2e5e36b34b1d686744d2eeccc79297", null ],
+      [ "FORWARD_30", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a1cf74d0d3061fd913f46a42531ccdbf6", null ],
+      [ "FORWARD_NO_MFUNC_31", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a3de0446a186a5e36781bd56114d6c2af", null ],
+      [ "BACKWARD_32", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a027ff37a4135ba9ac69dd6ff2dfe2a3f", null ],
+      [ "FORWARD_SKIP_FIRST_M_33", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8ab7b5b024cbf837a58e57409a1bec4f94", null ],
+      [ "CONNECTING_40", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a19d2e4087cde069714eb5715af29de28", null ],
+      [ "CONNECT_MOVE_41", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a29dd2276cc4b76f6760066219b8548e2", null ],
+      [ "HAND_MOVE_50", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a53ea02c7eff7a5a11f1c576dba2b671e", null ],
+      [ "OUT_OF_TRAJECTORY_M50", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8aae3ab0bc29203138db4cf1e6f5037601", null ],
+      [ "CALCULATING_60", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8af58c04486f3fd660df8b8c8cee72ca3f", null ],
+      [ "START_M_FUNCS_70", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a446d738decd37fddcc79b5e9cb021420", null ],
+      [ "STOP_M_FUNCS_80", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a5af9e7404f58bf61078c80c73fb07e3b", null ],
+      [ "CONNECT_INS_M_FUNCS_90", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a37be530a303faab43a2feefb7d358f4c", null ],
+      [ "NONSENSE", "db/dff/group___enumerations.html#gga813eb11ac16c0cc311c77df8f6a242d8a12d116cf7e75da97403a0c54dd01c6e1", null ]
+    ] ],
+    [ "connect_type", "db/dff/group___enumerations.html#ga24342abaef7334f383d13cea6b512be0", [
+      [ "BY_COORD", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a799ca49b4e9a37135bbcbb368d959fee", null ],
+      [ "BY_LINE_START", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0ae718bcfd03900f443d5017aef72edeae", null ],
+      [ "BY_LINE_END", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a1681bfe7e96c363ac2de10d1bd69d3f5", null ],
+      [ "BY_COORD_GO", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0ad37e22ea92b4b22ccebf893df0344588", null ],
+      [ "BY_LINE_START_GO", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0adf2b2fc2654b3132bbe4814f5df5ee54", null ],
+      [ "BY_LINE_END_GO", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a5d0694029ee444f45b075e5d92e3f53f", null ],
+      [ "BY_M_FUNC_COUNT", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0ab368d2f227a42c629fd3b915121cc148", null ],
+      [ "BY_M_FUNC_COUNT_REL", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a1b4431b39de7015b45f0af7cd471de39", null ],
+      [ "BY_GCODE_INDEX", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0adb42aeb36dc23247b74d9b87e9adbbc9", null ],
+      [ "BY_GCODE_INDEX_ACTUAL_COORD", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a10deac6a3af356d566dbbf07da3a45cf", null ],
+      [ "BY_GCODE_INDEX_END", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a4f4a3c7bae4cecbf814a2f6431026d83", null ],
+      [ "BY_COORD_GO_BUFFERED", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a7cebba91072ae86e694716b2d1dc4645", null ],
+      [ "BY_LINE_START_GO_BUFFERED", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a98a7ed3b4c7402cc521b2f535bb3e57f", null ],
+      [ "BY_LINE_END_GO_BUFFERED", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0a99c9a75592661f3b684a9e654a8e03d3", null ],
+      [ "BY_GCODE_INDEX_ACTUAL_COORD_GO_BUFFERED", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0aef2eaa238700f97340ce8e14c31e557c", null ],
+      [ "BY_COORD_ON_TRAJECTORY_WITH_GCODE_INDEX_GO_BUFFERED", "db/dff/group___enumerations.html#gga24342abaef7334f383d13cea6b512be0accb136432f82cccde6952ba93931a879", null ]
+    ] ],
+    [ "reset_status_cnc", "db/dff/group___enumerations.html#ga1d4c4c51e60ebdbb1378ed5f7e40a0c7", [
+      [ "TO_INVALID_00", "db/dff/group___enumerations.html#gga1d4c4c51e60ebdbb1378ed5f7e40a0c7a445ba311bbb4bd30c71104fc782a84de", null ],
+      [ "TO_OUT_OF_TYRAJECTORY_01", "db/dff/group___enumerations.html#gga1d4c4c51e60ebdbb1378ed5f7e40a0c7a04f79f8bfafde4cd78c0455c2d0211c5", null ]
+    ] ],
+    [ "status_after_connect", "db/dff/group___enumerations.html#ga905061e05bc9e65b4bc679d70aa6f1da", [
+      [ "KEEP_00", "db/dff/group___enumerations.html#gga905061e05bc9e65b4bc679d70aa6f1daa5ce6d156cafad4e971cd87e19d6a3d44", null ],
+      [ "FORCE_OUT_OF_TRAJECTORY_02", "db/dff/group___enumerations.html#gga905061e05bc9e65b4bc679d70aa6f1daae4405089f0f41f69ae5850e4f36c0d8f", null ]
+    ] ]
+];
