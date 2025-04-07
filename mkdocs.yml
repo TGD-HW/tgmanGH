@@ -129,6 +129,7 @@ plugins:
                 Obecné: General
                 TIA portál: TIA portal
                 Interpolátor: Interpolator
+                Programátorská příručka: Programmers manual
                 Schémata kabelů: Cable connections
                 Nastavení parametrů: Parameter settings
                 Firmware: Firmware
@@ -538,6 +539,7 @@ nav:
                 - Hardware: 'Manual/CZ/TGM/TGMotion/md/HW.md'
                 - Interpolátor: 'Manual/CZ/TGM/TGMotion/md/interpolator.md'
                 - Osciloskop: 'Manual/CZ/TGM/TGMotion/md/osc.md'
+                - Programátorská příručka: 'tgm502/html/index.html'
                 # - Skupina servo: 'Manual/CZ/TGM/TGMotion/md/Gservo.md'   
                 # - Skupina IO: 'Manual/CZ/TGM/TGMotion/md/Gio.md'
                 # - Control Observer: 'Manual/CZ/TGM/TGMotion/md/CO.md'

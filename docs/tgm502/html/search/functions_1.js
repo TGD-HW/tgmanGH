@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['change_5fconnection_1398',['Change_Connection',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a131df3809833fe8bc1fda8e575f2c6e1',1,'CTGM_COMM_INT_5']]],
+  ['close_5fconnection_1399',['Close_Connection',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a6ea52f020d53a9ef87fceb53c59e58b3',1,'CTGM_COMM_INT_5']]],
+  ['close_5fconnections_5finfo_5fwin_1400',['Close_Connections_Info_Win',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#ab8570078a55e29ed79c803b02d4e9b9e',1,'CTGM_COMM_INT_5']]],
+  ['clr_5fbit_5fi32_1401',['Clr_Bit_I32',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a00c60afc444c0b05a68a74474ce9dce6',1,'CTGM_COMM_INT_5']]],
+  ['clr_5fbit_5fi32_5fdirect_1402',['Clr_Bit_I32_DIRECT',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a45822d19c83b381c3ec7c4418ca231ee',1,'CTGM_COMM_INT_5']]],
+  ['clr_5fbit_5fi64_1403',['Clr_Bit_I64',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a67afa79489769e8640b6f335b9467356',1,'CTGM_COMM_INT_5']]],
+  ['clr_5fbit_5fi64_5fdirect_1404',['Clr_Bit_I64_DIRECT',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a9c0627c2893b06ef5ec226e384e92919',1,'CTGM_COMM_INT_5']]],
+  ['cnc_5fcalc_5ffinish_1405',['CNC_Calc_Finish',['../d9/dee/group___c_n_c_calc_functions.html#gae480557637c56aee3291811699ca5292',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fget_5fcompatibility_5fids_1406',['CNC_Calc_Get_Compatibility_IDs',['../d9/dee/group___c_n_c_calc_functions.html#gaa65c0abda6dd16fa99c8ff04bcee11f6',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fget_5fstructures_5fsize_1407',['CNC_Calc_Get_Structures_Size',['../d9/dee/group___c_n_c_calc_functions.html#ga456dd52f47f4ec26c626b2145ab90e4b',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fgfunc_1408',['CNC_Calc_GFunc',['../d9/dee/group___c_n_c_calc_functions.html#ga44f29786f520df07f0b3418c2fc2429b',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fload_1409',['CNC_Calc_Load',['../d9/dee/group___c_n_c_calc_functions.html#ga7b8f5fd0eb0a6ea1140894fde87af2dc',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fmfunc_1410',['CNC_Calc_MFunc',['../d9/dee/group___c_n_c_calc_functions.html#gafb32b0f1151c6d7bafe47507b6039dcf',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5fstart_1411',['CNC_Calc_Start',['../d9/dee/group___c_n_c_calc_functions.html#ga5787fa773df17d457377c7c1bc8dc60f',1,'tgm_cnc.h']]],
+  ['cnc_5fcalc_5funload_1412',['CNC_Calc_Unload',['../d9/dee/group___c_n_c_calc_functions.html#gad7ecb66b80f9664eefafae131eeb11a2',1,'tgm_cnc.h']]],
+  ['compatibilitytoint_1413',['compatibilityToInt',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a1ac9510baae09392570bb4158bcb4f74',1,'CTGM_COMM_INT_5']]],
+  ['connectedmemorytoint_1414',['connectedMemoryToInt',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#af40a9f40de299220bb9f1729e7a7863f',1,'CTGM_COMM_INT_5']]],
+  ['copyonlyvalidvalues_1415',['CopyOnlyValidValues',['../d9/db6/structcnc_1_1_p10_d_o_u_b_l_e.html#a032a51e383f35d28e5be01a86d3f5497',1,'cnc::P10DOUBLE']]],
+  ['copyvaluestoinvalidmembers_1416',['CopyValuesToInvalidMembers',['../d9/db6/structcnc_1_1_p10_d_o_u_b_l_e.html#a9773c7ac91e1dc22ea00b8da4cff1401',1,'cnc::P10DOUBLE']]],
+  ['countof_1417',['countof',['../d2/da5/tgm_8h.html#ad6f5dc599d253be18139658e36107046',1,'tgm.h']]],
+  ['create_5finterface_5f2_1418',['Create_Interface_2',['../d4/dda/class_c_t_g_m___c_o_m_m___i_n_t__5.html#a2d7b60d37c80fc7da520226bf4a0e053',1,'CTGM_COMM_INT_5']]],
+  ['crossingaccuracy_1419',['crossingAccuracy',['../dc/d05/structcnc_1_1_g_c_o_d_e___p_a_r_a_m_e_t_e_r_s.html#a3cb59e315d09948c41c8ace5ec3616f3',1,'cnc::GCODE_PARAMETERS']]]
+];
