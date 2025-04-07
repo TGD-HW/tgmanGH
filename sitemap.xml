@@ -575,13 +575,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGS/TGS-560-50_100/md/schematic.html"/>
     </url>
     <url>
-        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/FWmap/md/FW.html</loc>
-        <lastmod>2025-04-07</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/FWmap/md/FW.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/FWmap/md/FW.html"/>
-    </url>
-    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGZ-D-320-5_10/md/description.html</loc>
         <lastmod>2025-04-07</lastmod>
         <changefreq>daily</changefreq>
@@ -2227,13 +2220,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGZ_SW/SD/md/SD.html"/>
     </url>
     <url>
-        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGdevices/md/FW.html</loc>
-        <lastmod>2025-04-07</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGdevices/md/FW.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGdevices/md/FW.html"/>
-    </url>
-    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/FW.html</loc>
         <lastmod>2025-04-07</lastmod>
         <changefreq>daily</changefreq>
@@ -3464,13 +3450,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGS/TGS-560-50_100/md/schematic.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGS/TGS-560-50_100/md/schematic.html"/>
-    </url>
-    <url>
-        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/FWmap/md/FW.html</loc>
-        <lastmod>2025-04-07</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/FWmap/md/FW.html"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/FWmap/md/FW.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGZ-D-320-5_10/md/description.html</loc>
@@ -5116,13 +5095,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGZ_SW/SD/md/SD.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGZ_SW/SD/md/SD.html"/>
-    </url>
-    <url>
-        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGdevices/md/FW.html</loc>
-        <lastmod>2025-04-07</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGdevices/md/FW.html"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGdevices/md/FW.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/FW.html</loc>
