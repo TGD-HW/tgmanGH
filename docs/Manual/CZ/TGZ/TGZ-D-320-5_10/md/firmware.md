@@ -1,4 +1,4 @@
 --8<-- "md/FW.md"
 
 ## Ke stažení
-Poslední firmware je k dispozici [na webu TG Drives v sekci "Firmware"](https://www.tgdrives.cz/cs/produkty/servozesilovace/685#firmwaresection).
+Poslední firmware je k dispozici [na webu TG Drives v sekci "Firmware"](https://www.tgdrives.cz/cs/produkty/servozesilovace/685#firmwareSection).
