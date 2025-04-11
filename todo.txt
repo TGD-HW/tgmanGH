@@ -1,7 +1,5 @@
-Honza profinet check případně přijeb
-
-
 štěpán má dodat nové obr viz teams.
+C:\Users\Public\Documents\tgmanGH\docs\Manual\CZ\TGZ\TGZ-S-48-100_250RI\img popis konektorů aktual
 
 u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci
 

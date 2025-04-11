@@ -1,8 +1,8 @@
 ##3D view
-![3D view IO side](../img/IOside.svg){: style="width:85%;" }
+![3D view IO side](../img/IOside.en.webp){: style="width:80%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.svg){: style="width:85%;" }
+![3D view FB side](../img/MotSide.en.webp){: style="width:80%;" }
 
 ##Connectors
 ___

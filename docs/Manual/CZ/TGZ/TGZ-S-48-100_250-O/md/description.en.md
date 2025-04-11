@@ -1,21 +1,21 @@
 ##3D view
-![TGZ-S-48-100/250 Feedback side](../img/MotSide.svg){: style="width:80%;" }
+![3D view IO side](../img/IOside.en.webp){: style="width:80%;" }
 <br>
 <br>
-![TGZ-S-48-100/250 IO side](../img/IOside.svg){: style="width:65%;" }
+![3D view FB side](../img/MotSide.en.webp){: style="width:80%;" }
 
 ##Connectors
 ___
 ### EtherNET/EtherCAT side view
 ___
 
-![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
+![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:60%;" }
 
 ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -74,7 +74,7 @@ ___
 -   **X9 - MicroSD card**
 
     ---
-![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
+	![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -127,7 +127,7 @@ ___
 ### Feedback side view
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -187,64 +187,25 @@ ___
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
+-   **X0 - Main terminal block**
+
+    ---
+	
+	Front view
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250Oterm.webp){: style="width:50%; transform: rotate(270deg);" }
+	
+
+-    Main screw terminal
+
+    ---
+
+	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
+	
 </div>
 
-<div class="grid cards" markdown>
 
--   **P7 - Static brake**
+___
+### Motor output view
+___
 
-    ---
-	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
-
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P7_BR_4pin_Microfit.en.md"
-	
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.
-		
--   **P8 - Static brake - additional connector**
-
-    ---
-	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
-
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P8_BR_4pin_Microfit.en.md"
-	
-	!!! note "P8 connector"
-	
-		This connector does not connect for standard use of the single axis servo amplifier.
-	
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.
-		
--   **P3 - External temperature sensor PT1000**
-
-    ---
-	
-	![External temperature sensor](../../../../source/img/436500215.svg){: style="width:60%;" }
-
--    Molex Micro-Fit 3.0 - 436500215
-
-	---
-
-	--8<-- "md/P3_Term_2pin_Microfit.en.md"
-	
-	!!! note "Polarity"
-	
-		The PT1000 temperature sensor does not have a specified polarity.
-	
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.		
-
-</div>
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:60%;" }

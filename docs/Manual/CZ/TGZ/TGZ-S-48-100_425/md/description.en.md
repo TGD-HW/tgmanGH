@@ -1,8 +1,8 @@
 ##3D view
-![TGZ-S-48-100/425 Feedback side](../img/MotSide.svg){: style="width:80%;" }
+![3D view IO side](../img/IOside.en.webp){: style="width:80%;" }
 <br>
 <br>
-![TGZ-S-48-100/425 IO side](../img/IOside.svg){: style="width:65%;" }
+![3D view FB side](../img/MotSide.en.webp){: style="width:80%;" }
 
 ##Connectors
 ___
