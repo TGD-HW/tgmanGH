@@ -50,7 +50,7 @@ def excel_to_markdown_table(file_path, sheet_name, range_start, range_end):
             markdown_table += "| " + " | ".join(str(cell) for cell in row_data) + " |\n"
 
     return markdown_table
-    
+
 
 def nonBold(file_path, sheet_name, range_start, range_end):
     # Load the Excel workbook
@@ -99,8 +99,8 @@ def nonBold(file_path, sheet_name, range_start, range_end):
             markdown_table += "| " + " | ".join(str(cell) for cell in row_data) + " |\n"
 
     return markdown_table
-    
-    
+
+
 
 def connectors(file_path, sheet_name, range_start, range_end):
     # Load the Excel workbook
@@ -156,7 +156,7 @@ def connectors(file_path, sheet_name, range_start, range_end):
     return markdown_table
 
 
-  
+
 def save_markdown_table(markdown_table, output_file):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(markdown_table)
@@ -167,10 +167,13 @@ def save_markdown_table(markdown_table, output_file):
 def save_markdown_from_sheets():
     for filename in os.listdir("."):
         if filename.endswith(".xlsx"):
+            print(f"Processing Excel file: {filename}")  # Verbose output for file
             wb = load_workbook(filename=filename, data_only=True)
             for sheet_name in wb.sheetnames:
+                print(f"  Processing sheet: {sheet_name}")  # Verbose output for sheet
                 # Skip sheets named "rozcestnik" and "conns"
                 if sheet_name in ["rozcestnik", "conns"]:
+                    print(f"    Skipping sheet: {sheet_name}")
                     continue
 
                 # Determine the function and output path based on the file pattern
@@ -208,6 +211,7 @@ def save_markdown_from_sheets():
                 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
                 # Save the markdown table
+                print(f"    Saving Markdown to: {output_file}") # Verbose output for saving
                 save_markdown_table(markdown_table, output_file)
 
 # Call the function

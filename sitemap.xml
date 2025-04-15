@@ -2360,6 +2360,20 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/STO.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0a_48-100-xyz.html</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0a_48-100-xyz.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X0a_48-100-xyz.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0b_48-100-xyz.html</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0b_48-100-xyz.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X0b_48-100-xyz.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X10_CAN_4pin_B2CF.html</loc>
         <lastmod>2025-04-15</lastmod>
         <changefreq>daily</changefreq>
@@ -5311,12 +5325,14 @@
         <lastmod>2025-04-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X0a_48-100-xyz.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0a_48-100-xyz.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X0b_48-100-xyz.html</loc>
         <lastmod>2025-04-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X0b_48-100-xyz.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X0b_48-100-xyz.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X10_CAN_4pin_B2CF.html</loc>
