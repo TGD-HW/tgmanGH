@@ -9,37 +9,16 @@ ___
 ### EtherNET/EtherCAT side view
 ___
 
-![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:60%;" }
+![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:70%;" }
 
 ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
--   **X1 - Control supply voltage**
-
-    ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
-
--    Molex Micro-Fit 3.0 - 436450500
-
-	---
-
-	--8<-- "md/X1_24V_5pin_Microfit.en.md"
-	
-	!!! warning "Warning"
-		
-		Pin 2 of connector X1 - "+24 VDC output" must be connected externally to pin 2 of connector P7 (power supply for static brake diagnostics).
-		
-		Note the orientation of the connector - locking lever on top = pin 1 on the right.
-		
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.
-		
 -   **X8 - Digital I/O, analog inputs**
 
     ---
@@ -124,10 +103,10 @@ ___
 
    
 ___
-### Feedback side view
+### Feedback view
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -186,26 +165,49 @@ ___
 	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+</div>
+
+___
+### Terminals view
+___
 	
--   **X0 - Main terminal block**
+![Terminals](../../../../source/img/TGZ-S-48-100_250-O_X0ab.webp){: style="width:60%;" }
+
+<div class="grid cards" markdown>
+
+-   **X0a - Power terminal block**
 
     ---
 	
-	Front view
-	![FB1 connector](../../../../source/img/TGZ-S-48-100_250Oterm.webp){: style="width:50%; transform: rotate(270deg);" }
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0a.webp){: style="width:80%;" }
 	
 
--    Main screw terminal
+-   Motor screw terminals
 
     ---
 
-	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
+	--8<-- "md/X0a_48-100-xyz.en.md"
+	
+-   **X0b - Signal terminal block**
+
+    ---
+	
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
+	
+
+-   Signal screw terminals
+
+    ---
+
+	--8<-- "md/X0b_48-100-xyz.en.md"
 	
 </div>
 
 
 ___
-### Motor output view
+### Power connection side view
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:70%;" }
+
+There is only internal connection from the PCB pressfit into the DIN terminals. The connections are part of the supplied device as well as other signal connections to X0b.

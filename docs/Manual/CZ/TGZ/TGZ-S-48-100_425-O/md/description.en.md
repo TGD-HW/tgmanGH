@@ -9,37 +9,16 @@ ___
 ### EtherNET/EtherCAT side view
 ___
 
-![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
+![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:70%;" }
 
 ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
--   **X1 - Control supply voltage**
-
-    ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
-
--    Molex Micro-Fit 3.0 - 436450500
-
-	---
-
-	--8<-- "md/X1_24V_5pin_Microfit.en.md"
-	
-	!!! warning "Warning"
-		
-		Pin 2 of connector X1 - "+24 VDC output" must be connected externally to pin 2 of connector P7 (power supply for static brake diagnostics).
-		
-		Note the orientation of the connector - locking lever on top = pin 1 on the right.
-		
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.
-		
 -   **X8 - Digital I/O, analog inputs**
 
     ---
@@ -74,7 +53,7 @@ ___
 -   **X9 - MicroSD card**
 
     ---
-![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
+	![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -124,10 +103,10 @@ ___
 
    
 ___
-### Feedback side view
+### Feedback view
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -186,65 +165,49 @@ ___
 	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
-	
 </div>
+
+___
+### Terminals view
+___
+	
+![Terminals](../../../../source/img/TGZ-S-48-100_250-O_X0ab.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
--   **P7 - Static brake**
+-   **X0a - Power terminal block**
 
     ---
 	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
-
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P7_BR_4pin_Microfit.en.md"
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0a.webp){: style="width:80%;" }
 	
-	!!! info "Connector crimps"
+
+-   Motor screw terminals
+
+    ---
+
+	--8<-- "md/X0a_48-100-xyz.en.md"
 	
-		Match the type of crimps to the selected wire cross section.
-		
--   **P8 - Static brake - additional connector**
+-   **X0b - Signal terminal block**
 
     ---
 	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
+	
 
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P8_BR_4pin_Microfit.en.md"
-	
-	!!! note "P8 connector"
-	
-		This connector does not connect for standard use of the single axis servo amplifier.
-	
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.
-		
--   **P3 - External temperature sensor PT1000**
+-   Signal screw terminals
 
     ---
-	
-	![External temperature sensor](../../../../source/img/436500215.svg){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 436500215
-
-	---
-
-	--8<-- "md/P3_Term_2pin_Microfit.en.md"
+	--8<-- "md/X0b_48-100-xyz.en.md"
 	
-	!!! note "Polarity"
-	
-		The PT1000 temperature sensor does not have a specified polarity.
-	
-	!!! info "Connector crimps"
-	
-		Match the type of crimps to the selected wire cross section.		
-
 </div>
+
+
+___
+### Power connection side view
+___
+
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:70%;" }
+
+There is only internal connection from the PCB pressfit into the DIN terminals. The connections are part of the supplied device as well as other signal connections to X0b.
