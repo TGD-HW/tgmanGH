@@ -201,6 +201,11 @@ ___
 	
 	!!! info "Max. AWG"
 		Maximum wire cross section possible can be up to 4 AWG when using fine stranded wire without a ferrule.
+		
+	!!! warning "Regenerative braking"
+	
+		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
+		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
 	
 -   **X3 - Motor connector - axis 1**
 

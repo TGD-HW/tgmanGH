@@ -206,6 +206,11 @@ ___
 	!!! info "Poznámka"
 	
 		Při použití jemně laněného vodiče (licna) lze použít průřez až&nbsp;25&nbsp;mm<sup>2</sup>
+		
+	!!! warning "Regenerativní brzdění"
+	
+		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
+		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
 	
 -   **X3 - Motorový konektor - osa 1**
 

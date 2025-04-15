@@ -36,6 +36,11 @@ ___
     ---
 
 	--8<-- "md/X2_48_DC_1778065.md"
+	
+	!!! warning "Regenerativní brzdění"
+	
+		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
+		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
 
 </div>
 
