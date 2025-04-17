@@ -293,6 +293,11 @@ ___
 
 !!! info "délka přívodních vodičů"
 	Výchozí dodávaná délka přívodních (DC) vodičů je 1 m.
+	
+!!! warning "Regenerativní brzdění"
+	
+	V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
+	je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
 
 <div class="grid cards" markdown>
 

@@ -39,7 +39,7 @@ ___
 	!!! info "Connector crimps"
 	
 		Match the type of crimps to the selected wire cross section.
-		
+
 -   **X8 - Digital I/O, analog inputs**
 
     ---
@@ -134,8 +134,14 @@ ___
 -   **X5 - External encoder (FBE)**
 
     ---
+	Cable side view 	
+	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
 	
-	![FBE connector](../../../../source/img/1277320000.svg){: style="width:80%;" }
+	3D view - cable side   
+	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
+	
+	Front view (TGZ side)   
+	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
@@ -194,6 +200,10 @@ ___
 
 ![PCB connections](../../../../source/img/TGZ-S-48-100_250RI_brd.en.webp){: style="width:70%;" }
 
+	!!! warning "Regenerative braking"
+	
+		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
+		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
 
 <div class="grid cards" markdown>
 

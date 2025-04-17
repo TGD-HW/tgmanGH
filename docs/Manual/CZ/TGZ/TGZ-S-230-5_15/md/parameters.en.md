@@ -23,5 +23,5 @@
 | Motor connector | 1 x 6pin WEIDMÜLLER  SLS 5.08/06/180FI  |
 | Feedback connector | 1 x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |
 | External encoder | 1 x 12pin WEIDMÜLLER  B2CF 3.50/12/180 |
-| **EMI FILTR** |
+| **EMI FILTER** |
 | Recommended type | NLMO62P72-04 or NLA062P72-04   |

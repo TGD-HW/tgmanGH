@@ -9,7 +9,7 @@ ___
 ### View of the ENET/ECAT side
 ___
 
-![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-230-5_15_enetCon.png){: style="width:60%;" }
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_enetCon.png){: style="width:60%;" }
 
 
 <div class="grid cards" markdown>
@@ -17,81 +17,118 @@ ___
 -   **X1 - Control supply voltage**
 
     ---
-	![ENET/ECAT/LogicPWR connectors](../../../../source/img/1940760000.svg){: style="width:70%;" }
+	Housing back side view (wire side):  
+	
+	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	
+	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
 
--    Weidmüller BCZ 3.81/05/180 SN OR BX
+-    Weidmüller BCZ 3.81/05/180F SN OR BX
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.en.md"
+	--8<-- "md/X1_24V_5pin_BCZ.md"
+	
+	!!! warning "EMI suppression"
+	
+		Please pay attention to the installation of the suppression toroidal core according to the [instructions](../../../../source/md/logicPWR.en.md#LogicPWR_EMI).
 
+-   **X11 - Feedback 3 - RS422**
+
+    ---
+    ![Molex ClikMate 5031491000](../../../../source/img/5031491000.svg){: style="width:70%;" }
+	
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+
+    --8<-- "md/X11_FB3_10pin_ClikMate.en.md"
+	
+	!!! warning "Warning"	
+		When using this type of feedback, make sure you are using the appropriate TGZ firmware that supports these features.
+
+-   **X12 - Ethernet UDP - service**
+
+    ---
+    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
+	
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
+
+-   **X13 - EtherCAT 2 - Fieldbus out**
+
+    ---
+    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
+	
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
+
+-   **X14 - EtherCAT 1 - Fieldbus in**
+
+    ---
+    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
+	
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+
+    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
+	
 </div>
 
 ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-230-5_15_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_IO.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
--   **X8 - Digital I/O, analog inputs**
+-   **X7 - Digital inputs + Analog inputs**
 
     ---
-	Cable side view   
-	
-	![X8 pinout](../../../../source/img/1277370000.svg){: style="width:100%;" }
-	3D view - cable side   
-	
-	![X8 pinout 3D](../../../../source/img/1277370000_1.svg){: style="width:100%;" }
-	Front view (TGZ side)   
-	
-	![X8 pinout front](../../../../source/img/1277370000_2.svg){: style="width:100%;" }
+	![DITTL + AIN + PT1000](../../../../source/img/5031491200.svg){: style="width:70%;" }
 
-	Please see details about
-	[digital inputs DI1-8](../../../../source/md/commonHW_DI.md#commonDI1-8), 
-	[digital outputs DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) and
-	[analog inputs AI1-2](../../../../source/md/commonHW_AI.md#commonAI1-2) 
-	in the [Common hardware section](../../../../source/md/commonHW_DI.md#commonDI1-8).
-	
-
--    Weidmüller B2CF 3.50/22/180 SN OR BX
+-    Molex ClikMate 5031491200 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
 	---
 
-	--8<-- "md/X8_IO_22pin_B2CF.en.md"
+	--8<-- "md/X7_AIN_12pin_ClikMate.en.md"
 	
-	!!! warning "Warning"	
-	
-		For proper operation of the DI(1-6) it is necessary to supply at least one of the VCC DO (pin 11 and 12).
-		Inputs DI7,8 are independent of the DO VCC supply voltage and work correctly even without it.
-	
--   **X9 - MicroSD card**
+	!!! warning "Warning"
+		Direct PT1000 inputs of X7 pins 3-6 are only available on control board from batch supplied after 06-2024 onwards.
+		Older versions of the device have standard AIN1, AIN2 and AIN3 on pins 1-6 of X7.
+		For further details of the previous device properties please see older version of this manual.
+
+-   **X8 - Digital I/O**
 
     ---
-![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
+	![ENET/ECAT/LogicPWR connectors](../../../../source/img/5031491800.svg){: style="width:100%;" }
 
--    Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
+-    Molex ClikMate 5031491800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+
+	---
+
+	--8<-- "md/X8_DIO_18pin_ClikMate.en.md"
+		
+-   **X9 - MicroSD slot**
+
+    ---
+	![uSD card connector](../../../../source/img/uSD.png){: style="width:40%;" }
+
+-   It is not primarily recommended to use the microSD slot in devices where significant vibrations are expected.
+	SD card is not included with the "RI" version of servoamplifiers.
+	For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
 
 -   **X10 - CAN**
 
     ---
-	Cable side view   
-	![CAN connector](../../../../source/img/1277270000.svg){: style="width:25%;" }
 	
-	3D view - cable side   
-	![CAN connector](../../../../source/img/1277270000_1.svg){: style="width:45%;" }
-	
-	Front view (TGZ side)   
-	![CAN connector](../../../../source/img/1277270000_2.svg){: style="width:35%;" }
+	![CAN connector](../../../../source/img/5031490800.svg){: style="width:70%;" }
 
--    Weidmüller B2CF 3.50/04/180 SN OR BX
+-    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
     ---
 
-	--8<-- "md/X10_CAN_4pin_B2CF.en.md"
-	
-	For more information on the HW version of the CAN bus, see [CAN bus](../../../../source/md/commonHW_CAN.md#commonCAN).
+	--8<-- "md/X10_CAN_8pin_ClikMate.en.md"
 	
 -	**LED display**
 
@@ -122,77 +159,66 @@ ___
 ### View of the FB/motor side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-230-5_15_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_FBconns.png){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
--   **X5 - External encoder (FBE)**
+-   **X4 - External encoder (FBE)**
 
-    ---
-	Cable side view 	
-	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
+	---
 	
-	3D view - cable side   
-	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
-	
-	Front view (TGZ side)   
-	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
+	![FBE connector](../../../../source/img/5031491200.svg){: style="width:80%;" }
 
--    Weidmüller B2CF 3.50/12/180 SN OR BX
+-    Molex ClikMate 5031491200 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
 	---
 
-	--8<-- "md/X5_FBE_12pin_B2CF.en.md"
-	
-	For more information on external feedback, see [FBE Feedback](../../../../source/md/commonHW_FBE.md#commonFBE).
+	--8<-- "md/X4_FBE_12pin_ClikMate.en.md"
 
--   **X6 - Feedback axis 1**
+-   **X5 - Feedback axis 1**
 
     ---
 	
-	Cable side view 	
-	![FB1 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
-	
-	3D view - cable side   
-	![FB1 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
-	
-	Front view (TGZ side)   
-	![FB1 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
+	![FB1 connector](../../../../source/img/5031491000.svg){: style="width:80%;" }
 
--    Weidmüller B2CF 3.50/08/180 SN OR BX
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
     ---
 
-	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
+	--8<-- "md/X5_FB1_10pin_ClikMate.en.md"
 	
 	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
--   **X7 - Feedback axis 2**
+	!!! warning "Warning"
+		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
+		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
+		Also check whether you have correct firmware uploaded in the device.
+	
+-   **X6 - Feedback axis 2**
 
     ---
 	
-	Cable side view 	
-	![FB2 connector](../../../../source/img/1277290000.svg){: style="width:50%;" }
-	
-	3D view - cable side   
-	![FB2 connector](../../../../source/img/1277290000_1.svg){: style="width:50%;" }
-	
-	Front view (TGZ side)   
-	![FB2 connector](../../../../source/img/1277290000_2.svg){: style="width:50%;" }
+	![FB2 connector](../../../../source/img/5031491000.svg){: style="width:80%;" }
 
--    Weidmüller B2CF 3.50/08/180 SN OR BX
+-    Molex ClikMate 5031491000 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
     ---
 
-	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
+	--8<-- "md/X6_FB2_10pin_ClikMate.en.md"
 	
 	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
+	!!! warning "Warning"
+		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
+		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
+		Also check whether you have correct firmware uploaded in the device.
+		
 	!!! note "Note"
 	
-		Servoamplifier TGZ-S-230-5/15 is single axis version. The X7 connector is not normally connected.
+		Servoamplifier TGZ-S-230-5/15-UNI-RI is single axis version.
+		The X6 connector is not normally connected.
 	
--   **X4 - Motor connector**
+-   **X3.1 - Motor connector**
 
     ---
 	
@@ -208,15 +234,18 @@ ___
 
     ---
 	
-	![PWR connector](../../../../source/img/1943660000.svg){: style="width:100%;" }
+	Wires side view
+	![PWR connector backview](../../../../source/img/1944170000.webp){: style="width:100%;" }
+	TGZ side view
+	![PWR connector front](../../../../source/img/1944170000_1.webp){: style="width:100%;" }	
 	
 	The X2 connector comes with jumper wire prepared for use without the external chopper resistor.
 	
-	![PWR connector](../../../../source/img/1943660000jumper.svg){: style="width:100%;" }   
+	![PWR connector jumper](../../../../source/img/1944170000jumper.webp){: style="width:100%;" }   
 	
 	If an external chopper (brake) resistor is used, the jumper wire must be removed and the resistor connected according to the [schematic](schematic.en.md).		
 
--    Weidmüller BLZP 5.08HC/10/180 SN OR BX
+-    Weidmüller BLZP 5.08HC/10/180F SN OR BX
 
     ---
 
@@ -225,4 +254,4 @@ ___
 
 </div>
 
-
+[^1]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf)

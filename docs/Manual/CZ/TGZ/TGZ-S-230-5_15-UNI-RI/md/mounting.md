@@ -1,9 +1,11 @@
 # Montáž zařízení
 ## Uchycení
-L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.
+L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. 
+<!--Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.
 
 ![TGZ-S-230-5/15 Mounting Front](../img/mounting1.png){: style="width:80%;" }
 ![TGZ-S-230-5/15 Mounting Top](../img/mounting2.png){: style="width:85%;" }
+-->
 
 --8<-- "md/mechMounting.md"
 

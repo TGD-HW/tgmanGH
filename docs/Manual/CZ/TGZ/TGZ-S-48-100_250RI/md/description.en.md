@@ -292,7 +292,12 @@ ___
 | DC bus (-DC, +DC) – 8 cables [^5]  | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
 
 !!! info "DC bus wire length"
-	Default supplied DCbus wires length is 1 m. 
+	Default supplied DCbus wires length is 1 m.
+	
+!!! warning "Regenerative braking"
+
+	In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
+	it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.	
 
 
 

@@ -199,6 +199,11 @@ ___
 
 	--8<-- "md/X3_DCbus_2pin_pressfit.md"
 	
+	!!! warning "Regenerativní brzdění"
+	
+		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
+		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
+		
 -   **X3 - Připojení motoru**
 
     ---

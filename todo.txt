@@ -1,6 +1,0 @@
-u 48V verzí přidat všude note, že pokud není napájeno z baterky, tak je potřeba řešit rekuperaci - nakopírovat z D-48, kde už to je CZ i EN
-
-prozkoumat tags, vyzkoušet:
-https://squidfunk.github.io/mkdocs-material/plugins/tags/#config.listings_sort_by-sort-by-item-title
-
-prozkoumat analytics

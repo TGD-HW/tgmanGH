@@ -1,8 +1,8 @@
 ##3D náhled
-![TGZ-S-48-100/250 Feedback side](../img/MotSide.svg){: style="width:80%;" }
+![TGZ-S-48-100/300 Feedback side](../img/MotSide.svg){: style="width:80%;" }
 <br>
 <br>
-![TGZ-S-48-100/250 IO side](../img/IOside.svg){: style="width:65%;" }
+![TGZ-S-48-100/300 IO side](../img/IOside.svg){: style="width:65%;" }
 
 ##Konektory
 ___
@@ -133,8 +133,14 @@ ___
 -   **X5 - Externí enkodér (FBE)**
 
     ---
+	Pohled zezadu (strana kabelu) 	
+	![FBE connector](../../../../source/img/1277320000.svg){: style="width:60%;" }
 	
-	![FBE connector](../../../../source/img/1277320000.svg){: style="width:80%;" }
+	3D pohled zezadu   
+	![FBE connector](../../../../source/img/1277320000_1.svg){: style="width:60%;" }
+	
+	Pohled zepředu (strana TGZ)   
+	![FBE connector](../../../../source/img/1277320000_2.svg){: style="width:60%;" }	
 
 -    Weidmüller B2CF 3.50/12/180 SN OR BX
 
@@ -193,7 +199,11 @@ ___
 
 ![PCB connections](../../../../source/img/TGZ-S-48-100_250RI_brd.webp){: style="width:70%;" }
 
-
+	!!! warning "Regenerativní brzdění"
+	
+		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
+		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
+	
 <div class="grid cards" markdown>
 
 -   **P7 - Statická brzda**
