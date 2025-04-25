@@ -55,8 +55,6 @@ TGZ servoamplifiers can be controlled:
 - digital control via EtherCAT, CAN-bus (torque, speed, position profiles, etc.) and via Ethernet UDP protocol;
 - via user program (language C) – digital inputs, analog voltage, etc.
 
-
-
 ##Connectors
 ___
 ### View of the ENET/ECAT side

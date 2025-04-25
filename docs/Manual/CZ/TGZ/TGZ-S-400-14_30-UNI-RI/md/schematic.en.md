@@ -1,0 +1,1 @@
+![Example schematic](../img/schematic.webp){: style="width:100%;" }
