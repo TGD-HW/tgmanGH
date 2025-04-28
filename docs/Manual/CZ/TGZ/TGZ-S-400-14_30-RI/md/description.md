@@ -4,12 +4,60 @@
 <br>
 ![3D view motor side](../img/MotSide.svg){: style="width:70%;" }
 
+##Popis komunikace, vstupů/výstupů a ovládání:
+###Komunikační rozhraní
+- Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.
+- CAN bus protokol lze upravit podle požadavků zákazníka.
+- Ethernet 100/1000 Mb/s s volitelným protokolem, naprogramovaný v hradlovém poli a určený pro připojení rychlých průmyslových sběrnic pro řízení v reálném čase.
+  V současné době je toto rozhraní vybaveno protokolem EtherCAT (pouze pro standardní firmware); podle požadavků zákazníka lze upravit na jiný typ protokolu.
+- RS422 / RS485, přenos dat přes nepoužívané rozhraní zpětné vazby servomotoru.
+  Může být použit pro komunikaci se zařízeními založenými na RI RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
+  Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
+  
+###Vstupy / výstupy:
+Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
+Tyto vstupy a výstupy je možné ovládat pomocí uživatelského programu (jazyk C).
+Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
+
+| I/O     | Typ              | Počet | Hodnota                                            |
+|---------|------------------|--------|----------------------------------------------------|
+| vstup   | analogový        | 1      | 0-10 V                                             |
+| vstup   | termistor        | 2      | standard PT1000                                    |
+| vstup   | digitální        | 3      | 0-30 VDC (0-0,8 V low/2,4-30 V high)      |
+| vstup   | izolovaný digitální | 8   | 0-24 VDC (0-10 V low/13-24 V high), 20 mA      |
+| výstup  | izolovaný digitální | 6   | 5-24 VDC, 300 mA / max. výstup                     |
+
+Servozesilovač má čtyři zpětnovazební rozhraní, které mají široké využití.
+Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujících na principu RI RS422 nebo RS485.
+
+| Typ   | Standard              | Rozhraní                         | Příklady připojení možných zařízení                                                                                               |
+|-------|-----------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| FB1   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
+| FB2   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
+| FE[^1]   | RS422/RS485           | Hiperface DSL, EnDat 2.2, SSI, BISS | Absolutní magnetický / optický enkodér, inkrementální magnetický / optický enkodér s Hallovými senzory [^2], gyroskop              |
+| FB3[^1]  | 2 × full-duplex RS422 | -                                | Řídicí systém                                                                                                                     |
+
+[^1]: Tento typ pracuje pouze s upraveným firmwarem. Jeho použití se doporučuje vždy konzultovat s výrobcem.
+[^2]: Hallovy senzory musí být připojeny k digitálním vstupům pomocí speciálního převodníku úrovní, viz. [Převodník Hall-TGZ](../../../ETC/TGHall/md/description.md#TGhall_1).
+
+- Hiperface DSL - digitální komunikace, senzory jsou vyráběny s rozlišením 15 až 24 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
+  Tento typ zpětné vazby se používá pro motory s jediným konektorem nebo kabelem.
+- EnDat 2.2 - digitální komunikace, senzory jsou vyráběny s rozlišením 18 až 25 bitů na otáčku (vícerychlostní provedení - 4 096 otáček).
+- SSI - enkodéry se synchronním systémovým rozhraním.
+- BISS - senzory s protokolem BISS-C.
+
+###Řízení
+Servozesilovače TGZ je možno řídit:
+
+- digitální ovládání přes EtherCAT, CAN-bus (točivý moment, otáčky, polohové profily atd.) A přes Ethernet UDP protokol;
+- uživatelský program (jazyk C) - digitální vstupy, analogové napětí atd.
+
 ##Konektory
 ___
-### Strana komunikace/ethernet/ethercat
+### Strana komunikace
 ___
 
-![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_enetCon.png){: style="width:60%;" }
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-400-14_30-RI_enetCon.webp){: style="width:60%;" }
 
 
 <div class="grid cards" markdown>
@@ -54,31 +102,13 @@ ___
 
     --8<-- "md/X12_UDP_8pin_ClikMate.md"
 
--   **X13 - EtherCAT 2 - Fieldbus out**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
-
--   **X14 - EtherCAT 1 - Fieldbus in**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
-
 </div>
 
 ___
-### Strana CAN/IO/SD
+### Strana IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-400-14_30-RI_IO.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -118,18 +148,6 @@ ___
 	SD karta není u těchto verzí součástí dodávky.
 	Pro více informací ohledně SD karet navštivte sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
--   **X10 - CAN**
-
-    ---
-	
-	![CAN connector](../../../../source/img/5031490800.svg){: style="width:70%;" }
-
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    ---
-
-	--8<-- "md/X10_CAN_8pin_ClikMate.md"
-	
 -	**LED displej**
 
 	---
@@ -159,7 +177,7 @@ ___
 ### Strana FB/motor
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-400-14_30-RI_FBconns.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -211,40 +229,41 @@ ___
 
 	!!! note "Poznámka"
 	
-		Servozesilovač TGZ-S-230-5/15-UNI-RI je jednoosý. Konektor X6 se běžně nezapojuje.
+		Servozesilovač TGZ-S-400 je jednoosý. Konektor X6 se běžně nezapojuje.
 	
 -   **X3.1 - Motorový konektor**
 
     ---
 	
-	![Motor connector](../../../../source/img/1846250000.svg){: style="width:70%;" }
+	![Motor connector](../../../../source/img/1095720000.svg){: style="width:70%;" }
 
--    Weidmüller SLS 5.08/06/180FI SN OR BX
+-    Weidmüller BLZ 7.62HP/06/180F
 
     ---
 
 	--8<-- "md/X4_M1_6pin_SLS.md"
+
+	!!! warning "Orientace konektoru"
+	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.	
 	
 -   **X2 - Napájení silové části**
 
     ---
-	Pohled ze strany vodičů
-	![PWR connector backview](../../../../source/img/1944170000.webp){: style="width:100%;" }
-	Pohled zepředu - strana TGZ
-	![PWR connector front](../../../../source/img/1944170000_1.webp){: style="width:100%;" }	
+	
+	![PWR connector](../../../../source/img/1095780000.svg){: style="width:100%;" }
+	
+	Konektor X2 je standardně dodáván včetně propojovacích vodičů v konfiguraci pro použítí interního brzdného odporu.
+	
+	![PWR connector](../../../../source/img/1095780000jumper.svg){: style="width:100%;" }   
+	
+	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodiče a rezistor připojit dle [schématu](schematic.md).	
 
-	Konektor X2 je standardně dodáván včetně propojovaho vodiče v konfiguraci pro použítí bez brzdného odporu.
-	
-	![PWR connector jumper](../../../../source/img/1944170000jumper.webp){: style="width:100%;" }   
-	
-	V případě použití externího brzdného rezistoru je nutné odstranit propojovací vodič a rezistor připojit dle [schématu](schematic.md).
-	
-
--    Weidmüller BLZP 5.08HC/10/180F SN OR BX
+-    Weidmüller  BLZ 7.62HP/12/180F
 
     ---
 
-	--8<-- "md/X2_PWR_10pin_BLZP.md"
+	--8<-- "md/X2_PWR_12pin_BLZ.md"
 	
 
 </div>

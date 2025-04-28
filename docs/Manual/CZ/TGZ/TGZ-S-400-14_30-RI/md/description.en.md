@@ -54,10 +54,10 @@ TGZ servoamplifiers can be controlled:
 
 ##Connectors
 ___
-### View of the fieldbus side
+### View of the ethnernet side
 ___
 
-![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_enetCon.png){: style="width:60%;" }
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-400-14_30-RI_enetCon.webp){: style="width:60%;" }
 
 
 <div class="grid cards" markdown>
@@ -75,7 +75,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ.md"
+	--8<-- "md/X1_24V_5pin_BCZ.en.md"
 	
 	!!! warning "EMI suppression"
 	
@@ -98,35 +98,17 @@ ___
     ---
     ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
 	
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
-
--   **X13 - EtherCAT 2 - Fieldbus out**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
-
--   **X14 - EtherCAT 1 - Fieldbus in**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
+-    Mo	lex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
     --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 	
 </div>
 
 ___
-### View of the CAN/IO/SD Side
+### View of the IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-400-14_30-RI_IO.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -165,18 +147,6 @@ ___
 -   It is not primarily recommended to use the microSD slot in devices where significant vibrations are expected.
 	SD card is not included with the "RI" version of servoamplifiers.
 	For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
-
--   **X10 - CAN**
-
-    ---
-	
-	![CAN connector](../../../../source/img/5031490800.svg){: style="width:70%;" }
-
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
-
-    ---
-
-	--8<-- "md/X10_CAN_8pin_ClikMate.en.md"
 	
 -	**LED display**
 
@@ -207,7 +177,7 @@ ___
 ### View of the FB/motor side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-230-5_15-UNI-RI_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-400-14_30-RI_FBconns.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -263,41 +233,42 @@ ___
 		
 	!!! note "Note"
 	
-		Servoamplifier TGZ-S-230-5/15-UNI-RI is single axis version.
+		Servoamplifier TGZ-S-400 is single axis version.
 		The X6 connector is not normally connected.
 	
 -   **X3.1 - Motor connector**
 
     ---
 	
-	![Motor connector](../../../../source/img/1846250000.svg){: style="width:70%;" }
+	![Motor connector](../../../../source/img/1095720000.svg){: style="width:70%;" }
 
--    Weidmüller SLS 5.08/06/180FI SN OR BX
+-    Weidmüller BLZ 7.62HP/06/180F
 
     ---
 
 	--8<-- "md/X4_M1_6pin_SLS.en.md"
+
+	!!! warning "Connector orientation"
+	
+		Pay attention to the correct orientation of the connector when connecting the wiring.
 	
 -   **X2 - Power supply voltage**
 
     ---
 	
-	Wires side view
-	![PWR connector backview](../../../../source/img/1944170000.webp){: style="width:100%;" }
-	TGZ side view
-	![PWR connector front](../../../../source/img/1944170000_1.webp){: style="width:100%;" }	
+	![PWR connector](../../../../source/img/1095780000.svg){: style="width:100%;" }
 	
-	The X2 connector comes with jumper wire prepared for use without the external chopper resistor.
+	The X2 connector comes with jumper wires prepared for use with the internal chopper resistor.
 	
-	![PWR connector jumper](../../../../source/img/1944170000jumper.webp){: style="width:100%;" }   
+	![PWR connector](../../../../source/img/1095780000jumper.svg){: style="width:100%;" }   
 	
-	If an external chopper (brake) resistor is used, the jumper wire must be removed and the resistor connected according to the [schematic](schematic.en.md).		
+	If an external chopper (brake) resistor is used, the jumper wires must be removed and the resistor connected according to the [schematic](schematic.en.md).	
 
--    Weidmüller BLZP 5.08HC/10/180F SN OR BX
+-    Weidmüller  BLZ 7.62HP/12/180F
 
     ---
 
-	--8<-- "md/X2_PWR_10pin_BLZP.en.md"
+	--8<-- "md/X2_PWR_12pin_BLZ.en.md"
 	
 
 </div>
