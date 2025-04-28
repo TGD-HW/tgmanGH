@@ -2,7 +2,7 @@
 ![3D view IO side](../img/IOside.en.webp){: style="width:80%;" }
 <br>
 <br>
-![3D view FB side](../img/MotSide.en.webp){: style="width:80%;" }
+![3D view FB side](../img/MotSide.en.webp){: style="width:65%;" }
 
 ##Connectors
 ___

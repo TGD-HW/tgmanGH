@@ -1,15 +1,15 @@
 ##3D náhled
-![TGZ-S-48-100/250 Feedback side](../img/MotSide.svg){: style="width:80%;" }
+![TGZ-S-48-100/xyz Feedback side](../img/MotSide.webp){: style="width:80%;" }
 <br>
 <br>
-![TGZ-S-48-100/250 IO side](../img/IOside.svg){: style="width:65%;" }
+![TGZ-S-48-100/xyz IO side](../img/IOside.webp){: style="width:80%;" }
 
 ##Konektory
 ___
 ### Strana ethernet/ethercat
 ___
 
-![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
+![TGZ-S-48-100/xyz ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
 
 ___
 ### Strana CAN/IO/SD

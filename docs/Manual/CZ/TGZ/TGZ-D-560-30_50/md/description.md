@@ -2,7 +2,7 @@
 ![3D view IO side](../img/IOside.webp){: style="width:75%;" }
 <br>
 <br>
-![3D view FB side](../img/Motside.webp){: style="width:60%;" }
+![3D view FB side](../img/MotSide.webp){: style="width:60%;" }
 
 ##Konektory
 ___

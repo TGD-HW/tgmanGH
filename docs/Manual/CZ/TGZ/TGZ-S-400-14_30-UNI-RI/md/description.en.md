@@ -263,7 +263,7 @@ ___
 		
 	!!! note "Note"
 	
-		Servoamplifier TGZ-S-230-5/15-UNI-RI is single axis version.
+		Servoamplifier TGZ-S-400 is single axis version.
 		The X6 connector is not normally connected.
 	
 -   **X3.1 - Motor connector**
