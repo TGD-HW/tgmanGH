@@ -197,7 +197,7 @@ extra_css:
 nav:
         - Úvod: 'index.md'
         - 'TGZ':
-            - 'TGZ-D-48-13/26': 
+            - 'TGZ-D-48-13/26-UNI': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/description.md'                  
@@ -207,7 +207,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/firmware.md' 
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-13_26/md/safe.md'
-            - 'TGZ-D-48-50/100':
+            - 'TGZ-D-48-50/100-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/description.md'
@@ -217,7 +217,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/firmware.md'                  
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-48-50_100/md/safe.md'                   
-            - 'TGZ-S-48-50/100': 
+            - 'TGZ-S-48-50/100-UNI': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/description.md'
@@ -227,7 +227,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/firmware.md' 
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100/md/safe.md'     
-            - 'TGZ-S-48-100/250': 
+            - 'TGZ-S-48-100/250-UNI': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/description.md'
@@ -237,7 +237,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/firmware.md' 
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250/md/safe.md'   
-            - 'TGZ-S-48-100/250-O': 
+            - 'TGZ-S-48-100/250-UNI-O1': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/description.md'
@@ -247,7 +247,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-O/md/safe.md'                  
-            - 'TGZ-S-48-100/300': 
+            - 'TGZ-S-48-100/300-UNI': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/description.md'
@@ -257,7 +257,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300/md/safe.md' 
-            - 'TGZ-S-48-100/300-O': 
+            - 'TGZ-S-48-100/300-UNI-O1': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/description.md'
@@ -267,7 +267,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_300-O/md/safe.md'                
-            - 'TGZ-S-48-100/425': 
+            - 'TGZ-S-48-100/425-UNI': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/description.md'
@@ -277,7 +277,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_425/md/safe.md'  
-            - 'TGZ-S-48-100/425-O': 
+            - 'TGZ-S-48-100/425-UNI-O1': 
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/description.md'
@@ -287,7 +287,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_425-O/md/safe.md'                  
-            - 'TGZ-S-230-5/15':
+            - 'TGZ-S-230-5/15-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/description.md'
@@ -297,7 +297,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/safe.md'
-            - 'TGZ-D-320-5/10':
+            - 'TGZ-D-320-5/10-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/description.md'
@@ -307,7 +307,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/safe.md'
-            - 'TGZ-D-320-5/15':
+            - 'TGZ-D-320-5/15-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/description.md'
@@ -317,7 +317,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-320-5_15/md/safe.md'  
-            - 'TGZ-S-400-3/9':
+            - 'TGZ-S-400-3/9-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/description.md'
@@ -327,7 +327,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-400-3_9/md/safe.md'  
-            - 'TGZ-S-400-7/15':
+            - 'TGZ-S-400-7/15-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/description.md'
@@ -337,7 +337,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-400-7_15/md/safe.md'
-            - 'TGZ-S-400-10/20':
+            - 'TGZ-S-400-10/20-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/description.md'
@@ -347,7 +347,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-400-10_20/md/safe.md'   
-            - 'TGZ-S-400-14/30':
+            - 'TGZ-S-400-14/30-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/description.md'
@@ -357,7 +357,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-400-14_30/md/safe.md'  
-            - 'TGZ-D-560-3/9':
+            - 'TGZ-D-560-3/9-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/description.md'
@@ -367,7 +367,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-3_9/md/safe.md'
-            - 'TGZ-D-560-7/15':
+            - 'TGZ-D-560-7/15-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/description.md'
@@ -377,7 +377,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-7_15/md/safe.md'
-            - 'TGZ-D-560-10/20':
+            - 'TGZ-D-560-10/20-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/description.md'
@@ -387,7 +387,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-10_20/md/safe.md'                
-            - 'TGZ-D-560-30/50':
+            - 'TGZ-D-560-30/50-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/description.md'
@@ -397,7 +397,17 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-D-560-30_50/md/safe.md'
-            - 'TGZ-S-48-50/100 RI':
+            - 'TGZ-S-48-50/100-UNI-RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100-UNI-RI/md/safe.md'                 
+            - 'TGZ-S-48-50/100-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/description.md'
@@ -406,8 +416,8 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/firmware.md'
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/safe.md'
-            - 'TGZ-S-48-100/250 RI':
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-50_100RI/md/safe.md'               
+            - 'TGZ-S-48-100/250-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/description.md'
@@ -417,7 +427,7 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250RI/md/safe.md'    
-            - 'TGZ-S-48-100/300 RI':
+            - 'TGZ-S-48-100/300-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/param.md'
                 - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_300RI/md/description.md'
@@ -437,6 +447,16 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-5_15-UNI-RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-5_15-UNI-RI/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-5_15-UNI-RI/md/safe.md'    
+            - 'TGZ-S-230-5/15-RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-5_15-RI/md/safe.md'
             - 'TGZ-S-400-14/30-UNI-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-400-14_30-UNI-RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-400-14_30-UNI-RI/md/param.md'

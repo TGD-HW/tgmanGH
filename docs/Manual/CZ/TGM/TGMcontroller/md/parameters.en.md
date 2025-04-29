@@ -5,7 +5,7 @@
 | DO supply | 24 V DC (± 20 %) |
 | Ambient operating temperature | 0 ~ 40 °C |
 | **COMMUNICATION** |   |
-| ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
+| FIELDBUS IN/OUT | 100/1000 Mb/s, 2x RJ45 |
 | ETHERNET UDP (service) | 100/1000 Mb/s, RJ45 |
 | CAN |   |
 | SD | microSD card slot with card detect |

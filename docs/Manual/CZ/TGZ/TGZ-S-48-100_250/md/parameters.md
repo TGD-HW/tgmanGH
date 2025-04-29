@@ -10,7 +10,7 @@
 | Teplota okolí | 0 ~ 40 °C |
 | **KOMUNIKACE** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
-| ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
+| FIELDBUS IN/OUT | 100/1000 Mb/s, 2x RJ45 |
 | ETHERNET UDP (servis) | 100/1000 Mb/s, RJ45 |
 | **Vstupy/výstupy** |   |
 | 2 AI, 8 DI, 6 DO | 1 x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |

@@ -10,7 +10,7 @@
 | Ambient operating temperature | 0 ~ 40 °C |
 | **COMMUNICATION** |   |
 | CAN | 4pin WEIDMÜLLER  B2CF 3.50/04/180 |
-| ETHERCAT IN/OUT | 100/1000 Mb/s, 2x RJ45 |
+| FIELDBUS IN/OUT | 100/1000 Mb/s, 2x RJ45 |
 | ETHERNET UDP (service) | 100/1000 Mb/s, RJ45 |
 | **Inputs/outputs** |   |
 | 2 AI, 8 DI, 6 DO | 1x 22pin WEIDMÜLLER  B2CF 3.50/22/180 |

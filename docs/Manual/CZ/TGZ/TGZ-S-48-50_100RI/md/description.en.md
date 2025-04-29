@@ -10,9 +10,6 @@
 ##Description of communication, input/output and control:
 ###Communication interfaces
 - Ethernet 100/1000 Mb/s with UDP protocol, designed for parameter recording, monitoring, testing, but also online control;
-- CAN bus protocol can be modified according to customer requirements;
-- Ethernet 100/1000 Mb/s with optional protocol, programmed in the gate array and designed for connection of fast industrial buses for real-time control.
-  Currently, this interface is equipped with the EtherCAT protocol (only for standard firmware); according to customer requirements it can be modified to another type of protocol.
 - RS422 or RS485, data transfer via unused servomotor feedback interface.
   It can be used for communication with devices based on RS422 or RS485 standard (encoder, gyro, master controller, other system, etc.).
   This interface enables high-speed communication up to 20Mbit/s.
@@ -50,9 +47,9 @@ In addition to motor feedback, they can be used to connect devices operating on 
 - BISS – sensors with BISS-C protocol.
 
 ###Control
-TGZ servoamplifiers can be controlled:
+TGZ servoamplifiers in "RI" version can be controlled:
 
-- digital control via EtherCAT, CAN-bus (torque, speed, position profiles, etc.) and via Ethernet UDP protocol;
+- via Ethernet UDP protocol;
 - via user program (language C) – digital inputs, analog voltage, etc.
 
 ##Connectors
@@ -60,7 +57,7 @@ ___
 ### View of the ENET/ECAT side
 ___
 
-![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.svg){: style="width:80%;" }
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100-RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -94,24 +91,6 @@ ___
 
     --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
 
--   **X13 - EtherCAT 2 - Fieldbus out**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
-
--   **X14 - EtherCAT 1 - Fieldbus in**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.en.md"
-
 </div>
 
 
@@ -119,7 +98,7 @@ ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.svg){: style="width:80%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100-RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -158,18 +137,6 @@ ___
 -   It is not primarily recommended to use the microSD slot in devices where significant vibrations are expected.
 	SD card is not included with the "RI" version of servoamplifiers.
 	For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
-
--   **X10 - CAN**
-
-    ---
-	
-	![CAN connector](../../../../source/img/5031490800.svg){: style="width:70%;" }
-
--    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
-
-    ---
-
-	--8<-- "md/X10_CAN_8pin_ClikMate.en.md"
 	
 -	**LED display**
 
@@ -200,7 +167,7 @@ ___
 ### View of the FB/motor side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.svg){: style="width:80%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -249,6 +216,10 @@ ___
 		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
 		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
 		Also check whether you have correct firmware uploaded in the device.
+		
+	!!! note "Note"
+		Servoamplifier TGZ-S-48-50/100-RI is single axis version.
+		The X6 connector is not normally connected.		
 
 -   **X3 - Power supply voltage**
 

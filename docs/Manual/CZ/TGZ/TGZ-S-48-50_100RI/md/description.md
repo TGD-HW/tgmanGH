@@ -10,9 +10,6 @@
 ##Popis komunikace, vstupů/výstupů a ovládání:
 ###Komunikační rozhraní
 - Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.
-- CAN bus protokol lze upravit podle požadavků zákazníka.
-- Ethernet 100/1000 Mb/s s volitelným protokolem, naprogramovaný v hradlovém poli a určený pro připojení rychlých průmyslových sběrnic pro řízení v reálném čase.
-  V současné době je toto rozhraní vybaveno protokolem EtherCAT (pouze pro standardní firmware); podle požadavků zákazníka lze upravit na jiný typ protokolu.
 - RS422 / RS485, přenos dat přes nepoužívané rozhraní zpětné vazby servomotoru.
   Může být použit pro komunikaci se zařízeními založenými na standardu RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
   Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
@@ -50,19 +47,17 @@ Kromě zpětné vazby motoru je lze použít k připojení zařízení pracujíc
 - BISS - senzory s protokolem BISS-C.
 
 ###Řízení
-Servozesilovače TGZ je možno řídit:
+Servozesilovače TGZ v provedení "RI" je možno řídit:
 
-- digitální ovládání přes EtherCAT, CAN-bus (točivý moment, otáčky, polohové profily atd.) A přes Ethernet UDP protokol;
-- uživatelský program (jazyk C) - digitální vstupy, analogové napětí atd.
-
-
+- pomocí Ethernet UDP protokolu;
+- uživatelským programem (jazyk C) - digitální vstupy, analogové napětí atd.
 
 ##Konektory
 ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.svg){: style="width:80%;" }
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100-RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -96,24 +91,6 @@ ___
 
     --8<-- "md/X12_UDP_8pin_ClikMate.md"
 
--   **X13 - EtherCAT 2 - Fieldbus out**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
-
--   **X14 - EtherCAT 1 - Fieldbus in**
-
-    ---
-    ![Molex ClikMate 5031490800](../../../../source/img/5031490800.svg){: style="width:70%;" }
-	
--    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^4]
-
-    --8<-- "md/X12_UDP_8pin_ClikMate.md"
-
 </div>
 
 
@@ -121,7 +98,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.svg){: style="width:80%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100-RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -202,7 +179,7 @@ ___
 ### Strana FB/motor
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.svg){: style="width:80%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -251,6 +228,9 @@ ___
 		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB2 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
 		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
 		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
+		
+	!!! note "Poznámka"
+		Servozesilovač TGZ-S-48-50/100-RI je jednoosý. Konektor X6 se běžně nezapojuje.		
 
 -   **X3 - Napájení silové části**
 
