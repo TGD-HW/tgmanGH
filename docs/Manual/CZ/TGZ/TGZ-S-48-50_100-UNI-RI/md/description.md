@@ -62,7 +62,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.svg){: style="width:80%;" }
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -121,7 +121,7 @@ ___
 ### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.svg){: style="width:80%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -202,7 +202,7 @@ ___
 ### Strana FB/motor
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.svg){: style="width:80%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -252,7 +252,7 @@ ___
 		Toto platí pro dodávky po 06-2024, kde není provedeno žádné interní spojení.
 		Ověřte také, zda máte v zařízení nahrán správný firmware podporující zvolený typ zpětné vazby.
 
--   **X3 - Napájení silové části**
+-   **X2 - Napájení silové části**
 
     ---
 	
@@ -269,7 +269,7 @@ ___
 		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
 		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
 		
--   **X3 - Připojení motoru**
+-   **X2 - Připojení motoru**
 
     ---
 	
@@ -282,7 +282,7 @@ ___
 	--8<-- "md/X3_M1_3pin_pressfit.md"
 
 
--   **X4 - Připojení brzdy**
+-   **X3 - Připojení brzdy**
 
     ---
 	

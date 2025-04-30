@@ -60,7 +60,7 @@ ___
 ### View of the ENET/ECAT side
 ___
 
-![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.svg){: style="width:80%;" }
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -119,7 +119,7 @@ ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.svg){: style="width:80%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-50_100RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -200,7 +200,7 @@ ___
 ### View of the FB/motor side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.svg){: style="width:80%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-50_100RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -250,7 +250,7 @@ ___
 		This applies from batch supplied after 06-2024 onwards, where no internal connection is done on DSL as a standard.
 		Also check whether you have correct firmware uploaded in the device.
 
--   **X3 - Power supply voltage**
+-   **X2 - Power supply voltage**
 
     ---
 	
@@ -267,7 +267,7 @@ ___
 		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
 		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
 		
--   **X3 - Motor connector**
+-   **X2 - Motor connector**
 
     ---
 	
@@ -280,7 +280,7 @@ ___
 	--8<-- "md/X3_M1_3pin_pressfit.en.md"
 
 
--   **X4 - Static brake connector**
+-   **X3 - Static brake connector**
 
     ---
 	

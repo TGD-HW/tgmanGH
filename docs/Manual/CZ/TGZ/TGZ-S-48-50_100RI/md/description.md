@@ -232,7 +232,7 @@ ___
 	!!! note "Poznámka"
 		Servozesilovač TGZ-S-48-50/100-RI je jednoosý. Konektor X6 se běžně nezapojuje.		
 
--   **X3 - Napájení silové části**
+-   **X2 - Napájení silové části**
 
     ---
 	
@@ -249,7 +249,7 @@ ___
 		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
 		je u strojů s větší kinetickou energií nutné zajistit její zmaření např. v odporovém tělese pomocí brzdné jednotky.
 		
--   **X3 - Připojení motoru**
+-   **X2 - Připojení motoru**
 
     ---
 	
@@ -262,7 +262,7 @@ ___
 	--8<-- "md/X3_M1_3pin_pressfit.md"
 
 
--   **X4 - Připojení brzdy**
+-   **X3 - Připojení brzdy**
 
     ---
 	

@@ -221,7 +221,7 @@ ___
 		Servoamplifier TGZ-S-48-50/100-RI is single axis version.
 		The X6 connector is not normally connected.		
 
--   **X3 - Power supply voltage**
+-   **X2 - Power supply voltage**
 
     ---
 	
@@ -238,7 +238,7 @@ ___
 		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
 		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
 		
--   **X3 - Motor connector**
+-   **X2 - Motor connector**
 
     ---
 	
@@ -251,7 +251,7 @@ ___
 	--8<-- "md/X3_M1_3pin_pressfit.en.md"
 
 
--   **X4 - Static brake connector**
+-   **X3 - Static brake connector**
 
     ---
 	
