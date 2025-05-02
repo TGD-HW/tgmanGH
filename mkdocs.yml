@@ -567,7 +567,13 @@ nav:
                 - Linux: 'Manual/CZ/TGM/TGMmini/md/linux.md'              
                 - Rozměry: 'Manual/CZ/TGM/TGMmini/md/dimension.md'
                 - Montáž: 'Manual/CZ/TGM/TGMmini/md/mounting.md'
-                - Příklad zapojení: 'Manual/CZ/TGM/TGMmini/md/schematic.md'              
+                - Příklad zapojení: 'Manual/CZ/TGM/TGMmini/md/schematic.md' 
+            - TGmonitor:
+                - Základní informace: 'Manual/CZ/TGM/TGmonitor7/md/basic.md'
+                - Parametry: 'Manual/CZ/TGM/TGmonitor7/md/param.md'
+                - Popis konektorů: 'Manual/CZ/TGM/TGmonitor7/md/connectors.md'                       
+#                - Rozměry: 'Manual/CZ/TGM/TGmonitor7/md/dimension.md'
+#                - Montáž: 'Manual/CZ/TGM/TGmonitor7/md/mounting.md'         
             - TGMcontroller:
                 - Základní informace: 'Manual/CZ/TGM/TGMcontroller/md/basic.md'
                 - Parametry: 'Manual/CZ/TGM/TGMcontroller/md/param.md'

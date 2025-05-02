@@ -1,0 +1,1 @@
+--8<-- "TGmonitor7/md/parameters.md"

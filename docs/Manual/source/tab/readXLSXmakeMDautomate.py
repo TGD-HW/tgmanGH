@@ -194,7 +194,7 @@ def save_markdown_from_sheets():
                     markdown_table = excel_to_markdown_table(filename, sheet_name, "A1", "AA100")
 
                     # Determine the base path based on sheet name prefixes
-                    if sheet_name.startswith(("TGM", "TGZcontrolR", "TGZpMotion")):
+                    if sheet_name.startswith(("TGM", "TGZcontrolR", "TGZpMotion", "TGmonitor")):
                         base_path = "TGM"
                     elif sheet_name.startswith("TGS"):
                         base_path = "TGS"
