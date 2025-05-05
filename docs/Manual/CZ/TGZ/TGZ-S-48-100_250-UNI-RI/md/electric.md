@@ -1,0 +1,1 @@
+--8<-- "md/electricalS48-100RI.md"

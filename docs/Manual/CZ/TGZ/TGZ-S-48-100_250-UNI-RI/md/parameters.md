@@ -4,11 +4,13 @@
 | Výkonové napájecí napětí | 0–48 VDC |
 | Instalovaný příkon pro provoz S1 | 4,8 kVA |
 | Trvalý proud na jednu osu | 100A |
-| Maximální výstupní proud (max. 5 s) | 300 A |
+| Maximální výstupní proud (max. 5 s) | 250 A |
 | Ztráty při jmenovité zátěži | 70 W |
 | Stupeň krytí | IP20 |
 | Teplota okolí | -32 ~ +40 °C |
 | **KOMUNIKACE** |   |
+| CAN | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
+| FIELDBUS IN/OUT | 100/1000 Mb/s, 2 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | ETHERNET UDP (servis) | 100/1000 Mb/s, 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | **I/O** |   |
 | 8 DI, 6 DO | 1 x 18pin MOLEX 5031491800 CLIK-MATE 1.5 |

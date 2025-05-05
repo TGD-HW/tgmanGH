@@ -221,4 +221,129 @@ INTERCONTEC 09P_Y
 	---
 
 	![iTec motor](../img/RIcon9.en.webp){: style="width:50%;" }
+	
+</div>
+
+###Z28 - TGZ-S-48-50/100 RI connection with straight connector / S1 / S2 / S3 / S4 (08p) {#Z28}
+![08p](../img/RI100_intercontec_8p.svg){: style="width:100%;" }   
+
+INTERCONTEC BSTA 08p     
+
+<div class="grid cards" markdown>
+
+-   Cable type connector view
+
+    ---
+	
+	![BSTA cable](../img/RIcon1.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![BSTA motor](../img/RIcon4.webp){: style="width:50%;" }
+</div>
+
+###Z29 - TGZ-S-48-50/100 RI connection with straight connector 1.5 / S4 vel. 1.5 (CSTA 8p) {#Z29}
+![CSTA](../img/RI100_intercontec_csta8p.svg){: style="width:100%;" }   
+
+INTERCONTEC CSTA 8p     
+
+<div class="grid cards" markdown>
+
+-   Cable type connector view
+
+    ---
+	
+	![CSTA cable](../img/RIcon7.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![CSTA motor](../img/RIcon14.webp){: style="width:50%;" }
+</div>
+
+###Z30 - TGZ-S-48-50/100 RI connection with Amp TVP00RW-15-05P according to MIL-DTL-38999 III {#Z30}
+![amp15](../img/RI100_amphenol_tvp00rw_15_05p.svg){: style="width:100%;" }   
+
+Amphenol TVP00RW-15-05P   
+
+<div class="grid cards" markdown>
+
+-   Cable connector
+
+    ---
+	
+	![amp15 cable](../img/RIcon2.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![amp15 motor](../img/RIcon5.webp){: style="width:50%;" }
+</div>
+
+###Z31 - TGZ-S-48-50/100 RI connection with ITT-Cannon 24-11 connector {#Z31}
+![itt](../img/RI100_canon_IT.svg){: style="width:100%;" }   
+
+ITT-Cannon 24-11   
+
+<div class="grid cards" markdown>
+
+-   Cable connector
+
+    ---
+	
+	![itt cable](../img/RIcon3.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![itt motor](../img/RIcon11.webp){: style="width:50%;" }
+</div>
+
+###Z32 - TGZ-S-48-50/100 RI with two-cable BISS {#Z32}
+Wiring diagrams for other types of sensors used are available upon request directly from the device manufacturer.
+Below you will find the wiring diagram for the two-cable interface for BISS.
+The first row of the connector name on the servo amplifier side is assigned to TGZ-S-48-100/250 and TGZ-S-48-100/300.
+The second row of the connector name is assigned for TGZ-S-48-50/100.   
+
+![BISS](../img/RI100_TVP00RW_17_06p.svg){: style="width:100%;" }   
+
+TVP00RW-17-06P     
+
+<div class="grid cards" markdown>
+
+-   Cable connector
+
+    ---
+	
+	![06p](../img/RIcon6.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![iTec motor](../img/RIcon13.webp){: style="width:50%;" }
+	
+</div>
+
+TVP00RW-11-35P      
+
+<div class="grid cards" markdown>
+
+-   Cable connector
+
+    ---
+	
+	![35p](../img/RIcon12.webp){: style="width:50%;" }
+
+-   Motor type connector view
+
+	---
+
+	![iTec motor](../img/RIcon8.webp){: style="width:50%;" }
+	
 </div>
