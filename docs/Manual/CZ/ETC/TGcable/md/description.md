@@ -207,7 +207,7 @@ TVP00RW-11-35P
 
 <!-- S-100/250 cables -->
 
-###Z27 - TGZ-S-48-50/100 RI zapojení s konektorem iTEC {#Z27}
+###Z27 - TGZ-S-48-100/xxx RI zapojení s konektorem iTEC {#Z27}
 ![iTec](../img/RI100_intercontec_9p_y.svg){: style="width:100%;" }   
 
 INTERCONTEC 09P_Y    
@@ -227,7 +227,7 @@ INTERCONTEC 09P_Y
 	![iTec motor](../img/RIcon9.webp){: style="width:50%;" }
 </div>	
 
-###Z28 - TGZ-S-48-50/100 RI zapojení s přímým konektorem / S1 / S2 / S3 / S4 (08p) {#Z28}
+###Z28 - TGZ-S-48-100/xxx RI zapojení s přímým konektorem / S1 / S2 / S3 / S4 (08p) {#Z28}
 ![08p](../img/RI100_intercontec_8p.svg){: style="width:100%;" }   
 
 INTERCONTEC BSTA 08p     
@@ -247,7 +247,7 @@ INTERCONTEC BSTA 08p
 	![BSTA motor](../img/RIcon4.webp){: style="width:50%;" }
 </div>
 
-###Z29 - TGZ-S-48-50/100 RI zapojení s přímým konektorem 1.5 / S4 vel. 1.5 (CSTA 8p) {#Z29}
+###Z29 - TGZ-S-48-100/xxx zapojení s přímým konektorem 1.5 / S4 vel. 1.5 (CSTA 8p) {#Z29}
 ![CSTA](../img/RI100_intercontec_csta8p.svg){: style="width:100%;" }   
 
 INTERCONTEC CSTA 8p     
@@ -267,7 +267,7 @@ INTERCONTEC CSTA 8p
 	![CSTA motor](../img/RIcon14.webp){: style="width:50%;" }
 </div>
 
-###Z30 - TGZ-S-48-50/100 RI zapojení s konektorem Amp TVP00RW-15-05P dle MIL-DTL-38999 III {#Z30}
+###Z30 - TGZ-S-48-100/xxx RI zapojení s konektorem Amp TVP00RW-15-05P dle MIL-DTL-38999 III {#Z30}
 ![amp15](../img/RI100_amphenol_tvp00rw_15_05p.svg){: style="width:100%;" }   
 
 Amphenol TVP00RW-15-05P   
@@ -287,7 +287,7 @@ Amphenol TVP00RW-15-05P
 	![amp15 motor](../img/RIcon5.webp){: style="width:50%;" }
 </div>
 
-###Z31 - TGZ-S-48-50/100 RI zapojení s ITT-Cannon konektorem 24-11 {#Z31}
+###Z31 - TGZ-S-48-100/xxx RI zapojení s ITT-Cannon konektorem 24-11 {#Z31}
 ![itt](../img/RI100_canon_IT.svg){: style="width:100%;" }   
 
 ITT-Cannon 24-11   
@@ -307,7 +307,7 @@ ITT-Cannon 24-11
 	![itt motor](../img/RIcon11.webp){: style="width:50%;" }
 </div>
 
-###Z32 - TGZ-S-48-50/100 RI s dvojkabelem BISS {#Z32}
+###Z32 - TGZ-S-48-100/xxx RI s dvojkabelem BISS {#Z32}
 Schémata zapojení pro jiné použité typy snímačů jsou k dispozici na vyžádání přímo u výrobce zařízení.
 Níže naleznete schéma zapojení pro dvojkabel pro rozhraní BISS.
 První řádek názvu konektoru na straně servozesilovače je přiřazen k TGZ-S-48-100/250 a TGZ-S-48-100/300.

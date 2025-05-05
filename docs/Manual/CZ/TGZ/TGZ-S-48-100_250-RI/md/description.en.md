@@ -1,7 +1,7 @@
 ##3D view
-![TGZ-S-48-100/250RI connectors](../img/connectors.png){: style="width:100%;" }
+![TGZ-S-48-100/250-RI connectors](../img/connectors.png){: style="width:100%;" }
 ##Block diagram with connection of main interfaces
-![TGZ-S-48-100/250RI connectors](../img/blokDiagram.png){: style="width:70%;" }
+![TGZ-S-48-100/250-RI connectors](../img/blokDiagram.png){: style="width:70%;" }
 
 !!! note "Note"
 	The external temperature sensor PT1000 is used to measure the motor temperature.

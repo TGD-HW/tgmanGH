@@ -1,4 +1,4 @@
---8<-- "TGZ-S-48-50_100RI/md/parameters.en.md"
+--8<-- "TGZ-S-48-50_100-RI/md/parameters.en.md"
 
 !!! info "Static brake power"
 

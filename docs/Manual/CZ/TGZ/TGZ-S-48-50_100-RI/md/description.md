@@ -1,8 +1,8 @@
 ##3D náhled
-![TGZ-S-48-50/100RI connectors 1](../img/IOside.webp){: style="width:80%;" }
-![TGZ-S-48-50/100RI connectors 2](../img/MotSide.webp){: style="width:90%;" }
+![TGZ-S-48-50/100-RI connectors 1](../img/IOside.webp){: style="width:80%;" }
+![TGZ-S-48-50/100-RI connectors 2](../img/MotSide.webp){: style="width:90%;" }
 ##Blokové schéma s připojením hlavních rozhraní
-![TGZ-S-48-50/100RI connectors](../img/blokDiagram.webp){: style="width:70%;" }
+![TGZ-S-48-50/100-RI connectors](../img/blokDiagram.webp){: style="width:70%;" }
 
 !!! note "Poznámka"
 	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
@@ -287,5 +287,5 @@ Pokud je nutné použít jiný typ zpětné vazby než Hiperface DSL, je nutné 
 Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální enkodér.
 Funkce zpětné vazby také závisí na nahraném firmwaru.
 
-![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
+![TGZ-S-48-50/100-RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
 

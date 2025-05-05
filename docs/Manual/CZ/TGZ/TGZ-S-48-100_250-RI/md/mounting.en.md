@@ -16,7 +16,7 @@ Detailed view of the TGZ-S-48-100/250 and TGZ-S-48-100/300 servo amplifiers:
 ![TGZ-S-48-100/250 Mounting](../img/mounting4.png){: style="width:70%;" }
 
 
-##Mounting procedure:
+##Mounting procedure
 
 1. Prepare the site, the necessary tools and protective equipment. Install the servoamplifier in the desired location. 
    There must be no materials at the installation site that could cause short circuits or corrosion.

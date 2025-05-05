@@ -1,8 +1,8 @@
 ##3D view
-![TGZ-S-48-50/100RI connectors 1](../img/IOside.en.webp){: style="width:80%;" }
-![TGZ-S-48-50/100RI connectors 2](../img/MotSide.en.webp){: style="width:90%;" }
+![TGZ-S-48-50/100-RI connectors 1](../img/IOside.en.webp){: style="width:80%;" }
+![TGZ-S-48-50/100-RI connectors 2](../img/MotSide.en.webp){: style="width:90%;" }
 ##Block diagram with connection of main interfaces
-![TGZ-S-48-50/100RI connectors](../img/blokDiagram.webp){: style="width:70%;" }
+![TGZ-S-48-50/100-RI connectors](../img/blokDiagram.webp){: style="width:70%;" }
 
 !!! note "Note"
 	The external temperature sensor PT1000 is used to measure the motor temperature.
@@ -276,5 +276,5 @@ If it is necessary to use a different type of feedback than Hiperface DSL, it is
 Other usable standards are EnDat 2.2, SSI, BISS or Incremental encoder.
 The feedback function also depends on the uploaded firmware.
 
-![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
+![TGZ-S-48-50/100-RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
 

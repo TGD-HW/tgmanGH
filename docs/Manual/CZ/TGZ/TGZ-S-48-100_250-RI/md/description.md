@@ -1,7 +1,7 @@
 ##3D náhled
-![TGZ-S-48-100/250RI connectors](../img/connectors.png){: style="width:100%;" }
+![TGZ-S-48-100/250-RI connectors](../img/connectors.png){: style="width:100%;" }
 ##Blokové schéma s připojením hlavních rozhraní
-![TGZ-S-48-100/250RI connectors](../img/blokDiagram.png){: style="width:70%;" }
+![TGZ-S-48-100/250-RI connectors](../img/blokDiagram.png){: style="width:70%;" }
 
 !!! note "Poznámka"
 	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
