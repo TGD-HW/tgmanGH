@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X2 - Vstupní fázové napětí**
+-   **X1 - Vstupní fázové napětí**
 
     ---
 	
@@ -24,9 +24,9 @@ ___
 
 	---
 	
-	--8<-- "md/X2_ACIN_7pin_2636.md"
+	--8<-- "md/X1_ACIN_7pin_2636.md"
 	
--   **X6 - DC bus konektor**
+-   **X4 - DC bus konektor**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/D560DCbusCon.svg){: style="width:70%;" }
@@ -35,7 +35,7 @@ ___
 
 	---
 
-	--8<-- "md/X2_D560DCbus.md"
+	--8<-- "md/X4_D560DCbus.md"
 
 </div>
   
@@ -47,7 +47,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X4 - Napájení řídicí části 24V**
+-   **X3 - Napájení řídicí části 24V**
 
     ---
 	
@@ -57,10 +57,10 @@ ___
 
     ---
 
-	--8<-- "md/X4_TGS560_24V_5pin_BCZ.md"
+	--8<-- "md/X3_TGS560_24V_5pin_BCZ.md"
 
 
--   **X5 - Kontrolní výstupy**
+-   **X2 - Kontrolní výstupy**
 
     ---
 		
@@ -77,7 +77,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.md"
+	--8<-- "md/X2_DO_4pin_BCZ.md"
 	
 -   **S1 - Výběr režimu zařízení**
 

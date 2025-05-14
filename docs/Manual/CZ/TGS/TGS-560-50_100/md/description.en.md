@@ -14,7 +14,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X2 - Mains connector**
+-   **X1 - Mains connector**
 
     ---
 	
@@ -24,9 +24,9 @@ ___
 
 	---
 	
-	--8<-- "md/X2_ACIN_7pin_2636.en.md"
+	--8<-- "md/X1_ACIN_7pin_2636.en.md"
 
--   **X6 - DC bus connector**
+-   **X4 - DC bus connector**
 
     ---
 	![ENET/ECAT/LogicPWR connectors](../../../../source/img/D560DCbusCon.svg){: style="width:70%;" }
@@ -35,7 +35,7 @@ ___
 
 	---
 
-	--8<-- "md/X2_D560DCbus.en.md"
+	--8<-- "md/X4_D560DCbus.en.md"
 
 </div>
   
@@ -47,7 +47,7 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X4 - Logic power connector**
+-   **X3 - Logic power connector**
 
     ---
 	
@@ -57,10 +57,10 @@ ___
 
     ---
 
-	--8<-- "md/X4_TGS560_24V_5pin_BCZ.en.md"
+	--8<-- "md/X3_TGS560_24V_5pin_BCZ.en.md"
 
 
--   **X5 - Control outputs connector**
+-   **X2 - Control outputs connector**
 
     ---
 		
@@ -77,7 +77,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.en.md"
+	--8<-- "md/X2_DO_4pin_BCZ.en.md"
 	
 -   **S1 - Mode select**
 
