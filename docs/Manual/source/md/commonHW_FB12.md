@@ -33,6 +33,8 @@ V případě, že požadujeme tento typ zpětné vazby, je potřeba na servozesi
 Tím se propojí signál RS_485_2 s výstupním obvodem pro napájení linky.
 Poté stačí připojit vhodný snímač na piny 7-8.   
 
+![FB1_2 DSL connection](../img/FB12_DSL1.webp){: style="width:20%;" }
+
 Příklady propojení servozesilovače a motoru jsou k dispozici v sekci `Ostatní | Schémata kabelů`   
 
 - [Připojení motoru s konektorem ITEC](../../CZ/ETC/TGcable/md/description.md#Z1)

@@ -122,7 +122,7 @@ ___
 
 	--8<-- "md/X5_FBE_12pin_B2CF.en.md"
 	
-	For more information on external feedback, see [FBE Feedback](../../../../source/md/commonHW_FBE.md#commonFBE).
+	For more information on external feedback, see [FBE Feedback](../../../../source/md/commonHW_FBE.en.md#commonFBE).
 
 -   **X6 - Feedback axis 1**
 
@@ -143,7 +143,7 @@ ___
 
 	--8<-- "md/X6_FB1_8pin_B2CF.en.md"
 	
-	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.en.md#commonFB12).
 	
 -   **X7 - Feedback axis 2**
 
@@ -164,7 +164,7 @@ ___
 
 	--8<-- "md/X7_FB2_8pin_B2CF.en.md"
 	
-	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.en.md#commonFB12).
 </div>
 
 ___

@@ -192,6 +192,8 @@ ___
 	---
 
 	--8<-- "md/X4_FBE_12pin_ClikMate.en.md"
+	
+	For more information on external feedback, see [FBE Feedback](../../../../source/md/commonHW_FBE.en.md#commonFBE).
 
 -   **X5 - Feedback axis 1**
 
@@ -205,7 +207,7 @@ ___
 
 	--8<-- "md/X5_FB1_10pin_ClikMate.en.md"
 	
-	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 1, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.en.md#commonFB12).
 	
 	!!! warning "Warning"
 		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
@@ -224,7 +226,7 @@ ___
 
 	--8<-- "md/X6_FB2_10pin_ClikMate.en.md"
 	
-	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
+	For more information regarding Feedback 2, please see [Feedback FB1, FB2](../../../../source/md/commonHW_FB12.en.md#commonFB12).
 	
 	!!! warning "Warning"
 		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.

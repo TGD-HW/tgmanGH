@@ -38,6 +38,8 @@ If this type of feedback is required, pins 1-3 and 2-4 of the X6 or X7 connector
 This connects the RS_485_2 signal to the output circuit for powering the line.
 Then, just connect a suitable sensor to pins 7-8.   
 
+![FB1_2 DSL connection](../img/FB12_DSL1.webp){: style="width:20%;" }
+
 Example of servo drive and motor connections are available in the `Etc. | Cable Connections` section:  
 
 - [Motor connection with ITEC connector](../../CZ/ETC/TGcable/md/description.en.md#Z1)

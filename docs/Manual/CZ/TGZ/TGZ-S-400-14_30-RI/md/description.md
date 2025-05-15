@@ -192,6 +192,8 @@ ___
 	---
 
 	--8<-- "md/X4_FBE_12pin_ClikMate.md"
+	
+	Další informace ohledně externí zpětné vazby naleznete v sekci [Zpětná vazba FBE](../../../../source/md/commonHW_FBE.md#commonFBE).
 
 -   **X5 - Zpětná vazba - osa 1**
 
@@ -204,6 +206,8 @@ ___
     ---
 
 	--8<-- "md/X5_FB1_10pin_ClikMate.md"
+	
+	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 	!!! warning "Upozornění"
 		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB1 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
@@ -221,6 +225,8 @@ ___
     ---
 
 	--8<-- "md/X6_FB2_10pin_ClikMate.md"
+	
+	Další informace ohledně zpětné vazby 1 naleznete v sekci [Zpětná vazba FB1, FB2](../../../../source/md/commonHW_FB12.md#commonFB12).
 	
 	!!! warning "Upozornění"
 		Aby bylo možné použít typ zpětné vazby Hiperface DSL, uživatel musí propojit piny 5-7 a 6-8 konektoru FB2 nebo naletovat odpovídající propojky (rezistory) na řídicí desku TGZcontrol.
