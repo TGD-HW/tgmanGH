@@ -7,9 +7,9 @@
    width="703"
    height="1025"
    viewBox="0 0 703 1025"
-   sodipodi:docname="TGS-560-30_50_Topside.svg"
+   sodipodi:docname="TGS-560-50_100_Topside.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-   inkscape:export-filename="TGS-560-30_50_Topside.webp"
+   inkscape:export-filename="TGS-560-50_100_Topside.webp"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -29,10 +29,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.1713827"
-     inkscape:cx="227.08205"
-     inkscape:cy="440.93188"
+     inkscape:cx="227.08206"
+     inkscape:cy="576.66892"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -54,7 +54,7 @@
      inkscape:label="text">
     <text
        xml:space="preserve"
-       style="font-size:74.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
+       style="font-size:66.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
        x="126.089"
        y="358.23611"
        id="text1"><tspan
@@ -62,10 +62,10 @@
          id="tspan1"
          x="126.089"
          y="358.23611"
-         style="font-size:74.6667px">X4</tspan></text>
+         style="font-size:66.6667px">X3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:74.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
+       style="font-size:66.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
        x="126.089"
        y="457.26437"
        id="text2"><tspan
@@ -73,10 +73,10 @@
          id="tspan2"
          x="126.089"
          y="457.26437"
-         style="font-size:74.6667px">X5</tspan></text>
+         style="font-size:66.6667px">X2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:74.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
+       style="font-size:66.6667px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web, Normal';fill:#ffffff;stroke:#000000;stroke-linejoin:bevel"
        x="141.45544"
        y="538.40936"
        id="text3"><tspan
@@ -84,6 +84,6 @@
          id="tspan3"
          x="141.45544"
          y="538.40936"
-         style="font-size:74.6667px">S1</tspan></text>
+         style="font-size:66.6667px">S1</tspan></text>
   </g>
 </svg>
