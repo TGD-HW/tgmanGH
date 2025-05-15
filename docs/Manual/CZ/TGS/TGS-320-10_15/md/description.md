@@ -97,7 +97,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.md"
+	--8<-- "md/X2_DO_4pin_BCZ.md"
 	
 	
 	Výstupy RDY a ERR se chovají jako kontakty relé s maximálním přípustným externím napájením 28 VDC a maximálním zatížením 700 mA.

@@ -1220,11 +1220,11 @@ save_markdown_table(markdown_table, output_file)
 
 # X3 - 4pin Weidmuller BCZ - TGS320 DO
 file_path = "connectors.xlsx"
-sheet_name = "X3_DO_4pin_BCZ"
+sheet_name = "X2_DO_4pin_BCZ"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../source/md/X3_DO_4pin_BCZ.md"
+output_file = "../../source/md/X2_DO_4pin_BCZ.md"
 save_markdown_table(markdown_table, output_file)
 
 # X2 - 3pin Weidmuller BLZ 7.62 - TGZ560-3/9 DCBUS
@@ -1765,11 +1765,11 @@ save_markdown_table(markdown_table, output_file)
 
 # X3 - 4pin Weidmuller BCZ - TGS320 DO
 file_path = "connectors.en.xlsx"
-sheet_name = "X3_DO_4pin_BCZ"
+sheet_name = "X2_DO_4pin_BCZ"
 range_start = "A1"
 range_end = "D100"
 markdown_table = connectors(file_path, sheet_name, range_start, range_end)
-output_file = "../../source/md/X3_DO_4pin_BCZ.en.md"
+output_file = "../../source/md/X2_DO_4pin_BCZ.en.md"
 save_markdown_table(markdown_table, output_file)
 
 # X2 - 3pin Weidmuller BLZ 7.62 - TGZ560-3/9 DCBUS

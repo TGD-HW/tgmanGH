@@ -35,7 +35,7 @@ ___
 
 	---
 
-	--8<-- "md/X4_D560DCbus.en.md"
+	--8<-- "md/X4_TGS560_50_DCbus.en.md"
 
 </div>
   

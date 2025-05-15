@@ -91,7 +91,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DO_4pin_BCZ.en.md"
+	--8<-- "md/X2_DO_4pin_BCZ.en.md"
 	
 	The RDY and ERR outputs behave similar to relay contacts with a maximum allowable external power supply voltage of 28 VDC and a maximum load of 700 mA. 
 	They are most commonly used for signaling a power module fault to a higher-level system.
