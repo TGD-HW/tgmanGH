@@ -44,9 +44,6 @@ At the bottom of the window there is an informative status bar with several func
 		
 </div>
 
-##Description of parameters
-A list of all parameters of the TGZ servo amplifier, including their description, is given in a special document [TGZ_registers_fw_build_1605.xlsx](https://www.tgdrives.cz/fileadmin/user_upload/download-TGZ/TGZ_registers_fw_build_1605.zip).
-
 ##Basic TGZ parameters in the TGZ GUI {#GUIbasicParams}
 <table>
 	<tr>

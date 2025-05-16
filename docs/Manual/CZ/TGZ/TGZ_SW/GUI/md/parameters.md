@@ -45,9 +45,6 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
 		
 </div>
 
-##Popis parametrů
-Seznam všech parametrů servozesilovače TGZ včetně jejich popisu je uveden ve zvláštním dokumentu `TGZ_registers_fw_build_1605.xlsx`.
-
 ##Základní parametry TGZ v TGZ GUI {#GUIbasicParams}
 <table>
 	<tr>
