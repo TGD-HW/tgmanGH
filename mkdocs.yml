@@ -19,7 +19,6 @@ theme:
     - navigation.path
     - navigation.top
 #   - navigation.footer
-#   - navigation.sections
     - toc.integrate
     - search.highlight
     - header.autohide
