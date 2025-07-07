@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DO.html">
       
       
-        <link rel="prev" href="commonHW_DI.html">
+        <link rel="prev" href="commonHW_DI_RI.html">
       
       
         <link rel="next" href="commonHW_AI.html">
@@ -81,6 +81,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#commonDO1-6" class="md-skip">
+          Přeskočit obsah
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -7734,7 +7739,30 @@
   
   
   <span class="md-ellipsis">
-    Digitální vstupy
+    Digitální vstupy UNI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commonHW_DI_RI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digitální vstupy RI
     
   </span>
   
@@ -7759,6 +7787,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Digitální výstupy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="commonHW_DO.html" class="md-nav__link md-nav__link--active">
         
   
@@ -7770,6 +7811,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commonDO1-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Základní popis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ochrany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ochrany
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typicke-zapojeni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typické zapojení
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#induktivni-zatez" class="md-nav__link">
+    <span class="md-ellipsis">
+      Induktivní zátěž
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametry
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -10949,6 +11052,45 @@
 
   <h1>Digitální výstupy</h1>
 
+<h2 id="commonDO1-6">Základní popis<a class="headerlink" href="#commonDO1-6" title="Permanent link">&para;</a></h2>
+<p>Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru <strong>X8</strong> integrováno šest rychlých izolovaných digitálních výstupů typu push-pull (totem pole).
+Výstupy ke své funkci potřebují napájení přivedné na VDDIO na konektoru <strong>X8</strong> (značeno také "VCC DO").
+Napájení je rozděleno na dvě skupiny.
+Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konektoru X8).
+Výstupy DO2,4,6 jsou napájeny z napájecího vstupu VCC DO2,4,6 (pin 11 konektoru X8).   </p>
+<p>Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
+<a class="glightbox" href="../img/TGZ_DO_simplified.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simplified TGZ DO schematic" src="../img/TGZ_DO_simplified.svg" style="width:80%;" /></a></p>
+<p>Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Nikdy na výstupy DO přímo nepřipojujte napájecí napětí, ani jeho záporný pól.
+Mohlo by dojít k poškození výstupu.</p>
+</div>
+<h2 id="ochrany">Ochrany<a class="headerlink" href="#ochrany" title="Permanent link">&para;</a></h2>
+<p>Digitální výstupy jsou chráněny proti přetížení a zkratu na výstupu pomocí společné inteligentní pojistky v napájecím obvodu VDDIO. Tato ochrana je společná vždy pro jednu skupinu výstupů (osa 1, osa 2).
+Dojde-li např. k přetížení DO2, inteligentní ochrana odpojí napájení celé skupině výstupů, tedy DO4 a DO6.
+DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.   </p>
+<h2 id="typicke-zapojeni">Typické zapojení<a class="headerlink" href="#typicke-zapojeni" title="Permanent link">&para;</a></h2>
+<p>Typické schéma připojení zátěže k DO je nejčastěji <em>horní spínač</em>.   </p>
+<p><a class="glightbox" href="../img/HS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="high side switch" src="../img/HS_switch.svg" style="width:30%;" /></a>   </p>
+<p>Zátěž je připojena mezi DO a GNDIO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví napájecí napětí VDDIO.
+Povelem <code>vypni</code> (log. 0) se na zátěži objeví GNDIO.</p>
+<p>Opačným případem je připojení zátěže k DO jako <em>dolní spínač</em>.   </p>
+<p><a class="glightbox" href="../img/LS_switch.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="low side switch" src="../img/LS_switch.svg" style="width:30%;" /></a>   </p>
+<p>Zátěž je připojena mezi VDDIO a DO. Povelem pro DO <code>sepni</code> (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
+Povelem <code>vypni</code> (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   </p>
+<h2 id="induktivni-zatez">Induktivní zátěž<a class="headerlink" href="#induktivni-zatez" title="Permanent link">&para;</a></h2>
+<p>Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
+Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   </p>
+<p><a class="glightbox" href="../img/InductiveLoad.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load high side" src="../img/InductiveLoad.svg" style="width:35%;" /></a>
+<a class="glightbox" href="../img/InductiveLoadLS.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Inductive load low side" src="../img/InductiveLoadLS.svg" style="width:35%;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Anti-kickback</p>
+<p>Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.
+Velikost překmitu je závislá na indukčnosti smyčky (cívka + kabeláž) a proudu sepnuté zátěže.
+Při spínání malých induktivních zátěží s odběrem menším než cca. 100mA (miniaturní relé apod.) není potřeba implementovat externí ochrannou diodu D1.</p>
+</div>
+<h2 id="parametry">Parametry<a class="headerlink" href="#parametry" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -11076,7 +11218,7 @@
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="12. listopadu 2024 13:52:03 UTC"><span class="timeago" datetime="2024-11-12T13:52:03+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="12. listopadu 2024 13:52:03 UTC">2024-11-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="7. července 2025 20:25:46 UTC"><span class="timeago" datetime="2025-07-07T20:25:46+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="7. července 2025 20:25:46 UTC">2025-07-07</span>
   </span>
 
     

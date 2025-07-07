@@ -2773,6 +2773,34 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/TGZ_SW/SD/md/SD.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/FW.html</loc>
         <lastmod>2025-07-07</lastmod>
         <changefreq>daily</changefreq>
@@ -3284,6 +3312,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X8_commonHW_AI_tab.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X8_commonHW_DI_RI_tab.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X8_commonHW_DI_RI_tab.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X8_commonHW_DI_RI_tab.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/X8_commonHW_DI_tab.html</loc>
         <lastmod>2025-07-07</lastmod>
         <changefreq>daily</changefreq>
@@ -3331,6 +3366,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DI.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DI.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DI_RI.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DI_RI.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DI_RI.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DO.html</loc>
@@ -6252,6 +6294,34 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/TGZ_SW/SD/md/SD.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_AI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_RI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DI_tab/md/parameters.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/CZ/TGZ/X8_commonHW_DO_tab/md/parameters.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/FW.html</loc>
         <lastmod>2025-07-07</lastmod>
         <changefreq>daily</changefreq>
@@ -6763,6 +6833,13 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X8_commonHW_AI_tab.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X8_commonHW_DI_RI_tab.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X8_commonHW_DI_RI_tab.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/X8_commonHW_DI_RI_tab.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/X8_commonHW_DI_tab.html</loc>
         <lastmod>2025-07-07</lastmod>
         <changefreq>daily</changefreq>
@@ -6810,6 +6887,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DI.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DI.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DI_RI.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DI_RI.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_DI_RI.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_DO.html</loc>

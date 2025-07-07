@@ -16,7 +16,7 @@
         <link rel="prev" href="../../CZ/TGZ/TGZ_SW/LED/md/description.html">
       
       
-        <link rel="next" href="commonHW_DO.html">
+        <link rel="next" href="commonHW_DI_RI.html">
       
       
       <link rel="icon" href="../img/TGsymbol.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Digitální vstupy - Česky</title>
+        <title>Digitální vstupy UNI - Česky</title>
       
     
     
@@ -82,6 +82,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#commonDI1-8" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Digitální vstupy
+              Digitální vstupy UNI
             
           </span>
         </div>
@@ -7736,18 +7741,98 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Digitální vstupy UNI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="commonHW_DI.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Digitální vstupy
+    Digitální vstupy UNI
     
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commonDI1-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Základní popis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-di" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametry DI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pouziti-s-hallovymi-sondami" class="md-nav__link">
+    <span class="md-ellipsis">
+      Použití s hallovými sondami
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commonHW_DI_RI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digitální vstupy RI
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -10947,8 +11032,16 @@
 
 
 
-  <h1>Digitální vstupy</h1>
+  <h1>Digitální vstupy UNI</h1>
 
+<h2 id="commonDI1-8">Základní popis<a class="headerlink" href="#commonDI1-8" title="Permanent link">&para;</a></h2>
+<p>Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru <strong>X8</strong> integrováno osm rychlých izolovaných digitálních vstupů.
+Šest z nich (DI1-6) lze u výrobce nakonfigurovat buď pro klasickou funkci digitálního vstupu, nebo jako přímé vstupy pro hallovy sondy.
+V obou případech je nutné připojit napájecí napětí na VDDIO proti GNDIO, jelikož jsou vstupy aktivní a vyžadují napájení.
+Stačí připojení napájecího napětí na jeden ze dvou napájecích vstupu VDDIO, aby aktivní vstupy fungovaly správně.
+Zbývající digitální vstupy č. 7 a č. 8 jsou standardní, pasivní, s nominální vstupní úrovní +24V a nevyžadují připojení VDDIO.
+Všechny digitální vstupy 1-8 mají integrovanou ochranu proti přepólování (až do -70 V) a proti přepětí (nad 30 V).</p>
+<h2 id="parametry-di">Parametry DI<a class="headerlink" href="#parametry-di" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -11098,6 +11191,12 @@
 </tr>
 </tbody>
 </table>
+<h2 id="pouziti-s-hallovymi-sondami">Použití s hallovými sondami<a class="headerlink" href="#pouziti-s-hallovymi-sondami" title="Permanent link">&para;</a></h2>
+<p>Pokud chcete využít přímého připojení hallových sond určených pro komutaci motoru do konektoru <strong>X8</strong> na vstupy <code>1,3,5</code> (osa 1) nebo <code>2,4,6</code> (osa 2) je potřeba požádat výrobce předem o správně HW uzpůsobenou verzi.
+Tato verze se liší jak v hardware, tak ve firmware.
+Dbejte na to, aby takto použité hallovy sondy byly <strong>přizpůsobeny pro napájecí napětí až 30V</strong>, jelikož digitální vstupy servozesilovače TGZ pracují na nominální hladině <strong>24V</strong>.
+Použití hallových sond s napájecím napětím 5V nebo 12V nebude v tomto případě fungovat.   </p>
+<p>Pokud není možné z nějakého důvodu zajistit vhodné hallovy sondy a jejich napájecí napětí 24V, doporučujeme použít speciální přizpůsobovací modul <a href="../../CZ/ETC/TGHall/md/description.html#TGhall_1">TGHall</a>, který si vyžádejte u společnosti TG Drives.</p>
 
 
 
@@ -11120,7 +11219,7 @@
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="12. listopadu 2024 13:52:03 UTC"><span class="timeago" datetime="2024-11-12T13:52:03+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="12. listopadu 2024 13:52:03 UTC">2024-11-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="7. července 2025 20:25:46 UTC"><span class="timeago" datetime="2025-07-07T20:25:46+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="7. července 2025 20:25:46 UTC">2025-07-07</span>
   </span>
 
     
