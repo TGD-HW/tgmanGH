@@ -7,14 +7,14 @@
 !!! note "Note"
 	The external temperature sensor PT1000 is used to measure the motor temperature.
 	
-##Description of communication, input/output and control:
+##Description of communication, input/output and control
 ###Communication interfaces
 - Ethernet 100/1000 Mb/s with UDP protocol, designed for parameter recording, monitoring, testing, but also online control;
 - RS422 or RS485, data transfer via unused servomotor feedback interface.
   It can be used for communication with devices based on RS422 or RS485 standard (encoder, gyro, master controller, other system, etc.).
   This interface enables high-speed communication up to 20Mbit/s.
   
-###Inputs / outputs:
+###Inputs / outputs
 The built-in TGZ servo amplifiers have 8 isolated digital inputs, 3 digital inputs, 6 isolated digital outputs, 1 analog input and 2 PT1000 thermistor inputs implemented. It is possible to control these inputs and outputs using a user program (C language):
 
 | I/O    | Type              | Count | Value                                               |

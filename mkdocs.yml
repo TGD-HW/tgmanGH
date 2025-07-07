@@ -478,7 +478,8 @@ nav:
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-400-14_30-RI/md/safe.md'                 
             - 'Společný HW':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
-                - Digitální vstupy: 'Manual/source/md/commonHW_DI.md'
+                - Digitální vstupy UNI: 'Manual/source/md/commonHW_DI.md'
+                - Digitální vstupy RI: 'Manual/source/md/commonHW_DI_RI.md'
                 - Digitální výstupy: 'Manual/source/md/commonHW_DO.md'  
                 - Analogové vstupy: 'Manual/source/md/commonHW_AI.md'  
                 - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'
