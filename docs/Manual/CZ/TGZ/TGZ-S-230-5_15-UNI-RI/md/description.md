@@ -108,6 +108,11 @@ ___
 	---
 
 	--8<-- "md/X8_DIO_18pin_ClikMate.md"
+	
+	Detailní soupis parametrů 
+	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI) a
+	[digitálních výstupů DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) 
+	naleznete v sekci [Společný HW](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI).
 		
 -   **X9 - MicroSD slot**
 

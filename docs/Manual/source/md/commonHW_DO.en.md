@@ -1,5 +1,5 @@
 ##Basic Description {#commonDO1-6}
-The TGZ servoamplifier has six fast isolated push-pull (totem pole) digital outputs integrated on the **X8** connector in the standard (UNI) design.
+The TGZ servoamplifier has six fast isolated push-pull (totem pole) digital outputs integrated on the **X8** connector of the standard (UNI) and also the ruggedized (RI) version.
 The outputs require a power supply applied to the VDDIO on the **X8** connector (also labeled "VCC DO") to function.
 The power supply is divided into two groups.
 The DO1,3,5 outputs are powered from the VCC DO1,3,5 power input (pin 12 of connector X8).

@@ -22,7 +22,7 @@ The built-in TGZ servo amplifiers have 8 isolated digital inputs, 3 digital inpu
 | input  | analog             | 1     | 0-10 V                                              |
 | input  | thermistor         | 2     | standard PT1000                                     |
 | input  | digital            | 3     | 0-30 VDC (0-0.8 V low / 2.4-30 V high)         |
-| input  | isolated digital   | 8     | 0-24 VDC (0-10 V low / 13-24 V high), 20 mA         |
+| input  | isolated digital   | 8     | 0-24 VDC (0-10 V low / 13-24 V high), 10 mA         |
 | output | isolated digital   | 6     | 5-24 VDC, 300 mA / max. output                      |
 
 
@@ -128,6 +128,11 @@ ___
 	---
 
 	--8<-- "md/X8_DIO_18pin_ClikMate.en.md"
+	
+	Please see details about
+	[digital inputs DI1-8](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI) and 
+	[digital outputs DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) 
+	in the [Common hardware section](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI).
 		
 -   **X9 - MicroSD slot**
 

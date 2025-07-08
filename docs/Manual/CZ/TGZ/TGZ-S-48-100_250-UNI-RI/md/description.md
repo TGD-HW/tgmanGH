@@ -29,7 +29,7 @@ Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
 | vstup   | analogový        | 1      | 0-10 V                                             |
 | vstup   | termistor        | 2      | standard PT1000                                    |
 | vstup   | digitální        | 3      | 0-30 VDC (0-0,8 V low/2,4-30 V high)      |
-| vstup   | izolovaný digitální | 8   | 0-24 VDC (0-10 V low/13-24 V high), 20 mA      |
+| vstup   | izolovaný digitální | 8   | 0-24 VDC (0-10 V low/13-24 V high), 10 mA      |
 | výstup  | izolovaný digitální | 6   | 5-24 VDC, 300 mA / max. výstup                     |
 
 Servozesilovač má čtyři zpětnovazební rozhraní, které mají široké využití.
@@ -144,6 +144,11 @@ ___
 	---
 
 	--8<-- "md/X8_DIO_18pin_ClikMate.md"
+	
+	Detailní soupis parametrů 
+	[digitálních vstupů DI1-8](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI) a
+	[digitálních výstupů DO1-6](../../../../source/md/commonHW_DO.md#commonDO1-6) 
+	naleznete v sekci [Společný HW](../../../../source/md/commonHW_DI_RI.md#commonDI1-8_RI).
 		
 -   **X9 - MicroSD slot**
 

@@ -97,8 +97,9 @@ plugins:
                 Příklad zapojení: Example schematic
                 Bezpečnost: Safety
                 Stavová a chybová hlášení: Status and errors
-                Digitální vstupy: Digital inputs
+                Digitální vstupy UNI: Digital inputs UNI
                 Digitální výstupy: Digital outputs
+                Digitální vstupy RI: Digital inputs RI
                 Analogové vstupy: Analog inputs
                 Sběrnice CAN: CAN bus
                 Zpětná vazba FBE: FBE feedback

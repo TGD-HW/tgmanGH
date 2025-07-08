@@ -1,5 +1,5 @@
 ##Základní popis {#commonDO1-6}
-Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrováno šest rychlých izolovaných digitálních výstupů typu push-pull (totem pole).
+Servozesilovač TGZ má ve standardním (UNI) i zodolněném (RI) provedení na konektoru **X8** integrováno šest rychlých izolovaných digitálních výstupů typu push-pull (totem pole).
 Výstupy ke své funkci potřebují napájení přivedné na VDDIO na konektoru **X8** (značeno také "VCC DO").
 Napájení je rozděleno na dvě skupiny.
 Výstupy DO1,3,5 jsou napájeny z napájecího vstupu VCC DO1,3,5 (pin 12 konektoru X8).
