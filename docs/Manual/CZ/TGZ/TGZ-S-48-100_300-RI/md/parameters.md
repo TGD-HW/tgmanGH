@@ -3,8 +3,8 @@
 | Ovládací napětí | 24 VDC ± 10 %, 600 mA |
 | Výkonové napájecí napětí | 0–48 VDC |
 | Instalovaný příkon pro provoz S1 | 4,8 kVA |
-| Trvalý proud na jednu osu | 100A |
-| Maximální výstupní proud (max. 5 s) | 300 A |
+| Trvalý proud na jednu osu | 100 A |
+| Maximální výstupní proud (max. 5 s) | 350 A |
 | Ztráty při jmenovité zátěži | 70 W |
 | Stupeň krytí | IP20 |
 | Teplota okolí | -32 ~ +40 °C |

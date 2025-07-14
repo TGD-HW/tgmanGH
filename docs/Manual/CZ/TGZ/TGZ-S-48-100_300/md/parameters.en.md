@@ -4,7 +4,7 @@
 | Power supply voltage | 0–48 VDC |
 | Installed power consumption for S1 operation | 4,8 kVA |
 | Constant current on one axis | 100 A |
-| Maximum output current (max. 5s) | 300 A |
+| Maximum output current (max. 5s) | 350 A |
 | Losses at rated load | 70 W |
 | Protection level | IP20 |
 | Ambient operating temperature | 0 ~ 40 °C |
