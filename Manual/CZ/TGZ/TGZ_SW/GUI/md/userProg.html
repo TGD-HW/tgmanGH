@@ -82,6 +82,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#popis-spusteni-uzivatelskeho-programu" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -8271,6 +8276,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Uživatelský program
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="userProg.html" class="md-nav__link md-nav__link--active">
         
   
@@ -8282,6 +8300,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#popis-spusteni-uzivatelskeho-programu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popis spuštění uživatelského programu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nastaveni-parametru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nastavení parametrů
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -10972,7 +11025,40 @@
 
   <h1>Uživatelský program</h1>
 
-<p>V programu TGZ GUI je možné spustit testovací uživatelský program.</p>
+<p>V programu <strong>TGZ GUI</strong> je možné spustit testovací uživatelský program. Jeho tvorba je možná například v prostředí <strong>Visual Studio</strong> či <strong>Code::Blocks</strong>.</p>
+<hr />
+<h2 id="popis-spusteni-uzivatelskeho-programu">Popis spuštění uživatelského programu<a class="headerlink" href="#popis-spusteni-uzivatelskeho-programu" title="Permanent link">&para;</a></h2>
+<p>Připojte se pomocí <strong>TGZ GUI II</strong> k zařízení <strong>TGZ</strong>, do kterého chcete nahrát <strong>PLC</strong>.</p>
+<p>V horní části programu v záložkách zvolte záložku <strong><code>Uživatelský program</code></strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_01.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 01" src="../img/GUI_UPL_01.webp" style="width:100%;" /></a></p>
+<p>V dolní části programu zvolte záložku <strong><code>Ovládání</code></strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_02.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 02" src="../img/GUI_UPL_02.webp" style="width:100%;" /></a></p>
+<p>Pod touto záložkou v poli <strong><code>Soubor s programem</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_03.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 03" src="../img/GUI_UPL_03.webp" style="width:100%;" /></a></p>
+<p>stiskněte na konci řádku tlačítko <strong><code>…</code></strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_04.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 41" src="../img/GUI_UPL_04.webp" style="width:100%;" /></a></p>
+<p>Vyberte požadované <strong>PLC</strong> a volbu potvrďte. Nyní se v poli <strong><code>Soubor s programem</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_05.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 05" src="../img/GUI_UPL_05.webp" style="width:100%;" /></a></p>
+<p>objeví cesta k vybranému <strong>PLC</strong>.</p>
+<p>Stiskněte tlačítko <strong><code>Nahrátí</code></strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_06.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 06" src="../img/GUI_UPL_06.webp" style="width:100%;" /></a></p>
+<p>Nyní se objeví zpráva nahraného <strong>PLC</strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_07.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 07" src="../img/GUI_UPL_07.webp" style="width:100%;" /></a></p>
+<p>Pokud vše proběhlo v pořádku a nedošlo k žádnému problému, text v pravém dolním rohu v části <strong><code>Ovládání</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_08.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 08" src="../img/GUI_UPL_08.webp" style="width:100%;" /></a></p>
+<p>se změní z <strong><code>Program není načten</code></strong> na <strong><code>Program spuštěn</code></strong> a tlačítka, včetně pozadí textu, změní barvy.</p>
+<p>Nyní stiskem tlačítka <strong><code>Uložení do paměti</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_09.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 09" src="../img/GUI_UPL_09.webp" style="width:100%;" /></a></p>
+<p>uložíte <strong>PLC</strong> do flash paměti zařízení.</p>
+<hr />
+<h2 id="nastaveni-parametru">Nastavení parametrů<a class="headerlink" href="#nastaveni-parametru" title="Permanent link">&para;</a></h2>
+<p>V horní části <strong>TGZ GUI</strong> zvolte záložku <strong><code>Parametry</code></strong>.</p>
+<p><a class="glightbox" href="../img/GUI_UPL_10.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 10" src="../img/GUI_UPL_10.webp" style="width:100%;" /></a></p>
+<p>V rozbalovací nabídce parametru <strong><code>CO-UserProgStart</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_11.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 11" src="../img/GUI_UPL_11.webp" style="width:100%;" /></a></p>
+<p>vyberte možnost <strong><code>1: Yes – from flash</code></strong></p>
+<p><a class="glightbox" href="../img/GUI_UPL_12.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="TGZ GUI UPL 12" src="../img/GUI_UPL_12.webp" style="width:100%;" /></a></p>
+<p>, pokud chcete, aby se <strong>PLC</strong> automaticky spustilo při startu zařízení.</p>
 
 
 
@@ -10995,7 +11081,7 @@
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="24. května 2024 10:12:19 UTC"><span class="timeago" datetime="2024-05-24T10:12:19+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="24. května 2024 10:12:19 UTC">2024-05-24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="17. července 2025 12:25:16 UTC"><span class="timeago" datetime="2025-07-17T12:25:16+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="17. července 2025 12:25:16 UTC">2025-07-17</span>
   </span>
 
     
