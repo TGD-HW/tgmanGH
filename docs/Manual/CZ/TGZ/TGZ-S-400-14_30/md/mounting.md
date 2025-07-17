@@ -2,8 +2,7 @@
 ## Uchycení
 L-profil umožňuje variabilní montáž měniče do rozvaděče nebo přímo na stroj. Níže jsou uvedeny rozměry a poloha jednotlivých montážních prvků.
 
-![TGZ-S-400-3/9 Mounting Front](../img/mounting1.png){: style="width:70%;" }
-![TGZ-S-400-3/9 Mounting Top](../img/mounting2.png){: style="width:65%;" }
+![TGZ-S-400-14/30 Mounting](../img/mounting.webp){: style="width:70%;" }
 
 --8<-- "md/mechMounting.md"
 
