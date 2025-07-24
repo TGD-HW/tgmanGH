@@ -1343,7 +1343,7 @@ At the bottom of the window there is an informative status bar with several func
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat 2,&yen;u000a3..SSI, 4.. Incremental&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat 2,<br>3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 4.. Incremental, 6.. BISS, 7.. SSI&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat<br>, 4.. Incremental, 6.. BISS, 7.. SSI</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Type&quot;}">F-Type</td>
@@ -1355,7 +1355,7 @@ At the bottom of the window there is an informative status bar with several func
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat 2,&yen;u000a3..SSI, 4.. Incremental&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat 2,<br>3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Feedback type : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 4.. Incremental, 6.. BISS, 7.. SSI&quot;}">Feedback type : 1.. Hiperface DSL, 2.. Endat<br>, 4.. Incremental, 6.. BISS, 7.. SSI</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Resolution&quot;}">F-Resolution</td>

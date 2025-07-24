@@ -1341,7 +1341,7 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 3..SSI, 4.. Incremental&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>2, 3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 4.. Incremental, 6.. BISS, 7.. SSI&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>, 4.. Incremental, 6.. BISS, 7.. SSI</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Type&quot;}">F-Type</td>
@@ -1353,7 +1353,7 @@ V dolní části okna se pak nachází informativní stavový řádek s několik
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;read-write&quot;}">read-write</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}">-</td>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;32 bits&quot;}">32 bits</td>
-		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 3..SSI, 4.. Incremental&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>2, 3..SSI, 4.. Incremental</td>
+		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat&yen;u000a2, 4.. Incremental, 6.. BISS, 7.. SSI&quot;}">Typ zpětné vazby : 1.. Hiperface DSL, 2.. Endat<br>, 4.. Incremental, 6.. BISS, 7.. SSI</td>
 	</tr>
 	<tr>
 		<td data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F-Resolution&quot;}">F-Resolution</td>
