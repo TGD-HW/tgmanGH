@@ -62,7 +62,7 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100RI_enetCon.webp){: style="width:80%;" }
+![TGZ-S-48-50/100 ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-50_100-UNI-RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -267,7 +267,7 @@ ___
 
     ---
 	
-	![DC bus connection](../../../../source/img/S-48pressfit5.svg){: style="width:70%;" }
+	![DC bus connection](../../../../source/img/TGZ-S-48-50_100RI_X2.webp){: style="width:70%;" }
 
 -    Pressfit M5 - doporučené kabelové oko [JST GS5-10](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)
 
@@ -284,7 +284,7 @@ ___
 
     ---
 	
-	![Motor connection](../../../../source/img/S-48pressfit5.svg){: style="width:70%;" }
+	![Motor connection](../../../../source/img/TGZ-S-48-50_100RI_X2.webp){: style="width:70%;" }
 
 -    Pressfit M5 - doporučené kabelové oko [JST GS5-10](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)
 
