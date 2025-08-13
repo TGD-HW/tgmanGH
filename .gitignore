@@ -11,6 +11,7 @@ dist/
 site/*
 venv/*
 #.github/
+mkdocs-env/*
 
 # Compiled Java class files
 *.class
