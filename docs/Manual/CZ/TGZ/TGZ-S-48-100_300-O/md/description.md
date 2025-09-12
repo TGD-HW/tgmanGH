@@ -19,27 +19,6 @@ ___
 
 <div class="grid cards" markdown>
 
--   **X1 - Napájení řídicí části**
-
-    ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
-
--    Molex Micro-Fit 3.0 - 436450500
-
-	---
-
-	--8<-- "md/X1_24V_5pin_Microfit.md"
-	
-	!!! warning "Upozornění"
-		
-		Pin č. 2 konektoru X1 - "Výstup +24 VDC" je nutné externě propojit s pinem č. 2 na konektoru P7 (napájení diagnostiky statické brzdy).
-		
-		Pozor na orientaci konektoru - zajišťovací páčka nahoře = pin č. 1 vpravo.
-		
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-
 -   **X8 - Digitální I/O, analogové vstupy**
 
     ---

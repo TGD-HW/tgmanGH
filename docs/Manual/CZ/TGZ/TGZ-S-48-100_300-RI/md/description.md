@@ -328,7 +328,7 @@ ___
 		
 		Pin č. 2 konektoru X1 - "Výstup +24 VDC" je nutné externě propojit s pinem č. 2 na konektoru P7 (napájení diagnostiky statické brzdy).
 		
-		Pozor na orientaci konektoru - zajišťovací páčka nahoře = pin č. 1 vpravo.
+		Pozor na orientaci konektoru - zajišťovací páčka nahoře = pin č. 1 vpravo. Konektor je orientován zajišťovací páčkou ven z PCB.
 		
 	!!! info "Konektorové krimpy"
 	

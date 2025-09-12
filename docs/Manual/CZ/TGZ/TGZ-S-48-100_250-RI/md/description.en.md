@@ -329,7 +329,7 @@ ___
 		
 		Pin 2 of connector X1 - "+24 VDC output" must be connected externally to pin 2 of connector P7 (power supply for static brake diagnostics).
 		
-		Note the orientation of the connector - locking lever on top = pin 1 on the right.
+		Note the orientation of the connector - locking lever on top = pin 1 on the right. Locking lever faces outside the PCB.
 		
 	!!! info "Connector crimps"
 	
