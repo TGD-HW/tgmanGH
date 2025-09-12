@@ -7,7 +7,7 @@
    width="737.12"
    height="607.35999"
    viewBox="0 0 737.11999 607.35997"
-   sodipodi:docname="TGZ-S-48-100_250RI_brd.svg"
+   sodipodi:docname="TGZ-S-48-100_250RI_brd.en.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -41,8 +41,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.3380347"
-     inkscape:cx="312.39848"
-     inkscape:cy="278.39338"
+     inkscape:cx="318.37739"
+     inkscape:cy="342.66675"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -103,8 +103,8 @@
        transform="scale(0.08)" />
     <path
        id="path445"
-       d="m 177.76,634.32 h 42.56001"
-       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2.08;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+       d="m 171.65361,634.32 h 48.6664"
+       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2.22422;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path446"
        d="M 2164,5735 H 3360"
@@ -117,9 +117,8 @@
        transform="scale(0.08)" />
     <path
        id="path448"
-       d="m 7610,4081 h 435"
-       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:26;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="scale(0.08)" />
+       d="m 608.8,326.48 h 36.5762"
+       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2.13242;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path449"
        d="m 7544,5471 h 522"
@@ -196,8 +195,8 @@
        transform="scale(0.08)" />
     <path
        id="path464"
-       d="M 42.160002,644.4 H 176.07999 V 613.52 H 42.160002 Z"
-       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2.08;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+       d="M 42.206821,649.47205 H 170.56679 V 614.28837 H 42.206821 Z"
+       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path465"
        d="M 530,8577 H 2154 V 8239 H 530 Z"
@@ -225,9 +224,8 @@
        transform="scale(0.08)" />
     <path
        id="path470"
-       d="M 8034,4393 H 9534 V 3715 H 8034 Z"
-       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:26;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="scale(0.08)" />
+       d="M 646.61901,372.78721 H 766.29463 V 295.12009 H 646.61901 Z"
+       style="fill:none;stroke:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="path471"
        d="m 646.08,490.40391 h 117.6 v -72.24394 h -117.6 z"
@@ -253,7 +251,7 @@
          id="tspan1"
          x="48.736"
          y="413.98541"
-         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Fáze W</tspan></text>
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Phase W</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -265,12 +263,12 @@
          x="48.736"
          y="448.33575"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan4">P5 - Propojení</tspan><tspan
+         id="tspan5">P5 - Control</tspan><tspan
          sodipodi:role="line"
          x="48.736"
          y="468.33575"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan5">se řídicí deskou</tspan></text>
+         id="tspan30">board connection</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -282,7 +280,7 @@
          id="tspan8"
          x="49.152"
          y="558.93365"
-         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Fáze V</tspan></text>
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Phase V</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -294,7 +292,7 @@
          id="tspan9"
          x="49.152"
          y="678.77686"
-         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Fáze U</tspan></text>
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">X3 - Phase U</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -306,19 +304,23 @@
          id="tspan10"
          x="49.152"
          y="596.48004"
-         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">P7 - Brzda osa 1</tspan></text>
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">P7 - Axis 1 brake</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
-       x="48.096001"
-       y="635.04004"
-       id="text11"
-       transform="translate(-37.839999,-218.88)"><tspan
+       x="10.256001"
+       y="412.496"
+       id="text11"><tspan
          sodipodi:role="line"
          id="tspan11"
-         x="48.096001"
-         y="635.04004"
-         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">P8 - Brzda osa 1**</tspan></text>
+         x="10.256001"
+         y="412.496"
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">P8 - Axis 1 brake</tspan><tspan
+         sodipodi:role="line"
+         x="10.256001"
+         y="432.496"
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan31">**</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -330,12 +332,17 @@
          x="651.72003"
          y="320.16"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan12">P1 - Propojení</tspan><tspan
+         id="tspan13">P1 - Connection</tspan><tspan
          sodipodi:role="line"
          x="651.72003"
          y="340.16"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan13">se řídicí deskou</tspan></text>
+         id="tspan14">with the control</tspan><tspan
+         sodipodi:role="line"
+         x="651.72003"
+         y="360.16"
+         style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan21">section</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -347,17 +354,17 @@
          x="651.72003"
          y="440.12195"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan15">P3 - Externí </tspan><tspan
+         id="tspan19">P3 - External</tspan><tspan
          sodipodi:role="line"
          x="651.72003"
          y="460.12195"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan18">teplotní čidlo </tspan><tspan
+         id="tspan27">temperature</tspan><tspan
          sodipodi:role="line"
          x="651.72003"
          y="480.12195"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan19">PT1000</tspan></text>
+         id="tspan28">sensor PT1000</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -369,12 +376,12 @@
          x="653.88"
          y="529.84003"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan17">X1 - Napájení</tspan><tspan
+         id="tspan20">X1 - Control</tspan><tspan
          sodipodi:role="line"
          x="653.88"
          y="549.84003"
          style="font-size:16px;fill:#000000 icc-color(sRGB-IEC61966-2, 0.1, 0, 0, 0);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan20">řízení, STO</tspan></text>
+         id="tspan29">voltage, STO</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web';fill:none;stroke:#9900fe;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none"
@@ -478,13 +485,13 @@
     <text
        xml:space="preserve"
        style="font-weight:600;font-size:13.3333px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#0096ae;stroke:#00534f;stroke-width:0;stroke-dashoffset:5"
-       x="632.95996"
+       x="616.04901"
        y="444.44498"
        id="text3-3"><tspan
          sodipodi:role="line"
          id="tspan2-1"
-         x="632.95996"
+         x="616.04901"
          y="444.44498"
-         style="font-size:13.3333px;fill:#f93536;fill-opacity:1">1- pozice pinu 1</tspan></text>
+         style="font-size:13.3333px;fill:#f93536;fill-opacity:1">1- pin 1 location</tspan></text>
   </g>
 </svg>
