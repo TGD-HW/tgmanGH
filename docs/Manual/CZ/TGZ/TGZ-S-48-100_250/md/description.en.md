@@ -200,10 +200,10 @@ ___
 
 ![PCB connections](../../../../source/img/TGZ-S-48-100_250RI_brd.en.webp){: style="width:70%;" }
 
-	!!! warning "Regenerative braking"
-	
-		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
-		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
+!!! warning "Regenerative braking"
+
+	In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
+	it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
 
 <div class="grid cards" markdown>
 
