@@ -297,6 +297,16 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/safe.md'
+            - 'TGZ-S-230-7/15-UNI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/safe.md'                
             - 'TGZ-D-320-5/10-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/param.md'
