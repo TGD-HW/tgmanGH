@@ -436,7 +436,17 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/firmware.md'
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/safe.md'    
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/safe.md'
+            - 'TGZ-S-48-100/250-UNIR-RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/safe.md'                 
             - 'TGZ-S-48-100/300-UNI-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300-UNI-RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300-UNI-RI/md/param.md'
