@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../../../Manual/source/img/TGsymbol.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2a3383ac.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -160,7 +160,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
@@ -11469,6 +11469,7 @@
 <th style="text-align: center;"><strong>Hiperface DSL</strong></th>
 <th style="text-align: center;"><strong>Incremental encoder</strong></th>
 <th style="text-align: center;"><strong>RS422, RS485</strong></th>
+<th style="text-align: center;"><strong>Hengstler ACURO link</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -11478,6 +11479,7 @@
 <td style="text-align: center;">DSL+</td>
 <td style="text-align: center;">+12 V</td>
 <td style="text-align: center;">+12 V</td>
+<td style="text-align: center;">UB+</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -11485,6 +11487,7 @@
 <td style="text-align: center;">DSL-</td>
 <td style="text-align: center;">GND</td>
 <td style="text-align: center;">GND</td>
+<td style="text-align: center;">UB-</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
@@ -11492,6 +11495,7 @@
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">B+</td>
 <td style="text-align: center;">TxD+/RxD+</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -11499,6 +11503,7 @@
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">B-</td>
 <td style="text-align: center;">TxD-/RxD-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -11506,6 +11511,7 @@
 <td style="text-align: center;">FBSEL+</td>
 <td style="text-align: center;">A+</td>
 <td style="text-align: center;">TxD+/RxD+</td>
+<td style="text-align: center;">DATA+</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -11513,11 +11519,13 @@
 <td style="text-align: center;">FBSEL-</td>
 <td style="text-align: center;">A-</td>
 <td style="text-align: center;">TxD-/RxD-</td>
+<td style="text-align: center;">DATA-</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">FBSEL+</td>
+<td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 </tr>
@@ -11527,6 +11535,7 @@
 <td style="text-align: center;">FBSEL-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
@@ -11534,6 +11543,7 @@
 <td style="text-align: center;">+5V</td>
 <td style="text-align: center;">+5V</td>
 <td style="text-align: center;">+5V</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
@@ -11541,6 +11551,7 @@
 <td style="text-align: center;">GND</td>
 <td style="text-align: center;">GND</td>
 <td style="text-align: center;">GND</td>
+<td style="text-align: center;">-</td>
 </tr>
 </tbody>
 </table>
@@ -11566,7 +11577,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 12, 2024 13:52:03 UTC"><span class="timeago" datetime="2024-11-12T13:52:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 12, 2024 13:52:03 UTC">2024-11-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 1, 2025 12:53:58 UTC"><span class="timeago" datetime="2025-10-01T12:53:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 1, 2025 12:53:58 UTC">2025-10-01</span>
   </span>
 
     
