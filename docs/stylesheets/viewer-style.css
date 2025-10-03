@@ -1,0 +1,28 @@
+/* custom.css */
+/* Target the H2 margin reset */
+article h2 {
+    margin-bottom: 0.5em !important; 
+    padding-bottom: 0 !important;
+}
+
+/* Target the Viewer.js-created container element */
+.viewer-container {
+    /* CRITICAL: Eliminate top spacing */
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    
+    /* Keep sizing and appearance rules */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; 
+    max-height: 80vh;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    display: block;
+    
+    /* Space before the text below */
+    margin-bottom: 1em; 
+}

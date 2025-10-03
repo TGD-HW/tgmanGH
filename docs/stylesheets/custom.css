@@ -1,0 +1,20 @@
+.viewer-container {
+    /* CRITICAL: Ensure no top margin is pushing it down */
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    
+    /* Keep other essential styles that define the window size */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; 
+    max-height: 80vh;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    display: block;
+
+    /* Add a small bottom margin to separate it from content below */
+    margin-bottom: 1em; 
+}
