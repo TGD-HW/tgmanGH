@@ -27,6 +27,29 @@ svg text {
   --md-accent-bg-color--light:         hsl(86, 54%, 51%);
 }
 
+/* Custom CSS to hide the original source image element */
+
+.viewer-container img.viewer-skip {
+    /* 🎯 CRITICAL FIX: The most powerful way to remove an element 
+       from the document flow, making it take up ZERO space. */
+    display: none !important; 
+    
+    /* These rules become redundant but don't hurt */
+    position: absolute !important; 
+    width: 0 !important; 
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Optional: Resetting margins on the container itself for clean placement */
+.viewer-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    
+    /* Set a reasonable margin below to separate it from content */
+    margin-bottom: 1em; 
+}
 /*
 // Allow to explicitly use color schemes in nested content
 [data-md-color-scheme="default"] {
