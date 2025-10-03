@@ -1,3 +1,3 @@
-# Příklad schématu zapojení napájecího modulu TGS
-
-![Example schematic](../img/TGS-560-25_50_schematic.webp){: style="width:90%;" }
+<div class="viewer-container">
+	<img src="../img/schematic.webp" class="viewer-skip" alt="Example schematic"/>
+</div>

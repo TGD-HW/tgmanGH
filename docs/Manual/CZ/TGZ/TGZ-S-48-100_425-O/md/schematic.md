@@ -1,1 +1,3 @@
-![Příklad zapojení servozesilovače](../img/schematic.webp){: style="width:100%;" }
+<div class="viewer-container">
+	<img src="../img/schematic.webp" class="viewer-skip" alt="Example schematic"/>
+</div>

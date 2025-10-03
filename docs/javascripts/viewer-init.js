@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // 2. Initialize Viewer.js directly on the <img> element
         const viewer = new Viewer(img, {
             inline: true,
-            toolbar: false,
+            toolbar: true,
             navbar: false,
             title: false,
-            zoomRatio: 0.2, 
+            zoomRatio: 0.1, 
             minZoomRatio: 0.1,
-            maxZoomRatio: 5,
+            maxZoomRatio: 4,
             transition: false,
             movable: true,
             zoomable: true,
             scalable: false,
-            rotatable: false,
+            rotatable: true,
             url: 'src',
 
             // CRITICAL: Once the Viewer is ready and its DOM is built:

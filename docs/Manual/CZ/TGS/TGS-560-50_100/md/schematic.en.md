@@ -1,3 +1,3 @@
-##Example schematic
-
-![Example schematic](../img/TGS-560-50_100_schematic.webp){: style="width:90%;" }
+<div class="viewer-container">
+	<img src="../img/schematic.webp" class="viewer-skip" alt="Example schematic"/>
+</div>
