@@ -22,7 +22,15 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_1.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_2.webp){: style="width:90%;" }
 
 -    Molex Micro-Fit 3.0 - 436450500
 

@@ -287,8 +287,8 @@ ___
 
 </div>
 
-[^3]: Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle [Aplikačního návodu Molex Micro-Lock](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf)
-[^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf)
+[^3]: Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle [Aplikačního návodu Molex Micro-Lock](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf) a použijte krimpovací nástroj [2002180800](https://www.molex.com/en-us/products/part-detail/2002180800).
+[^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) a použijte krimpovací nástroj [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400).
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
@@ -298,5 +298,4 @@ Pokud je nutné použít jiný typ zpětné vazby než Hiperface DSL, je nutné 
 Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální enkodér.
 Funkce zpětné vazby také závisí na nahraném firmwaru.
 
-![TGZ-S-48-50/100-RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
-
+![TGZ-S-48-50/100-RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }

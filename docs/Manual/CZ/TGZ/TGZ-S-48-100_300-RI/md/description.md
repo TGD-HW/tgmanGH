@@ -316,7 +316,15 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_1.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_2.webp){: style="width:90%;" }
 
 -    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -397,8 +405,8 @@ ___
 
 </div>
 
-[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
-[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) a použijte krimpovací nástroj [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400).
+[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf) a použijte krimpovací nástroj [638190000](https://www.molex.com/en-us/products/part-detail/638190000).
 [^5]: Standardně jsou dodávány přívodní vodiče (DC) délky 1 m.
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:

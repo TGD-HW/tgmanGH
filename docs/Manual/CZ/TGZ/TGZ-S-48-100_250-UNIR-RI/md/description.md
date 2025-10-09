@@ -10,7 +10,7 @@
 !!! note "Poznámka"
 	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
 	
-##Popis komunikace, vstupů/výstupů a ovládání:
+##Popis komunikace, vstupů/výstupů a ovládání
 ###Komunikační rozhraní
 - Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.
 - CAN bus protokol lze upravit podle požadavků zákazníka.
@@ -20,7 +20,7 @@
   Může být použit pro komunikaci se zařízeními založenými na standardu RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
   Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
   
-###Vstupy / výstupy:
+###Vstupy / výstupy
 Vestavné servozesilovače TGZ v tomto provedení mají 8 digitálních vstupů, 6 digitálních výstupů, 2 vstupy pro teplotní čidlo PT1000, jeden obecný analogový vstup 0-10 V a 3 vstupy pro připojení Hall čidel (1 osa).
 Tyto vstupy/výstupy je možné číst/ovládat pomocí uživatelského programu (jazyk C).
 Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
@@ -130,8 +130,16 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
-
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_1.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_2.webp){: style="width:90%;" }	
+	
 -    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
@@ -311,8 +319,18 @@ ___
 
     ---
 	
+	Pohled na PCB konektor:
+	
 	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
-
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
+	
 -    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
@@ -331,7 +349,17 @@ ___
 
     ---
 	
+	Pohled na konektor na PCB:	
+	
 	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }	
 
 -    Molex Micro-Fit 3.0 - 430250400. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -381,7 +409,18 @@ ___
 
     ---
 	
-	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
+	Pohled na PCB konektor:
+	
+	![External thermistor](../../../../source/img/436500215.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![External thermistor counterpart PCB](../../../../source/img/436450200_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:	
+
+	![External thermistor counterpart wires](../../../../source/img/436450200_2.webp){: style="width:60%;" }	
+	
 
 -    Molex Micro-Fit 3.0 - 436500215. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -399,8 +438,8 @@ ___
 
 </div>
 
-[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf).
-[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf).
+[^3]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) a použijte krimpovací nástroj [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400).
+[^4]: Při krimpování a zapojování konektorů systému Molex Micro-Fit postupujte dle [Aplikačního návodu Molex Micro-Fit](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf) a použijte krimpovací nástroj [638190000](https://www.molex.com/en-us/products/part-detail/638190000).
 [^5]: Standardně jsou dodávány přívodní vodiče (DC) délky 1 m.
 
 ###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
@@ -411,5 +450,4 @@ Pokud je nutné použít jiný typ zpětné vazby než Hiperface DSL, je nutné 
 Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální enkodér.
 Funkce zpětné vazby také závisí na nahraném firmwaru.
 
-![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.webp){: style="width:70%;" }   
-
+![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.webp){: style="width:70%;" }
