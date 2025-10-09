@@ -321,7 +321,7 @@ ___
 	
 	Pohled na PCB konektor:
 	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
+	![Brake connector](../../../../source/img/430450412.webp){: style="width:60%;" }
 	
 	Pohled na protikus ze strany PCB:
 	
@@ -351,7 +351,7 @@ ___
 	
 	Pohled na konektor na PCB:	
 	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	![Brake connector aux](../../../../source/img/430450412.webp){: style="width:60%;" }
 	
 	Pohled na protikus ze strany PCB:
 	

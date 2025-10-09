@@ -316,7 +316,18 @@ ___
 -   **X1 - Control supply voltage**
 
     ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
+	
+	PCB connector top view:
+	
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Counterpart PCB side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_1.webp){: style="width:90%;" }
+	
+	Counterpart wire side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_2.webp){: style="width:90%;" }	
 
 -    Molex Micro-Fit 3.0 - 436450500. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -338,7 +349,17 @@ ___
 
     ---
 	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
+	PCB connector top view:
+	
+	![Brake connector](../../../../source/img/430450412.webp){: style="width:60%;" }
+	
+	Counterpart PCB side view:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Counterpart wire side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -354,11 +375,21 @@ ___
 	
 		Match the type of crimps to the selected wire cross section.
 		
--   **P8 - Static brake**
+-   **P8 - Static brake 2**
 
     ---
 	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	PCB connector top view:
+	
+	![Brake aux connector](../../../../source/img/430450412.webp){: style="width:60%;" }
+	
+	Counterpart PCB side view:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Counterpart wire side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
@@ -378,7 +409,17 @@ ___
 
     ---
 	
-	![External temperature sensor](../../../../source/img/436500215.svg){: style="width:60%;" }
+	PCB connector top view:
+	
+	![External thermistor](../../../../source/img/436500215.webp){: style="width:60%;" }
+	
+	Counterpart PCB side view:
+	
+	![External thermistor counterpart PCB](../../../../source/img/436450200_1.webp){: style="width:60%;" }
+	
+	Counterpart wire side view:
+
+	![External thermistor counterpart wires](../../../../source/img/436450200_2.webp){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 436500215. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
