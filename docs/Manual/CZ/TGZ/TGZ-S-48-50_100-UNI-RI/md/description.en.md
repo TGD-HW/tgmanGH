@@ -271,7 +271,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DCbus_2pin_pressfit.en.md"
+	--8<-- "md/X2_DCbus_2pin_pressfit.en.md"
 	
 	!!! warning "Regenerative braking"
 	
@@ -288,7 +288,7 @@ ___
 
     ---
 	
-	--8<-- "md/X3_M1_3pin_pressfit.en.md"
+	--8<-- "md/X2_M1_3pin_pressfit.en.md"
 
 
 -   **X3 - Static brake connector**

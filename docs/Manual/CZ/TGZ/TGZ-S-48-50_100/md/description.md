@@ -197,7 +197,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DCbus_2pin_pressfit.md"
+	--8<-- "md/X2_DCbus_2pin_pressfit.md"
 	
 	!!! warning "Regenerativní brzdění"
 	
@@ -214,7 +214,7 @@ ___
 
     ---
 	
-	--8<-- "md/X3_M1_3pin_pressfit.md"
+	--8<-- "md/X2_M1_3pin_pressfit.md"
 
 
 -   **X4 - Připojení brzdy**
