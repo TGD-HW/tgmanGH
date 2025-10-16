@@ -9,13 +9,13 @@ ___
 ### Strana ethernet/ethercat
 ___
 
-![TGZ-S-48-100/250 ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
+![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:70%;" }
 
 ___
 ### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -47,12 +47,14 @@ ___
 	
 	!!! warning "Pozor"	
 	
-		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
+		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). 
+		Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
 	
 -   **X9 - MicroSD karta**
 
     ---
-![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
+	
+	![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -105,7 +107,7 @@ ___
 ### Strana feedback
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -168,92 +170,47 @@ ___
 </div>
 
 
+___
+### Pohled na svorkovnici
+___
+	
+![Terminals](../../../../source/img/TGZ-S-48-100_250-O_X0ab.webp){: style="width:60%;" }
+
 <div class="grid cards" markdown>
 
--   **P7 - Statická brzda**
+-   **X0a - Výkonové svorky**
 
     ---
 	
-	Pohled na PCB konektor:
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0a.webp){: style="width:80%;" }
 	
-	![Brake connector](../../../../source/img/430450412.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany PCB:
-	
-	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany vodičů:
-	
-	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 430250400
+-   Motorové svorky
 
-	---
+    ---
 
-	--8<-- "md/P7_BR_4pin_Microfit.md"
+	--8<-- "md/X0a_48-100-xyz.md"
 	
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-		
--   **P8 - Statická brzda - doplňkový konektor**
+-   **X0b - Signálové svorky**
 
     ---
 	
-	Pohled na konektor na PCB:	
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
 	
-	![Brake connector aux](../../../../source/img/430450412.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany PCB:
-	
-	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany vodičů:
-	
-	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P8_BR_4pin_Microfit.md"
-	
-	!!! note "Konektor P8"
-	
-		Tento konektor se pro standardní použití jednoosého servozesilovače <nobr>TGZ-S-48-100/250</nobr> nezapojuje
-	
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-		
--   **P3 - Externí termistor PT1000**
+-   Signálové svorky
 
     ---
-	
-	Pohled na PCB konektor:
-	
-	![External thermistor](../../../../source/img/436500215.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany PCB:
-	
-	![External thermistor counterpart PCB](../../../../source/img/436450200_1.webp){: style="width:60%;" }
-	
-	Pohled na protikus ze strany vodičů:	
 
-	![External thermistor counterpart wires](../../../../source/img/436450200_2.webp){: style="width:60%;" }	
-
--    Molex Micro-Fit 3.0 - 436500215
-
-	---
-
-	--8<-- "md/P3_Term_2pin_Microfit.md"
+	--8<-- "md/X0b_48-100-xyz.md"
 	
-	!!! note "Polarita"
-	
-		Teplotní čidlo PT1000 nemá určenou polaritu napájení.
-	
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.		
-
 </div>
+
+
+___
+### Pohled na propojení výkonové části
+___
+
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:70%;" }
+
+Propojení mezi interní PCB a DIN svorkami je zajištěno interně a je součástí dodávky servozesilovače.

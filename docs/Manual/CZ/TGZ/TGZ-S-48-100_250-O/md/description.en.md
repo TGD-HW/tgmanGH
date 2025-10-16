@@ -53,6 +53,7 @@ ___
 -   **X9 - MicroSD card**
 
     ---
+	
 	![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Use a standard microSD card. The card is included with the TGZ servo amplifier. For more information, see [SD cards](../../TGZ_SW/SD/md/SD.md#SDparams).
