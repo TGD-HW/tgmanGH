@@ -95,6 +95,10 @@ Při aktivaci STO se současně provádějí následující akce:
 - Zrušte výběr funkce nastavením bitu STO v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
 - Povolte osu pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
+### Časový diagram STO
+
+![STO img](../../../../source/img/STO_timing_diagram_CZ.png){: style="width:100%;" }
+
 ## SS1 – časově závislé bezpečné zastavení
 
 Definice podle EN 61800-5-2:
@@ -132,6 +136,10 @@ Aktivní stav STO lze vyhodnotit pomocí:
 
 - Zrušte výběr funkce nastavením bitu SS1 v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
 - Povolte osu pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
+
+### Časový diagram SS1
+
+![SS1 img](../../../../source/img/SS1_timing_diagram_CZ.png){: style="width:100%;" }
 
 ## SOS – bezpečné provozní zastavení (Safe Operating Stop)
 
@@ -172,6 +180,10 @@ Aktivní stav STO lze vyhodnotit pomocí:
 - Zrušte výběr funkce nastavením bitu SOS v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
 - Pokud je aktivována funkce STO, musí být osa povolena pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
+### Časový diagram SOS
+
+![SOS img](../../../../source/img/SOS_timing_diagram_CZ.png){: style="width:100%;" }
+
 ## SS2 – bezpečné zastavení s monitorováním zpomalení
 
 Definice podle EN 61800-5-2:
@@ -210,8 +222,96 @@ Aktivní stav STO lze vyhodnotit pomocí:
 - Zrušte výběr funkce nastavením bitu SS2 v řídicím slově PROFIsafe na logickou jedničku a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
 - Pokud je aktivována funkce STO, musí být osa povolena pomocí řídicího slova PROFIdrive (tj. projděte stavovým diagramem PROFIdrive z S1 do S4).
 
-## SLS – bezpečná omezená rychlost
+### Časový diagram SS2
+
+![SS2 img success](../../../../source/img/SS2_success_timing_diagram_CZ.png){: style="width:100%;" }
+
+![SS2 img fail](../../../../source/img/SS2_fail_timing_diagram_CZ.png){: style="width:100%;" }
+
+## SLS – Bezpečná omezená rychlost
 
 Definice podle EN 61800-5-2:
 
 > "Funkce SLS zabraňuje překročení specifikovaného rychlostního limitu motorem."
+
+### Aktivace SLS
+
+Funkci SLS lze aktivovat kteroukoli z následujících událostí:
+
+- Bit PROFIsafe SLS v řídicím slově nastaven na nulu
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastaveny na nízkou úroveň, pokud jsou mapovány bezpečnostními parametry
+- Trvalá aktivace prostřednictvím bezpečnostních parametrů
+
+### Signalizace SLS
+
+Aktivní stav SLS lze vyhodnotit podle:
+
+- Bit stavu PROFIsafe SLS nastaven na logickou jedničku
+- Digitální výstupy (3&5 – osa 1, 4&6 – osa 2) nastaveny na nízkou úroveň, pokud jsou mapovány bezpečnostními parametry
+
+### Sekvence SLS
+
+1. SLS se volí buď řídicím slovem PROFIsafe, nebo digitálními vstupy (pokud jsou mapovány), nebo trvale prostřednictvím bezpečnostních parametrů.
+2. TGZ monitoruje otáčky motoru.
+3. Pokud otáčky překročí základní mezní otáčky (definované v pg_inc/s), TGZ iniciuje bezpečnostní reakci.
+4. Reakce závisí na konfiguraci a může aktivovat STO.
+5. Telegram PROFIsafe 902 umožňuje výběr druhé a třetí úrovně otáček (jako % základních otáček), které musí být nižší než 100 %.
+
+**Použité bezpečnostní parametry:**
+
+- Zpoždění (delay time) [ms]
+- Základní mezní rychlost (base limit speed) [pg_inc/s]
+- Zpomalení (deceleration) [pg_inc²/s]
+- Druhé, třetí a čtvrté procentuální snížení rychlosti [% základu] (pouze přes PROFIsafe)
+
+### Restart SLS (deaktivace)
+
+- Zrušte výběr funkce pomocí bitu řídicího slova PROFIsafe SLS na logickou 1 a/nebo nastavením obou mapovaných digitálních vstupů na vysokou úroveň.
+- Pokud byla aktivována funkce STO, povolte osu pomocí řídicího slova PROFIdrive (tj. přejděte ve stavovém diagramu PROFIdrive z S1 do S4).
+
+### Časový dagram SLS
+
+![SLS img](../../../../source/img/SLS_timing_diagram_CZ.png){: style="width:100%;" }
+
+## SLP – Bezpečná omezená poloha
+
+Definice podle normy EN 61800-5-2:
+
+> "Funkce SLP zabraňuje motoru překročit stanovené mezní polohy.“
+
+### Aktivace SLP
+
+Funkci SLP lze aktivovat kteroukoli z následujících událostí:
+
+- Bit PROFIsafe SLP v řídicím slově nastaven na nulu
+- Digitální vstupy (5 a 7 – osa 1, 6 a 8 – osa 2) nastaveny na nízkou úroveň, pokud jsou namapovány bezpečnostními parametry
+- Trvalá aktivace prostřednictvím bezpečnostních parametrů
+
+### Signalizace SLP
+
+Aktivní stav SLP lze vyhodnotit pomocí:
+
+- Bitu stavu PROFIsafe SLP nastaveného na logickou jedničku
+- Digitálních výstupů (3&5 – osa 1, 4&6 – osa 2) nastavených na nízkou úroveň, pokud jsou mapovány bezpečnostními parametry
+
+### Sekvence SLP
+
+1. SLP se volí buď řídicím slovem PROFIsafe, nebo digitálními vstupy (pokud jsou namapovány), nebo trvale prostřednictvím bezpečnostních parametrů.
+2. TGZ monitoruje polohu motoru.
+3. Pokud poloha překročí nakonfigurované limity, spustí se zvolená bezpečnostní reakce.
+4. Reakci lze nakonfigurovat tak, aby aktivovala STO, SS1 nebo SS2.
+
+**Použité bezpečnostní parametry:**
+
+- Horní a dolní mez pro bezpečnostní polohu 1 [pg_inc]
+- Horní a dolní mez pro bezpečnostní polohu 2 [pg_inc]
+- Výběr funkce zastavení: STO, SS1 nebo SS2
+
+### Restart SLP (deaktivace)
+
+- Zrušte výběr funkce pomocí bitu řídicího slova PROFIsafe SLP na logickou hodnotu 1 a/nebo nastavením obou namapovaných digitálních vstupů na vysokou úroveň.
+- Pokud byla aktivována funkce STO, povolte osu pomocí řídicího slova PROFIdrive (tj. přejděte ve stavovém diagramu PROFIdrive z S1 do S4).
+
+### Časový diagram SLP
+
+![SLP img](../../../../source/img/SLP_timing_diagram_CZ.png){: style="width:100%;" }

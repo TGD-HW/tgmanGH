@@ -71,10 +71,15 @@ When the STO is activated the following actions are done simultaneously:
 !!! warning "Warning"
     **After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.**
 
-### STO deactivation
+### STO restart (deactivation)
 
 - Deselect the function by PROFIsafe control word bit STO to logical 1 and/or by settings both mapped digital inputs to high level.
 - Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+
+### STO timing
+
+![STO img](../../../../source/img/STO_timing_diagram_EN.png){: style="width:100%;" }
+
 
 ## SS1 – time based safe stop
 
@@ -108,10 +113,14 @@ STO active status can be evaluated by:
 !!! warning "Warning"
     **After the energy feed has been disconnected (STO active) the motor can undesirably move (e.g. the motor can coast down), therefore presenting risk to persons.**
 
-### SS1 deactivation
+### SS1 restart (deactivation)
 
 - Deselect the function by PROFIsafe control word bit SS1 to logical 1 and/or by settings both mapped digital inputs to high level.
 - Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+
+### SS1 timing
+
+![SS1 img](../../../../source/img/SS1_timing_diagram_EN.png){: style="width:100%;" }
 
 ## SOS – safe operating stop
 
@@ -145,10 +154,15 @@ STO active status can be evaluated by:
 2. The TGZ waits for the timeout to elapse. During this time the motor must be stopped by the PLC.
 3. After the timeout, the TGZ checks if the motor is in standstill. If not, the **STO** function is activated.
 
-### SOS deactivation
+### SOS restart (deactivation)
 
 - Deselect the function by PROFIsafe control word bit SOS to logical 1 and/or by settings both mapped digital inputs to high level.
 - If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+
+### SOS timing
+
+![SOS img](../../../../source/img/SOS_timing_diagram_EN.png){: style="width:100%;" }
+
 
 ## SS2 – safe stop with deceleration monitoring
 
@@ -180,13 +194,102 @@ STO active status can be evaluated by:
 3. When the timeout elapses or the motor is in standstill, continuous check of the the zero speed is activated (SOS function).
 4. If the motor is not in standstill, the **STO** function is activated.
 
-### SS2 deactivation
+### SS2 restart (deactivation)
 
 - Deselect the function by PROFIsafe control word bit SS2 to logical 1 and/or by settings both mapped digital inputs to high level.
 - If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
 
-## SLS – safe limit speed
+### SS2 timing
+
+![SS2 img success](../../../../source/img/SS2_success_timing_diagram_EN.png){: style="width:100%;" }
+
+![SS2 img fail](../../../../source/img/SS2_fail_timing_diagram_EN.png){: style="width:100%;" }
+
+
+## SLS – Safe Limited Speed
 
 Definition according to EN 61800-5-2:
 
-> "The SLS function prevents the motor from exceeding the specified speed limit.
+> "The SLS function prevents the motor from exceeding the specified speed limit."
+
+### SLS activation
+
+The SLS function can be activated by any of the following events:
+
+- PROFIsafe SLS bit in the control word set to zero
+- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- Permanent activation via safety parameters
+
+### SLS signaling
+
+SLS active status can be evaluated by:
+
+- PROFIsafe status bit SLS set to logical one
+- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+
+### SLS sequence
+
+1. The SLS is selected either by PROFIsafe control word or by digital inputs (if mapped) or permanently via safety parameters.
+2. The TGZ monitors the motor speed.
+3. If the speed exceeds the base limit speed (defined in pg_inc/s), the TGZ initiates a safety reaction.
+4. The reaction depends on the configuration and may activate STO.
+5. PROFIsafe telegram 902 allows selection of second and third speed levels (as % of base speed), which must be lower than 100%.
+
+**Used safety parameters:**
+
+- Delay time [ms]
+- Base limit speed [pg_inc/s]
+- Deceleration [pg_inc²/s]
+- Second, third and fourth speed level [% of base] (via PROFIsafe only)
+
+### SLS restart (deactivation)
+
+- Deselect the function by PROFIsafe control word bit SLS to logical 1 and/or by setting both mapped digital inputs to high level.
+- If STO was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+
+### SLS timing
+
+![SLS img](../../../../source/img/SLS_timing_diagram_EN.png){: style="width:100%;" }
+
+## SLP – Safe Limited Position
+
+Definition according to EN 61800-5-2:
+
+> "The SLP function prevents the motor from exceeding the specified position limits."
+
+### SLP activation
+
+The SLP function can be activated by any of the following events:
+
+- PROFIsafe SLP bit in the control word set to zero
+- Digital inputs (5&7 – axis 1, 6&8 – axis 2) set to low if mapped by the safety parameters
+- Permanent activation via safety parameters
+
+### SLP signaling
+
+SLP active status can be evaluated by:
+
+- PROFIsafe status bit SLP set to logical one
+- Digital outputs (3&5 – axis 1, 4&6 – axis 2) set to low if mapped by the safety parameters
+
+### SLP sequence
+
+1. The SLP is selected either by PROFIsafe control word or by digital inputs (if mapped) or permanently via safety parameters.
+2. The TGZ monitors the motor position.
+3. If the position exceeds the configured limits, the selected safety reaction is triggered.
+4. The reaction can be configured to activate STO, SS1, or SS2.
+
+**Used safety parameters:**
+
+- Upper and lower limits for safety position 1 [pg_inc]
+- Upper and lower limits for safety position 2 [pg_inc]
+- Stop function selection: STO, SS1, or SS2
+
+### SLP restart (deactivation)
+
+- Deselect the function by PROFIsafe control word bit SLP to logical 1 and/or by setting both mapped digital inputs to high level.
+- If STO was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).
+
+### SLP timing
+
+![SLP img](../../../../source/img/SLP_timing_diagram_EN.png){: style="width:100%;" }

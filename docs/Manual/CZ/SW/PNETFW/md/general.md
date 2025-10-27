@@ -1,4 +1,5 @@
-##Technická specifikace
+## Technická specifikace
+
 Servozesilovač TGZ používá PROFIdrive podle uvedené technické specifikace: 
 
 - Třída použití 1 (*Standard Drive* - regulátor otáček)
@@ -13,6 +14,11 @@ Pro ovládání TGZ je k dispozici několik telegramů PROFIdrive pro použití 
 - Telegram 111 - SinaPos basic positioner
 - Telegram 352 - rozšířený telegram 1 s dalšími stavovými informacemi
 
+Verze PROFIsafe podporuje navíc následující telegramy
+
+- Standardní telegram 36 PROFIsafe - čtení polohy ze safety enkodéru
+- Telegram PROFIsafe 902 - řízení bezpečnostních funkcí PROFIsafe, s knihovní podporou v TIA portalu.
+
 Podrobný popis telegramů naleznete v příslušné dokumentaci.   
 
 Podle specifikace PROFINET podporuje servopohon TGZ třídu shody A.
@@ -20,12 +26,18 @@ Parametry PROFIdrive lze číst a zapisovat přes síť PROFINET, stejně jako c
 Synchronizace mezi zařízeními se provádí pouze prostřednictvím PLC v rámci doby cyklu dat RT.
 U dvouosé varianty servopohonu je možná i přesná synchronizace (elektronický převod) uvnitř jednoho TGZ.
 
-##Doba cyklu dat RT
+## Doba cyklu dat RT
+
 Nejrychlejší doba cyklu TGZ pro data PROFINET RT je 1 ms (firmware od srpna 2022 nebo novější).
 Maximální jitter je 250 µs.
 
-##Servo typu TGZ-S-48-xxx
+## Servo typu TGZ-S-48-xxx
+
 Tato verze má zvláštní zacházení s firmwarem: vzhledem k podobnosti s verzí TGZ-D musí být naprogramována firmwarem určeným pro variantu TGZ-D.
 Proto je nutné použít také soubor `GSDML` s názvem `GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml`, tj. soubor pro dvouosou variantu.
 Při uvádění pohonu do provozu lze použít pouze první osu.
 Druhá osa zůstává vždy v chybovém stavu.
+
+## Firmware PROFIsafe
+
+PROFIsafe varianta firmware používá jen jeden GSDML soubor (`GSDML-V2.44-TGDrives-TGZ-F-xxxxxxxx.xml`) pro obě varianty TGZ-D i TGZ-S.

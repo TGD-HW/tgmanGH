@@ -1,4 +1,5 @@
-##Technical Specification
+## Technical Specification
+
 The TGZ servo amplifier uses PROFIdrive Profile according to the above-mentioned technical specification: 
 
 - Application Class 1 (*Standard Drive* – speed regulator)
@@ -13,6 +14,11 @@ Several PROFIdrive telegrams are available for use with the PLC for controlling 
 - Telegram 111 – SinaPos basic positioner
 - Telegram 352 – extended telegram 1 with additional status information
 
+PROFIsafe firmware version also supports the following telegrams for both axes:
+
+- Standard PROFIsafe telegram 36 - reading safe poston from safety encoder
+- PROFIsafe telegram 902 - control safety functions, supported by TIA portal library
+
 For detailed description of the telegrams see the appropriate documentation.   
 
 According to the PROFINET specification, the TGZ servo drive supports the Conformance Class A.
@@ -20,13 +26,20 @@ The PROFIdrive parameters can be read and written over PROFINET network, as well
 Synchronization between devices is done only through PLC within the cycle time of RT data.
 For the two axes servo drive variant, exact synchronization (electronic gearing) inside one TGZ is also possible.
 
-##Cycle Time of RT Data
+## Cycle Time of RT Data
+
 TGZ fastest cycle time for the PROFINET RT data is 1 ms (firmware from August 2022 or newer).
 The maximal response jitter is 250 µs.
 
-##TGZ-S-48-xxx Servo Type
+## TGZ-S-48-xxx Servo Type
+
 This version has special firmware handling: due to similarity of the TGZ-D version, it must be programmed with the firmware designated for TGZ-D variant.
 Therefore, it is necessary to use also the `GSDML` file named `GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml`, i.e., the file for the double axis variant.
 During the drive commissioning, only the first axis can be used.
 The second axis remains always in an error.
+
+## New PROFIsafe firmware
+
+The newest PROFsafe firmware uses just one GSDML file (`GSDML-V2.44-TGDrives-TGZ-F-xxxxxxxx.xml`) for both TGZ variants (TGZ-D and TGZ-S).
+
 
