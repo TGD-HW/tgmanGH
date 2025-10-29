@@ -51,10 +51,10 @@ Skladujte digitální servozesilovače vždy dle následujících pokynů:
 - Skladujte zařízení jen při stanoveném rozmezí teplot: -25 až +55 °C, max. rychlost teplotní změny 20 K/h, třída 1K4.
 - Skladujte zařízení jen při stanoveném rozmezí vlhkosti: 5 až 95 % relativní vlhkosti, bez kondenzace, třída 1K3.
 
-###Údržba a čištění:
+###Údržba a čištění
 Servozesilovač nevyžaduje údržbu. Otevření zařízení (demontáž krytu) má za následek ztrátu záruky.
 
-###Demontáž zařízení:
+###Demontáž zařízení
 Pokud je zapotřebí zařízení odmontovat (například kvůli výměně), vymontujte servozesilovač následujícím způsobem:
 
 1. Vypněte hlavní vypínač rozvaděče a pojistky pro napájení systému.
@@ -63,5 +63,5 @@ Po odpojení servozesilovače od napájení počkejte alespoň 7 minut, než se 
 3. Zkontrolujte teplotu.
 Během provozu může teplota chladiče servozesilovače přesáhnout hodnotu 80 °C. Zkontrolujte teplotu, než se dotknete zařízení, a počkejte, dokud neklesne pod 40 °C.
 4. Odmontujte zařízení. Odmontujte servozesilovač a napájecí zdroj z vodivé uzemněné montážní desky rozvaděče.
-###Oprava a likvidace:
+###Oprava a likvidace
 Zařízení smí opravovat pouze výrobce. Otevření zařízení má za následek ztrátu záruky. Odmontujte zařízení, jak je popsáno v odstavci výše a odešlete je v originálním obalu výrobci. Výrobce přijímá vrácená stará zařízení a příslušenství pro odbornou likvidaci. Náklady na přepravu hradí odesílatel.

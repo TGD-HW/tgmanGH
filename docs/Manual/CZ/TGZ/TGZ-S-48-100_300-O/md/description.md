@@ -1,21 +1,21 @@
 ##3D náhled
-![TGZ-S-48-100/xyz Feedback side](../img/MotSide.webp){: style="width:80%;" }
+![TGZ-S-48-100/250 Feedback side](../img/MotSide.webp){: style="width:80%;" }
 <br>
 <br>
-![TGZ-S-48-100/xyz IO side](../img/IOside.webp){: style="width:80%;" }
+![TGZ-S-48-100/250 IO side](../img/IOside.webp){: style="width:80%;" }
 
 ##Konektory
 ___
 ### Strana ethernet/ethercat
 ___
 
-![TGZ-S-48-100/xyz ENET/ECAT side](../../../../source/img/TGZ-S-48-100_250_enetCon.png){: style="width:60%;" }
+![TGZ-S-48-100/250-O1 ENET/Fieldbus side](../../../../source/img/TGZ-S-48-100_250-O_enetCon.webp){: style="width:70%;" }
 
 ___
 ### Strana CAN/IO/SD
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250_IO.png){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-100_250-O_IO.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -47,12 +47,14 @@ ___
 	
 	!!! warning "Pozor"	
 	
-		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
+		Pro správnou funkci DI(1-6) je potřeba připojit alespoň jedno z VCC DO (pin 11 a 12). 
+		Vstupy DI7,8 jsou nezávislé na napájecím napětí DO VCC a fungují korektně i bez něj.
 	
 -   **X9 - MicroSD karta**
 
     ---
-![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
+	
+	![uSD card connector](../../../../source/img/uSD.png){: style="width:60%;" }
 
 -    Použijte standardní microSD kartu. Karta je součástí dodávky servozesilovače TGZ. Více informací naleznete v sekci [SD karty](../../TGZ_SW/SD/md/SD.md#SDparams).
 
@@ -105,7 +107,7 @@ ___
 ### Strana feedback
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250_FBconns.png){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_Mot.webp){: style="width:70%;" }
 
 <div class="grid cards" markdown>
 
@@ -168,62 +170,47 @@ ___
 </div>
 
 
+___
+### Pohled na svorkovnici
+___
+	
+![Terminals](../../../../source/img/TGZ-S-48-100_250-O_X0ab.webp){: style="width:60%;" }
+
 <div class="grid cards" markdown>
 
--   **P7 - Statická brzda**
+-   **X0a - Výkonové svorky**
 
     ---
 	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
-
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P7_BR_4pin_Microfit.md"
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0a.webp){: style="width:80%;" }
 	
-	!!! info "Konektorové krimpy"
+
+-   Motorové svorky
+
+    ---
+
+	--8<-- "md/X0a_48-100-xyz.md"
 	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-		
--   **P8 - Statická brzda - doplňkový konektor**
+-   **X0b - Signálové svorky**
 
     ---
 	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
+	
 
--    Molex Micro-Fit 3.0 - 430250400
-
-	---
-
-	--8<-- "md/P8_BR_4pin_Microfit.md"
-	
-	!!! note "Konektor P8"
-	
-		Tento konektor se pro standardní použití jednoosého servozesilovače <nobr>TGZ-S-48-100/250</nobr> nezapojuje
-	
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
-		
--   **P3 - Externí termistor PT1000**
+-   Signálové svorky
 
     ---
-	
-	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
 
--    Molex Micro-Fit 3.0 - 436500215
-
-	---
-
-	--8<-- "md/P3_Term_2pin_Microfit.md"
+	--8<-- "md/X0b_48-100-xyz.md"
 	
-	!!! note "Polarita"
-	
-		Teplotní čidlo PT1000 nemá určenou polaritu napájení.
-	
-	!!! info "Konektorové krimpy"
-	
-		Přizpůsobte typ krimpů zvolenému průřezu vodiče.		
-
 </div>
+
+
+___
+### Pohled na propojení výkonové části
+___
+
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-48-100_250-O_PhaseOut.webp){: style="width:70%;" }
+
+Propojení mezi interní PCB a DIN svorkami je zajištěno interně a je součástí dodávky servozesilovače.

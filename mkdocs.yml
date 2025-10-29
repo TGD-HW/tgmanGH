@@ -64,7 +64,7 @@ plugins:
        shadow: true
        manual: false
        skip_classes:
-         - custom-skip-class-name
+         - viewer-skip
        auto_caption: false
        caption_position: bottom
        background: white
@@ -180,6 +180,8 @@ markdown_extensions:
  - tables
  - footnotes
  - attr_list
+ - fenced_code
+
  # nahledy stranek po ukazani mysi jsou zatim jen pro insidery - plugin neni nalezen, nejde nainstalovat
  # - material.extensions.preview:
       # targets:
@@ -189,11 +191,19 @@ markdown_extensions:
     permalink: true
  
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+ - javascripts/mathjax.js
+# - https://polyfill.io/v3/polyfill.min.js?features=es6
+ - https://cdn.jsdelivr.net/npm/mathjax@latest/es5/tex-mml-chtml.js
+# local mathjax here:
+# - javascripts/mathjaxjs.js
+ - https://cdn.jsdelivr.net/npm/viewerjs@latest/dist/viewer.min.js
+# local mathjax here:
+# - javascripts/viewerjs.js
+ - javascripts/viewer-init.js
 extra_css:
  - stylesheets/extra.css
+ - https://cdn.jsdelivr.net/npm/viewerjs@1.11.3/dist/viewer.min.css
+ - stylesheets/viewer-style.css
 nav:
         - Úvod: 'index.md'
         - 'TGZ':
@@ -297,6 +307,16 @@ nav:
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/firmware.md'
                 - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-5_15/md/safe.md'
+            - 'TGZ-S-230-7/15-UNI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-230-7_15/md/safe.md'                
             - 'TGZ-D-320-5/10-UNI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-D-320-5_10/md/param.md'
@@ -426,7 +446,17 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/firmware.md'
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/safe.md'    
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNI-RI/md/safe.md'
+            - 'TGZ-S-48-100/250-UNIR-RI':
+                - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/mark.md'
+                - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/param.md'
+                - Popis zařízení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/description.md'
+                - Rozměry: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/dimension.md'
+                - Montáž: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/mounting.md'
+                - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/electric.md'
+                - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/schematic.md'
+                - Firmware: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/firmware.md'
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-48-100_250-UNIR-RI/md/safe.md'                 
             - 'TGZ-S-48-100/300-UNI-RI':
                 - Základní informace: 'Manual/CZ/TGZ/TGZ-S-48-100_300-UNI-RI/md/mark.md'
                 - Parametry: 'Manual/CZ/TGZ/TGZ-S-48-100_300-UNI-RI/md/param.md'

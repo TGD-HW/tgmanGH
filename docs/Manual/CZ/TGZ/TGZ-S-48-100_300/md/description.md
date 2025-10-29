@@ -22,7 +22,15 @@ ___
 -   **X1 - Napájení řídicí části**
 
     ---
-	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.svg){: style="width:90%;" }
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_1.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_2.webp){: style="width:90%;" }
 
 -    Molex Micro-Fit 3.0 - 436450500
 
@@ -210,7 +218,17 @@ ___
 
     ---
 	
-	![Brake connector](../../../../source/img/430450412.svg){: style="width:60%;" }
+	Pohled na PCB konektor:
+	
+	![Brake connector](../../../../source/img/430450412.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400
 
@@ -226,7 +244,17 @@ ___
 
     ---
 	
-	![Brake connector aux](../../../../source/img/430450412.svg){: style="width:60%;" }
+	Pohled na konektor na PCB:	
+	
+	![Brake connector aux](../../../../source/img/430450412.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
 
 -    Molex Micro-Fit 3.0 - 430250400
 
@@ -246,7 +274,17 @@ ___
 
     ---
 	
-	![External thermistor](../../../../source/img/436500215.svg){: style="width:60%;" }
+	Pohled na PCB konektor:
+	
+	![External thermistor](../../../../source/img/436500215.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany PCB:
+	
+	![External thermistor counterpart PCB](../../../../source/img/436450200_1.webp){: style="width:60%;" }
+	
+	Pohled na protikus ze strany vodičů:	
+
+	![External thermistor counterpart wires](../../../../source/img/436450200_2.webp){: style="width:60%;" }	
 
 -    Molex Micro-Fit 3.0 - 436500215
 

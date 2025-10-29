@@ -242,7 +242,7 @@ ___
 
     ---
 
-	--8<-- "md/X3_DCbus_2pin_pressfit.en.md"
+	--8<-- "md/X2_DCbus_2pin_pressfit.en.md"
 	
 	!!! warning "Regenerative braking"
 	
@@ -259,7 +259,7 @@ ___
 
     ---
 	
-	--8<-- "md/X3_M1_3pin_pressfit.en.md"
+	--8<-- "md/X2_M1_3pin_pressfit.en.md"
 
 
 -   **X3 - Static brake connector**
@@ -276,8 +276,8 @@ ___
 
 </div>
 
-[^3]: When crimping and connecting the Molex Micro-Lock connectors, follow the [Molex Micro-Lock Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf)
-[^4]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf)
+[^3]: When crimping and connecting the Molex Micro-Lock connectors, follow the [Molex Micro-Lock Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf) and use the recommended crimping tool [2002180800](https://www.molex.com/en-us/products/part-detail/2002180800).
+[^4]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) and use the recommended crimping tool [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400)
 
 ###Procedure for changing feedback type of FB1 and FB2
 There are 4 positions (R118-R121) for a 0R/0603 resistors that may be used to replace the external connection of FBSEL (pins 5-7 and 6-8 of the FB1 and FB2) on the control board.

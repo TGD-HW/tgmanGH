@@ -1,7 +1,11 @@
 ## Příklad schématu zapojení servozesilovače
 
-![Example schematic](../img/TGZ-D-320-5_10_schematic.webp){: style="width:100%;" }
+<div class="viewer-container">
+	<img src="../img/schematic.webp" class="viewer-skip" alt="Example schematic"/>
+</div>
 
 ## Příklad zapojení více servozesilovačů TGZ-D-320 společně s TGS-320
 
-![Multiple devices](../../../../source/img/TGZ-D-320_multipleSchematic.svg){: style="width:100%;" }
+<div class="viewer-container">
+	<img src="../../../../source/img/TGZ-D-320_multipleSchematic.webp" class="viewer-skip" alt="Multiple devices schematic"/>
+</div>
