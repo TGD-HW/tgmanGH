@@ -19,7 +19,7 @@
 | LED signalizace | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **OSTATNÍ KONEKTORY** |   |
 | Napájení výkonové části | 8 x Pressfit M5 |
-| Napájení řídicí části | 1 x 5pin MOLEX Micro-Fit 3.0, 436450500 |
+| Napájení řídicí části | 1 x 5pin Molex Micro-Fit 3.0 - 436450500 |
 | Motorový konektor | 3 x Pressfit M8 |
 | Brzdový konektor | 1 x 4pin MOLEX Micro-Fit 3.0, 430250400 |
 | Zpětnovazební konektor | 2x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |

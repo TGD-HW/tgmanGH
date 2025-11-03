@@ -23,7 +23,7 @@
 | LED signaling | 1x green (SERVO OK)1x red (SERVO ERROR) |
 | **POWER SUPPLY** |   |
 | DC BUS (+DC, -DC) –on PCB marked as „VCC, GND“ | 8 x Pressfit M5 |
-| Control, STO | 1 x 5pin MOLEX Micro-Lock, 5055700501 |
+| Control, STO | 1 x 5pin Molex Micro-Fit 3.0 - 436450500 |
 | **OTHER CONNECTORS** |   |
 | Motor connector | 3 x Pressfit M8 |
 | Externí temistor | 1 x 2pin MOLEX Micro-Fit 3.0, 430250200 |

@@ -23,7 +23,7 @@
 | LED signalizace | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
 | **NAPÁJENÍ** |   |
 | DC BUS (+DC, -DC) – na PCB označeno „VCC, GND“ | 8 x Pressfit M5 |
-| Řízení, STO | 1 x 5pin MOLEX Micro-Lock, 5055700501 |
+| Řízení, STO | 1 x 5pin Molex Micro-Fit 3.0 - 436450500 |
 | **OSTATNÍ KONEKTORY** |   |
 | Motorový konektor | 3 x Pressfit M8 |
 | Externí temistor | 1 x 2pin MOLEX Micro-Fit 3.0, 430250200 |

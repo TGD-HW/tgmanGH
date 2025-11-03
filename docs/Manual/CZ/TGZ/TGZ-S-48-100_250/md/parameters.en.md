@@ -19,7 +19,7 @@
 | LED signaling | 1x green (SERVO OK) 1x red (SERVO ERROR) |
 | **OTHER CONNECTORS** |   |
 | Power supply of the power section | 8 x Pressfit M5 |
-| Power supply of the control part | 1 x 5pin MOLEX Micro-Fit 3.0, 436450500 |
+| Power supply of the control part | 1 x 5pin Molex Micro-Fit 3.0 - 436450500 |
 | Motor connector | 3 x Pressfit M8 |
 | Static brake connector | 1 x 4pin MOLEX Micro-Fit 3.0, 430250400 |
 | Feedback connector | 2 x 8pin WEIDMÜLLER  B2CF 3.50/08/180 |
