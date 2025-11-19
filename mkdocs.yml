@@ -100,6 +100,7 @@ plugins:
                 Digitální vstupy UNI: Digital inputs UNI
                 Digitální výstupy: Digital outputs
                 Digitální vstupy RI: Digital inputs RI
+                Vstupy HALL UNIR: HALL UNIR inputs
                 Analogové vstupy: Analog inputs
                 Sběrnice CAN: CAN bus
                 Zpětná vazba FBE: FBE feedback
@@ -511,6 +512,7 @@ nav:
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Digitální vstupy UNI: 'Manual/source/md/commonHW_DI.md'
                 - Digitální vstupy RI: 'Manual/source/md/commonHW_DI_RI.md'
+                - Vstupy HALL UNIR: 'Manual/source/md/commonHW_UNIR_HALL.md'
                 - Digitální výstupy: 'Manual/source/md/commonHW_DO.md'  
                 - Analogové vstupy: 'Manual/source/md/commonHW_AI.md'  
                 - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'

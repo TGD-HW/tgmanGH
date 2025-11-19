@@ -171,6 +171,8 @@ ___
 
 	--8<-- "md/X7_AIN_HALL_12pin_ClikMate.en.md"
 	
+	For details about [Hall inputs](../../../../source/md/commonHW_UNIR_HALL.en.md#common_UNIR_HALL_usage) please see [Common HW section](../../../../source/md/commonHW_UNIR_HALL.en.md#common_UNIR_HALL_desc).	
+	
 -   **X8 - Digital I/O**
 
     ---

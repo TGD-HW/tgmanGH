@@ -167,6 +167,8 @@ ___
 
 	--8<-- "md/X7_AIN_HALL_12pin_ClikMate.md"
 	
+	Popis funkce [Hallových vstupů](../../../../source/md/commonHW_UNIR_HALL.md#common_UNIR_HALL_usage) naleznete v sekci [Společný HW](../../../../source/md/commonHW_UNIR_HALL.md#common_UNIR_HALL_desc).	
+	
 -   **X8 - Digitální I/O**
 
     ---
