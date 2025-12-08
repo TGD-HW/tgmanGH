@@ -3613,6 +3613,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_FBE.html"/>
     </url>
     <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_SmartBrake.html</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_SmartBrake.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_SmartBrake.html"/>
+    </url>
+    <url>
         <loc>https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_UNIR_HALL.html</loc>
         <lastmod>2025-12-08</lastmod>
         <changefreq>daily</changefreq>
@@ -7356,6 +7363,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_FBE.html"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_FBE.html"/>
+    </url>
+    <url>
+        <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_SmartBrake.html</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_SmartBrake.html"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://tgd-hw.github.io/tgmanGH/Manual/source/md/commonHW_SmartBrake.html"/>
     </url>
     <url>
         <loc>https://tgd-hw.github.io/tgmanGH/en/Manual/source/md/commonHW_UNIR_HALL.html</loc>
