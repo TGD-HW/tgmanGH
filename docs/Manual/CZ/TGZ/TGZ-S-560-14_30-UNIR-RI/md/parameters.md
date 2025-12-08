@@ -27,4 +27,4 @@
 | Napájení řídicí části | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F |
 | Motorový konektor | 1 x 6pin WEIDMÜLLER  BLF 7.62HP/06/180F |
 | **EMI FILTR** |
-| Doporučený filtr | NCZXX3P49-04 |
+| Doporučený filtr | DC16XXX |

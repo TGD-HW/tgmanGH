@@ -27,4 +27,4 @@
 | Power supply of the control part | 1 x 5pin WEIDMÜLLER  BCZ 3.81/05/180F   |
 | Motor connector | 1 x 6pin WEIDMÜLLER  BLF 7.62HP/06/180F |
 | **EMI FILTER** |
-| Recommended type | NCZXX3P49-04 |
+| Recommended type | DC16XXX |
