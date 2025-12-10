@@ -294,7 +294,7 @@ ___
 
     ---
 
-	--8<-- "md/X4_M1_6pin_SLS.en.md"
+	--8<-- "md/X3_M1_6pin_BLZ__7_62.en.md"
 
 	!!! warning "Connector orientation"
 	

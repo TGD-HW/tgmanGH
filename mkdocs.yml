@@ -175,7 +175,8 @@ markdown_extensions:
  - pymdownx.inlinehilite
  - pymdownx.details
  - pymdownx.superfences
- - pymdownx.critic
+ - pymdownx.critic:
+    mode: accept    # or: reject
  - pymdownx.caret
  - pymdownx.tilde
  - admonition
