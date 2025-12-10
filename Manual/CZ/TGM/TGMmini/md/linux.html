@@ -14513,13 +14513,13 @@
 
 <h2 id="adresar-tgmotion">Adresář <code>/TGMotion</code><a class="headerlink" href="#adresar-tgmotion" title="Permanent link">¶</a></h2>
 <p>Všechny systémové a konfigurační soubory TG Motion se nacházejí v adresáři <code>/TGMotion</code>. Struktura adresáře je následující:
-<code><ins class="critic"> /TGMotion/app/cnc</ins></code> – knihovny CNC modulu (<code>libSF_xxx.so</code>) a testovací program <code>Qt_CNC_Tester_5</code> <br>
-<code><ins class="critic"> /TGMotion/bin </ins></code> – určen pro uživatelské PLC programy <br>
-<code><ins class="critic"> /TGMotion/rtss </ins></code> – obsahuje vlastní TG Motion (<code>tgm501-xeno</code>) a jeho konfiguraci <code>TgMotion5xx.ini</code> <br>
-<code><ins class="critic"> /TGMotion/system </ins></code> – obslužné programy pro ovládání TG Motion – spuštění, zastavení, reset: služby <code>tgm_starter_service</code>, a <code>tgm_xeno_service</code>, obslužný program <code>tgm_sc</code> a uživatelské rozhraní <code>tgm_control_panel</code>.
+<code>/TGMotion/app/cnc</code> – knihovny CNC modulu (<code>libSF_xxx.so</code>) a testovací program <code>Qt_CNC_Tester_5</code> <br>
+<code>/TGMotion/bin</code> – určen pro uživatelské PLC programy <br>
+<code>/TGMotion/rtss</code> – obsahuje vlastní TG Motion (<code>tgm501-xeno</code>) a jeho konfiguraci <code>TgMotion5xx.ini</code> <br>
+<code>/TGMotion/system</code> – obslužné programy pro ovládání TG Motion – spuštění, zastavení, reset: služby <code>tgm_starter_service</code>, a <code>tgm_xeno_service</code>, obslužný program <code>tgm_sc</code> a uživatelské rozhraní <code>tgm_control_panel</code>.
 Dále jsou zde umístěny systémové knihovny <code>libTGM_Comm_Int_5.so</code> a <code>libTGM_OPC_Server_5.so</code>, které jsou zaregistrovány do systému Linux pomocí příkazu <code>ldconfig</code>. <br>
-<code><ins class="critic"> /TGMotion/tools/TGM_5xx/4034_905 </ins></code> – další pomocné utility, např. konzole pro zobrazení chybových a uživatelských zpráv <code>TGM5xxDebugConsole</code>, servery OPC UA, ModbusTCP, a server pro emulaci DNC na sériovém portu. <br>
-<code><ins class="critic"> /TGMotion/Windows </ins></code> – zde se nacházejí všechny utility, které lze použít pro práci s TGMmini. Tyto programy běží pod Windows a komunikují s TGMmini pomocí protokolu TCP/IP. K dispozici je mj.
+<code>/TGMotion/tools/TGM_5xx/4034_905</code> – další pomocné utility, např. konzole pro zobrazení chybových a uživatelských zpráv <code>TGM5xxDebugConsole</code>, servery OPC UA, ModbusTCP, a server pro emulaci DNC na sériovém portu. <br>
+<code>/TGMotion/Windows</code> – zde se nacházejí všechny utility, které lze použít pro práci s TGMmini. Tyto programy běží pod Windows a komunikují s TGMmini pomocí protokolu TCP/IP. K dispozici je mj.
 Control Observer, konzole pro zobrazení chybových a uživatelských zpráv, DLL knihovny CNC modulu a testovací program <code>Qt_CNC_Tester_5.exe</code>.</p>
 <h2 id="spusteni-tg-motion">Spuštění TG Motion<a class="headerlink" href="#spusteni-tg-motion" title="Permanent link">¶</a></h2>
 <p>Pro administraci TG Motion slouží program <code>tgm_control_panel</code>, který lze spustit přímo z pracovní plochy grafického systému Xfce (desktop).  </p>

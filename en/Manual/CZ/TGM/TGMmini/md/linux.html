@@ -14516,16 +14516,16 @@
 <h2 id="tgmotion-directory"><code>/TGMotion</code> directory<a class="headerlink" href="#tgmotion-directory" title="Permanent link">¶</a></h2>
 <p>All the files necessary for the TG Motion system are located in the <code>/TGMotion</code> directory. The structure is as follows:</p>
 <ul>
-<li><code><ins class="critic"> /TGMotion/app/cnc</ins></code> – CNC module libraries (<code>libSF_xxx.so</code>)  and CNC tester program <code>Qt_CNC_Tester_5</code>   </li>
-<li><code><ins class="critic"> /TGMotion/bin </ins></code> – used for user Virtual PLC programs</li>
-<li><code><ins class="critic"> /TGMotion/rtss </ins></code> – used for user Virtual PLC programs (<code>tgm501-xeno</code>) and its configuration <code>TgMotion5xx.ini</code>   </li>
-<li><code><ins class="critic"> /TGMotion/system </ins></code> – TG Motion administration utilities for start, stop, reset. 
+<li><code>/TGMotion/app/cnc</code> – CNC module libraries (<code>libSF_xxx.so</code>)  and CNC tester program <code>Qt_CNC_Tester_5</code>   </li>
+<li><code>/TGMotion/bin</code> – used for user Virtual PLC programs</li>
+<li><code>/TGMotion/rtss</code> – used for user Virtual PLC programs (<code>tgm501-xeno</code>) and its configuration <code>TgMotion5xx.ini</code>   </li>
+<li><code>/TGMotion/system</code> – TG Motion administration utilities for start, stop, reset. 
     The service manager <code>tgm_sc</code> runs the TG Motion service program (<code>tgm_starter_service</code>, <code>tgm_xeno_service</code>) from command line.
     There is also a GUI program called <code>tgm_control_panel</code>.
     The system libraries <code>libTGM_Comm_Int_5.so</code> and <code>libTGM_OPC_Server_5.so</code> are located here.
     They are registered by <code>ldconfig</code>, so it could be used anywhere from TGMmini’s file system.  </li>
-<li><code><ins class="critic"> /TGMotion/tools/TGM_5xx/4034_905 </ins></code> – more utilities, e.g. console for displaying messages from <strong>TG Motion</strong> (<code>TGM5xxDebugConsole</code>), OPC UA server, ModbusTCP server and DNC emulation through serial port.  </li>
-<li><code><ins class="critic"> /TGMotion/Windows </ins></code> – contains useful Windows utilities for working with <strong>TGMmini</strong>.
+<li><code>/TGMotion/tools/TGM_5xx/4034_905</code> – more utilities, e.g. console for displaying messages from <strong>TG Motion</strong> (<code>TGM5xxDebugConsole</code>), OPC UA server, ModbusTCP server and DNC emulation through serial port.  </li>
+<li><code>/TGMotion/Windows</code> – contains useful Windows utilities for working with <strong>TGMmini</strong>.
     Included is e.g.Control Observer, CNC module libraries and the example CNC program <code>Qt_CNC_Tester_5.exe</code>.</li>
 </ul>
 <h2 id="tg-motion-administration">TG Motion administration<a class="headerlink" href="#tg-motion-administration" title="Permanent link">¶</a></h2>
