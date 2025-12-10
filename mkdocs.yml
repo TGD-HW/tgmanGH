@@ -137,6 +137,7 @@ plugins:
                 Napájení logiky: Logic power
                 Dělení firmware: Firmware groups
                 Standardní firmware: Standard firmware
+                Chytrá brzda: Smart brake
   - offline:
       enabled:
   # - mike:
@@ -529,7 +530,8 @@ nav:
                 - Zpětná vazba FBE: 'Manual/source/md/commonHW_FBE.md'
                 - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'
                 - Napájení logiky: 'Manual/source/md/logicPWR.md'                
-                - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'                
+                - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'
+                - Chytrá brzda: 'Manual/source/md/commonHW_SmartBrake.md'
             - 'Řízení a regulace':
                 - Regulační struktura: 'Manual/CZ/SW/REG/md/TGZstructure.md'
                 - Nastavení parametrů: 'Manual/CZ/SW/REG/md/MotorSettings.md'                

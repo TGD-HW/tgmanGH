@@ -1,52 +1,43 @@
 ##Popis funkce {#SmartBrakeDesc}
-Servozesilovač TGZ je vybaven vylepšenou funkcí ovládání statické motorové brzdy **Smart brake**.
+Servozesilovač TGZ je vybaven vylepšenou funkcí ovládání statické motorové brzdy **Chytrá brzda**.
 Tato funkce mimo jiné umožňuje snížit spotřebu statické brzdy po té, co již byla odbržděna (stav trvale odbržděno).
-Snížení spotřeby je docíleno snížením excitačního napětí/proudu brzdy.
+Snížení spotřeby je docíleno snížením přídržného napětí/proudu brzdy (V_HOLD, I_HOLD).
+K dispozici jsou dva režimy ovládání statické brzdy.
 
+Jedná se o ovládání napětím:
+
+![Smart brake voltage mode](../img/SmartBrakeEN_V.webp){: style="width:70%;" }
+
+ a ovládání proudem.
  
+![Smart brake current mode](../img/SmartBrakeEN_I.webp){: style="width:70%;" }
 
-Zjednodušené schéma zapojení digitálních výstupů viz. obrázek:
-![Simplified TGZ DO schematic](../img/TGZ_DO_simplified.svg){: style="width:80%;" }
+##Nastavení a ovládání {#SmartBrakeUsage}
+Uživatel může nastavit všechny potřebné parametry v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
+Set parametrů je dostupný v sekci `Drive`.
+![Smart brake GUI parameters](../img/SmartBrake_GUI1.webp){: style="width:100%;" }
+U každé řízené osy je možné zvolit buď napěťové `voltage control` nebo proudové `current control` řízení brzdy pomocí parametru ** `D-Brake_mode` **.
+Pro každý režim platí jiné provozní parametry.
 
-Jelikož se jedná o výstupy typu push-pull je v každém okamžiku definován výstupní stav jako log. 0 (DO připojeno ke GNDIO) nebo log. 1 (DO připojeno k VDDIO). Výstupy nejsou nikdy plovoucí.
+##Parametry {#SmartBrakeParams}
+V **napěťovém režimu** ovládání brzdy je možné nastavit následující parametry:
 
-!!! warning "Varování"
-	Nikdy na výstupy DO přímo nepřipojujte napájecí napětí, ani jeho záporný pól.
-	Mohlo by dojít k poškození výstupu.
+|  Č. parametru |  Název |  Označení v TGZ GUI | Jednotka | Rozsah | Popis |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 |  V<sub>EXC</sub>  | `D-BR_L2H_voltage` | V | 0~VCC<sub>BR</sub>  | Excitační napětí (napětí přítahu) |
+| 2 |  V<sub>HOLD</sub>  | `D-BR_H_voltage` | V | 0~VCC<sub>BR</sub>  | Přídržné napětí (holding) |
+| 3 |  τ<sub>EXC</sub>  | `D-BR_L2H_T_time` | 10 ms | 0~1000  | Doba excitace (Doba po kterou je na brzdě napětí V<sub>EXC</sub>) 0~10 s |
 
-##Parametry
-Digitální výstupy jsou chráněny proti přetížení a zkratu na výstupu pomocí společné inteligentní pojistky v napájecím obvodu VDDIO. Tato ochrana je společná vždy pro jednu skupinu výstupů (osa 1, osa 2).
-Dojde-li např. k přetížení DO2, inteligentní ochrana odpojí napájení celé skupině výstupů, tedy DO4 a DO6.
-DO1, 3 a 5 budou v tomto případě pracovat bez přerušení.   
+!!! warning "Maximální napětí brzdy"
 
-##Nastavení a ovládání
-Typické schéma připojení zátěže k DO je nejčastěji *horní spínač*.   
+	V<sub>ABSMAX</sub> lze zadat v rozsahu 0~50 V.
+	Elektronicky je ale obvod spínání brzdy omezen na 30 VDC.
+	Vyšší připojené napětí na napájecí pin VCC_BR může obvod nevratně poškodit!
 
-![high side switch](../img/HS_switch.svg){: style="width:30%;" }   
+V **proudovém režimu** ovládání brzdy je možné nastavit následující parametry:
 
-Zátěž je připojena mezi DO a GNDIO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví napájecí napětí VDDIO.
-Povelem `vypni` (log. 0) se na zátěži objeví GNDIO.
-
-Opačným případem je připojení zátěže k DO jako *dolní spínač*.   
-
-![low side switch](../img/LS_switch.svg){: style="width:30%;" }   
-
-Zátěž je připojena mezi VDDIO a DO. Povelem pro DO `sepni` (log. 1) se na zátěži objeví na obou koncích napájecí napětí VDDIO, tj. zátěží neteče proud.
-Povelem `vypni` (log. 0) se na zátěži objeví VDDIO proti GNDIO a zátěž je sepnuta - teče proud.   
-
-##Induktivní zátěž
-Při spínání induktivních zátěží větších výkonů (typicky cívky relé, stykačů, ventilů apod.) je nutné použít externí ochrannou diodu D1 (anti-kickback) vhodně proudově a napěťově dimenzovanou.
-Doporučujeme použít usměrňovací nebo schottky diodu zapojenou dle schématu:   
-
-![Inductive load high side](../img/InductiveLoad.svg){: style="width:35%;" }
-![Inductive load low side](../img/InductiveLoadLS.svg){: style="width:35%;" }
-
-!!! note "Anti-kickback"
-	Při spínání induktivních zátěží docházi k vygenerování napěťového překmitu na vypínané indukčnosti.
-	Velikost překmitu je závislá na indukčnosti smyčky (cívka + kabeláž) a proudu sepnuté zátěže.
-	Při spínání malých induktivních zátěží s odběrem menším než cca. 100mA (miniaturní relé apod.) není potřeba implementovat externí ochrannou diodu D1.
-
-
-##Parametry
-
---8<-- "md/X8_commonHW_DO_tab.md"
+|  Č. parametru |  Název |  Označení v TGZ GUI | Jednotka | Rozsah | Popis |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 |  I<sub>EXC</sub>  | `D-BR_L2H_voltage` | 100 mA | 0~30</sub>  | Excitační proud (proud přítahu) 0~3 A |
+| 2 |  I<sub>HOLD</sub>  | `D-BR_H_voltage` | 100 mA | 0~30</sub>  | Přídržný proud (holding) 0~3 A |
+| 3 |  τ<sub>EXC</sub>  | `D-BR_L2H_T_time` | 10 ms | 0~1000  | Doba excitace (Doba po kterou teče cívkou brzdy proud I<sub>EXC</sub>) 0~10 s |

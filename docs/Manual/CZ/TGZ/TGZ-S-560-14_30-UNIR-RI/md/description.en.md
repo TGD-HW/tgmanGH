@@ -286,8 +286,11 @@ ___
     ---
 	
 	![Motor connector](../../../../source/img/1095720000.svg){: style="width:70%;" }
-
--    Weidmüller BLZ 7.62HP/06/180F
+	
+	The servo amplifier is equipped with an enhanced static motor brake control circuit.
+	More information on how to set the key parameters can be found in the [Smart Brake](../../../../source/md/commonHW_SmartBrake.en.md#SmartBrakeDesc) section.
+	
+-   Weidmüller BLZ 7.62HP/06/180F
 
     ---
 
