@@ -16,7 +16,7 @@ Jedná se o ovládání napětím:
 Uživatel může nastavit všechny potřebné parametry v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 Set parametrů je dostupný v sekci `Drive`.
 ![Smart brake GUI parameters](../img/SmartBrake_GUI1.webp){: style="width:100%;" }
-U každé řízené osy je možné zvolit buď napěťové `voltage control` nebo proudové `current control` řízení brzdy pomocí parametru ** `D-Brake_mode` **.
+U každé řízené osy je možné zvolit buď napěťové `voltage control` nebo proudové `current control` řízení brzdy pomocí parametru `D-Brake_mode`.
 Pro každý režim platí jiné provozní parametry.
 
 ##Parametry {#SmartBrakeParams}
@@ -41,3 +41,7 @@ V **proudovém režimu** ovládání brzdy je možné nastavit následující pa
 | 1 |  I<sub>EXC</sub>  | `D-BR_L2H_voltage` | 100 mA | 0~30</sub>  | Excitační proud (proud přítahu) 0~3 A |
 | 2 |  I<sub>HOLD</sub>  | `D-BR_H_voltage` | 100 mA | 0~30</sub>  | Přídržný proud (holding) 0~3 A |
 | 3 |  τ<sub>EXC</sub>  | `D-BR_L2H_T_time` | 10 ms | 0~1000  | Doba excitace (Doba po kterou teče cívkou brzdy proud I<sub>EXC</sub>) 0~10 s |
+
+##Ukázka nastavení parametrů {#SmartBrakeVid}
+
+![type:video](../vid/GUIbrakeSettings1.mp4)

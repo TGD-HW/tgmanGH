@@ -16,7 +16,7 @@ and current control.
 The user can configure all required parameters in the program [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 The parameter set is available in the `Drive` section.
 ![Smart brake GUI parameters](../img/SmartBrake_GUI1.webp){: style="width:100%;" }
-For each controlled axis, user can select either voltage control `voltage control` or current control `current control` of the brake via the parameter **`D-Brake_mode`**.
+For each controlled axis, user can select either voltage control `voltage control` or current control `current control` of the brake via the parameter `D-Brake_mode`.
 Each mode has different operating parameters.
 
 ##Parameters {#SmartBrakeParams}
@@ -41,3 +41,7 @@ In the **current mode** of brake control, the following parameters can be set:
 | 1 |  I<sub>EXC</sub>  | `D-BR_L2H_voltage` | 100 mA | 0~30  | Excitation current (pull-in current) 0~3 A |
 | 2 |  I<sub>HOLD</sub>  | `D-BR_H_voltage` | 100 mA | 0~30  | Holding current 0~3 A |
 | 3 |  τ<sub>EXC</sub>  | `D-BR_L2H_T_time` | 10 ms | 0~1000  | Excitation time (duration for which the brake coil carries current I<sub>EXC</sub>) 0~10 s |
+
+##Example of parameter configuration {#SmartBrakeVid}
+
+![type:video](../vid/GUIbrakeSettings1.mp4)

@@ -152,7 +152,18 @@ plugins:
       enable_creation_date: true
       fallback_to_build_date: true
       type: timeago
-      enabled: !ENV [CI, false]      
+      enabled: !ENV [CI, false]  
+      
+  - mkdocs-video:
+        is_video: True
+        video_muted: True
+        video_controls: True
+        video_loop: True
+        video_autoplay: True
+        css_style:
+            width: "100%"
+            height: "auto"
+            
 markdown_extensions:
  - pymdownx.arithmatex:
     generic: true
@@ -519,7 +530,7 @@ nav:
                 - Elektrická instalace: 'Manual/CZ/TGZ/TGZ-S-560-14_30-UNIR-RI/md/electric.md'
                 - Příklad zapojení: 'Manual/CZ/TGZ/TGZ-S-560-14_30-UNIR-RI/md/schematic.md'
                 - Firmware: 'Manual/CZ/TGZ/TGZ-S-560-14_30-UNIR-RI/md/firmware.md'
-                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-560-14_30-UNIR-RI/md/safe.md'                  
+                - Bezpečnost: 'Manual/CZ/TGZ/TGZ-S-560-14_30-UNIR-RI/md/safe.md'
             - 'Společný HW':
                 - Stavová a chybová hlášení: 'Manual/CZ/TGZ/TGZ_SW/LED/md/description.md'
                 - Digitální vstupy UNI: 'Manual/source/md/commonHW_DI.md'
