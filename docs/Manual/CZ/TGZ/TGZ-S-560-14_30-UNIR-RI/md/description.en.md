@@ -59,7 +59,7 @@ ___
 ### View of the fieldbus side
 ___
 
-![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-400-14_30-UNI-RI_enetCon.webp){: style="width:60%;" }
+![ENET/ECAT/LogicPWR connectors](../../../../source/img/TGZ-S-560-14_30-UNIR-RI_enetCon.webp){: style="width:60%;" }
 
 
 <div class="grid cards" markdown>
@@ -137,7 +137,7 @@ ___
 ### View of the CAN/IO/SD Side
 ___
 
-![IO/CAN/SD connectors](../../../../source/img/TGZ-S-400-14_30-UNI-RI_IO.webp){: style="width:60%;" }
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-560-14_30-UNIR-RI_IO.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
@@ -220,7 +220,7 @@ ___
 ### View of the FB/motor side
 ___
 
-![Motor/Feedback connectors](../../../../source/img/TGZ-S-400-14_30-UNI-RI_FBconns.webp){: style="width:60%;" }
+![Motor/Feedback connectors](../../../../source/img/TGZ-S-560-14_30-UNIR-RI_FBconns.webp){: style="width:60%;" }
 
 <div class="grid cards" markdown>
 
