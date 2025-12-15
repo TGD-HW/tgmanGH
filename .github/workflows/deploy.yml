@@ -33,4 +33,5 @@ jobs:
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-git-committers-plugin-2
       - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-video      
       - run: mkdocs gh-deploy --force
