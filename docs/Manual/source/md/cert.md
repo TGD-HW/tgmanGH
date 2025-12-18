@@ -1,6 +1,8 @@
 ##ISO
 ![ISO prohlášení o shodě 1](../img/ISOcert.svg)
 ![ISO prohlášení o shodě 2](../img/ISOcert1.svg)
+![CE prohlášení](../img/TGZ_CE.webp){: style="width:70%;" }
+
 
 ##STO
 
