@@ -12,8 +12,9 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   features:
-#    - navigation.instant
-#    - navigation.instant.progress
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.tracking
     - navigation.tabs
     - navigation.path
@@ -44,14 +45,6 @@ extra:
 #        description: Na našich webových stránkách používáme soubory cookies. Některé z nich jsou nezbytné, zatímco jiné nám pomáhají vylepšit tento web a váš uživatelský zážitek. Souhlasíte s používáním všech cookies? 
 plugins:
   - search
-  # - table-reader:
-      # base_path: "config_dir"
-      # data_path: "docs/Manual/source/common/tab"
-      # search_page_directory: True
-      # allow_missing_files: False
-      # select_readers:
-      #  - read_excel
-      #  - read_csv
   - glightbox:
        touchNavigation: true
        loop: false
@@ -195,12 +188,7 @@ markdown_extensions:
  - footnotes
  - attr_list
  - fenced_code
-
- # nahledy stranek po ukazani mysi jsou zatim jen pro insidery - plugin neni nalezen, nejde nainstalovat
- # - material.extensions.preview:
-      # targets:
-        # include:
-          # - Manual/CZ/TGZ/TGZ-D-48-13/md/mark.md
+ - material.extensions.preview
  - toc:
     permalink: true
  
