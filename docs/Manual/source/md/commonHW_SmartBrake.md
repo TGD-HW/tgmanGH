@@ -12,6 +12,10 @@ Jedná se o ovládání napětím:
  
 ![Smart brake current mode](../img/SmartBrakeEN_I.webp){: style="width:70%;" }
 
+!!! info "Dostupnost funkce Chytrá brzda"
+
+	Tato funkce je zatím dostupná pouze u některých servozesilovačů TGZ. Jde o TGZ-S-560-14/30-UNIR-RI. Časem bude implementována i do dalších modelů TGZ.
+
 ##Nastavení a ovládání {#SmartBrakeUsage}
 Uživatel může nastavit všechny potřebné parametry v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 Set parametrů je dostupný v sekci `Drive`.

@@ -278,7 +278,7 @@ ___
 		
 	!!! note "Note"
 	
-		Servoamplifier TGZ-S-400 is single axis version.
+		Servoamplifier TGZ-S-560 is single axis version.
 		The X6 connector is not normally connected.
 	
 -   **X3.1 - Motor connector**
@@ -289,6 +289,10 @@ ___
 	
 	The servo amplifier is equipped with an enhanced static motor brake control circuit.
 	More information on how to set the key parameters can be found in the [Smart Brake](../../../../source/md/commonHW_SmartBrake.en.md#SmartBrakeDesc) section.
+	
+	!!! info "Smart brake feature availability"
+
+		This feature is currently available only on selected TGZ servo drives, specifically the TGZ-S-560-14/30-UNIR-R model. It will be implemented into additional TGZ models over time.
 	
 -   Weidmüller BLZ 7.62HP/06/180F
 

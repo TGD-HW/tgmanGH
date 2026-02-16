@@ -277,7 +277,7 @@ ___
 
 	!!! note "Poznámka"
 	
-		Servozesilovač TGZ-400 je jednoosý. Konektor X6 se běžně nezapojuje.
+		Servozesilovač TGZ-S-560 je jednoosý. Konektor X6 se běžně nezapojuje.
 	
 -   **X3.1 - Motorový konektor**
 
@@ -287,6 +287,10 @@ ___
 	
 	Servozesilovač je vybaven vylepšeným obvodem ovládání statické motorové brzdy.
 	Více informací ohledně nastavení důležitých parametrů naleznete v sekci [Chytrá brzda](../../../../source/md/commonHW_SmartBrake.md#SmartBrakeDesc).
+	
+	!!! info "Dostupnost funkce Chytrá brzda"
+
+		Tato funkce je zatím dostupná pouze u některých servozesilovačů TGZ. Jde o TGZ-S-560-14/30-UNIR-RI. Časem bude implementována i do dalších modelů TGZ.
 
 -   Weidmüller BLZ 7.62HP/06/180F
 

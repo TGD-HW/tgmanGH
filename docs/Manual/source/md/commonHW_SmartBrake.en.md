@@ -12,6 +12,10 @@ and current control.
  
 ![Smart brake current mode](../img/SmartBrakeEN_I.webp){: style="width:70%;" }
 
+!!! info "Smart brake feature availability"
+
+	This feature is currently available only on selected TGZ servo drives, specifically the TGZ-S-560-14/30-UNIR-R model. It will be implemented into additional TGZ models over time.
+
 ##Configuration and control {#SmartBrakeUsage}
 The user can configure all required parameters in the program [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 The parameter set is available in the `Drive` section.
