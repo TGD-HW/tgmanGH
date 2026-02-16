@@ -145,7 +145,7 @@ ___
     ---
 	![HALL + AIN + PT1000](../../../../source/img/5031491200.svg){: style="width:70%;" }
 
--    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
+-    Molex ClikMate 5031491200 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
 	---
 

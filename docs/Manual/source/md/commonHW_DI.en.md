@@ -1,9 +1,9 @@
 ##Basic description {#commonDI1-8}
 The TGZ servo amplifier has eight galvanically isolated fast digital inputs integrated on the **X8** connector in the standard (UNI) version.
 Six of these (DI1-6) can be configured by the manufacturer either for classic digital input function or as direct inputs for Hall probes (24V voltage level).
-In either case, a supply voltage must be connected to VDDIO or GNDIO, as the inputs are active and require power.
-Simply connecting a supply voltage to one of the two VDDIO power inputs is sufficient for the active inputs to function properly.
-The remaining digital inputs #7 and #8 are standard, passive, with a nominal input level of +24V and do not require a VDDIO supply.
+In either case, a supply voltage must be connected to VDD<sub>IO</sub> or GND<sub>IO</sub>, as the inputs are active and require power.
+Simply connecting a supply voltage to one of the two VDD<sub>IO</sub> power inputs is sufficient for the active inputs to function properly.
+The remaining digital inputs #7 and #8 are standard, passive, with a nominal input level of +24V and do not require a VDD<sub>IO</sub> supply.
 All digital inputs 1-8 have built-in reverse polarity protection (down to -70V) and overvoltage protection (above 30V).
 
 ##DI parameters

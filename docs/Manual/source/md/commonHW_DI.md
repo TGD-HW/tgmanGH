@@ -1,9 +1,9 @@
 ##Základní popis {#commonDI1-8}
 Servozesilovač TGZ má ve standardním provedení (UNI) na konektoru **X8** integrováno osm rychlých izolovaných digitálních vstupů.
 Šest z nich (DI1-6) lze u výrobce nakonfigurovat buď pro klasickou funkci digitálního vstupu, nebo jako přímé vstupy pro hallovy sondy.
-V obou případech je nutné připojit napájecí napětí na VDDIO proti GNDIO, jelikož jsou vstupy aktivní a vyžadují napájení.
-Stačí připojení napájecího napětí na jeden ze dvou napájecích vstupu VDDIO, aby aktivní vstupy fungovaly správně.
-Zbývající digitální vstupy č. 7 a č. 8 jsou standardní, pasivní, s nominální vstupní úrovní +24V a nevyžadují připojení VDDIO.
+V obou případech je nutné připojit napájecí napětí na VDD<sub>IO</sub> proti GND<sub>IO</sub>, jelikož jsou vstupy aktivní a vyžadují napájení.
+Stačí připojení napájecího napětí na jeden ze dvou napájecích vstupu VDD<sub>IO</sub>, aby aktivní vstupy fungovaly správně.
+Zbývající digitální vstupy č. 7 a č. 8 jsou standardní, pasivní, s nominální vstupní úrovní +24V a nevyžadují připojení VDD<sub>IO</sub>.
 Všechny digitální vstupy 1-8 mají integrovanou ochranu proti přepólování (až do -70 V) a proti přepětí (nad 30 V).
 
 ##Parametry DI
