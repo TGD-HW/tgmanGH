@@ -347,6 +347,10 @@ ___
 	
 		Přizpůsobte typ krimpů zvolenému průřezu vodiče.
 		
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).			
+		
 -   **P8 - Statická brzda - doplňkový konektor**
 
     ---

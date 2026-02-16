@@ -213,6 +213,10 @@ ___
     ---
 	
 	![Motor 1 connector](../../../../source/img/1943620000.svg){: style="width:70%;" }
+	
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.
 
 -    Weidmüller BLZP 5.08HC/06/180 SN OR BX
 
@@ -225,6 +229,10 @@ ___
     ---
 	
 	![Motor 2 connector](../../../../source/img/1943620000.svg){: style="width:70%;" }
+
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.	
 
 -    Weidmüller BLZP 5.08HC/06/180 SN OR BX
 

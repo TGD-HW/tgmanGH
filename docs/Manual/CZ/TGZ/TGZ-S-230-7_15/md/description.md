@@ -196,6 +196,10 @@ ___
     ---
 	
 	![Motor connector](../../../../source/img/1846250000.svg){: style="width:70%;" }
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
 
 -    Weidmüller SLS 5.08/06/180FI SN OR BX
 

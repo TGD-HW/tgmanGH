@@ -2,6 +2,10 @@
 If the TGZ servo drive is equipped with the standard static motor brake control function, it includes the brake activation/deactivation circuitry along with fault diagnostics.
 This function does not reduce the static brake’s power consumption. Therefore, the brake excitation voltage remains equal to the supply voltage VCC<sub>BR</sub> for the entire time the brake is engaged.
 
+!!! info "Feature Availability"
+
+    Standard static motor brake control is available on all TGZ series servo drives, except for those equipped with the enhanced [Smart Brake](commonHW_SmartBrake.en.md#SmartBrakeDesc) function.
+
 ##Configuration and Control {#StandardBrakeUsage}
 The user can enable the static brake control function in the program [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 This is the `M-StaticBrake` parameter in the `Motor` section.

@@ -15,6 +15,7 @@ Jedná se o ovládání napětím:
 !!! info "Dostupnost funkce Chytrá brzda"
 
 	Tato funkce je zatím dostupná pouze u některých servozesilovačů TGZ. Jde o TGZ-S-560-14/30-UNIR-RI. Časem bude implementována i do dalších modelů TGZ.
+	Ostatní modely TGZ jsou vybaveny funkcí [Standardní brzda](commonHW_StandardBrake.md#StandardBrakeDesc).
 
 ##Nastavení a ovládání {#SmartBrakeUsage}
 Uživatel může nastavit všechny potřebné parametry v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).

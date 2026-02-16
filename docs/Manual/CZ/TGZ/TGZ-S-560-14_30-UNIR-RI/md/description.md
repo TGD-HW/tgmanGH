@@ -284,7 +284,7 @@ ___
     ---
 	
 	![Motor connector](../../../../source/img/1095720000.svg){: style="width:70%;" }
-	
+		
 	Servozesilovač je vybaven vylepšeným obvodem ovládání statické motorové brzdy.
 	Více informací ohledně nastavení důležitých parametrů naleznete v sekci [Chytrá brzda](../../../../source/md/commonHW_SmartBrake.md#SmartBrakeDesc).
 	

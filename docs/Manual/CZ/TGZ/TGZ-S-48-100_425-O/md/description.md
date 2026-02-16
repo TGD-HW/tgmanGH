@@ -196,6 +196,10 @@ ___
     ---
 	
 	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
+
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
 	
 
 -   Signálové svorky

@@ -213,7 +213,11 @@ ___
 
 	!!! warning "Orientace konektorů"
 	
-		Pozor na správnou orientaci konektoru při zapojování kabeláže.	
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.
+		
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).			
 		
 -   **X4 - Motorový konektor osa 2**
 
@@ -233,7 +237,11 @@ ___
 
 	!!! warning "Orientace konektoru"
 	
-		Pozor na správnou orientaci konektoru při zapojování kabeláže.			
+		Pozor na správnou orientaci konektoru při zapojování kabeláže.
+
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).			
 	
 -   **X2 - Napájení silové části**
 

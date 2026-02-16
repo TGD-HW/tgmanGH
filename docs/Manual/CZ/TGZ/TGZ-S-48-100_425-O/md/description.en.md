@@ -194,6 +194,10 @@ ___
 	
 	![FB1 connector](../../../../source/img/TGZ-S-48-100_250-O_X0b.webp){: style="width:80%;" }
 	
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.	
+	
 
 -   Signal screw terminals
 

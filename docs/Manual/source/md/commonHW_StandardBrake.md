@@ -2,6 +2,10 @@
 Pokud je servozesilovač TGZ vybaven standardní funkcí ovládání statické motorové brzdy, obsahuje obvod aktivace a deaktivace brzdy včetně diagnostiky chyb.
 Tato funkce neumožňuje snížit spotřebu statické brzdy. Excitační napětí brzdy je tedy po celou dobu sepnutí rovno napájecímu napětí VCC<sub>BR</sub>.
 
+!!! info "Dostupnost funkce"
+
+	Standardní funkce ovládání statické motorové brzdy je dostupná u všech servozesilovačů řady TGZ s výjimkou těch, které jsou vybaveny vylepšenou funkcí [Chytrá brzda](commonHW_SmartBrake.md#SmartBrakeDesc).
+
 ##Nastavení a ovládání {#StandardBrakeUsage}
 Uživatel může povolit funkci ovládání statické brzdy v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
 Jedná se o parametr `M-StaticBrake` v sekci `Motor`.

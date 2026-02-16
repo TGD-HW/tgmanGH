@@ -244,6 +244,10 @@ ___
 	
 		Match the type of crimps to the selected wire cross section.
 		
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.		
+		
 -   **P8 - Static brake - additional connector**
 
     ---

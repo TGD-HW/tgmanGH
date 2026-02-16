@@ -82,6 +82,10 @@ ___
 
 	--8<-- "md/X14_BR1_4pin_LSF.md"
 	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
+	
 -   **X15 - Brzda/Termistor osa 2**
 
     ---
@@ -93,6 +97,10 @@ ___
     ---
 
 	--8<-- "md/X15_BR2_4pin_LSF.md"
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
 
 -   **X8 - Digitální I/O, analogové vstupy**
 

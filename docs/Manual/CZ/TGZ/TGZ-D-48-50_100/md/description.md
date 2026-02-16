@@ -242,6 +242,10 @@ ___
     ---
 	
 	![Brake connector](../../../../source/img/1017470000.svg){: style="width:70%;" }
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
 
 -    Weidmüller BLF 5.00HC/06/180F SN OR BX
 

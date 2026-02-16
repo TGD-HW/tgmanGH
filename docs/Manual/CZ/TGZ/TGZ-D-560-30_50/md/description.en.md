@@ -70,7 +70,7 @@ ___
 
 	--8<-- "md/X4_M2_4pin_wago_2636.en.md"
 	
--   **X14 - brake/Termistor axis 1**
+-   **X14 - Brake/Thermistor axis 1**
 
     ---
 	
@@ -82,7 +82,11 @@ ___
 
 	--8<-- "md/X14_BR1_4pin_LSF.en.md"
 	
--   **X15 - brake/Termistor axis 2**
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.	
+	
+-   **X15 - Brake/Thermistor axis 2**
 
     ---
 	
@@ -93,6 +97,10 @@ ___
     ---
 
 	--8<-- "md/X15_BR2_4pin_LSF.en.md"
+	
+	!!! info "Holding motor brake"
+
+		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.	
 
 -   **X8 - Digital I/O, analog inputs**
 

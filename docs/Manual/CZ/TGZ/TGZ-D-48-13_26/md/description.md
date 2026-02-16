@@ -211,6 +211,10 @@ ___
     ---
 	
 	![Motor 1 connector](../../../../source/img/1943620000.svg){: style="width:70%;" }
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).
 
 -    Weidmüller BLZP 5.08HC/06/180 SN OR BX
 
@@ -223,6 +227,10 @@ ___
     ---
 	
 	![Motor 2 connector](../../../../source/img/1943620000.svg){: style="width:70%;" }
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).	
 
 -    Weidmüller BLZP 5.08HC/06/180 SN OR BX
 

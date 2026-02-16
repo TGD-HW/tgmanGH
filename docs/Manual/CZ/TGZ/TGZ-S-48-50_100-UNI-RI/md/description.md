@@ -298,6 +298,10 @@ ___
     ---
 	
 	![Brake connection](../../../../source/img/5055700401.svg){: style="width:70%;" }
+	
+	!!! info "Statická motorová brzda"
+
+		Další informace ohledně použití motorové brzdy se servozesilovačem TGZ naleznete v sekci [Standardní brzda](../../../../source/md/commonHW_StandardBrake.md#StandardBrakeDesc).		
 
 -    Molex Micro-lock 5055700401 - doporučené krimpovací kontakty [Molex 505572](https://www.molex.com/en-us/part-list/505572)  [^3]
 
