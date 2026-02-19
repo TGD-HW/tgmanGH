@@ -47,9 +47,10 @@ Mezní parametry brzdového spínače jsou uvedeny v tabulce:
 	Maximální hodnota výstupního proudu není pevně daná a je závislá na mnoha fakturech, např. teplota servozesilovače, odpor vinutí brzdy atd.
 	
 ##Detekce chyb {#StandardBrakeErrors}
-Při splnění všech podmínek správné funkce statické brzdy servozesilovač TGZ signalizuje dva chybových stavy:
+Servozesilovač TGZ signalizuje následující chybové stavy týkající se řízení statické brzdy:
 
-1.	Odpojení zátěže/brzdy a to i ve stavu, kdy není brzda excitována, ale je povolena parametrem `M-StaticBrake = 1`.
-2.	Přetížení/přehřátí obvodu spínání brzdy.
+1.	Odpojení zátěže/brzdy ve stavu, kdy není brzda excitována, ale je povolena parametrem `M-StaticBrake = 1`.
+2.	Přetížení/přehřátí obvodu spínání brzdy v případě, že I<sub>OUT</sub> > I<sub>OUT,PK,MIN</sub>.
+3.	Podpětí napájení řízení statické brzdy v případě, že VCC<sub>BR</sub> ≤ cca. 8 VDC.
 
-V obou případech se v programu [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart) objeví u příslušné osy chyba **Holding brake error**.
+Ve všech případech servozesilovač hlásí u příslušné osy chybu **Holding brake error**.

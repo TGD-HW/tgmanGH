@@ -47,9 +47,10 @@ The limiting parameters of the brake switch are listed in the table:
     The maximum output current is not a fixed value and depends on many factors, e.g., servo drive temperature, brake winding resistance, etc.
 
 ##Fault Detection {#StandardBrakeErrors}
-When all conditions for proper static brake operation are met, the TGZ servo drive signals two fault conditions:
+The TGZ servo drive reports the following fault conditions related to static brake control:
 
-1.    Detection of a disconnected load/brake even when the brake is not energized but the `M-StaticBrake = 1` parameter is enabled.
-2.    Overload/overtemperature of the brake switching circuit.
+1. Load / holding brake disconnection while the brake is not energized, provided the `M-StaticBrake = 1` parameter is enabled.
+2. Overload / overtemperature of the brake switching circuit in case  I<sub>OUT</sub> > I<sub>OUT,PK,MIN</sub>.
+3. Undervoltage of the static brake control supply when VCC<sub>BR</sub> ≤ approx. 8 VDC.
 
-In both cases, the **Holding brake error** appears for the respective axis in the program [TGZ GUI](../../CZ/TGZ/TGZ_SW/GUI/md/intro.md#GUIstart).
+In all cases, the servo drive reports **Holding brake error** on the respective axis.
