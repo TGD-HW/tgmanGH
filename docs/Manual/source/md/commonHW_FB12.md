@@ -106,3 +106,12 @@ Níže najdete příklad nastavení parametrů polohový snímač RLS AksIM-2, 2
 !!! note "Nastavené parametry"
 
 	Některé parametry jsou akceptovány ihned po nastavení, ale doporučuje se je uložit a restartovat TGZ.
+	
+###[Acuro AD37](https://www.hengstler.com/products/rotary-encoders/absolute-encoders/ad37)
+V závislosti na verzi firmware servozesilovače TGZ je možné na vybraných verzích -RI použít absolutní snímač polohy typu Hengstler Acuro AD37 s rozhraním ACURO® link (4 vodičové: 2 × napájení + 2 × data).
+Jedná se o jednootáčkové (singleturn) a víceotáčkové (multiturn) snímače polohy vhodné pro jednokabelové řešení.
+Mají vstup pro snímač teploty motoru (např. PT1000).
+Rozlišení až 20 bitů singleturn + 12 bitů multiturn, Široký provozní teplotní rozsah (-40°C ~ +115°C) a až 12 000 ot./min při kontinuálním provozu.
+Datové parametry enkodéru uložené v elektronickém datovém listu (EDS) uvnitř enkodéru.
+Rozhraní Hengstler ACURO secure bylo navrženo speciálně pro zajištění vysoké úrovně funkční bezpečnosti (SIL) v řízení servo pohonů.
+Rozhraní splňuje požadavky SIL3, přičemž samotný enkodér AD37S splňuje požadavky na SIL2 a enkodér AD37E splňuje požadavky na SIL3.

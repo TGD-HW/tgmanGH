@@ -110,4 +110,12 @@ Below you can find and example of parameters and settings for TGZ amplifier inte
 !!! note "Parameters set"
 
 	Some parameters are accepted immediately after setting, but it is recommended to save them and restart TGZ.
-
+	
+###[Acuro AD37](https://www.hengstler.com/products/rotary-encoders/absolute-encoders/ad37)
+Depending on the TGZ servo drive firmware version, selected -RI variants can use the Hengstler Acuro AD37 absolute position sensor with the ACURO® link interface (4 wire: 2 × power + 2 × data).  
+These are singleturn and multiturn absolute position encoders suitable for a single cable solution.  
+They provide an input for a motor winding temperature sensor (e.g. PT1000).  
+Resolution up to 20 bit singleturn + 12 bit multiturn, wide operating temperature range (−40 °C ~ +115 °C) and up to 12,000 rpm continuous operation.  
+Encoder data parameters are stored in an Electronic Data Sheet (EDS) inside the encoder.  
+The Hengstler ACURO secure interface was specially designed to provide high levels of functional safety (SIL) in servo drive control.  
+The interface protocol meets SIL3 requirements; the AD37S encoder meets SIL2 and the AD37E encoder meets SIL3.
