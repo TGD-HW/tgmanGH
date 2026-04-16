@@ -115,3 +115,7 @@ Rozlišení až 20 bitů singleturn + 12 bitů multiturn, Široký provozní tep
 Datové parametry enkodéru uložené v elektronickém datovém listu (EDS) uvnitř enkodéru.
 Rozhraní Hengstler ACURO secure bylo navrženo speciálně pro zajištění vysoké úrovně funkční bezpečnosti (SIL) v řízení servo pohonů.
 Rozhraní splňuje požadavky SIL3, přičemž samotný enkodér AD37S splňuje požadavky na SIL2 a enkodér AD37E splňuje požadavky na SIL3.
+
+U tohoto snímače doporučuje použít dodatečnou filtraci datové komunikace feritovým kroužkem:   
+
+![Acuro ferrite](../img/acuroShielding1.webp){: style="width:80%;" }

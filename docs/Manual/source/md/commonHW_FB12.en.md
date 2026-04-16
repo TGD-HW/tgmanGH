@@ -119,3 +119,7 @@ Resolution up to 20 bit singleturn + 12 bit multiturn, wide operating temperatur
 Encoder data parameters are stored in an Electronic Data Sheet (EDS) inside the encoder.  
 The Hengstler ACURO secure interface was specially designed to provide high levels of functional safety (SIL) in servo drive control.  
 The interface protocol meets SIL3 requirements; the AD37S encoder meets SIL2 and the AD37E encoder meets SIL3.
+
+For this sensor, it is recommended to use an additional data communication filter with a ferrite ring:
+
+![Acuro ferrite](../img/acuroShielding1.webp){: style="width:80%;" }
