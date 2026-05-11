@@ -98,14 +98,14 @@ The TGZ servo drive supports the following modes of operation:
 
 | Value | Description                                       | Required TGZ Mode (D-Mode) |
 |-------|---------------------------------------------------|-----------------------------|
-| 1     | Profile Position Mode (PP)                       | 7: Position PG Mode         |
-| 3     | Profile Velocity Mode (PV)                       | 6: Speed PG Mode            |
-| 4     | Torque Profile Mode (PT)                         | 1: Current Mode             |
+| 1     | Profile Position Mode (PP)                        | 7: Position PG Mode         |
+| 3     | Profile Velocity Mode (PV)                        | 6: Speed PG Mode            |
+| 4     | Torque Profile Mode (PT)                          | 9: Current Fieldbus Mode    |
 | 6     | Homing Mode                                       | 7: Position PG Mode         |
 | 7     | Interpolated Position Mode (IP)                   | 3: Position Mode            |
 | 8     | Cyclic Synchronous Position Mode (CSP)            | 3: Position Mode            |
-| 9     | Cyclic Synchronous Velocity Mode (CSV)            | 2: Velocity Mode            |
-| 10    | Cyclic Synchronous Torque Mode (CST)              | 1: Current Mode             |
+| 9     | Cyclic Synchronous Velocity Mode (CSV)            | 10: Velocity Fieldbus Mode  |
+| 10    | Cyclic Synchronous Torque Mode (CST)              | 9: Current Fieldbus Mode    |
 
 !!! warning "Important Note"
     The object `0x6060` (`0x6860`) does NOT change the TGZ drive mode.
@@ -119,9 +119,8 @@ The TGZ servo drive supports the following modes of operation:
 ### Target Torque `0x6071`
 
 The target torque object is used mainly in torque modes PT or CST as the desired value.
-Its range is `-32767 – 32767` and is expressed as a normalized value of the motor's M-Ipeak, where `-32767` is -100%, `0` is 0%, and `32767` is 100% of the M-Ipeak current.
-It can also be used in cyclic positioning modes IP and CSP as the feedforward torque value.
-In this case, the value is added to the desired value of the current regulator.
+Its range is `-32767 – 32767` and is expressed as a normalized value of the motor's M-Inull, where `-1000` is -100%, `0` is 0%, and `1000` is 100% of the M-Inull current.
+
 ### Target Position `0x607A`
 
 This is the position the drive should move to in PP, IP, or CSP mode.
@@ -133,6 +132,7 @@ DesiredTGZposition = TargetPosition607A \times \frac{PositionEncoderNumerator608
 $$
 
 The default value for the numerator is 4096 and for the divisor is 1.
+
 ### Profile Velocity `0x6081`
 
 The final desired TGZ velocity for PP, PV, or CSV mode is calculated from the Profile Velocity object by the equation:
@@ -152,8 +152,8 @@ Supported profile types for PP mode are as follows:
 | -3    | Sinusoidal (TGZ PG Mode 2)                       |
 | -2    | Fast acceleration, fast deceleration (TGZ PG Mode 1) |
 | -1    | Fast acceleration, slow deceleration (TGZ PG Mode 0) |
-| 0     | Trapezoidal (TGZ Mode 3)                         |
-| 1     | sin² (TGZ Mode 4)                                |
+| 0     | Trapezoidal (TGZ PG Mode 3)                      |
+| 1     | sin² (TGZ Mode 4) (reserved for future use)      |
 
 ### Homing Method `0x6098`
 
@@ -176,6 +176,10 @@ The following standard DSP402 homing modes are available:
 | 21   | Homing on negative limit switch. Equals mode 5 without the index pulse search.                                                                                                           |
 | 35   | Set zero to the actual position. Uses the actual position as the home point reference. This method is obsolete for CoE.                                                                 |
 | 37   | Set zero to the actual position. Uses the actual position as the home point reference. This mode should be used for CoE.                                                           |
+| -1   | Homing on mechanical stop in the positive direction. The drive moves with positive homing speed until it detects a mechanical stop. |
+| -2   | Homing on mechanical stop in the negative direction. Similar to mode -1, but the movement is in the opposite direction.             |
+| -3   | Homing on mechanical stop in the positive direction and set zero when finished. Similar to mode -1, but the actual position is set to zero after the stop is detected. |
+| -4   | Homing on mechanical stop in the negative direction and set zero when finished. Similar to mode -2, but the actual position is set to zero after the stop is detected. |
 
 ### Digital Inputs `0x60FD`
 According to the DSP402 standard, all digital inputs are mapped to the high 16 bits of the UNSIGNED32 value (TGZ servo drive has 8 digital inputs, so only bits 16 – 23 correspond to digital inputs).

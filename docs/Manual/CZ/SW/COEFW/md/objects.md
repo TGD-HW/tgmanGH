@@ -108,14 +108,14 @@ Servopohon TGZ podporuje následující provozní režimy:
 
 | Hodnota | Popis                                           | Požadovaný režim TGZ (D-Mode) |
 |---------|-------------------------------------------------|-------------------------------|
-| 1       | Polohový režim (PP)                       | 7: Polohový režim PG            |
-| 3       | Rychlostní režim (PV)                  | 6: Rychlostní režim PG             |
-| 4       | Proudový (torque) režim (PT)             | 1: Proudový režim            |
-| 6       | Režim navádění do výchozí polohy                                  | 7: Polohový režim PG            |
-| 7       | Režim interpolované polohy (IP)                 | 3: Polohový režim               |
-| 8       | Cyklický synchronní polohový režim (CSP)        | 3: Polohový režim               |
-| 9       | Režim cyklické synchronní rychlosti (CSV)       | 2: Rychlostní režim          |
-| 10      | Režim cyklického synchronního momentu (CST)     | 1: Proudový režim             |
+| 1       | Polohový režim (PP)                             | 7: Polohový režim PG          |
+| 3       | Rychlostní režim (PV)                           | 6: Rychlostní režim PG        |
+| 4       | Proudový (torque) režim (PT)                    | 9: Proudový režim             |
+| 6       | Režim navádění do výchozí polohy                | 7: Polohový režim PG          |
+| 7       | Režim interpolované polohy (IP)                 | 3: Polohový režim             |
+| 8       | Cyklický synchronní polohový režim (CSP)        | 3: Polohový režim             |
+| 9       | Režim cyklické synchronní rychlosti (CSV)       | 10: Rychlostní režim          |
+| 10      | Režim cyklického synchronního momentu (CST)     | 9: Proudový režim             |
 
 !!! warning "Důležité upozornění"
 	Objekt `0x6060` (`0x6860`) NEMĚNÍ režim pohonu TGZ.
@@ -134,9 +134,7 @@ Servopohon TGZ podporuje následující provozní režimy:
 	
 ###Požadovaný točivý moment `0x6071`
 Objekt požadovaného momentu se používá především v režimech momentu PT nebo CST jako požadovaná hodnota.
-Jeho rozsah je `-32767 - 32767` a je vyjádřen jako normalizovaná hodnota `M-Ipeak` motoru, kde `-32767 je -100 %, 0 je 0 % a 32767 je 100 % M-Ipeak` proudu.
-Lze ji použít také v režimech cyklického polohování IP a CSP jako hodnotu posuvného momentu.
-Poté se tato hodnota přičte k požadované hodnotě do regulátoru proudu.
+Jeho rozsah je `-32767 - 32767` a je vyjádřen jako normalizovaná hodnota `M-Inull` motoru, kde `-1000 je -100 %, 0 je 0 % a 1000 je 100 % M-Inull` proudu.
 
 ###Žádaná poloha `0x607A`
 Je to poloha, do které se má pohon přesunout v režimu PP, IP nebo CSP.
@@ -167,7 +165,7 @@ Podporované typy profilů pro režim PP jsou následující.
 |-2       | Rychlé zrychlení, rychlé zpomalení (režim TGZ PG 1) |
 |-1       | Rychlé zrychlení, pomalé zpomalení (režim TGZ PG 0) |
 | 0       | Trapézový (režim TGZ 3)                           |
-| 1       | sin2 (režim TGZ 4)                                |
+| 1       | sin2 (režim TGZ 4) (rezervováno pro budoucí rozšíření) |
 
 ###Metoda přejezdu do výchozí polohy `0x6098`
 Režim přejezdu do výchozí polohy se aktivuje nastavením hodnoty objektu `0x6060` na hodnotu 6.
@@ -189,6 +187,10 @@ K dispozici jsou následující standardní režimy polohování DSP402:
 | 21      | Najetí na záporný koncový spínač. Rovná se režimu 5 bez vyhledávání indexových impulzů.                                                                                                           |
 | 35      | Nastavit nulu v aktuální poloze. Používá skutečnou polohu jako referenční bod výchozího bodu. Tato metoda je pro CoE zastaralá.                                                                 |
 | 37      | Nastavit nulu v aktuální poloze. Používá skutečnou polohu jako referenční bod výchozího bodu. Tento režim je pro CoE doporučen.                                                           |
+| -1      | Najetí na mechanický doraz v kladném směru. Servopohon se pohybuje s kladnou rychlostí navádění, dokud nedetekuje mechanický doraz. |
+| -2      | Najetí na mechanický doraz v záporném směru. Podobně jako režim -1, ale pohyb je v opačném směru.             |
+| -3      | Najetí na mechanický doraz v kladném směru a nastavení nuly po dokončení. Podobně jako režim -1, ale skutečná poloha je nastavena na nulu po detekci dorazu. |
+| -4      | Najetí na mechanický doraz v záporném směru a nastavení nuly po dokončení. Podobně jako režim -2, ale skutečná poloha je nastavena na nulu po detekci dorazu. |
 
 ###Digitální vstupy `0x60FD`
 Podle standardu DSP402 jsou všechny digitální vstupy namapovány na horních 16 bitů hodnoty `UNSIGNED32` (servopohon TGZ má 8 digitálních vstupů, takže digitálním vstupům odpovídají pouze bity 16 - 23).
