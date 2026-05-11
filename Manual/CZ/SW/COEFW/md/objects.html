@@ -15083,7 +15083,7 @@ Varianta TGZ-S servo umožňuje přístup k objektům <code>0x6800</code> - <cod
 <tr>
 <td>4</td>
 <td>Proudový (torque) režim (PT)</td>
-<td>1: Proudový režim</td>
+<td>9: Proudový režim</td>
 </tr>
 <tr>
 <td>6</td>
@@ -15103,12 +15103,12 @@ Varianta TGZ-S servo umožňuje přístup k objektům <code>0x6800</code> - <cod
 <tr>
 <td>9</td>
 <td>Režim cyklické synchronní rychlosti (CSV)</td>
-<td>2: Rychlostní režim</td>
+<td>10: Rychlostní režim</td>
 </tr>
 <tr>
 <td>10</td>
 <td>Režim cyklického synchronního momentu (CST)</td>
-<td>1: Proudový režim</td>
+<td>9: Proudový režim</td>
 </tr>
 </tbody>
 </table>
@@ -15132,9 +15132,7 @@ V opačném případě může dojít k chybě polohy.</p>
 </div>
 <h3 id="pozadovany-tocivy-moment-0x6071">Požadovaný točivý moment <code>0x6071</code><a class="headerlink" href="#pozadovany-tocivy-moment-0x6071" title="Permanent link">¶</a></h3>
 <p>Objekt požadovaného momentu se používá především v režimech momentu PT nebo CST jako požadovaná hodnota.
-Jeho rozsah je <code>-32767 - 32767</code> a je vyjádřen jako normalizovaná hodnota <code>M-Ipeak</code> motoru, kde <code>-32767 je -100 %, 0 je 0 % a 32767 je 100 % M-Ipeak</code> proudu.
-Lze ji použít také v režimech cyklického polohování IP a CSP jako hodnotu posuvného momentu.
-Poté se tato hodnota přičte k požadované hodnotě do regulátoru proudu.</p>
+Jeho rozsah je <code>-32767 - 32767</code> a je vyjádřen jako normalizovaná hodnota <code>M-Inull</code> motoru, kde <code>-1000 je -100 %, 0 je 0 % a 1000 je 100 % M-Inull</code> proudu.</p>
 <h3 id="zadana-poloha-0x607a">Žádaná poloha <code>0x607A</code><a class="headerlink" href="#zadana-poloha-0x607a" title="Permanent link">¶</a></h3>
 <p>Je to poloha, do které se má pohon přesunout v režimu PP, IP nebo CSP.
 Hodnota se násobí poměrem daným objektem <em>Rozlišení snímače polohy</em> (<code>0x608F</code>).
@@ -15177,7 +15175,7 @@ DesiredTGZvelocity=ProfileVelocity6081 \times \frac{VelocityEncoderNumerator6094
 </tr>
 <tr>
 <td>1</td>
-<td>sin2 (režim TGZ 4)</td>
+<td>sin2 (režim TGZ 4) (rezervováno pro budoucí rozšíření)</td>
 </tr>
 </tbody>
 </table>
@@ -15234,6 +15232,22 @@ Objekt <code>0x60E3</code> je implementován a vrací počet podporovaných rež
 <tr>
 <td>37</td>
 <td>Nastavit nulu v aktuální poloze. Používá skutečnou polohu jako referenční bod výchozího bodu. Tento režim je pro CoE doporučen.</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>Najetí na mechanický doraz v kladném směru. Servopohon se pohybuje s kladnou rychlostí navádění, dokud nedetekuje mechanický doraz.</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>Najetí na mechanický doraz v záporném směru. Podobně jako režim -1, ale pohyb je v opačném směru.</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>Najetí na mechanický doraz v kladném směru a nastavení nuly po dokončení. Podobně jako režim -1, ale skutečná poloha je nastavena na nulu po detekci dorazu.</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>Najetí na mechanický doraz v záporném směru a nastavení nuly po dokončení. Podobně jako režim -2, ale skutečná poloha je nastavena na nulu po detekci dorazu.</td>
 </tr>
 </tbody>
 </table>
@@ -15910,7 +15924,7 @@ CoE TPDO (<code>0x1B01</code>) má následující strukturu (40 bajtů):</p>
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="29. července 2024 07:31:43 UTC"><span class="timeago" datetime="2024-07-29T07:31:43+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="29. července 2024 07:31:43 UTC">2024-07-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="11. května 2026 11:39:14 UTC"><span class="timeago" datetime="2026-05-11T11:39:14+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="11. května 2026 11:39:14 UTC">2026-05-11</span>
   </span>
 
     
