@@ -19,7 +19,7 @@ Following are the possible steps to create a new project with two TGZ servo ampl
 ![Profinet img](../../../../source/img/profinet12.webp){: style="width:90%;" loading="lazy"}
 
 - Install the XML GSD files describing the TGZ device in PROFINET network.
-  There are two types of files, one for the single axis variant, called `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` and the second for the double axis TGZ variant `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (where `xxxxx` stands for file creation date).
+  There are two types of files, one for the single axis variant, called `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` and the second for the double axis TGZ variant `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (where `xxxxx` stands for file creation date). The PROFIsafe firmware version uses just one file for both variants, named `GSDML-V2.44-TGDrives-TGZ-F-xxxxxxxx.xml`. The files can be downloaded from the TG Drives website.
 
 <!-- add placeholders for GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml and GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml - direct download links from the web -->
 

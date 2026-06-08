@@ -1,3 +1,20 @@
+## Telegram assignment
+
+The TGZ drive supports the following telegrams for PROFIdrive communication:
+
+| Telegram number | Description |
+|-----------------|-------------|
+| 1               | Speed control mode (16-bit) |
+| 3               | Speed control mode with actual position (32-bit)  (standard firmware only)|
+| 7               | Position control mode (tasks only)|
+| 9               | Position control mode (tasks and direct MDI control) |
+| 102             | Speed control mode with extended features (PROFIsafe firmware only) |
+| 111             | Position control mode with extended features (MDI control)|
+| 352             | Speed control mode with extended features |
+
+!!! warning "Warning"
+    **The telegrams must be selected using TGZ_GUI application. When changed, the TGZ must be restarted. It is important that the PLC has already the right telegrams selected in the project and it is running before the TGZ is restarted, otherwise the drive will not be able to establish communication with the PLC and will not work. This behaviour is important only when the telegrams are changed, otherwise the power up order of PLC and TGZ does not matter.**
+
 ## Homing modes
 
 The drive must be in operational state with positioning mode set (telegrams `7`, `9` or `111`). No task must be active and the drive must be in standstill. The mode is selected by the `Homing_Mode` parameter in the TGZ_GUI application. To initiate a homing procedure, set the control word `STW1` bit `11` to one. As the homing procedure is running, the status word `ZSW1` bits `10, 11 and 13` are set to zero. After successful homing, these bits `10, 11 and 13` go to one. In the case of any error during homing, only the bit `13` is set. The homing procedure can be aborted by setting the `STW1 bit 11` to zero. It is also necessary to finish the successful homing procedure by setting the `STW1 bit 11` to zero. Only after this the drive goes back to the basic operational state.
@@ -78,7 +95,7 @@ Telegram `111` contains space for the last active error code, where the `WARN co
 | 2  | reserved (internal error) |
 | 3  | Over voltage DC-Link |
 | 4  | Under voltage DC-link |
-| 5  | STO diagnostics |
+| 5  | STO diagnostics or safety error |
 | 6  | Holding brake error |
 | 9  | Motor temperature |
 | 11 | Drive temperature |
@@ -218,7 +235,3 @@ Parameters for PD_Task1:
 ## PD_Task2 to PD_Task10
 
 Parameters for PD_Task2 to PD_Task10 follow similar numbering patterns for axes 1 and 2.
-
-
-
-

@@ -8,18 +8,22 @@ Servozesilovač TGZ používá PROFIdrive podle uvedené technické specifikace:
 Pro ovládání TGZ je k dispozici několik telegramů PROFIdrive pro použití s PLC:
 
 - Standardní telegram 1 - rozhraní n-údajů, 16 bitů
-- Standardní telegram 3 - rozhraní n-údajů, 32 bitů, s jedním senzorem
+- Standardní telegram 3 - rozhraní n-údajů, 32 bitů, s jedním senzorem (pouze standardní firmware)
 - Standardní telegram 7 - polohovací rozhraní
 - Standardní telegram 9 - polohovací rozhraní plus podrežim MDI
+- Telegram 102 - rozšířený telegram 1 s dalšími stavovými informacemi (pouze firmware PROFIsafe)
 - Telegram 111 - SinaPos basic positioner
 - Telegram 352 - rozšířený telegram 1 s dalšími stavovými informacemi
 
 Verze PROFIsafe podporuje navíc následující telegramy
 
 - Standardní telegram 36 PROFIsafe - čtení polohy ze safety enkodéru
-- Telegram PROFIsafe 902 - řízení bezpečnostních funkcí PROFIsafe, s knihovní podporou v TIA portalu.
+- Standardní telegram 31 PROFIsafe - řízení bezpečnostních funkcí, s knihovní podporou v TIA portalu.
 
-Podrobný popis telegramů naleznete v příslušné dokumentaci.   
+Podrobný popis telegramů naleznete v příslušné dokumentaci.
+
+!!! warning "Varování"
+	**Telegramy PROFIdrive musí být vybrány pomocí aplikace TGZ_GUI. Po změně musí být TGZ restartováno. Je důležité, aby PLC již mělo v projektu vybrané správné telegramy a bylo spuštěné před restartem TGZ, jinak pohon nebude schopen navázat komunikaci s PLC a nebude pracovat. Toto chování je důležité pouze při změně telegramů, jinak na pořadí zapnutí PLC a TGZ nezáleží.**
 
 Podle specifikace PROFINET podporuje servopohon TGZ třídu shody A.
 Parametry PROFIdrive lze číst a zapisovat přes síť PROFINET, stejně jako cyklická data.
@@ -30,13 +34,6 @@ U dvouosé varianty servopohonu je možná i přesná synchronizace (elektronick
 
 Nejrychlejší doba cyklu TGZ pro data PROFINET RT je 1 ms (firmware od srpna 2022 nebo novější).
 Maximální jitter je 250 µs.
-
-## Servo typu TGZ-S-48-xxx
-
-Tato verze má zvláštní zacházení s firmwarem: vzhledem k podobnosti s verzí TGZ-D musí být naprogramována firmwarem určeným pro variantu TGZ-D.
-Proto je nutné použít také soubor `GSDML` s názvem `GSDML-V2.4-TGDrives-TGZ-D-xxxxxxxx.xml`, tj. soubor pro dvouosou variantu.
-Při uvádění pohonu do provozu lze použít pouze první osu.
-Druhá osa zůstává vždy v chybovém stavu.
 
 ## Firmware PROFIsafe
 

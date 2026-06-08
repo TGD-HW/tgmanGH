@@ -88,7 +88,7 @@ Chybové kódy TGZ jsou bitově orientované, tj. je možných až 32 chyb, a js
 | 2  | rezervováno (interní chyba) |
 | 3  | Přepětí na DC sběrnici |
 | 4  | Podpětí na DC sběrnici |
-| 5  | Diagnostika STO |
+| 5  | Diagnostika STO nebo chyba safety |
 | 6  | Chyba zadržovací brzdy |
 | 9  | Teplota motoru |
 | 11 | Teplota pohonu |

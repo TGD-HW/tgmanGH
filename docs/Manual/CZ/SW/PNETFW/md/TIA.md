@@ -19,7 +19,7 @@ Následují možné kroky pro vytvoření nového projektu se dvěma servozesilo
 ![Profinet img](../../../../source/img/profinet12.webp){: style="width:90%;" loading="lazy" }
 
 - Nainstalujte soubory XML GSD popisující zařízení TGZ v síti PROFINET.
-  Existují dva typy souborů, jeden pro jednoosou variantu s názvem `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` a druhý pro dvouosou variantu TGZ `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (kde `xxxxx` znamená datum vytvoření souboru).
+  Existují dva typy souborů, jeden pro jednoosou variantu s názvem `GSDML-V2.4-TGDrives-TGZ-S-xxxxx.xml` a druhý pro dvouosou variantu TGZ `GSDML-V2.4-TGDrives-TGZ-D-xxxxx.xml` (kde `xxxxx` znamená datum vytvoření souboru). PROFIsafe firmware používá pouze jeden soubor pro obě varianty, nazvaný `GSDML-V2.44-TGDrives-TGZ-F-xxxxxxxx.xml`. Soubory lze stáhnout z webových stránek TG Drives.
 
 
 
