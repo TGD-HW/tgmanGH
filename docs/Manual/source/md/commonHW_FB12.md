@@ -116,6 +116,8 @@ Datové parametry enkodéru uložené v elektronickém datovém listu (EDS) uvni
 Rozhraní Hengstler ACURO secure bylo navrženo speciálně pro zajištění vysoké úrovně funkční bezpečnosti (SIL) v řízení servo pohonů.
 Rozhraní splňuje požadavky SIL3, přičemž samotný enkodér AD37S splňuje požadavky na SIL2 a enkodér AD37E splňuje požadavky na SIL3.
 
-U tohoto snímače doporučuje použít dodatečnou filtraci datové komunikace feritovým kroužkem:   
+U tohoto snímače doporučuje použít dodatečnou filtraci datové komunikace feritovým kroužkem. V tomto případě vytvořte jeden závit všemi vodiči přes feritový kroužek:   
 
-![Acuro ferrite](../img/acuroShielding1.webp){: style="width:80%;" }
+![Acuro ferrite](../img/acuroShielding1.webp){: style="width:80%;" }   
+
+![Acuro ferrite 1](../img/acuroShielding2.webp){: style="width:80%;" }
