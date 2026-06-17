@@ -244,6 +244,10 @@ ___
 
 	--8<-- "md/X2_DCbus_2pin_pressfit.en.md"
 	
+	!!! info "Tightening torque"
+
+		The maximum tightening torque for the M5 press-fit is 2.2 Nm.	
+	
 	!!! warning "Regenerative braking"
 	
 		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
@@ -260,6 +264,10 @@ ___
     ---
 	
 	--8<-- "md/X2_M1_3pin_pressfit.en.md"
+	
+	!!! info "Tightening torque"
+
+		The maximum tightening torque for the M5 press-fit is 2.2 Nm.	
 
 
 -   **X3 - Static brake connector**

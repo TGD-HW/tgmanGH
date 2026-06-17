@@ -254,6 +254,10 @@ ___
     ---
 
 	--8<-- "md/X2_DCbus_2pin_pressfit.md"
+
+	!!! info "Dotahovací moment"
+	
+		Maximální dotahovací moment pro pressfit M5 je  2,2 Nm.	
 	
 	!!! warning "Regenerativní brzdění"
 	
@@ -271,6 +275,10 @@ ___
     ---
 	
 	--8<-- "md/X2_M1_3pin_pressfit.md"
+	
+	!!! info "Dotahovací moment"
+	
+		Maximální dotahovací moment pro pressfit M5 je  2,2 Nm.	
 
 
 -   **X3 - Připojení brzdy**

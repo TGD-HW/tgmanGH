@@ -7,7 +7,7 @@
 !!! note "Poznámka"
 	Externí teplotní čidlo PT1000 se používá k měření teploty motoru.
 	
-##Popis komunikace, vstupů/výstupů a ovládání:
+##Popis komunikace, vstupů/výstupů a ovládání
 ###Komunikační rozhraní
 - Ethernet 100/1000 Mb/s s UDP protokolem, určen pro záznam parametrů, monitorování, testování, ale také online ovládání.
 - CAN bus protokol lze upravit podle požadavků zákazníka.
@@ -17,7 +17,7 @@
   Může být použit pro komunikaci se zařízeními založenými na standardu RS422 nebo RS485 (enkodér, gyroskop, nadřazené řízení, jiný systém atd.).
   Toto rozhraní umožňuje vysokorychlostní komunikaci až 20 Mbit/s.
   
-###Vstupy / výstupy:
+###Vstupy / výstupy
 Vestavné servozesilovače TGZ mají 8 digitálních vstupů, 3 digitální vstupy, 6 digitálních výstupů a 2 vstupy pro teplotní čidlo PT1000 a jeden analogový vstup.
 Tyto vstupy a výstupy je možné ovládat pomocí uživatelského programu (jazyk C).
 Digitální výstupy lze ovládat i přes ovládací servisní software TGZ GUI.
@@ -275,6 +275,10 @@ ___
 
 	--8<-- "md/X2_DCbus_2pin_pressfit.md"
 	
+	!!! info "Dotahovací moment"
+	
+		Maximální dotahovací moment pro pressfit M5 je  2,2 Nm.
+	
 	!!! warning "Regenerativní brzdění"
 	
 		V případě, že pohon není napájen z akumulátoru (např. Li-ion bateriový pack) 
@@ -291,6 +295,10 @@ ___
     ---
 	
 	--8<-- "md/X2_M1_3pin_pressfit.md"
+
+	!!! info "Dotahovací moment"
+	
+		Maximální dotahovací moment pro pressfit M5 je  2,2 Nm.	
 
 
 -   **X3 - Připojení brzdy**
@@ -314,7 +322,7 @@ ___
 [^3]: Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle [Aplikačního návodu Molex Micro-Lock](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf) a použijte krimpovací nástroj [2002180800](https://www.molex.com/en-us/products/part-detail/2002180800).
 [^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) a použijte krimpovací nástroj [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400).
 
-###Postup pro změnu typu zpětné vazby DSL FB1 a FB2:
+###Postup pro změnu typu zpětné vazby DSL FB1 a FB2
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
 Ve výchozím nastavení nejsou tyto rezistory od dodávek po 06/2024 osazeny, pokud není uvedeno jinak.
 Uživatel je může osadit, aby se předešlo nutnosti používat externí propojku DSL, avšak mějte na paměti, že jakmile jsou rezistory na desce osazeny, může být použita pouze zpětná vazba typu Hiperface DSL.
@@ -323,4 +331,3 @@ Další použitelné standardy jsou EnDat 2.2, SSI, BISS nebo inkrementální en
 Funkce zpětné vazby také závisí na nahraném firmwaru.
 
 ![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
-
