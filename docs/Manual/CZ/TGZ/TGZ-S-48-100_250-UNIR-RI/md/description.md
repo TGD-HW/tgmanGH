@@ -311,7 +311,10 @@ ___
 
 	Doporučený průřez kabelu 25-35 mm<sup>2</sup> (3 - 2 AWG), lisovací oko M8.
 	Doporučené kabelové oko [BM 01737](https://www.tme.eu/cz/details/bm01737/konektory-neizolovane/bm-group/bm-01737/).
-
+	
+	!!! info "Dotahovací moment"
+		Maximální dotahovací moment pro pressfit M8 je 9 Nm.	
+	
 	!!! info "Průřez"
 		Průřez a délka kabelu závisí na typu servomotoru, kabelu a provozu pohonu.
 		Pro přesný výpočet odpovídající vašemu projektu kontaktujte výrobce.

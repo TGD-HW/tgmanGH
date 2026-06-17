@@ -315,6 +315,9 @@ ___
 
 	Recommended wire cross section 25-35 mm<sup>2</sup> (3 - 2 AWG), crimping ring tube for the M8 screw.
 	Recommended crimping ring tube [BM 01737](https://www.tme.eu/cz/en/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
+	
+	!!! info "Tightening torque"
+		The maximum tightening torque for the M8 press-fit is 9 Nm.	
 
 	!!! info "Wire cross section"
 		The cross section and the length of the cables depends on the type of servomotor, cable and operation of the drive.
