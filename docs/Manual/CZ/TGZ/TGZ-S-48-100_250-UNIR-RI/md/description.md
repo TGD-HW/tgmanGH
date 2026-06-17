@@ -400,6 +400,9 @@ ___
 | DC bus (-DC, +DC) – 4 kabely [^5]  | 8                    | 10        | Krimpovací oko M5, 6 – 10 mm<sup>2</sup> (8 AWG)               | [GS5-10JST](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)          |
 | DC bus (-DC, +DC) – 8 kabelů [^5]  | 4                    | 6         | Krimpovací oko M5, 4 – 6 mm<sup>2</sup> (10–9 AWG)             | [BM 01325](https://www.tme.eu/cz/details/bm01325/konektory-neizolovane/bm-group/bm-01325/)           |
 
+!!! info "Dotahovací moment"
+	Maximální dotahovací moment pro pressfit M5 je 2,2 Nm.
+
 !!! info "délka přívodních vodičů"
 	Výchozí dodávaná délka přívodních (DC) vodičů je 1 m.
 	

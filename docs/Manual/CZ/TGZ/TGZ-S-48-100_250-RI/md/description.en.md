@@ -277,6 +277,9 @@ ___
 	Recommended crimping ring tube [BM 01737](https://www.tme.eu/cz/en/details/bm01737/non-insulated-terminals/bm-group/bm-01737/).
 </div>
 
+!!! info "Tightening torque"
+	The maximum tightening torque for the M8 press-fit is 9 Nm.
+
 !!! info "Wire cross section"
 	The cross section and the length of the cables depends on the type of servomotor, cable and operation of the drive.
 	Please contact your supplier for an exact calculation corresponding to your project.
@@ -301,6 +304,9 @@ ___
 |                                | min                                 | max       |                                                      |                      |
 | DC bus (-DC, +DC) – 4 cables [^5]   | 8                                   | 7        | Crimp lug M5, AWG 8        | [GS5-10JST](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/) |
 | DC bus (-DC, +DC) – 8 cables [^5]  | 12                                   | 9         | Crimp lug M5, AWG 10        | [BM 01325](https://www.tme.eu/cz/en/details/bm01325/non-insulated-terminals/bm-group/bm-01325/) |
+
+!!! info "Tightening torque"
+	The maximum tightening torque for the M5 press-fit is 2.2 Nm.
 
 !!! info "DC bus wire length"
 	Default supplied DCbus wires length is 1 m.
