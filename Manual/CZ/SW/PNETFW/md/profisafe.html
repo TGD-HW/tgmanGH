@@ -11574,6 +11574,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#zdrojove-a-cilove-adresy-profisafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zdrojové a cílové adresy PROFIsafe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pravidla-pro-reset-a-restart" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15370,6 +15381,25 @@ Telegram bezpečnostního enkodéru
 <p class="admonition-title">Varování</p>
 <p><strong>Při změně verze PROFIsafe musí být TGZ restartováno.</strong></p>
 </div>
+<h4 id="zdrojove-a-cilove-adresy-profisafe">Zdrojové a cílové adresy PROFIsafe<a class="headerlink" href="#zdrojove-a-cilove-adresy-profisafe" title="Permanent link">¶</a></h4>
+<p>Kromě správného výběru PROFIsafe telegramů musí být pro každý bezpečnostní komunikační vztah správně nakonfigurovány také zdrojové a cílové adresy PROFIsafe.</p>
+<p>TGZ podporuje <strong>Address Type 2</strong> podle specifikace PROFIsafe. To znamená, že jako součást identifikace komunikačního vztahu (codename) je kontrolována jak adresa <strong>F_SourceAdd</strong>, tak adresa <strong>F_DestAdd</strong>. Komunikace nebude navázána, pokud nakonfigurované adresy neodpovídají hodnotám očekávaným F-Hostem a TGZ. Ve specifikaci PROFIsafe znamená Address Type 2, že <strong>F_SourceAdd</strong> je kontrolována společně s <strong>F_DestAdd</strong>. Tím je zajištěna dodatečná ochrana proti chybám adresování a záměně komunikačních vztahů.</p>
+<p>Adresy musí být v servisním programu <strong>TGZ GUI II</strong> nakonfigurovány samostatně pro každý PROFIsafe telegram:</p>
+<ul>
+<li><strong>Telegram 31</strong> (bezpečnostní řízení a stav)</li>
+<li><strong>Telegram 36</strong> (bezpečnostní enkodér)</li>
+</ul>
+<p>Pro každý telegram platí:</p>
+<ul>
+<li><strong>F_SourceAdd</strong> musí obsahovat adresu PROFIsafe kontroleru (F-Host).</li>
+<li><strong>F_DestAdd</strong> musí obsahovat cílovou adresu přiřazenou odpovídajícímu PROFIsafe telegramu TGZ v projektu PLC.</li>
+</ul>
+<p>Nakonfigurované hodnoty musí přesně odpovídat adresám nastaveným v programovacím prostředí PLC. Nesprávné přiřazení adres zabrání komunikaci PROFIsafe přejít do provozního stavu.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Každá změna <strong>F_SourceAdd</strong> nebo <strong>F_DestAdd</strong> vyžaduje uložení konfigurace a restart TGZ, aby se nové hodnoty projevily.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../source/img/TGZ_GUI_PROFIsafe_source_and_destination_addresses.png" data-desc-position="bottom"><img alt="TGZ GUI II PROFIsafe zdrojové a cílové adresy" src="../../../../source/img/TGZ_GUI_PROFIsafe_source_and_destination_addresses.png"></a></p>
 <h4 id="pravidla-pro-reset-a-restart">Pravidla pro reset a restart<a class="headerlink" href="#pravidla-pro-reset-a-restart" title="Permanent link">¶</a></h4>
 <p>Některé změny vyžadují restart TGZ, než se projeví:</p>
 <table>
@@ -15404,6 +15434,50 @@ Ano
 </td>
 <td> 
 řídicí jednotka musí být před restartem TGZ již nakonfigurována se správnou verzí PROFIsafe a spuštěna
+</td>
+</tr>
+<tr>
+<td> 
+Změna F_Source_Add_Enc
+</td>
+<td> 
+Ano
+</td>
+<td> 
+řídicí jednotka musí být nakonfigurována se správnou hodnotou F_Source_Add pro telegram 36
+</td>
+</tr>
+<tr>
+<td> 
+Změna F_Dest_Add_Enc
+</td>
+<td> 
+Ano
+</td>
+<td> 
+řídicí jednotka musí být nakonfigurována se správnou hodnotou F_Dest_Add pro telegram 36
+</td>
+</tr>
+<tr>
+<td> 
+Změna F_Source_Add_Ctrl
+</td>
+<td> 
+Ano
+</td>
+<td> 
+řídicí jednotka musí být nakonfigurována se správnou hodnotou F_Source_Add pro telegram 31
+</td>
+</tr>
+<tr>
+<td> 
+Změna F_Dest_Add_Ctrl
+</td>
+<td> 
+Ano
+</td>
+<td> 
+řídicí jednotka musí být nakonfigurována se správnou hodnotou F_Dest_Add pro telegram 31
 </td>
 </tr>
 <tr>
@@ -15529,7 +15603,35 @@ Ano
 <li>Importujte správný soubor GSDML do programovacího prostředí PLC.</li>
 <li>Vyberte požadovaný telegram PROFIdrive.</li>
 <li>Vyberte PROFIsafe telegram 31 a/nebo telegram 36.</li>
-<li>Nastavte F-adresu a ověřte, že odpovídá projektu PLC.</li>
+<li>Nakonfigurujte adresy PROFIsafe a ověřte, že odpovídají projektu PLC:</li>
+</ul>
+<table>
+<tbody><tr>
+<th> 
+</th>
+</tr>
+<tr>
+<td> 
+F_SourceAdd = adresa PROFIsafe kontroleru (F-Host).
+</td>
+</tr>
+<tr>
+<td> 
+F_DestAdd = cílová adresa odpovídajícího PROFIsafe telegramu TGZ.
+</td>
+</tr>
+<tr>
+<td> 
+Pokud jsou použity oba telegramy, nakonfigurujte telegram 31 a telegram 36 nezávisle.
+</td>
+</tr>
+<tr>
+<td> 
+Ověřte, že TGZ GUI II a projekt PLC používají přesně stejné přiřazení adres.
+</td>
+</tr>
+</tbody></table>
+<ul>
 <li>Nakonfigurujte bezpečnostní parametry v TGZ GUI II. To je důležité, protože bez správné konfigurace bezpečnostních parametrů nebudou bezpečnostní funkce pracovat očekávaným způsobem a mohou způsobit neočekávané chování, případně TGZ nebude pracovat vůbec. Bezpečnostní parametry musí být nastaveny podle požadavků konkrétní aplikace a zvolených bezpečnostních funkcí. Doporučuje se začít s konzervativními hodnotami a poté je upravit podle testování a validace.</li>
 <li>Ověřte konfiguraci a směr enkodéru.</li>
 <li>Před povolením pohybu otestujte STO.</li>
@@ -16167,6 +16269,10 @@ Ano
 </div>
 <h2 id="bezpecnostni-enkodery-telegram-36">Bezpečnostní enkodéry (telegram 36)<a class="headerlink" href="#bezpecnostni-enkodery-telegram-36" title="Permanent link">¶</a></h2>
 <p>Telegram 36 se používá pro výměnu dat bezpečnostního enkodéru přes PROFIsafe. Poskytuje bezpečnou aktuální polohu, bezpečnou aktuální rychlost, stavové slovo bezpečnostního enkodéru a řídicí slovo bezpečnostního enkodéru. Umožňuje také PLC nastavit novou bezpečnou aktuální polohu pomocí mechanismu bezpečné předvolby.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Je nutné správně nastavit rozlišení bezpečnostního enkodéru v bezpečnostních parametrech pomocí programu TGZ GUI II, aby se zajistilo správné fungování telegramu 36. Program zobrazuje doporučené hodnoty, ale je odpovědností uživatele nastavit hodnotu ručně. Pokud je rozlišení nastaveno nesprávně, vede to k neplatným hodnotám polohy a rychlosti, což může způsobit nečekané chování pohonu a představovat riziko.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Poznámka</p>
 <p>Pro telegram 36 v současné době neexistuje standardní knihovní blok Siemens TIA Portal. Programátor F-PLC proto musí data telegramu 36 namapovat a vyhodnocovat přímo v bezpečnostním programu.</p>
@@ -16509,6 +16615,10 @@ Rezervováno pro rozšíření specifická pro TGZ.
 <h4 id="bezpecna-aktualni-poloha-s_xist32">Bezpečná aktuální poloha – S_XIST32<a class="headerlink" href="#bezpecna-aktualni-poloha-s_xist32" title="Permanent link">¶</a></h4>
 <p>S_XIST32 obsahuje bezpečnou aktuální polohu. Hodnota je přenášena jako 32bitové celé číslo se znaménkem.</p>
 <p>Měřítko S_XIST32 je stejné jako měřítko aktuální polohy PROFIsafe. Aktuální poloha PROFIsafe je definována rozlišením enkodéru a bezpečnostními parametry.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Je důležité nastavit <strong>encoder bits resolution</strong> a <strong>position - wanted bits per revolution</strong> na správné hodnoty, jinak může být hodnota bezpečné polohy nesprávná.</p>
+</div>
 <p>Hodnota je platná pouze tehdy, když je bit SP_VALID v S_ZSW1_ENC nastaven na logickou 1.</p>
 <div class="admonition warning">
 <p class="admonition-title">Varování</p>
@@ -16518,11 +16628,16 @@ Rezervováno pro rozšíření specifická pro TGZ.
 <p class="admonition-title">Poznámka</p>
 <p>Bezpečná aktuální poloha je bezpečnostním enkodérem vracena i v případě chybové události, takže ji PLC může použít pro diagnostické účely.</p>
 </div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../source/img/TGZ_GUI_PROFIsafe_encoder_safety_settings.png" data-desc-position="bottom"><img alt="TGZ GUI II PROFIsafe nastavení bezpečnostního enkodéru" src="../../../../source/img/TGZ_GUI_PROFIsafe_encoder_safety_settings.png"></a></p>
 <h4 id="bezpecna-aktualni-rychlost-s_nist16">Bezpečná aktuální rychlost – S_NIST16<a class="headerlink" href="#bezpecna-aktualni-rychlost-s_nist16" title="Permanent link">¶</a></h4>
-<p>S_NIST16 obsahuje bezpečnou aktuální rychlost. Hodnota je přenášena jako 16bitové celé číslo se znaménkem.</p>
-<p>Hodnota S_NIST16 je vyjádřena jako procento jmenovité rychlosti motoru, registr TGZ M-Nn (jmenovité otáčky motoru v rpm). Povolený rozsah je od -32768 do 32767, kde 16384 představuje 100 % jmenovité rychlosti v kladném směru a -16384 představuje 100 % jmenovité rychlosti v záporném směru.</p>
-<p>Měřítko S_NIST16 je pevné a nelze jej změnit bezpečnostními parametry. TGZ převede aktuální hodnotu otáček v rpm na procento jmenovité rychlosti a odešle ji do PLC jako S_NIST16. Změna jmenovité rychlosti M-Nn proto přímo ovlivňuje hodnotu vracenou v S_NIST16.</p>
-<p>Například pokud je aktuální rychlost 500 rpm a jmenovitá rychlost M-Nn je 1000 rpm, S_NIST16 bude 8192, což představuje 50 % jmenovité rychlosti. Pokud se jmenovitá rychlost M-Nn změní na 2000 rpm, S_NIST16 bude 4096, což představuje 25 % jmenovité rychlosti pro stejnou aktuální rychlost 500 rpm.</p>
+<p>S_NIST16 (v TGZ GUI zobrazeno jako <strong>PD-F_Enc_NIST16</strong>) obsahuje bezpečnou aktuální rychlost. Hodnota je přenášena jako 16bitové celé číslo se znaménkem.</p>
+<p>Hodnota S_NIST16 je vyjádřena jako procento jmenovité rychlosti nastavené v bezpečnostních parametrech (jmenovitá rychlost v rpm). Rozsah S_NIST16 je od -32768 do 32767, kde 16384 představuje 100 % jmenovité rychlosti v kladném směru a -16384 představuje 100 % jmenovité rychlosti v záporném směru.</p>
+<p>Měřítko S_NIST16 je pevné a nelze jej změnit bezpečnostními parametry. TGZ převede aktuální hodnotu otáček v rpm na procento jmenovité rychlosti a odešle ji do PLC jako S_NIST16. Změna bezpečnostní jmenovité rychlosti proto přímo ovlivňuje hodnotu vracenou v S_NIST16.</p>
+<p>Například pokud je aktuální rychlost 500 rpm a jmenovitá rychlost je 1000 rpm, S_NIST16 bude 8192, což představuje 50 % jmenovité rychlosti. Pokud se jmenovitá rychlost změní na 2000 rpm, S_NIST16 bude 4096, což představuje 25 % jmenovité rychlosti pro stejnou aktuální rychlost 500 rpm.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Je důležité nastavit <strong>encoder bits resolution</strong> a <strong>position - wanted bits per revolution</strong> na správné hodnoty, jinak může být hodnota bezpečné rychlosti nesprávná nebo nulová.</p>
+</div>
 <p>TGZ používá následující vzorec pro převod aktuální rychlosti v rpm na S_NIST16:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>S_NIST16 = actual_speed_rpm / nominal_speed_rpm * 16384
 </span></code></pre></div>
@@ -16540,6 +16655,10 @@ Rezervováno pro rozšíření specifická pro TGZ.
 <div class="admonition warning">
 <p class="admonition-title">Varování</p>
 <p>Funkce bezpečné předvolby by měla být provedena pouze tehdy, když je osa v klidu. V opačném případě nelze zaručit správné provedení funkce předvolby. Bezpečnostní program PLC musí před provedením sekvence předvolby zajistit, že osa je v klidu.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Hodnota předvolby je v servopohonu uložena pouze dočasně a po resetu TGZ nebo vypnutí napájení se ztratí.</p>
 </div>
 <h4 id="sekvence-bezpecne-predvolby">Sekvence bezpečné předvolby<a class="headerlink" href="#sekvence-bezpecne-predvolby" title="Permanent link">¶</a></h4>
 <p>Doporučená sekvence v PLC je:</p>
@@ -16754,10 +16873,10 @@ Zkontrolujte S_ZSW1_ENC.SS_VALID a diagnostiku enkodéru
 S_NIST16 je nulové
 </td>
 <td> 
-Jmenovitá rychlost motoru M-Nn je nulová
+Nesprávné bezpečnostní parametry: jmenovitá rychlost, bity rozlišení enkodéru nebo počet bitů polohy na otáčku
 </td>
 <td> 
-Zkontrolujte parametry motoru
+Zkontrolujte bezpečnostní parametry
 </td>
 </tr>
 <tr>
@@ -16776,10 +16895,10 @@ Zkontrolujte PRESET_FAULT a zopakujte sekvenci předvolby
 Hodnota S_NIST16 se po aktualizaci parametrů změnila
 </td>
 <td> 
-Změnila se jmenovitá rychlost motoru M-Nn
+Změnila se bezpečnostní jmenovitá rychlost
 </td>
 <td> 
-Přepočítejte měřítko vůči jmenovité rychlosti
+Přepočítejte měřítko podle nakonfigurované jmenovité rychlosti
 </td>
 </tr>
 </tbody></table>
@@ -16810,7 +16929,7 @@ Přepočítejte měřítko vůči jmenovité rychlosti
     <span class="md-icon" title="Poslední aktualizace">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="8. června 2026 06:15:04 UTC"><span class="timeago" datetime="2026-06-08T06:15:04+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="8. června 2026 06:15:04 UTC">2026-06-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="13. července 2026 06:47:08 UTC"><span class="timeago" datetime="2026-07-13T06:47:08+00:00" locale="cs"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="13. července 2026 06:47:08 UTC">2026-07-13</span>
   </span>
 
     

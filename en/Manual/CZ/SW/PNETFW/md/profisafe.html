@@ -11576,6 +11576,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#profisafe-source-and-destination-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROFIsafe source and destination addresses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reset-and-restart-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11811,12 +11822,12 @@
   <a href="#ss1-time-based-safe-stop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SS1 – time based safe stop
+        SS1 – time-based safe stop
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SS1 – time based safe stop">
+    <nav class="md-nav" aria-label="SS1 – time-based safe stop">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -15248,9 +15259,9 @@
   <h1>PROFIsafe</h1>
 
 <h2 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h2>
-<p>Theere is a PROFIsafe firmware option available for the TGZ. It allows to use the PROFIsafe protocol for safety communication between the TGZ and the PLC controller. The PROFIsafe protocol is used to activate the safety functions of the TGZ and to monitor their status. The safety functions are implemented in a safety manner by using two independent processors and two independent FPGA circuit breakers connected in a sequence. The safety functions can be activated by PROFIsafe, digital inputs or permanently by using the safety parameters. The safety functions are defined according to the EN 61800-5-2 standard.</p>
-<p>The PROFIsafe firmware is available for all TGZD variants (double axis) and for the new TGZ single axis variant. There is only one firmware file labeled <strong>TGZU5_yymmdd_DSL_PSAFE_hh-mm.tgzfw</strong>, where the letter U stands for universal, which means that the same firmware file is used for both single and double axis variants. The yymmdd is the date of the firmware release and hh-mm is the time of the firmware release. The firmware file can be downloaded from the TGZ website. The firmware update is done by using the TGZ GUI II service program.
-The TGZ single axis variant has the same safety functions available as the double axis variant, because it contains two safety encoder inputs. There is also only one GSDML file, <strong>GSDML-V2.44-TGDrives-TGZ-F-yyyymmdd.xml</strong>, used for both single and double axis variants, where yyyymmdd is the date of the GSDML release. The GSDML file can be downloaded from the TGZ website and must be imported to the PLC programming environment to be able to use the PROFIsafe functions.</p>
+<p>A PROFIsafe firmware option is available for the TGZ. It allows the PROFIsafe protocol to be used for safety communication between the TGZ and the PLC controller. The PROFIsafe protocol is used to activate the safety functions of the TGZ and to monitor their status. The safety functions are implemented in a safety-related manner by using two independent processors and two independent FPGA circuit breakers connected in a sequence. The safety functions can be activated by PROFIsafe, digital inputs or permanently by using the safety parameters. The safety functions are defined according to the EN 61800-5-2 standard.</p>
+<p>The PROFIsafe firmware is available for all TGZD variants (dual-axis) and for the new TGZ single-axis variant. There is only one firmware file labeled <strong>TGZU5_yymmdd_DSL_PSAFE_hh-mm.tgzfw</strong>, where the letter U stands for universal, which means that the same firmware file is used for both single-axis and dual-axis variants. The yymmdd is the date of the firmware release and hh-mm is the time of the firmware release. The firmware file can be downloaded from the TGZ website. The firmware update is performed using the TGZ GUI II service program.
+The TGZ single-axis variant has the same safety functions available as the dual-axis variant, because it contains two safety encoder inputs. There is also only one GSDML file, <strong>GSDML-V2.44-TGDrives-TGZ-F-yyyymmdd.xml</strong>, used for both single-axis and dual-axis variants, where yyyymmdd is the date of the GSDML release. The GSDML file can be downloaded from the TGZ website and must be imported to the PLC programming environment to be able to use the PROFIsafe functions.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>The TGZ provides safety functions and safety-related data, but the final safety concept of the machine must be evaluated and validated by the machine manufacturer. The PLC safety program, wiring, parameterization, encoder selection, mechanical system, and stopping distances must be considered as part of the complete safety function.</strong></p>
@@ -15261,11 +15272,11 @@ The TGZ single axis variant has the same safety functions available as the doubl
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Non-safety encoder feedback can be used, but safety functions are not guaranteed to work in safety manner. It is the user responsibility to use the correct encoder and to set the correct safety parameters.</strong></p>
+<p><strong>Non-safety encoder feedback can be used, but safety functions are not guaranteed to work in a safety-related manner. It is the user's responsibility to use the correct encoder and to set the correct safety parameters.</strong></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>The safety functions are only active when the correct safety parameters are set. The safety parameters must be set according to the specific application requirements and the selected safety functions. It is recommended to start with conservative values and then adjust them based on testing and validation.</strong></p>
+<p><strong>The safety functions are active only when the correct safety parameters are set. The safety parameters must be set according to the specific application requirements and the selected safety functions. It is recommended to start with conservative values and then adjust them based on testing and validation.</strong></p>
 </div>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h3>
 <p>The PROFIsafe firmware does not support the external IRC encoder (connector X5) and does not implement CAN bus (connector X10).</p>
@@ -15307,7 +15318,7 @@ The TGZ single axis variant has the same safety functions available as the doubl
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>The PROFIdrive telegrams must be selected using TGZ_GUI application. When changed, the TGZ must be restarted. It is important that the PLC has already the right telegrams selected in the project and it is running before the TGZ is restarted, otherwise the drive will not be able to establish communication with the PLC and will not work. This behaviour is important only when the telegrams are changed, otherwise the power up order of PLC and TGZ does not matter.</strong></p>
+<p><strong>The PROFIdrive telegrams must be selected using the TGZ_GUI application. After the telegram selection is changed, the TGZ must be restarted. Before restarting the TGZ, make sure that the PLC project already contains the correct telegram selection and that the PLC is running. Otherwise, the drive will not be able to establish communication with the PLC and will not work. This behavior is relevant only when the telegram selection is changed; otherwise, the power-up order of the PLC and TGZ does not matter.</strong></p>
 </div>
 <p>The PROFIsafe firmware supports the following telegrams for PROFIsafe communication:</p>
 <table>
@@ -15328,10 +15339,8 @@ The TGZ single axis variant has the same safety functions available as the doubl
 </tr>
 </tbody>
 </table>
-<p>PROFIsafe telegrams have their subslots reserved for safety functions control and status, therefore they cannot be used for other purposes. The telegram 31 is used for controlling the safety functions and monitoring their status. The telegram 36 is used for monitoring the safety encoder values, which are used for the safe speed and position monitoring functions.</p>
-<blockquote>
-<p>Both versions V2.4 and V2.6 of PROFIsafe are supported. The version is automatically detected by the TGZ and the communication is established accordingly.</p>
-</blockquote>
+<p>PROFIsafe telegrams have their subslots reserved for safety function control and status, therefore they cannot be used for other purposes. Telegram 31 is used for controlling the safety functions and monitoring their status. Telegram 36 is used for monitoring the safety encoder values, which are used for the safe speed and position monitoring functions.</p>
+<p>Both versions V2.4 and V2.6 of PROFIsafe are supported. The version is detected automatically by the TGZ and communication is established accordingly.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Do not mix PROFIsafe versions in the same system.</strong></p>
@@ -15340,6 +15349,25 @@ The TGZ single axis variant has the same safety functions available as the doubl
 <p class="admonition-title">Warning</p>
 <p><strong>When the PROFIsafe version is changed, the TGZ must be restarted.</strong></p>
 </div>
+<h4 id="profisafe-source-and-destination-addresses">PROFIsafe source and destination addresses<a class="headerlink" href="#profisafe-source-and-destination-addresses" title="Permanent link">¶</a></h4>
+<p>In addition to selecting the correct PROFIsafe telegrams, the PROFIsafe source and destination addresses must be configured correctly for every safety communication relationship.</p>
+<p>The TGZ supports <strong>Address Type 2</strong> according to the PROFIsafe specification. This means that both <strong>F_SourceAdd</strong> and <strong>F_DestAdd</strong> are checked as part of the communication relationship identification (codename). Communication will not be established if the configured addresses do not match the values expected by the F-Host and the TGZ. In the PROFIsafe specification, Address Type 2 means that <strong>F_SourceAdd</strong> is checked together with <strong>F_DestAdd</strong>. This provides additional protection against addressing errors and connection mix-ups.</p>
+<p>The addresses must be configured separately for each PROFIsafe telegram in the <strong>TGZ GUI II</strong> service program:</p>
+<ul>
+<li><strong>Telegram 31</strong> (Safety control and status)</li>
+<li><strong>Telegram 36</strong> (Safety encoder)</li>
+</ul>
+<p>For each telegram:</p>
+<ul>
+<li><strong>F_SourceAdd</strong> shall contain the PROFIsafe controller (F-Host) address.</li>
+<li><strong>F_DestAdd</strong> shall contain the destination address assigned to the corresponding TGZ PROFIsafe telegram in the PLC project.</li>
+</ul>
+<p>The configured values must exactly match the addresses configured in the PLC engineering system. An incorrect address assignment prevents PROFIsafe communication from entering the operational state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any change of <strong>F_SourceAdd</strong> or <strong>F_DestAdd</strong> requires saving the configuration and restarting the TGZ before the new values become active.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/TGZ_GUI_PROFIsafe_source_and_destination_addresses.png" data-desc-position="bottom"><img alt="TGZ GUI II PROFIsafe source and destination addresses" src="../../../../../../Manual/source/img/TGZ_GUI_PROFIsafe_source_and_destination_addresses.png" style="width:100%;"></a></p>
 <h4 id="reset-and-restart-rules">Reset and restart rules<a class="headerlink" href="#reset-and-restart-rules" title="Permanent link">¶</a></h4>
 <p>Some changes require a TGZ restart before they become active:</p>
 <table>
@@ -15354,12 +15382,32 @@ The TGZ single axis variant has the same safety functions available as the doubl
 <tr>
 <td>PROFIdrive telegram selection</td>
 <td>Yes</td>
-<td>controller must be already configured with the correct telegrams and running before the TGZ is restarted</td>
+<td>controller must already be configured with the correct telegrams and running before the TGZ is restarted</td>
 </tr>
 <tr>
 <td>PROFIsafe version change</td>
 <td>Yes</td>
-<td>controller must be already configured with the correct PROFIsafe version and running before the TGZ is restarted</td>
+<td>controller must already be configured with the correct PROFIsafe version and running before the TGZ is restarted</td>
+</tr>
+<tr>
+<td>F_Source_Add_Enc change</td>
+<td>Yes</td>
+<td>controller must be configured with the correct telegram 36 F_Source_Add value</td>
+</tr>
+<tr>
+<td>F_Dest_Add_Enc change</td>
+<td>Yes</td>
+<td>controller must be configured with the correct telegram 36 F_Dest_Add value</td>
+</tr>
+<tr>
+<td>F_Source_Add_Ctrl change</td>
+<td>Yes</td>
+<td>controller must be configured with the correct telegram 31 F_Source_Add value</td>
+</tr>
+<tr>
+<td>F_Dest_Add_Ctrl change</td>
+<td>Yes</td>
+<td>controller must be configured with the correct telegram 31 F_Dest_Add value</td>
 </tr>
 <tr>
 <td>Firmware update</td>
@@ -15425,21 +15473,44 @@ The TGZ single axis variant has the same safety functions available as the doubl
 <p>Telegrams 31 and 36 can be used simultaneously. </p>
 </div>
 <h2 id="profisafe-commissioning-checklist">PROFIsafe commissioning checklist<a class="headerlink" href="#profisafe-commissioning-checklist" title="Permanent link">¶</a></h2>
-<ol>
+<ul>
 <li>Install the correct TGZ PROFIsafe firmware.</li>
 <li>Import the correct GSDML file into the PLC engineering system.</li>
 <li>Select the required PROFIdrive telegram.</li>
 <li>Select PROFIsafe telegram 31 and/or telegram 36.</li>
-<li>Set the F-address and verify that it matches the PLC project.</li>
-<li>Configure safety parameters in TGZ GUI II. This is important, without proper safety parameters configuration the safety functions will not work as expected and may cause unexpected behavior or TGZ will not work at all. The safety parameters must be set according to the specific application requirements and the selected safety functions. It is recommended to start with conservative values and then adjust them based on testing and validation.</li>
+<li>Configure the PROFIsafe addresses and verify that they match the PLC project:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_SourceAdd</code> = PROFIsafe controller (F-Host) address.</td>
+</tr>
+<tr>
+<td><code>F_DestAdd</code> = destination address of the corresponding TGZ PROFIsafe telegram.</td>
+</tr>
+<tr>
+<td>Configure telegram 31 and telegram 36 independently if both telegrams are used.</td>
+</tr>
+<tr>
+<td>Verify that TGZ GUI II and the PLC project use exactly the same address assignment.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Configure safety parameters in TGZ GUI II. This is important: without proper safety parameter configuration the safety functions will not work as expected and may cause unexpected behavior or the TGZ may not work at all. The safety parameters must be set according to the specific application requirements and the selected safety functions. It is recommended to start with conservative values and then adjust them based on testing and validation.</li>
 <li>Verify encoder configuration and direction.</li>
 <li>Test STO before enabling motion.</li>
 <li>Test each configured safety function.</li>
 <li>Save and document the final safety parameter set.</li>
-</ol>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>All the safety functions are enabled by default. It means that no motion can be established unless the safety functions are properly configured and the F-Host is connected and working.</strong></p>
+<p><strong>All safety functions are enabled by default. This means that no motion can be established unless the safety functions are properly configured and the F-Host is connected and working.</strong></p>
 </div>
 <h3 id="recommended-validation-tests">Recommended validation tests<a class="headerlink" href="#recommended-validation-tests" title="Permanent link">¶</a></h3>
 <p>After commissioning, the following tests should be performed:</p>
@@ -15511,10 +15582,10 @@ The TGZ single axis variant has the same safety functions available as the doubl
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>The function SLP is fully functional only with a multiturn absolute encoder or after a successfull homing or encoder value preset.</strong></p>
+<p><strong>The function SLP is fully functional only with a multiturn absolute encoder or after a successful homing or encoder value preset.</strong></p>
 </div>
 <h3 id="safety-function-activation-methods">Safety function activation methods<a class="headerlink" href="#safety-function-activation-methods" title="Permanent link">¶</a></h3>
-<p>Some of the safety functions can be activated by PROFIsafe, digital inputs (DI) or both (see the table). SLS and SLP can be also activated permanently by using the safety parameters.</p>
+<p>Some of the safety functions can be activated by PROFIsafe, digital inputs (DI) or both (see the table). SLS and SLP can also be activated permanently by using the safety parameters.</p>
 <table>
 <thead>
 <tr>
@@ -15596,23 +15667,23 @@ The TGZ single axis variant has the same safety functions available as the doubl
 <h4 id="activation-by-profisafe">Activation by PROFIsafe<a class="headerlink" href="#activation-by-profisafe" title="Permanent link">¶</a></h4>
 <p>One or more of the safety functions can be activated. The standard PROFIsafe telegram 31 is used. There is a standard library LdrvSafe_SinaTlg31 available. The telegram 31 allows detailed control of each safety function with additional parameters and returns a safety status of actually active functions.</p>
 <h4 id="activation-by-digital-inputs">Activation by digital inputs<a class="headerlink" href="#activation-by-digital-inputs" title="Permanent link">¶</a></h4>
-<p>Each axis can use two dedicated digital inputs pins for a safety function invoke. Only ONE function can be activated in a time. The selection is done via the safety parameters independently for each axis. The first axis uses digital inputs pins DI 5 and DI 7, the second axis uses DI6 and DI8 pins. Function is active by setting the mentioned pins low. Both inputs (DI5 &amp; 7 or DI6 &amp; 8) must be changed simultaneously within 10 ms. If this time is violated, the safety function is activated forever till restart of the TGZ.</p>
+<p>Each axis can use two dedicated digital input pins to invoke a safety function. Only ONE function can be activated at a time. The selection is made via the safety parameters independently for each axis. The first axis uses digital input pins DI 5 and DI 7, the second axis uses DI6 and DI8 pins. The function is active when the mentioned pins are low. Both inputs (DI5 &amp; 7 or DI6 &amp; 8) must be changed simultaneously within 10 ms. If this timing requirement is violated, the safety function remains activated until the TGZ is restarted.</p>
 <h4 id="permanent-safety-function-selection">Permanent safety function selection<a class="headerlink" href="#permanent-safety-function-selection" title="Permanent link">¶</a></h4>
-<p>Two of the safety functions can be also selected permanently via the safety parameters: Safe limit speed (SLS) and safe limit position (SLP). The SLS can work simultaneously with the PROFIsafe control – selection of up to four different limited speed percent values is possible by telegram 31. On the other hand, the permanent SLP activated by DI uses always the safety position 1 only.</p>
+<p>Two of the safety functions can also be selected permanently via the safety parameters: Safe limit speed (SLS) and safe limit position (SLP). The SLS can work simultaneously with the PROFIsafe control – selection of up to four different limited speed percent values is possible by telegram 31. On the other hand, the permanent SLP activated by DI always uses safety position 1 only.</p>
 <h4 id="active-safety-function-signaling-by-digital-outputs">Active safety function signaling by digital outputs<a class="headerlink" href="#active-safety-function-signaling-by-digital-outputs" title="Permanent link">¶</a></h4>
-<p>Digital output pins 3&amp;5 for the first axis or 4&amp;6 can be selected for signaling a selected safety function. Only ONE function can be selected for signaling. The normal digital outputs function is not available in that case. Active safety function is signaled by setting both the outputs low.</p>
+<p>Digital output pins 3 and 5 for the first axis, or 4 and 6 for the second axis, can be selected for signaling a selected safety function. Only ONE function can be selected for signaling. The normal digital output function is not available in that case. An active safety function is signaled by setting both the outputs low.</p>
 <h3 id="principle-of-operation">Principle of operation<a class="headerlink" href="#principle-of-operation" title="Permanent link">¶</a></h3>
-<p>All safety functions assume that the PLC controller invokes the desired action. The TGZ monitors the speed and/or position and invokes the appropriate safety reaction in the case the conditions are not met. Additionally, when a safety function is selected, the TGZ also activates the wanted stop action internally. Additionally the TGZ can activate speed and/or position limit, but this functionality is out of the safety scope.
-The safety functions monitoring is done in a safety manner by using two independent processors.<br>
-Disabling the power motor output is done in a safety manner by using two independent FPGA circuit breakers connected in a sequence.</p>
+<p>All safety functions assume that the PLC controller invokes the desired action. The TGZ monitors the speed and/or position and invokes the appropriate safety reaction if the conditions are not met. Additionally, when a safety function is selected, the TGZ also activates the requested stop action internally. In addition, the TGZ can activate speed and/or position limit, but this functionality is outside the safety scope.
+Safety function monitoring is performed in a safety-related manner by using two independent processors.<br>
+The motor power output is disabled in a safety-related manner by using two independent FPGA circuit breakers connected in a sequence.</p>
 <blockquote>
-<p>Any safety event is signaled by INTERNAL_EVENT bit in the PROFIsafe status word. The specific event is signaled by the PROFIsafe status bits and/or digital outputs (if mapped). The safety event must be acknowledged by toggling INTERNAL_EVENT_ACK bit in the control word to logical 1 and then back to logical 0.</p>
+<p>Any safety event is signaled by the INTERNAL_EVENT bit in the PROFIsafe status word. The specific event is signaled by the PROFIsafe status bits and/or digital outputs (if mapped). The safety event must be acknowledged by toggling the INTERNAL_EVENT_ACK bit in the control word to logical 1 and then back to logical 0.</p>
 </blockquote>
 <h3 id="signal-polarity">Signal polarity<a class="headerlink" href="#signal-polarity" title="Permanent link">¶</a></h3>
 <p>Many safety function request bits are active-low. This means that the safety function is selected when the corresponding PROFIsafe control bit is set to logical 0.</p>
 <p>This behavior is intentional and follows the fail-safe principle: if communication is lost or the safe output data becomes invalid, the drive enters a safe state.</p>
 <h2 id="safe-torque-off-sto">Safe torque off – STO<a class="headerlink" href="#safe-torque-off-sto" title="Permanent link">¶</a></h2>
-<p>In addition to already available hardware STO safety function, which has its dedicated input pins, additional STO is available. STO turns off the drive output that powers the motor.</p>
+<p>In addition to the already available hardware STO safety function, which has dedicated input pins, an additional STO function is available. STO turns off the drive output that powers the motor.</p>
 <h3 id="sto-activation">STO activation<a class="headerlink" href="#sto-activation" title="Permanent link">¶</a></h3>
 <p>STO can be activated by any of the following inputs or events:</p>
 <ul>
@@ -15632,11 +15703,11 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <li>Digital outputs (3&amp;5 – axis 1, 4&amp;6 – axis 2) set to low if mapped by the safety parameters</li>
 </ul>
 <h3 id="sto-sequence">STO sequence<a class="headerlink" href="#sto-sequence" title="Permanent link">¶</a></h3>
-<p>When the STO is activated the following actions are done simultaneously:</p>
+<p>When STO is activated, the following actions are performed simultaneously:</p>
 <ul>
 <li>Output driver power stage is set to zero</li>
 <li>The axis is disabled (software disable) and its PROFIdrive state goes to S1 – Switching On Inhibited.</li>
-<li>The motor velocity goes to zero and the motor cannot be started accidentally.</li>
+<li>The motor velocity is set to zero and the motor cannot be started accidentally.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -15644,18 +15715,18 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </div>
 <h3 id="sto-restart-deactivation">STO restart (deactivation)<a class="headerlink" href="#sto-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Deselect the function by PROFIsafe control word bit STO to logical 1 and/or by settings both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Deselect the function by PROFIsafe control word bit STO to logical 1 and/or by setting both mapped digital inputs to high level.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="sto-timing">STO timing<a class="headerlink" href="#sto-timing" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/STO_timing_diagram_EN.png" data-desc-position="bottom"><img alt="STO img" src="../../../../../../Manual/source/img/STO_timing_diagram_EN.png" style="width:100%;"></a></p>
-<h2 id="ss1-time-based-safe-stop">SS1 – time based safe stop<a class="headerlink" href="#ss1-time-based-safe-stop" title="Permanent link">¶</a></h2>
+<h2 id="ss1-time-based-safe-stop">SS1 – time-based safe stop<a class="headerlink" href="#ss1-time-based-safe-stop" title="Permanent link">¶</a></h2>
 <p>Definition according to EN 61800-5-2:</p>
 <blockquote>
 <p>"The function SS1 brakes the motor and trips the function STO after a delay time."</p>
 </blockquote>
-<p>In other words the drive decelerates once SS1 has been selected, and goes into the STO state once the delay time has expired. The STO state is always selected after the timeout regardless the axis is still moving or not. The deceleration is specified in D-EmerDecRamp TGZ register.</p>
+<p>In other words the drive decelerates once SS1 has been selected, and goes into the STO state once the delay time has expired. The STO state is always selected after the timeout regardless of whether the axis is still moving. The deceleration is specified in D-EmerDecRamp TGZ register.</p>
 <h3 id="ss1-activation">SS1 activation<a class="headerlink" href="#ss1-activation" title="Permanent link">¶</a></h3>
 <p>The SS1 function can be activated by any of the following events:</p>
 <ul>
@@ -15671,9 +15742,9 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </ul>
 <h3 id="ss1-sequence">SS1 sequence<a class="headerlink" href="#ss1-sequence" title="Permanent link">¶</a></h3>
 <ol>
-<li>The SS1 is selected either by bit SS1 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>SS1 is selected either by setting bit SS1 in the PROFIsafe control word to low or by digital inputs (if mapped) to low level.</li>
 <li>The TGZ stops the movement with the deceleration specified in the safety parameters.</li>
-<li>After fixed time (also specified in the safety parameters) the STO is activated, even if the axis is still moving.</li>
+<li>After the configured time (also specified in the safety parameters) the STO is activated, even if the axis is still moving.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -15681,8 +15752,8 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </div>
 <h3 id="ss1-restart-deactivation">SS1 restart (deactivation)<a class="headerlink" href="#ss1-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Deselect the function by PROFIsafe control word bit SS1 to logical 1 and/or by settings both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Deselect the function by PROFIsafe control word bit SS1 to logical 1 and/or by setting both mapped digital inputs to high level.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>Enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="ss1-timing">SS1 timing<a class="headerlink" href="#ss1-timing" title="Permanent link">¶</a></h3>
@@ -15694,7 +15765,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Contrary to SS1 and SS2, SOS does not automatically brake the drive. It only monitors the standstill position. This means that the PLC must ensure that the drive is stopped before activating the SOS function.</p>
+<p>Contrary to SS1 and SS2, SOS does not automatically brake the drive. It monitors only the standstill position. This means that the PLC must ensure that the drive is stopped before activating the SOS function.</p>
 </div>
 <p>The motor remains under power and the drive is in the enabled state. The SOS function is activated when the motor is not in the standstill position after the timeout has elapsed. The standstill check is done by the <strong>standstill tolerance window safe parameter</strong>.</p>
 <h3 id="sos-activation">SOS activation<a class="headerlink" href="#sos-activation" title="Permanent link">¶</a></h3>
@@ -15712,14 +15783,14 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </ul>
 <h3 id="sos-sequence">SOS sequence<a class="headerlink" href="#sos-sequence" title="Permanent link">¶</a></h3>
 <ol>
-<li>The SOS is selected either by bit SOS to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>SOS is selected either by setting bit SOS in the PROFIsafe control word to low or by digital inputs (if mapped) to low level.</li>
 <li>The TGZ waits for the timeout to elapse. During this time the motor must be stopped by the PLC.</li>
-<li>After the timeout, the TGZ checks if the motor is in standstill. If not, the <strong>STO</strong> function is activated.</li>
+<li>After the timeout, the TGZ checks whether the motor is at standstill. If not, the <strong>STO</strong> function is activated.</li>
 </ol>
 <h3 id="sos-restart-deactivation">SOS restart (deactivation)<a class="headerlink" href="#sos-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Deselect the function by PROFIsafe control word bit SOS to logical 1 and/or by settings both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Deselect the function by PROFIsafe control word bit SOS to logical 1 and/or by setting both mapped digital inputs to high level.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="sos-timing">SOS timing<a class="headerlink" href="#sos-timing" title="Permanent link">¶</a></h3>
@@ -15730,7 +15801,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <blockquote>
 <p>"The function SS2 brakes the motor and after a delay time, initiates the SOS function."</p>
 </blockquote>
-<p>In other words the drive decelerates once SS2 has been selected and after the timeout checks if the motor is in standstill (SOS). The deceleration is specified in D-EmerDecRamp TGZ register.</p>
+<p>In other words the drive decelerates once SS2 has been selected and after the timeout checks whether the motor is at standstill (SOS). The deceleration is specified in D-EmerDecRamp TGZ register.</p>
 <h3 id="ss2-activation">SS2 activation<a class="headerlink" href="#ss2-activation" title="Permanent link">¶</a></h3>
 <p>The SS2 function can be activated by any of the following events:</p>
 <ul>
@@ -15746,15 +15817,15 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </ul>
 <h3 id="ss2-sequence">SS2 sequence<a class="headerlink" href="#ss2-sequence" title="Permanent link">¶</a></h3>
 <ol>
-<li>The SS2 is selected either by bit SS2 to low in PROFIsafe control word or by digital inputs (if mapped) to low level.</li>
+<li>SS2 is selected either by setting bit SS2 in the PROFIsafe control word to low or by digital inputs (if mapped) to low level.</li>
 <li>The TGZ stops the movement with the deceleration specified in the safety parameters.</li>
-<li>When the timeout elapses or the motor is in standstill, continuous check of the the zero speed is activated (SOS function).</li>
+<li>When the timeout elapses or the motor is in standstill, continuous zero-speed monitoring is activated (SOS function).</li>
 <li>If the motor is not in standstill, the <strong>STO</strong> function is activated.</li>
 </ol>
 <h3 id="ss2-restart-deactivation">SS2 restart (deactivation)<a class="headerlink" href="#ss2-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Deselect the function by PROFIsafe control word bit SS2 to logical 1 and/or by settings both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Deselect the function by PROFIsafe control word bit SS2 to logical 1 and/or by setting both mapped digital inputs to high level.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>If the STO function is activated, the axis must be enabled by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="ss2-timing">SS2 timing<a class="headerlink" href="#ss2-timing" title="Permanent link">¶</a></h3>
@@ -15783,7 +15854,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <li>The SLS is selected either by PROFIsafe control word or by digital inputs (if mapped) or permanently via safety parameters.</li>
 <li>The TGZ monitors the motor speed after a specified time delay.</li>
 <li>If the speed exceeds the base limit speed (defined in pd_inc/s), the TGZ initiates a safety reaction.</li>
-<li>The reaction is sequence of <strong>SS2</strong>, <strong>SS1</strong>, <strong>STO</strong>.</li>
+<li>The reaction is a sequence of <strong>SS2</strong>, <strong>SS1</strong>, <strong>STO</strong>.</li>
 <li>PROFIsafe telegram 31 allows selection of the second, third or fourth speed levels.</li>
 <li>If the lower speed limit is selected, another time delay is applied before the speed check.</li>
 <li>If the higher speed limit is selected, the check is done immediately without any delay.</li>
@@ -15798,7 +15869,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <h3 id="sls-restart-deactivation">SLS restart (deactivation)<a class="headerlink" href="#sls-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
 <li>Deselect the function by PROFIsafe control word bit SLS to logical 1 and/or by setting both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>If STO was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="sls-timing">SLS timing<a class="headerlink" href="#sls-timing" title="Permanent link">¶</a></h3>
@@ -15838,7 +15909,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <h3 id="slp-restart-deactivation">SLP restart (deactivation)<a class="headerlink" href="#slp-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
 <li>Deselect the function by PROFIsafe control word bit SLP to logical 1 and/or by setting both mapped digital inputs to high level.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
 <li>If STO was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="slp-timing">SLP timing<a class="headerlink" href="#slp-timing" title="Permanent link">¶</a></h3>
@@ -15868,17 +15939,17 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <h3 id="sdi-restart-deactivation">SDI restart (deactivation)<a class="headerlink" href="#sdi-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
 <li>Deselect the function by PROFIsafe control word bit SDI+ or SDI- to logical 1.</li>
-<li>Acknowledge the safety event by toggling INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
-<li>If STO (as result of SS2) was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
+<li>Acknowledge the safety event by toggling the INTERNAL_EVENT_ACK bit in the PROFIsafe control word to logical 1 and then back to logical 0.</li>
+<li>If STO (as a result of SS2) was activated, enable the axis by PROFIdrive control word (i.e. traverse through PROFIdrive state diagram from S1 to S4).</li>
 </ul>
 <h3 id="sdi-timing">SDI timing<a class="headerlink" href="#sdi-timing" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/SDI_plus_timing_diagram_EN.png" data-desc-position="bottom"><img alt="SDI+ img" src="../../../../../../Manual/source/img/SDI_plus_timing_diagram_EN.png" style="width:100%;"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/SDI_minus_timing_diagram_EN.png" data-desc-position="bottom"><img alt="SDI- img" src="../../../../../../Manual/source/img/SDI_minus_timing_diagram_EN.png" style="width:100%;"></a></p>
 <h2 id="ssm-safe-speed-monitor">SSM – Safe Speed Monitor<a class="headerlink" href="#ssm-safe-speed-monitor" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>"The SSM function monitors the speed of the motor and signals if it is out of the specified speed range."</p>
+<p>"The SSM function monitors the speed of the motor and indicates whether it is outside the specified speed range."</p>
 </blockquote>
-<p>It means that SSM is a pure monitoring function without any automatic safety reaction. The PLC must ensure that the speed is reduced below the limit if the SSM function signals a violation.</p>
+<p>SSM is a pure monitoring function without any automatic safety reaction. The PLC must ensure that the speed is reduced below the limit if the SSM function signals a violation.</p>
 <h3 id="ssm-activation">SSM activation<a class="headerlink" href="#ssm-activation" title="Permanent link">¶</a></h3>
 <p>The SSM function can be activated by PROFIsafe control word bit SSM set to zero. Digital inputs cannot be used for SSM activation. Permanent activation via safety parameters is possible.</p>
 <h3 id="ssm-signaling">SSM signaling<a class="headerlink" href="#ssm-signaling" title="Permanent link">¶</a></h3>
@@ -15895,7 +15966,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <li>High speed limit [rpm]</li>
 <li>Low speed limit [rpm]</li>
 </ul>
-<p>Low speed limit must be lower or equal to high limit.</p>
+<p>The low speed limit must be lower than or equal to the high speed limit.</p>
 <h3 id="ssm-restart-deactivation">SSM restart (deactivation)<a class="headerlink" href="#ssm-restart-deactivation" title="Permanent link">¶</a></h3>
 <ul>
 <li>Deselect the function by PROFIsafe control word bit SSM to logical 1.</li>
@@ -15912,7 +15983,11 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <p><strong>If the password is lost, the TGZ must be returned to the factory for a password reset, which involves additional costs and time. It is not possible to reset the password locally.</strong></p>
 </div>
 <h2 id="safety-encoders-telegram-36">Safety encoders (telegram 36)<a class="headerlink" href="#safety-encoders-telegram-36" title="Permanent link">¶</a></h2>
-<p>Telegram 36 is used for exchanging safety encoder data via PROFIsafe. It provides the safe actual position, the safe actual speed, the encoder safety status word, and the encoder safety control word. It also allows the PLC to set a new safe actual position value by using the safety preset mechanism.</p>
+<p>Telegram 36 is used for exchanging safety encoder data via PROFIsafe. It provides the safe actual position, the safe actual speed, the encoder safety status word, and the encoder safety control word. It also allows the PLC to set a new safe actual position value using the safety preset mechanism.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is necessary to correctly set up the safety encoder resolution using the safety parameters in the TGZ GUI II service program. The program provides a hint of the correct value, but it is the user's responsibility to set the value manually. Incorrect resolution setting will lead to incorrect scaling of the safe position and speed values, which may cause unexpected behavior of the safety functions that rely on the encoder feedback.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is currently no standard Siemens TIA Portal library block for telegram 36. Therefore, the F-PLC programmer must map and evaluate the telegram 36 data directly in the safety program.</p>
@@ -16093,12 +16168,16 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <p>Additional encoder status information is available in the TGZ GUI II service program, which can be used for diagnostics and troubleshooting. Use <strong>PD-F_Dbg_Pos_1_Status</strong> and <strong>PD-F_Dbg_Pos_2_Status</strong> registers for this purpose. Additional encoder status information is also available in the <strong>PD-F_ENC_ST0</strong>, <strong>PD-F_ENC_ST1</strong>, <strong>PD-F_ENC_ST2</strong>, <strong>PD-F_ENC_ST3</strong> registers.</p>
 </div>
 <h3 id="encoder-safety-event-and-profisafe-reaction">Encoder safety event and PROFIsafe reaction<a class="headerlink" href="#encoder-safety-event-and-profisafe-reaction" title="Permanent link">¶</a></h3>
-<p>Falling edge of INTERNAL_EVENT_ACK bit executes clearing of the encoder event (error). If the event is still present, the INTERNAL_EVENT bit will be set again immediately after the acknowledge. If the event is cleared, the INTERNAL_EVENT bit is reset until a new event occurs.</p>
-<p>It is possible to assign a safety function to the encoder safety event (INTERNAL_EVENT bit) by using the TGZ GUI II service program. In that case, when an encoder safety event (error) occurs, the assigned safety function (e.g. STO) is automatically activated. The PLC can acknowledge the event of the encoder by falling edge of INTERNAL_EVENT_ACK bit in the control word, but the safety function itself must be acknowledged by the PLC separately by using telegram 31 (see above).</p>
+<p>A falling edge of the INTERNAL_EVENT_ACK bit clears the encoder event (error). If the event is still present, the INTERNAL_EVENT bit will be set again immediately after the acknowledge. If the event is cleared, the INTERNAL_EVENT bit is reset until a new event occurs.</p>
+<p>It is possible to assign a safety function to the encoder safety event (INTERNAL_EVENT bit) by using the TGZ GUI II service program. In that case, when an encoder safety event (error) occurs, the assigned safety function (e.g. STO) is automatically activated. The PLC can acknowledge the encoder event by a falling edge of the INTERNAL_EVENT_ACK bit in the control word, but the safety function itself must be acknowledged separately by the PLC using telegram 31 (see above).</p>
 <p>Available safety functions for encoder events are: <strong>None</strong>, <strong>STO</strong>, <strong>SS1</strong>, <strong>SS2</strong>, <strong>SLS</strong>.</p>
 <h4 id="safe-actual-position-s_xist32">Safe actual position – S_XIST32<a class="headerlink" href="#safe-actual-position-s_xist32" title="Permanent link">¶</a></h4>
 <p>S_XIST32 contains the safe actual position value. The value is transferred as a signed 32-bit integer.</p>
 <p>The scaling of S_XIST32 is the same as PROFIsafe actual position value. PROFIsafe actual position value is defined by the encoder resolution and by the safety parameters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to set <strong>encoder bits resolution</strong> and <strong>position - wanted bits per revolution</strong> to the correct values, otherwise the safe position value could be incorrect.</p>
+</div>
 <p>The value is valid only when bit SP_VALID in S_ZSW1_ENC is set to logical 1.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -16106,17 +16185,22 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The safe actual position is returned by safety encoder even in the case of an error event, so the PLC can use it for diagnostic purposes.</p>
+<p>The safe actual position is returned by the safety encoder even in the case of an error event, so the PLC can use it for diagnostic purposes.</p>
 </div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/TGZ_GUI_PROFIsafe_encoder_safety_settings.png" data-desc-position="bottom"><img alt="TGZ GUI II PROFIsafe encoder safety settings" src="../../../../../../Manual/source/img/TGZ_GUI_PROFIsafe_encoder_safety_settings.png" style="width:100%;"></a></p>
 <h4 id="safe-actual-speed-s_nist16">Safe actual speed – S_NIST16<a class="headerlink" href="#safe-actual-speed-s_nist16" title="Permanent link">¶</a></h4>
-<p>S_NIST16 contains the safe actual speed value. The value is transferred as a signed 16-bit integer.</p>
-<p>The value of S_NIST16 is expressed as a percentage of the nominal motor speed value, TGZ register M-Nn (motor nominal speed in rpm). The allowed range is from -32768 to 32767, where 16384 represents 100% of the nominal speed in the positive direction and -16384 represents 100% of the nominal speed in the negative direction.</p>
-<p>The scaling of S_NIST16 is fixed and cannot be changed by safety parameters. The TGZ converts the actual rpm value to a percentage of the nominal speed and sends it to the PLC as S_NIST16. Therefore, changing the nominal speed M-Nn directly affects the value returned in S_NIST16.</p>
-<p>For example, if the actual speed is 500 rpm and the nominal speed M-Nn is 1000 rpm, S_NIST16 will be 8192, which represents 50% of the nominal speed. If the nominal speed M-Nn is changed to 2000 rpm, S_NIST16 will be 4096, which represents 25% of the nominal speed for the same actual speed of 500 rpm.</p>
+<p>S_NIST16 (displayed as <strong>PD-F_Enc_NIST16</strong> in TGZ GUI) contains the safe actual speed value. The value is transferred as a signed 16-bit integer.</p>
+<p>The value of S_NIST16 is expressed as a percentage of the nominal speed value, configured in the safety parameters (nominal speed in rpm). The range of S_NIST16 is from -32768 to 32767, where 16384 represents 100% of the nominal speed in the positive direction and -16384 represents 100% of the nominal speed in the negative direction.</p>
+<p>The scaling of S_NIST16 is fixed and cannot be changed using the safety parameters. The TGZ converts the actual rpm value to a percentage of the nominal speed and sends it to the PLC as S_NIST16. Therefore, changing the safety nominal speed directly affects the value returned in S_NIST16.</p>
+<p>For example, if the actual speed is 500 rpm and the nominal speed is 1000 rpm, S_NIST16 will be 8192, which represents 50% of the nominal speed. If the nominal speed is changed to 2000 rpm, S_NIST16 will be 4096, which represents 25% of the nominal speed for the same actual speed of 500 rpm.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to set <strong>encoder bits resolution</strong> and <strong>position - wanted bits per revolution</strong> to the correct values, otherwise the safe speed value could be incorrect or zero.</p>
+</div>
 <p>The TGZ uses the following scaling:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>S_NIST16 = actual_speed_rpm / nominal_speed_rpm * 16384    
 </span></code></pre></div>
-<p>For converting S_NIST16 back to actual speed in rpm in the PLC, the following formula can be used:</p>
+<p>To convert S_NIST16 back to actual speed in rpm in the PLC, use the following formula:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>actual_speed_rpm = S_NIST16 / 16384 * nominal_speed_rpm
 </span></code></pre></div>
 <p>The value is valid only when bit SS_VALID in S_ZSW1_ENC is set to logical 1.</p>
@@ -16131,6 +16215,10 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <p class="admonition-title">Warning</p>
 <p>The safe preset function should be executed only when the axis is at standstill. Otherwise, correct execution of the preset function cannot be guaranteed. The PLC safety program must ensure that the axis is at standstill before executing the preset sequence.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The preset value is stored temporarily in the servo drive and is lost after a TGZ reset or power cycle.</p>
+</div>
 <h4 id="safe-preset-sequence">Safe preset sequence<a class="headerlink" href="#safe-preset-sequence" title="Permanent link">¶</a></h4>
 <p>The recommended PLC sequence is:</p>
 <ol>
@@ -16144,10 +16232,10 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <li>Check that PRESET_ENABLED returns to logical 0.</li>
 <li>Check that the new value is visible in S_XIST32 and that SP_VALID is logical 1.</li>
 </ol>
-<p>If PRESET_FAULT is set, the preset was not accepted. The PLC must reset PRESET_ENABLE and PRESET_TRIGGER, remove the reason of the fault, and repeat the preset sequence.</p>
+<p>If PRESET_FAULT is set, the preset was not accepted. The PLC must reset PRESET_ENABLE and PRESET_TRIGGER, remove the cause of the fault, and repeat the preset sequence.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There is a possibility to zero actual position for diagnostics or commissioning purposes. This is done in a non-safe way and should not be used for normal operation. Use the TGZ GUI II service program and set the <strong>PD-DebugFunctions</strong> to 2 (the first axis) or 3 (the second axis) to execute the zero preset.</p>
+<p>It is possible to zero the actual position for diagnostics or commissioning purposes. This is done in a non-safe way and should not be used for normal operation. Use the TGZ GUI II service program and set the <strong>PD-DebugFunctions</strong> to 2 (the first axis) or 3 (the second axis) to execute the zero preset.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../Manual/source/img/Safety_encoder_preset_timing_diagram_EN_v2.png" data-desc-position="bottom"><img alt="Safe preset sequence timing" src="../../../../../../Manual/source/img/Safety_encoder_preset_timing_diagram_EN_v2.png" style="width:100%;"></a></p>
 <h4 id="encoder-safety-event-acknowledge">Encoder safety event acknowledge<a class="headerlink" href="#encoder-safety-event-acknowledge" title="Permanent link">¶</a></h4>
@@ -16158,7 +16246,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
 <li>Remove the cause of the safety event.</li>
 <li>Acknowledge the event by toggling INTERNAL_EVENT_ACK in S_STW1_ENC.</li>
 </ol>
-<p>The acknowledge is evaluated on the falling edge of INTERNAL_EVENT_ACK.</p>
+<p>The acknowledgment is evaluated on the falling edge of INTERNAL_EVENT_ACK.</p>
 <p>Recommended acknowledge sequence:</p>
 <ol>
 <li>Set INTERNAL_EVENT_ACK to logical 1.</li>
@@ -16272,8 +16360,8 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </tr>
 <tr>
 <td>S_NIST16 is zero</td>
-<td>Motor nominal speed M-Nn is zero</td>
-<td>Check motor parameters</td>
+<td>Incorrect safety parameters: nominal speed, encoder resolution bits, or position bits per revolution</td>
+<td>Check safety parameters</td>
 </tr>
 <tr>
 <td>Preset does not work</td>
@@ -16282,14 +16370,14 @@ Disabling the power motor output is done in a safety manner by using two indepen
 </tr>
 <tr>
 <td>S_NIST16 value changed after parameter update</td>
-<td>Motor nominal speed M-Nn changed</td>
-<td>Recalculate scaling against nominal speed</td>
+<td>Safety nominal speed changed</td>
+<td>Recalculate scaling using the configured nominal speed</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For more detailed troubleshooting, use the TGZ GUI II service program to monitor the safety parameters, safety status bits, and encoder diagnostics. Check also the Messages output window (int the Tools tab) for any PROFIsafe related messages or errors. The verbosity of output messages can be set byt the <strong>PD-AuxiliarySettings</strong> register.</p>
+<p>For more detailed troubleshooting, use the TGZ GUI II service program to monitor the safety parameters, safety status bits, and encoder diagnostics. Check also the Messages output window (in the Tools tab) for any PROFIsafe-related messages or errors. The verbosity of output messages can be set by the <strong>PD-AuxiliarySettings</strong> register.</p>
 </div>
 
 
@@ -16313,7 +16401,7 @@ Disabling the power motor output is done in a safety manner by using two indepen
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="June 8, 2026 06:15:04 UTC"><span class="timeago" datetime="2026-06-08T06:15:04+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 8, 2026 06:15:04 UTC">2026-06-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 13, 2026 06:47:08 UTC"><span class="timeago" datetime="2026-07-13T06:47:08+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 13, 2026 06:47:08 UTC">2026-07-13</span>
   </span>
 
     
