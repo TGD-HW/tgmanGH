@@ -27,7 +27,7 @@ ___
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ_D4850.md"
+	--8<-- "md/X1_24V_5pin_BCZ_D4850.en.md"
 	
 	!!! warning "EMI suppression"
 	
