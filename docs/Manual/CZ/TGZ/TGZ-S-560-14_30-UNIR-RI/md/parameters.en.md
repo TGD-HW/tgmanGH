@@ -19,6 +19,7 @@
 | **FEEDBACK** |   |
 | FB1, FB2, FB3, FB4 | 4 x 10pin MOLEX 5031481090 CLIK-MATE 1.5 |
 | FBE | 1 x 12pin MOLEX 5031481290 CLIK-MATE 1.5 |
+| FB4 – RESOLVER | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | **SIGNALING** |   |
 | LED display | Error message, 2x7 LED segment |
 | LED signaling | 1x green (SERVO OK) 1x red (SERVO ERROR) 1x green (ECAT RUN) |

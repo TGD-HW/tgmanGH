@@ -18,6 +18,7 @@
 | **FEEDBACK** |   |
 | FB1, FB2, FB3 | 3 x 10pin MOLEX 5031481090 CLIK-MATE 1.5 |
 | FBE | 1 x 12pin MOLEX 5031481290 CLIK-MATE 1.5 |
+| FB4 – RESOLVER | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | **SIGNALIZACE** |   |
 | LED displej | Chybové hlášení, 2x7 segment LED |
 | LED signalizace | 1x zelená (SERVO OK)  1x červená (SERVO ERROR) |
