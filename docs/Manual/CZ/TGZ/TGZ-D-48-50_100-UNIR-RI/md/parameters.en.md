@@ -1,7 +1,7 @@
 | **POWER SUPPLY** |   |
 | :---: | :---: |
 | Control voltage | 24 VDC ± 10 %, 600 mA* |
-| Power supply voltage | 0–48 VDC (fuse 30A) |
+| Power supply voltage | 0–48 VDC (fuse 100 A) |
 | Installed power consumption for S1 operation | 4,8 kVA |
 | Constant current on one axis | 50 A |
 | Continuous total current when operating two axes | 2 x 50 A |
