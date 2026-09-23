@@ -582,15 +582,15 @@ Telegram 36 contains the following safety encoder signals:
 | PLC → TGZ | S_STW1_ENC | 16 bit | Safety encoder control word |
 | PLC → TGZ | S_PRESET32 | 32 bit | Safe position preset value  |
 | TGZ → PLC | S_ZSW1_ENC | 16 bit | Safety encoder status word  |
-| TGZ → PLC | S_XIST32   | 32 bit | Safe actual position value  |
 | TGZ → PLC | S_NIST16   | 16 bit | Safe actual speed value     |
+| TGZ → PLC | S_XIST32   | 32 bit | Safe actual position value  |
 
 The total PROFIsafe process data size of telegram 36 is:
 
 | Direction | User data size | Content                          |
 |-----------|----------------|----------------------------------|
 | PLC → TGZ | 6 bytes        | S_STW1_ENC + S_PRESET32          |
-| TGZ → PLC | 8 bytes        | S_ZSW1_ENC + S_XIST32 + S_NIST16 |
+| TGZ → PLC | 8 bytes        | S_ZSW1_ENC + S_NIST16 + S_XIST32 |
 
 #### Safety encoder control word – S_STW1_ENC
 

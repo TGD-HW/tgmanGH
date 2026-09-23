@@ -1096,92 +1096,15 @@ Telegram 36 se používá pro výměnu dat bezpečnostního enkodéru přes PROF
 ### Struktura telegramu 36
 
 Telegram 36 obsahuje následující signály bezpečnostního enkodéru:
-<table>
-<tr>
-<th> 
-Směr
-</th>
-<th> 
-Signál
-</th>
-<th> 
-Velikost
-</th>
-<th> 
-Popis
-</th>
-</tr>
-<tr>
-<td> 
-PLC → TGZ
-</td>
-<td> 
-S_STW1_ENC
-</td>
-<td> 
-16 bitů
-</td>
-<td> 
-Řídicí slovo bezpečnostního enkodéru
-</td>
-</tr>
-<tr>
-<td> 
-PLC → TGZ
-</td>
-<td> 
-S_PRESET32
-</td>
-<td> 
-32 bitů
-</td>
-<td> 
-Hodnota bezpečné předvolby polohy
-</td>
-</tr>
-<tr>
-<td> 
-TGZ → PLC
-</td>
-<td> 
-S_ZSW1_ENC
-</td>
-<td> 
-16 bitů
-</td>
-<td> 
-Stavové slovo bezpečnostního enkodéru
-</td>
-</tr>
-<tr>
-<td> 
-TGZ → PLC
-</td>
-<td> 
-S_XIST32
-</td>
-<td> 
-32 bitů
-</td>
-<td> 
-Bezpečná aktuální poloha
-</td>
-</tr>
-<tr>
-<td> 
-TGZ → PLC
-</td>
-<td> 
-S_NIST16
-</td>
-<td> 
-16 bitů
-</td>
-<td> 
-Bezpečná aktuální rychlost
-</td>
-</tr>
-</table>
+
+| Směr      | Signál     | Velikost | Popis                                 |
+|-----------|------------|----------|---------------------------------------|
+| PLC → TGZ | S_STW1_ENC | 16 bit   | Řídicí slovo bezpečnostního enkodéru  |
+| PLC → TGZ | S_PRESET32 | 32 bit   | Hodnota bezpečné předvolby polohy     |
+| TGZ → PLC | S_ZSW1_ENC | 16 bit   | Stavové slovo bezpečnostního enkodéru |
+| TGZ → PLC | S_NIST16   | 16 bit   | Bezpečná aktuální rychlost            |
+| TGZ → PLC | S_XIST32   | 32 bit   | Bezpečná aktuální poloha              |
+
  
 Celková velikost procesních dat PROFIsafe telegramu 36 je:
 <table>
@@ -1215,7 +1138,7 @@ TGZ → PLC
 8 bajtů
 </td>
 <td> 
-S_ZSW1_ENC + S_XIST32 + S_NIST16
+S_ZSW1_ENC + S_NIST16 + S_XIST32
 </td>
 </tr>
 </table>
