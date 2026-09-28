@@ -193,6 +193,14 @@ def save_markdown_from_sheets():
                         output_file = f"../../source/md/{sheet_name}.en.md"
                     else:
                         output_file = f"../../source/md/{sheet_name}.md"
+                elif sheet_name.startswith("X16_commonHW"):
+                    # For commonHW sheets, use nonBold function
+                    markdown_table = nonBold(filename, sheet_name, "A1", "AA100")
+                    # Added logic for .en.xlsx files for X16_commonHW
+                    if filename.endswith(".en.xlsx"):
+                        output_file = f"../../source/md/{sheet_name}.en.md"
+                    else:
+                        output_file = f"../../source/md/{sheet_name}.md"                        
                 else:
                     # For other files and sheets, use excel_to_markdown_table function
                     markdown_table = excel_to_markdown_table(filename, sheet_name, "A1", "AA100")

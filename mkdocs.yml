@@ -98,6 +98,7 @@ plugins:
                 Sběrnice CAN: CAN bus
                 Zpětná vazba FBE: FBE feedback
                 Zpětná vazba FB1, FB2: FB1, FB2 feedback
+                Zpětná vazba resolver: Resolver feedback
                 Regulační struktura: Regulation structure
                 Další funkce: Other functions
                 Nouzové zabrždění: Emergency braking
@@ -538,6 +539,7 @@ nav:
                 - Sběrnice CAN: 'Manual/source/md/commonHW_CAN.md'
                 - Zpětná vazba FBE: 'Manual/source/md/commonHW_FBE.md'
                 - Zpětná vazba FB1, FB2: 'Manual/source/md/commonHW_FB12.md'
+                - Zpětná vazba resolver: 'Manual/source/md/commonHW_UNIR_RES.md'
                 - Napájení logiky: 'Manual/source/md/logicPWR.md'                
                 - SD karty: 'Manual/CZ/TGZ/TGZ_SW/SD/md/SD.md'
                 - Standardní brzda: 'Manual/source/md/commonHW_StandardBrake.md'
