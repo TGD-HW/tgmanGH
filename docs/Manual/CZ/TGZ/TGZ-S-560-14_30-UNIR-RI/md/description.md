@@ -90,6 +90,8 @@ ___
 -   Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^1]
 
 	--8<-- "md/X16_RES_8pin_ClikMate.md"
+	
+	Bližší popis [resolveru](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc) naleznete v sekci [Společný HW](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc).
 
 -   **X11 - Zpětná vazba 3 - RS422**
 

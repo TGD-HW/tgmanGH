@@ -91,6 +91,8 @@ ___
 
     --8<-- "md/X16_RES_8pin_ClikMate.en.md"
 	
+	For details about [resolver input](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc) please see [Common HW section](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc).
+	
 -   **X11 - Feedback 3 - RS422**
 
     ---
