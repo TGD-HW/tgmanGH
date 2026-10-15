@@ -322,7 +322,7 @@ ___
 [^3]: Při krimpování a zapojování konektorů systému Molex Micro-Lock postupujte dle [Aplikačního návodu Molex Micro-Lock](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/505/505570/5055700001-A03.pdf) a použijte krimpovací nástroj [2002180800](https://www.molex.com/en-us/products/part-detail/2002180800).
 [^4]: Při krimpování a zapojování konektorů systému Molex Clik-Mate postupujte dle [Aplikačního návodu Molex Clik-Mate](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) a použijte krimpovací nástroj [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400).
 
-###Postup pro změnu typu zpětné vazby DSL FB1 a FB2
+###Postup pro interní změnu typu zpětné vazby DSL FB1 a FB2
 Na řídicí desce jsou čtyři pozice (R118-R121) pro SMD rezistory 0R/0603, které mohou být použity k nahrazení externího propojení FBSEL (piny 5-7 a 6-8 konektoru FB1 a FB2).
 Ve výchozím nastavení nejsou tyto rezistory od dodávek po 06/2024 osazeny, pokud není uvedeno jinak.
 Uživatel je může osadit, aby se předešlo nutnosti používat externí propojku DSL, avšak mějte na paměti, že jakmile jsou rezistory na desce osazeny, může být použita pouze zpětná vazba typu Hiperface DSL.
