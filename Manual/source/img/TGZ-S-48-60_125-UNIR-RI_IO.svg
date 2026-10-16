@@ -55,6 +55,19 @@
            id="path11" />
       </g>
     </mask>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.013745469"
+       y="-0.055654222"
+       width="1.0274909"
+       height="1.1113084">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.3038775"
+         id="feGaussianBlur1" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -66,14 +79,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.77977558"
-     inkscape:cx="709.1784"
-     inkscape:cy="310.98691"
+     inkscape:cx="666.85853"
+     inkscape:cy="258.40768"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g1" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
@@ -87,12 +100,12 @@
        id="image1"
        style="display:inline;opacity:1;mix-blend-mode:darken;filter:url(#filter4)" />
     <rect
-       style="display:inline;opacity:0.665663;fill:#eeeeee;fill-opacity:1;stroke:none;stroke-width:0.953362;stroke-linejoin:round"
+       style="display:inline;opacity:0.665663;fill:#d9d9d9;fill-opacity:1;stroke:none;stroke-width:0.802165;stroke-linejoin:round;filter:url(#filter1)"
        id="rect16"
-       width="1628.1383"
-       height="450.42581"
-       x="0.19333512"
-       y="-25.792933" />
+       width="1449.882"
+       height="358.09155"
+       x="79.703392"
+       y="10.114835" />
   </g>
   <g
      inkscape:groupmode="layer"
