@@ -58,24 +58,28 @@ ___
 ### Strana komunikace/ethernet/ethercat
 ___
 
-![TGZ-D-48-50/100-UNIR-RI ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_enetCon.webp){: style="width:80%;" }
+![TGZ-S-48-60/125-UNIR-RI ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
 -   **X1 - Napájení řídicí části**
 
     ---
-	Pohled zezadu (strana vodičů)   
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
 	
-	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	Pohled na protikus ze strany PCB:
 	
-	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
-
--    Weidmüller BCZ 3.81/05/180F SN OR BX
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_60_125_1.webp){: style="width:90%;" }
+	
+	Pohled na protikus ze strany vodičů:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_60_125_2.webp){: style="width:90%;" }	
+	
+-    Molex Micro-Fit 3.0 - 436450500. Doporučené krimpovací kontakty [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ_D4850.md"
+	--8<-- "md/X1_24V_5pin_Microfit_60_125.md"
 	
 	!!! warning "Odrušení přívodu"
 	
@@ -89,6 +93,8 @@ ___
 -    Molex ClikMate 5031490800 - doporučené krimpovací kontakty [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X16_RES_8pin_ClikMate.md"
+	
+	Bližší popis [resolveru](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc) naleznete v sekci [Společný HW](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc).		
 
 -   **X11 - Zpětná vazba 3 - RS422**
 
@@ -270,7 +276,7 @@ ___
 
     ---
 	
-	![DC bus connection](../../../../source/img/TGZ-S-48-50_100RI_X2.webp){: style="width:70%;" }
+	![DC bus connection](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_X2DC.webp){: style="width:70%;" }
 
 -    Pressfit M5 - doporučené kabelové oko [JST GS5-10](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)
 
@@ -291,7 +297,7 @@ ___
 
     ---
 	
-	![Motor connection](../../../../source/img/TGZ-S-48-50_100RI_X2.webp){: style="width:70%;" }
+	![Motor connection](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_X2motor.webp){: style="width:70%;" }
 
 -    Pressfit M5 - doporučené kabelové oko [JST GS5-10](https://www.tme.eu/cz/details/gs5-10/konektory-neizolovane/jst/)
 
@@ -304,7 +310,7 @@ ___
 		Maximální dotahovací moment pro pressfit M5 je  2,2 Nm.	
 
 
--   **X3 - Statická brzda**
+-   **X3 - Statická brzda + teplota motoru**
 
     ---
 	
@@ -324,7 +330,10 @@ ___
 
 	---
 
-	--8<-- "md/P7_BR_4pin_Microfit.md"
+	--8<-- "md/X3_BR_4pin_Microfit.md"
+	
+	Servozesilovač je vybaven vylepšeným obvodem ovládání statické motorové brzdy.
+	Více informací ohledně nastavení důležitých parametrů naleznete v sekci [Chytrá brzda](../../../../source/md/commonHW_SmartBrake.md#SmartBrakeDesc).
 		
 	!!! info "Konektorové krimpy"
 	

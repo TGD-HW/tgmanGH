@@ -1,13 +1,13 @@
 | **POWER SUPPLY** |   |
 | :---: | :---: |
-| Control voltage | 24 VDC ± 10 %, 400 mA* |
-| Power supply voltage | 0–48 VDC |
-| Installed power consumption for S1 operation | 2,4 kVA |
-| Constant current on one axis | 50A |
-| Maximum output current (max. 5s) | 100 A |
-| Losses at rated load | 30 W |
+| Control voltage | 24 VDC ± 10 %, 400 mA |
+| Power supply voltage | 0–48 VDC (fuse 100 A) |
+| Installed power consumption for S1 operation | 2,9 kVA |
+| Constant current on one axis | 60 A |
+| Maximum output current (max. 5s) | 125 A |
+| Losses at rated load | 60 W |
 | Protection level | IP20 |
-| Ambient operating temperature | -32 ~ +40 °C |
+| Ambient operating temperature | -32 ~ +40 °C  |
 | **COMMUNICATION** |   |
 | CAN | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | FIELDBUS IN/OUT | 100/1000 Mb/s, 2 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
@@ -18,12 +18,13 @@
 | **FEEDBACK** |   |
 | FB1, FB2, FB3 | 3 x 10pin MOLEX 5031481090 CLIK-MATE 1.5 |
 | FBE | 1 x 12pin MOLEX 5031481290 CLIK-MATE 1.5 |
+| FB4 – RESOLVER | 1 x 8pin MOLEX 5031490800 CLIK-MATE 1.5 |
 | **SIGNALING** |   |
 | LED display | Error message, 2x7 LED segment |
 | LED signaling | 1x green (SERVO OK)1x red (SERVO ERROR) |
 | **POWER SUPPLY** |   |
 | DC BUS (+DC, -DC) | 2 x Pressfit M5 |
-| Control, STO, BR | 1 x 5pin MOLEX micro-lock, 5055700501 |
+| Control, STO | 1 x 5pin Molex Micro-Fit 3.0 - 436450500 |
 | **OTHER CONNECTORS** |   |
 | Motor connector | 3 x Pressfit M5 |
-| External temp, Brake | 1 x 4pin MOLEX Micro-lock 50557005011 |
+| External temp, Brake | 1 x 4pin MOLEX Micro-Fit 3.0 – 430250400 |

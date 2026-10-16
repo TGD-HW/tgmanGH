@@ -107,6 +107,19 @@
            inkscape:label="X1" />
       </g>
     </mask>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.018156711"
+       y="-0.046649384"
+       width="1.0363134"
+       height="1.0932988">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="13.025642"
+         id="feGaussianBlur1" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -139,13 +152,13 @@
        id="image1"
        style="display:inline;opacity:0.692771;mix-blend-mode:normal;filter:url(#filter7)" />
     <rect
-       style="opacity:0.518072;fill:#ececec;fill-opacity:1;stroke:none;stroke-width:8.596;stroke-linejoin:round;stroke-dasharray:17.192, 8.596"
+       style="display:inline;opacity:0.518072;fill:#ececec;fill-opacity:1;stroke:none;stroke-width:7.29561;stroke-linejoin:round;stroke-dasharray:14.5912, 7.29561;filter:url(#filter1)"
        id="rect1"
-       width="1865.3634"
-       height="858.70544"
-       x="-9.7249241"
-       y="-41.063644"
-       ry="24.7661" />
+       width="1721.7623"
+       height="670.13837"
+       x="58.449326"
+       y="27.110603"
+       ry="19.327599" />
   </g>
   <g
      inkscape:groupmode="layer"

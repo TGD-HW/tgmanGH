@@ -1,8 +1,8 @@
 ##3D view
-![TGZ-D-48-50/100-UNIR-RI MotSide](../img/MotSide.en.webp){: style="width:70%;" }   
+![TGZ-D-48-60/125-UNIR-RI MotSide](../img/MotSide.webp){: style="width:70%;" }
 <br>
 <br>
-![TGZ-D-48-50/100-UNIR-RI IO](../img/IOside.en.webp){: style="width:70%;" }   
+![TGZ-D-48-60/125-UNIR-RI IO side](../img/IOside.webp){: style="width:70%;" }
 	
 ##Description of communication, input/output and control
 ###Communication interfaces
@@ -59,24 +59,31 @@ ___
 ### View of the ENET/ECAT side
 ___
 
-![TGZ-D-48-50/100-UNIR-RI ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-D-48-50_100-UNIR-RI_enetCon.webp){: style="width:80%;" }
+![TGZ-S-48-60/125-UNIR-RI ENET/ECAT/LogicPWR side](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_enetCon.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
 -   **X1 - Control supply voltage**
 
     ---
-	Housing back side view (wire side):  
 	
-	![1941040000](../../../../source/img/1941040000.webp){: style="width:60%;" }   
+	PCB connector top view:
 	
-	![1941040000_1](../../../../source/img/1941040000_1.webp){: style="width:60%;" }	
+	![Molex Micro-Fit 3.0 436450500](../../../../source/img/436500518.webp){: style="width:90%;" }
+	
+	Counterpart PCB side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires](../../../../source/img/436450500_60_125_1.webp){: style="width:90%;" }
+	
+	Counterpart wire side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires back](../../../../source/img/436450500_60_125_2.webp){: style="width:90%;" }	
 
--    Weidmüller BCZ 3.81/05/180F SN OR BX
+-    Molex Micro-Fit 3.0 - 436450500. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
 
 	---
 
-	--8<-- "md/X1_24V_5pin_BCZ_D4850.en.md"
+	--8<-- "md/X1_24V_5pin_Microfit_60_125.en.md"
 	
 	!!! warning "EMI suppression"
 	
@@ -90,6 +97,8 @@ ___
 -    Molex ClikMate 5031490800 - recommended crimping contacts [Molex 502579](https://www.molex.com/en-us/part-list/502579) [^3]
 
     --8<-- "md/X16_RES_8pin_ClikMate.en.md"
+	
+	For details about [resolver input](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc) please see [Common HW section](../../../../source/md/commonHW_UNIR_RES.md#common_UNIR_RES_desc).
 	
 -   **X11 - Feedback 3 - RS422**
 
@@ -136,6 +145,8 @@ ___
 ___
 ### View of the CAN/IO/SD Side
 ___
+
+![IO/CAN/SD connectors](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_IO.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -218,7 +229,7 @@ ___
 ### Feedback/motor side view
 ___
 
-![Feedback connectors](../../../../source/img/TGZ-D-48-50_100-UNIR-RI_FBconns.webp){: style="width:80%;" }
+![Feedback connectors](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_FBconns.webp){: style="width:80%;" }
 
 <div class="grid cards" markdown>
 
@@ -272,71 +283,79 @@ ___
 		In order to use Hiperface DSL feedback user must tie pins 5-7 and 6-8 together of the FB1 (and FB2 respectively) connector or assembly appropriate shorting resistors to the control PCB.
 		Also check whether you have correct firmware uploaded in the device.
 		
--   **X2 - Power supply voltage (DC bus)**
+-   **X2 - Power supply voltage**
 
     ---
-	![DCbus cage-clamp](../../../../source/img/2636-1103.svg){: style="width:60%;" }
-
--    Wago push-in CAGE CLAMP®
-
-    ---
-
-	--8<-- "md/X2_DCbus_3pin_wago_2636.en.md"
 	
-	!!! info "Max. AWG"
-		Maximum wire cross section possible can be up to 4 AWG when using fine stranded wire without a ferrule.
-		
+	![DC bus connection](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_X2DC.webp){: style="width:70%;" }
+
+-    Pressfit M5 - recommended cable ring [JST GS5-10](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/)
+
+    ---
+
+	--8<-- "md/X2_DCbus_2pin_pressfit.en.md"
+	
+	!!! info "Tightening torque"
+
+		The maximum tightening torque for the M5 press-fit is 2.2 Nm.
+	
 	!!! warning "Regenerative braking"
 	
 		In cases when the drive is not powered by a battery (e.g., a Li-ion battery pack), 
 		it is necessary for machines with greater kinetic energy to ensure its dissipation, for example, in a resistive element using a chopper unit.
-	
--   **X3.1 - Motor connector - axis 1**
-
-    ---
-	
-	![Motor 1 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
-
--    Wago push-in CAGE CLAMP®
-
-    ---
-
-	--8<-- "md/X3_M1_4pin_wago_2626.en.md"
-	
-	!!! info "Max. AWG"
-		Maximum wire cross section possible can be up to 8 AWG when using fine stranded wire without a ferrule.
-	
--   **X3.2 - Motor connector - axis 2**
-
-    ---
-	
-	![Motor 2 connector](../../../../source/img/2626-1104.svg){: style="width:70%;" }
-
--    Wago push-in CAGE CLAMP®
-
-    ---
-
-	--8<-- "md/X4_M2_4pin_wago_2626.en.md"
-	
-	!!! info "Max. AWG"
-		Maximum wire cross section possible can be up to 8 AWG when using fine stranded wire without a ferrule.
 		
--   **XBR - Static brake connector - axis 1 and 2**
+-   **X2 - Motor connector**
 
     ---
 	
-	![Brake connector](../../../../source/img/1017470000.svg){: style="width:70%;" }
-	
-	!!! info "Holding motor brake"
+	![Motor connection](../../../../source/img/TGZ-S-48-60_125-UNIR-RI_X2motor.webp){: style="width:70%;" }
 
-		For additional information on using the motor brake with the TGZ servo drive, see the [Standard Brake](../../../../source/md/commonHW_StandardBrake.en.md#StandardBrakeDesc) section.	
-
--    Weidmüller BLF 5.00HC/06/180F SN OR BX
+-    Pressfit M5 - recommended cable ring [JST GS5-10](https://www.tme.eu/cz/en/details/gs5-10/non-insulated-terminals/jst/)
 
     ---
+	
+	--8<-- "md/X2_M1_3pin_pressfit.en.md"
+	
+	!!! info "Tightening torque"
 
-	--8<-- "md/XBR_BR_6pin_BLF.en.md"
+		The maximum tightening torque for the M5 press-fit is 2.2 Nm.	
+	
+-   **X3 - Static brake + motor temperature**
+
+    ---
+	
+	PCB connector top view:
+	
+	![Brake connector](../../../../source/img/430450401.webp){: style="width:60%;" }
+	
+	Counterpart PCB side view:
+	
+	![Molex Micro-Fit 3.0 2147551041 w wires](../../../../source/img/2147551041_1.webp){: style="width:60%;" }
+	
+	Counterpart wire side view:
+	
+	![Molex Micro-Fit 3.0 436450500 w wires cable side](../../../../source/img/430250400.webp){: style="width:60%;" }
+
+-    Molex Micro-Fit 3.0 - 430250400. Recommended crimping contacts [Molex 43030](https://www.molex.com/en-us/part-list/43030). [^4]
+
+	---
+
+	--8<-- "md/X3_BR_4pin_Microfit.md"
+	
+	The servo amplifier is equipped with an enhanced static motor brake control circuit.
+	More information on how to set the key parameters can be found in the [Smart Brake](../../../../source/md/commonHW_SmartBrake.en.md#SmartBrakeDesc) section.
 		
 </div>
 
 [^3]: When crimping and connecting the Molex Clik-Mate connectors, follow the [Molex Clik-Mate Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/503/503149/AS-503149-001-001.pdf) and use the recommended crimping tool [2002187400](https://www.molex.com/en-us/products/part-detail/2002187400)
+[^4]: When crimping and connecting the Molex Micro-Fit connectors, follow the [Molex Micro-Fit Application Guide](https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf) and use the recommended crimping tool [638190000](https://www.molex.com/en-us/products/part-detail/638190000).
+
+###Procedure for changing feedback type of FB1 and FB2
+There are 4 positions (R118-R121) for a 0R/0603 resistors that may be used to replace the external connection of FBSEL (pins 5-7 and 6-8 of the FB1 and FB2) on the control board.
+By default, it is not assembled from batch 06—2024 onwards unless noted otherwise.
+User can assemble it in order to prevent the need for use the external connections, however keep in mind that once assembled the boards can be used for HiperfaceDSL feedback only. 
+If it is necessary to use a different type of feedback than Hiperface DSL, it is necessary to desolder them from the PCB.
+Other usable standards are EnDat 2.2, SSI, BISS or Incremental encoder.
+The feedback function also depends on the uploaded firmware.
+
+![TGZ-S-48-50/100RI DSL resistors](../img/DSL0R.png){: style="width:70%;" }   
