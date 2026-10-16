@@ -340,7 +340,7 @@ ___
 
 	---
 
-	--8<-- "md/X3_BR_4pin_Microfit.md"
+	--8<-- "md/X3_BR_4pin_Microfit.en.md"
 	
 	The servo amplifier is equipped with an enhanced static motor brake control circuit.
 	More information on how to set the key parameters can be found in the [Smart Brake](../../../../source/md/commonHW_SmartBrake.en.md#SmartBrakeDesc) section.
