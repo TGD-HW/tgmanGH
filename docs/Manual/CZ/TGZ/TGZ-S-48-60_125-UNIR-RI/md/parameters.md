@@ -1,7 +1,7 @@
 | **NAPÁJENÍ** |   |
 | :---: | :---: |
 | Ovládací napětí | 24 VDC ± 10 %, 400 mA |
-| Výkonové napájecí napětí | 0–48 VDC (jištění 100 A) |
+| Výkonové napájecí napětí | 0–48 VDC |
 | Instalovaný příkon pro provoz S1 | 2,9 kVA |
 | Trvalý proud na jednu osu | 60 A |
 | Maximální výstupní proud (max. 5 s) | 125 A |
