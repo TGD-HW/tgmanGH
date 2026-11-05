@@ -6,7 +6,7 @@
 | Trvalý proud na jednu osu | 50 A |
 | Trvalý celkový proud při provozu dvou os | 2 x 50 A |
 | Maximální výstupní proud (max. 5 s) | 2 x 100 A |
-| Ztráty při jmenovité zátěži | 50 W |
+| Ztráty při jmenovité zátěži | 30 W |
 | Stupeň krytí | IP20 |
 | Teplota okolí | -32 ~ +40 °C  |
 | **KOMUNIKACE** |   |
