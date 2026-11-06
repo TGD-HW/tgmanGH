@@ -20,7 +20,7 @@ On the motor side, the cable shield is terminated inside the motor connector.
 On the TGZ servo drive side, the shield should be terminated by connecting it to the servo drive/control cabinet chassis using the shortest possible path.
 Shield termination on the servo drive side can be implemented, for example, by crimping the exposed cable shield into a cable lug and fastening it to the servo drive mounting profile.
 
-![Resolver example 1](../img/UNIR_RES_example1.en.webp){: style="width:80%;" }
+![Resolver example 1](../img/UNIR_RES_example1.webp){: style="width:80%;" }
 
 !!! warning "Firmware"
 	Make sure that the correct firmware is used for the selected feedback type.
