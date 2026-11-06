@@ -70,11 +70,11 @@
      inkscape:cx="791.05835"
      inkscape:cy="522.27333"
      inkscape:window-width="1920"
-     inkscape:window-height="1009"
+     inkscape:window-height="1025"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="layer3" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
@@ -123,6 +123,18 @@
        x="709.99969"
        y="339.9668"
        ry="23.198626" />
+    <rect
+       style="fill:none;stroke-width:0.716959;stroke-linejoin:round"
+       id="rect3"
+       width="1062.0286"
+       height="509.89029"
+       x="584.1886"
+       y="208.3266"
+       ry="26.753504"
+       inkscape:label="viewArea"
+       inkscape:export-filename="TGZ-S-48-60_125-UNIR-RI_X2motor.webp"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -133,12 +145,45 @@
        xml:space="preserve"
        style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
        x="835.53705"
-       y="448.33698"
+       y="624.61334"
        id="text17"><tspan
          sodipodi:role="line"
          id="tspan17"
          x="835.53705"
-         y="448.33698"
+         y="624.61334"
          style="font-size:82.0752px;stroke-width:2.56485">X2 - motor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
+       x="753.95465"
+       y="486.9538"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="753.95465"
+         y="486.9538"
+         style="font-size:82.0752px;stroke-width:2.56485">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
+       x="1007.8544"
+       y="487.8566"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="1007.8544"
+         y="487.8566"
+         style="font-size:82.0752px;stroke-width:2.56485">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
+       x="1256.9722"
+       y="486.9538"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="1256.9722"
+         y="486.9538"
+         style="font-size:82.0752px;stroke-width:2.56485">5</tspan></text>
   </g>
 </svg>

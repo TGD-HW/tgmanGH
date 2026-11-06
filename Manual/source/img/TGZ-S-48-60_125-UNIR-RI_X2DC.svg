@@ -66,15 +66,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.68642218"
-     inkscape:cx="791.05835"
-     inkscape:cy="522.27333"
+     inkscape:zoom="0.48537378"
+     inkscape:cx="931.24108"
+     inkscape:cy="295.64844"
      inkscape:window-width="1920"
-     inkscape:window-height="1009"
+     inkscape:window-height="1025"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="layer3" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
@@ -123,6 +123,18 @@
        x="190.84465"
        y="327.78662"
        ry="24.7661" />
+    <rect
+       style="fill:none;stroke-width:0.695;stroke-linejoin:round"
+       id="rect2"
+       width="1046.6161"
+       height="660.78693"
+       x="0"
+       y="189.54465"
+       ry="24.7661"
+       inkscape:label="view"
+       inkscape:export-filename="TGZ-S-48-60_125-UNIR-RI_X2DC.webp"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -132,13 +144,35 @@
     <text
        xml:space="preserve"
        style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
+       x="255.21855"
+       y="485.7645"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="255.21855"
+         y="485.7645"
+         style="font-size:82.0752px;stroke-width:2.56485">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
        x="273.2009"
-       y="478.93039"
+       y="633.35431"
        id="text17"><tspan
          sodipodi:role="line"
          id="tspan17"
          x="273.2009"
-         y="478.93039"
+         y="633.35431"
          style="font-size:82.0752px;stroke-width:2.56485">X2 - DC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:82.0752px;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Semi-Bold';display:inline;fill:#ffffff;stroke:#2a2a2a;stroke-width:2.56485;stroke-dashoffset:5"
+       x="514.8877"
+       y="481.89392"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="514.8877"
+         y="481.89392"
+         style="font-size:82.0752px;stroke-width:2.56485">2</tspan></text>
   </g>
 </svg>
