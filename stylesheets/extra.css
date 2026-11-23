@@ -50,6 +50,20 @@ svg text {
     /* Set a reasonable margin below to separate it from content */
     margin-bottom: 1em; 
 }
+.video-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin: 1em 0;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 4px;
+}
 /*
 // Allow to explicitly use color schemes in nested content
 [data-md-color-scheme="default"] {
