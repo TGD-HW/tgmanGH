@@ -59,3 +59,31 @@
 - Activate the configuration and switch to **Run** mode.
   TwinCAT will now use the speed regulator to perform motion.
   Properly setting the regulator parameters is essential for achieving smooth positioning.
+  
+##TwinCAT – CSV (velocity control) - videotutorial
+In this tutorial, we demonstrate how to configure and operate TGZ servo drives in TwinCAT using CSV (Cyclic Synchronous Velocity) mode.
+Follow our step-by-step guide to learn the basic setup and operation of velocity control.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/17R4k-lXAlY?rel=0&hl=cs&cc_lang_pref=cs"
+    title="TwinCAT – CSV (Velocity Control)"
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+##TwinCAT – CSP (position control) - videotutorial
+In this tutorial, we demonstrate how to configure and operate TGZ servo drives in TwinCAT using CSP (Cyclic Synchronous Position) mode.
+Follow our step-by-step guide to learn the basic setup and operation of position control.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/h2N-KRoKyRI?rel=0&hl=cs&cc_lang_pref=cs"
+    title="TwinCAT – CSP (position control)"
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen; web-share"
+    allowfullscreen>
+  </iframe>
+</div>

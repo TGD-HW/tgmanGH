@@ -60,3 +60,31 @@
 - Aktivujte konfiguraci a přepněte do režimu **Run**. 
   TwinCAT nyní používá regulátor otáček k provedení pohybu.
   Pro dosažení plynulého polohování je nutné správně nastavit parametry regulátoru.
+  
+##TwinCAT – CSV (Rychlostní řízení) - videonávod
+V tomto videonávodu si ukážeme, jak nastavit a ovládat servozesilovače TGZ v prostředí TwinCAT pomocí režimu CSV (Cyclic Synchronous Velocity).
+Krok za krokem vás provedeme základním nastavením a rychlostním řízením servopohonu.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/q2pypb9TvHA?rel=0&hl=cs&cc_lang_pref=cs"
+    title="TwinCAT – CSV (Rychlostní řízení)"
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+##TwinCAT – CSP (Polohové řízení) - videonávod
+V tomto videonávodu si ukážeme, jak nastavit a ovládat servozesilovače TGZ v prostředí TwinCAT pomocí režimu CSP (Cyclic Synchronous Position).
+Krok za krokem vás provedeme základním nastavením a polohovým řízením servopohonu.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/he3SN_i1yBo?rel=0&hl=cs&cc_lang_pref=cs"
+    title="TwinCAT – CSV (Rychlostní řízení)"
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen; web-share"
+    allowfullscreen>
+  </iframe>
+</div>

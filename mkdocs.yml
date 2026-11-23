@@ -191,7 +191,9 @@ markdown_extensions:
  - material.extensions.preview
  - toc:
     permalink: true
- 
+ - pymdownx.tabbed:
+      alternate_style: true
+      
 extra_javascript:
 # local viewerjs here:
 # - javascripts/viewerjs.js
